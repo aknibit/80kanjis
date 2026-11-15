@@ -3,7 +3,7 @@ import { studyItemTarget } from './lib/difficulty.ts';
 import { createKanjiSearch } from './lib/search.ts';
 import { setupDifficulties } from './difficulties-ui.ts';
 import { studyCatalog } from './data/study.ts';
-import { getPronunciation, pronunciations, pronunciationSource } from './data/pronunciations.ts';
+import { getPronunciation, pronunciations, pronunciationSource, synthesizedSource } from './data/pronunciations.ts';
 import { setupPronunciation } from './pronunciation-ui.ts';
 import { getRowDifficulty, matchesRowDifficulty, parseRowDifficultyFilter, rowDifficultyFilters, type RowDifficultyFilter } from './lib/row-difficulty.ts';
 import type { Kanji, StudyItem } from './types.ts';
@@ -46,7 +46,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="collection-toolbar">
         <div class="collection-heading"><h2 id="collection-title">La colección</h2><span id="result-count" role="status" aria-live="polite" aria-atomic="true">80 de 80 kanji</span></div>
         <div class="collection-actions">
-          <button id="filter-audio" class="audio-filter" type="button" aria-pressed="false" aria-controls="kanji-grid">Probar audio · ${pronunciations.length}</button>
+          <button id="filter-audio" class="audio-filter" type="button" aria-pressed="false" aria-controls="kanji-grid">Con audio · ${pronunciations.length}</button>
           <label class="reading-control" for="show-readings"><input id="show-readings" type="checkbox" checked /><span class="switch-track" aria-hidden="true"></span>Mostrar lecturas</label>
         </div>
       </div>
@@ -55,7 +55,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
       <p id="row-filter-hint" class="filter-hint">La dificultad más alta de la fila decide. Fácil requiere las cuatro entradas en fácil.</p>
       <p id="difficulty-status" class="difficulty-status" role="status" aria-live="polite">Cargando dificultades…</p>
-      <p class="audio-note">Escucha una muestra de ${pronunciations.length} palabras con el botón de altavoz. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Créditos del audio</a></p>
+      <p class="audio-note">Audio en ${pronunciations.length} palabras. La marca «IA» indica voz generada. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Créditos del audio</a></p>
       <p id="audio-status" class="audio-status" role="status" aria-live="polite"></p>
       <div id="kanji-grid" class="kanji-grid"></div>
       <div id="empty-state" class="empty-state" hidden>
@@ -76,7 +76,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>Busca por carácter, palabra, lectura o significado. Puedes escribir sin tildes y usar hiragana o katakana. Oculta las lecturas si quieres ponerte a prueba.</p>
     <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
     <p class="dialog-note">Se conserva la escritura simplificada del documento. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
-    <p class="dialog-note">Muestra de pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar. La colección original combina voces japonesas con acentos de Tokio y Kansai. Estas muestras están pendientes de revisión de pronunciación. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes de cada audio</a>.</p>
+    <p class="dialog-note">Pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar, con voces de Tokio y Kansai. Los botones con «IA» usan voz generada por <a href="${synthesizedSource.url}" target="_blank" rel="noopener">${synthesizedSource.name}</a> (${synthesizedSource.voice}), bajo sus <a href="${synthesizedSource.termsUrl}" target="_blank" rel="noopener">condiciones de uso</a>. Los audios están pendientes de revisión por un hablante nativo. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes y créditos de cada audio</a>.</p>
     <div class="dialog-shortcut"><kbd>/</kbd> Buscar <kbd>Esc</kbd> Borrar la búsqueda o cerrar esta ventana</div>
   </dialog>
 

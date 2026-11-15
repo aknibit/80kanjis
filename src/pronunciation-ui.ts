@@ -22,15 +22,17 @@ export function setupPronunciation(status: HTMLElement) {
     const clip = getPronunciation(item);
     if (!clip) return;
     const button = document.createElement('button');
-    button.className = 'audio-button';
+    button.className = `audio-button${clip.kind === 'synthesized' ? ' audio-button--synthesized' : ''}`;
     button.type = 'button';
     button.dataset.audioItemId = item.id;
+    button.dataset.audioKind = clip.kind;
+    const origin = clip.kind === 'synthesized' ? 'Voz generada con VOICEVOX Nemo' : 'Grabación humana';
 
     function reset() {
       button.innerHTML = speakerIcon;
-      button.setAttribute('aria-label', `Escuchar ${item.written}`);
+      button.setAttribute('aria-label', `Escuchar ${item.written} · ${origin}`);
       button.setAttribute('aria-pressed', 'false');
-      button.title = `Escuchar ${item.written} · Grabación nativa`;
+      button.title = `Escuchar ${item.written} · ${origin}`;
     }
     reset();
 

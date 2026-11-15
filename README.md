@@ -50,7 +50,7 @@ Typography currently loads DM Sans and Noto Serif JP from Google Fonts, with sys
 - Hide/show readings, empty results, keyboard shortcuts (`/` to search, `Escape` to clear), and an accessible collection information dialog.
 - Four independent difficulty indicators per row: one for the kanji and one for each word (Fácil, Medio, Difícil, or Sin marcar). Repeated words share their difficulty across rows.
 - Compact header and whole-row difficulty filters with counts, combined with search and the audio sample filter. Filters are bookmarkable via `?difficulty=hard&audio=1&q=...` and update after edits/imports.
-- Twelve native-speaker pronunciation samples with play/stop controls, source credits, and local MP3 files, available in both builds.
+- 38 vocabulary audio files with play/stop controls and source credits: 23 human recordings and 15 locally synthesized WAVs. All 30 words in the requested ten easy kanji rows are covered in both builds.
 - In the editor: browser persistence, JSON import/export, and optional direct writing to a user-selected local JSON file.
 - In production: read-only badges loaded exclusively from the public JSON file.
 
@@ -68,15 +68,20 @@ The collection always preserves all four blocks. `src/lib/row-difficulty.ts` der
 
 Counts reflect the current text search and audio filter. The selected category is a view of the four existing marks; it does not add another persisted rating. Editing a shared word reclassifies every row that contains it. Production uses the fetched JSON; the editor uses its effective local ratings.
 
-### Pronunciation audition
+### Pronunciation audio
 
-Use **Probar audio · 12** or open `?audio=1#collection` to find rows with recordings. Each available vocabulary block has a speaker button. Only one clip plays at a time, playback starts only after a click, and filtering stops playback. Errors offer a retry by pressing the same button. Words without recordings have no audio button.
+Use **Con audio · 38** or open `?audio=1#collection` to find rows with audio. Each available vocabulary block has a speaker button. A small **IA** marker and an accessible label identify synthesized audio. Only one clip plays at a time, playback starts after a click, and filtering stops playback. Press the button again to stop or retry a failed playback. Words without audio have no speaker button.
 
-The sample contains 一つ, 一年生, 二つ, 二日, 三つ, 一日, お金, ふじ山, 中学校, 上げる, 休む, and 先生. Identity and reading must both match `src/data/pronunciations.ts`, so a recording for an alternative reading is never silently substituted. Repeated words and future quizzes can use the same item ID and audio lookup.
+All 30 vocabulary words in the rows 二, 三, 四, 七, 八, 九, 十, 百, 千, and 日 have audio. These are the ten fully easy rows in the classification supplied by the user. Coverage is tied to item identity, so changing a rating does not remove audio. The eight other audio files from the original audition remain available too. Tests protect the requested row coverage without depending on future edits to the difficulty file.
 
-Recordings come from [Tofugu and WaniKani](https://github.com/tofugu/japanese-vocabulary-pronunciation-audio), under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The upstream collection mixes a native male professional (Tokyo accent) and a native female amateur (Kansai accent); individual speaker identity is not specified for each file. These twelve samples are for listening evaluation and have **not received a pronunciation/accent review**. They are unchanged MP3s, with shortened filenames; tests verify their original Git blob hashes.
+Identity and reading must both match `src/data/pronunciations.ts`; alternative readings are never silently substituted. The simplified 三こ uses the recording of 三個, with the same reading and meaning. An unrelated homophone is not used as a substitute. Repeated words and future quizzes share the same item ID and lookup.
 
-`public/audio/` includes the MP3s, per-file source links in `CREDITS.txt`, and the full original license. Both builds copy this directory. The website plays these files from its own origin, including CDN subdirectories, with no runtime speech API, backend, or API key. Keep the attribution and license alongside the audio when deploying.
+- **23 human recordings:** [Tofugu and WaniKani](https://github.com/tofugu/japanese-vocabulary-pronunciation-audio), under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The source mixes a native male professional (Tokyo accent) and a native female amateur (Kansai accent); individual speaker identity is not specified per file. The MP3s are unmodified, with shortened filenames. Tests verify upstream Git blob hashes.
+- **15 synthesized recordings:** [VOICEVOX Nemo](https://voicevox.hiroshiba.jp/nemo/), voice 女声1 (CV: 亜咲比 凛), speaker 10005, engine 0.26.0 and core 0.17.0. These WAVs are subject to the [Nemo terms](https://voicevox.hiroshiba.jp/nemo/term/), including attribution and the prohibition on machine-learning use; the human recordings' CC BY-SA license does not apply to these files. They were generated locally once and checked against the collection's kana readings. 七色 explicitly uses なないろ with Tokyo accent [2], correcting the engine's default ななしょく. Exact synthesis queries, voice settings, and the accent reference are saved in `public/audio/generation.json`; tests protect the spoken readings and generated file checksums.
+
+The files have **not received a native-speaker listening or accent review**; synthetic fluency alone does not establish pronunciation quality. This expanded set remains available for listening evaluation.
+
+`public/audio/` contains the files, per-file sources in `CREDITS.txt`, the full original CC license, the Nemo voice-library policy, and generation metadata. Both builds copy the directory. The website serves audio from its own origin, including CDN subdirectories, with no runtime speech service, backend, or API key. The local synthesis engine is only an authoring tool and is not part of the app or build dependencies. Keep the credits and applicable terms alongside the audio when deploying.
 
 ### Item model
 
@@ -95,7 +100,7 @@ A future quiz can use `studyCatalog.items`, filter by `item.type`, and resolve c
 
 ## Difficulty ratings: no backend
 
-The website fetches `public/difficulties.json` on startup with `cache: 'no-store'`. Ratings are **not compiled into the JavaScript**. Replace `difficulties.json` on your CDN to update defaults without rebuilding the app, and configure the CDN to revalidate this file. The initial file has no assigned difficulties.
+The website fetches `public/difficulties.json` on startup with `cache: 'no-store'`. Ratings are **not compiled into the JavaScript**. Replace `difficulties.json` on your CDN to update defaults without rebuilding the app, and configure the CDN to revalidate this file. The file currently contains the user-supplied classification of all 80 kanji and 232 unique words.
 
 ```json
 {
