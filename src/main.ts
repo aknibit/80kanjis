@@ -159,10 +159,10 @@ async function start() {
     badge.setAttribute('aria-label', `Dificultad de ${item.type === 'kanji' ? item.character : item.written}: ${label}`);
     controls.append(badge);
     if (item.type === 'kanji') {
-      controls.append(kanjiDetails.createInfoButton(item.character));
+      identity.prepend(kanjiDetails.createInfoButton(item.character));
     } else {
       const audioButton = pronunciation.createButton(item);
-      if (audioButton) controls.append(audioButton);
+      if (audioButton) identity.prepend(audioButton);
     }
     meta.append(controls);
     block.append(meta, content);

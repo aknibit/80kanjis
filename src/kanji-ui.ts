@@ -9,17 +9,55 @@ function node<K extends keyof HTMLElementTagNameMap>(tag: K, className: string, 
   return result;
 }
 
-function renderKanjiReadings(readings: KanjiReadings): HTMLElement {
+function japanese(text: string, className = ''): HTMLElement {
+  const result = node('span', className, text);
+  result.lang = 'ja';
+  return result;
+}
+
+function renderKanjiReadings(readings: KanjiReadings, character: string): HTMLElement {
   const list = node('dl', 'kanji-dialog-readings');
+  list.tabIndex = 0;
+  list.setAttribute('aria-label', 'Lecturas On y Kun');
   for (const [label, values] of [['On · origen chino', readings.onyomi], ['Kun · japonesa', readings.kunyomi]] as const) {
     if (values.length === 0) continue;
-    const group = node('div', '');
-    const value = node('dd', '', values.join(' · '));
+    const group = node('div', 'kanji-reading-group');
+    const value = node('dd', '');
     value.lang = 'ja';
+    const items = node('ul', 'kanji-reading-list');
+    items.setAttribute('role', 'list');
+    for (const reading of values) {
+      const item = node('li', 'kanji-reading');
+      const [stem, ending] = reading.split('.');
+      if (ending) {
+        const writing = japanese('', 'kanji-reading-text kanji-reading-writing');
+        const kanji = node('ruby', 'kanji-reading-root');
+        kanji.append(japanese(character), node('rp', '', '（'), node('rt', '', stem), node('rp', '', '）'));
+        writing.append(kanji, japanese(ending, 'kanji-reading-ending'));
+        item.append(writing);
+      } else {
+        item.append(japanese(reading, 'kanji-reading-text kanji-reading-pronunciation'));
+      }
+      items.append(item);
+    }
+    value.append(items);
     group.append(node('dt', '', label), value);
     list.append(group);
   }
   return list;
+}
+
+function renderReadingHint(readings: KanjiReadings, character: string): HTMLElement {
+  const hint = node('p', 'kanji-dialog-reading-hint');
+  const withEnding = readings.kunyomi.find((reading) => reading.includes('.'));
+  if (!withEnding) {
+    hint.textContent = 'La pronunciación depende de la palabra. Más abajo tienes los ejemplos de la colección.';
+    return hint;
+  }
+  const [stem, ending] = withEnding.split('.');
+  hint.append('En ', japanese(character + ending), ', ', japanese(character), ' se lee ',
+    japanese(stem), '; ', japanese(ending), ' se escribe en hiragana.');
+  return hint;
 }
 
 /** One native dialog for every kanji; the source owns all reference content. */
@@ -77,10 +115,11 @@ export function setupKanjiDetails(source: CollectionDocument) {
     hero.append(glyph, summary);
     body.replaceChildren(hero);
 
-    body.append(renderKanjiReadings(reference.definition));
-    const readingHint = node('p', 'kanji-dialog-reading-hint', 'Lecturas principales. El punto separa la parte del kanji de la terminación en hiragana: み.る → 見る. La lectura de una palabra puede cambiar al combinar caracteres.');
-    body.append(readingHint);
-    if (reference.definition.note) body.append(node('p', 'kanji-dialog-note', reference.definition.note));
+    body.append(renderKanjiReadings(reference.definition, character), renderReadingHint(reference.definition, character));
+    if (reference.definition.note) {
+      const note = reference.definition.note.replace(/([ぁ-ゖー])\.(?=[ぁ-ゖー])/gu, '$1');
+      body.append(node('p', 'kanji-dialog-note', note));
+    }
     if (reference.kind === 'collection') {
       body.append(node('p', 'kanji-dialog-difficulty', `Dificultad: ${reference.definition.difficulty === null
         ? 'Sin marcar' : difficultyLabels[reference.definition.difficulty]}`));
@@ -144,7 +183,7 @@ export function setupKanjiDetails(source: CollectionDocument) {
 
   function createInfoButton(character: string): HTMLButtonElement {
     const button = createTrigger(character, 'study-action info-button');
-    button.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/><path d="M10.5 11H12v6m-1.5 0h3"/></svg>';
+    button.innerHTML = '<svg class="study-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/><path d="M10.5 11H12v6m-1.5 0h3"/></svg><span class="study-action-label">Info</span>';
     button.title = `Ver pronunciaciones e información de ${character}`;
     button.setAttribute('aria-label', button.title);
     return button;
