@@ -144,7 +144,7 @@ export function setupKanjiDetails(source: CollectionDocument) {
 
   function createInfoButton(character: string): HTMLButtonElement {
     const button = createTrigger(character, 'study-action info-button');
-    button.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="7" r="1" fill="currentColor" stroke="none"/><path d="M12 11v6"/></svg>';
+    button.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/><path d="M10.5 11H12v6m-1.5 0h3"/></svg>';
     button.title = `Ver pronunciaciones e información de ${character}`;
     button.setAttribute('aria-label', button.title);
     return button;
