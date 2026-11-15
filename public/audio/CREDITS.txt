@@ -1,17 +1,16 @@
-# Pronunciation audio — audition sample
+# Pronunciation audio
 
+HUMAN RECORDINGS
 Recordings by Tofugu (https://www.tofugu.com) and WaniKani (https://www.wanikani.com).
 Source: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio
-
 License: Creative Commons Attribution-ShareAlike 4.0 International.
 https://creativecommons.org/licenses/by-sa/4.0/
-The complete license and disclaimer of warranties are in LICENSE-CC-BY-SA-4.0.txt.
-
-The MP3 content is unmodified; filenames were shortened. These are twelve sample
-recordings for evaluation, not a linguistically reviewed pronunciation curriculum.
+The full original license and disclaimer are in LICENSE-CC-BY-SA-4.0.txt.
+MP3 content is unmodified; filenames were shortened. 三こ is the simplified
+spelling of the source's 三個, with the same reading and counter meaning.
 The source describes a mix of a native Japanese male professional voice actor
 (Tokyo accent) and a native Japanese female amateur voice actor (Kansai accent).
-Individual speaker identity is not supplied in the file metadata.
+Individual speaker identity is not supplied per file.
 
 - hitotsu.mp3: 一つ (ひとつ)
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%80%E3%81%A4%E3%80%90%E3%81%B2%E3%81%A8%E3%81%A4%E3%80%91.mp3
@@ -49,4 +48,93 @@ Individual speaker identity is not supplied in the file metadata.
 - sensei.mp3: 先生 (せんせい)
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%88%E7%94%9F%E3%80%90%E3%81%9B%E3%82%93%E3%81%9B%E3%81%84%E3%80%91.mp3
   Git blob SHA-1: 817a05ec9d7f246a9f58947aac0c4d92e80525d4
+- sanko.mp3: 三こ (さんこ)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%89%E5%80%8B%E3%80%90%E3%81%95%E3%82%93%E3%81%93%E3%80%91.mp3
+  Git blob SHA-1: 61d1d636742e2aa8e61be741cd0c1a1c9147382f
+- yottsu.mp3: 四つ (よっつ)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%9B%9B%E3%81%A4%E3%80%90%E3%82%88%E3%81%A3%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: 206fa300372d4edbdae90dbfaf730e6eca063cc4
+- shigatsu.mp3: 四月 (しがつ)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%9B%9B%E6%9C%88%E3%80%90%E3%81%97%E3%81%8C%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: 3e2fd607207877c0b7a79c2d8763db2c9ff3115e
+- nanatsu.mp3: 七つ (ななつ)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%83%E3%81%A4%E3%80%90%E3%81%AA%E3%81%AA%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: d794faadf7679d9acc085068ac541b18dc045520
+- yattsu.mp3: 八つ (やっつ)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%AB%E3%81%A4%E3%80%90%E3%82%84%E3%81%A3%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: aed49340f9050525be2c709f78a230762b7e370b
+- youka.mp3: 八日 (ようか)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%AB%E6%97%A5%E3%80%90%E3%82%88%E3%81%86%E3%81%8B%E3%80%91.mp3
+  Git blob SHA-1: 808d0fb8aecc1f0f556a265d124dc8cc1bde056b
+- kokonotsu.mp3: 九つ (ここのつ)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B9%9D%E3%81%A4%E3%80%90%E3%81%93%E3%81%93%E3%81%AE%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: 22464f2d7a79037dd4251d7600b2bf1ef134fcdc
+- juugatsu.mp3: 十月 (じゅうがつ)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8D%81%E6%9C%88%E3%80%90%E3%81%98%E3%82%85%E3%81%86%E3%81%8C%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: b3f7e5d8b5053895d2dd35c05886074fb07975bd
+- tooka.mp3: 十日 (とおか)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8D%81%E6%97%A5%E3%80%90%E3%81%A8%E3%81%8A%E3%81%8B%E3%80%91.mp3
+  Git blob SHA-1: 2fb6e632146ef850dd3a2c8b9fa49bafa2fc9ac6
+- senen.mp3: 千円 (せんえん)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8D%83%E5%86%86%E3%80%90%E3%81%9B%E3%82%93%E3%81%88%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: cf133d9752e3a377e290f6abcb567dcf209bf5df
+- mikka.mp3: 三日 (みっか)
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%89%E6%97%A5%E3%80%90%E3%81%BF%E3%81%A3%E3%81%8B%E3%80%91.mp3
+  Git blob SHA-1: b8287dcb6b240724d7907e4e6e4f7b044438f3f4
 
+SYNTHESIZED AUDIO — VOICEVOX Nemo
+Voice: 女声1 (CV: 亜咲比 凛), speaker 10005. Engine 0.26.0, core 0.17.0.
+Source: https://voicevox.hiroshiba.jp/nemo/
+Terms: https://voicevox.hiroshiba.jp/nemo/term/
+The generated WAVs are subject to the VOICEVOX Nemo terms, not CC BY-SA.
+When reusing these files, credit VOICEVOX Nemo and comply with its terms.
+Do not use the generated audio for machine learning.
+The shipped voice-library policy is in VOICEVOX-NEMO-POLICY.txt.
+Exact synthesis queries, voice/version, and reading overrides are in generation.json.
+These files have not received native-speaker listening or pronunciation review.
+
+- niko.wav: 二こ (にこ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 1a857a03890fe807ae56507c14ae03b16aa3227ab9537a96a3af7f3cfca53121
+- sanbon.wav: 三本 (さんぼん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 078790af289f8d5474e9af7c154b11c5ed438bf1f67fab817a28a560c114307a
+- yonko.wav: 四こ (よんこ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 369bc30ce64aed034e432c74fbb38671d3f8a1994a78c6961a53d52b6f1ade93
+- shichigatsu.wav: 七月 (しちがつ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 84f11e8136435fcdf6edffafc34175f5892127655f7caaa0127f6cfc840bb88f
+- nanairo.wav: 七色 (なないろ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 8ee14887ef06e1e72994bdbbc2d1883659a250bba62ed1fd83a36694bcce0f8a
+- hachigatsu.wav: 八月 (はちがつ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 8c4040429c14d77aea514953a9d1c8dffb7139653dfc42a25a138e8021256402
+- kyuuko.wav: 九こ (きゅうこ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 2b37b8dd9b8e78ea7c845bb32219c1486260d340e4c23d5b68a6f4d708fd0763
+- kugatsu.wav: 九月 (くがつ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 0caf72be12546b895cd4762b2af88a34f73108504577d22452af92944651fe92
+- juunen.wav: 十年 (じゅうねん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 477a41778048be7847e03eac6dfcbfbba60d67bf7238248f16eaba4defd40948
+- hyakunen.wav: 百年 (ひゃくねん)
+  Generated by VOICEVOX Nemo
+  SHA-256: f10c5898e6ef04c6ba6a847640c3fbbc91a3e3655252ddf48327e5b6f54df834
+- hyakuen.wav: 百円 (ひゃくえん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 7cf282b81ac143106a028998cad3ed8f14d342b336844169ccbe773c5eb1105e
+- hyakunichi.wav: 百日 (ひゃくにち)
+  Generated by VOICEVOX Nemo
+  SHA-256: 9d15e428ee48a213920d9d10c7094f0a9fa3336138e4d168a88ac4c8588dc7c6
+- sennen.wav: 千年 (せんねん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 1cd4274a13861e9a70d39fdaf183f160c14d3962d8782d818832a8fb4605abc2
+- sennin.wav: 千人 (せんにん)
+  Generated by VOICEVOX Nemo
+  SHA-256: ec7b125674dd8b7145effacc7f1e1956cf67bc84a347ffb42d4d91d0a7f304f1
+- nichiji.wav: 日時 (にちじ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 22203c18f0b224043120e20cab3f95ed8cf3c8ae6740772b4660be3aa0bb3bb6
