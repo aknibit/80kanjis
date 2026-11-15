@@ -1,0 +1,22 @@
+{
+  "name": "80kanjis",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode editor --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build --mode production",
+    "build:dev": "tsc --noEmit && vite build --mode editor",
+    "preview": "vite preview --mode production --host 127.0.0.1",
+    "preview:dev": "vite preview --mode editor --host 127.0.0.1",
+    "check:builds": "node scripts/check-builds.mjs",
+    "test": "node --experimental-strip-types --test src/lib/search.test.ts src/lib/difficulty.test.ts src/lib/study-catalog.test.ts src/data/kanji.test.ts"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vite": "~7.3.5"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
