@@ -36,24 +36,22 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <p class="intro-description">80 kanji y 240 ejemplos para aprender a tu ritmo.</p>
     </section>
 
-    <section class="collection" id="collection" aria-labelledby="collection-title" tabindex="-1">
+    <section class="collection" id="collection" aria-label="Colección de kanji" tabindex="-1">
       <form class="search-form" role="search" autocomplete="off">
-        <label class="visually-hidden" for="search">Buscar por kanji, lectura o significado</label>
+        <label class="visually-hidden" for="search">Buscar en japonés o español por kanji, lectura o significado</label>
         <div class="search-box">
           ${searchIcon}
-          <input id="search" type="search" placeholder="Busca un kanji, una lectura o un significado…" spellcheck="false" aria-controls="kanji-grid" aria-describedby="search-hint" />
+          <input id="search" type="search" placeholder="Busca en japonés o español: kanji, lectura o significado…" spellcheck="false" aria-controls="kanji-grid" />
           <button id="clear-search" class="clear-button" type="button" aria-label="Borrar búsqueda" hidden>${closeIcon}</button>
           <kbd id="search-shortcut" aria-hidden="true">/</kbd>
         </div>
-        <p class="search-hints" id="search-hint">Busca en japonés o en español, por escritura, lectura o significado.</p>
       </form>
 
       <div class="collection-toolbar">
-        <div class="collection-heading"><h2 id="collection-title">La colección</h2><span id="result-count" role="status" aria-live="polite" aria-atomic="true">80 de 80 kanji</span></div>
-        <p class="kanji-legend" aria-label="Colores de los kanji. Pulsa un kanji para consultar su información."><span class="kanji-legend-target">De la fila</span><span class="kanji-legend-collection">Otros de los 80</span><span class="kanji-legend-advanced">Avanzados</span><span class="kanji-legend-hint">Pulsa para consultar</span></p>
-      </div>
-      <div id="row-filters" class="row-filters" role="group" aria-label="Filtrar filas por dificultad" aria-describedby="row-filter-hint">
-        ${Object.entries(rowDifficultyFilters).map(([value, label]) => `<button type="button" class="row-filter" data-row-filter="${value}" aria-pressed="${value === 'all'}" aria-controls="kanji-grid" disabled${value === 'unrated' ? ' hidden' : ''}>${label} <span class="filter-count">—</span></button>`).join('')}
+        <div id="row-filters" class="row-filters" role="group" aria-label="Filtrar filas por dificultad" aria-describedby="row-filter-hint">
+          ${Object.entries(rowDifficultyFilters).map(([value, label]) => `<button type="button" class="row-filter" data-row-filter="${value}" aria-pressed="${value === 'all'}" aria-controls="kanji-grid" disabled${value === 'unrated' ? ' hidden' : ''}>${label} <span class="filter-count">—</span></button>`).join('')}
+        </div>
+        <span id="result-count" role="status" aria-live="polite" aria-atomic="true">80 de 80 kanji</span>
       </div>
       <p id="row-filter-hint" class="filter-hint">La dificultad más alta de la fila decide. Fácil requiere las cuatro entradas en fácil.</p>
       <p id="collection-status" class="collection-status" role="status" aria-live="polite">Cargando la colección…</p>
@@ -77,7 +75,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>Busca por carácter, palabra, lectura o significado. Puedes escribir sin tildes y usar hiragana o katakana. Las lecturas se muestran siempre junto a las palabras.</p>
     <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
     <p>En las fichas, uno, dos o tres puntos destacados indican fácil, medio y difícil. Tres puntos atenuados indican que la dificultad está sin marcar.</p>
-    <p>En el vocabulario, el kanji de la fila aparece en terracota, los otros de los 80 en azul y los avanzados en violeta con subrayado de puntos. Pulsa cualquier kanji para consultar su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
+    <p>En el vocabulario, el kanji de la fila aparece en terracota, los otros de los 80 en azul y los avanzados en violeta. Pulsa cualquier kanji para consultar su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
     <p class="dialog-note">Se conserva la escritura del documento, con las conversiones revisadas a kanji de la colección y los de apoyo 個, 色 y 庭. 時 y 前 ya aparecían en el vocabulario original y también se pueden consultar como kanji de apoyo. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
     <p class="dialog-note">Pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar, con voces de Tokio y Kansai. Los botones con «IA» usan voz generada por <a href="${synthesizedSource.url}" target="_blank" rel="noopener">${synthesizedSource.name}</a> (${synthesizedSource.voice}), bajo sus <a href="${synthesizedSource.termsUrl}" target="_blank" rel="noopener">condiciones de uso</a>. Los audios están pendientes de revisión por un hablante nativo. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes y créditos de cada audio</a>.</p>
     <div class="dialog-shortcut"><kbd>/</kbd> Buscar <kbd>Esc</kbd> Borrar la búsqueda o cerrar esta ventana</div>

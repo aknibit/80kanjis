@@ -35,7 +35,7 @@ Upload the **contents of `dist/`** to any static host or CDN. Set the build comm
 
 Serve `index.html` and `collection.json` with revalidation (`Cache-Control: no-cache`). The content-hashed files in `assets/` can use `Cache-Control: public, max-age=31536000, immutable`.
 
-Typography currently loads DM Sans and Noto Serif JP from Google Fonts, with system fallbacks. The collection and search do not depend on that service.
+Typography loads DM Sans, Noto Serif JP, and Noto Sans JP from Google Fonts, with system fallbacks. Kanji and written words retain Noto Serif JP; vocabulary readings use Noto Sans JP at 16 px with a darker color, including in dialogs. Basic on/kun readings in support dialogs use the same Japanese sans-serif family. The collection and search do not depend on that service.
 
 ## Features
 
@@ -46,10 +46,10 @@ Typography currently loads DM Sans and Noto Serif JP from Google Fonts, with sys
 - Search is reflected in the `?q=` URL parameter for bookmarks and sharing.
 - Always-visible vocabulary readings, empty results, keyboard shortcuts (`/` to search, `Escape` to clear), and an accessible collection information dialog.
 - Four independent difficulty indicators per row: one for the kanji and one for each word (Fácil, Medio, Difícil, or Sin marcar). Repeated words share their difficulty across rows.
-- Compact header and whole-row difficulty filters with counts, combined with search. Filters are bookmarkable via `?difficulty=hard&q=...`.
+- Compact header and whole-row difficulty filters with counts, combined with search. Filters sit in one row with the total kanji count on the right; on narrow screens, the filter buttons scroll horizontally. Filters are bookmarkable via `?difficulty=hard&q=...`.
 - 232 vocabulary audio files with play/stop controls and source credits: 108 human recordings and 124 locally synthesized WAVs. Every vocabulary item in the collection has audio; changing classifications does not remove it.
 - Compact cards with audio in the upper-right corner and difficulty immediately to its left. One green, two yellow, or three red flat dots indicate easy, medium, or hard; faded dots mean unmarked. Names remain available in tooltips and accessible labels. Kanji blocks use a soft gray background.
-- Every vocabulary kanji is clickable: terracotta for the row’s kanji, blue for other main kanji, and violet with a dotted underline for support characters outside the 80. Native dialogs show meanings and examples; support dialogs also show basic on/kun readings, an explanation, and a dictionary source. Escape, the close button, and clicking the backdrop dismiss the dialog and return focus.
+- Every vocabulary kanji is clickable: terracotta for the row’s kanji, blue for other main kanji, and violet for support characters outside the 80. Kanji have no underlines, including on hover; a background highlight indicates keyboard focus. Native dialogs show meanings and examples; support dialogs also show basic on/kun readings, an explanation, and a dictionary source. Escape, the close button, and clicking the backdrop dismiss the dialog and return focus.
 
 ## Independent study items
 
