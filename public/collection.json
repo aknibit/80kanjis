@@ -311,7 +311,7 @@
       "meanings": [
         "hierba"
       ],
-      "difficulty": "hard",
+      "difficulty": "medium",
       "vocabulary": [
         "草はら",
         "草もち",
@@ -883,7 +883,7 @@
         "vida",
         "nacer"
       ],
-      "difficulty": "hard",
+      "difficulty": "medium",
       "vocabulary": [
         "生む",
         "生きる",
@@ -1272,7 +1272,7 @@
       "written": "水草",
       "reading": "みずくさ",
       "meaning": "planta acuática",
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "written": "水どう",
@@ -1404,7 +1404,7 @@
       "written": "青森",
       "reading": "あおもり",
       "meaning": "Aomori (ciudad)",
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "written": "竹うま",
@@ -1416,7 +1416,7 @@
       "written": "竹やぶ",
       "reading": "たけやぶ",
       "meaning": "bambusal",
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "written": "竹わ",
@@ -1428,19 +1428,19 @@
       "written": "花びら",
       "reading": "はなびら",
       "meaning": "pétalo",
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "written": "花たば",
       "reading": "はなたば",
       "meaning": "ramo de flores",
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "written": "花だん",
       "reading": "かだん",
       "meaning": "zona floreada",
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "written": "草はら",
@@ -1674,7 +1674,7 @@
       "written": "青年",
       "reading": "せいねん",
       "meaning": "persona joven",
-      "difficulty": "hard"
+      "difficulty": "medium"
     },
     {
       "written": "青空",

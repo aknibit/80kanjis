@@ -46,7 +46,7 @@ Typography currently loads DM Sans and Noto Serif JP from Google Fonts, with sys
 - Search is reflected in the `?q=` URL parameter for bookmarks and sharing.
 - Always-visible vocabulary readings, empty results, keyboard shortcuts (`/` to search, `Escape` to clear), and an accessible collection information dialog.
 - Four independent difficulty indicators per row: one for the kanji and one for each word (Fácil, Medio, Difícil, or Sin marcar). Repeated words share their difficulty across rows.
-- Compact header and whole-row difficulty filters with counts, combined with search and the audio filter. Filters are bookmarkable via `?difficulty=hard&audio=1&q=...`.
+- Compact header and whole-row difficulty filters with counts, combined with search. Filters are bookmarkable via `?difficulty=hard&q=...`.
 - 232 vocabulary audio files with play/stop controls and source credits: 108 human recordings and 124 locally synthesized WAVs. Every vocabulary item in the collection has audio; changing classifications does not remove it.
 - Compact cards with audio in the upper-right corner and difficulty immediately to its left. One green, two yellow, or three red flat dots indicate easy, medium, or hard; faded dots mean unmarked. Names remain available in tooltips and accessible labels. Kanji blocks use a soft gray background.
 
@@ -62,11 +62,11 @@ The collection always preserves all four blocks. `src/lib/row-difficulty.ts` der
 - **Sin completar:** only easy/unmarked entries, with at least one unmarked.
 - **Todas:** every row.
 
-Counts reflect the current text search and audio filter. The selected category is a view of the four existing marks; it does not add another persisted rating. A shared word's classification applies to every row containing it. All classifications come from the fetched JSON. “Sin completar” appears only when the current search/audio results contain incomplete rows. If an old bookmark selects that category when none remain, the view returns to Todas and updates the URL.
+Counts reflect the current text search. The selected category is a view of the four existing marks; it does not add another persisted rating. A shared word's classification applies to every row containing it. All classifications come from the fetched JSON. “Sin completar” appears only when the current search results contain incomplete rows. If an old bookmark selects that category when none remain, the view returns to Todas and updates the URL.
 
 ### Pronunciation audio
 
-Use **Con audio · 232** or open `?audio=1#collection` to find rows with audio. Each available vocabulary block has a speaker button. A small **IA** marker and an accessible label identify synthesized audio. Only one clip plays at a time, playback starts after a click, and filtering stops playback. Press the button again to stop or retry a failed playback. Words without audio have no speaker button.
+Each vocabulary block has a speaker button in its upper-right corner. A small **IA** marker and an accessible label identify synthesized audio. Only one clip plays at a time, playback starts after a click, and filtering stops playback. Press the button again to stop or retry a failed playback.
 
 All **232 unique vocabulary items** have audio, covering all 240 example slots in the 80 kanji rows. Repeated words share a recording. Coverage is independent of difficulty classifications. Tests require every vocabulary item to have exactly one matching audio; new words or changed readings must receive a corresponding clip.
 

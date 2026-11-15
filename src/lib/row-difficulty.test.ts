@@ -52,7 +52,7 @@ test('completed results hide the incomplete filter and normalize an obsolete boo
   assert.equal(getRowFilterState([], 'hard').selected, 'hard');
 });
 
-test('incomplete results expose the filter until search or audio excludes those rows', () => {
+test('incomplete results expose the filter until search excludes those rows', () => {
   const state = getRowFilterState(['easy', null, 'hard', null], 'unrated');
   assert.ok(state.available.includes('unrated'));
   assert.equal(state.counts.unrated, 2);

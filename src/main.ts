@@ -2,7 +2,7 @@ import { collectionRows, loadCollection } from './lib/collection.ts';
 import { collectionDifficulties, difficultyLabels } from './lib/difficulty.ts';
 import { createKanjiSearch } from './lib/search.ts';
 import { createStudyCatalog } from './lib/study-catalog.ts';
-import { getPronunciation, pronunciations, pronunciationSource, synthesizedSource } from './data/pronunciations.ts';
+import { pronunciationSource, synthesizedSource } from './data/pronunciations.ts';
 import { setupPronunciation } from './pronunciation-ui.ts';
 import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDifficultyFilter, rowDifficultyFilters, type RowDifficultyFilter } from './lib/row-difficulty.ts';
 import type { Difficulty, Kanji, StudyItem, StudyItemId } from './types.ts';
@@ -49,22 +49,18 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
       <div class="collection-toolbar">
         <div class="collection-heading"><h2 id="collection-title">La colección</h2><span id="result-count" role="status" aria-live="polite" aria-atomic="true">80 de 80 kanji</span></div>
-        <div class="collection-actions">
-          <button id="filter-audio" class="audio-filter" type="button" aria-pressed="false" aria-controls="kanji-grid">Con audio · ${pronunciations.length}</button>
-        </div>
       </div>
       <div id="row-filters" class="row-filters" role="group" aria-label="Filtrar filas por dificultad" aria-describedby="row-filter-hint">
         ${Object.entries(rowDifficultyFilters).map(([value, label]) => `<button type="button" class="row-filter" data-row-filter="${value}" aria-pressed="${value === 'all'}" aria-controls="kanji-grid" disabled${value === 'unrated' ? ' hidden' : ''}>${label} <span class="filter-count">—</span></button>`).join('')}
       </div>
       <p id="row-filter-hint" class="filter-hint">La dificultad más alta de la fila decide. Fácil requiere las cuatro entradas en fácil.</p>
       <p id="collection-status" class="collection-status" role="status" aria-live="polite">Cargando la colección…</p>
-      <p class="audio-note">Audio en ${pronunciations.length} palabras. La marca «IA» indica voz generada. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Créditos del audio</a></p>
       <p id="audio-status" class="audio-status" role="status" aria-live="polite"></p>
       <div id="kanji-grid" class="kanji-grid"></div>
       <div id="empty-state" class="empty-state" hidden>
         <span class="empty-character" lang="ja" aria-hidden="true">空</span>
         <h3>No encontramos resultados.</h3>
-        <p>Prueba otra búsqueda o cambia los filtros de dificultad y audio.</p>
+        <p>Prueba otra búsqueda o cambia el filtro de dificultad.</p>
         <button class="reset-button" id="reset-search" type="button">Ver toda la colección ${arrowIcon}</button>
       </div>
       <p class="collection-end" id="collection-end"><span></span><span lang="ja">一歩ずつ</span> Paso a paso, palabra a palabra.<span></span></p>
@@ -111,15 +107,9 @@ async function start() {
   const getDifficulty = (id: StudyItemId) => difficulties.get(id) ?? null;
   const rowRatings = new Map(studyCatalog.rows.map((row) => [row.id, getRowDifficulty(row, getDifficulty)]));
   const studyRows = new Map(studyCatalog.rows.map((row) => [row.id, row]));
-  const audioFilter = document.querySelector<HTMLButtonElement>('#filter-audio')!;
   const pronunciation = setupPronunciation(document.querySelector('#audio-status')!);
-  let onlyAudio = new URLSearchParams(window.location.search).get('audio') === '1';
   let difficultyFilter = parseRowDifficultyFilter(new URLSearchParams(window.location.search).get('difficulty'));
   const filterButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-row-filter]')];
-  const rowsWithAudio = new Set(studyCatalog.rows.filter((row) => row.itemIds.some((id) => {
-    const item = studyCatalog.byId.get(id)!;
-    return item.type === 'vocabulary' && getPronunciation(item);
-  })).map((row) => row.id));
 
   function createStudyBlock(item: StudyItem, entry: Kanji, blockIndex: number): HTMLElement {
     const block = element('article', `study-block study-block--${item.type}`);
@@ -188,15 +178,13 @@ async function start() {
   function render() {
     pronunciation.stop();
     document.querySelector<HTMLElement>('#audio-status')!.textContent = '';
-    const candidates = search(input.value).filter((entry) => !onlyAudio || rowsWithAudio.has(entry.id));
+    const candidates = search(input.value);
     const filters = getRowFilterState(candidates.map((entry) => rowRatings.get(entry.id) ?? null), difficultyFilter);
     if (filters.selected !== difficultyFilter) {
       difficultyFilter = filters.selected;
       updateUrl();
     }
     const results = candidates.filter((entry) => matchesRowDifficulty(rowRatings.get(entry.id) ?? null, difficultyFilter));
-    audioFilter.setAttribute('aria-pressed', String(onlyAudio));
-    document.querySelector<HTMLElement>('.audio-note')!.hidden = !onlyAudio;
     filterButtons.forEach((button) => {
       const filter = button.dataset.rowFilter as RowDifficultyFilter;
       button.setAttribute('aria-pressed', String(filter === difficultyFilter));
@@ -218,8 +206,6 @@ async function start() {
     const url = new URL(window.location.href);
     if (input.value.trim()) url.searchParams.set('q', input.value.trim());
     else url.searchParams.delete('q');
-    if (onlyAudio) url.searchParams.set('audio', '1');
-    else url.searchParams.delete('audio');
     if (difficultyFilter !== 'all') url.searchParams.set('difficulty', difficultyFilter);
     else url.searchParams.delete('difficulty');
     window.history.replaceState(null, '', url);
@@ -250,13 +236,8 @@ async function start() {
   document.querySelector('form')!.addEventListener('submit', (event) => event.preventDefault());
   clearButton.addEventListener('click', resetSearch);
   document.querySelector('#reset-search')!.addEventListener('click', () => {
-    onlyAudio = false;
     difficultyFilter = 'all';
     resetSearch();
-  });
-  audioFilter.addEventListener('click', () => {
-    onlyAudio = !onlyAudio;
-    updateSearch();
   });
   filterButtons.forEach((button) => button.addEventListener('click', () => {
     difficultyFilter = button.dataset.rowFilter as RowDifficultyFilter;
@@ -280,7 +261,6 @@ async function start() {
   window.addEventListener('popstate', () => {
     clearTimeout(urlTimer);
     input.value = new URLSearchParams(window.location.search).get('q') ?? '';
-    onlyAudio = new URLSearchParams(window.location.search).get('audio') === '1';
     difficultyFilter = parseRowDifficultyFilter(new URLSearchParams(window.location.search).get('difficulty'));
     render();
   });
