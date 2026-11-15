@@ -1747,13 +1747,13 @@
     {
       "written": "一ぴき",
       "reading": "いっぴき",
-      "meaning": "animal pequeño",
+      "meaning": "un animal pequeño",
       "difficulty": "medium"
     },
     {
       "written": "一年生",
       "reading": "いちねんせい",
-      "meaning": "estudiante (primero)",
+      "meaning": "alumno de primer curso",
       "difficulty": "easy"
     },
     {
@@ -1789,7 +1789,7 @@
     {
       "written": "三本",
       "reading": "さんぼん",
-      "meaning": "3x largos/cilíndricos",
+      "meaning": "3 objetos alargados o cilíndricos",
       "difficulty": "easy"
     },
     {
@@ -1807,7 +1807,7 @@
     {
       "written": "四月",
       "reading": "しがつ",
-      "meaning": "Abril",
+      "meaning": "abril",
       "difficulty": "easy"
     },
     {
@@ -1843,7 +1843,7 @@
     {
       "written": "六本",
       "reading": "ろっぽん",
-      "meaning": "6x largos/cilíndricos",
+      "meaning": "6 objetos alargados o cilíndricos",
       "difficulty": "easy"
     },
     {
@@ -1855,7 +1855,7 @@
     {
       "written": "七月",
       "reading": "しちがつ",
-      "meaning": "Julio",
+      "meaning": "julio",
       "difficulty": "easy"
     },
     {
@@ -1873,13 +1873,13 @@
     {
       "written": "八月",
       "reading": "はちがつ",
-      "meaning": "Agosto",
+      "meaning": "agosto",
       "difficulty": "easy"
     },
     {
       "written": "八日",
       "reading": "ようか",
-      "meaning": "dia 8 / ocho días",
+      "meaning": "día 8 / ocho días",
       "difficulty": "easy"
     },
     {
@@ -1897,7 +1897,7 @@
     {
       "written": "九月",
       "reading": "くがつ",
-      "meaning": "Septiembre",
+      "meaning": "septiembre",
       "difficulty": "easy"
     },
     {
@@ -1909,13 +1909,13 @@
     {
       "written": "十月",
       "reading": "じゅうがつ",
-      "meaning": "Octubre",
+      "meaning": "octubre",
       "difficulty": "easy"
     },
     {
       "written": "十日",
       "reading": "とおか",
-      "meaning": "dia 10 / diez dias",
+      "meaning": "día 10 / diez días",
       "difficulty": "easy"
     },
     {
@@ -1933,7 +1933,7 @@
     {
       "written": "百日",
       "reading": "ひゃくにち",
-      "meaning": "cien dias",
+      "meaning": "cien días",
       "difficulty": "easy"
     },
     {
@@ -1957,13 +1957,13 @@
     {
       "written": "三日",
       "reading": "みっか",
-      "meaning": "dia 3 / tres dias",
+      "meaning": "día 3 / tres días",
       "difficulty": "easy"
     },
     {
       "written": "一日",
       "reading": "いちにち",
-      "meaning": "1 dia",
+      "meaning": "1 día",
       "difficulty": "easy"
     },
     {
@@ -1981,7 +1981,7 @@
     {
       "written": "二月",
       "reading": "にがつ",
-      "meaning": "Febrero",
+      "meaning": "febrero",
       "difficulty": "easy"
     },
     {
@@ -2065,7 +2065,7 @@
     {
       "written": "土き",
       "reading": "どき",
-      "meaning": "ceramica de barro",
+      "meaning": "cerámica de barro",
       "difficulty": "medium"
     },
     {
@@ -2095,25 +2095,25 @@
     {
       "written": "ふじ山",
       "reading": "ふじさん",
-      "meaning": "monte fuji",
+      "meaning": "monte Fuji",
       "difficulty": "easy"
     },
     {
       "written": "川上",
       "reading": "かわかみ",
-      "meaning": "curso alto del rio",
+      "meaning": "curso alto del río",
       "difficulty": "medium"
     },
     {
       "written": "川下",
       "reading": "かわしも",
-      "meaning": "curso bajo del rio",
+      "meaning": "curso bajo del río",
       "difficulty": "medium"
     },
     {
       "written": "川べり",
       "reading": "かわべり",
-      "meaning": "orilla del rio",
+      "meaning": "orilla del río",
       "difficulty": "medium"
     },
     {
@@ -2185,7 +2185,7 @@
     {
       "written": "花だん",
       "reading": "かだん",
-      "meaning": "zona floreada",
+      "meaning": "parterre / macizo de flores",
       "difficulty": "medium"
     },
     {
@@ -2335,7 +2335,7 @@
     {
       "written": "天の川",
       "reading": "あまのがわ",
-      "meaning": "vía láctea",
+      "meaning": "Vía Láctea",
       "difficulty": "medium"
     },
     {
@@ -2443,7 +2443,7 @@
     {
       "written": "赤はん",
       "reading": "せきはん",
-      "meaning": "arroz con judias rojas 🎊",
+      "meaning": "arroz con judías rojas (festivo)",
       "difficulty": "hard"
     },
     {
@@ -2473,7 +2473,7 @@
     {
       "written": "中学校",
       "reading": "ちゅうがっこう",
-      "meaning": "escuela secundaria (ESO)",
+      "meaning": "escuela secundaria básica",
       "difficulty": "medium"
     },
     {
@@ -2611,7 +2611,7 @@
     {
       "written": "人口",
       "reading": "じんこう",
-      "meaning": "población / num.habitantes",
+      "meaning": "población / número de habitantes",
       "difficulty": "medium"
     },
     {
@@ -2671,7 +2671,7 @@
     {
       "written": "耳うち",
       "reading": "みみうち",
-      "meaning": "susurrar al oido",
+      "meaning": "susurrar al oído",
       "difficulty": "medium"
     },
     {
@@ -2731,7 +2731,7 @@
     {
       "written": "き立",
       "reading": "きりつ",
-      "meaning": "¡en pié!",
+      "meaning": "¡En pie!",
       "difficulty": "easy"
     },
     {
@@ -2749,7 +2749,7 @@
     {
       "written": "休日",
       "reading": "きゅうじつ",
-      "meaning": "dia libre o festivo",
+      "meaning": "día libre o festivo",
       "difficulty": "medium"
     },
     {
@@ -2875,7 +2875,7 @@
     {
       "written": "すう字",
       "reading": "すうじ",
-      "meaning": "cifra (simbolo numérico)",
+      "meaning": "cifra (símbolo numérico)",
       "difficulty": "hard"
     },
     {
@@ -3037,7 +3037,7 @@
     {
       "written": "こく王",
       "reading": "こくおう",
-      "meaning": "rey/monarca (de un pais)",
+      "meaning": "rey/monarca (de un país)",
       "difficulty": "medium"
     },
     {
@@ -3121,7 +3121,7 @@
     {
       "written": "町の中",
       "reading": "まちのなか",
-      "meaning": "Dentro del pueblo / ciudad",
+      "meaning": "dentro del pueblo / ciudad",
       "difficulty": "medium"
     },
     {

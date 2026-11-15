@@ -120,8 +120,8 @@ The optional `supportingKanji` section supplies reference information for charac
   ],
   "vocabulary": [
     { "written": "一つ", "reading": "ひとつ", "meaning": "una cosa", "difficulty": "easy" },
-    { "written": "一ぴき", "reading": "いっぴき", "meaning": "animal pequeño", "difficulty": "medium" },
-    { "written": "一年生", "reading": "いちねんせい", "meaning": "estudiante (primero)", "difficulty": "easy" }
+    { "written": "一ぴき", "reading": "いっぴき", "meaning": "un animal pequeño", "difficulty": "medium" },
+    { "written": "一年生", "reading": "いちねんせい", "meaning": "alumno de primer curso", "difficulty": "easy" }
   ]
 }
 ```
@@ -149,5 +149,7 @@ The seven slots marked `duplicado` are completed from the matching word elsewher
 The 80 main kanji meanings were reviewed on 2026-11-15 against [KANJIDIC2](https://www.edrdg.org/wiki/KANJIDIC_Project.html), database 2026-319, with selected clarifications checked in [KanjiPedia](https://www.kanjipedia.jp/). Additions include 生 as raw/uncooked, 青 as young, 気 as air, 金 as metal, and notes for 本 as a long-object counter and 文 as an old monetary unit. 中 explicitly includes ジュウ for 一日中, verified in KanjiPedia despite its omission from the current KANJIDIC2 entry. Existing vocabulary definitions, ratings, row order, and audio are unchanged.
 
 The KANJIDIC2-derived reading lists and enriched meanings are credited to EDRDG / Jim Breen and distributed under CC BY-SA 4.0. `public/data/CREDITS.txt` includes provenance, editorial criteria, and the refresh procedure; the full license ships alongside it. Credits are available from the information dialog, and every kanji modal links to a source. This adds no runtime dictionary service or extra content fetch.
+
+The vocabulary's Spanish translations were subsequently reviewed: 30 approved wording, accent, and capitalization corrections were applied, retaining all other translations. Japanese spellings, readings, difficulties, and audio were preserved.
 
 Tests read the same canonical JSON and verify its schema, source sequence, vocabulary references, shared definitions, search, row grouping/filtering, stable identities, read-only classifications, and audio coverage. `check:build` verifies the deployed collection, audio files, relative asset URLs, visible readings, and the absence of editing controls and browser storage code. Spanish interface text lives in `src/main.ts` and `src/kanji-ui.ts`; visual styles live in `src/style.css`. `src/lib/kanji-reference.ts` resolves both kinds of kanji and classifies every character without duplicating study content.

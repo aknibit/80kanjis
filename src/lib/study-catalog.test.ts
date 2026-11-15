@@ -44,7 +44,7 @@ test('a repeated word is one entity, with its own content and links to contained
   if (item?.type !== 'vocabulary') throw new Error('Missing vocabulary item');
   assert.equal(item.written, '一年生');
   assert.equal(item.reading, 'いちねんせい');
-  assert.deepEqual(item.meanings, ['estudiante (primero)']);
+  assert.deepEqual(item.meanings, ['alumno de primer curso']);
   assert.deepEqual(item.kanjiIds, ['kanji:一', 'kanji:年', 'kanji:生']);
   const occurrences = studyCatalog.rows.filter((row) => row.itemIds.includes(item.id));
   assert.equal(occurrences.length, 2);
