@@ -37,6 +37,20 @@ Serve `index.html` and `collection.json` with revalidation (`Cache-Control: no-c
 
 Typography loads DM Sans, Noto Serif JP, and Noto Sans JP from Google Fonts, with system fallbacks. Kanji and written words retain Noto Serif JP; vocabulary readings use Noto Sans JP at 16 px with a darker color, including in dialogs. Basic on/kun readings in support dialogs use the same Japanese sans-serif family. The collection and search do not depend on that service.
 
+## Deploy to GitHub Pages
+
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and deploys the compiled website on pushes to `main`, or manually from the Actions tab. It uses Node.js 22, installs from `package-lock.json` with `npm ci`, runs the tests and build checks, and publishes the contents of `dist/` as a Pages artifact.
+
+One-time setup for this repository:
+
+1. Open [Settings → Pages](https://github.com/aknibit/80kanjis/settings/pages), then select **GitHub Actions** under **Build and deployment → Source**. Publishing `main` directly serves the source HTML and cannot compile the TypeScript application.
+2. Commit and push the deployment configuration to `main`.
+3. Check **Actions → Deploy to GitHub Pages**. Once deployment succeeds, the default site URL is [https://aknibit.github.io/80kanjis/](https://aknibit.github.io/80kanjis/).
+
+Keep `dist/` in `.gitignore`; GitHub generates it during the workflow, so it does not need to appear in the repository. Keep Vite's `base: './'`: asset, collection, and audio URLs are already relative and work under `/80kanjis/`, at a domain root, and on other CDNs. This app uses query parameters rather than client-side routes, so no router or 404 workaround is required.
+
+To publish later changes, push to `main`. You can also select **Run workflow** from the workflow's Actions page. The GitHub Pages deployment URL is shown by the deployment job.
+
 ## Features
 
 - Each collection row has four separate study blocks: one labeled Kanji and three labeled Vocabulario. They use four columns on desktop and a grouped 2×2 layout on smaller screens.
