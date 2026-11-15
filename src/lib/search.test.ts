@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { kanji } from '../data/kanji.ts';
+import { kanji } from '../../tests/collection-fixture.ts';
 import { createKanjiSearch, normalizeSearch } from './search.ts';
 
 const search = createKanjiSearch(kanji);

@@ -21,3 +21,12 @@ export function getRowDifficulty(row: StudyRow, getRating: (id: StudyItemId) => 
 export function matchesRowDifficulty(difficulty: Difficulty | null, filter: RowDifficultyFilter): boolean {
   return filter === 'all' || (filter === 'unrated' ? difficulty === null : difficulty === filter);
 }
+
+/** Hide the incomplete category when the current search/audio results contain none. */
+export function getRowFilterState(difficulties: readonly (Difficulty | null)[], selected: RowDifficultyFilter) {
+  const counts: Record<RowDifficultyFilter, number> = { all: difficulties.length, easy: 0, medium: 0, hard: 0, unrated: 0 };
+  for (const difficulty of difficulties) counts[difficulty ?? 'unrated'] += 1;
+  const available = (Object.keys(rowDifficultyFilters) as RowDifficultyFilter[])
+    .filter((filter) => filter !== 'unrated' || counts.unrated > 0);
+  return { counts, available, selected: selected === 'unrated' && counts.unrated === 0 ? 'all' as const : selected };
+}

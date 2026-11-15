@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import type { Difficulty } from '../types.ts';
-import { studyCatalog } from '../data/study.ts';
-import { getRowDifficulty, matchesRowDifficulty, parseRowDifficultyFilter } from './row-difficulty.ts';
+import { studyCatalog } from '../../tests/collection-fixture.ts';
+import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDifficultyFilter } from './row-difficulty.ts';
 
 const row = studyCatalog.rows[0];
 const classify = (ratings: (Difficulty | null)[]) => getRowDifficulty(row, (id) => ratings[row.itemIds.indexOf(id)] ?? null);
@@ -31,7 +31,7 @@ test('medium applies when any entry is medium and none is hard, including incomp
   assert.equal(classify(['medium', 'hard', 'easy', null]), 'hard');
 });
 
-test('clearing and changing a shared word immediately reclassifies every containing row', () => {
+test('the classification of a shared word applies to every containing row', () => {
   const sharedRows = studyCatalog.rows.filter((entry) => entry.itemIds.includes('word:一年生'));
   let sharedRating: Difficulty | null = 'hard';
   const rating = (id: string): Difficulty | null => id === 'word:一年生' ? sharedRating : 'easy';
@@ -41,6 +41,25 @@ test('clearing and changing a shared word immediately reclassifies every contain
   assert.deepEqual(sharedRows.map((entry) => getRowDifficulty(entry, rating)), [null, null]);
   sharedRating = 'easy';
   assert.deepEqual(sharedRows.map((entry) => getRowDifficulty(entry, rating)), ['easy', 'easy']);
+});
+
+test('completed results hide the incomplete filter and normalize an obsolete bookmarked selection', () => {
+  const state = getRowFilterState(['easy', 'hard', 'medium', 'easy'], 'unrated');
+  assert.deepEqual(state.available, ['all', 'easy', 'medium', 'hard']);
+  assert.deepEqual(state.counts, { all: 4, easy: 2, medium: 1, hard: 1, unrated: 0 });
+  assert.equal(state.selected, 'all');
+  assert.equal(getRowFilterState([], 'unrated').selected, 'all');
+  assert.equal(getRowFilterState([], 'hard').selected, 'hard');
+});
+
+test('incomplete results expose the filter until search or audio excludes those rows', () => {
+  const state = getRowFilterState(['easy', null, 'hard', null], 'unrated');
+  assert.ok(state.available.includes('unrated'));
+  assert.equal(state.counts.unrated, 2);
+  assert.equal(state.selected, 'unrated');
+  const narrowed = getRowFilterState(['easy', 'hard'], state.selected);
+  assert.ok(!narrowed.available.includes('unrated'));
+  assert.equal(narrowed.selected, 'all');
 });
 
 test('URL filters validate known values and keep incomplete rows out of easy', () => {

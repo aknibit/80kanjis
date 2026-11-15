@@ -42,15 +42,30 @@ export interface Vocabulary {
   readonly written: string;
   readonly reading: string;
   readonly meaning: string;
+  readonly difficulty: Difficulty | null;
 }
 
-/** Original PDF row, used to assemble the independent study catalog. */
+export interface KanjiDefinition {
+  readonly character: string;
+  readonly meanings: readonly string[];
+  readonly difficulty: Difficulty | null;
+  readonly vocabulary: readonly [string, string, string];
+}
+
+/** The complete, versioned source of study content and published classifications. */
+export interface CollectionDocument {
+  readonly version: 1;
+  readonly kanji: readonly KanjiDefinition[];
+  readonly vocabulary: readonly Vocabulary[];
+}
+
+/** Derived presentation/search row; content lives exclusively in collection.json. */
 export interface Kanji {
   /** Stable across changes to the collection's order. */
   readonly id: string;
   readonly character: string;
   readonly meanings: readonly string[];
   readonly vocabulary: readonly [Vocabulary, Vocabulary, Vocabulary];
-  /** Fallback; public/difficulties.json and browser edits supply live ratings. */
+  /** Classification from the canonical collection file. */
   readonly difficulty: Difficulty | null;
 }

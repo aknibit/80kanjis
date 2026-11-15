@@ -1,10 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { kanji } from '../data/kanji.ts';
-import { studyCatalog } from '../data/study.ts';
+import { collectionDocument, kanji, studyCatalog } from '../../tests/collection-fixture.ts';
 import type { Kanji, StudyItem } from '../types.ts';
 import { createStudyCatalog } from './study-catalog.ts';
-import { createDifficultyView, ratingDefaults, studyItemTarget } from './difficulty.ts';
+import { collectionDifficulties } from './difficulty.ts';
 
 test('each presentation row resolves to exactly one kanji and three vocabulary blocks', () => {
   assert.equal(studyCatalog.rows.length, 80);
@@ -60,13 +59,13 @@ test('item identities and vocabulary content survive row and example reordering'
   }
 });
 
-test('independent items use the existing saved difficulty identities', () => {
-  const keys = Object.keys(ratingDefaults(kanji)).sort();
-  assert.deepEqual(studyCatalog.items.map((item) => item.id).sort(), keys);
-  const view = createDifficultyView(kanji);
-  view.loadDefaults(JSON.stringify({ version: 2, kanji: { '一': 'easy' }, words: { '一つ': 'hard' } }));
-  const selected: StudyItem[] = [studyCatalog.byId.get('kanji:一')!, studyCatalog.byId.get('word:一つ')!];
-  assert.deepEqual(selected.map((item) => view.get(studyItemTarget(item).key)), ['easy', 'hard']);
+test('independent items resolve classifications with the same canonical identities', () => {
+  const ratings = collectionDifficulties(collectionDocument);
+  assert.deepEqual(studyCatalog.items.map((item) => item.id).sort(), [...ratings.keys()].sort());
+  const selected: StudyItem[] = [studyCatalog.byId.get('kanji:一')!, studyCatalog.byId.get('word:一ぴき')!];
+  assert.deepEqual(selected.map((item) => ratings.get(item.id)), [
+    collectionDocument.kanji[0].difficulty, collectionDocument.vocabulary[1].difficulty,
+  ]);
 });
 
 test('ambiguous duplicate words are rejected instead of merging incompatible study answers', () => {

@@ -1,0 +1,2388 @@
+{
+  "version": 1,
+  "kanji": [
+    {
+      "character": "一",
+      "meanings": [
+        "uno"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "一つ",
+        "一ぴき",
+        "一年生"
+      ]
+    },
+    {
+      "character": "二",
+      "meanings": [
+        "dos"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "二つ",
+        "二こ",
+        "二日"
+      ]
+    },
+    {
+      "character": "三",
+      "meanings": [
+        "tres"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "三つ",
+        "三こ",
+        "三本"
+      ]
+    },
+    {
+      "character": "四",
+      "meanings": [
+        "cuatro"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "四つ",
+        "四こ",
+        "四月"
+      ]
+    },
+    {
+      "character": "五",
+      "meanings": [
+        "cinco"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "五つ",
+        "五こ",
+        "五わ"
+      ]
+    },
+    {
+      "character": "六",
+      "meanings": [
+        "seis"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "六つ",
+        "六こ",
+        "六本"
+      ]
+    },
+    {
+      "character": "七",
+      "meanings": [
+        "siete"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "七つ",
+        "七月",
+        "七色"
+      ]
+    },
+    {
+      "character": "八",
+      "meanings": [
+        "ocho"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "八つ",
+        "八月",
+        "八日"
+      ]
+    },
+    {
+      "character": "九",
+      "meanings": [
+        "nueve"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "九つ",
+        "九こ",
+        "九月"
+      ]
+    },
+    {
+      "character": "十",
+      "meanings": [
+        "diez"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "十年",
+        "十月",
+        "十日"
+      ]
+    },
+    {
+      "character": "百",
+      "meanings": [
+        "cien"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "百年",
+        "百円",
+        "百日"
+      ]
+    },
+    {
+      "character": "千",
+      "meanings": [
+        "mil"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "千年",
+        "千円",
+        "千人"
+      ]
+    },
+    {
+      "character": "日",
+      "meanings": [
+        "dia",
+        "sol"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "三日",
+        "一日",
+        "日時"
+      ]
+    },
+    {
+      "character": "月",
+      "meanings": [
+        "luna",
+        "mes"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "月み",
+        "二月",
+        "まん月"
+      ]
+    },
+    {
+      "character": "火",
+      "meanings": [
+        "fuego"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "火じ",
+        "火山",
+        "火のこ"
+      ]
+    },
+    {
+      "character": "水",
+      "meanings": [
+        "agua"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "水玉",
+        "水草",
+        "水どう"
+      ]
+    },
+    {
+      "character": "木",
+      "meanings": [
+        "árbol",
+        "madera"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "木目",
+        "にわ木",
+        "木かげ"
+      ]
+    },
+    {
+      "character": "金",
+      "meanings": [
+        "oro",
+        "dinero"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "お金",
+        "金色",
+        "ちょ金"
+      ]
+    },
+    {
+      "character": "土",
+      "meanings": [
+        "tierra"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "土き",
+        "土足",
+        "赤土"
+      ]
+    },
+    {
+      "character": "山",
+      "meanings": [
+        "montaña"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "山みち",
+        "山いも",
+        "ふじ山"
+      ]
+    },
+    {
+      "character": "川",
+      "meanings": [
+        "río"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "川かみ",
+        "川しも",
+        "川べり"
+      ]
+    },
+    {
+      "character": "林",
+      "meanings": [
+        "arboleda",
+        "bosque"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "竹林",
+        "まつ林",
+        "山林"
+      ]
+    },
+    {
+      "character": "森",
+      "meanings": [
+        "bosque"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "森の中",
+        "森林",
+        "青森"
+      ]
+    },
+    {
+      "character": "竹",
+      "meanings": [
+        "bambú"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "竹うま",
+        "竹やぶ",
+        "竹わ"
+      ]
+    },
+    {
+      "character": "花",
+      "meanings": [
+        "flor"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "花びら",
+        "花たば",
+        "花だん"
+      ]
+    },
+    {
+      "character": "草",
+      "meanings": [
+        "hierba"
+      ],
+      "difficulty": "hard",
+      "vocabulary": [
+        "草はら",
+        "草もち",
+        "ざっ草"
+      ]
+    },
+    {
+      "character": "石",
+      "meanings": [
+        "piedra"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "小石",
+        "じ石",
+        "ほう石"
+      ]
+    },
+    {
+      "character": "貝",
+      "meanings": [
+        "molusco",
+        "concha"
+      ],
+      "difficulty": "hard",
+      "vocabulary": [
+        "貝がら",
+        "まき貝",
+        "ほら貝"
+      ]
+    },
+    {
+      "character": "虫",
+      "meanings": [
+        "insecto",
+        "bicho"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "すず虫",
+        "こん虫",
+        "虫かご"
+      ]
+    },
+    {
+      "character": "犬",
+      "meanings": [
+        "perro"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "名犬",
+        "白い犬",
+        "犬ぞり"
+      ]
+    },
+    {
+      "character": "田",
+      "meanings": [
+        "arrozal"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "田んぼ",
+        "水田",
+        "田うえ"
+      ]
+    },
+    {
+      "character": "年",
+      "meanings": [
+        "año",
+        "edad"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "年上",
+        "一年生",
+        "年より"
+      ]
+    },
+    {
+      "character": "空",
+      "meanings": [
+        "cielo",
+        "vacío"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "空気",
+        "空色",
+        "空ばこ"
+      ]
+    },
+    {
+      "character": "天",
+      "meanings": [
+        "cielo"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "天気",
+        "天の川",
+        "天ごく"
+      ]
+    },
+    {
+      "character": "気",
+      "meanings": [
+        "ánimo",
+        "energía"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "空気",
+        "気もち",
+        "げん気"
+      ]
+    },
+    {
+      "character": "雨",
+      "meanings": [
+        "lluvia"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "雨天",
+        "雨ふり",
+        "雨ぐも"
+      ]
+    },
+    {
+      "character": "夕",
+      "meanings": [
+        "atardecer"
+      ],
+      "difficulty": "hard",
+      "vocabulary": [
+        "夕日",
+        "夕がた",
+        "夕ぐれ"
+      ]
+    },
+    {
+      "character": "白",
+      "meanings": [
+        "blanco"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "白ぐみ",
+        "白い花",
+        "空白"
+      ]
+    },
+    {
+      "character": "青",
+      "meanings": [
+        "azul"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "青い",
+        "青年",
+        "青空"
+      ]
+    },
+    {
+      "character": "赤",
+      "meanings": [
+        "rojo"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "赤い車",
+        "赤ちゃん",
+        "赤はん"
+      ]
+    },
+    {
+      "character": "大",
+      "meanings": [
+        "grande"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "大すき",
+        "大へん",
+        "大きい"
+      ]
+    },
+    {
+      "character": "中",
+      "meanings": [
+        "interior",
+        "medio"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "一日中",
+        "中学校",
+        "中にわ"
+      ]
+    },
+    {
+      "character": "小",
+      "meanings": [
+        "pequeño"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "小石",
+        "小学校",
+        "小さい"
+      ]
+    },
+    {
+      "character": "上",
+      "meanings": [
+        "arriba",
+        "encima"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "きの上",
+        "上げる",
+        "上ぎ"
+      ]
+    },
+    {
+      "character": "下",
+      "meanings": [
+        "abajo",
+        "debajo"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "木の下",
+        "下げる",
+        "下校"
+      ]
+    },
+    {
+      "character": "左",
+      "meanings": [
+        "izquierda"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "左右",
+        "左がわ",
+        "左足"
+      ]
+    },
+    {
+      "character": "右",
+      "meanings": [
+        "derecha"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "左右",
+        "右がわ",
+        "右手"
+      ]
+    },
+    {
+      "character": "円",
+      "meanings": [
+        "círculo",
+        "yen"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "円い",
+        "円ばん",
+        "円けい"
+      ]
+    },
+    {
+      "character": "力",
+      "meanings": [
+        "fuerza"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "力もち",
+        "学力",
+        "かい力"
+      ]
+    },
+    {
+      "character": "口",
+      "meanings": [
+        "boca"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "口ぶえ",
+        "口べに",
+        "人口"
+      ]
+    },
+    {
+      "character": "目",
+      "meanings": [
+        "ojo"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "目と口",
+        "目つき",
+        "目てき"
+      ]
+    },
+    {
+      "character": "手",
+      "meanings": [
+        "mano"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "右手",
+        "手くび",
+        "はく手"
+      ]
+    },
+    {
+      "character": "足",
+      "meanings": [
+        "pie",
+        "pierna"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "足あと",
+        "足くび",
+        "一足"
+      ]
+    },
+    {
+      "character": "耳",
+      "meanings": [
+        "oreja",
+        "oido"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "耳たぶ",
+        "耳うち",
+        "目と耳"
+      ]
+    },
+    {
+      "character": "音",
+      "meanings": [
+        "sonido"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "音ぷ",
+        "雨の音",
+        "音いろ"
+      ]
+    },
+    {
+      "character": "見",
+      "meanings": [
+        "ver",
+        "mirar"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "見る",
+        "見える",
+        "見学"
+      ]
+    },
+    {
+      "character": "立",
+      "meanings": [
+        "ponerse de pie"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "立つ",
+        "立てる",
+        "き立"
+      ]
+    },
+    {
+      "character": "休",
+      "meanings": [
+        "descansar"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "休む",
+        "休める",
+        "休じつ"
+      ]
+    },
+    {
+      "character": "出",
+      "meanings": [
+        "salir",
+        "sacar"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "出る",
+        "出す",
+        "出ぱつ"
+      ]
+    },
+    {
+      "character": "入",
+      "meanings": [
+        "entrar"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "入る",
+        "入学",
+        "入り口"
+      ]
+    },
+    {
+      "character": "女",
+      "meanings": [
+        "mujer"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "女子",
+        "女の人",
+        "女と男"
+      ]
+    },
+    {
+      "character": "男",
+      "meanings": [
+        "hombre"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "男子",
+        "男の人",
+        "男の子"
+      ]
+    },
+    {
+      "character": "子",
+      "meanings": [
+        "niño",
+        "cria"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "子ども",
+        "子犬",
+        "女子"
+      ]
+    },
+    {
+      "character": "人",
+      "meanings": [
+        "persona"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "人ごみ",
+        "名人",
+        "人げん"
+      ]
+    },
+    {
+      "character": "名",
+      "meanings": [
+        "nombre"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "名前",
+        "名人",
+        "本名"
+      ]
+    },
+    {
+      "character": "字",
+      "meanings": [
+        "letra",
+        "carácter"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "かん字",
+        "すう字",
+        "てん字"
+      ]
+    },
+    {
+      "character": "文",
+      "meanings": [
+        "texto",
+        "oración"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "さく文",
+        "文学",
+        "文なし"
+      ]
+    },
+    {
+      "character": "本",
+      "meanings": [
+        "libro",
+        "origen"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "え本",
+        "本だな",
+        "本とう"
+      ]
+    },
+    {
+      "character": "学",
+      "meanings": [
+        "estudiar",
+        "aprender"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "学年",
+        "小学生",
+        "学ぶ"
+      ]
+    },
+    {
+      "character": "校",
+      "meanings": [
+        "escuela"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "小学校",
+        "校てい",
+        "てん校"
+      ]
+    },
+    {
+      "character": "先",
+      "meanings": [
+        "antes",
+        "punta"
+      ],
+      "difficulty": "hard",
+      "vocabulary": [
+        "先生",
+        "先とう",
+        "足の先"
+      ]
+    },
+    {
+      "character": "生",
+      "meanings": [
+        "vida",
+        "nacer"
+      ],
+      "difficulty": "hard",
+      "vocabulary": [
+        "生む",
+        "生きる",
+        "生もの"
+      ]
+    },
+    {
+      "character": "早",
+      "meanings": [
+        "temprano"
+      ],
+      "difficulty": "easy",
+      "vocabulary": [
+        "早い",
+        "早足",
+        "早める"
+      ]
+    },
+    {
+      "character": "正",
+      "meanings": [
+        "correcto"
+      ],
+      "difficulty": "hard",
+      "vocabulary": [
+        "正しい",
+        "正じき",
+        "正かい"
+      ]
+    },
+    {
+      "character": "王",
+      "meanings": [
+        "rey"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "王さま",
+        "王かん",
+        "こく王"
+      ]
+    },
+    {
+      "character": "玉",
+      "meanings": [
+        "bola",
+        "gema"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "玉虫",
+        "百円玉",
+        "玉手ばこ"
+      ]
+    },
+    {
+      "character": "糸",
+      "meanings": [
+        "hilo"
+      ],
+      "difficulty": "hard",
+      "vocabulary": [
+        "白い糸",
+        "赤い糸",
+        "きぬ糸"
+      ]
+    },
+    {
+      "character": "車",
+      "meanings": [
+        "vehículo",
+        "rueda"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "青い車",
+        "でん車",
+        "車りん"
+      ]
+    },
+    {
+      "character": "村",
+      "meanings": [
+        "aldea",
+        "pueblo"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "村の人",
+        "町と村",
+        "山村"
+      ]
+    },
+    {
+      "character": "町",
+      "meanings": [
+        "pueblo",
+        "barrio"
+      ],
+      "difficulty": "medium",
+      "vocabulary": [
+        "町なみ",
+        "町の中",
+        "町村"
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "written": "一つ",
+      "reading": "ひとつ",
+      "meaning": "una cosa",
+      "difficulty": "easy"
+    },
+    {
+      "written": "一ぴき",
+      "reading": "いっぴき",
+      "meaning": "animal pequeño",
+      "difficulty": "medium"
+    },
+    {
+      "written": "一年生",
+      "reading": "いちねんせい",
+      "meaning": "estudiante (primero)",
+      "difficulty": "easy"
+    },
+    {
+      "written": "二つ",
+      "reading": "ふたつ",
+      "meaning": "dos cosas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "二こ",
+      "reading": "にこ",
+      "meaning": "2 cosas pequeñas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "二日",
+      "reading": "ふつか",
+      "meaning": "día 2 / dos días",
+      "difficulty": "easy"
+    },
+    {
+      "written": "三つ",
+      "reading": "みっつ",
+      "meaning": "tres cosas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "三こ",
+      "reading": "さんこ",
+      "meaning": "3 cosas pequeñas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "三本",
+      "reading": "さんぼん",
+      "meaning": "3x largos/cilíndricos",
+      "difficulty": "easy"
+    },
+    {
+      "written": "四つ",
+      "reading": "よっつ",
+      "meaning": "cuatro cosas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "四こ",
+      "reading": "よんこ",
+      "meaning": "4 cosas pequeñas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "四月",
+      "reading": "しがつ",
+      "meaning": "Abril",
+      "difficulty": "easy"
+    },
+    {
+      "written": "五つ",
+      "reading": "いつつ",
+      "meaning": "cinco cosas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "五こ",
+      "reading": "ごこ",
+      "meaning": "5 cosas pequeñas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "五わ",
+      "reading": "ごわ",
+      "meaning": "cinco aves o conejos",
+      "difficulty": "medium"
+    },
+    {
+      "written": "六つ",
+      "reading": "むっつ",
+      "meaning": "seis cosas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "六こ",
+      "reading": "ろっこ",
+      "meaning": "6 cosas pequeñas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "六本",
+      "reading": "ろっぽん",
+      "meaning": "6x largos/cilíndricos",
+      "difficulty": "medium"
+    },
+    {
+      "written": "七つ",
+      "reading": "ななつ",
+      "meaning": "siete cosas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "七月",
+      "reading": "しちがつ",
+      "meaning": "Julio",
+      "difficulty": "easy"
+    },
+    {
+      "written": "七色",
+      "reading": "なないろ",
+      "meaning": "siete colores",
+      "difficulty": "easy"
+    },
+    {
+      "written": "八つ",
+      "reading": "やっつ",
+      "meaning": "ocho cosas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "八月",
+      "reading": "はちがつ",
+      "meaning": "Agosto",
+      "difficulty": "easy"
+    },
+    {
+      "written": "八日",
+      "reading": "ようか",
+      "meaning": "dia 8 / ocho días",
+      "difficulty": "easy"
+    },
+    {
+      "written": "九つ",
+      "reading": "ここのつ",
+      "meaning": "nueve cosas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "九こ",
+      "reading": "きゅうこ",
+      "meaning": "9 cosas pequeñas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "九月",
+      "reading": "くがつ",
+      "meaning": "Septiembre",
+      "difficulty": "easy"
+    },
+    {
+      "written": "十年",
+      "reading": "じゅうねん",
+      "meaning": "diez años",
+      "difficulty": "easy"
+    },
+    {
+      "written": "十月",
+      "reading": "じゅうがつ",
+      "meaning": "Octubre",
+      "difficulty": "easy"
+    },
+    {
+      "written": "十日",
+      "reading": "とおか",
+      "meaning": "dia 10 / diez dias",
+      "difficulty": "easy"
+    },
+    {
+      "written": "百年",
+      "reading": "ひゃくねん",
+      "meaning": "cien años",
+      "difficulty": "easy"
+    },
+    {
+      "written": "百円",
+      "reading": "ひゃくえん",
+      "meaning": "cien yenes",
+      "difficulty": "easy"
+    },
+    {
+      "written": "百日",
+      "reading": "ひゃくにち",
+      "meaning": "cien dias",
+      "difficulty": "easy"
+    },
+    {
+      "written": "千年",
+      "reading": "せんねん",
+      "meaning": "mil años",
+      "difficulty": "easy"
+    },
+    {
+      "written": "千円",
+      "reading": "せんえん",
+      "meaning": "mil yenes",
+      "difficulty": "easy"
+    },
+    {
+      "written": "千人",
+      "reading": "せんにん",
+      "meaning": "mil personas",
+      "difficulty": "easy"
+    },
+    {
+      "written": "三日",
+      "reading": "みっか",
+      "meaning": "dia 3 / tres dias",
+      "difficulty": "easy"
+    },
+    {
+      "written": "一日",
+      "reading": "いちにち",
+      "meaning": "1 dia",
+      "difficulty": "easy"
+    },
+    {
+      "written": "日時",
+      "reading": "にちじ",
+      "meaning": "fecha y hora",
+      "difficulty": "easy"
+    },
+    {
+      "written": "月み",
+      "reading": "つきみ",
+      "meaning": "contemplar la luna",
+      "difficulty": "easy"
+    },
+    {
+      "written": "二月",
+      "reading": "にがつ",
+      "meaning": "Febrero",
+      "difficulty": "easy"
+    },
+    {
+      "written": "まん月",
+      "reading": "まんげつ",
+      "meaning": "luna llena",
+      "difficulty": "medium"
+    },
+    {
+      "written": "火じ",
+      "reading": "かじ",
+      "meaning": "incendio",
+      "difficulty": "easy"
+    },
+    {
+      "written": "火山",
+      "reading": "かざん",
+      "meaning": "volcán",
+      "difficulty": "easy"
+    },
+    {
+      "written": "火のこ",
+      "reading": "ひのこ",
+      "meaning": "chispas",
+      "difficulty": "medium"
+    },
+    {
+      "written": "水玉",
+      "reading": "みずたま",
+      "meaning": "gotas de agua",
+      "difficulty": "medium"
+    },
+    {
+      "written": "水草",
+      "reading": "みずくさ",
+      "meaning": "planta acuática",
+      "difficulty": "hard"
+    },
+    {
+      "written": "水どう",
+      "reading": "すいどう",
+      "meaning": "agua corriente",
+      "difficulty": "medium"
+    },
+    {
+      "written": "木目",
+      "reading": "もくめ",
+      "meaning": "vetas de la madera",
+      "difficulty": "medium"
+    },
+    {
+      "written": "にわ木",
+      "reading": "にわき",
+      "meaning": "árbol de jardín",
+      "difficulty": "medium"
+    },
+    {
+      "written": "木かげ",
+      "reading": "こかげ",
+      "meaning": "sombra de un árbol",
+      "difficulty": "medium"
+    },
+    {
+      "written": "お金",
+      "reading": "おかね",
+      "meaning": "dinero",
+      "difficulty": "easy"
+    },
+    {
+      "written": "金色",
+      "reading": "きんいろ",
+      "meaning": "color dorado",
+      "difficulty": "easy"
+    },
+    {
+      "written": "ちょ金",
+      "reading": "ちょきん",
+      "meaning": "ahorros",
+      "difficulty": "medium"
+    },
+    {
+      "written": "土き",
+      "reading": "どき",
+      "meaning": "ceramica de barro",
+      "difficulty": "medium"
+    },
+    {
+      "written": "土足",
+      "reading": "どそく",
+      "meaning": "calzado de calle (puesto)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "赤土",
+      "reading": "あかつち",
+      "meaning": "tierra roja",
+      "difficulty": "medium"
+    },
+    {
+      "written": "山みち",
+      "reading": "やまみち",
+      "meaning": "sendero de montaña",
+      "difficulty": "medium"
+    },
+    {
+      "written": "山いも",
+      "reading": "やまいも",
+      "meaning": "ñame japonés (tubérculo)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "ふじ山",
+      "reading": "ふじさん",
+      "meaning": "monte fuji",
+      "difficulty": "easy"
+    },
+    {
+      "written": "川かみ",
+      "reading": "かわかみ",
+      "meaning": "curso alto del rio",
+      "difficulty": "medium"
+    },
+    {
+      "written": "川しも",
+      "reading": "かわしも",
+      "meaning": "curso bajo del rio",
+      "difficulty": "medium"
+    },
+    {
+      "written": "川べり",
+      "reading": "かわべり",
+      "meaning": "orilla del rio",
+      "difficulty": "medium"
+    },
+    {
+      "written": "竹林",
+      "reading": "たけばやし",
+      "meaning": "bosque de bambú",
+      "difficulty": "medium"
+    },
+    {
+      "written": "まつ林",
+      "reading": "まつばやし",
+      "meaning": "pinar",
+      "difficulty": "hard"
+    },
+    {
+      "written": "山林",
+      "reading": "さんりん",
+      "meaning": "bosque de montaña",
+      "difficulty": "medium"
+    },
+    {
+      "written": "森の中",
+      "reading": "もりのなか",
+      "meaning": "dentro del bosque",
+      "difficulty": "easy"
+    },
+    {
+      "written": "森林",
+      "reading": "しんりん",
+      "meaning": "bosque",
+      "difficulty": "medium"
+    },
+    {
+      "written": "青森",
+      "reading": "あおもり",
+      "meaning": "Aomori (ciudad)",
+      "difficulty": "hard"
+    },
+    {
+      "written": "竹うま",
+      "reading": "たけうま",
+      "meaning": "zancos de bambú",
+      "difficulty": "hard"
+    },
+    {
+      "written": "竹やぶ",
+      "reading": "たけやぶ",
+      "meaning": "bambusal",
+      "difficulty": "hard"
+    },
+    {
+      "written": "竹わ",
+      "reading": "ちくわ",
+      "meaning": "pasta de pescado (tubo)",
+      "difficulty": "hard"
+    },
+    {
+      "written": "花びら",
+      "reading": "はなびら",
+      "meaning": "pétalo",
+      "difficulty": "hard"
+    },
+    {
+      "written": "花たば",
+      "reading": "はなたば",
+      "meaning": "ramo de flores",
+      "difficulty": "hard"
+    },
+    {
+      "written": "花だん",
+      "reading": "かだん",
+      "meaning": "zona floreada",
+      "difficulty": "hard"
+    },
+    {
+      "written": "草はら",
+      "reading": "くさはら",
+      "meaning": "pradera",
+      "difficulty": "hard"
+    },
+    {
+      "written": "草もち",
+      "reading": "くさもち",
+      "meaning": "mochi de artemisa",
+      "difficulty": "medium"
+    },
+    {
+      "written": "ざっ草",
+      "reading": "ざっそう",
+      "meaning": "mala hierba",
+      "difficulty": "hard"
+    },
+    {
+      "written": "小石",
+      "reading": "こいし",
+      "meaning": "piedrecita / guijarro",
+      "difficulty": "hard"
+    },
+    {
+      "written": "じ石",
+      "reading": "じしゃく",
+      "meaning": "imán",
+      "difficulty": "hard"
+    },
+    {
+      "written": "ほう石",
+      "reading": "ほうせき",
+      "meaning": "gema",
+      "difficulty": "hard"
+    },
+    {
+      "written": "貝がら",
+      "reading": "かいがら",
+      "meaning": "concha de molusco",
+      "difficulty": "hard"
+    },
+    {
+      "written": "まき貝",
+      "reading": "まきがい",
+      "meaning": "molusco de concha espiral",
+      "difficulty": "hard"
+    },
+    {
+      "written": "ほら貝",
+      "reading": "ほらがい",
+      "meaning": "caracola grande",
+      "difficulty": "hard"
+    },
+    {
+      "written": "すず虫",
+      "reading": "すずむし",
+      "meaning": "grillo campana",
+      "difficulty": "hard"
+    },
+    {
+      "written": "こん虫",
+      "reading": "こんちゅう",
+      "meaning": "insecto",
+      "difficulty": "hard"
+    },
+    {
+      "written": "虫かご",
+      "reading": "むしかご",
+      "meaning": "caja/jaula de insectos",
+      "difficulty": "medium"
+    },
+    {
+      "written": "名犬",
+      "reading": "めいけん",
+      "meaning": "perro extraordinario",
+      "difficulty": "hard"
+    },
+    {
+      "written": "白い犬",
+      "reading": "しろいいぬ",
+      "meaning": "perro blanco",
+      "difficulty": "easy"
+    },
+    {
+      "written": "犬ぞり",
+      "reading": "いぬぞり",
+      "meaning": "trineo tirado por perros",
+      "difficulty": "hard"
+    },
+    {
+      "written": "田んぼ",
+      "reading": "たんぼ",
+      "meaning": "arrozal",
+      "difficulty": "medium"
+    },
+    {
+      "written": "水田",
+      "reading": "すいでん",
+      "meaning": "arrozal inundado",
+      "difficulty": "medium"
+    },
+    {
+      "written": "田うえ",
+      "reading": "たうえ",
+      "meaning": "plantación de arroz",
+      "difficulty": "medium"
+    },
+    {
+      "written": "年上",
+      "reading": "としうえ",
+      "meaning": "de mayor edad",
+      "difficulty": "medium"
+    },
+    {
+      "written": "年より",
+      "reading": "としより",
+      "meaning": "anciano",
+      "difficulty": "medium"
+    },
+    {
+      "written": "空気",
+      "reading": "くうき",
+      "meaning": "aire",
+      "difficulty": "medium"
+    },
+    {
+      "written": "空色",
+      "reading": "そらいろ",
+      "meaning": "celeste / azul cielo",
+      "difficulty": "easy"
+    },
+    {
+      "written": "空ばこ",
+      "reading": "からばこ",
+      "meaning": "caja vacía",
+      "difficulty": "medium"
+    },
+    {
+      "written": "天気",
+      "reading": "てんき",
+      "meaning": "tiempo atmosférico",
+      "difficulty": "medium"
+    },
+    {
+      "written": "天の川",
+      "reading": "あまのがわ",
+      "meaning": "vía láctea",
+      "difficulty": "medium"
+    },
+    {
+      "written": "天ごく",
+      "reading": "てんごく",
+      "meaning": "cielo / paraíso",
+      "difficulty": "medium"
+    },
+    {
+      "written": "気もち",
+      "reading": "きもち",
+      "meaning": "sentimiento / sensación",
+      "difficulty": "medium"
+    },
+    {
+      "written": "げん気",
+      "reading": "げんき",
+      "meaning": "salud / vitalidad",
+      "difficulty": "medium"
+    },
+    {
+      "written": "雨天",
+      "reading": "うてん",
+      "meaning": "tiempo lluvioso",
+      "difficulty": "medium"
+    },
+    {
+      "written": "雨ふり",
+      "reading": "あめふり",
+      "meaning": "lluvia / tiempo lluvioso",
+      "difficulty": "medium"
+    },
+    {
+      "written": "雨ぐも",
+      "reading": "あまぐも",
+      "meaning": "nube de lluvia",
+      "difficulty": "hard"
+    },
+    {
+      "written": "夕日",
+      "reading": "ゆうひ",
+      "meaning": "sol del atardecer",
+      "difficulty": "hard"
+    },
+    {
+      "written": "夕がた",
+      "reading": "ゆうがた",
+      "meaning": "final de la tarde",
+      "difficulty": "hard"
+    },
+    {
+      "written": "夕ぐれ",
+      "reading": "ゆうぐれ",
+      "meaning": "anochecer / crepúsculo",
+      "difficulty": "hard"
+    },
+    {
+      "written": "白ぐみ",
+      "reading": "しろぐみ",
+      "meaning": "equipo blanco",
+      "difficulty": "medium"
+    },
+    {
+      "written": "白い花",
+      "reading": "しろいはな",
+      "meaning": "flor blanca",
+      "difficulty": "easy"
+    },
+    {
+      "written": "空白",
+      "reading": "くうはく",
+      "meaning": "vacío / espacio blanco",
+      "difficulty": "medium"
+    },
+    {
+      "written": "青い",
+      "reading": "あおい",
+      "meaning": "azul (a veces verde)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "青年",
+      "reading": "せいねん",
+      "meaning": "persona joven",
+      "difficulty": "hard"
+    },
+    {
+      "written": "青空",
+      "reading": "あおぞら",
+      "meaning": "cielo azul o despejado",
+      "difficulty": "medium"
+    },
+    {
+      "written": "赤い車",
+      "reading": "あかいくるま",
+      "meaning": "coche rojo",
+      "difficulty": "easy"
+    },
+    {
+      "written": "赤ちゃん",
+      "reading": "あかちゃん",
+      "meaning": "bebé",
+      "difficulty": "medium"
+    },
+    {
+      "written": "赤はん",
+      "reading": "せきはん",
+      "meaning": "arroz con judias rojas 🎊",
+      "difficulty": "hard"
+    },
+    {
+      "written": "大すき",
+      "reading": "だいすき",
+      "meaning": "gustar mucho",
+      "difficulty": "easy"
+    },
+    {
+      "written": "大へん",
+      "reading": "たいへん",
+      "meaning": "difícil / grave / muy",
+      "difficulty": "medium"
+    },
+    {
+      "written": "大きい",
+      "reading": "おおきい",
+      "meaning": "grande",
+      "difficulty": "easy"
+    },
+    {
+      "written": "一日中",
+      "reading": "いちにちじゅう",
+      "meaning": "todo el día",
+      "difficulty": "easy"
+    },
+    {
+      "written": "中学校",
+      "reading": "ちゅうがっこう",
+      "meaning": "escuela secundaria (ESO)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "中にわ",
+      "reading": "なかにわ",
+      "meaning": "patio interior",
+      "difficulty": "medium"
+    },
+    {
+      "written": "小学校",
+      "reading": "しょうがっこう",
+      "meaning": "escuela primaria",
+      "difficulty": "medium"
+    },
+    {
+      "written": "小さい",
+      "reading": "ちいさい",
+      "meaning": "pequeño",
+      "difficulty": "easy"
+    },
+    {
+      "written": "きの上",
+      "reading": "きのうえ",
+      "meaning": "en lo alto del árbol",
+      "difficulty": "medium"
+    },
+    {
+      "written": "上げる",
+      "reading": "あげる",
+      "meaning": "levantar / subir algo",
+      "difficulty": "hard"
+    },
+    {
+      "written": "上ぎ",
+      "reading": "うわぎ",
+      "meaning": "chaqueta",
+      "difficulty": "hard"
+    },
+    {
+      "written": "木の下",
+      "reading": "きのした",
+      "meaning": "bajo el árbol",
+      "difficulty": "medium"
+    },
+    {
+      "written": "下げる",
+      "reading": "さげる",
+      "meaning": "bajar algo",
+      "difficulty": "hard"
+    },
+    {
+      "written": "下校",
+      "reading": "げこう",
+      "meaning": "salida de la escuela",
+      "difficulty": "hard"
+    },
+    {
+      "written": "左右",
+      "reading": "さゆう",
+      "meaning": "izquierda y derecha",
+      "difficulty": "medium"
+    },
+    {
+      "written": "左がわ",
+      "reading": "ひだりがわ",
+      "meaning": "lado izquierdo",
+      "difficulty": "medium"
+    },
+    {
+      "written": "左足",
+      "reading": "ひだりあし",
+      "meaning": "pie o pierna izquierda",
+      "difficulty": "medium"
+    },
+    {
+      "written": "右がわ",
+      "reading": "みぎがわ",
+      "meaning": "lado derecho",
+      "difficulty": "medium"
+    },
+    {
+      "written": "右手",
+      "reading": "みぎて",
+      "meaning": "mano derecha",
+      "difficulty": "easy"
+    },
+    {
+      "written": "円い",
+      "reading": "まるい",
+      "meaning": "redondo / circular",
+      "difficulty": "medium"
+    },
+    {
+      "written": "円ばん",
+      "reading": "えんばん",
+      "meaning": "disco / circular y plano",
+      "difficulty": "medium"
+    },
+    {
+      "written": "円けい",
+      "reading": "えんけい",
+      "meaning": "forma circular",
+      "difficulty": "medium"
+    },
+    {
+      "written": "力もち",
+      "reading": "ちからもち",
+      "meaning": "persona fuerte",
+      "difficulty": "medium"
+    },
+    {
+      "written": "学力",
+      "reading": "がくりょく",
+      "meaning": "nivel académico",
+      "difficulty": "hard"
+    },
+    {
+      "written": "かい力",
+      "reading": "かいりき",
+      "meaning": "fuerza extraordinaria",
+      "difficulty": "hard"
+    },
+    {
+      "written": "口ぶえ",
+      "reading": "くちぶえ",
+      "meaning": "silbido",
+      "difficulty": "hard"
+    },
+    {
+      "written": "口べに",
+      "reading": "くちべに",
+      "meaning": "pintalabios",
+      "difficulty": "hard"
+    },
+    {
+      "written": "人口",
+      "reading": "じんこう",
+      "meaning": "población / num.habitantes",
+      "difficulty": "medium"
+    },
+    {
+      "written": "目と口",
+      "reading": "めとくち",
+      "meaning": "ojos y boca",
+      "difficulty": "medium"
+    },
+    {
+      "written": "目つき",
+      "reading": "めつき",
+      "meaning": "mirada / expresión (ojos)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "目てき",
+      "reading": "もくてき",
+      "meaning": "objetivo / propósito",
+      "difficulty": "medium"
+    },
+    {
+      "written": "手くび",
+      "reading": "てくび",
+      "meaning": "muñeca (parte del cuerpo)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "はく手",
+      "reading": "はくしゅ",
+      "meaning": "aplauso / aplaudir",
+      "difficulty": "hard"
+    },
+    {
+      "written": "足あと",
+      "reading": "あしあと",
+      "meaning": "huella / pisada",
+      "difficulty": "medium"
+    },
+    {
+      "written": "足くび",
+      "reading": "あしくび",
+      "meaning": "tobillo",
+      "difficulty": "medium"
+    },
+    {
+      "written": "一足",
+      "reading": "いっそく",
+      "meaning": "par de zapatos o calcetines",
+      "difficulty": "hard"
+    },
+    {
+      "written": "耳たぶ",
+      "reading": "みみたぶ",
+      "meaning": "lóbulo (oreja)",
+      "difficulty": "hard"
+    },
+    {
+      "written": "耳うち",
+      "reading": "みみうち",
+      "meaning": "susurrar al oido",
+      "difficulty": "medium"
+    },
+    {
+      "written": "目と耳",
+      "reading": "めとみみ",
+      "meaning": "ojos y oídos",
+      "difficulty": "medium"
+    },
+    {
+      "written": "音ぷ",
+      "reading": "おんぷ",
+      "meaning": "nota musical (escrita)",
+      "difficulty": "hard"
+    },
+    {
+      "written": "雨の音",
+      "reading": "あめのおと",
+      "meaning": "sonido de la lluvia",
+      "difficulty": "medium"
+    },
+    {
+      "written": "音いろ",
+      "reading": "ねいろ",
+      "meaning": "timbre (audio)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "見る",
+      "reading": "みる",
+      "meaning": "ver / mirar",
+      "difficulty": "easy"
+    },
+    {
+      "written": "見える",
+      "reading": "みえる",
+      "meaning": "verse / ser visible",
+      "difficulty": "medium"
+    },
+    {
+      "written": "見学",
+      "reading": "けんがく",
+      "meaning": "visita de observación",
+      "difficulty": "medium"
+    },
+    {
+      "written": "立つ",
+      "reading": "たつ",
+      "meaning": "ponerse o estar de pie",
+      "difficulty": "medium"
+    },
+    {
+      "written": "立てる",
+      "reading": "たてる",
+      "meaning": "levantar o poner algo de pie",
+      "difficulty": "medium"
+    },
+    {
+      "written": "き立",
+      "reading": "きりつ",
+      "meaning": "¡en pié!",
+      "difficulty": "easy"
+    },
+    {
+      "written": "休む",
+      "reading": "やすむ",
+      "meaning": "descansar / faltar",
+      "difficulty": "medium"
+    },
+    {
+      "written": "休める",
+      "reading": "やすめる",
+      "meaning": "dar descanso/reposar algo",
+      "difficulty": "medium"
+    },
+    {
+      "written": "休じつ",
+      "reading": "きゅうじつ",
+      "meaning": "dia libre o festivo",
+      "difficulty": "medium"
+    },
+    {
+      "written": "出る",
+      "reading": "でる",
+      "meaning": "salir",
+      "difficulty": "easy"
+    },
+    {
+      "written": "出す",
+      "reading": "だす",
+      "meaning": "sacar",
+      "difficulty": "medium"
+    },
+    {
+      "written": "出ぱつ",
+      "reading": "しゅっぱつ",
+      "meaning": "salida / partida",
+      "difficulty": "hard"
+    },
+    {
+      "written": "入る",
+      "reading": "はいる",
+      "meaning": "entrar",
+      "difficulty": "easy"
+    },
+    {
+      "written": "入学",
+      "reading": "にゅうがく",
+      "meaning": "ingreso en escuela",
+      "difficulty": "medium"
+    },
+    {
+      "written": "入り口",
+      "reading": "いりぐち",
+      "meaning": "entrada / acceso",
+      "difficulty": "medium"
+    },
+    {
+      "written": "女子",
+      "reading": "じょし",
+      "meaning": "chica / mujer",
+      "difficulty": "medium"
+    },
+    {
+      "written": "女の人",
+      "reading": "おんなのひと",
+      "meaning": "mujer",
+      "difficulty": "easy"
+    },
+    {
+      "written": "女と男",
+      "reading": "おんなとおとこ",
+      "meaning": "mujeres y hombres",
+      "difficulty": "easy"
+    },
+    {
+      "written": "男子",
+      "reading": "だんし",
+      "meaning": "chico / hombre",
+      "difficulty": "medium"
+    },
+    {
+      "written": "男の人",
+      "reading": "おとこのひと",
+      "meaning": "hombre",
+      "difficulty": "easy"
+    },
+    {
+      "written": "男の子",
+      "reading": "おとこのこ",
+      "meaning": "niño / chico",
+      "difficulty": "easy"
+    },
+    {
+      "written": "子ども",
+      "reading": "こども",
+      "meaning": "niño / niños",
+      "difficulty": "easy"
+    },
+    {
+      "written": "子犬",
+      "reading": "こいぬ",
+      "meaning": "cachorro (perrito)",
+      "difficulty": "easy"
+    },
+    {
+      "written": "人ごみ",
+      "reading": "ひとごみ",
+      "meaning": "multitud (gente)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "名人",
+      "reading": "めいじん",
+      "meaning": "maestro (experto)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "人げん",
+      "reading": "にんげん",
+      "meaning": "ser humano",
+      "difficulty": "medium"
+    },
+    {
+      "written": "名前",
+      "reading": "なまえ",
+      "meaning": "nombre",
+      "difficulty": "medium"
+    },
+    {
+      "written": "本名",
+      "reading": "ほんみょう",
+      "meaning": "nombre real",
+      "difficulty": "medium"
+    },
+    {
+      "written": "かん字",
+      "reading": "かんじ",
+      "meaning": "kanji",
+      "difficulty": "medium"
+    },
+    {
+      "written": "すう字",
+      "reading": "すうじ",
+      "meaning": "cifra (simbolo numérico)",
+      "difficulty": "hard"
+    },
+    {
+      "written": "てん字",
+      "reading": "てんじ",
+      "meaning": "braile",
+      "difficulty": "hard"
+    },
+    {
+      "written": "さく文",
+      "reading": "さくぶん",
+      "meaning": "redacción",
+      "difficulty": "medium"
+    },
+    {
+      "written": "文学",
+      "reading": "ぶんがく",
+      "meaning": "literatura",
+      "difficulty": "medium"
+    },
+    {
+      "written": "文なし",
+      "reading": "もんなし",
+      "meaning": "sin dinero",
+      "difficulty": "hard"
+    },
+    {
+      "written": "え本",
+      "reading": "えほん",
+      "meaning": "libro ilustrado",
+      "difficulty": "easy"
+    },
+    {
+      "written": "本だな",
+      "reading": "ほんだな",
+      "meaning": "estantería para libros",
+      "difficulty": "medium"
+    },
+    {
+      "written": "本とう",
+      "reading": "ほんとう",
+      "meaning": "verdad / verdadero",
+      "difficulty": "medium"
+    },
+    {
+      "written": "学年",
+      "reading": "がくねん",
+      "meaning": "curso escolar",
+      "difficulty": "medium"
+    },
+    {
+      "written": "小学生",
+      "reading": "しょうがくせい",
+      "meaning": "alumno de primaria",
+      "difficulty": "medium"
+    },
+    {
+      "written": "学ぶ",
+      "reading": "まなぶ",
+      "meaning": "aprender / estudiar",
+      "difficulty": "medium"
+    },
+    {
+      "written": "校てい",
+      "reading": "こうてい",
+      "meaning": "patio de la escuela",
+      "difficulty": "medium"
+    },
+    {
+      "written": "てん校",
+      "reading": "てんこう",
+      "meaning": "cambio de escuela",
+      "difficulty": "hard"
+    },
+    {
+      "written": "先生",
+      "reading": "せんせい",
+      "meaning": "profesor / maestro",
+      "difficulty": "medium"
+    },
+    {
+      "written": "先とう",
+      "reading": "せんとう",
+      "meaning": "primero en la fila",
+      "difficulty": "hard"
+    },
+    {
+      "written": "足の先",
+      "reading": "あしのさき",
+      "meaning": "punta del pie",
+      "difficulty": "hard"
+    },
+    {
+      "written": "生む",
+      "reading": "うむ",
+      "meaning": "parir / poner huevos",
+      "difficulty": "hard"
+    },
+    {
+      "written": "生きる",
+      "reading": "いきる",
+      "meaning": "vivir",
+      "difficulty": "hard"
+    },
+    {
+      "written": "生もの",
+      "reading": "なまもの",
+      "meaning": "alimento crudo",
+      "difficulty": "medium"
+    },
+    {
+      "written": "早い",
+      "reading": "はやい",
+      "meaning": "temprano",
+      "difficulty": "easy"
+    },
+    {
+      "written": "早足",
+      "reading": "はやあし",
+      "meaning": "paso rápido / andar rápido",
+      "difficulty": "medium"
+    },
+    {
+      "written": "早める",
+      "reading": "はやめる",
+      "meaning": "acelerar / adelantar la hora",
+      "difficulty": "medium"
+    },
+    {
+      "written": "正しい",
+      "reading": "ただしい",
+      "meaning": "correcto / justo",
+      "difficulty": "hard"
+    },
+    {
+      "written": "正じき",
+      "reading": "しょうじき",
+      "meaning": "honradez / sincero",
+      "difficulty": "hard"
+    },
+    {
+      "written": "正かい",
+      "reading": "せいかい",
+      "meaning": "respuesta correcta",
+      "difficulty": "hard"
+    },
+    {
+      "written": "王さま",
+      "reading": "おうさま",
+      "meaning": "rey",
+      "difficulty": "medium"
+    },
+    {
+      "written": "王かん",
+      "reading": "おうかん",
+      "meaning": "corona",
+      "difficulty": "hard"
+    },
+    {
+      "written": "こく王",
+      "reading": "こくおう",
+      "meaning": "rey/monarca (de un pais)",
+      "difficulty": "medium"
+    },
+    {
+      "written": "玉虫",
+      "reading": "たまむし",
+      "meaning": "escarabajo joya",
+      "difficulty": "hard"
+    },
+    {
+      "written": "百円玉",
+      "reading": "ひゃくえんだま",
+      "meaning": "moneda de 100円",
+      "difficulty": "medium"
+    },
+    {
+      "written": "玉手ばこ",
+      "reading": "たまてばこ",
+      "meaning": "cofre (tesoro/sorpresa)",
+      "difficulty": "hard"
+    },
+    {
+      "written": "白い糸",
+      "reading": "しろいいと",
+      "meaning": "hilo blanco",
+      "difficulty": "hard"
+    },
+    {
+      "written": "赤い糸",
+      "reading": "あかいいと",
+      "meaning": "hilo rojo",
+      "difficulty": "hard"
+    },
+    {
+      "written": "きぬ糸",
+      "reading": "きぬいと",
+      "meaning": "hilo de seda",
+      "difficulty": "hard"
+    },
+    {
+      "written": "青い車",
+      "reading": "あおいくるま",
+      "meaning": "coche azul",
+      "difficulty": "medium"
+    },
+    {
+      "written": "でん車",
+      "reading": "でんしゃ",
+      "meaning": "tren",
+      "difficulty": "medium"
+    },
+    {
+      "written": "車りん",
+      "reading": "しゃりん",
+      "meaning": "rueda",
+      "difficulty": "hard"
+    },
+    {
+      "written": "村の人",
+      "reading": "むらのひと",
+      "meaning": "gente del pueblo",
+      "difficulty": "medium"
+    },
+    {
+      "written": "町と村",
+      "reading": "まちとむら",
+      "meaning": "pueblos y aldeas",
+      "difficulty": "medium"
+    },
+    {
+      "written": "山村",
+      "reading": "さんそん",
+      "meaning": "pueblo de montaña",
+      "difficulty": "medium"
+    },
+    {
+      "written": "町なみ",
+      "reading": "まちなみ",
+      "meaning": "paisaje urbano",
+      "difficulty": "medium"
+    },
+    {
+      "written": "町の中",
+      "reading": "まちのなか",
+      "meaning": "Dentro del pueblo / ciudad",
+      "difficulty": "medium"
+    },
+    {
+      "written": "町村",
+      "reading": "ちょうそん",
+      "meaning": "pueblos y aldeas / municipios",
+      "difficulty": "medium"
+    }
+  ]
+}

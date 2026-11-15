@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { studyCatalog } from './study.ts';
+import { studyCatalog } from '../../tests/collection-fixture.ts';
 import { getPronunciation, pronunciations } from './pronunciations.ts';
 
 test('every audio matches a vocabulary identity and its exact reading', () => {
