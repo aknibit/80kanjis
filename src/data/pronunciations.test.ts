@@ -50,7 +50,7 @@ test('saved synthesis queries speak the intended readings, including the 七色 
   const longVowels: Record<string, string> = {
     'word:円けい': 'えんけえ', 'word:本名': 'ほんみょお', 'word:町村': 'ちょおそん',
     'word:ざっ草': 'ざっそお', 'word:名犬': 'めえけん', 'word:下校': 'げこお',
-    'word:校てい': 'こおてえ', 'word:てん校': 'てんこお', 'word:先とう': 'せんとお',
+    'word:校庭': 'こおてえ', 'word:てん校': 'てんこお', 'word:先とう': 'せんとお',
   };
   assert.equal(generation.entries.length, generated.length);
   for (const clip of generated) {

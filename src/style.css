@@ -11,6 +11,8 @@
   --muted: #6f7368;
   --line: #e4e5dd;
   --japanese: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --kanji-collection: #326b87;
+  --kanji-advanced: #77509a;
 }
 
 * { box-sizing: border-box; }
@@ -65,6 +67,11 @@ kbd { font-family: inherit; font-size: 14px; min-width: 28px; height: 30px; disp
 .search-hints { margin: 8px 0 0; color: #6f7567; font-size: 12px; line-height: 1.6; }
 .collection-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 16px 0 8px; gap: 12px; }
 .collection-heading { display: flex; gap: 14px; align-items: center; }
+.kanji-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 14px; margin: 0; font-size: 11px; line-height: 1.8; }
+.kanji-legend-target { color: var(--accent); }
+.kanji-legend-collection { color: var(--kanji-collection); }
+.kanji-legend-advanced { color: var(--kanji-advanced); text-decoration: underline dotted; text-underline-offset: 4px; }
+.kanji-legend-hint { color: var(--muted); }
 .row-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
 .row-filter { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 5px; background: transparent; color: #626b59; font-size: 14px; }
 .row-filter:hover { background: #eeeee6; }
@@ -97,7 +104,15 @@ h2 { margin: 0; font-size: 21px; font-weight: 550; letter-spacing: -.4px; }
 .kanji-meaning { min-width: 0; color: #4c4c4c; }
 .word-japanese { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; min-width: 0; padding-right: 36px; }
 .word-written { margin: 0; font-family: var(--japanese); font-size: 25px; font-weight: 400; line-height: 1.4; overflow-wrap: anywhere; }
-.target-kanji { font-weight: 500; color: var(--accent); }
+.kanji-detail-trigger { border: 0; padding: 0; border-radius: 3px; background: transparent; font: inherit; line-height: inherit; }
+.kanji-character-button { display: block; color: inherit; }
+.kanji-character-button:hover { background: #e6e6e6; }
+.kanji-link { display: inline; font-weight: 500; color: var(--kanji-collection); }
+.kanji-link--target { color: var(--accent); }
+.kanji-link--advanced { color: var(--kanji-advanced); text-decoration: underline dotted; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.kanji-link:hover { background: #326b8710; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.kanji-link--target:hover { background: #b8463510; }
+.kanji-link--advanced:hover { background: #77509a10; }
 .word-reading { color: #6f7861; font-size: 14px; letter-spacing: .15px; line-height: 1.6; overflow-wrap: anywhere; }
 .audio-button { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 32px; padding: 5px; border: 1px solid #dce0d2; border-radius: 50%; background: #f1f3ec; color: #526343; }
 .audio-button:hover, .audio-button[aria-pressed='true'] { background: #e4eadc; border-color: #a5b497; color: #35472b; }
@@ -136,6 +151,28 @@ dialog p { color: #73796a; font-size: 16px; line-height: 1.8; }
 .dialog-note { border-top: 1px solid var(--line); padding-top: 17px; font-size: 14px; }
 .dialog-shortcut { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 12px; margin-top: 22px; color: #6d765f; }
 .dialog-shortcut kbd { padding: 0 5px; }
+.kanji-dialog { width: 560px; }
+.kanji-dialog .dialog-header { margin-bottom: 16px; }
+.kanji-dialog-close { font-size: 28px; line-height: 1; }
+.kanji-dialog-hero { display: flex; align-items: center; gap: 22px; }
+.kanji-dialog-character { flex-shrink: 0; font-family: var(--japanese); font-size: 86px; line-height: 1.15; color: var(--kanji-collection); }
+.kanji-dialog-summary { min-width: 0; }
+.kanji-dialog h2 { margin: 0 0 8px; font-size: 26px; overflow-wrap: anywhere; }
+.kanji-dialog p { color: #646a5c; }
+.kanji-dialog .kanji-dialog-description { font-size: 14px; line-height: 1.6; margin: 0; }
+.kanji-dialog[data-kind='advanced'] .eyebrow, .kanji-dialog[data-kind='advanced'] .kanji-dialog-character { color: var(--kanji-advanced); }
+.kanji-dialog-readings { display: flex; flex-wrap: wrap; gap: 12px 28px; padding: 16px 0; margin: 18px 0 0; border-block: 1px solid var(--line); }
+.kanji-dialog-readings dt { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+.kanji-dialog-readings dd { font-size: 18px; margin: 0; }
+.kanji-dialog .kanji-dialog-note, .kanji-dialog .kanji-dialog-difficulty { font-size: 14px; line-height: 1.7; margin: 16px 0 20px; }
+.kanji-dialog-examples-title { font-size: 13px; font-weight: 600; margin: 22px 0 8px; }
+.kanji-dialog-examples { list-style: none; padding: 0; margin: 0; }
+.kanji-dialog-examples li { padding: 10px 0; border-top: 1px solid var(--line); }
+.kanji-dialog-word { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 12px; }
+.kanji-dialog-written { font-family: var(--japanese); font-size: 23px; line-height: 1.5; }
+.kanji-dialog-examples p { font-size: 14px; line-height: 1.5; margin: 3px 0 0; }
+.kanji-dialog .kanji-dialog-source { margin: 18px 0 0; font-size: 12px; }
+.kanji-dialog-source a:hover { color: var(--kanji-advanced); }
 
 @media (max-width: 1100px) {
   .shell { width: calc(100% - 64px); }
@@ -149,6 +186,7 @@ dialog p { color: #73796a; font-size: 16px; line-height: 1.8; }
 @media (max-width: 820px) {
   .eyebrow { font-size: 11px; letter-spacing: 1.4px; }
   .collection-heading { flex-wrap: wrap; gap: 10px; }
+  .kanji-legend-hint { display: none; }
 }
 @media (max-width: 600px) {
   .shell { width: calc(100% - 36px); }
@@ -175,6 +213,10 @@ dialog p { color: #73796a; font-size: 16px; line-height: 1.8; }
   .site-footer { font-size: 12px; align-items: center; }
   .site-footer > span { max-width: 230px; line-height: 1.8; }
   .site-footer strong { display: block; }
+  .kanji-dialog { padding: 20px; }
+  .kanji-dialog-hero { gap: 16px; }
+  .kanji-dialog-character { font-size: 68px; }
+  .kanji-dialog h2 { font-size: 23px; }
 }
 @media (max-width: 380px) {
   .language-pair { display: none; }

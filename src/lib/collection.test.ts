@@ -49,6 +49,30 @@ test('invalid schema, duplicate definitions and broken row references are reject
   for (const text of ['{', 'null', '[]', '{}']) assert.throws(() => parseCollection(text));
 });
 
+test('support kanji require complete, unique, safe references and cover all additional characters', () => {
+  const mutations: ((data: any) => void)[] = [
+    (data) => { data.supportingKanji = {}; },
+    (data) => { data.supportingKanji.push(data.supportingKanji[0]); },
+    (data) => { data.supportingKanji[0].character = '一'; },
+    (data) => { data.supportingKanji[0].character = 'こ'; },
+    (data) => { data.supportingKanji[0].meanings = []; },
+    (data) => { data.supportingKanji[0].onyomi = []; },
+    (data) => { data.supportingKanji[0].kunyomi = ['']; },
+    (data) => { data.supportingKanji[0].sourceUrl = 'javascript:alert(1)'; },
+    (data) => { data.supportingKanji[0].note = ''; },
+    (data) => { data.supportingKanji = []; },
+  ];
+  for (const mutate of mutations) {
+    const data = structuredClone(collectionDocument);
+    mutate(data);
+    assert.throws(() => parseCollection(JSON.stringify(data)));
+  }
+  // The optional extension does not invalidate earlier version-1 documents.
+  const legacy = structuredClone(collectionDocument);
+  delete (legacy as { supportingKanji?: unknown }).supportingKanji;
+  assert.deepEqual(parseCollection(JSON.stringify(legacy)), legacy);
+});
+
 test('the loader uses one dynamic CDN-relative JSON for content and difficulties', async (t) => {
   Object.defineProperty(globalThis, 'document', { value: { baseURI: 'https://cdn.example/study/' }, configurable: true });
   t.after(() => { Reflect.deleteProperty(globalThis, 'document'); });

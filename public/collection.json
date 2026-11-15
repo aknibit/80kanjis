@@ -21,7 +21,7 @@
       "difficulty": "easy",
       "vocabulary": [
         "二つ",
-        "二こ",
+        "二個",
         "二日"
       ]
     },
@@ -33,7 +33,7 @@
       "difficulty": "easy",
       "vocabulary": [
         "三つ",
-        "三こ",
+        "三個",
         "三本"
       ]
     },
@@ -45,7 +45,7 @@
       "difficulty": "easy",
       "vocabulary": [
         "四つ",
-        "四こ",
+        "四個",
         "四月"
       ]
     },
@@ -57,7 +57,7 @@
       "difficulty": "easy",
       "vocabulary": [
         "五つ",
-        "五こ",
+        "五個",
         "五わ"
       ]
     },
@@ -69,7 +69,7 @@
       "difficulty": "easy",
       "vocabulary": [
         "六つ",
-        "六こ",
+        "六個",
         "六本"
       ]
     },
@@ -105,7 +105,7 @@
       "difficulty": "easy",
       "vocabulary": [
         "九つ",
-        "九こ",
+        "九個",
         "九月"
       ]
     },
@@ -166,7 +166,7 @@
       ],
       "difficulty": "easy",
       "vocabulary": [
-        "月み",
+        "月見",
         "二月",
         "まん月"
       ]
@@ -204,7 +204,7 @@
       "difficulty": "easy",
       "vocabulary": [
         "木目",
-        "にわ木",
+        "庭木",
         "木かげ"
       ]
     },
@@ -252,8 +252,8 @@
       ],
       "difficulty": "easy",
       "vocabulary": [
-        "川かみ",
-        "川しも",
+        "川上",
+        "川下",
         "川べり"
       ]
     },
@@ -513,7 +513,7 @@
       "vocabulary": [
         "一日中",
         "中学校",
-        "中にわ"
+        "中庭"
       ]
     },
     {
@@ -536,7 +536,7 @@
       ],
       "difficulty": "easy",
       "vocabulary": [
-        "きの上",
+        "木の上",
         "上げる",
         "上ぎ"
       ]
@@ -674,7 +674,7 @@
       "vocabulary": [
         "音ぷ",
         "雨の音",
-        "音いろ"
+        "音色"
       ]
     },
     {
@@ -711,7 +711,7 @@
       "vocabulary": [
         "休む",
         "休める",
-        "休じつ"
+        "休日"
       ]
     },
     {
@@ -860,7 +860,7 @@
       "difficulty": "medium",
       "vocabulary": [
         "小学校",
-        "校てい",
+        "校庭",
         "てん校"
       ]
     },
@@ -1017,7 +1017,7 @@
       "difficulty": "easy"
     },
     {
-      "written": "二こ",
+      "written": "二個",
       "reading": "にこ",
       "meaning": "2 cosas pequeñas",
       "difficulty": "easy"
@@ -1035,7 +1035,7 @@
       "difficulty": "easy"
     },
     {
-      "written": "三こ",
+      "written": "三個",
       "reading": "さんこ",
       "meaning": "3 cosas pequeñas",
       "difficulty": "easy"
@@ -1053,7 +1053,7 @@
       "difficulty": "easy"
     },
     {
-      "written": "四こ",
+      "written": "四個",
       "reading": "よんこ",
       "meaning": "4 cosas pequeñas",
       "difficulty": "easy"
@@ -1071,7 +1071,7 @@
       "difficulty": "easy"
     },
     {
-      "written": "五こ",
+      "written": "五個",
       "reading": "ごこ",
       "meaning": "5 cosas pequeñas",
       "difficulty": "easy"
@@ -1089,7 +1089,7 @@
       "difficulty": "easy"
     },
     {
-      "written": "六こ",
+      "written": "六個",
       "reading": "ろっこ",
       "meaning": "6 cosas pequeñas",
       "difficulty": "easy"
@@ -1143,7 +1143,7 @@
       "difficulty": "easy"
     },
     {
-      "written": "九こ",
+      "written": "九個",
       "reading": "きゅうこ",
       "meaning": "9 cosas pequeñas",
       "difficulty": "easy"
@@ -1227,7 +1227,7 @@
       "difficulty": "easy"
     },
     {
-      "written": "月み",
+      "written": "月見",
       "reading": "つきみ",
       "meaning": "contemplar la luna",
       "difficulty": "easy"
@@ -1287,7 +1287,7 @@
       "difficulty": "medium"
     },
     {
-      "written": "にわ木",
+      "written": "庭木",
       "reading": "にわき",
       "meaning": "árbol de jardín",
       "difficulty": "medium"
@@ -1353,13 +1353,13 @@
       "difficulty": "easy"
     },
     {
-      "written": "川かみ",
+      "written": "川上",
       "reading": "かわかみ",
       "meaning": "curso alto del rio",
       "difficulty": "medium"
     },
     {
-      "written": "川しも",
+      "written": "川下",
       "reading": "かわしも",
       "meaning": "curso bajo del rio",
       "difficulty": "medium"
@@ -1731,7 +1731,7 @@
       "difficulty": "medium"
     },
     {
-      "written": "中にわ",
+      "written": "中庭",
       "reading": "なかにわ",
       "meaning": "patio interior",
       "difficulty": "medium"
@@ -1749,7 +1749,7 @@
       "difficulty": "easy"
     },
     {
-      "written": "きの上",
+      "written": "木の上",
       "reading": "きのうえ",
       "meaning": "en lo alto del árbol",
       "difficulty": "medium"
@@ -1947,7 +1947,7 @@
       "difficulty": "medium"
     },
     {
-      "written": "音いろ",
+      "written": "音色",
       "reading": "ねいろ",
       "meaning": "timbre (audio)",
       "difficulty": "medium"
@@ -2001,7 +2001,7 @@
       "difficulty": "medium"
     },
     {
-      "written": "休じつ",
+      "written": "休日",
       "reading": "きゅうじつ",
       "meaning": "dia libre o festivo",
       "difficulty": "medium"
@@ -2193,7 +2193,7 @@
       "difficulty": "medium"
     },
     {
-      "written": "校てい",
+      "written": "校庭",
       "reading": "こうてい",
       "meaning": "patio de la escuela",
       "difficulty": "hard"
@@ -2383,6 +2383,81 @@
       "reading": "ちょうそん",
       "meaning": "pueblos y aldeas / municipios",
       "difficulty": "medium"
+    }
+  ],
+  "supportingKanji": [
+    {
+      "character": "個",
+      "meanings": [
+        "contador de objetos",
+        "unidad"
+      ],
+      "onyomi": [
+        "コ"
+      ],
+      "kunyomi": [],
+      "note": "Se coloca después de un número para contar objetos. La pronunciación del número puede cambiar: 六個 se lee ろっこ.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0002056900/"
+    },
+    {
+      "character": "色",
+      "meanings": [
+        "color"
+      ],
+      "onyomi": [
+        "ショク",
+        "シキ"
+      ],
+      "kunyomi": [
+        "いろ"
+      ],
+      "note": "Aparece en palabras de color como 七色, 金色 y 空色. La palabra 音色 se lee ねいろ y significa timbre de un sonido.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0003535500"
+    },
+    {
+      "character": "庭",
+      "meanings": [
+        "jardín",
+        "patio"
+      ],
+      "onyomi": [
+        "テイ"
+      ],
+      "kunyomi": [
+        "にわ"
+      ],
+      "note": "En 庭木 y 中庭 se lee にわ; en 校庭 se lee てい.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0004959700/"
+    },
+    {
+      "character": "時",
+      "meanings": [
+        "tiempo",
+        "hora"
+      ],
+      "onyomi": [
+        "ジ"
+      ],
+      "kunyomi": [
+        "とき"
+      ],
+      "note": "Este carácter ya aparecía en el vocabulario original, aunque no tiene una fila propia entre los 80 kanji. En 日時 se lee じ.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0002876900"
+    },
+    {
+      "character": "前",
+      "meanings": [
+        "delante",
+        "antes"
+      ],
+      "onyomi": [
+        "ゼン"
+      ],
+      "kunyomi": [
+        "まえ"
+      ],
+      "note": "Este carácter ya aparecía en el vocabulario original, aunque no tiene una fila propia entre los 80 kanji. En 名前 se lee まえ.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0004135400/"
     }
   ]
 }

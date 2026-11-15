@@ -7,8 +7,8 @@
   "termsUrl": "https://voicevox.hiroshiba.jp/nemo/term/",
   "entries": [
     {
-      "itemId": "word:二こ",
-      "written": "二こ",
+      "itemId": "word:二個",
+      "written": "二個",
       "reading": "にこ",
       "sourceText": "二個",
       "speaker": 10005,
@@ -115,8 +115,8 @@
       "file": "sanbon.wav"
     },
     {
-      "itemId": "word:四こ",
-      "written": "四こ",
+      "itemId": "word:四個",
+      "written": "四個",
       "reading": "よんこ",
       "sourceText": "四個",
       "speaker": 10005,
@@ -356,8 +356,8 @@
       "file": "hachigatsu.wav"
     },
     {
-      "itemId": "word:九こ",
-      "written": "九こ",
+      "itemId": "word:九個",
+      "written": "九個",
       "reading": "きゅうこ",
       "sourceText": "九個",
       "speaker": 10005,
@@ -891,8 +891,8 @@
     },
     {
       "kind": "synthesized",
-      "itemId": "word:五こ",
-      "written": "五こ",
+      "itemId": "word:五個",
+      "written": "五個",
       "reading": "ごこ",
       "sourceText": "五個",
       "file": "word-4e94-3053.wav",
@@ -985,8 +985,8 @@
     },
     {
       "kind": "synthesized",
-      "itemId": "word:六こ",
-      "written": "六こ",
+      "itemId": "word:六個",
+      "written": "六個",
       "reading": "ろっこ",
       "sourceText": "六個",
       "file": "word-516d-3053.wav",
@@ -1213,8 +1213,8 @@
     },
     {
       "kind": "synthesized",
-      "itemId": "word:にわ木",
-      "written": "にわ木",
+      "itemId": "word:庭木",
+      "written": "庭木",
       "reading": "にわき",
       "sourceText": "庭木",
       "file": "word-306b-308f-6728.wav",
@@ -1678,8 +1678,8 @@
     },
     {
       "kind": "synthesized",
-      "itemId": "word:川かみ",
-      "written": "川かみ",
+      "itemId": "word:川上",
+      "written": "川上",
       "reading": "かわかみ",
       "sourceText": "川上",
       "file": "word-5ddd-304b-307f.wav",
@@ -1741,8 +1741,8 @@
     },
     {
       "kind": "synthesized",
-      "itemId": "word:川しも",
-      "written": "川しも",
+      "itemId": "word:川下",
+      "written": "川下",
       "reading": "かわしも",
       "sourceText": "川下",
       "file": "word-5ddd-3057-3082.wav",
@@ -2584,8 +2584,8 @@
     },
     {
       "kind": "synthesized",
-      "itemId": "word:中にわ",
-      "written": "中にわ",
+      "itemId": "word:中庭",
+      "written": "中庭",
       "reading": "なかにわ",
       "sourceText": "中庭",
       "file": "word-4e2d-306b-308f.wav",
@@ -6087,8 +6087,8 @@
     },
     {
       "kind": "synthesized",
-      "itemId": "word:きの上",
-      "written": "きの上",
+      "itemId": "word:木の上",
+      "written": "木の上",
       "reading": "きのうえ",
       "sourceText": "木のうえ",
       "file": "word-304d-306e-4e0a.wav",
@@ -6864,8 +6864,8 @@
     },
     {
       "kind": "synthesized",
-      "itemId": "word:音いろ",
-      "written": "音いろ",
+      "itemId": "word:音色",
+      "written": "音色",
       "reading": "ねいろ",
       "sourceText": "音色",
       "file": "word-97f3-3044-308d.wav",
@@ -7037,8 +7037,8 @@
     },
     {
       "kind": "synthesized",
-      "itemId": "word:校てい",
-      "written": "校てい",
+      "itemId": "word:校庭",
+      "written": "校庭",
       "reading": "こうてい",
       "sourceText": "校庭",
       "file": "word-6821-3066-3044.wav",

@@ -4,6 +4,7 @@ import { createKanjiSearch } from './lib/search.ts';
 import { createStudyCatalog } from './lib/study-catalog.ts';
 import { pronunciationSource, synthesizedSource } from './data/pronunciations.ts';
 import { setupPronunciation } from './pronunciation-ui.ts';
+import { setupKanjiDetails } from './kanji-ui.ts';
 import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDifficultyFilter, rowDifficultyFilters, type RowDifficultyFilter } from './lib/row-difficulty.ts';
 import type { Difficulty, Kanji, StudyItem, StudyItemId } from './types.ts';
 import './style.css';
@@ -49,6 +50,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
       <div class="collection-toolbar">
         <div class="collection-heading"><h2 id="collection-title">La colección</h2><span id="result-count" role="status" aria-live="polite" aria-atomic="true">80 de 80 kanji</span></div>
+        <p class="kanji-legend" aria-label="Colores de los kanji. Pulsa un kanji para consultar su información."><span class="kanji-legend-target">De la fila</span><span class="kanji-legend-collection">Otros de los 80</span><span class="kanji-legend-advanced">Avanzados</span><span class="kanji-legend-hint">Pulsa para consultar</span></p>
       </div>
       <div id="row-filters" class="row-filters" role="group" aria-label="Filtrar filas por dificultad" aria-describedby="row-filter-hint">
         ${Object.entries(rowDifficultyFilters).map(([value, label]) => `<button type="button" class="row-filter" data-row-filter="${value}" aria-pressed="${value === 'all'}" aria-controls="kanji-grid" disabled${value === 'unrated' ? ' hidden' : ''}>${label} <span class="filter-count">—</span></button>`).join('')}
@@ -75,7 +77,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>Busca por carácter, palabra, lectura o significado. Puedes escribir sin tildes y usar hiragana o katakana. Las lecturas se muestran siempre junto a las palabras.</p>
     <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
     <p>En las fichas, uno, dos o tres puntos destacados indican fácil, medio y difícil. Tres puntos atenuados indican que la dificultad está sin marcar.</p>
-    <p class="dialog-note">Se conserva la escritura simplificada del documento. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
+    <p>En el vocabulario, el kanji de la fila aparece en terracota, los otros de los 80 en azul y los avanzados en violeta con subrayado de puntos. Pulsa cualquier kanji para consultar su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
+    <p class="dialog-note">Se conserva la escritura del documento, con las conversiones revisadas a kanji de la colección y los de apoyo 個, 色 y 庭. 時 y 前 ya aparecían en el vocabulario original y también se pueden consultar como kanji de apoyo. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
     <p class="dialog-note">Pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar, con voces de Tokio y Kansai. Los botones con «IA» usan voz generada por <a href="${synthesizedSource.url}" target="_blank" rel="noopener">${synthesizedSource.name}</a> (${synthesizedSource.voice}), bajo sus <a href="${synthesizedSource.termsUrl}" target="_blank" rel="noopener">condiciones de uso</a>. Los audios están pendientes de revisión por un hablante nativo. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes y créditos de cada audio</a>.</p>
     <div class="dialog-shortcut"><kbd>/</kbd> Buscar <kbd>Esc</kbd> Borrar la búsqueda o cerrar esta ventana</div>
   </dialog>
@@ -108,6 +111,7 @@ async function start() {
   const rowRatings = new Map(studyCatalog.rows.map((row) => [row.id, getRowDifficulty(row, getDifficulty)]));
   const studyRows = new Map(studyCatalog.rows.map((row) => [row.id, row]));
   const pronunciation = setupPronunciation(document.querySelector('#audio-status')!);
+  const kanjiDetails = setupKanjiDetails(source);
   let difficultyFilter = parseRowDifficultyFilter(new URLSearchParams(window.location.search).get('difficulty'));
   const filterButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-row-filter]')];
 
@@ -127,7 +131,8 @@ async function start() {
 
     const content = element('div', 'study-content');
     if (item.type === 'kanji') {
-      const character = element('h3', 'kanji-character', item.character);
+      const character = element('h3', 'kanji-character');
+      character.append(kanjiDetails.createKanjiButton(item.character));
       character.id = headingId;
       character.lang = 'ja';
       content.append(character, element('p', 'study-meaning kanji-meaning', item.meanings.join(' · ')));
@@ -136,11 +141,7 @@ async function start() {
       japanese.lang = 'ja';
       const written = element('h3', 'word-written');
       written.id = headingId;
-      const parts = item.written.split(entry.character);
-      parts.forEach((part, index) => {
-        if (index > 0) written.append(element('b', 'target-kanji', entry.character));
-        written.append(document.createTextNode(part));
-      });
+      written.append(kanjiDetails.renderWord(item.written, entry.character));
       const reading = element('span', 'word-reading', item.reading);
       japanese.append(written, reading);
       content.append(japanese, element('p', 'study-meaning', item.meanings.join(' · ')));

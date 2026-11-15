@@ -52,11 +52,22 @@ export interface KanjiDefinition {
   readonly vocabulary: readonly [string, string, string];
 }
 
+/** Reference characters used in vocabulary, outside the 80 main study rows. */
+export interface SupportingKanjiDefinition {
+  readonly character: string;
+  readonly meanings: readonly string[];
+  readonly onyomi: readonly string[];
+  readonly kunyomi: readonly string[];
+  readonly note: string;
+  readonly sourceUrl: string;
+}
+
 /** The complete, versioned source of study content and published classifications. */
 export interface CollectionDocument {
   readonly version: 1;
   readonly kanji: readonly KanjiDefinition[];
   readonly vocabulary: readonly Vocabulary[];
+  readonly supportingKanji?: readonly SupportingKanjiDefinition[];
 }
 
 /** Derived presentation/search row; content lives exclusively in collection.json. */

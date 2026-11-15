@@ -8,6 +8,11 @@ function object(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
 function nonempty(value: unknown): value is string { return typeof value === 'string' && value.trim().length > 0; }
+function httpsUrl(value: unknown): value is string {
+  if (!nonempty(value)) return false;
+  try { return new URL(value).protocol === 'https:'; }
+  catch { return false; }
+}
 
 /** Validate before rendering the collection. Never invent content. */
 export function parseCollection(text: string): CollectionDocument {
@@ -38,6 +43,27 @@ export function parseCollection(text: string): CollectionDocument {
     if (new Set(entry.vocabulary).size !== 3) throw new Error(`Vocabulario repetido en la fila ${entry.character}.`);
     for (const written of entry.vocabulary) {
       if (!nonempty(written) || !words.has(written)) throw new Error(`Referencia de vocabulario desconocida en ${entry.character}: ${String(written)}.`);
+    }
+  }
+  if (value.supportingKanji !== undefined) {
+    if (!Array.isArray(value.supportingKanji)) throw new Error('Los kanji de apoyo deben ser una lista.');
+    for (const entry of value.supportingKanji) {
+      if (!object(entry) || !nonempty(entry.character) || !/^\p{Script=Han}$/u.test(entry.character)
+        || !Array.isArray(entry.meanings) || entry.meanings.length === 0 || !entry.meanings.every(nonempty)
+        || !Array.isArray(entry.onyomi) || !entry.onyomi.every(nonempty)
+        || !Array.isArray(entry.kunyomi) || !entry.kunyomi.every(nonempty)
+        || entry.onyomi.length + entry.kunyomi.length === 0 || !nonempty(entry.note) || !httpsUrl(entry.sourceUrl)) {
+        throw new Error('Hay un kanji de apoyo incompleto o con datos no válidos.');
+      }
+      if (characters.has(entry.character)) throw new Error(`Kanji repetido: ${entry.character}.`);
+      characters.add(entry.character);
+    }
+    for (const word of value.vocabulary) {
+      for (const character of word.written) {
+        if (/\p{Script=Han}/u.test(character) && !characters.has(character)) {
+          throw new Error(`Falta información para el kanji ${character} en ${word.written}.`);
+        }
+      }
     }
   }
   // Allow optional metadata alongside the study content.

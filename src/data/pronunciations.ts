@@ -130,7 +130,7 @@ export const pronunciations = [
   },
   {
     "kind": "recorded",
-    "itemId": "word:三こ",
+    "itemId": "word:三個",
     "reading": "さんこ",
     "file": "sanko.mp3",
     "sourceUrl": "https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%89%E5%80%8B%E3%80%90%E3%81%95%E3%82%93%E3%81%93%E3%80%91.mp3",
@@ -218,7 +218,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:二こ",
+    "itemId": "word:二個",
     "reading": "にこ",
     "file": "niko.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -234,7 +234,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:四こ",
+    "itemId": "word:四個",
     "reading": "よんこ",
     "file": "yonko.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -266,7 +266,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:九こ",
+    "itemId": "word:九個",
     "reading": "きゅうこ",
     "file": "kyuuko.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -362,7 +362,7 @@ export const pronunciations = [
   },
   {
     "kind": "recorded",
-    "itemId": "word:月み",
+    "itemId": "word:月見",
     "reading": "つきみ",
     "file": "word-6708-307f.mp3",
     "sourceUrl": "https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%9C%88%E8%A6%8B%E3%80%90%E3%81%A4%E3%81%8D%E3%81%BF%E3%80%91.mp3",
@@ -570,7 +570,7 @@ export const pronunciations = [
   },
   {
     "kind": "recorded",
-    "itemId": "word:休じつ",
+    "itemId": "word:休日",
     "reading": "きゅうじつ",
     "file": "word-4f11-3058-3064.mp3",
     "sourceUrl": "https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BC%91%E6%97%A5%E3%80%90%E3%81%8D%E3%82%85%E3%81%86%E3%81%98%E3%81%A4%E3%80%91.mp3",
@@ -730,7 +730,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:五こ",
+    "itemId": "word:五個",
     "reading": "ごこ",
     "file": "word-4e94-3053.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -746,7 +746,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:六こ",
+    "itemId": "word:六個",
     "reading": "ろっこ",
     "file": "word-516d-3053.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -778,7 +778,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:にわ木",
+    "itemId": "word:庭木",
     "reading": "にわき",
     "file": "word-306b-308f-6728.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -842,7 +842,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:川かみ",
+    "itemId": "word:川上",
     "reading": "かわかみ",
     "file": "word-5ddd-304b-307f.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -850,7 +850,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:川しも",
+    "itemId": "word:川下",
     "reading": "かわしも",
     "file": "word-5ddd-3057-3082.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -954,7 +954,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:中にわ",
+    "itemId": "word:中庭",
     "reading": "なかにわ",
     "file": "word-4e2d-306b-308f.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -1674,7 +1674,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:きの上",
+    "itemId": "word:木の上",
     "reading": "きのうえ",
     "file": "word-304d-306e-4e0a.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -1770,7 +1770,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:音いろ",
+    "itemId": "word:音色",
     "reading": "ねいろ",
     "file": "word-97f3-3044-308d.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
@@ -1794,7 +1794,7 @@ export const pronunciations = [
   },
   {
     "kind": "synthesized",
-    "itemId": "word:校てい",
+    "itemId": "word:校庭",
     "reading": "こうてい",
     "file": "word-6821-3066-3044.wav",
     "sourceUrl": "https://voicevox.hiroshiba.jp/nemo/",
