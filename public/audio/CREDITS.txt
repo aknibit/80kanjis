@@ -1,88 +1,451 @@
 # Pronunciation audio
 
-HUMAN RECORDINGS
+HUMAN RECORDINGS (108)
 Recordings by Tofugu (https://www.tofugu.com) and WaniKani (https://www.wanikani.com).
 Source: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio
 License: Creative Commons Attribution-ShareAlike 4.0 International.
 https://creativecommons.org/licenses/by-sa/4.0/
 The full original license and disclaimer are in LICENSE-CC-BY-SA-4.0.txt.
-MP3 content is unmodified; filenames were shortened. 三こ is the simplified
-spelling of the source's 三個, with the same reading and counter meaning.
-The source describes a mix of a native Japanese male professional voice actor
-(Tokyo accent) and a native Japanese female amateur voice actor (Kansai accent).
-Individual speaker identity is not supplied per file.
+MP3 content is unmodified; local filenames may differ. Simplified spellings
+are explicitly matched to the same vocabulary meaning and reading. No unrelated
+homophone is used as a substitute. The source describes a mix of a native Japanese
+male professional voice actor (Tokyo accent) and a native Japanese female amateur
+voice actor (Kansai accent). Individual speaker identity is not supplied per file.
 
 - hitotsu.mp3: 一つ (ひとつ)
+  Source spelling: 一つ
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%80%E3%81%A4%E3%80%90%E3%81%B2%E3%81%A8%E3%81%A4%E3%80%91.mp3
   Git blob SHA-1: c06b52852c3fefbb56c34e0dea40cc04fa4a6a64
 - ichinensei.mp3: 一年生 (いちねんせい)
+  Source spelling: 一年生
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%80%E5%B9%B4%E7%94%9F%E3%80%90%E3%81%84%E3%81%A1%E3%81%AD%E3%82%93%E3%81%9B%E3%81%84%E3%80%91.mp3
   Git blob SHA-1: b0a7894804705cfd1cf81af5bec5628fbd75f3da
 - futatsu.mp3: 二つ (ふたつ)
+  Source spelling: 二つ
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BA%8C%E3%81%A4%E3%80%90%E3%81%B5%E3%81%9F%E3%81%A4%E3%80%91.mp3
   Git blob SHA-1: e4b09016111c12377904c1bc4a87edc5bb1f99d1
 - futsuka.mp3: 二日 (ふつか)
+  Source spelling: 二日
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BA%8C%E6%97%A5%E3%80%90%E3%81%B5%E3%81%A4%E3%81%8B%E3%80%91.mp3
   Git blob SHA-1: 4f822c58e5b08e04960c0dfdb9ffe372ffbdfb94
 - mittsu.mp3: 三つ (みっつ)
+  Source spelling: 三つ
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%89%E3%81%A4%E3%80%90%E3%81%BF%E3%81%A3%E3%81%A4%E3%80%91.mp3
   Git blob SHA-1: ea28c5891c9606b07d568d5857cdadfafee54fb0
 - ichinichi.mp3: 一日 (いちにち)
+  Source spelling: 一日
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%80%E6%97%A5%E3%80%90%E3%81%84%E3%81%A1%E3%81%AB%E3%81%A1%E3%80%91.mp3
   Git blob SHA-1: f0448fb192f650e459d854c8ed3f1193fa67a86e
 - okane.mp3: お金 (おかね)
+  Source spelling: お金
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E3%81%8A%E9%87%91%E3%80%90%E3%81%8A%E3%81%8B%E3%81%AD%E3%80%91.mp3
   Git blob SHA-1: ac31bace9dbe6a87248a2c260ec159fe7d0e2686
 - fujisan.mp3: ふじ山 (ふじさん)
+  Source spelling: ふじ山
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E3%81%B5%E3%81%98%E5%B1%B1%E3%80%90%E3%81%B5%E3%81%98%E3%81%95%E3%82%93%E3%80%91.mp3
   Git blob SHA-1: b2d82d792979199c987b70d26ebdca6689e0da31
 - chuugakkou.mp3: 中学校 (ちゅうがっこう)
+  Source spelling: 中学校
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%AD%E5%AD%A6%E6%A0%A1%E3%80%90%E3%81%A1%E3%82%85%E3%81%86%E3%81%8C%E3%81%A3%E3%81%93%E3%81%86%E3%80%91.mp3
   Git blob SHA-1: 64ff802d2008a6c50761f89a192a77386a417da4
 - ageru.mp3: 上げる (あげる)
+  Source spelling: 上げる
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%8A%E3%81%92%E3%82%8B%E3%80%90%E3%81%82%E3%81%92%E3%82%8B%E3%80%91.mp3
   Git blob SHA-1: 02c2e86d397f165f9267ebad6c3f4fd9b84c8382
 - yasumu.mp3: 休む (やすむ)
+  Source spelling: 休む
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BC%91%E3%82%80%E3%80%90%E3%82%84%E3%81%99%E3%82%80%E3%80%91.mp3
   Git blob SHA-1: fbc3dcef76908685bd6dbcc3e9c60a0c07605c1e
 - sensei.mp3: 先生 (せんせい)
+  Source spelling: 先生
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%88%E7%94%9F%E3%80%90%E3%81%9B%E3%82%93%E3%81%9B%E3%81%84%E3%80%91.mp3
   Git blob SHA-1: 817a05ec9d7f246a9f58947aac0c4d92e80525d4
 - sanko.mp3: 三こ (さんこ)
+  Source spelling: 三個
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%89%E5%80%8B%E3%80%90%E3%81%95%E3%82%93%E3%81%93%E3%80%91.mp3
   Git blob SHA-1: 61d1d636742e2aa8e61be741cd0c1a1c9147382f
 - yottsu.mp3: 四つ (よっつ)
+  Source spelling: 四つ
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%9B%9B%E3%81%A4%E3%80%90%E3%82%88%E3%81%A3%E3%81%A4%E3%80%91.mp3
   Git blob SHA-1: 206fa300372d4edbdae90dbfaf730e6eca063cc4
 - shigatsu.mp3: 四月 (しがつ)
+  Source spelling: 四月
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%9B%9B%E6%9C%88%E3%80%90%E3%81%97%E3%81%8C%E3%81%A4%E3%80%91.mp3
   Git blob SHA-1: 3e2fd607207877c0b7a79c2d8763db2c9ff3115e
 - nanatsu.mp3: 七つ (ななつ)
+  Source spelling: 七つ
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%83%E3%81%A4%E3%80%90%E3%81%AA%E3%81%AA%E3%81%A4%E3%80%91.mp3
   Git blob SHA-1: d794faadf7679d9acc085068ac541b18dc045520
 - yattsu.mp3: 八つ (やっつ)
+  Source spelling: 八つ
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%AB%E3%81%A4%E3%80%90%E3%82%84%E3%81%A3%E3%81%A4%E3%80%91.mp3
   Git blob SHA-1: aed49340f9050525be2c709f78a230762b7e370b
 - youka.mp3: 八日 (ようか)
+  Source spelling: 八日
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%AB%E6%97%A5%E3%80%90%E3%82%88%E3%81%86%E3%81%8B%E3%80%91.mp3
   Git blob SHA-1: 808d0fb8aecc1f0f556a265d124dc8cc1bde056b
 - kokonotsu.mp3: 九つ (ここのつ)
+  Source spelling: 九つ
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B9%9D%E3%81%A4%E3%80%90%E3%81%93%E3%81%93%E3%81%AE%E3%81%A4%E3%80%91.mp3
   Git blob SHA-1: 22464f2d7a79037dd4251d7600b2bf1ef134fcdc
 - juugatsu.mp3: 十月 (じゅうがつ)
+  Source spelling: 十月
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8D%81%E6%9C%88%E3%80%90%E3%81%98%E3%82%85%E3%81%86%E3%81%8C%E3%81%A4%E3%80%91.mp3
   Git blob SHA-1: b3f7e5d8b5053895d2dd35c05886074fb07975bd
 - tooka.mp3: 十日 (とおか)
+  Source spelling: 十日
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8D%81%E6%97%A5%E3%80%90%E3%81%A8%E3%81%8A%E3%81%8B%E3%80%91.mp3
   Git blob SHA-1: 2fb6e632146ef850dd3a2c8b9fa49bafa2fc9ac6
 - senen.mp3: 千円 (せんえん)
+  Source spelling: 千円
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8D%83%E5%86%86%E3%80%90%E3%81%9B%E3%82%93%E3%81%88%E3%82%93%E3%80%91.mp3
   Git blob SHA-1: cf133d9752e3a377e290f6abcb567dcf209bf5df
 - mikka.mp3: 三日 (みっか)
+  Source spelling: 三日
   Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%89%E6%97%A5%E3%80%90%E3%81%BF%E3%81%A3%E3%81%8B%E3%80%91.mp3
   Git blob SHA-1: b8287dcb6b240724d7907e4e6e4f7b044438f3f4
+- word-4e00-3074-304d.mp3: 一ぴき (いっぴき)
+  Source spelling: 一匹
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%80%E5%8C%B9%E3%80%90%E3%81%84%E3%81%A3%E3%81%B4%E3%81%8D%E3%80%91.mp3
+  Git blob SHA-1: bc1bed4828b6e9a423226e98b92f06a6856a37dc
+- word-4e94-3064.mp3: 五つ (いつつ)
+  Source spelling: 五つ
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BA%94%E3%81%A4%E3%80%90%E3%81%84%E3%81%A4%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: f20bf0e65ed1a784455823398b9531d4e46e40d3
+- word-516d-3064.mp3: 六つ (むっつ)
+  Source spelling: 六つ
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%AD%E3%81%A4%E3%80%90%E3%82%80%E3%81%A3%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: a60477cfe17dbd2edda6f34a9364b2d9346ca634
+- word-6708-307f.mp3: 月み (つきみ)
+  Source spelling: 月見
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%9C%88%E8%A6%8B%E3%80%90%E3%81%A4%E3%81%8D%E3%81%BF%E3%80%91.mp3
+  Git blob SHA-1: 02113d2748dfa5d485777652b229530ec6164cfa
+- word-4e8c-6708.mp3: 二月 (にがつ)
+  Source spelling: 二月
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BA%8C%E6%9C%88%E3%80%90%E3%81%AB%E3%81%8C%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: eda1849ad4b49767582a016bba47b9c7907c02a2
+- word-307e-3093-6708.mp3: まん月 (まんげつ)
+  Source spelling: 満月
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%BA%80%E6%9C%88%E3%80%90%E3%81%BE%E3%82%93%E3%81%92%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: 9c8480a7003ed72a59983e62ea7d46f2edc1f867
+- word-706b-3058.mp3: 火じ (かじ)
+  Source spelling: 火事
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%81%AB%E4%BA%8B%E3%80%90%E3%81%8B%E3%81%98%E3%80%91.mp3
+  Git blob SHA-1: bd7e657ec658c186e2e86f4b26841021b7b43464
+- word-706b-5c71.mp3: 火山 (かざん)
+  Source spelling: 火山
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%81%AB%E5%B1%B1%E3%80%90%E3%81%8B%E3%81%96%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 9dc5a36f14edc1c45cadb1421d4d8e6c963ec090
+- word-3061-3087-91d1.mp3: ちょ金 (ちょきん)
+  Source spelling: 貯金
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E8%B2%AF%E9%87%91%E3%80%90%E3%81%A1%E3%82%87%E3%81%8D%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 299c2db13b83ed11a8263f94f560a5089b6d9d0d
+- word-5e74-4e0a.mp3: 年上 (としうえ)
+  Source spelling: 年上
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%B9%B4%E4%B8%8A%E3%80%90%E3%81%A8%E3%81%97%E3%81%86%E3%81%88%E3%80%91.mp3
+  Git blob SHA-1: cbfcb93994d174e211cab0ca07fef292f4e2d82d
+- word-7a7a-6c17.mp3: 空気 (くうき)
+  Source spelling: 空気
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%A9%BA%E6%B0%97%E3%80%90%E3%81%8F%E3%81%86%E3%81%8D%E3%80%91.mp3
+  Git blob SHA-1: 340efef62ff65da70b8c47e26f6f20c23c2d99e4
+- word-5929-6c17.mp3: 天気 (てんき)
+  Source spelling: 天気
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%A4%A9%E6%B0%97%E3%80%90%E3%81%A6%E3%82%93%E3%81%8D%E3%80%91.mp3
+  Git blob SHA-1: 9ba2ce3bcc4b8dd39cc8610f3ff8654368177a5d
+- word-5929-3054-304f.mp3: 天ごく (てんごく)
+  Source spelling: 天国
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%A4%A9%E5%9B%BD%E3%80%90%E3%81%A6%E3%82%93%E3%81%94%E3%81%8F%E3%80%91.mp3
+  Git blob SHA-1: 316bdf4ccdc7db63a496c6065cc8ff16ef442138
+- word-6c17-3082-3061.mp3: 気もち (きもち)
+  Source spelling: 気持ち
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%B0%97%E6%8C%81%E3%81%A1%E3%80%90%E3%81%8D%E3%82%82%E3%81%A1%E3%80%91.mp3
+  Git blob SHA-1: 6b041fb4f71853565f384a997a81d12b16c1e128
+- word-3052-3093-6c17.mp3: げん気 (げんき)
+  Source spelling: 元気
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%83%E6%B0%97%E3%80%90%E3%81%92%E3%82%93%E3%81%8D%E3%80%91.mp3
+  Git blob SHA-1: 2b1e3fdce95c0007646de55648cd668252ea7201
+- word-5927-3059-304d.mp3: 大すき (だいすき)
+  Source spelling: 大好き
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%80%90%E3%81%A0%E3%81%84%E3%81%99%E3%81%8D%E3%80%91.mp3
+  Git blob SHA-1: a511fb8dc16b90304311f458387a0794d8ba98a2
+- word-5927-3078-3093.mp3: 大へん (たいへん)
+  Source spelling: 大変
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%A4%A7%E5%A4%89%E3%80%90%E3%81%9F%E3%81%84%E3%81%B8%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 9c7f72b8f0948f7bf297573b33df65db3f191ad7
+- word-5927-304d-3044.mp3: 大きい (おおきい)
+  Source spelling: 大きい
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%A4%A7%E3%81%8D%E3%81%84%E3%80%90%E3%81%8A%E3%81%8A%E3%81%8D%E3%81%84%E3%80%91.mp3
+  Git blob SHA-1: 7b0545b1ec9451f58fedde7656a412a4e32db478
+- word-5de6-53f3.mp3: 左右 (さゆう)
+  Source spelling: 左右
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%B7%A6%E5%8F%B3%E3%80%90%E3%81%95%E3%82%86%E3%81%86%E3%80%91.mp3
+  Git blob SHA-1: b241a0c230a48d4c19f57fd7a076dc1a2de5d36c
+- word-5de6-304c-308f.mp3: 左がわ (ひだりがわ)
+  Source spelling: 左側
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%B7%A6%E5%81%B4%E3%80%90%E3%81%B2%E3%81%A0%E3%82%8A%E3%81%8C%E3%82%8F%E3%80%91.mp3
+  Git blob SHA-1: 873d4caa4f68518fbfab10a1d90ca2d05ece6310
+- word-53f3-304c-308f.mp3: 右がわ (みぎがわ)
+  Source spelling: 右側
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8F%B3%E5%81%B4%E3%80%90%E3%81%BF%E3%81%8E%E3%81%8C%E3%82%8F%E3%80%91.mp3
+  Git blob SHA-1: 3f0e81511c8faf21a8fda034961b084ecd99bf13
+- word-53f3-624b.mp3: 右手 (みぎて)
+  Source spelling: 右手
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8F%B3%E6%89%8B%E3%80%90%E3%81%BF%E3%81%8E%E3%81%A6%E3%80%91.mp3
+  Git blob SHA-1: 641d68bb7567d7b382b58d586a3fc6c01ca657cf
+- word-5186-3044.mp3: 円い (まるい)
+  Source spelling: 円い
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%86%86%E3%81%84%E3%80%90%E3%81%BE%E3%82%8B%E3%81%84%E3%80%91.mp3
+  Git blob SHA-1: 6d42737012d752d13aab29436ab5b0d75aadea68
+- word-5186-3070-3093.mp3: 円ばん (えんばん)
+  Source spelling: 円盤
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%86%86%E7%9B%A4%E3%80%90%E3%81%88%E3%82%93%E3%81%B0%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 089b0e824d74284b0c4df3ad34d6c273389df6c6
+- word-76ee-3066-304d.mp3: 目てき (もくてき)
+  Source spelling: 目的
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%9B%AE%E7%9A%84%E3%80%90%E3%82%82%E3%81%8F%E3%81%A6%E3%81%8D%E3%80%91.mp3
+  Git blob SHA-1: 2c9ec55f4daf63d2d6c852d351fb9cefe181aa8b
+- word-898b-308b.mp3: 見る (みる)
+  Source spelling: 見る
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E8%A6%8B%E3%82%8B%E3%80%90%E3%81%BF%E3%82%8B%E3%80%91.mp3
+  Git blob SHA-1: e3e629afa6ad3663a9b01a36e095c288edcd3f96
+- word-898b-3048-308b.mp3: 見える (みえる)
+  Source spelling: 見える
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E8%A6%8B%E3%81%88%E3%82%8B%E3%80%90%E3%81%BF%E3%81%88%E3%82%8B%E3%80%91.mp3
+  Git blob SHA-1: ef8e9d9978db209da496d4f880006d8039582709
+- word-7acb-3064.mp3: 立つ (たつ)
+  Source spelling: 立つ
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%AB%8B%E3%81%A4%E3%80%90%E3%81%9F%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: fb919eae3a2394d1712a356ed0c4b989484ee39f
+- word-7acb-3066-308b.mp3: 立てる (たてる)
+  Source spelling: 立てる
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%AB%8B%E3%81%A6%E3%82%8B%E3%80%90%E3%81%9F%E3%81%A6%E3%82%8B%E3%80%91.mp3
+  Git blob SHA-1: e1d07fb404b777466479754841cb1b4748f8af9e
+- word-4f11-3058-3064.mp3: 休じつ (きゅうじつ)
+  Source spelling: 休日
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BC%91%E6%97%A5%E3%80%90%E3%81%8D%E3%82%85%E3%81%86%E3%81%98%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: 49e423d920898513bf3a4c2fffd5833e59bc6db6
+- word-5165-308b.mp3: 入る (はいる)
+  Source spelling: 入る
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%A5%E3%82%8B%E3%80%90%E3%81%AF%E3%81%84%E3%82%8B%E3%80%91.mp3
+  Git blob SHA-1: a9920d59a8deb101e37eda5f9b73cb1e7c20e309
+- word-5165-5b66.mp3: 入学 (にゅうがく)
+  Source spelling: 入学
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%A5%E5%AD%A6%E3%80%90%E3%81%AB%E3%82%85%E3%81%86%E3%81%8C%E3%81%8F%E3%80%91.mp3
+  Git blob SHA-1: dd32e4badac045e72bc84fcd9fe97f99c8512636
+- word-5165-308a-53e3.mp3: 入り口 (いりぐち)
+  Source spelling: 入り口
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%85%A5%E3%82%8A%E5%8F%A3%E3%80%90%E3%81%84%E3%82%8A%E3%81%90%E3%81%A1%E3%80%91.mp3
+  Git blob SHA-1: 68bc9ca28cfd839e88a620c76d29a11211636cf3
+- word-5973-5b50.mp3: 女子 (じょし)
+  Source spelling: 女子
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%A5%B3%E5%AD%90%E3%80%90%E3%81%98%E3%82%87%E3%81%97%E3%80%91.mp3
+  Git blob SHA-1: 170b9cc0420dd635678722a2d0a35fe8bcdbe0dc
+- word-5973-306e-4eba.mp3: 女の人 (おんなのひと)
+  Source spelling: 女の人
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%A5%B3%E3%81%AE%E4%BA%BA%E3%80%90%E3%81%8A%E3%82%93%E3%81%AA%E3%81%AE%E3%81%B2%E3%81%A8%E3%80%91.mp3
+  Git blob SHA-1: 8e4ee5622967a663b0879825164fa7414576b99e
+- word-7537-306e-4eba.mp3: 男の人 (おとこのひと)
+  Source spelling: 男の人
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%94%B7%E3%81%AE%E4%BA%BA%E3%80%90%E3%81%8A%E3%81%A8%E3%81%93%E3%81%AE%E3%81%B2%E3%81%A8%E3%80%91.mp3
+  Git blob SHA-1: 57fe8616c5d2f27c7c434b4bc71991a51cbb155a
+- word-7537-306e-5b50.mp3: 男の子 (おとこのこ)
+  Source spelling: 男の子
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%94%B7%E3%81%AE%E5%AD%90%E3%80%90%E3%81%8A%E3%81%A8%E3%81%93%E3%81%AE%E3%81%93%E3%80%91.mp3
+  Git blob SHA-1: e9a7a8235c2bb864c01091024aebda8d084f4598
+- word-5b50-3069-3082.mp3: 子ども (こども)
+  Source spelling: 子供
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%AD%90%E4%BE%9B%E3%80%90%E3%81%93%E3%81%A9%E3%82%82%E3%80%91.mp3
+  Git blob SHA-1: d49cd6c4dfcaf1f05a343437485bcdb119d0fddf
+- word-5b50-72ac.mp3: 子犬 (こいぬ)
+  Source spelling: 子犬
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%AD%90%E7%8A%AC%E3%80%90%E3%81%93%E3%81%84%E3%81%AC%E3%80%91.mp3
+  Git blob SHA-1: 89bc2d0290f504662e375ad97429ab28c3f2aa1a
+- word-4eba-3054-307f.mp3: 人ごみ (ひとごみ)
+  Source spelling: 人込み
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BA%BA%E8%BE%BC%E3%81%BF%E3%80%90%E3%81%B2%E3%81%A8%E3%81%94%E3%81%BF%E3%80%91.mp3
+  Git blob SHA-1: 88dc74b1299a17c405c1e6a9199fdfb77f595177
+- word-540d-4eba.mp3: 名人 (めいじん)
+  Source spelling: 名人
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%90%8D%E4%BA%BA%E3%80%90%E3%82%81%E3%81%84%E3%81%98%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: bee21f61c197d8158bb609b95751200c09151e31
+- word-4eba-3052-3093.mp3: 人げん (にんげん)
+  Source spelling: 人間
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BA%BA%E9%96%93%E3%80%90%E3%81%AB%E3%82%93%E3%81%92%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: f06675710bec97627705b797386d19eb62bcc18c
+- word-540d-524d.mp3: 名前 (なまえ)
+  Source spelling: 名前
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%90%8D%E5%89%8D%E3%80%90%E3%81%AA%E3%81%BE%E3%81%88%E3%80%91.mp3
+  Git blob SHA-1: 8da4d3a6f0662c93e1e5528773cfd31eeaa1f2aa
+- word-672c-3060-306a.mp3: 本だな (ほんだな)
+  Source spelling: 本棚
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%9C%AC%E6%A3%9A%E3%80%90%E3%81%BB%E3%82%93%E3%81%A0%E3%81%AA%E3%80%91.mp3
+  Git blob SHA-1: 6b2f6ca3a6a028c8d7dc1cb0703749e77ed1e367
+- word-672c-3068-3046.mp3: 本とう (ほんとう)
+  Source spelling: 本当
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%9C%AC%E5%BD%93%E3%80%90%E3%81%BB%E3%82%93%E3%81%A8%E3%81%86%E3%80%91.mp3
+  Git blob SHA-1: b8f28fc9606eaf498c65f562501624d4c9390fd0
+- word-5b66-5e74.mp3: 学年 (がくねん)
+  Source spelling: 学年
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%AD%A6%E5%B9%B4%E3%80%90%E3%81%8C%E3%81%8F%E3%81%AD%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 85f9774bd8767aee8e2bff8e887928d89a90d8cf
+- word-5c0f-5b66-751f.mp3: 小学生 (しょうがくせい)
+  Source spelling: 小学生
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%B0%8F%E5%AD%A6%E7%94%9F%E3%80%90%E3%81%97%E3%82%87%E3%81%86%E3%81%8C%E3%81%8F%E3%81%9B%E3%81%84%E3%80%91.mp3
+  Git blob SHA-1: 8e6de3429078afbebb3ea87f57713456c3bb616d
+- word-5b66-3076.mp3: 学ぶ (まなぶ)
+  Source spelling: 学ぶ
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%AD%A6%E3%81%B6%E3%80%90%E3%81%BE%E3%81%AA%E3%81%B6%E3%80%91.mp3
+  Git blob SHA-1: d174cd6d187f307b357a428defe6c047b902c4d4
+- word-65e9-3044.mp3: 早い (はやい)
+  Source spelling: 早い
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%97%A9%E3%81%84%E3%80%90%E3%81%AF%E3%82%84%E3%81%84%E3%80%91.mp3
+  Git blob SHA-1: c6c8a2af32348dfd089bae7e5492120fccebb8c0
+- word-6c34-3069-3046.mp3: 水どう (すいどう)
+  Source spelling: 水道
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%B0%B4%E9%81%93%E3%80%90%E3%81%99%E3%81%84%E3%81%A9%E3%81%86%E3%80%91.mp3
+  Git blob SHA-1: 687ef9c59e0c482b76bdadcb3318297ecccbd1ea
+- word-82b1-3060-3093.mp3: 花だん (かだん)
+  Source spelling: 花壇
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E8%8A%B1%E5%A3%87%E3%80%90%E3%81%8B%E3%81%A0%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 746fb2b1b5b00ad20c141eed229dca1c54fac73c
+- word-3058-77f3.mp3: じ石 (じしゃく)
+  Source spelling: 磁石
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%A3%81%E7%9F%B3%E3%80%90%E3%81%98%E3%81%97%E3%82%83%E3%81%8F%E3%80%91.mp3
+  Git blob SHA-1: bf387d41c05bbf2ac44955ee8a98f2cbeb40d073
+- word-307b-3046-77f3.mp3: ほう石 (ほうせき)
+  Source spelling: 宝石
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%AE%9D%E7%9F%B3%E3%80%90%E3%81%BB%E3%81%86%E3%81%9B%E3%81%8D%E3%80%91.mp3
+  Git blob SHA-1: e84a52ba66eac21d52f96e7050abcf785b244da9
+- word-9752-3044.mp3: 青い (あおい)
+  Source spelling: 青い
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E9%9D%92%E3%81%84%E3%80%90%E3%81%82%E3%81%8A%E3%81%84%E3%80%91.mp3
+  Git blob SHA-1: 33dc14222a989d970b8ad66263313fe7cefb2225
+- word-9752-5e74.mp3: 青年 (せいねん)
+  Source spelling: 青年
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E9%9D%92%E5%B9%B4%E3%80%90%E3%81%9B%E3%81%84%E3%81%AD%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 0e13ad7694630a97c691674959cea7ced5f2f424
+- word-9752-7a7a.mp3: 青空 (あおぞら)
+  Source spelling: 青空
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E9%9D%92%E7%A9%BA%E3%80%90%E3%81%82%E3%81%8A%E3%81%9E%E3%82%89%E3%80%91.mp3
+  Git blob SHA-1: 0989ff3dc6dce93ea3fbacf0852079a2d2dfaa01
+- word-8d64-3061-3083-3093.mp3: 赤ちゃん (あかちゃん)
+  Source spelling: 赤ちゃん
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93%E3%80%90%E3%81%82%E3%81%8B%E3%81%A1%E3%82%83%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 11050a879578ebb1697051cefd83ffff2f82d0cd
+- word-5c0f-5b66-6821.mp3: 小学校 (しょうがっこう)
+  Source spelling: 小学校
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%B0%8F%E5%AD%A6%E6%A0%A1%E3%80%90%E3%81%97%E3%82%87%E3%81%86%E3%81%8C%E3%81%A3%E3%81%93%E3%81%86%E3%80%91.mp3
+  Git blob SHA-1: df421dbb39f7625d65cdcb1fe24aec4eccdf7b82
+- word-5c0f-3055-3044.mp3: 小さい (ちいさい)
+  Source spelling: 小さい
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%B0%8F%E3%81%95%E3%81%84%E3%80%90%E3%81%A1%E3%81%84%E3%81%95%E3%81%84%E3%80%91.mp3
+  Git blob SHA-1: bd0d2000354933446e0c64f9601b1b41c9f1d3ff
+- word-4e0b-3052-308b.mp3: 下げる (さげる)
+  Source spelling: 下げる
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%B8%8B%E3%81%92%E3%82%8B%E3%80%90%E3%81%95%E3%81%92%E3%82%8B%E3%80%91.mp3
+  Git blob SHA-1: 8302e8e0891cbedf7bbde304e374cc79c7188407
+- word-53e3-3076-3048.mp3: 口ぶえ (くちぶえ)
+  Source spelling: 口笛
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8F%A3%E7%AC%9B%E3%80%90%E3%81%8F%E3%81%A1%E3%81%B6%E3%81%88%E3%80%91.mp3
+  Git blob SHA-1: 55f04038f1236d738bbd7a3123c76237fd4d30a1
+- word-53e3-3079-306b.mp3: 口べに (くちべに)
+  Source spelling: 口紅
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%8F%A3%E7%B4%85%E3%80%90%E3%81%8F%E3%81%A1%E3%81%B9%E3%81%AB%E3%80%91.mp3
+  Git blob SHA-1: edcf5e7a8eb358bcce789da838bdca8973b3c1cf
+- word-4eba-53e3.mp3: 人口 (じんこう)
+  Source spelling: 人口
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BA%BA%E5%8F%A3%E3%80%90%E3%81%98%E3%82%93%E3%81%93%E3%81%86%E3%80%91.mp3
+  Git blob SHA-1: e5145f5ec2de4a7ece85212c165f92f5637df175
+- word-624b-304f-3073.mp3: 手くび (てくび)
+  Source spelling: 手首
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%89%8B%E9%A6%96%E3%80%90%E3%81%A6%E3%81%8F%E3%81%B3%E3%80%91.mp3
+  Git blob SHA-1: 2cd21e57a5e40e291e679d03abbf93b03a37f258
+- word-306f-304f-624b.mp3: はく手 (はくしゅ)
+  Source spelling: 拍手
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%8B%8D%E6%89%8B%E3%80%90%E3%81%AF%E3%81%8F%E3%81%97%E3%82%85%E3%80%91.mp3
+  Git blob SHA-1: bf3010580e4e193e97d2c430a2c6e68ddea20927
+- word-8db3-3042-3068.mp3: 足あと (あしあと)
+  Source spelling: 足跡
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E8%B6%B3%E8%B7%A1%E3%80%90%E3%81%82%E3%81%97%E3%81%82%E3%81%A8%E3%80%91.mp3
+  Git blob SHA-1: 556c62c226513f8acc0801d7be21e491ffee1261
+- word-8db3-304f-3073.mp3: 足くび (あしくび)
+  Source spelling: 足首
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E8%B6%B3%E9%A6%96%E3%80%90%E3%81%82%E3%81%97%E3%81%8F%E3%81%B3%E3%80%91.mp3
+  Git blob SHA-1: 1cf6a8e67326fc4820fd534fbc064e7b9cea21d8
+- word-8033-3046-3061.mp3: 耳うち (みみうち)
+  Source spelling: 耳打ち
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E8%80%B3%E6%89%93%E3%81%A1%E3%80%90%E3%81%BF%E3%81%BF%E3%81%86%E3%81%A1%E3%80%91.mp3
+  Git blob SHA-1: 453122988ae9d7cb085145357fdeaaed31d4e2f6
+- word-51fa-308b.mp3: 出る (でる)
+  Source spelling: 出る
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%87%BA%E3%82%8B%E3%80%90%E3%81%A7%E3%82%8B%E3%80%91.mp3
+  Git blob SHA-1: 129305068059bb99a56a4fa7f13c7efdad8dc52a
+- word-51fa-3059.mp3: 出す (だす)
+  Source spelling: 出す
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%87%BA%E3%81%99%E3%80%90%E3%81%A0%E3%81%99%E3%80%91.mp3
+  Git blob SHA-1: 92789af6e8f252ea5ec53f60d2e6d682c436215d
+- word-51fa-3071-3064.mp3: 出ぱつ (しゅっぱつ)
+  Source spelling: 出発
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%87%BA%E7%99%BA%E3%80%90%E3%81%97%E3%82%85%E3%81%A3%E3%81%B1%E3%81%A4%E3%80%91.mp3
+  Git blob SHA-1: 8d844687b9c4e1c64fda92955d2297a9eb748c9c
+- word-304b-3093-5b57.mp3: かん字 (かんじ)
+  Source spelling: 漢字
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%BC%A2%E5%AD%97%E3%80%90%E3%81%8B%E3%82%93%E3%81%98%E3%80%91.mp3
+  Git blob SHA-1: ee824db2342bc59944a36bdda96adfe0732510a1
+- word-3059-3046-5b57.mp3: すう字 (すうじ)
+  Source spelling: 数字
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%95%B0%E5%AD%97%E3%80%90%E3%81%99%E3%81%86%E3%81%98%E3%80%91.mp3
+  Git blob SHA-1: 2de19dd045653f79d751e21af9659c9413d7185c
+- word-3055-304f-6587.mp3: さく文 (さくぶん)
+  Source spelling: 作文
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E4%BD%9C%E6%96%87%E3%80%90%E3%81%95%E3%81%8F%E3%81%B6%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: f2f292512c9354a55ca27a5ac887e04dc0f55035
+- word-6587-5b66.mp3: 文学 (ぶんがく)
+  Source spelling: 文学
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%96%87%E5%AD%A6%E3%80%90%E3%81%B6%E3%82%93%E3%81%8C%E3%81%8F%E3%80%91.mp3
+  Git blob SHA-1: bcde0d9258f1ed757cad59e08812734ff848455f
+- word-751f-3080.mp3: 生む (うむ)
+  Source spelling: 生む
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%94%9F%E3%82%80%E3%80%90%E3%81%86%E3%82%80%E3%80%91.mp3
+  Git blob SHA-1: 5eb8f4e1f940500e20a7e126f38b41e3fc8537ad
+- word-751f-304d-308b.mp3: 生きる (いきる)
+  Source spelling: 生きる
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%94%9F%E3%81%8D%E3%82%8B%E3%80%90%E3%81%84%E3%81%8D%E3%82%8B%E3%80%91.mp3
+  Git blob SHA-1: 79145f7c85a93959c0aa2125b966b45c09bafca2
+- word-6b63-3057-3044.mp3: 正しい (ただしい)
+  Source spelling: 正しい
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%AD%A3%E3%81%97%E3%81%84%E3%80%90%E3%81%9F%E3%81%A0%E3%81%97%E3%81%84%E3%80%91.mp3
+  Git blob SHA-1: 00294a4c5fcf3b45678c6cc6ae518163a7c32383
+- word-6b63-3058-304d.mp3: 正じき (しょうじき)
+  Source spelling: 正直
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%AD%A3%E7%9B%B4%E3%80%90%E3%81%97%E3%82%87%E3%81%86%E3%81%98%E3%81%8D%E3%80%91.mp3
+  Git blob SHA-1: 4cf4134d052df51ab30ccfc025c6c8b159a96f9b
+- word-6b63-304b-3044.mp3: 正かい (せいかい)
+  Source spelling: 正解
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E6%AD%A3%E8%A7%A3%E3%80%90%E3%81%9B%E3%81%84%E3%81%8B%E3%81%84%E3%80%91.mp3
+  Git blob SHA-1: 7f8663b66f916261c1e7c91eeb212a2c0b60d653
+- word-738b-3055-307e.mp3: 王さま (おうさま)
+  Source spelling: 王様
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%8E%8B%E6%A7%98%E3%80%90%E3%81%8A%E3%81%86%E3%81%95%E3%81%BE%E3%80%91.mp3
+  Git blob SHA-1: 6d1b76827732f3277320846e2865c29133435c9a
+- word-738b-304b-3093.mp3: 王かん (おうかん)
+  Source spelling: 王冠
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E7%8E%8B%E5%86%A0%E3%80%90%E3%81%8A%E3%81%86%E3%81%8B%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 812268512f485e1c7bd85d1ae53b17f4b67ad0f1
+- word-3053-304f-738b.mp3: こく王 (こくおう)
+  Source spelling: 国王
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E5%9B%BD%E7%8E%8B%E3%80%90%E3%81%93%E3%81%8F%E3%81%8A%E3%81%86%E3%80%91.mp3
+  Git blob SHA-1: d8dd9b830b39ae4369e8ef46813cb009e6d42be5
+- word-3067-3093-8eca.mp3: でん車 (でんしゃ)
+  Source spelling: 電車
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E9%9B%BB%E8%BB%8A%E3%80%90%E3%81%A7%E3%82%93%E3%81%97%E3%82%83%E3%80%91.mp3
+  Git blob SHA-1: 5abcfc908981b64251fa79d1ea14c4cfeb145f51
+- word-8eca-308a-3093.mp3: 車りん (しゃりん)
+  Source spelling: 車輪
+  Original: https://github.com/tofugu/japanese-vocabulary-pronunciation-audio/blob/master/lib/mp3/%E8%BB%8A%E8%BC%AA%E3%80%90%E3%81%97%E3%82%83%E3%82%8A%E3%82%93%E3%80%91.mp3
+  Git blob SHA-1: 1f43c4f03a4112cb7ba2858ec9401794b7fbdef7
 
-SYNTHESIZED AUDIO — VOICEVOX Nemo
+SYNTHESIZED AUDIO (124) — VOICEVOX Nemo
 Voice: 女声1 (CV: 亜咲比 凛), speaker 10005. Engine 0.26.0, core 0.17.0.
 Source: https://voicevox.hiroshiba.jp/nemo/
 Terms: https://voicevox.hiroshiba.jp/nemo/term/
@@ -90,8 +453,9 @@ The generated WAVs are subject to the VOICEVOX Nemo terms, not CC BY-SA.
 When reusing these files, credit VOICEVOX Nemo and comply with its terms.
 Do not use the generated audio for machine learning.
 The shipped voice-library policy is in VOICEVOX-NEMO-POLICY.txt.
-Exact synthesis queries, voice/version, and reading overrides are in generation.json.
-These files have not received native-speaker listening or pronunciation review.
+Exact synthesis queries, voice/version, reading overrides, and documented spoken
+long-vowel variants are in generation.json. These files have not received a
+native-speaker listening or pronunciation review.
 
 - niko.wav: 二こ (にこ)
   Generated by VOICEVOX Nemo
@@ -138,3 +502,330 @@ These files have not received native-speaker listening or pronunciation review.
 - nichiji.wav: 日時 (にちじ)
   Generated by VOICEVOX Nemo
   SHA-256: 22203c18f0b224043120e20cab3f95ed8cf3c8ae6740772b4660be3aa0bb3bb6
+- word-4e94-3053.wav: 五こ (ごこ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 7dd13e819028c6641ff8025bda710afe9ea4e25721092693ac6fa8d13bd6f0f0
+- word-4e94-308f.wav: 五わ (ごわ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 70c5420c9447fd4506f9b5a88f312deb1829706fb737397ef6ab4234e2f4ec86
+- word-516d-3053.wav: 六こ (ろっこ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 86cc04c2b35013400dbf1efb73fc6cd72726dc83baced2ac5b80b3ad599216a2
+- word-516d-672c.wav: 六本 (ろっぽん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 5876516d7326bd901b5a84f14676eac9d61986a4eaa61e3c8d1a1031f46c5c9b
+- word-706b-306e-3053.wav: 火のこ (ひのこ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 11eea7b0f804e0837177a5655152b6604b700623d2b0d51a525060029dc13042
+- word-6728-76ee.wav: 木目 (もくめ)
+  Generated by VOICEVOX Nemo
+  SHA-256: fc235c518dd2e3303426e8586c9a25040eb6a678f5d369394d3520f6ec90f61d
+- word-306b-308f-6728.wav: にわ木 (にわき)
+  Generated by VOICEVOX Nemo
+  SHA-256: bfb02ab379c56923828feef83788af703093d0bbabe9d8c837aa0377734b9745
+- word-6728-304b-3052.wav: 木かげ (こかげ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 36fe18b8f7b8fe5c4cadd4124cfb98ae985cbf2892b2e81c865e5b8f2cd40107
+- word-91d1-8272.wav: 金色 (きんいろ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 52e368321feeb672da54ffe1fdfb306c1ef7f37304fd1a222abb1d6789c5cd55
+- word-571f-304d.wav: 土き (どき)
+  Generated by VOICEVOX Nemo
+  SHA-256: d3145afcd2bbf98471e275efad7c351bc079558dd4272cea1ce67c3281444963
+- word-571f-8db3.wav: 土足 (どそく)
+  Generated by VOICEVOX Nemo
+  SHA-256: e66189884fba4d3e997a53e2298a079c94786cd6166e500bdfc3628a5c27ef31
+- word-8d64-571f.wav: 赤土 (あかつち)
+  Generated by VOICEVOX Nemo
+  SHA-256: 984615c2a340a57595822bfd6918da72cc5112c91459a813759b7d851c3f1218
+- word-5c71-307f-3061.wav: 山みち (やまみち)
+  Generated by VOICEVOX Nemo
+  SHA-256: 20cc3619cdf9b0b81195d903d7a21bd2f78400d2100356b404e001fe2243b718
+- word-5c71-3044-3082.wav: 山いも (やまいも)
+  Generated by VOICEVOX Nemo
+  SHA-256: 3b4b3b7958b12dd0b3a2e1d9724c22072135c98979223078b2aa14e7d1d871ff
+- word-5ddd-304b-307f.wav: 川かみ (かわかみ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 4aa50de919d4cb56ff64c7e0ced44bf0cad9cc0e39d761a0554fbc9277b6d247
+- word-5ddd-3057-3082.wav: 川しも (かわしも)
+  Generated by VOICEVOX Nemo
+  SHA-256: d59ff592b855a2349785b060a1589f646c9b1763664aec85aadf79b437e8acef
+- word-5ddd-3079-308a.wav: 川べり (かわべり)
+  Generated by VOICEVOX Nemo
+  SHA-256: 266147b734ee0de2f7ce72f2f685b9a388e83690951127289afd6d47aae54a16
+- word-7530-3093-307c.wav: 田んぼ (たんぼ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 337515b56441a0c54f0da99a108897766883fb8c3a0dda2b1cd97be0b4f9d511
+- word-6c34-7530.wav: 水田 (すいでん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 97c8008f914ce7169a65e8936cd8b097210f1fceb36de2ac8ce38a3f11199d76
+- word-7530-3046-3048.wav: 田うえ (たうえ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 2f25d1d4d04c92af5eb9269aad84fef5890d9a924c724eac2961a0ab6ee8885c
+- word-5e74-3088-308a.wav: 年より (としより)
+  Generated by VOICEVOX Nemo
+  SHA-256: f057421638d0bbff54f6cd770a3704447fe50bbae9f1ad3bfbaf166a835ed7a7
+- word-7a7a-8272.wav: 空色 (そらいろ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 699918ae5281b62c9dbc7bd774a09a42de9e8582de2f69673de5497991cb0d0f
+- word-7a7a-3070-3053.wav: 空ばこ (からばこ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 8612e7df86de2d95c1998ba691bbe6f589efc080bc484974ae36e238cbee6221
+- word-5929-306e-5ddd.wav: 天の川 (あまのがわ)
+  Generated by VOICEVOX Nemo
+  SHA-256: be5704385b37176ee5434a17b15b1dc3ce11b0ad76a6bdb807ba6dcf5a3921c6
+- word-767d-3050-307f.wav: 白ぐみ (しろぐみ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 54ba41cef55f400f59f95d509ef6e729cc748d32069418ac18f1369b1c61780e
+- word-767d-3044-82b1.wav: 白い花 (しろいはな)
+  Generated by VOICEVOX Nemo
+  SHA-256: 85979544ce7a2de55c726fab23bfcef43f081117e998ffe9d09d0c6ac6ff641b
+- word-7a7a-767d.wav: 空白 (くうはく)
+  Generated by VOICEVOX Nemo
+  SHA-256: 3eb5bd2726ffe10dfb68ee1ee24320c9ba97da1d3ea0ff630fd8c88c40218727
+- word-4e00-65e5-4e2d.wav: 一日中 (いちにちじゅう)
+  Generated by VOICEVOX Nemo
+  SHA-256: 17aec870e199672dce706846ebccd82f5b76805cc6c5feba251677d9382f0f60
+- word-4e2d-306b-308f.wav: 中にわ (なかにわ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 70b023cf19c8b1200019decda6b3bde95eb1548410faad2412789d906c423654
+- word-5de6-8db3.wav: 左足 (ひだりあし)
+  Generated by VOICEVOX Nemo
+  SHA-256: ddf27ab045499622899cbfe898e72e50f79ebf8a7dac17faaadb8dee8ad90e89
+- word-5186-3051-3044.wav: 円けい (えんけい)
+  Generated by VOICEVOX Nemo
+  SHA-256: 0fe5aac046777341706c010525183351f180ce84553424589f99d5c404b00d7a
+- word-76ee-3068-53e3.wav: 目と口 (めとくち)
+  Generated by VOICEVOX Nemo
+  SHA-256: 292a802a361efd245618d4f5cd67564cfb950d6124108cef9dbb914f8d1a39ae
+- word-76ee-3064-304d.wav: 目つき (めつき)
+  Generated by VOICEVOX Nemo
+  SHA-256: e638c1022fe70c4d4e4118369723c0d727c5cf824ccac3fcbd834e9c6fed258b
+- word-898b-5b66.wav: 見学 (けんがく)
+  Generated by VOICEVOX Nemo
+  SHA-256: 97815893d6f7af4daa02f0382cfa414542af5f1945bcf713ea0c8d3b3f12d93d
+- word-304d-7acb.wav: き立 (きりつ)
+  Generated by VOICEVOX Nemo
+  SHA-256: ec4b524fe64d4b78b738216aa973ddbfb6ab5104259811265268beaf85186b55
+- word-4f11-3081-308b.wav: 休める (やすめる)
+  Generated by VOICEVOX Nemo
+  SHA-256: efbd3a57e7c7958a5fd6febe219159b8e9f56c4624a884a3f8c2d88032e15509
+- word-5973-3068-7537.wav: 女と男 (おんなとおとこ)
+  Generated by VOICEVOX Nemo
+  SHA-256: dda714ce1a8c5edb3a8f3fd2893755ded600beadccac6bc7cead2d5f529ff81b
+- word-7537-5b50.wav: 男子 (だんし)
+  Generated by VOICEVOX Nemo
+  SHA-256: 80a9c0524bd3e023559071babd21a325ddfb9cc03900133d4e557638f3e43bbd
+- word-672c-540d.wav: 本名 (ほんみょう)
+  Generated by VOICEVOX Nemo
+  SHA-256: e790995162842d908a884d9c0ca6e43d8487f2f180128a541f8fa2afd9d400a9
+- word-3048-672c.wav: え本 (えほん)
+  Generated by VOICEVOX Nemo
+  SHA-256: acc85e8f9f9dbc4b631e0ec0e2005f5197ac92b3b1eb2e1c4910bc03b00aa878
+- word-65e9-8db3.wav: 早足 (はやあし)
+  Generated by VOICEVOX Nemo
+  SHA-256: a8ba2f50b22ea5623a9be6008df733044471cb30641ac791f7fffb04e1db7bad
+- word-65e9-3081-308b.wav: 早める (はやめる)
+  Generated by VOICEVOX Nemo
+  SHA-256: c4bd9ed3b7a8893d461418a4e6057dc3492c1a25c6fc7361afe0afa54bc85c9c
+- word-6751-306e-4eba.wav: 村の人 (むらのひと)
+  Generated by VOICEVOX Nemo
+  SHA-256: cc67b777bf2a4194a0d1855a6afb85c814aa28fe44907a96cd9b7ad022fe3a2e
+- word-753a-3068-6751.wav: 町と村 (まちとむら)
+  Generated by VOICEVOX Nemo
+  SHA-256: a33991e9e4effede66b91ad3863d0da5bc044dc24c5ec6e7fb704032d475ff9c
+- word-5c71-6751.wav: 山村 (さんそん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 7b46b7fbae3cb406226a8b5331c558401a85e5afb0d016dd9df10ccffb72fa0c
+- word-753a-306a-307f.wav: 町なみ (まちなみ)
+  Generated by VOICEVOX Nemo
+  SHA-256: adff13e00558dd3fa8cf86657d54b5ca2341a3cbb32de3e64cd24075d1c23bd3
+- word-753a-306e-4e2d.wav: 町の中 (まちのなか)
+  Generated by VOICEVOX Nemo
+  SHA-256: 0f0076500de6a334ec5bc3cbb0384e78b98c9c0794cee30eb6b10c260b925d39
+- word-753a-6751.wav: 町村 (ちょうそん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 7785491d5e209958990be5bc81c2c82b3a3bfab11f9569ce58493daebacdf217
+- word-6c34-7389.wav: 水玉 (みずたま)
+  Generated by VOICEVOX Nemo
+  SHA-256: c574cdd411f1c45d50e9caee815d2039c9df02bafdcd6d5ea86e9ce8d4400a93
+- word-6c34-8349.wav: 水草 (みずくさ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 13c6489def387b291e0319090f87668ae9d228c440cac273809c2877f59b637f
+- word-7af9-6797.wav: 竹林 (たけばやし)
+  Generated by VOICEVOX Nemo
+  SHA-256: 9cca12d9c6a629e76a5da4919e0386f44ce5b5cbd4940f6fb46edfaa96156853
+- word-307e-3064-6797.wav: まつ林 (まつばやし)
+  Generated by VOICEVOX Nemo
+  SHA-256: 0c1c3e26d02726ec72637852b7defdd872f5afdfef03e53074030fa569948f54
+- word-5c71-6797.wav: 山林 (さんりん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 64c92b02892bed71bf651570fb03f47c00b7a152fab3753a122406b8fc91d562
+- word-68ee-306e-4e2d.wav: 森の中 (もりのなか)
+  Generated by VOICEVOX Nemo
+  SHA-256: a1dc45cd71a248fcf256fdf70b45e2e5dcc8324b7a46d37bc7702c719514187d
+- word-68ee-6797.wav: 森林 (しんりん)
+  Generated by VOICEVOX Nemo
+  SHA-256: aa57cc214eb6b07811a82d74a28aced684168512f31ced04dadcc398b4268e88
+- word-9752-68ee.wav: 青森 (あおもり)
+  Generated by VOICEVOX Nemo
+  SHA-256: dde4db15d78430b3e6e621352e7538946a1001ef19bf929b6edad93159daa8a6
+- word-7af9-3046-307e.wav: 竹うま (たけうま)
+  Generated by VOICEVOX Nemo
+  SHA-256: c9c73e4b7840c5b7050604ef0806de5bc90c73c535664db0d2e79ca4e726b4ad
+- word-7af9-3084-3076.wav: 竹やぶ (たけやぶ)
+  Generated by VOICEVOX Nemo
+  SHA-256: b4e2bd48ed511a9ca17d48def3ba813071b7046ee2ad56195a15315cd4c6bf04
+- word-7af9-308f.wav: 竹わ (ちくわ)
+  Generated by VOICEVOX Nemo
+  SHA-256: ecb396006c9232c981a5a180ba250b2d1d0dc892b07ca0ab7557f4670734c267
+- word-82b1-3073-3089.wav: 花びら (はなびら)
+  Generated by VOICEVOX Nemo
+  SHA-256: a11949426e7aa30cd7e2a58ebdd1c1486ada2d74421fbd7b430cc85fc1d9d039
+- word-82b1-305f-3070.wav: 花たば (はなたば)
+  Generated by VOICEVOX Nemo
+  SHA-256: 8d6088a74b54cf16017e36ee875f8592eb4d2ec5cfc0c2ccb6520f1763d99bb1
+- word-8349-306f-3089.wav: 草はら (くさはら)
+  Generated by VOICEVOX Nemo
+  SHA-256: 5c96e66816d1466f282a9030af3934c5b7439a065fe22f7f795e17969b7a34b4
+- word-8349-3082-3061.wav: 草もち (くさもち)
+  Generated by VOICEVOX Nemo
+  SHA-256: 2267bfd765057b0d592b7add5a267be1f64bf4cd7373eca14aa39ff4f66e6e30
+- word-3056-3063-8349.wav: ざっ草 (ざっそう)
+  Generated by VOICEVOX Nemo
+  SHA-256: 50bf36b42d1dc96423a8a9e5dab4a5ffa41e2bf35ac4b1ecf9fc524b102258c4
+- word-5c0f-77f3.wav: 小石 (こいし)
+  Generated by VOICEVOX Nemo
+  SHA-256: 830bc46aa2fe4842d1cea4769aedda1e97cbee8410a8823d27d9fff21a8f91e1
+- word-8c9d-304c-3089.wav: 貝がら (かいがら)
+  Generated by VOICEVOX Nemo
+  SHA-256: 270e2d9cfa03356519e5a5a004ddac79c797822bff34517b62b75a0b460752cc
+- word-307e-304d-8c9d.wav: まき貝 (まきがい)
+  Generated by VOICEVOX Nemo
+  SHA-256: 1190f7bee7c88f229ad39992ea0783ea60dd467338aed53a0ba053155bc9081a
+- word-307b-3089-8c9d.wav: ほら貝 (ほらがい)
+  Generated by VOICEVOX Nemo
+  SHA-256: b1220d8e77195fbd268669a7447fb466e77494ef6315c7f4d4015bfdf1e70aae
+- word-3059-305a-866b.wav: すず虫 (すずむし)
+  Generated by VOICEVOX Nemo
+  SHA-256: 1a7f6e9c6b64a08256edfa1c3747db99d109b3c51ebd532e91f604248fc8dc53
+- word-3053-3093-866b.wav: こん虫 (こんちゅう)
+  Generated by VOICEVOX Nemo
+  SHA-256: db9fb29c2d0118d7f904fcb1ccb9230051128acc70460347f553109478c7762d
+- word-866b-304b-3054.wav: 虫かご (むしかご)
+  Generated by VOICEVOX Nemo
+  SHA-256: c81d106b39a9e76459d40dc4b46e1bd27ee8748e62536d0d0dc0333bc265d30f
+- word-540d-72ac.wav: 名犬 (めいけん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 67bd2fba8768e84a5a8a9febbe3373869d064fe95db163290bf871a2bd0f9012
+- word-767d-3044-72ac.wav: 白い犬 (しろいいぬ)
+  Generated by VOICEVOX Nemo
+  SHA-256: c4a501aced7e040af94b969768082d8f409f779a862778ef9e82f9ffe98db845
+- word-72ac-305e-308a.wav: 犬ぞり (いぬぞり)
+  Generated by VOICEVOX Nemo
+  SHA-256: 8d83d6a8e1d6ea89c754a8e38045bdef12302fdf3bc3ee8c68aca11c3de3fa18
+- word-96e8-5929.wav: 雨天 (うてん)
+  Generated by VOICEVOX Nemo
+  SHA-256: af6913f4fc52fc7f9ff7f2009808b622781af45308149b3608a8ac3d96ac3c40
+- word-96e8-3075-308a.wav: 雨ふり (あめふり)
+  Generated by VOICEVOX Nemo
+  SHA-256: d69201631c49326ad920eb7a10c24906bb059f93a26e3fefb927803a162c8f66
+- word-96e8-3050-3082.wav: 雨ぐも (あまぐも)
+  Generated by VOICEVOX Nemo
+  SHA-256: dc40dd84222e6da931c210427fa4d6f0a0ad5bfc78f3f4f28bc3fded710e85a6
+- word-5915-65e5.wav: 夕日 (ゆうひ)
+  Generated by VOICEVOX Nemo
+  SHA-256: cad5797694b8efa5268555edfbd5d797f497c11c44edc7fc6587563c48f380c0
+- word-5915-304c-305f.wav: 夕がた (ゆうがた)
+  Generated by VOICEVOX Nemo
+  SHA-256: 878ea701263db2f286e6fd065a3c1409aa781b632ed7cbb90715d13027f0ddd3
+- word-5915-3050-308c.wav: 夕ぐれ (ゆうぐれ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 5db3ca05c8a56ba88ff4e3243918e7fc732401c8caa758ea118f36be983631e0
+- word-8d64-3044-8eca.wav: 赤い車 (あかいくるま)
+  Generated by VOICEVOX Nemo
+  SHA-256: 40cd2308f524c2952735983693a14a6af35799258e161927fc53b64a7f469d76
+- word-8d64-306f-3093.wav: 赤はん (せきはん)
+  Generated by VOICEVOX Nemo
+  SHA-256: 12fed0eae06959d4653a59d1eb04edf4025c438302f1f6d0c84079292de104d9
+- word-304d-306e-4e0a.wav: きの上 (きのうえ)
+  Generated by VOICEVOX Nemo
+  SHA-256: f376bb8b355e092a2d76f948c274b062f4be4a34b912eecc89d9c4f73b56ecf5
+- word-4e0a-304e.wav: 上ぎ (うわぎ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 3029fd03aed6b83a41d4396b01d22d659eab012832b2ed392c0076c2dddb2c33
+- word-6728-306e-4e0b.wav: 木の下 (きのした)
+  Generated by VOICEVOX Nemo
+  SHA-256: 6d632fc90b2b0ae40c455843b4a43f014be72b3c6c6a6c0db2b180cbf9d2c59a
+- word-4e0b-6821.wav: 下校 (げこう)
+  Generated by VOICEVOX Nemo
+  SHA-256: 6f2fb12d461fa1d626f4094c7a4d455585e543f2483ea3427d6ecbc6e458a379
+- word-529b-3082-3061.wav: 力もち (ちからもち)
+  Generated by VOICEVOX Nemo
+  SHA-256: 06faabfa302b074128c2f2c86663500163f90fdc4eb6644d1f730ca4514f2079
+- word-5b66-529b.wav: 学力 (がくりょく)
+  Generated by VOICEVOX Nemo
+  SHA-256: 4ea9f0db7f7b65b27ea94fd49003397a62750329f7fe8dab8914ded05662dd0b
+- word-304b-3044-529b.wav: かい力 (かいりき)
+  Generated by VOICEVOX Nemo
+  SHA-256: 15b142dcdf7a35e1a8ee7c29d277c01c4da516c3ff00326ef54443d9406b4d25
+- word-4e00-8db3.wav: 一足 (いっそく)
+  Generated by VOICEVOX Nemo
+  SHA-256: 2d158e86e786c8852835249d4901bab874cbc124fa908fd20db85bf8fedf4313
+- word-8033-305f-3076.wav: 耳たぶ (みみたぶ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 1b6395270c41cdbb2a87461b556cf57cd42d7649b23fa6d62ae9df7ed4c555ce
+- word-76ee-3068-8033.wav: 目と耳 (めとみみ)
+  Generated by VOICEVOX Nemo
+  SHA-256: 63f5d01c908c5828456ed9119241bd707834d1759dbe04f672dafdea73fe9a6b
+- word-97f3-3077.wav: 音ぷ (おんぷ)
+  Generated by VOICEVOX Nemo
+  SHA-256: c63a95258d8e52490d7ce936ffbff3bf11c84067d0fefd481ae94be174dfea34
+- word-96e8-306e-97f3.wav: 雨の音 (あめのおと)
+  Generated by VOICEVOX Nemo
+  SHA-256: 78cb6b1b3352e0b761595a7ffa49096fe71f7acd9070321600d9be0a7142d3d7
+- word-97f3-3044-308d.wav: 音いろ (ねいろ)
+  Generated by VOICEVOX Nemo
+  SHA-256: d97a4847cbaf068645636cf930a46aabba7d4df6681317da45e92dc37ee3bc0d
+- word-3066-3093-5b57.wav: てん字 (てんじ)
+  Generated by VOICEVOX Nemo
+  SHA-256: bf126e11bb8649a3650cacf34124bca22c6203b2288ef30908bec8921c16349a
+- word-6587-306a-3057.wav: 文なし (もんなし)
+  Generated by VOICEVOX Nemo
+  SHA-256: 05d0d229b114e79be100f5aedd93a7f94beaf2db2e4201ce7b6394075bdb5039
+- word-6821-3066-3044.wav: 校てい (こうてい)
+  Generated by VOICEVOX Nemo
+  SHA-256: b9c850a327c05282f85a5aaf36714e80b7eb257dd54b0099fb6865360b95acbe
+- word-3066-3093-6821.wav: てん校 (てんこう)
+  Generated by VOICEVOX Nemo
+  SHA-256: 6e64aea6be42fb9742f5b783478a55101ef49232482b6347c4a1ab5955b3fdbc
+- word-5148-3068-3046.wav: 先とう (せんとう)
+  Generated by VOICEVOX Nemo
+  SHA-256: 07909c36c36a9f9adbc4b1591024387c7aed9af635d746c056bd3646bfb8030d
+- word-8db3-306e-5148.wav: 足の先 (あしのさき)
+  Generated by VOICEVOX Nemo
+  SHA-256: fdc7ad6fd2e34f8c2f8d75dac738e21ba709a0f36482bfda06e8fe8d219df4bd
+- word-751f-3082-306e.wav: 生もの (なまもの)
+  Generated by VOICEVOX Nemo
+  SHA-256: fce74c0316b224d1afb16b933cd141730af43743dbbeb46a1a2804ffe0a5037b
+- word-7389-866b.wav: 玉虫 (たまむし)
+  Generated by VOICEVOX Nemo
+  SHA-256: 8ba8ebc31b4cab16b334c88f10a3efa8700784bcbda98016572c0a3609214ea3
+- word-767e-5186-7389.wav: 百円玉 (ひゃくえんだま)
+  Generated by VOICEVOX Nemo
+  SHA-256: 2dd355bc58c0a18f456ba8ef73a2a4430649f9b7f6abb3398dfbdfcd1c395d5c
+- word-7389-624b-3070-3053.wav: 玉手ばこ (たまてばこ)
+  Generated by VOICEVOX Nemo
+  SHA-256: d55194e382678da760bea82f785e3007b0bc949dd09e03edaa13cf3a7c0b98b8
+- word-767d-3044-7cf8.wav: 白い糸 (しろいいと)
+  Generated by VOICEVOX Nemo
+  SHA-256: 7c83ca0a70fdd669a77f9d51fcc15fab33ae245c1316fb0678ffdd0793d2ff06
+- word-8d64-3044-7cf8.wav: 赤い糸 (あかいいと)
+  Generated by VOICEVOX Nemo
+  SHA-256: 72505d07bd9065f52536c38151398d74f31bf025b5445fcc8c8586dfe53ad517
+- word-304d-306c-7cf8.wav: きぬ糸 (きぬいと)
+  Generated by VOICEVOX Nemo
+  SHA-256: cd933413321e43cf2cf05a98f516d02d16365d6cc6e1a8e76651af1cc0bce060
+- word-9752-3044-8eca.wav: 青い車 (あおいくるま)
+  Generated by VOICEVOX Nemo
+  SHA-256: 0930427fb8930f1d63e55e0c67a719c3a4d4b9ec11272c9ff261bf65a5b4ab62
