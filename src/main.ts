@@ -5,12 +5,17 @@ import { createStudyCatalog } from './lib/study-catalog.ts';
 import { getPronunciation, pronunciations, pronunciationSource, synthesizedSource } from './data/pronunciations.ts';
 import { setupPronunciation } from './pronunciation-ui.ts';
 import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDifficultyFilter, rowDifficultyFilters, type RowDifficultyFilter } from './lib/row-difficulty.ts';
-import type { Kanji, StudyItem, StudyItemId } from './types.ts';
+import type { Difficulty, Kanji, StudyItem, StudyItemId } from './types.ts';
 import './style.css';
 
 const searchIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>';
 const arrowIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>';
 const closeIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg>';
+
+function difficultyIcon(value: Difficulty | null): string {
+  const filled = value === 'easy' ? 1 : value === 'medium' ? 2 : value === 'hard' ? 3 : 0;
+  return `<svg class="difficulty-icon" viewBox="0 0 32 16" aria-hidden="true" focusable="false">${[6, 16, 26].map((x, index) => `<circle cx="${x}" cy="8" r="3.2"${index < filled ? ' class="is-filled"' : ''}/>`).join('')}</svg>`;
+}
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <a class="skip-link" href="#collection">Saltar a la colección</a>
@@ -73,6 +78,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>80 kanji y tres ejemplos por carácter, con lecturas en hiragana y significados en español, a partir de <cite>80 kanjis x 3 palabras.pdf</cite>.</p>
     <p>Busca por carácter, palabra, lectura o significado. Puedes escribir sin tildes y usar hiragana o katakana. Las lecturas se muestran siempre junto a las palabras.</p>
     <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
+    <p>En las fichas, uno, dos o tres puntos destacados indican fácil, medio y difícil. Tres puntos atenuados indican que la dificultad está sin marcar.</p>
     <p class="dialog-note">Se conserva la escritura simplificada del documento. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
     <p class="dialog-note">Pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar, con voces de Tokio y Kansai. Los botones con «IA» usan voz generada por <a href="${synthesizedSource.url}" target="_blank" rel="noopener">${synthesizedSource.name}</a> (${synthesizedSource.voice}), bajo sus <a href="${synthesizedSource.termsUrl}" target="_blank" rel="noopener">condiciones de uso</a>. Los audios están pendientes de revisión por un hablante nativo. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes y créditos de cada audio</a>.</p>
     <div class="dialog-shortcut"><kbd>/</kbd> Buscar <kbd>Esc</kbd> Borrar la búsqueda o cerrar esta ventana</div>
@@ -124,8 +130,10 @@ async function start() {
     block.setAttribute('aria-labelledby', headingId);
 
     const meta = element('div', 'study-meta');
-    meta.append(element('span', 'study-type', item.type === 'kanji' ? 'Kanji' : 'Vocabulario'));
-    if (item.type === 'kanji') meta.append(element('span', 'study-number', String(positions.get(entry.id)).padStart(2, '0')));
+    const identity = element('div', 'study-identity');
+    identity.append(element('span', 'study-type', item.type === 'kanji' ? 'Kanji' : 'Vocabulario'));
+    if (item.type === 'kanji') identity.append(element('span', 'study-number', String(positions.get(entry.id)).padStart(2, '0')));
+    meta.append(identity);
 
     const content = element('div', 'study-content');
     if (item.type === 'kanji') {
@@ -147,18 +155,22 @@ async function start() {
       japanese.append(written, reading);
       content.append(japanese, element('p', 'study-meaning', item.meanings.join(' · ')));
     }
-    const footer = element('div', 'study-footer');
+    const controls = element('div', 'study-controls');
     const value = getDifficulty(item.id);
     const label = value === null ? 'Sin marcar' : difficultyLabels[value];
-    const badge = element('span', 'difficulty-badge', label);
+    const badge = element('span', 'difficulty-badge');
+    badge.innerHTML = difficultyIcon(value);
     badge.dataset.difficulty = value ?? '';
+    badge.title = label;
+    badge.setAttribute('role', 'img');
     badge.setAttribute('aria-label', `Dificultad de ${item.type === 'kanji' ? item.character : item.written}: ${label}`);
-    footer.append(badge);
+    controls.append(badge);
     if (item.type === 'vocabulary') {
       const audioButton = pronunciation.createButton(item);
-      if (audioButton) footer.append(audioButton);
+      if (audioButton) controls.append(audioButton);
     }
-    block.append(meta, content, footer);
+    meta.append(controls);
+    block.append(meta, content);
     return block;
   }
 

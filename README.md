@@ -13,7 +13,7 @@ npm run dev
 
 ## Build and preview
 
-The project has a single static application. Difficulty classifications are displayed as badges and are always read from `public/collection.json`.
+The project has a single static application. Difficulty classifications are displayed as icons and are always read from `public/collection.json`.
 
 | Command | Behavior |
 | --- | --- |
@@ -47,8 +47,8 @@ Typography currently loads DM Sans and Noto Serif JP from Google Fonts, with sys
 - Always-visible vocabulary readings, empty results, keyboard shortcuts (`/` to search, `Escape` to clear), and an accessible collection information dialog.
 - Four independent difficulty indicators per row: one for the kanji and one for each word (Fácil, Medio, Difícil, or Sin marcar). Repeated words share their difficulty across rows.
 - Compact header and whole-row difficulty filters with counts, combined with search and the audio filter. Filters are bookmarkable via `?difficulty=hard&audio=1&q=...`.
-- 38 vocabulary audio files with play/stop controls and source credits: 23 human recordings and 15 locally synthesized WAVs. All 30 words in the requested ten easy kanji rows are covered in both builds.
-- Read-only difficulty badges loaded exclusively from the canonical JSON file.
+- 38 vocabulary audio files with play/stop controls and source credits: 23 human recordings and 15 locally synthesized WAVs. All 30 words in the requested ten easy kanji rows are covered.
+- Compact cards with audio in the upper-right corner and difficulty immediately to its left. One green, two yellow, or three red flat dots indicate easy, medium, or hard; faded dots mean unmarked. Names remain available in tooltips and accessible labels. Kanji blocks use a soft gray background.
 
 ## Independent study items
 

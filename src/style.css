@@ -81,24 +81,24 @@ h2 { margin: 0; font-size: 21px; font-weight: 550; letter-spacing: -.4px; }
 
 .kanji-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
 .study-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
-.study-block { display: flex; flex-direction: column; min-width: 0; padding: 9px 12px; border: 1px solid #e1e3d9; border-radius: 7px; background: #fffefa; }
-.study-block--kanji { background: #f1f3ec; border-color: #d8ddcf; }
-.study-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+.study-block { display: flex; flex-direction: column; min-width: 0; padding: 8px 10px; border: 1px solid #e1e3d9; border-radius: 7px; background: #fffefa; }
+.study-block--kanji { background: #f1f1f1; border-color: #dedede; }
+.study-meta { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-height: 32px; margin-bottom: 3px; }
+.study-identity { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.study-controls { display: flex; align-items: center; justify-content: flex-end; gap: 4px; flex-shrink: 0; margin-left: auto; }
 .study-type { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #6f7861; }
-.study-block--kanji .study-type { color: #526343; }
+.study-block--kanji .study-type { color: #656565; }
 .study-number { font-size: 10px; color: #747b6a; font-variant-numeric: tabular-nums; }
-.study-content { display: flex; flex-direction: column; justify-content: center; gap: 3px; min-height: 77px; }
-.study-block--kanji .study-content { flex-direction: row; align-items: center; justify-content: flex-start; gap: 12px; }
-.kanji-character { font-family: var(--japanese); font-size: 70px; font-weight: 500; line-height: 1.1; flex-shrink: 0; margin: 0; }
+.study-content { display: flex; flex-direction: column; justify-content: center; gap: 3px; min-height: 64px; }
+.study-block--kanji .study-content { flex-direction: row; align-items: center; justify-content: flex-start; gap: 10px; }
+.kanji-character { font-family: var(--japanese); font-size: 62px; font-weight: 500; line-height: 1.1; flex-shrink: 0; margin: 0; }
 .study-meaning { margin: 0; font-size: 15px; line-height: 1.5; color: #6b7161; overflow-wrap: anywhere; }
-.kanji-meaning { min-width: 0; color: #424b3c; }
+.kanji-meaning { min-width: 0; color: #4c4c4c; }
 .word-japanese { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; min-width: 0; }
 .word-written { margin: 0; font-family: var(--japanese); font-size: 25px; font-weight: 400; line-height: 1.4; overflow-wrap: anywhere; }
 .target-kanji { font-weight: 500; color: var(--accent); }
 .word-reading { color: #6f7861; font-size: 14px; letter-spacing: .15px; line-height: 1.6; overflow-wrap: anywhere; }
-.study-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; margin-top: auto; padding-top: 6px; }
-.study-footer .audio-button { margin-left: auto; }
-.audio-button { display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; padding: 8px; border: 1px solid #dce0d2; border-radius: 50%; background: #f1f3ec; color: #526343; }
+.audio-button { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 32px; padding: 5px; border: 1px solid #dce0d2; border-radius: 50%; background: #f1f3ec; color: #526343; }
 .audio-button:hover, .audio-button[aria-pressed='true'] { background: #e4eadc; border-color: #a5b497; color: #35472b; }
 .audio-button--synthesized { position: relative; }
 .audio-button--synthesized::after { content: 'IA'; position: absolute; right: -3px; bottom: -3px; padding: 1px 3px; border: 1px solid #d4dbcb; border-radius: 3px; background: #fffefa; color: #526343; font-size: 8px; font-weight: 650; line-height: 1.2; }
@@ -108,11 +108,13 @@ h2 { margin: 0; font-size: 21px; font-weight: 550; letter-spacing: -.4px; }
 .audio-note a { text-underline-offset: 3px; }
 .audio-status { margin: 0 0 14px; color: var(--accent); font-size: 14px; }
 .audio-status:empty { display: none; }
-.study-footer .difficulty-badge { margin-top: 0; }
-.difficulty-badge { display: inline-flex; align-items: center; width: fit-content; max-width: 100%; min-height: 25px; margin-top: 5px; padding: 3px 8px; border: 1px solid #dce0d2; border-radius: 5px; background: #f8f7f3; color: #68715e; font-size: 12px; line-height: 1.4; }
-.difficulty-badge[data-difficulty='easy'] { color: #46613d; background: #eef3e8; border-color: #cddbc4; }
-.difficulty-badge[data-difficulty='medium'] { color: #796023; background: #f8f1df; border-color: #e6d8b1; }
-.difficulty-badge[data-difficulty='hard'] { color: #a23e30; background: #faece6; border-color: #e9c7bc; }
+.difficulty-badge { display: inline-flex; align-items: center; justify-content: center; min-height: 25px; padding: 3px 2px; color: #777; }
+.difficulty-icon { display: block; width: 36px; height: 18px; }
+.difficulty-icon circle { fill: currentColor; stroke: none; opacity: .18; }
+.difficulty-icon .is-filled { opacity: 1; }
+.difficulty-badge[data-difficulty='easy'] { color: #2f8f46; }
+.difficulty-badge[data-difficulty='medium'] { color: #e2b515; }
+.difficulty-badge[data-difficulty='hard'] { color: #d3453d; }
 .collection-end { margin: 40px 0 44px; display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 13px; color: #717866; }
 .collection-end > span:empty { width: 35px; height: 1px; background: #dce0d2; }
 .collection-end > [lang='ja'] { color: #7c856f; }
@@ -169,7 +171,7 @@ dialog p { color: #73796a; font-size: 16px; line-height: 1.8; }
   #search-shortcut { display: none; }
   .collection-toolbar { align-items: center; padding-block: 14px 10px; gap: 8px 16px; }
   h2 { font-size: 20px; }
-  .study-block--kanji .study-content { flex-direction: column; align-items: flex-start; gap: 3px; }
+  .kanji-character { font-size: 54px; }
   .study-type { font-size: 9px; letter-spacing: .7px; }
   .collection-end { font-size: 12px; gap: 9px; flex-wrap: wrap; }
   .collection-end > span:empty { width: 16px; }
@@ -180,11 +182,12 @@ dialog p { color: #73796a; font-size: 16px; line-height: 1.8; }
 @media (max-width: 380px) {
   .language-pair { display: none; }
   .study-block { padding-inline: 8px; }
+  .study-block--vocabulary .study-type { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
 @media (pointer: coarse) {
-  .audio-button { flex-basis: 44px; width: 44px; height: 44px; }
+  .audio-button { flex-basis: 44px; width: 44px; height: 44px; padding: 10px; }
 }
