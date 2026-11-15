@@ -14,11 +14,10 @@ export type KanjiReference = {
 /** Both groups read their content from the same canonical document. */
 export function createKanjiReferences(source: CollectionDocument): ReadonlyMap<string, KanjiReference> {
   const references = new Map<string, KanjiReference>();
-  const words = new Map(source.vocabulary.map((word) => [word.written, word]));
   source.kanji.forEach((definition, index) => {
     references.set(definition.character, {
       kind: 'collection', definition, position: index + 1,
-      vocabulary: definition.vocabulary.map((written) => words.get(written)!),
+      vocabulary: source.vocabulary.filter((word) => word.written.includes(definition.character)),
     });
   });
   for (const definition of source.supportingKanji ?? []) {

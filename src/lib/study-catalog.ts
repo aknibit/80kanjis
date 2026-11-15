@@ -18,6 +18,7 @@ export function createStudyCatalog(collection: readonly Kanji[]): StudyCatalog {
     byId.set(id, {
       type: 'kanji', id, character: entry.character,
       meanings: [...entry.meanings], vocabularyIds,
+      onyomi: entry.onyomi, kunyomi: entry.kunyomi,
     });
     rows.push({ id: entry.id, itemIds: [id, vocabularyIds[0], vocabularyIds[1], vocabularyIds[2]] });
   }

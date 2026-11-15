@@ -26,6 +26,10 @@ test('the flat study pool contains 80 standalone kanji and 232 unique vocabulary
     if (item.type === 'kanji') {
       assert.ok(item.character);
       assert.equal('reading' in item, false);
+      assert.ok(item.onyomi.length + item.kunyomi.length > 0);
+      const source = collectionDocument.kanji.find((entry) => entry.character === item.character)!;
+      assert.deepEqual(item.onyomi, source.onyomi);
+      assert.deepEqual(item.kunyomi, source.kunyomi);
       assert.ok(item.vocabularyIds.every((id) => studyCatalog.byId.get(id)?.type === 'vocabulary'));
     } else {
       assert.ok(item.written && item.reading);

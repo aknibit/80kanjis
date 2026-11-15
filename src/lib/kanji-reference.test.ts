@@ -45,11 +45,21 @@ test('modal examples resolve canonical definitions and support words are dedupli
   assert.equal(wood?.kind, 'collection');
   if (wood?.kind !== 'collection') throw new Error('Missing main kanji');
   assert.equal(wood.position, collectionDocument.kanji.findIndex((item) => item.character === '木') + 1);
-  assert.deepEqual(wood.vocabulary.map((word) => word.written), wood.definition.vocabulary);
+  assert.deepEqual(wood.vocabulary.map((word) => word.written), ['木目', '庭木', '木かげ', '木の上', '木の下']);
   assert.deepEqual(references.get('色')?.vocabulary.map((word) => word.written), ['七色', '金色', '空色', '音色']);
   assert.equal(references.get('個')?.vocabulary.length, 6);
   assert.equal(references.get('庭')?.vocabulary.length, 3);
   for (const reference of references.values()) {
     for (const word of reference.vocabulary) assert.equal(word, collectionDocument.vocabulary.find((item) => item.written === word.written));
   }
+});
+
+test('every modal includes all vocabulary containing its kanji, including examples from other rows', () => {
+  for (const [character, reference] of references) {
+    assert.deepEqual(reference.vocabulary, collectionDocument.vocabulary.filter((word) => word.written.includes(character)));
+    assert.equal(new Set(reference.vocabulary.map((word) => word.written)).size, reference.vocabulary.length);
+  }
+  assert.ok(references.get('生')?.vocabulary.some((word) => word.written === '先生'));
+  assert.ok(references.get('音')?.vocabulary.some((word) => word.written === '音色' && word.reading === 'ねいろ'));
+  assert.ok(references.get('本')?.vocabulary.some((word) => word.written === '三本' && word.reading === 'さんぼん'));
 });

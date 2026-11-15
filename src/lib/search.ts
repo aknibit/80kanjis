@@ -18,6 +18,8 @@ export function createKanjiSearch(collection: readonly Kanji[]) {
     text: normalizeSearch([
       entry.character,
       ...entry.meanings,
+      ...entry.onyomi,
+      ...entry.kunyomi.flatMap((reading) => [reading, reading.replace('.', '')]),
       ...entry.vocabulary.flatMap((word) => [word.written, word.reading, word.meaning]),
     ].join(' ')),
   }));

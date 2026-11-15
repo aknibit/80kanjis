@@ -13,6 +13,12 @@ function httpsUrl(value: unknown): value is string {
   try { return new URL(value).protocol === 'https:'; }
   catch { return false; }
 }
+function readings(value: Record<string, unknown>): boolean {
+  return Array.isArray(value.onyomi) && value.onyomi.every((reading) => nonempty(reading) && /^[ァ-ヶー]+$/u.test(reading))
+    && Array.isArray(value.kunyomi) && value.kunyomi.every((reading) => nonempty(reading) && /^[ぁ-ゖー]+(?:\.[ぁ-ゖー]+)?$/u.test(reading))
+    && value.onyomi.length + value.kunyomi.length > 0
+    && new Set(value.onyomi).size === value.onyomi.length && new Set(value.kunyomi).size === value.kunyomi.length;
+}
 
 /** Validate before rendering the collection. Never invent content. */
 export function parseCollection(text: string): CollectionDocument {
@@ -35,6 +41,7 @@ export function parseCollection(text: string): CollectionDocument {
   for (const entry of value.kanji) {
     if (!object(entry) || !nonempty(entry.character) || [...entry.character].length !== 1
       || !Array.isArray(entry.meanings) || entry.meanings.length === 0 || !entry.meanings.every(nonempty)
+      || !readings(entry) || !httpsUrl(entry.sourceUrl) || (entry.note !== undefined && !nonempty(entry.note))
       || !isDifficulty(entry.difficulty) || !Array.isArray(entry.vocabulary) || entry.vocabulary.length !== 3) {
       throw new Error('Hay un kanji incompleto o con dificultad no válida.');
     }
@@ -50,9 +57,7 @@ export function parseCollection(text: string): CollectionDocument {
     for (const entry of value.supportingKanji) {
       if (!object(entry) || !nonempty(entry.character) || !/^\p{Script=Han}$/u.test(entry.character)
         || !Array.isArray(entry.meanings) || entry.meanings.length === 0 || !entry.meanings.every(nonempty)
-        || !Array.isArray(entry.onyomi) || !entry.onyomi.every(nonempty)
-        || !Array.isArray(entry.kunyomi) || !entry.kunyomi.every(nonempty)
-        || entry.onyomi.length + entry.kunyomi.length === 0 || !nonempty(entry.note) || !httpsUrl(entry.sourceUrl)) {
+        || !readings(entry) || !nonempty(entry.note) || !httpsUrl(entry.sourceUrl)) {
         throw new Error('Hay un kanji de apoyo incompleto o con datos no válidos.');
       }
       if (characters.has(entry.character)) throw new Error(`Kanji repetido: ${entry.character}.`);
@@ -66,6 +71,14 @@ export function parseCollection(text: string): CollectionDocument {
       }
     }
   }
+  if (value.kanjiReview !== undefined) {
+    const review = value.kanjiReview;
+    if (!object(review) || !nonempty(review.date) || !/^\d{4}-\d{2}-\d{2}$/.test(review.date)
+      || !nonempty(review.dictionary) || !nonempty(review.databaseVersion) || !httpsUrl(review.sourceUrl)
+      || !httpsUrl(review.licenseUrl) || !nonempty(review.creditsFile) || !/^data\/[a-zA-Z0-9-]+\.txt$/.test(review.creditsFile)) {
+      throw new Error('Los datos de revisión de los kanji no son válidos.');
+    }
+  }
   // Allow optional metadata alongside the study content.
   return value as unknown as CollectionDocument;
 }
@@ -77,6 +90,8 @@ export function collectionRows(source: CollectionDocument): readonly Kanji[] {
     id: `kanji-${entry.character.codePointAt(0)!.toString(16)}`,
     character: entry.character,
     meanings: entry.meanings,
+    onyomi: entry.onyomi,
+    kunyomi: entry.kunyomi,
     difficulty: entry.difficulty,
     vocabulary: entry.vocabulary.map((written) => words.get(written)!) as unknown as readonly [Vocabulary, Vocabulary, Vocabulary],
   }));

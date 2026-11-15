@@ -4,13 +4,18 @@ export type KanjiItemId = `kanji:${string}`;
 export type VocabularyItemId = `word:${string}`;
 export type StudyItemId = KanjiItemId | VocabularyItemId;
 
-export interface KanjiStudyItem {
+export interface KanjiReadings {
+  readonly onyomi: readonly string[];
+  readonly kunyomi: readonly string[];
+}
+
+export interface KanjiStudyItem extends KanjiReadings {
   readonly type: 'kanji';
   readonly id: KanjiItemId;
   readonly character: string;
   readonly meanings: readonly string[];
   readonly vocabularyIds: readonly VocabularyItemId[];
-  // The source does not supply isolated kanji readings. Do not infer one from a word.
+  // Dictionary readings are independent of complete-word pronunciations.
 }
 
 export interface VocabularyStudyItem {
@@ -45,19 +50,19 @@ export interface Vocabulary {
   readonly difficulty: Difficulty | null;
 }
 
-export interface KanjiDefinition {
+export interface KanjiDefinition extends KanjiReadings {
   readonly character: string;
   readonly meanings: readonly string[];
   readonly difficulty: Difficulty | null;
   readonly vocabulary: readonly [string, string, string];
+  readonly note?: string;
+  readonly sourceUrl: string;
 }
 
 /** Reference characters used in vocabulary, outside the 80 main study rows. */
-export interface SupportingKanjiDefinition {
+export interface SupportingKanjiDefinition extends KanjiReadings {
   readonly character: string;
   readonly meanings: readonly string[];
-  readonly onyomi: readonly string[];
-  readonly kunyomi: readonly string[];
   readonly note: string;
   readonly sourceUrl: string;
 }
@@ -68,10 +73,18 @@ export interface CollectionDocument {
   readonly kanji: readonly KanjiDefinition[];
   readonly vocabulary: readonly Vocabulary[];
   readonly supportingKanji?: readonly SupportingKanjiDefinition[];
+  readonly kanjiReview?: {
+    readonly date: string;
+    readonly dictionary: string;
+    readonly databaseVersion: string;
+    readonly sourceUrl: string;
+    readonly licenseUrl: string;
+    readonly creditsFile: string;
+  };
 }
 
 /** Derived presentation/search row; content lives exclusively in collection.json. */
-export interface Kanji {
+export interface Kanji extends KanjiReadings {
   /** Stable across changes to the collection's order. */
   readonly id: string;
   readonly character: string;

@@ -77,6 +77,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>En las fichas, uno, dos o tres puntos destacados indican fácil, medio y difícil. Tres puntos atenuados indican que la dificultad está sin marcar.</p>
     <p>En el vocabulario, el kanji de la fila aparece en terracota, los otros de los 80 en azul y los avanzados en violeta. Pulsa cualquier kanji para consultar su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
     <p class="dialog-note">Se conserva la escritura del documento, con las conversiones revisadas a kanji de la colección y los de apoyo 個, 色 y 庭. 時 y 前 ya aparecían en el vocabulario original y también se pueden consultar como kanji de apoyo. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
+    <p class="dialog-note">Los significados de los 80 kanji se han revisado y ampliado. Sus lecturas principales se han contrastado con <a href="https://www.edrdg.org/wiki/KANJIDIC_Project.html" target="_blank" rel="noopener">KANJIDIC2, de EDRDG y Jim Breen</a> y <a href="https://www.kanjipedia.jp/" target="_blank" rel="noopener">KanjiPedia</a>. Las aportaciones derivadas de KANJIDIC2 se ofrecen bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. <a href="data/CREDITS.txt" target="_blank" rel="noopener">Fuentes y criterios de revisión</a>.</p>
     <p class="dialog-note">Pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar, con voces de Tokio y Kansai. Los botones con «IA» usan voz generada por <a href="${synthesizedSource.url}" target="_blank" rel="noopener">${synthesizedSource.name}</a> (${synthesizedSource.voice}), bajo sus <a href="${synthesizedSource.termsUrl}" target="_blank" rel="noopener">condiciones de uso</a>. Los audios están pendientes de revisión por un hablante nativo. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes y créditos de cada audio</a>.</p>
     <div class="dialog-shortcut"><kbd>/</kbd> Buscar <kbd>Esc</kbd> Borrar la búsqueda o cerrar esta ventana</div>
   </dialog>
@@ -133,7 +134,10 @@ async function start() {
       character.append(kanjiDetails.createKanjiButton(item.character));
       character.id = headingId;
       character.lang = 'ja';
-      content.append(character, element('p', 'study-meaning kanji-meaning', item.meanings.join(' · ')));
+      const meanings = element('ul', 'kanji-meanings');
+      meanings.setAttribute('aria-label', `Significados de ${item.character}`);
+      meanings.append(...item.meanings.map((meaning) => element('li', 'meaning-chip', meaning)));
+      content.append(character, meanings);
     } else {
       const japanese = element('div', 'word-japanese');
       japanese.lang = 'ja';
@@ -154,7 +158,9 @@ async function start() {
     badge.setAttribute('role', 'img');
     badge.setAttribute('aria-label', `Dificultad de ${item.type === 'kanji' ? item.character : item.written}: ${label}`);
     controls.append(badge);
-    if (item.type === 'vocabulary') {
+    if (item.type === 'kanji') {
+      controls.append(kanjiDetails.createInfoButton(item.character));
+    } else {
       const audioButton = pronunciation.createButton(item);
       if (audioButton) controls.append(audioButton);
     }

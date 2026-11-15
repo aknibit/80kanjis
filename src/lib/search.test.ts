@@ -38,3 +38,10 @@ test('unknown or markup-shaped text returns no results', () => {
   assert.equal(search('zzzzzzzz').length, 0);
   assert.equal(search('<script>alert(1)</script>').length, 0);
 });
+
+test('dictionary readings are searchable without confusing okurigana notation with spelling', () => {
+  assert.ok(characters('ニョ').includes('女'));
+  assert.deepEqual(characters('ニョ'), characters('にょ'));
+  assert.ok(characters('たす').includes('足'));
+  assert.ok(characters('た.す').includes('足'));
+});

@@ -22,7 +22,7 @@ export function setupPronunciation(status: HTMLElement) {
     const clip = getPronunciation(item);
     if (!clip) return;
     const button = document.createElement('button');
-    button.className = `audio-button${clip.kind === 'synthesized' ? ' audio-button--synthesized' : ''}`;
+    button.className = `study-action audio-button${clip.kind === 'synthesized' ? ' audio-button--synthesized' : ''}`;
     button.type = 'button';
     button.dataset.audioItemId = item.id;
     button.dataset.audioKind = clip.kind;

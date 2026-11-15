@@ -11,7 +11,17 @@
         "一つ",
         "一ぴき",
         "一年生"
-      ]
+      ],
+      "onyomi": [
+        "イチ",
+        "イツ"
+      ],
+      "kunyomi": [
+        "ひと",
+        "ひと.つ"
+      ],
+      "note": "En 一ぴき, いち cambia a いっ ante el contador. Las lecturas completas de cada palabra se muestran debajo.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "二",
@@ -23,7 +33,16 @@
         "二つ",
         "二個",
         "二日"
-      ]
+      ],
+      "onyomi": [
+        "ニ"
+      ],
+      "kunyomi": [
+        "ふた",
+        "ふた.つ"
+      ],
+      "note": "二日 se lee ふつか. Las fechas y los días contados pueden tener lecturas especiales de la palabra completa.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "三",
@@ -35,7 +54,16 @@
         "三つ",
         "三個",
         "三本"
-      ]
+      ],
+      "onyomi": [
+        "サン"
+      ],
+      "kunyomi": [
+        "み",
+        "みっ.つ"
+      ],
+      "note": "三つ se lee みっつ y 三日, みっか. En 三本, el contador 本 cambia de ほん a ぼん.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "四",
@@ -47,7 +75,17 @@
         "四つ",
         "四個",
         "四月"
-      ]
+      ],
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "よん",
+        "よ",
+        "よっ.つ"
+      ],
+      "note": "En 四個 se usa よん y en 四月, し. 四つ se lee よっつ.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "五",
@@ -59,7 +97,15 @@
         "五つ",
         "五個",
         "五わ"
-      ]
+      ],
+      "onyomi": [
+        "ゴ"
+      ],
+      "kunyomi": [
+        "いつ",
+        "いつ.つ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "六",
@@ -71,7 +117,17 @@
         "六つ",
         "六個",
         "六本"
-      ]
+      ],
+      "onyomi": [
+        "ロク"
+      ],
+      "kunyomi": [
+        "む",
+        "むっ.つ",
+        "むい"
+      ],
+      "note": "六個 se lee ろっこ y 六本, ろっぽん: son cambios de sonido al combinar el número con un contador.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "七",
@@ -83,7 +139,17 @@
         "七つ",
         "七月",
         "七色"
-      ]
+      ],
+      "onyomi": [
+        "シチ"
+      ],
+      "kunyomi": [
+        "なな",
+        "なな.つ",
+        "なの"
+      ],
+      "note": "En 七月 se usa しち; en 七色 y 七つ se usa なな. La lectura なの aparece, por ejemplo, en 七日（なのか）.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "八",
@@ -95,7 +161,17 @@
         "八つ",
         "八月",
         "八日"
-      ]
+      ],
+      "onyomi": [
+        "ハチ"
+      ],
+      "kunyomi": [
+        "や",
+        "やっ.つ",
+        "よう"
+      ],
+      "note": "八日 se lee ようか y 八つ, やっつ. Son lecturas que conviene aprender con la palabra completa.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "九",
@@ -107,7 +183,17 @@
         "九つ",
         "九個",
         "九月"
-      ]
+      ],
+      "onyomi": [
+        "キュウ",
+        "ク"
+      ],
+      "kunyomi": [
+        "ここの",
+        "ここの.つ"
+      ],
+      "note": "九月 usa く y 九個, きゅう. 九つ se lee ここのつ.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "十",
@@ -119,7 +205,18 @@
         "十年",
         "十月",
         "十日"
-      ]
+      ],
+      "onyomi": [
+        "ジュウ",
+        "ジッ",
+        "ジュッ"
+      ],
+      "kunyomi": [
+        "とお",
+        "と"
+      ],
+      "note": "十日 se lee とおか. Las variantes じっ y じゅっ aparecen ante ciertos contadores.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "百",
@@ -131,7 +228,13 @@
         "百年",
         "百円",
         "百日"
-      ]
+      ],
+      "onyomi": [
+        "ヒャク"
+      ],
+      "kunyomi": [],
+      "note": "La lectura habitual en números es ひゃく. En combinaciones como 三百（さんびゃく）o 六百（ろっぴゃく）cambia el sonido.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "千",
@@ -143,12 +246,19 @@
         "千年",
         "千円",
         "千人"
-      ]
+      ],
+      "onyomi": [
+        "セン"
+      ],
+      "kunyomi": [
+        "ち"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "日",
       "meanings": [
-        "dia",
+        "día",
         "sol"
       ],
       "difficulty": "easy",
@@ -156,7 +266,17 @@
         "三日",
         "一日",
         "日時"
-      ]
+      ],
+      "onyomi": [
+        "ニチ",
+        "ジツ"
+      ],
+      "kunyomi": [
+        "ひ",
+        "か"
+      ],
+      "note": "Se usa にち en 一日（いちにち: un día）y 日時; じつ en 休日; e ひ en 夕日. 二日, 三日, 八日 y 十日 tienen lecturas especiales de fecha o duración. 一日 también se lee ついたち cuando significa el primer día del mes.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "月",
@@ -169,7 +289,15 @@
         "月見",
         "二月",
         "まん月"
-      ]
+      ],
+      "onyomi": [
+        "ゲツ",
+        "ガツ"
+      ],
+      "kunyomi": [
+        "つき"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "火",
@@ -181,7 +309,15 @@
         "火じ",
         "火山",
         "火のこ"
-      ]
+      ],
+      "onyomi": [
+        "カ"
+      ],
+      "kunyomi": [
+        "ひ",
+        "ほ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "水",
@@ -193,7 +329,14 @@
         "水玉",
         "水草",
         "水どう"
-      ]
+      ],
+      "onyomi": [
+        "スイ"
+      ],
+      "kunyomi": [
+        "みず"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "木",
@@ -206,32 +349,62 @@
         "木目",
         "庭木",
         "木かげ"
-      ]
+      ],
+      "onyomi": [
+        "モク",
+        "ボク"
+      ],
+      "kunyomi": [
+        "き",
+        "こ"
+      ],
+      "note": "木目 usa もく; 庭木, 木の上 y 木の下 usan き; 木かげ usa こ.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "金",
       "meanings": [
         "oro",
-        "dinero"
+        "dinero",
+        "metal"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "お金",
         "金色",
         "ちょ金"
-      ]
+      ],
+      "onyomi": [
+        "キン",
+        "コン"
+      ],
+      "kunyomi": [
+        "かね",
+        "かな"
+      ],
+      "note": "Además de oro y dinero, puede significar metal. 金色 se lee きんいろ en esta colección; también existe la lectura こんじき.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "土",
       "meanings": [
-        "tierra"
+        "tierra",
+        "suelo"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "土き",
         "土足",
         "赤土"
-      ]
+      ],
+      "onyomi": [
+        "ド",
+        "ト"
+      ],
+      "kunyomi": [
+        "つち"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "山",
@@ -243,7 +416,14 @@
         "山みち",
         "山いも",
         "ふじ山"
-      ]
+      ],
+      "onyomi": [
+        "サン"
+      ],
+      "kunyomi": [
+        "やま"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "川",
@@ -255,7 +435,15 @@
         "川上",
         "川下",
         "川べり"
-      ]
+      ],
+      "onyomi": [
+        "セン"
+      ],
+      "kunyomi": [
+        "かわ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html",
+      "note": "かわ puede pasar a がわ en compuestos, como 天の川（あまのがわ）. En 川上, 川下 y 川べり se mantiene かわ."
     },
     {
       "character": "林",
@@ -268,19 +456,36 @@
         "竹林",
         "まつ林",
         "山林"
-      ]
+      ],
+      "onyomi": [
+        "リン"
+      ],
+      "kunyomi": [
+        "はやし"
+      ],
+      "note": "はやし puede pasar a ばやし en compuestos: まつ林 y 竹林（たけばやし）. 山林 usa la lectura りん. 竹林 también se puede leer ちくりん; aquí se conserva たけばやし.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "森",
       "meanings": [
-        "bosque"
+        "bosque",
+        "arboleda frondosa"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "森の中",
         "森林",
         "青森"
-      ]
+      ],
+      "onyomi": [
+        "シン"
+      ],
+      "kunyomi": [
+        "もり"
+      ],
+      "note": "林 y 森 pueden traducirse como bosque; 森 suele sugerir un bosque más frondoso. 森林 combina しん y りん.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "竹",
@@ -292,7 +497,14 @@
         "竹うま",
         "竹やぶ",
         "竹わ"
-      ]
+      ],
+      "onyomi": [
+        "チク"
+      ],
+      "kunyomi": [
+        "たけ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "花",
@@ -304,19 +516,35 @@
         "花びら",
         "花たば",
         "花だん"
-      ]
+      ],
+      "onyomi": [
+        "カ"
+      ],
+      "kunyomi": [
+        "はな"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "草",
       "meanings": [
-        "hierba"
+        "hierba",
+        "pasto"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "草はら",
         "草もち",
         "ざっ草"
-      ]
+      ],
+      "onyomi": [
+        "ソウ"
+      ],
+      "kunyomi": [
+        "くさ"
+      ],
+      "note": "En estos ejemplos significa hierba. En otros compuestos también puede referirse a un borrador o a escritura cursiva.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "石",
@@ -328,7 +556,17 @@
         "小石",
         "じ石",
         "ほう石"
-      ]
+      ],
+      "onyomi": [
+        "セキ",
+        "シャク",
+        "コク"
+      ],
+      "kunyomi": [
+        "いし"
+      ],
+      "note": "En じ石 se usa しゃく y en ほう石, せき. La lectura こく se emplea como unidad tradicional de volumen.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "貝",
@@ -341,7 +579,15 @@
         "貝がら",
         "まき貝",
         "ほら貝"
-      ]
+      ],
+      "onyomi": [
+        "バイ"
+      ],
+      "kunyomi": [
+        "かい"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html",
+      "note": "かい puede pasar a がい en compuestos: まき貝（まきがい）y ほら貝（ほらがい）. 貝がら conserva かい."
     },
     {
       "character": "虫",
@@ -354,7 +600,14 @@
         "すず虫",
         "こん虫",
         "虫かご"
-      ]
+      ],
+      "onyomi": [
+        "チュウ"
+      ],
+      "kunyomi": [
+        "むし"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "犬",
@@ -366,7 +619,14 @@
         "名犬",
         "白い犬",
         "犬ぞり"
-      ]
+      ],
+      "onyomi": [
+        "ケン"
+      ],
+      "kunyomi": [
+        "いぬ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "田",
@@ -378,7 +638,15 @@
         "田んぼ",
         "水田",
         "田うえ"
-      ]
+      ],
+      "onyomi": [
+        "デン"
+      ],
+      "kunyomi": [
+        "た"
+      ],
+      "note": "En 水田 se usa でん; en 田んぼ y 田うえ, た. El significado principal es un campo de arroz.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "年",
@@ -391,7 +659,14 @@
         "年上",
         "一年生",
         "年より"
-      ]
+      ],
+      "onyomi": [
+        "ネン"
+      ],
+      "kunyomi": [
+        "とし"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "空",
@@ -404,32 +679,62 @@
         "空気",
         "空色",
         "空ばこ"
-      ]
+      ],
+      "onyomi": [
+        "クウ"
+      ],
+      "kunyomi": [
+        "そら",
+        "から",
+        "あ.く",
+        "あ.ける",
+        "す.く"
+      ],
+      "note": "空色 usa そら; 空ばこ, から; y 空気, くう. El kanji puede expresar tanto cielo como vacío.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0001680900"
     },
     {
       "character": "天",
       "meanings": [
-        "cielo"
+        "cielo",
+        "firmamento"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "天気",
         "天の川",
         "天ごく"
-      ]
+      ],
+      "onyomi": [
+        "テン"
+      ],
+      "kunyomi": [
+        "あめ",
+        "あま"
+      ],
+      "note": "天の川 usa あま. En 天気 y 天ごく se usa てん.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "気",
       "meanings": [
         "ánimo",
-        "energía"
+        "energía",
+        "aire"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "空気",
         "気もち",
         "げん気"
-      ]
+      ],
+      "onyomi": [
+        "キ",
+        "ケ"
+      ],
+      "kunyomi": [],
+      "note": "Expresa estado de ánimo, energía o aire según la palabra: 気もち, げん気 y 空気. Sus lecturas habituales son キ y ケ.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0001184900"
     },
     {
       "character": "雨",
@@ -441,19 +746,36 @@
         "雨天",
         "雨ふり",
         "雨ぐも"
-      ]
+      ],
+      "onyomi": [
+        "ウ"
+      ],
+      "kunyomi": [
+        "あめ",
+        "あま"
+      ],
+      "note": "雨ふり usa あめ, 雨ぐも usa あま y 雨天 usa う.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "夕",
       "meanings": [
-        "atardecer"
+        "atardecer",
+        "tarde"
       ],
       "difficulty": "hard",
       "vocabulary": [
         "夕日",
         "夕がた",
         "夕ぐれ"
-      ]
+      ],
+      "onyomi": [
+        "セキ"
+      ],
+      "kunyomi": [
+        "ゆう"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "白",
@@ -465,19 +787,41 @@
         "白ぐみ",
         "白い花",
         "空白"
-      ]
+      ],
+      "onyomi": [
+        "ハク",
+        "ビャク"
+      ],
+      "kunyomi": [
+        "しろ",
+        "しろ.い",
+        "しら"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "青",
       "meanings": [
-        "azul"
+        "azul",
+        "verde en ciertos usos",
+        "joven"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "青い",
         "青年",
         "青空"
-      ]
+      ],
+      "onyomi": [
+        "セイ",
+        "ショウ"
+      ],
+      "kunyomi": [
+        "あお",
+        "あお.い"
+      ],
+      "note": "Puede referirse al azul y, en ciertos usos, al verde. También expresa juventud: 青年 significa persona joven.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0003865600"
     },
     {
       "character": "赤",
@@ -489,70 +833,145 @@
         "赤い車",
         "赤ちゃん",
         "赤はん"
-      ]
+      ],
+      "onyomi": [
+        "セキ"
+      ],
+      "kunyomi": [
+        "あか",
+        "あか.い",
+        "あか.らむ",
+        "あか.らめる"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "大",
       "meanings": [
-        "grande"
+        "grande",
+        "mucho"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "大すき",
         "大へん",
         "大きい"
-      ]
+      ],
+      "onyomi": [
+        "ダイ",
+        "タイ"
+      ],
+      "kunyomi": [
+        "おお",
+        "おお.きい",
+        "おお.いに"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "中",
       "meanings": [
         "interior",
-        "medio"
+        "centro",
+        "durante todo"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "一日中",
         "中学校",
         "中庭"
-      ]
+      ],
+      "onyomi": [
+        "チュウ",
+        "ジュウ"
+      ],
+      "kunyomi": [
+        "なか"
+      ],
+      "note": "一日中 usa じゅう y significa durante todo el día. 中庭 usa なか y 中学校, ちゅう.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0004721700"
     },
     {
       "character": "小",
       "meanings": [
-        "pequeño"
+        "pequeño",
+        "poco"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "小石",
         "小学校",
         "小さい"
-      ]
+      ],
+      "onyomi": [
+        "ショウ"
+      ],
+      "kunyomi": [
+        "ちい.さい",
+        "こ",
+        "お",
+        "さ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "上",
       "meanings": [
         "arriba",
-        "encima"
+        "encima",
+        "subir"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "木の上",
         "上げる",
         "上ぎ"
-      ]
+      ],
+      "onyomi": [
+        "ジョウ",
+        "ショウ"
+      ],
+      "kunyomi": [
+        "うえ",
+        "うわ",
+        "かみ",
+        "あ.げる",
+        "あ.がる",
+        "のぼ.る"
+      ],
+      "note": "木の上 usa うえ; 上ぎ, うわ; 上げる, あ.げる; y 川上, かみ. La lectura depende de la palabra.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "下",
       "meanings": [
         "abajo",
-        "debajo"
+        "debajo",
+        "bajar"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "木の下",
         "下げる",
         "下校"
-      ]
+      ],
+      "onyomi": [
+        "カ",
+        "ゲ"
+      ],
+      "kunyomi": [
+        "した",
+        "しも",
+        "さ.げる",
+        "さ.がる",
+        "くだ.る",
+        "くだ.す",
+        "くだ.さる",
+        "お.りる",
+        "お.ろす"
+      ],
+      "note": "木の下 usa した; 川下, しも; 下げる, さ.げる; y 下校, げ.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "左",
@@ -564,7 +983,14 @@
         "左右",
         "左がわ",
         "左足"
-      ]
+      ],
+      "onyomi": [
+        "サ"
+      ],
+      "kunyomi": [
+        "ひだり"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "右",
@@ -576,56 +1002,103 @@
         "左右",
         "右がわ",
         "右手"
-      ]
+      ],
+      "onyomi": [
+        "ウ",
+        "ユウ"
+      ],
+      "kunyomi": [
+        "みぎ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "円",
       "meanings": [
         "círculo",
-        "yen"
+        "yen",
+        "redondo"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "円い",
         "円ばん",
         "円けい"
-      ]
+      ],
+      "onyomi": [
+        "エン"
+      ],
+      "kunyomi": [
+        "まる.い"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "力",
       "meanings": [
-        "fuerza"
+        "fuerza",
+        "poder",
+        "capacidad"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "力もち",
         "学力",
         "かい力"
-      ]
+      ],
+      "onyomi": [
+        "リョク",
+        "リキ"
+      ],
+      "kunyomi": [
+        "ちから"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "口",
       "meanings": [
-        "boca"
+        "boca",
+        "abertura",
+        "entrada"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "口ぶえ",
         "口べに",
         "人口"
-      ]
+      ],
+      "onyomi": [
+        "コウ",
+        "ク"
+      ],
+      "kunyomi": [
+        "くち"
+      ],
+      "note": "Puede indicar una abertura o entrada, como en 入り口（いりぐち）, donde くち pasa a ぐち. En 人口 se lee こう; en 口ぶえ y 口べに, くち.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "目",
       "meanings": [
-        "ojo"
+        "ojo",
+        "mirada"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "目と口",
         "目つき",
         "目てき"
-      ]
+      ],
+      "onyomi": [
+        "モク"
+      ],
+      "kunyomi": [
+        "め",
+        "ま"
+      ],
+      "note": "Además del ojo, aparece en palabras relacionadas con la mirada o con un objetivo, como 目てき. La traducción de una palabra compuesta no siempre es la suma literal de sus kanji.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "手",
@@ -637,33 +1110,61 @@
         "右手",
         "手くび",
         "はく手"
-      ]
+      ],
+      "onyomi": [
+        "シュ"
+      ],
+      "kunyomi": [
+        "て",
+        "た"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "足",
       "meanings": [
         "pie",
-        "pierna"
+        "pierna",
+        "ser suficiente",
+        "añadir"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "足あと",
         "足くび",
         "一足"
-      ]
+      ],
+      "onyomi": [
+        "ソク"
+      ],
+      "kunyomi": [
+        "あし",
+        "た.りる",
+        "た.す",
+        "た.る"
+      ],
+      "note": "Además de pie o pierna, puede expresar ser suficiente（足りる）o añadir（足す）. También cuenta pares de calzado: 一足（いっそく）.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0004335700"
     },
     {
       "character": "耳",
       "meanings": [
         "oreja",
-        "oido"
+        "oído"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "耳たぶ",
         "耳うち",
         "目と耳"
-      ]
+      ],
+      "onyomi": [
+        "ジ"
+      ],
+      "kunyomi": [
+        "みみ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "音",
@@ -675,7 +1176,17 @@
         "音ぷ",
         "雨の音",
         "音色"
-      ]
+      ],
+      "onyomi": [
+        "オン",
+        "イン"
+      ],
+      "kunyomi": [
+        "おと",
+        "ね"
+      ],
+      "note": "音ぷ usa おん, 雨の音 usa おと y 音色 usa ね. 音色 se lee ねいろ y significa timbre de un sonido.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "見",
@@ -688,31 +1199,61 @@
         "見る",
         "見える",
         "見学"
-      ]
+      ],
+      "onyomi": [
+        "ケン"
+      ],
+      "kunyomi": [
+        "み.る",
+        "み.える",
+        "み.せる"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "立",
       "meanings": [
-        "ponerse de pie"
+        "estar de pie",
+        "levantarse",
+        "poner en pie"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "立つ",
         "立てる",
         "き立"
-      ]
+      ],
+      "onyomi": [
+        "リツ",
+        "リュウ"
+      ],
+      "kunyomi": [
+        "た.つ",
+        "た.てる"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "休",
       "meanings": [
-        "descansar"
+        "descansar",
+        "descanso"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "休む",
         "休める",
         "休日"
-      ]
+      ],
+      "onyomi": [
+        "キュウ"
+      ],
+      "kunyomi": [
+        "やす.む",
+        "やす.める",
+        "やす.まる"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "出",
@@ -725,56 +1266,104 @@
         "出る",
         "出す",
         "出ぱつ"
-      ]
+      ],
+      "onyomi": [
+        "シュツ"
+      ],
+      "kunyomi": [
+        "で.る",
+        "だ.す"
+      ],
+      "note": "En 出ぱつ, しゅつ se convierte en しゅっ ante はつ: la palabra se lee しゅっぱつ.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "入",
       "meanings": [
-        "entrar"
+        "entrar",
+        "introducir"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "入る",
         "入学",
         "入り口"
-      ]
+      ],
+      "onyomi": [
+        "ニュウ"
+      ],
+      "kunyomi": [
+        "はい.る",
+        "い.れる",
+        "い.る"
+      ],
+      "note": "入る usa はい.る, 入学 usa にゅう y 入り口 usa い.り. No todas las palabras con 入 se leen はい.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "女",
       "meanings": [
-        "mujer"
+        "mujer",
+        "femenino"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "女子",
         "女の人",
         "女と男"
-      ]
+      ],
+      "onyomi": [
+        "ジョ",
+        "ニョ"
+      ],
+      "kunyomi": [
+        "おんな",
+        "め"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "男",
       "meanings": [
-        "hombre"
+        "hombre",
+        "masculino"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "男子",
         "男の人",
         "男の子"
-      ]
+      ],
+      "onyomi": [
+        "ダン",
+        "ナン"
+      ],
+      "kunyomi": [
+        "おとこ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "子",
       "meanings": [
         "niño",
-        "cria"
+        "hijo",
+        "cría"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "子ども",
         "子犬",
         "女子"
-      ]
+      ],
+      "onyomi": [
+        "シ",
+        "ス"
+      ],
+      "kunyomi": [
+        "こ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "人",
@@ -786,19 +1375,39 @@
         "人ごみ",
         "名人",
         "人げん"
-      ]
+      ],
+      "onyomi": [
+        "ジン",
+        "ニン"
+      ],
+      "kunyomi": [
+        "ひと"
+      ],
+      "note": "Se lee ひと en 女の人 y 男の人; じん en 名人; y にん en 人げん. 一人（ひとり）y 二人（ふたり）tienen lecturas especiales.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "名",
       "meanings": [
-        "nombre"
+        "nombre",
+        "fama",
+        "distinguido"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "名前",
         "名人",
         "本名"
-      ]
+      ],
+      "onyomi": [
+        "メイ",
+        "ミョウ"
+      ],
+      "kunyomi": [
+        "な"
+      ],
+      "note": "Además de nombre, puede expresar fama o excelencia: 名人 es un experto y 名犬, un perro extraordinario. 本名 se lee ほんみょう.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "字",
@@ -811,63 +1420,105 @@
         "かん字",
         "すう字",
         "てん字"
-      ]
+      ],
+      "onyomi": [
+        "ジ"
+      ],
+      "kunyomi": [],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "文",
       "meanings": [
         "texto",
-        "oración"
+        "oración",
+        "literatura",
+        "unidad monetaria antigua"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "さく文",
         "文学",
         "文なし"
-      ]
+      ],
+      "onyomi": [
+        "ブン",
+        "モン"
+      ],
+      "kunyomi": [
+        "ふみ"
+      ],
+      "note": "En 文なし（もんなし）, 文 se refiere al mon, una antigua unidad monetaria; por eso significa sin dinero. En さく文 y 文学 se lee ぶん.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0006181200"
     },
     {
       "character": "本",
       "meanings": [
         "libro",
-        "origen"
+        "origen",
+        "verdadero",
+        "contador obj. alargados"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "え本",
         "本だな",
         "本とう"
-      ]
+      ],
+      "onyomi": [
+        "ホン"
+      ],
+      "kunyomi": [
+        "もと"
+      ],
+      "note": "Además de libro y origen, puede expresar verdadero, como en 本とう. También es un contador de objetos largos: 三本（さんぼん）y 六本（ろっぽん）.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0006505700"
     },
     {
       "character": "学",
       "meanings": [
         "estudiar",
-        "aprender"
+        "aprender",
+        "estudio"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "学年",
         "小学生",
         "学ぶ"
-      ]
+      ],
+      "onyomi": [
+        "ガク"
+      ],
+      "kunyomi": [
+        "まな.ぶ"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "校",
       "meanings": [
-        "escuela"
+        "escuela",
+        "corregir"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "小学校",
         "校庭",
         "てん校"
-      ]
+      ],
+      "onyomi": [
+        "コウ"
+      ],
+      "kunyomi": [],
+      "note": "En estas palabras significa escuela. En otros compuestos, como 校正, también expresa revisión o corrección.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "先",
       "meanings": [
         "antes",
+        "delante",
         "punta"
       ],
       "difficulty": "hard",
@@ -875,56 +1526,112 @@
         "先生",
         "先とう",
         "足の先"
-      ]
+      ],
+      "onyomi": [
+        "セン"
+      ],
+      "kunyomi": [
+        "さき"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "生",
       "meanings": [
         "vida",
-        "nacer"
+        "nacer",
+        "vivir",
+        "crudo"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "生む",
         "生きる",
         "生もの"
-      ]
+      ],
+      "onyomi": [
+        "セイ",
+        "ショウ"
+      ],
+      "kunyomi": [
+        "い.きる",
+        "う.む",
+        "なま",
+        "う.まれる",
+        "は.える",
+        "は.やす",
+        "い.かす",
+        "き"
+      ],
+      "note": "生む usa う.む, 生きる usa い.きる y 生もの usa なま（crudo）. En 先生, 一年生 y 小学生 se usa せい. No hay una única pronunciación válida para todas estas palabras.",
+      "sourceUrl": "https://www.kanjipedia.jp/kanji/0003833400"
     },
     {
       "character": "早",
       "meanings": [
-        "temprano"
+        "temprano",
+        "rápido"
       ],
       "difficulty": "easy",
       "vocabulary": [
         "早い",
         "早足",
         "早める"
-      ]
+      ],
+      "onyomi": [
+        "ソウ",
+        "サッ"
+      ],
+      "kunyomi": [
+        "はや.い",
+        "はや.める",
+        "はや.まる"
+      ],
+      "note": "Puede expresar temprano o rápido según el contexto. 早い suele indicar temprano; 早足 significa caminar a paso rápido.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "正",
       "meanings": [
-        "correcto"
+        "correcto",
+        "justo",
+        "corregir"
       ],
       "difficulty": "hard",
       "vocabulary": [
         "正しい",
         "正じき",
         "正かい"
-      ]
+      ],
+      "onyomi": [
+        "セイ",
+        "ショウ"
+      ],
+      "kunyomi": [
+        "ただ.しい",
+        "ただ.す",
+        "まさ",
+        "まさ.に"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "王",
       "meanings": [
-        "rey"
+        "rey",
+        "soberano"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "王さま",
         "王かん",
         "こく王"
-      ]
+      ],
+      "onyomi": [
+        "オウ"
+      ],
+      "kunyomi": [],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "玉",
@@ -937,7 +1644,15 @@
         "玉虫",
         "百円玉",
         "玉手ばこ"
-      ]
+      ],
+      "onyomi": [
+        "ギョク"
+      ],
+      "kunyomi": [
+        "たま"
+      ],
+      "note": "たま puede pasar a だま en compuestos, como 百円玉（ひゃくえんだま）. En ese ejemplo se refiere a una moneda.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "糸",
@@ -949,12 +1664,20 @@
         "白い糸",
         "赤い糸",
         "きぬ糸"
-      ]
+      ],
+      "onyomi": [
+        "シ"
+      ],
+      "kunyomi": [
+        "いと"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "車",
       "meanings": [
         "vehículo",
+        "coche",
         "rueda"
       ],
       "difficulty": "medium",
@@ -962,7 +1685,14 @@
         "青い車",
         "でん車",
         "車りん"
-      ]
+      ],
+      "onyomi": [
+        "シャ"
+      ],
+      "kunyomi": [
+        "くるま"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "村",
@@ -975,20 +1705,36 @@
         "村の人",
         "町と村",
         "山村"
-      ]
+      ],
+      "onyomi": [
+        "ソン"
+      ],
+      "kunyomi": [
+        "むら"
+      ],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     },
     {
       "character": "町",
       "meanings": [
         "pueblo",
-        "barrio"
+        "barrio",
+        "calle"
       ],
       "difficulty": "medium",
       "vocabulary": [
         "町なみ",
         "町の中",
         "町村"
-      ]
+      ],
+      "onyomi": [
+        "チョウ"
+      ],
+      "kunyomi": [
+        "まち"
+      ],
+      "note": "Puede designar un pueblo, un barrio o una calle. En 町村 se usa ちょう; en 町なみ, まち.",
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     }
   ],
   "vocabulary": [
@@ -2459,5 +3205,13 @@
       "note": "Este carácter ya aparecía en el vocabulario original, aunque no tiene una fila propia entre los 80 kanji. En 名前 se lee まえ.",
       "sourceUrl": "https://www.kanjipedia.jp/kanji/0004135400/"
     }
-  ]
+  ],
+  "kanjiReview": {
+    "date": "2026-11-15",
+    "dictionary": "KANJIDIC2",
+    "databaseVersion": "2026-319",
+    "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "creditsFile": "data/CREDITS.txt"
+  }
 }

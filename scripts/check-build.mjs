@@ -19,5 +19,9 @@ for (const file of await readdir('public/audio')) {
   assert.deepEqual(await readFile(`dist/audio/${file}`), await readFile(`public/audio/${file}`),
     `Missing or changed audio asset: ${file}`);
 }
+for (const file of await readdir('public/data')) {
+  assert.deepEqual(await readFile(`dist/data/${file}`), await readFile(`public/data/${file}`),
+    `Missing or changed dictionary credit/license: ${file}`);
+}
 assert.match(await readFile('dist/index.html', 'utf8'), /\.\/assets\/index-/);
 console.log('Static build verified: canonical collection, audio, visible readings, and read-only difficulties.');

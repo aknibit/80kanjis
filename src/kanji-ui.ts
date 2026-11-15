@@ -1,12 +1,25 @@
 import { difficultyLabels } from './lib/difficulty.ts';
 import { createKanjiReferences, wordKanjiParts } from './lib/kanji-reference.ts';
-import type { CollectionDocument } from './types.ts';
+import type { CollectionDocument, KanjiReadings } from './types.ts';
 
 function node<K extends keyof HTMLElementTagNameMap>(tag: K, className: string, text?: string) {
   const result = document.createElement(tag);
   result.className = className;
   if (text !== undefined) result.textContent = text;
   return result;
+}
+
+function renderKanjiReadings(readings: KanjiReadings): HTMLElement {
+  const list = node('dl', 'kanji-dialog-readings');
+  for (const [label, values] of [['On · origen chino', readings.onyomi], ['Kun · japonesa', readings.kunyomi]] as const) {
+    if (values.length === 0) continue;
+    const group = node('div', '');
+    const value = node('dd', '', values.join(' · '));
+    value.lang = 'ja';
+    group.append(node('dt', '', label), value);
+    list.append(group);
+  }
+  return list;
 }
 
 /** One native dialog for every kanji; the source owns all reference content. */
@@ -64,23 +77,16 @@ export function setupKanjiDetails(source: CollectionDocument) {
     hero.append(glyph, summary);
     body.replaceChildren(hero);
 
-    if (reference.kind === 'advanced') {
-      const readings = node('dl', 'kanji-dialog-readings');
-      for (const [label, values] of [['Lectura on', reference.definition.onyomi], ['Lectura kun', reference.definition.kunyomi]] as const) {
-        if (values.length === 0) continue;
-        const group = node('div', '');
-        const value = node('dd', '', values.join(' · '));
-        value.lang = 'ja';
-        group.append(node('dt', '', label), value);
-        readings.append(group);
-      }
-      body.append(readings, node('p', 'kanji-dialog-note', reference.definition.note));
-    } else {
+    body.append(renderKanjiReadings(reference.definition));
+    const readingHint = node('p', 'kanji-dialog-reading-hint', 'Lecturas principales. El punto separa la parte del kanji de la terminación en hiragana: み.る → 見る. La lectura de una palabra puede cambiar al combinar caracteres.');
+    body.append(readingHint);
+    if (reference.definition.note) body.append(node('p', 'kanji-dialog-note', reference.definition.note));
+    if (reference.kind === 'collection') {
       body.append(node('p', 'kanji-dialog-difficulty', `Dificultad: ${reference.definition.difficulty === null
         ? 'Sin marcar' : difficultyLabels[reference.definition.difficulty]}`));
     }
 
-    const examplesTitle = node('h3', 'kanji-dialog-examples-title', advanced ? 'En el vocabulario de la colección' : 'Las tres palabras de su fila');
+    const examplesTitle = node('h3', 'kanji-dialog-examples-title', 'Lecturas en el vocabulario de la colección');
     const examples = node('ul', 'kanji-dialog-examples');
     for (const word of reference.vocabulary) {
       const example = node('li', '');
@@ -93,15 +99,13 @@ export function setupKanjiDetails(source: CollectionDocument) {
       examples.append(example);
     }
     body.append(examplesTitle, examples);
-    if (reference.kind === 'advanced') {
-      const attribution = node('p', 'kanji-dialog-source');
-      const link = node('a', '', 'Consultar fuente del kanji');
-      link.href = reference.definition.sourceUrl;
-      link.target = '_blank';
-      link.rel = 'noopener';
-      attribution.append(link);
-      body.append(attribution);
-    }
+    const attribution = node('p', 'kanji-dialog-source');
+    const link = node('a', '', 'Consultar fuente del kanji');
+    link.href = reference.definition.sourceUrl;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    attribution.append(link);
+    body.append(attribution);
     if (!dialog.open) {
       opener = trigger;
       dialog.showModal();
@@ -138,5 +142,13 @@ export function setupKanjiDetails(source: CollectionDocument) {
     return fragment;
   }
 
-  return { renderWord, createKanjiButton: (character: string) => createTrigger(character, 'kanji-character-button') };
+  function createInfoButton(character: string): HTMLButtonElement {
+    const button = createTrigger(character, 'study-action info-button');
+    button.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="7" r="1" fill="currentColor" stroke="none"/><path d="M12 11v6"/></svg>';
+    button.title = `Ver pronunciaciones e información de ${character}`;
+    button.setAttribute('aria-label', button.title);
+    return button;
+  }
+
+  return { renderWord, createInfoButton, createKanjiButton: (character: string) => createTrigger(character, 'kanji-character-button') };
 }

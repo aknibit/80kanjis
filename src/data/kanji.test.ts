@@ -33,3 +33,16 @@ test('repeated vocabulary has consistent readings and meanings', () => {
     }
   }
 });
+
+test('reviewed meanings and readings retain important senses and vocabulary-specific readings', () => {
+  const byCharacter = new Map(kanji.map((entry) => [entry.character, entry]));
+  for (const [character, meaning] of [['気', 'aire'], ['生', 'crudo'], ['青', 'joven'], ['金', 'metal'], ['本', 'verdadero']]) {
+    assert.ok(byCharacter.get(character)?.meanings.includes(meaning), `${character}: ${meaning}`);
+  }
+  for (const [character, reading] of [['中', 'ジュウ'], ['石', 'シャク'], ['力', 'リキ'], ['名', 'ミョウ'], ['文', 'モン']]) {
+    assert.ok(byCharacter.get(character)?.onyomi.includes(reading), `${character}: ${reading}`);
+  }
+  for (const [character, reading] of [['音', 'ね'], ['木', 'こ'], ['空', 'から'], ['上', 'かみ'], ['下', 'しも'], ['雨', 'あま'], ['生', 'なま']]) {
+    assert.ok(byCharacter.get(character)?.kunyomi.includes(reading), `${character}: ${reading}`);
+  }
+});

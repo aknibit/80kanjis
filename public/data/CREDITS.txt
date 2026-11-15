@@ -1,0 +1,53 @@
+# Kanji meanings and readings
+
+Reviewed: 2026-11-15
+
+KANJIDIC2 — James William Breen and the Electronic Dictionary Research and
+Development Group (EDRDG).
+Project and data documentation:
+https://www.edrdg.org/wiki/KANJIDIC_Project.html
+Downloaded source:
+https://www.edrdg.org/kanjidic/kanjidic2.xml.gz
+Database version: 2026-319; creation date: 2026-11-15.
+Copyright: James William Breen and EDRDG; original Spanish glosses compiled
+by Francisco Gutierrez and provided by Gabriel Sanroman.
+License: Creative Commons Attribution-ShareAlike 4.0 International.
+https://creativecommons.org/licenses/by-sa/4.0/
+EDRDG dictionary license and documentation:
+https://www.edrdg.org/edrdg/licence.html
+The full CC BY-SA 4.0 license is included in LICENSE-CC-BY-SA-4.0.txt.
+
+Changes: a practical selection of Japanese on/kun readings for the 80 main
+kanji, with Spanish meanings revised, translated or paraphrased for this
+collection. These KANJIDIC2-derived additions are available under CC BY-SA 4.0.
+Name-only, archaic, and low-priority readings are not exhaustively reproduced.
+No SKIP codes or other dictionary indexing systems are included.
+The license applies to these derived additions; audio has its own credits
+in ../audio/CREDITS.txt. No EDRDG endorsement is implied.
+
+Additional meaning/reading checks: KanjiPedia, Japan Kanji Aptitude Testing
+Foundation (facts summarized in our own words, not copied definitions):
+生 https://www.kanjipedia.jp/kanji/0003833400
+本 https://www.kanjipedia.jp/kanji/0006505700
+文 https://www.kanjipedia.jp/kanji/0006181200
+青 https://www.kanjipedia.jp/kanji/0003865600
+中 https://www.kanjipedia.jp/kanji/0004721700
+気 https://www.kanjipedia.jp/kanji/0001184900
+空 https://www.kanjipedia.jp/kanji/0001680900
+足 https://www.kanjipedia.jp/kanji/0004335700/
+In particular, 中 has the relevant reading ジュウ, used in 一日中, in addition
+to チュウ. It is included even though this KANJIDIC2 entry omits it.
+
+Editorial conventions:
+- On readings use katakana; kun readings use hiragana.
+- A dot marks okurigana (み.る -> 見る); it is not pronounced.
+- Basic readings are not mechanically assigned to pieces of irregular words.
+- Every modal derives all matching vocabulary and full-word readings from
+  collection.json, including occurrences in other rows and sound changes.
+- Existing vocabulary definitions, audio, and difficulty ratings are retained.
+
+Refresh procedure: regularly compare a current KANJIDIC2 release with this
+reviewed selection; verify relevant differences against dictionary entries,
+then update only the reviewed kanji fields and kanjiReview metadata in
+collection.json. Recheck all vocabulary examples and run the project tests.
+The saved version/date identify the dictionary snapshot used for this review.

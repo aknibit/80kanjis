@@ -50,6 +50,7 @@ Typography loads DM Sans, Noto Serif JP, and Noto Sans JP from Google Fonts, wit
 - 232 vocabulary audio files with play/stop controls and source credits: 108 human recordings and 124 locally synthesized WAVs. Every vocabulary item in the collection has audio; changing classifications does not remove it.
 - Compact cards with audio in the upper-right corner and difficulty immediately to its left. One green, two yellow, or three red flat dots indicate easy, medium, or hard; faded dots mean unmarked. Names remain available in tooltips and accessible labels. Kanji blocks use a soft gray background.
 - Every vocabulary kanji is clickable: terracotta for the row’s kanji, blue for other main kanji, and violet for support characters outside the 80. Kanji have no underlines, including on hover; a background highlight indicates keyboard focus. Native dialogs show meanings and examples; support dialogs also show basic on/kun readings, an explanation, and a dictionary source. Escape, the close button, and clicking the backdrop dismiss the dialog and return focus.
+- Main kanji cards show their reviewed meanings as readable 14 px chips and a circular information “i” button in the upper-right corner, matching the audio button’s size and position. Dictionary on/kun readings stay in the modal alongside usage notes and every collection word containing that kanji. The character (without a hover effect) and the information button both open the same dialog. Complete-word readings remain the authority for sound changes and irregular compounds. Dictionary readings remain searchable, with or without the okurigana dot.
 
 ## Independent study items
 
@@ -86,20 +87,20 @@ The files have **not received a native-speaker listening or accent review**; syn
 
 | Type | Content | Example ID |
 | --- | --- | --- |
-| `kanji` | Character, meanings, and references to its example vocabulary | `kanji:一` |
+| `kanji` | Character, reviewed meanings, dictionary on/kun readings, and references to its example vocabulary | `kanji:一` |
 | `vocabulary` | Written word/expression, kana reading, meanings, and references to known kanji present in its spelling | `word:一年生` |
 
 Both kinds have their own stable identity. Their classifications are resolved from the canonical JSON with the same item IDs. Words shared by several rows are one catalog item, preserving one classification and a single future study-history identity. Their definitions must agree; conflicting definitions fail validation instead of silently creating ambiguous quiz answers.
 
 The catalog contains 312 independent items (80 kanji + 232 distinct vocabulary items), a `byId` lookup, and 80 presentation rows. A `StudyRow` holds exactly four IDs: one kanji followed by its three example words. Reordering rows or examples does not change item identities.
 
-A future quiz can use `studyCatalog.items`, filter by `item.type`, and resolve current difficulty by `item.id`; it does not need the original row. Vocabulary items carry their complete reading and meanings. Kanji items deliberately do not invent an isolated reading from an example word: the PDF does not supply those readings. The present catalog supports kanji-meaning prompts and vocabulary-reading/meaning prompts; no quiz UI is implemented yet.
+A future quiz can use `studyCatalog.items`, filter by `item.type`, and resolve current difficulty by `item.id`; it does not need the original row. Vocabulary items carry their complete reading and meanings. Kanji items carry reviewed dictionary `onyomi` and `kunyomi` arrays, independently of the full-word pronunciations. They are a practical selection rather than an exhaustive dictionary entry; a context-free kanji prompt should accept multiple valid readings. No quiz UI is implemented yet.
 
 ## Single source of truth
 
 **Edit `public/collection.json` to change study content or difficulties.** It contains every character, word, reading, translation, row order, and all 312 classifications. The application only reads this file.
 
-The versioned JSON has two main sections: `kanji` and `vocabulary`. Each main kanji contains its meanings, difficulty, and three vocabulary references. Each unique word is defined once with its reading, Spanish meaning, and difficulty. A word appearing in several rows shares the same definition and classification.
+The versioned JSON has two main sections: `kanji` and `vocabulary`. Each main kanji contains its meanings, `onyomi`, `kunyomi`, difficulty, three vocabulary references, an optional explanatory `note`, and an HTTPS `sourceUrl`. Each unique word is defined once with its reading, Spanish meaning, and difficulty. A word appearing in several rows shares the same definition and classification. `kanjiReview` records the review date, dictionary release, source, license, and credits file.
 
 The optional `supportingKanji` section supplies reference information for characters outside the 80: `character`, Spanish `meanings`, `onyomi`, `kunyomi`, a Spanish `note`, and an HTTPS `sourceUrl`. It currently includes 個, 色 and 庭, plus 時 and 前, which already appeared in the original vocabulary. Their basic readings are checked against KanjiPedia, with a source link in each modal. They do not add study rows, independent difficulty ratings, or quiz items to the main catalog. When this section is present, every written kanji must resolve to a main or support definition.
 
@@ -110,8 +111,11 @@ The optional `supportingKanji` section supplies reference information for charac
     {
       "character": "一",
       "meanings": ["uno"],
+      "onyomi": ["イチ", "イツ"],
+      "kunyomi": ["ひと", "ひと.つ"],
       "difficulty": "easy",
-      "vocabulary": ["一つ", "一ぴき", "一年生"]
+      "vocabulary": ["一つ", "一ぴき", "一年生"],
+      "sourceUrl": "https://www.edrdg.org/wiki/KANJIDIC_Project.html"
     }
   ],
   "vocabulary": [
@@ -122,7 +126,7 @@ The optional `supportingKanji` section supplies reference information for charac
 }
 ```
 
-The real file uses two-space indentation, one field per line, and stable source order for readable Git diffs. `easy`, `medium`, `hard`, and `null` mean Fácil, Medio, Difícil, and Sin marcar. Difficulty is required on every kanji and word. The four ratings in a row are independent. The source has no isolated kanji readings, so those are not invented.
+The real file uses two-space indentation, one field per line, and stable source order for readable Git diffs. `easy`, `medium`, `hard`, and `null` mean Fácil, Medio, Difícil, and Sin marcar. Difficulty is required on every kanji and word. The four ratings in a row are independent. On readings are in katakana and kun readings in hiragana; a dot separates okurigana (for example `み.る`). Either reading group may be empty, but a kanji must have at least one reading overall. These dictionary additions are separate from the PDF's complete-word readings.
 
 The app fetches **one `collection.json` on startup** with `cache: 'no-store'`, relative to its deployment URL. Content and ratings are not compiled into JavaScript. Replacing that file on the CDN updates both without rebuilding the application; configure the CDN to revalidate it. Invalid versions, duplicate kanji/words, incomplete content, invalid levels, and broken vocabulary references are rejected with a load error instead of silently using an older copy.
 
@@ -141,5 +145,9 @@ Word definitions are shared across rows. The browser reads the source file on ev
 The data is transcribed from **80 kanjis x 3 palabras.pdf**, preserving its order, vocabulary, readings, and Spanish translations. The private source PDF is not included in the repository or build.
 
 The seven slots marked `duplicado` are completed from the matching word elsewhere in the PDF: 一年生, 小石, 左右, 右手, 女子, 名人, and 小学校. The apparent katakana カ in カもち is normalized to the intended kanji 力 in 力もち. The wrapped meaning for 立 is joined as “ponerse de pie”. Reviewed exceptions expand 月み → 月見, 川かみ → 川上, 川しも → 川下, きの上 → 木の上 and 休じつ → 休日, plus the existing occurrences of the counter 個, 色 in 音色, and 庭 in 庭木・中庭・校庭. Their readings, translations, difficulties, and audio files are unchanged. Other simplified mixed kanji/kana spellings are retained as supplied.
+
+The 80 main kanji meanings were reviewed on 2026-11-15 against [KANJIDIC2](https://www.edrdg.org/wiki/KANJIDIC_Project.html), database 2026-319, with selected clarifications checked in [KanjiPedia](https://www.kanjipedia.jp/). Additions include 生 as raw/uncooked, 青 as young, 気 as air, 金 as metal, and notes for 本 as a long-object counter and 文 as an old monetary unit. 中 explicitly includes ジュウ for 一日中, verified in KanjiPedia despite its omission from the current KANJIDIC2 entry. Existing vocabulary definitions, ratings, row order, and audio are unchanged.
+
+The KANJIDIC2-derived reading lists and enriched meanings are credited to EDRDG / Jim Breen and distributed under CC BY-SA 4.0. `public/data/CREDITS.txt` includes provenance, editorial criteria, and the refresh procedure; the full license ships alongside it. Credits are available from the information dialog, and every kanji modal links to a source. This adds no runtime dictionary service or extra content fetch.
 
 Tests read the same canonical JSON and verify its schema, source sequence, vocabulary references, shared definitions, search, row grouping/filtering, stable identities, read-only classifications, and audio coverage. `check:build` verifies the deployed collection, audio files, relative asset URLs, visible readings, and the absence of editing controls and browser storage code. Spanish interface text lives in `src/main.ts` and `src/kanji-ui.ts`; visual styles live in `src/style.css`. `src/lib/kanji-reference.ts` resolves both kinds of kanji and classifies every character without duplicating study content.
