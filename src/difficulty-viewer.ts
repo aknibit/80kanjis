@@ -6,6 +6,7 @@ export function setupDifficultyViewer(collection: readonly Kanji[]) {
   const status = document.querySelector<HTMLElement>('#difficulty-status')!;
   let loaded = false;
   let failed = false;
+  const listeners = new Set<() => void>();
 
   function updateBadge(badge: HTMLElement) {
     const value = view.get(badge.dataset.difficultyKey!);
@@ -31,11 +32,17 @@ export function setupDifficultyViewer(collection: readonly Kanji[]) {
       loaded = true;
       status.hidden = !failed;
       document.querySelectorAll<HTMLElement>('.difficulty-badge').forEach(updateBadge);
+      listeners.forEach((listener) => listener());
     }
   })();
 
   return {
     ready,
+    get: view.get,
+    subscribe(listener: () => void) {
+      listeners.add(listener);
+      return () => listeners.delete(listener);
+    },
     createIndicator(target: DifficultyTarget) {
       const badge = document.createElement('span');
       badge.className = 'difficulty-badge';

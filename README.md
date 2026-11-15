@@ -49,10 +49,36 @@ Typography currently loads DM Sans and Noto Serif JP from Google Fonts, with sys
 - Search is reflected in the `?q=` URL parameter for bookmarks and sharing.
 - Hide/show readings, empty results, keyboard shortcuts (`/` to search, `Escape` to clear), and an accessible collection information dialog.
 - Four independent difficulty indicators per row: one for the kanji and one for each word (Fácil, Medio, Difícil, or Sin marcar). Repeated words share their difficulty across rows.
+- Compact header and whole-row difficulty filters with counts, combined with search and the audio sample filter. Filters are bookmarkable via `?difficulty=hard&audio=1&q=...` and update after edits/imports.
+- Twelve native-speaker pronunciation samples with play/stop controls, source credits, and local MP3 files, available in both builds.
 - In the editor: browser persistence, JSON import/export, and optional direct writing to a user-selected local JSON file.
 - In production: read-only badges loaded exclusively from the public JSON file.
 
 ## Independent study items
+
+### Whole-row difficulty
+
+The collection always preserves all four blocks. `src/lib/row-difficulty.ts` derives a row's category from its current kanji and vocabulary ratings:
+
+- **Difícil:** any of the four entries is hard, even if others are unmarked.
+- **Medio:** at least one entry is medium and none is hard, even if others are unmarked.
+- **Fácil:** all four entries are explicitly easy.
+- **Sin completar:** only easy/unmarked entries, with at least one unmarked.
+- **Todas:** every row.
+
+Counts reflect the current text search and audio filter. The selected category is a view of the four existing marks; it does not add another persisted rating. Editing a shared word reclassifies every row that contains it. Production uses the fetched JSON; the editor uses its effective local ratings.
+
+### Pronunciation audition
+
+Use **Probar audio · 12** or open `?audio=1#collection` to find rows with recordings. Each available vocabulary block has a speaker button. Only one clip plays at a time, playback starts only after a click, and filtering stops playback. Errors offer a retry by pressing the same button. Words without recordings have no audio button.
+
+The sample contains 一つ, 一年生, 二つ, 二日, 三つ, 一日, お金, ふじ山, 中学校, 上げる, 休む, and 先生. Identity and reading must both match `src/data/pronunciations.ts`, so a recording for an alternative reading is never silently substituted. Repeated words and future quizzes can use the same item ID and audio lookup.
+
+Recordings come from [Tofugu and WaniKani](https://github.com/tofugu/japanese-vocabulary-pronunciation-audio), under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The upstream collection mixes a native male professional (Tokyo accent) and a native female amateur (Kansai accent); individual speaker identity is not specified for each file. These twelve samples are for listening evaluation and have **not received a pronunciation/accent review**. They are unchanged MP3s, with shortened filenames; tests verify their original Git blob hashes.
+
+`public/audio/` includes the MP3s, per-file source links in `CREDITS.txt`, and the full original license. Both builds copy this directory. The website plays these files from its own origin, including CDN subdirectories, with no runtime speech API, backend, or API key. Keep the attribution and license alongside the audio when deploying.
+
+### Item model
 
 `src/data/study.ts` exposes a shared `studyCatalog`. The original PDF rows remain in `src/data/kanji.ts`, but the collection now renders independent items from this catalog. `StudyItem` is a TypeScript discriminated union defined in `src/types.ts`:
 

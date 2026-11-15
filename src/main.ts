@@ -3,6 +3,9 @@ import { studyItemTarget } from './lib/difficulty.ts';
 import { createKanjiSearch } from './lib/search.ts';
 import { setupDifficulties } from './difficulties-ui.ts';
 import { studyCatalog } from './data/study.ts';
+import { getPronunciation, pronunciations, pronunciationSource } from './data/pronunciations.ts';
+import { setupPronunciation } from './pronunciation-ui.ts';
+import { getRowDifficulty, matchesRowDifficulty, parseRowDifficultyFilter, rowDifficultyFilters, type RowDifficultyFilter } from './lib/row-difficulty.ts';
 import type { Kanji, StudyItem } from './types.ts';
 import './style.css';
 
@@ -24,17 +27,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </header>
   <main class="shell">
     <section class="intro" aria-labelledby="page-title">
-      <div class="intro-copy">
-        <p class="eyebrow"><span class="tiny-line"></span> TU PEQUEÑA COLECCIÓN DE JAPONÉS</p>
-        <h1 id="page-title">Un kanji.<br><span>Tres nuevas palabras.</span></h1>
-        <p class="intro-description">Los primeros pasos se dan poco a poco. Explora 80 kanji<br class="desktop-break"> con sus lecturas y significados, una palabra a la vez.</p>
-        <div class="collection-facts"><span><strong>80</strong> kanji</span><span class="fact-dot">·</span><span><strong>240</strong> ejemplos</span><span class="fact-dot">·</span><span>Un buen comienzo</span></div>
-      </div>
-      <div class="intro-art" aria-hidden="true">
-        <div class="practice-square"><span>学</span></div>
-        <span class="art-caption">まなぶ <span>aprender</span></span>
-        <span class="art-stamp">一歩<br>ずつ</span>
-      </div>
+      <h1 id="page-title">Un kanji. <span>Tres nuevas palabras.</span></h1>
+      <p class="intro-description">80 kanji y 240 ejemplos para aprender a tu ritmo.</p>
     </section>
 
     <section class="collection" id="collection" aria-labelledby="collection-title" tabindex="-1">
@@ -46,21 +40,28 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
           <button id="clear-search" class="clear-button" type="button" aria-label="Borrar búsqueda" hidden>${closeIcon}</button>
           <kbd id="search-shortcut" aria-hidden="true">/</kbd>
         </div>
-        <div class="search-hints" id="search-hint"><span>Prueba con</span><button type="button" data-query="agua">agua ${arrowIcon}</button><button type="button" data-query="山" lang="ja">山 ${arrowIcon}</button><button type="button" data-query="ひと" lang="ja">ひと ${arrowIcon}</button><span class="search-note">En japonés o en español</span></div>
+        <p class="search-hints" id="search-hint">Busca en japonés o en español, por escritura, lectura o significado.</p>
       </form>
 
       <div class="collection-toolbar">
         <div class="collection-heading"><h2 id="collection-title">La colección</h2><span id="result-count" role="status" aria-live="polite" aria-atomic="true">80 de 80 kanji</span></div>
         <div class="collection-actions">
+          <button id="filter-audio" class="audio-filter" type="button" aria-pressed="false" aria-controls="kanji-grid">Probar audio · ${pronunciations.length}</button>
           <label class="reading-control" for="show-readings"><input id="show-readings" type="checkbox" checked /><span class="switch-track" aria-hidden="true"></span>Mostrar lecturas</label>
         </div>
       </div>
+      <div id="row-filters" class="row-filters" role="group" aria-label="Filtrar filas por dificultad" aria-describedby="row-filter-hint">
+        ${Object.entries(rowDifficultyFilters).map(([value, label]) => `<button type="button" class="row-filter" data-row-filter="${value}" aria-pressed="${value === 'all'}" aria-controls="kanji-grid">${label} <span class="filter-count">—</span></button>`).join('')}
+      </div>
+      <p id="row-filter-hint" class="filter-hint">La dificultad más alta de la fila decide. Fácil requiere las cuatro entradas en fácil.</p>
       <p id="difficulty-status" class="difficulty-status" role="status" aria-live="polite">Cargando dificultades…</p>
+      <p class="audio-note">Escucha una muestra de ${pronunciations.length} palabras con el botón de altavoz. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Créditos del audio</a></p>
+      <p id="audio-status" class="audio-status" role="status" aria-live="polite"></p>
       <div id="kanji-grid" class="kanji-grid"></div>
       <div id="empty-state" class="empty-state" hidden>
         <span class="empty-character" lang="ja" aria-hidden="true">空</span>
-        <h3>No encontramos ese kanji.</h3>
-        <p>Prueba otra lectura o un significado en español.</p>
+        <h3>No encontramos resultados.</h3>
+        <p>Prueba otra búsqueda o cambia los filtros de dificultad y audio.</p>
         <button class="reset-button" id="reset-search" type="button">Ver toda la colección ${arrowIcon}</button>
       </div>
       <p class="collection-end" id="collection-end"><span></span><span lang="ja">一歩ずつ</span> Paso a paso, palabra a palabra.<span></span></p>
@@ -73,7 +74,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h2 id="about-title">Un pequeño paso cada día.</h2>
     <p>80 kanji y tres ejemplos por carácter, con lecturas en hiragana y significados en español, a partir de <cite>80 kanjis x 3 palabras.pdf</cite>.</p>
     <p>Busca por carácter, palabra, lectura o significado. Puedes escribir sin tildes y usar hiragana o katakana. Oculta las lecturas si quieres ponerte a prueba.</p>
+    <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
     <p class="dialog-note">Se conserva la escritura simplificada del documento. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
+    <p class="dialog-note">Muestra de pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar. La colección original combina voces japonesas con acentos de Tokio y Kansai. Estas muestras están pendientes de revisión de pronunciación. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes de cada audio</a>.</p>
     <div class="dialog-shortcut"><kbd>/</kbd> Buscar <kbd>Esc</kbd> Borrar la búsqueda o cerrar esta ventana</div>
   </dialog>
 
@@ -99,6 +102,16 @@ const search = createKanjiSearch(kanji);
 const positions = new Map<string, number>(kanji.map((entry, index) => [entry.id, index + 1]));
 const difficulties = setupDifficulties(kanji);
 const studyRows = new Map(studyCatalog.rows.map((row) => [row.id, row]));
+const audioFilter = document.querySelector<HTMLButtonElement>('#filter-audio')!;
+const pronunciation = setupPronunciation(document.querySelector('#audio-status')!);
+let onlyAudio = new URLSearchParams(window.location.search).get('audio') === '1';
+let difficultyFilter = parseRowDifficultyFilter(new URLSearchParams(window.location.search).get('difficulty'));
+const filterButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-row-filter]')];
+let difficultiesLoaded = false;
+const rowsWithAudio = new Set(studyCatalog.rows.filter((row) => row.itemIds.some((id) => {
+  const item = studyCatalog.byId.get(id)!;
+  return item.type === 'vocabulary' && getPronunciation(item);
+})).map((row) => row.id));
 
 function createStudyBlock(item: StudyItem, entry: Kanji, blockIndex: number): HTMLElement {
   const block = element('article', `study-block study-block--${item.type}`);
@@ -135,6 +148,10 @@ function createStudyBlock(item: StudyItem, entry: Kanji, blockIndex: number): HT
   }
   const footer = element('div', 'study-footer');
   footer.append(difficulties.createIndicator(studyItemTarget(item)));
+  if (item.type === 'vocabulary') {
+    const audioButton = pronunciation.createButton(item);
+    if (audioButton) footer.append(audioButton);
+  }
   block.append(meta, content, footer);
   return block;
 }
@@ -151,17 +168,35 @@ function createRow(entry: Kanji): HTMLElement {
 }
 
 function render() {
-  const results = search(input.value);
+  pronunciation.stop();
+  document.querySelector<HTMLElement>('#audio-status')!.textContent = '';
+  const focused = document.activeElement instanceof HTMLSelectElement ? document.activeElement : null;
+  const focusedKey = focused?.dataset.difficultyKey;
+  const focusedRow = focused?.closest<HTMLElement>('[data-study-row-id]')?.dataset.studyRowId;
+  const candidates = search(input.value).filter((entry) => !onlyAudio || rowsWithAudio.has(entry.id));
+  const rowRatings = new Map(studyCatalog.rows.map((row) => [row.id, getRowDifficulty(row, difficulties.get)]));
+  const results = candidates.filter((entry) => matchesRowDifficulty(rowRatings.get(entry.id) ?? null, difficultyFilter));
+  audioFilter.setAttribute('aria-pressed', String(onlyAudio));
+  document.querySelector<HTMLElement>('.audio-note')!.hidden = !onlyAudio;
+  filterButtons.forEach((button) => {
+    const filter = button.dataset.rowFilter as RowDifficultyFilter;
+    button.setAttribute('aria-pressed', String(filter === difficultyFilter));
+    button.disabled = !difficultiesLoaded;
+    button.querySelector('.filter-count')!.textContent = difficultiesLoaded
+      ? String(candidates.filter((entry) => matchesRowDifficulty(rowRatings.get(entry.id) ?? null, filter)).length)
+      : '—';
+  });
   grid.replaceChildren(...results.map(createRow));
+  if (focusedKey && focusedRow) {
+    const replacement = grid.querySelector<HTMLSelectElement>(`[data-study-row-id="${CSS.escape(focusedRow)}"] [data-difficulty-key="${CSS.escape(focusedKey)}"]`);
+    (replacement ?? filterButtons.find((button) => button.dataset.rowFilter === difficultyFilter))?.focus({ preventScroll: true });
+  }
   count.textContent = `${results.length} de ${kanji.length} kanji`;
   clearButton.hidden = !input.value;
   shortcut.hidden = Boolean(input.value);
   emptyState.hidden = results.length > 0;
   collectionEnd.hidden = results.length === 0;
   grid.hidden = results.length === 0;
-  document.querySelectorAll<HTMLButtonElement>('[data-query]').forEach((button) => {
-    button.setAttribute('aria-pressed', String(input.value === button.dataset.query));
-  });
 }
 
 let urlTimer: ReturnType<typeof setTimeout>;
@@ -172,6 +207,10 @@ function updateSearch() {
     const url = new URL(window.location.href);
     if (input.value.trim()) url.searchParams.set('q', input.value.trim());
     else url.searchParams.delete('q');
+    if (onlyAudio) url.searchParams.set('audio', '1');
+    else url.searchParams.delete('audio');
+    if (difficultyFilter !== 'all') url.searchParams.set('difficulty', difficultyFilter);
+    else url.searchParams.delete('difficulty');
     window.history.replaceState(null, '', url);
   }, 200);
 }
@@ -195,14 +234,19 @@ input.addEventListener('keydown', (event) => {
 });
 document.querySelector('form')!.addEventListener('submit', (event) => event.preventDefault());
 clearButton.addEventListener('click', resetSearch);
-document.querySelector('#reset-search')!.addEventListener('click', resetSearch);
-document.querySelectorAll<HTMLButtonElement>('[data-query]').forEach((button) => {
-  button.addEventListener('click', () => {
-    input.value = button.dataset.query!;
-    updateSearch();
-    input.focus();
-  });
+document.querySelector('#reset-search')!.addEventListener('click', () => {
+  onlyAudio = false;
+  difficultyFilter = 'all';
+  resetSearch();
 });
+audioFilter.addEventListener('click', () => {
+  onlyAudio = !onlyAudio;
+  updateSearch();
+});
+filterButtons.forEach((button) => button.addEventListener('click', () => {
+  difficultyFilter = button.dataset.rowFilter as RowDifficultyFilter;
+  updateSearch();
+}));
 readingsToggle.addEventListener('change', () => {
   grid.querySelectorAll<HTMLElement>('.word-reading').forEach((reading) => {
     reading.hidden = !readingsToggle.checked;
@@ -226,6 +270,10 @@ document.addEventListener('keydown', (event) => {
 window.addEventListener('popstate', () => {
   clearTimeout(urlTimer);
   input.value = new URLSearchParams(window.location.search).get('q') ?? '';
+  onlyAudio = new URLSearchParams(window.location.search).get('audio') === '1';
+  difficultyFilter = parseRowDifficultyFilter(new URLSearchParams(window.location.search).get('difficulty'));
   render();
 });
+difficulties.subscribe(() => { if (difficultiesLoaded) render(); });
+void difficulties.ready.then(() => { difficultiesLoaded = true; render(); });
 render();

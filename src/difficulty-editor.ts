@@ -50,6 +50,8 @@ export function setupDifficultyEditor(collection: readonly Kanji[]) {
   let failedSave = false;
   let failedLoad = false;
   let pendingFileEdits: Ratings = {};
+  const listeners = new Set<() => void>();
+  let lastRatings = '';
 
   function update() {
     const ratings = Object.entries(store.snapshot());
@@ -83,6 +85,11 @@ export function setupDifficultyEditor(collection: readonly Kanji[]) {
       select.dataset.difficulty = value;
       select.disabled = !loaded || linking;
     });
+    const currentRatings = JSON.stringify(store.snapshot());
+    if (currentRatings !== lastRatings) {
+      lastRatings = currentRatings;
+      listeners.forEach((listener) => listener());
+    }
   }
 
   async function saveToLinkedFile(patch: Ratings) {
@@ -202,6 +209,11 @@ export function setupDifficultyEditor(collection: readonly Kanji[]) {
 
   return {
     ready,
+    get: store.get,
+    subscribe(listener: () => void) {
+      listeners.add(listener);
+      return () => listeners.delete(listener);
+    },
     createIndicator(target: DifficultyTarget) {
       const label = document.createElement('label');
       label.className = 'difficulty-control';

@@ -19,6 +19,10 @@ for (const editorOnly of ['showOpenFilePicker', 'createWritable', 'localStorage'
 }
 assert.ok(production.includes('difficulty-badge'), 'Production must render status badges.');
 for (const directory of ['dist', 'dist-dev']) {
+  for (const file of await readdir('public/audio')) {
+    assert.deepEqual(await readFile(`${directory}/audio/${file}`), await readFile(`public/audio/${file}`),
+      `${directory} must include every audio sample, its credits, and license.`);
+  }
   assert.equal(await readFile(`${directory}/difficulties.json`, 'utf8'), source,
     `${directory} does not contain the current dynamic ratings file.`);
   assert.match(await readFile(`${directory}/index.html`, 'utf8'), /\.\/assets\/index-/,
