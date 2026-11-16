@@ -8,7 +8,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "check:build": "node scripts/check-build.mjs",
-    "test": "node --experimental-strip-types --test src/lib/collection.test.ts src/lib/search.test.ts src/lib/difficulty.test.ts src/lib/study-catalog.test.ts src/lib/row-difficulty.test.ts src/lib/kanji-reference.test.ts src/data/kanji.test.ts src/data/pronunciations.test.ts"
+    "check:content": "node --experimental-strip-types scripts/check-content.ts",
+    "test": "node --experimental-strip-types --test src/lib/collection.test.ts src/lib/search.test.ts src/lib/difficulty.test.ts src/lib/study-catalog.test.ts src/lib/row-difficulty.test.ts src/lib/kanji-reference.test.ts src/lib/content.test.ts src/data/kanji.test.ts src/data/pronunciations.test.ts"
   },
   "devDependencies": {
     "typescript": "~5.9.3",

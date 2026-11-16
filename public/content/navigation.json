@@ -1,0 +1,42 @@
+{
+  "$schema": "./study.schema.json#/$defs/navigation",
+  "version": 1,
+  "sections": [
+    {
+      "id": "kanji",
+      "label": "80 kanjis",
+      "file": "collection.json",
+      "kind": "kanji"
+    },
+    {
+      "id": "counters",
+      "label": "Contadores",
+      "file": "content/counters.json",
+      "kind": "counters"
+    },
+    {
+      "id": "kana",
+      "label": "Kana",
+      "file": "content/kana.json",
+      "kind": "kana"
+    },
+    {
+      "id": "verbs",
+      "label": "Verbos",
+      "file": "content/verbs.json",
+      "kind": "lexicon"
+    },
+    {
+      "id": "vocabulary",
+      "label": "Vocabulario",
+      "file": "content/vocabulary.json",
+      "kind": "lexicon"
+    },
+    {
+      "id": "modifiers",
+      "label": "Adjetivos y adverbios",
+      "file": "content/modifiers.json",
+      "kind": "lexicon"
+    }
+  ]
+}

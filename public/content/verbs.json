@@ -1,0 +1,535 @@
+{
+  "$schema": "./study.schema.json#/$defs/lexicon",
+  "version": 1,
+  "kind": "lexicon",
+  "title": "Verbos",
+  "description": "Las acciones del primer curso, con su lectura y las construcciones que les dan sentido.",
+  "sources": [
+    {
+      "id": "verbs-note",
+      "label": "01 Verbos del primer curso",
+      "type": "vault",
+      "path": "Primer curso organizado/02 Vocabulario/01 Verbos del primer curso.md",
+      "sha256": "37d5dcc3f1f99ea1a1a5c9137dc9ca086e1af4fc79252460549fc9ec40ecd7d8"
+    },
+    {
+      "id": "verb-grammar",
+      "label": "02 Cópula, verbos y formas",
+      "type": "vault",
+      "path": "Primer curso organizado/01 Gramática/02 Cópula, verbos y formas.md",
+      "sha256": "98335fc80ad66c1cf883ebe5330edd829d8ded725381af05b5f70347cde6c4bc"
+    }
+  ],
+  "groups": [
+    {
+      "id": "main",
+      "label": "Verbos del curso"
+    },
+    {
+      "id": "expressions",
+      "label": "Expresiones verbales"
+    }
+  ],
+  "guides": [
+    {
+      "id": "masu",
+      "title": "Presente y pasado en forma cortés",
+      "sourceId": "verb-grammar",
+      "paragraphs": [
+        "El japonés no separa presente y futuro en la forma verbal: el contexto indica cuándo ocurre la acción.",
+        "Afirmativo: 〜ます → 〜ました. Negativo: 〜ません → 〜ませんでした."
+      ],
+      "examples": [
+        {
+          "written": "ぱんを たべます。",
+          "reading": "ぱんを たべます。",
+          "meaning": "Como / comeré pan."
+        },
+        {
+          "written": "ぱんを たべませんでした。",
+          "reading": "ぱんを たべませんでした。",
+          "meaning": "No comí pan."
+        }
+      ]
+    },
+    {
+      "id": "existence",
+      "title": "あります e います",
+      "sourceId": "verb-grammar",
+      "paragraphs": [
+        "あります se usa para cosas inanimadas, plantas, eventos y posesión según el contexto.",
+        "います se usa para personas y animales."
+      ]
+    },
+    {
+      "id": "giving",
+      "title": "Dar y recibir",
+      "sourceId": "verbs-note",
+      "paragraphs": [
+        "あげます: dar a otra persona. くれます: alguien da a mí o a mi grupo cercano. もらいます: recibir de alguien.",
+        "いただきます es una forma humilde de recibir y también la expresión fija que se dice antes de comer."
+      ]
+    },
+    {
+      "id": "particles",
+      "title": "La partícula forma parte de la construcción",
+      "sourceId": "verbs-note",
+      "paragraphs": [
+        "聞きます puede ser escuchar o preguntar: おんがくを ききます, pero せんせいに ききます.",
+        "始めます indica empezar algo; 始まります indica que algo empieza."
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "verb-aimasu",
+      "written": "会います",
+      "reading": "あいます",
+      "romaji": "aimasu",
+      "meaning": "encontrarse con alguien: 人に あいます",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-aisatsu-shimasu",
+      "written": "あいさつします",
+      "reading": "あいさつします",
+      "romaji": "aisatsu shimasu",
+      "meaning": "saludar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-agemasu",
+      "written": "あげます",
+      "reading": "あげます",
+      "romaji": "agemasu",
+      "meaning": "dar (en general, desde mi perspectiva hacia fuera)",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-arukimasu",
+      "written": "歩きます",
+      "reading": "あるきます",
+      "romaji": "arukimasu",
+      "meaning": "caminar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-arimasu",
+      "written": "あります",
+      "reading": "あります",
+      "romaji": "arimasu",
+      "meaning": "haber/estar, inanimados; tener según contexto",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-iimasu",
+      "written": "言います",
+      "reading": "いいます",
+      "romaji": "iimasu",
+      "meaning": "decir",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-ikimasu",
+      "written": "行きます",
+      "reading": "いきます",
+      "romaji": "ikimasu",
+      "meaning": "ir",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-imasu",
+      "written": "います",
+      "reading": "います",
+      "romaji": "imasu",
+      "meaning": "haber/estar, personas y animales",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-ukemasu",
+      "written": "受けます",
+      "reading": "うけます",
+      "romaji": "ukemasu",
+      "meaning": "recibir/tomar; por ejemplo, recibir una clase",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-umaremasu",
+      "written": "生まれます",
+      "reading": "うまれます",
+      "romaji": "umaremasu",
+      "meaning": "nacer",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-okimasu",
+      "written": "起きます",
+      "reading": "おきます",
+      "romaji": "okimasu",
+      "meaning": "levantarse/despertarse",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-owarimasu",
+      "written": "終わります",
+      "reading": "おわります",
+      "romaji": "owarimasu",
+      "meaning": "terminar/acabar (intransitivo)",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kaimasu",
+      "written": "買います",
+      "reading": "かいます",
+      "romaji": "kaimasu",
+      "meaning": "comprar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kaerimasu",
+      "written": "帰ります",
+      "reading": "かえります",
+      "romaji": "kaerimasu",
+      "meaning": "regresar/volver a casa",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kakimasu",
+      "written": "書きます",
+      "reading": "かきます",
+      "romaji": "kakimasu",
+      "meaning": "escribir",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kakimasu-63cf",
+      "written": "描きます",
+      "reading": "かきます",
+      "romaji": "kakimasu",
+      "meaning": "dibujar; suele escribirse 絵を描きます",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kikimasu",
+      "written": "聞きます",
+      "reading": "ききます",
+      "romaji": "kikimasu",
+      "meaning": "escuchar o preguntar; cambia la partícula",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kimasu",
+      "written": "来ます",
+      "reading": "きます",
+      "romaji": "kimasu",
+      "meaning": "venir",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kurabemasu",
+      "written": "比べます",
+      "reading": "くらべます",
+      "romaji": "kurabemasu",
+      "meaning": "comparar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kuremasu",
+      "written": "くれます",
+      "reading": "くれます",
+      "romaji": "kuremasu",
+      "meaning": "darme a mí o a mi grupo cercano",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kurushimimasu",
+      "written": "苦しみます",
+      "reading": "くるしみます",
+      "romaji": "kurushimimasu",
+      "meaning": "sufrir",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kotaeawase-o-shimasu",
+      "written": "答え合わせをします",
+      "reading": "こたえあわせをします",
+      "romaji": "kotaeawase o shimasu",
+      "meaning": "corregir/contrastar respuestas",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-shimasu",
+      "written": "します",
+      "reading": "します",
+      "romaji": "shimasu",
+      "meaning": "hacer, practicar una actividad",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-suimasu",
+      "written": "吸います",
+      "reading": "すいます",
+      "romaji": "suimasu",
+      "meaning": "fumar/aspirar; たばこを すいます",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-suwarimasu",
+      "written": "座ります",
+      "reading": "すわります",
+      "romaji": "suwarimasu",
+      "meaning": "sentarse; asiento marcado con に",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-tabemasu",
+      "written": "食べます",
+      "reading": "たべます",
+      "romaji": "tabemasu",
+      "meaning": "comer",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-tsukurimasu",
+      "written": "作ります",
+      "reading": "つくります",
+      "romaji": "tsukurimasu",
+      "meaning": "crear, fabricar, cocinar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-nakimasu",
+      "written": "鳴きます／泣きます",
+      "reading": "なきます",
+      "romaji": "nakimasu",
+      "meaning": "emitir un sonido animal / llorar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-naraimasu",
+      "written": "習います",
+      "reading": "ならいます",
+      "romaji": "naraimasu",
+      "meaning": "aprender de alguien, tomar lecciones",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-nemasu",
+      "written": "寝ます",
+      "reading": "ねます",
+      "romaji": "nemasu",
+      "meaning": "acostarse/dormir",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-nemurimasu",
+      "written": "眠ります",
+      "reading": "ねむります",
+      "romaji": "nemurimasu",
+      "meaning": "dormir/estar dormido",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-hajimarimasu",
+      "written": "始まります",
+      "reading": "はじまります",
+      "romaji": "hajimarimasu",
+      "meaning": "empezar (intransitivo)",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-hajimemasu",
+      "written": "始めます",
+      "reading": "はじめます",
+      "romaji": "hajimemasu",
+      "meaning": "empezar algo (transitivo)",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-hatarakimasu",
+      "written": "働きます",
+      "reading": "はたらきます",
+      "romaji": "hatarakimasu",
+      "meaning": "trabajar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-hanashimasu",
+      "written": "話します",
+      "reading": "はなします",
+      "romaji": "hanashimasu",
+      "meaning": "hablar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-benkyou-shimasu",
+      "written": "勉強します",
+      "reading": "べんきょうします",
+      "romaji": "benkyou shimasu",
+      "meaning": "estudiar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-mimasu",
+      "written": "見ます",
+      "reading": "みます",
+      "romaji": "mimasu",
+      "meaning": "ver/mirar",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-moraimasu",
+      "written": "もらいます",
+      "reading": "もらいます",
+      "romaji": "moraimasu",
+      "meaning": "recibir",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-yaku-shimasu",
+      "written": "訳します",
+      "reading": "やくします",
+      "romaji": "yaku shimasu",
+      "meaning": "traducir",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-yasumimasu",
+      "written": "休みます",
+      "reading": "やすみます",
+      "romaji": "yasumimasu",
+      "meaning": "descansar, ausentarse, tomarse el día libre",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-yomimasu",
+      "written": "読みます",
+      "reading": "よみます",
+      "romaji": "yomimasu",
+      "meaning": "leer",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-rokuon-shimasu",
+      "written": "録音します",
+      "reading": "ろくおんします",
+      "romaji": "rokuon shimasu",
+      "meaning": "grabar audio",
+      "group": "main",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-wakarimasu",
+      "written": "分かります",
+      "reading": "わかります",
+      "romaji": "wakarimasu",
+      "meaning": "entender",
+      "group": "expressions",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-oboete-imasu",
+      "written": "覚えています",
+      "reading": "おぼえています",
+      "romaji": "oboete imasu",
+      "meaning": "recordar / tener memorizado",
+      "group": "expressions",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-dekimasu",
+      "written": "できます",
+      "reading": "できます",
+      "romaji": "dekimasu",
+      "meaning": "poder hacer; estar hecho",
+      "group": "expressions",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-kokoro-ga-oremasu",
+      "written": "心が折れます",
+      "reading": "こころが おれます",
+      "romaji": "kokoro ga oremasu",
+      "meaning": "desanimarse/perder la motivación",
+      "group": "expressions",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-meshiagarimasu",
+      "written": "召し上がります",
+      "reading": "めしあがります",
+      "romaji": "meshiagarimasu",
+      "meaning": "comer/beber, forma respetuosa",
+      "group": "expressions",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-shuuri-shimasu",
+      "written": "修理します",
+      "reading": "しゅうりします",
+      "romaji": "shuuri shimasu",
+      "meaning": "reparar",
+      "group": "expressions",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-junbi-shimasu",
+      "written": "準備します",
+      "reading": "じゅんびします",
+      "romaji": "junbi shimasu",
+      "meaning": "preparar",
+      "group": "expressions",
+      "sourceId": "verbs-note"
+    },
+    {
+      "id": "verb-undou-shimasu",
+      "written": "運動します",
+      "reading": "うんどうします",
+      "romaji": "undou shimasu",
+      "meaning": "hacer ejercicio",
+      "group": "expressions",
+      "sourceId": "verbs-note"
+    }
+  ]
+}

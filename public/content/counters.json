@@ -1,0 +1,2226 @@
+{
+  "$schema": "./study.schema.json#/$defs/counters",
+  "version": 1,
+  "kind": "counters",
+  "title": "Contadores",
+  "description": "Elige qué quieres contar y consulta su escritura, sus lecturas y las formas que cambian.",
+  "sources": [
+    {
+      "id": "counter-chart",
+      "label": "Tabla de contadores proporcionada para esta colección",
+      "type": "attachment"
+    },
+    {
+      "id": "counter-note",
+      "label": "05 Tiempo, números y contadores",
+      "type": "vault",
+      "path": "Primer curso organizado/01 Gramática/05 Tiempo, números y contadores.md",
+      "sha256": "492e7f305d7b082db5d7ff1f52f92a2402984ba8d6b8f378894a19436af38326"
+    },
+    {
+      "id": "calendar-note",
+      "label": "new additions",
+      "type": "vault",
+      "path": "new additions.md",
+      "sha256": "13156720b448a1a5f68fc147684b532e8fb7a53a2f9506abcbc819096fba06f5"
+    },
+    {
+      "id": "counter-check",
+      "label": "Contadores básicos · Prefectura de Osaka",
+      "type": "reference",
+      "url": "https://www.pref.osaka.lg.jp/documents/9114/kazoe_kyo2_1.pdf"
+    }
+  ],
+  "groups": [
+    {
+      "id": "objects",
+      "label": "Objetos"
+    },
+    {
+      "id": "living",
+      "label": "Personas y animales"
+    },
+    {
+      "id": "time",
+      "label": "Tiempo y edad"
+    },
+    {
+      "id": "numbers",
+      "label": "Números"
+    }
+  ],
+  "guides": [
+    {
+      "id": "how-to-count",
+      "title": "El contador depende de lo que cuentas",
+      "sourceId": "counter-note",
+      "paragraphs": [
+        "Los contadores se combinan con el número. Es mejor aprender la lectura de la combinación completa, porque algunos sonidos cambian.",
+        "Las formas destacadas tienen una lectura especial o un cambio de sonido. Si aparecen dos lecturas, ambas están recogidas en la tabla."
+      ]
+    },
+    {
+      "id": "ordinal",
+      "title": "Para expresar orden: 目",
+      "sourceId": "counter-note",
+      "paragraphs": [
+        "Añadir め a un contador indica orden: ひとつめ, el primero; ひとりめ, la primera persona; ごほんめ, el quinto objeto alargado."
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "tsu",
+      "written": "〜つ",
+      "title": "Objetos en general",
+      "description": "Una forma general de contar cosas cuando no se necesita un contador más específico.",
+      "group": "objects",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一つ",
+          "readings": [
+            "ひとつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二つ",
+          "readings": [
+            "ふたつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 3,
+          "written": "三つ",
+          "readings": [
+            "みっつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 4,
+          "written": "四つ",
+          "readings": [
+            "よっつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 5,
+          "written": "五つ",
+          "readings": [
+            "いつつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 6,
+          "written": "六つ",
+          "readings": [
+            "むっつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 7,
+          "written": "七つ",
+          "readings": [
+            "ななつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 8,
+          "written": "八つ",
+          "readings": [
+            "やっつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九つ",
+          "readings": [
+            "ここのつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 10,
+          "written": "十",
+          "readings": [
+            "とお"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "いくつ",
+        "readings": [
+          "いくつ"
+        ]
+      },
+      "notes": [
+        "La serie tradicional llega hasta diez. Diez se escribe 十 y se lee とお, sin つ."
+      ]
+    },
+    {
+      "id": "ko",
+      "written": "〜個",
+      "title": "Objetos pequeños",
+      "description": "Fruta, piezas y objetos pequeños de forma compacta.",
+      "group": "objects",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一個",
+          "readings": [
+            "いっこ"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二個",
+          "readings": [
+            "にこ"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三個",
+          "readings": [
+            "さんこ"
+          ],
+          "special": false
+        },
+        {
+          "value": 4,
+          "written": "四個",
+          "readings": [
+            "よんこ"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五個",
+          "readings": [
+            "ごこ"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六個",
+          "readings": [
+            "ろっこ"
+          ],
+          "special": true
+        },
+        {
+          "value": 7,
+          "written": "七個",
+          "readings": [
+            "ななこ"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八個",
+          "readings": [
+            "はっこ"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九個",
+          "readings": [
+            "きゅうこ"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十個",
+          "readings": [
+            "じゅっこ",
+            "じっこ"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何個",
+        "readings": [
+          "なんこ"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "nin",
+      "written": "〜人",
+      "title": "Personas",
+      "description": "Para contar personas.",
+      "group": "living",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一人",
+          "readings": [
+            "ひとり"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二人",
+          "readings": [
+            "ふたり"
+          ],
+          "special": true
+        },
+        {
+          "value": 3,
+          "written": "三人",
+          "readings": [
+            "さんにん"
+          ],
+          "special": false
+        },
+        {
+          "value": 4,
+          "written": "四人",
+          "readings": [
+            "よにん"
+          ],
+          "special": true
+        },
+        {
+          "value": 5,
+          "written": "五人",
+          "readings": [
+            "ごにん"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六人",
+          "readings": [
+            "ろくにん"
+          ],
+          "special": false
+        },
+        {
+          "value": 7,
+          "written": "七人",
+          "readings": [
+            "ななにん"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八人",
+          "readings": [
+            "はちにん"
+          ],
+          "special": false
+        },
+        {
+          "value": 9,
+          "written": "九人",
+          "readings": [
+            "きゅうにん"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十人",
+          "readings": [
+            "じゅうにん"
+          ],
+          "special": false
+        }
+      ],
+      "question": {
+        "written": "何人",
+        "readings": [
+          "なんにん"
+        ]
+      },
+      "notes": [
+        "一人 y 二人 tienen lecturas propias. 四人 se lee よにん."
+      ]
+    },
+    {
+      "id": "mai",
+      "written": "〜枚",
+      "title": "Objetos planos",
+      "description": "Papel, fotografías, prendas y otros objetos finos o planos.",
+      "group": "objects",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一枚",
+          "readings": [
+            "いちまい"
+          ],
+          "special": false
+        },
+        {
+          "value": 2,
+          "written": "二枚",
+          "readings": [
+            "にまい"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三枚",
+          "readings": [
+            "さんまい"
+          ],
+          "special": false
+        },
+        {
+          "value": 4,
+          "written": "四枚",
+          "readings": [
+            "よんまい"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五枚",
+          "readings": [
+            "ごまい"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六枚",
+          "readings": [
+            "ろくまい"
+          ],
+          "special": false
+        },
+        {
+          "value": 7,
+          "written": "七枚",
+          "readings": [
+            "ななまい"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八枚",
+          "readings": [
+            "はちまい"
+          ],
+          "special": false
+        },
+        {
+          "value": 9,
+          "written": "九枚",
+          "readings": [
+            "きゅうまい"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十枚",
+          "readings": [
+            "じゅうまい"
+          ],
+          "special": false
+        }
+      ],
+      "question": {
+        "written": "何枚",
+        "readings": [
+          "なんまい"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "dai",
+      "written": "〜台",
+      "title": "Vehículos y máquinas",
+      "description": "Coches, bicicletas, ordenadores y aparatos.",
+      "group": "objects",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一台",
+          "readings": [
+            "いちだい"
+          ],
+          "special": false
+        },
+        {
+          "value": 2,
+          "written": "二台",
+          "readings": [
+            "にだい"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三台",
+          "readings": [
+            "さんだい"
+          ],
+          "special": false
+        },
+        {
+          "value": 4,
+          "written": "四台",
+          "readings": [
+            "よんだい"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五台",
+          "readings": [
+            "ごだい"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六台",
+          "readings": [
+            "ろくだい"
+          ],
+          "special": false
+        },
+        {
+          "value": 7,
+          "written": "七台",
+          "readings": [
+            "ななだい"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八台",
+          "readings": [
+            "はちだい"
+          ],
+          "special": false
+        },
+        {
+          "value": 9,
+          "written": "九台",
+          "readings": [
+            "きゅうだい"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十台",
+          "readings": [
+            "じゅうだい"
+          ],
+          "special": false
+        }
+      ],
+      "question": {
+        "written": "何台",
+        "readings": [
+          "なんだい"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "satsu",
+      "written": "〜冊",
+      "title": "Libros y cuadernos",
+      "description": "Libros, revistas y volúmenes encuadernados.",
+      "group": "objects",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一冊",
+          "readings": [
+            "いっさつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二冊",
+          "readings": [
+            "にさつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三冊",
+          "readings": [
+            "さんさつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 4,
+          "written": "四冊",
+          "readings": [
+            "よんさつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五冊",
+          "readings": [
+            "ごさつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六冊",
+          "readings": [
+            "ろくさつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 7,
+          "written": "七冊",
+          "readings": [
+            "ななさつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八冊",
+          "readings": [
+            "はっさつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九冊",
+          "readings": [
+            "きゅうさつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十冊",
+          "readings": [
+            "じゅっさつ",
+            "じっさつ"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何冊",
+        "readings": [
+          "なんさつ"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "hon",
+      "written": "〜本",
+      "title": "Objetos alargados",
+      "description": "Lápices, botellas, paraguas y objetos largos o cilíndricos.",
+      "group": "objects",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一本",
+          "readings": [
+            "いっぽん"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二本",
+          "readings": [
+            "にほん"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三本",
+          "readings": [
+            "さんぼん"
+          ],
+          "special": true
+        },
+        {
+          "value": 4,
+          "written": "四本",
+          "readings": [
+            "よんほん"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五本",
+          "readings": [
+            "ごほん"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六本",
+          "readings": [
+            "ろっぽん"
+          ],
+          "special": true
+        },
+        {
+          "value": 7,
+          "written": "七本",
+          "readings": [
+            "ななほん"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八本",
+          "readings": [
+            "はっぽん"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九本",
+          "readings": [
+            "きゅうほん"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十本",
+          "readings": [
+            "じゅっぽん",
+            "じっぽん"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何本",
+        "readings": [
+          "なんぼん"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "hiki",
+      "written": "〜匹",
+      "title": "Animales pequeños",
+      "description": "Perros, gatos, peces, insectos y otros animales pequeños.",
+      "group": "living",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一匹",
+          "readings": [
+            "いっぴき"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二匹",
+          "readings": [
+            "にひき"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三匹",
+          "readings": [
+            "さんびき"
+          ],
+          "special": true
+        },
+        {
+          "value": 4,
+          "written": "四匹",
+          "readings": [
+            "よんひき"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五匹",
+          "readings": [
+            "ごひき"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六匹",
+          "readings": [
+            "ろっぴき"
+          ],
+          "special": true
+        },
+        {
+          "value": 7,
+          "written": "七匹",
+          "readings": [
+            "ななひき"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八匹",
+          "readings": [
+            "はっぴき"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九匹",
+          "readings": [
+            "きゅうひき"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十匹",
+          "readings": [
+            "じゅっぴき",
+            "じっぴき"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何匹",
+        "readings": [
+          "なんびき"
+        ]
+      },
+      "notes": [
+        "七匹 también puede leerse しちひき."
+      ]
+    },
+    {
+      "id": "wa",
+      "written": "〜羽",
+      "title": "Aves",
+      "description": "Aves; también se usa tradicionalmente con conejos.",
+      "group": "living",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一羽",
+          "readings": [
+            "いちわ"
+          ],
+          "special": false
+        },
+        {
+          "value": 2,
+          "written": "二羽",
+          "readings": [
+            "にわ"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三羽",
+          "readings": [
+            "さんば"
+          ],
+          "special": true
+        },
+        {
+          "value": 4,
+          "written": "四羽",
+          "readings": [
+            "よんわ"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五羽",
+          "readings": [
+            "ごわ"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六羽",
+          "readings": [
+            "ろくわ"
+          ],
+          "special": false
+        },
+        {
+          "value": 7,
+          "written": "七羽",
+          "readings": [
+            "ななわ",
+            "しちわ"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八羽",
+          "readings": [
+            "はちわ"
+          ],
+          "special": false
+        },
+        {
+          "value": 9,
+          "written": "九羽",
+          "readings": [
+            "きゅうわ"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十羽",
+          "readings": [
+            "じゅっぱ",
+            "じっぱ"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何羽",
+        "readings": [
+          "なんば"
+        ]
+      },
+      "notes": [
+        "La tabla conserva さんば y じゅっぱ／じっぱ. También se oyen さんわ y じゅうわ."
+      ]
+    },
+    {
+      "id": "soku",
+      "written": "〜足",
+      "title": "Pares de calzado",
+      "description": "Pares de zapatos, calcetines y otros tipos de calzado.",
+      "group": "objects",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一足",
+          "readings": [
+            "いっそく"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二足",
+          "readings": [
+            "にそく"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三足",
+          "readings": [
+            "さんぞく"
+          ],
+          "special": true
+        },
+        {
+          "value": 4,
+          "written": "四足",
+          "readings": [
+            "よんそく"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五足",
+          "readings": [
+            "ごそく"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六足",
+          "readings": [
+            "ろくそく"
+          ],
+          "special": false
+        },
+        {
+          "value": 7,
+          "written": "七足",
+          "readings": [
+            "ななそく"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八足",
+          "readings": [
+            "はっそく"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九足",
+          "readings": [
+            "きゅうそく"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十足",
+          "readings": [
+            "じゅっそく",
+            "じっそく"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何足",
+        "readings": [
+          "なんぞく"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "hai",
+      "written": "〜杯",
+      "title": "Vasos y tazas",
+      "description": "Vasos, tazas y recipientes llenos de bebida u otro contenido.",
+      "group": "objects",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一杯",
+          "readings": [
+            "いっぱい"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二杯",
+          "readings": [
+            "にはい"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三杯",
+          "readings": [
+            "さんばい"
+          ],
+          "special": true
+        },
+        {
+          "value": 4,
+          "written": "四杯",
+          "readings": [
+            "よんはい"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五杯",
+          "readings": [
+            "ごはい"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六杯",
+          "readings": [
+            "ろっぱい"
+          ],
+          "special": true
+        },
+        {
+          "value": 7,
+          "written": "七杯",
+          "readings": [
+            "ななはい"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八杯",
+          "readings": [
+            "はっぱい"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九杯",
+          "readings": [
+            "きゅうはい"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十杯",
+          "readings": [
+            "じゅっぱい",
+            "じっぱい"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何杯",
+        "readings": [
+          "なんばい"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "tou",
+      "written": "〜頭",
+      "title": "Animales grandes",
+      "description": "Elefantes, caballos y otros animales grandes.",
+      "group": "living",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一頭",
+          "readings": [
+            "いっとう"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二頭",
+          "readings": [
+            "にとう"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三頭",
+          "readings": [
+            "さんとう"
+          ],
+          "special": false
+        },
+        {
+          "value": 4,
+          "written": "四頭",
+          "readings": [
+            "よんとう"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五頭",
+          "readings": [
+            "ごとう"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六頭",
+          "readings": [
+            "ろくとう"
+          ],
+          "special": false
+        },
+        {
+          "value": 7,
+          "written": "七頭",
+          "readings": [
+            "ななとう"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八頭",
+          "readings": [
+            "はっとう"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九頭",
+          "readings": [
+            "きゅうとう"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十頭",
+          "readings": [
+            "じゅっとう",
+            "じっとう"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何頭",
+        "readings": [
+          "なんとう"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "days",
+      "written": "〜日間",
+      "title": "Duración en días",
+      "description": "Un periodo de tiempo, distinto del día del calendario.",
+      "group": "time",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一日",
+          "readings": [
+            "いちにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 2,
+          "written": "二日間",
+          "readings": [
+            "ふつかかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 3,
+          "written": "三日間",
+          "readings": [
+            "みっかかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 4,
+          "written": "四日間",
+          "readings": [
+            "よっかかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 5,
+          "written": "五日間",
+          "readings": [
+            "いつかかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 6,
+          "written": "六日間",
+          "readings": [
+            "むいかかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 7,
+          "written": "七日間",
+          "readings": [
+            "なのかかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 8,
+          "written": "八日間",
+          "readings": [
+            "ようかかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九日間",
+          "readings": [
+            "ここのかかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 10,
+          "written": "十日間",
+          "readings": [
+            "とおかかん"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何日間",
+        "readings": [
+          "なんにちかん"
+        ]
+      },
+      "notes": [
+        "Un día de duración se lee いちにち. El día uno del mes se lee ついたち."
+      ]
+    },
+    {
+      "id": "weeks",
+      "written": "〜週間",
+      "title": "Semanas",
+      "description": "Duración de un periodo en semanas.",
+      "group": "time",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一週間",
+          "readings": [
+            "いっしゅうかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二週間",
+          "readings": [
+            "にしゅうかん"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三週間",
+          "readings": [
+            "さんしゅうかん"
+          ],
+          "special": false
+        },
+        {
+          "value": 4,
+          "written": "四週間",
+          "readings": [
+            "よんしゅうかん"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五週間",
+          "readings": [
+            "ごしゅうかん"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六週間",
+          "readings": [
+            "ろくしゅうかん"
+          ],
+          "special": false
+        },
+        {
+          "value": 7,
+          "written": "七週間",
+          "readings": [
+            "ななしゅうかん"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八週間",
+          "readings": [
+            "はっしゅうかん"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九週間",
+          "readings": [
+            "きゅうしゅうかん"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十週間",
+          "readings": [
+            "じゅっしゅうかん",
+            "じっしゅうかん"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何週間",
+        "readings": [
+          "なんしゅうかん"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "months",
+      "written": "〜か月",
+      "title": "Meses de duración",
+      "description": "La duración en meses; no los nombres de los meses del año.",
+      "group": "time",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一か月",
+          "readings": [
+            "いっかげつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二か月",
+          "readings": [
+            "にかげつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三か月",
+          "readings": [
+            "さんかげつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 4,
+          "written": "四か月",
+          "readings": [
+            "よんかげつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五か月",
+          "readings": [
+            "ごかげつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六か月",
+          "readings": [
+            "ろっかげつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 7,
+          "written": "七か月",
+          "readings": [
+            "ななかげつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八か月",
+          "readings": [
+            "はっかげつ"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九か月",
+          "readings": [
+            "きゅうかげつ"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十か月",
+          "readings": [
+            "じゅっかげつ",
+            "じっかげつ"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何か月",
+        "readings": [
+          "なんかげつ"
+        ]
+      },
+      "notes": [
+        "También se escribe ヶ月 o 箇月. 四月（しがつ）es abril; 四か月（よんかげつ）son cuatro meses."
+      ]
+    },
+    {
+      "id": "age",
+      "written": "〜歳",
+      "title": "Edad",
+      "description": "Años de edad de una persona.",
+      "group": "time",
+      "type": "counter",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一歳",
+          "readings": [
+            "いっさい"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二歳",
+          "readings": [
+            "にさい"
+          ],
+          "special": false
+        },
+        {
+          "value": 3,
+          "written": "三歳",
+          "readings": [
+            "さんさい"
+          ],
+          "special": false
+        },
+        {
+          "value": 4,
+          "written": "四歳",
+          "readings": [
+            "よんさい"
+          ],
+          "special": false
+        },
+        {
+          "value": 5,
+          "written": "五歳",
+          "readings": [
+            "ごさい"
+          ],
+          "special": false
+        },
+        {
+          "value": 6,
+          "written": "六歳",
+          "readings": [
+            "ろくさい"
+          ],
+          "special": false
+        },
+        {
+          "value": 7,
+          "written": "七歳",
+          "readings": [
+            "ななさい"
+          ],
+          "special": false
+        },
+        {
+          "value": 8,
+          "written": "八歳",
+          "readings": [
+            "はっさい"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九歳",
+          "readings": [
+            "きゅうさい"
+          ],
+          "special": false
+        },
+        {
+          "value": 10,
+          "written": "十歳",
+          "readings": [
+            "じゅっさい",
+            "じっさい"
+          ],
+          "special": true
+        }
+      ],
+      "question": {
+        "written": "何歳",
+        "readings": [
+          "なんさい"
+        ]
+      },
+      "notes": [
+        "Veinte años tiene una lectura especial: 二十歳（はたち）."
+      ]
+    },
+    {
+      "id": "dates",
+      "written": "〜日",
+      "title": "Días del mes",
+      "description": "Fechas del calendario. La lectura cambia en varios días.",
+      "group": "time",
+      "type": "counter",
+      "sourceId": "calendar-note",
+      "forms": [
+        {
+          "value": 1,
+          "written": "一日",
+          "readings": [
+            "ついたち"
+          ],
+          "special": true
+        },
+        {
+          "value": 2,
+          "written": "二日",
+          "readings": [
+            "ふつか"
+          ],
+          "special": true
+        },
+        {
+          "value": 3,
+          "written": "三日",
+          "readings": [
+            "みっか"
+          ],
+          "special": true
+        },
+        {
+          "value": 4,
+          "written": "四日",
+          "readings": [
+            "よっか"
+          ],
+          "special": true
+        },
+        {
+          "value": 5,
+          "written": "五日",
+          "readings": [
+            "いつか"
+          ],
+          "special": true
+        },
+        {
+          "value": 6,
+          "written": "六日",
+          "readings": [
+            "むいか"
+          ],
+          "special": true
+        },
+        {
+          "value": 7,
+          "written": "七日",
+          "readings": [
+            "なのか"
+          ],
+          "special": true
+        },
+        {
+          "value": 8,
+          "written": "八日",
+          "readings": [
+            "ようか"
+          ],
+          "special": true
+        },
+        {
+          "value": 9,
+          "written": "九日",
+          "readings": [
+            "ここのか"
+          ],
+          "special": true
+        },
+        {
+          "value": 10,
+          "written": "十日",
+          "readings": [
+            "とおか"
+          ],
+          "special": true
+        },
+        {
+          "value": 11,
+          "written": "十一日",
+          "readings": [
+            "じゅういちにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 12,
+          "written": "十二日",
+          "readings": [
+            "じゅうににち"
+          ],
+          "special": false
+        },
+        {
+          "value": 13,
+          "written": "十三日",
+          "readings": [
+            "じゅうさんにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 14,
+          "written": "十四日",
+          "readings": [
+            "じゅうよっか"
+          ],
+          "special": true
+        },
+        {
+          "value": 15,
+          "written": "十五日",
+          "readings": [
+            "じゅうごにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 16,
+          "written": "十六日",
+          "readings": [
+            "じゅうろくにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 17,
+          "written": "十七日",
+          "readings": [
+            "じゅうしちにち"
+          ],
+          "special": true
+        },
+        {
+          "value": 18,
+          "written": "十八日",
+          "readings": [
+            "じゅうはちにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 19,
+          "written": "十九日",
+          "readings": [
+            "じゅうくにち"
+          ],
+          "special": true
+        },
+        {
+          "value": 20,
+          "written": "二十日",
+          "readings": [
+            "はつか"
+          ],
+          "special": true
+        },
+        {
+          "value": 21,
+          "written": "二十一日",
+          "readings": [
+            "にじゅういちにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 22,
+          "written": "二十二日",
+          "readings": [
+            "にじゅうににち"
+          ],
+          "special": false
+        },
+        {
+          "value": 23,
+          "written": "二十三日",
+          "readings": [
+            "にじゅうさんにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 24,
+          "written": "二十四日",
+          "readings": [
+            "にじゅうよっか"
+          ],
+          "special": true
+        },
+        {
+          "value": 25,
+          "written": "二十五日",
+          "readings": [
+            "にじゅうごにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 26,
+          "written": "二十六日",
+          "readings": [
+            "にじゅうろくにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 27,
+          "written": "二十七日",
+          "readings": [
+            "にじゅうしちにち"
+          ],
+          "special": true
+        },
+        {
+          "value": 28,
+          "written": "二十八日",
+          "readings": [
+            "にじゅうはちにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 29,
+          "written": "二十九日",
+          "readings": [
+            "にじゅうくにち"
+          ],
+          "special": true
+        },
+        {
+          "value": 30,
+          "written": "三十日",
+          "readings": [
+            "さんじゅうにち"
+          ],
+          "special": false
+        },
+        {
+          "value": 31,
+          "written": "三十一日",
+          "readings": [
+            "さんじゅういちにち"
+          ],
+          "special": false
+        }
+      ],
+      "question": {
+        "written": "何日",
+        "readings": [
+          "なんにち"
+        ]
+      },
+      "notes": [
+        "El día uno se lee ついたち. Catorce, veinte y veinticuatro: じゅうよっか, はつか y にじゅうよっか."
+      ]
+    },
+    {
+      "id": "hundreds",
+      "written": "百",
+      "title": "Centenas",
+      "description": "Unidades de cien; se incluyen como números, no como contadores de objetos.",
+      "group": "numbers",
+      "type": "number",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 100,
+          "written": "百",
+          "readings": [
+            "ひゃく"
+          ],
+          "special": false
+        },
+        {
+          "value": 200,
+          "written": "二百",
+          "readings": [
+            "にひゃく"
+          ],
+          "special": false
+        },
+        {
+          "value": 300,
+          "written": "三百",
+          "readings": [
+            "さんびゃく"
+          ],
+          "special": true
+        },
+        {
+          "value": 400,
+          "written": "四百",
+          "readings": [
+            "よんひゃく"
+          ],
+          "special": false
+        },
+        {
+          "value": 500,
+          "written": "五百",
+          "readings": [
+            "ごひゃく"
+          ],
+          "special": false
+        },
+        {
+          "value": 600,
+          "written": "六百",
+          "readings": [
+            "ろっぴゃく"
+          ],
+          "special": true
+        },
+        {
+          "value": 700,
+          "written": "七百",
+          "readings": [
+            "ななひゃく"
+          ],
+          "special": false
+        },
+        {
+          "value": 800,
+          "written": "八百",
+          "readings": [
+            "はっぴゃく"
+          ],
+          "special": true
+        },
+        {
+          "value": 900,
+          "written": "九百",
+          "readings": [
+            "きゅうひゃく"
+          ],
+          "special": false
+        }
+      ],
+      "question": {
+        "written": "何百円",
+        "readings": [
+          "なんびゃくえん"
+        ]
+      },
+      "notes": [
+        "La pregunta de la tabla original se refiere a cientos de yenes."
+      ]
+    },
+    {
+      "id": "thousands",
+      "written": "千",
+      "title": "Millares",
+      "description": "Unidades de mil; se incluyen como números.",
+      "group": "numbers",
+      "type": "number",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 1000,
+          "written": "千",
+          "readings": [
+            "せん"
+          ],
+          "special": false
+        },
+        {
+          "value": 2000,
+          "written": "二千",
+          "readings": [
+            "にせん"
+          ],
+          "special": false
+        },
+        {
+          "value": 3000,
+          "written": "三千",
+          "readings": [
+            "さんぜん"
+          ],
+          "special": true
+        },
+        {
+          "value": 4000,
+          "written": "四千",
+          "readings": [
+            "よんせん"
+          ],
+          "special": false
+        },
+        {
+          "value": 5000,
+          "written": "五千",
+          "readings": [
+            "ごせん"
+          ],
+          "special": false
+        },
+        {
+          "value": 6000,
+          "written": "六千",
+          "readings": [
+            "ろくせん"
+          ],
+          "special": false
+        },
+        {
+          "value": 7000,
+          "written": "七千",
+          "readings": [
+            "ななせん"
+          ],
+          "special": false
+        },
+        {
+          "value": 8000,
+          "written": "八千",
+          "readings": [
+            "はっせん"
+          ],
+          "special": true
+        },
+        {
+          "value": 9000,
+          "written": "九千",
+          "readings": [
+            "きゅうせん"
+          ],
+          "special": false
+        }
+      ],
+      "question": {
+        "written": "何千円",
+        "readings": [
+          "なんぜんえん"
+        ]
+      },
+      "notes": [
+        "La pregunta de la tabla original se refiere a miles de yenes."
+      ]
+    },
+    {
+      "id": "ten-thousands",
+      "written": "万",
+      "title": "Decenas de millar",
+      "description": "En japonés, 万 agrupa los números en unidades de diez mil.",
+      "group": "numbers",
+      "type": "number",
+      "sourceId": "counter-chart",
+      "forms": [
+        {
+          "value": 10000,
+          "written": "一万",
+          "readings": [
+            "いちまん"
+          ],
+          "special": false
+        },
+        {
+          "value": 20000,
+          "written": "二万",
+          "readings": [
+            "にまん"
+          ],
+          "special": false
+        },
+        {
+          "value": 30000,
+          "written": "三万",
+          "readings": [
+            "さんまん"
+          ],
+          "special": false
+        },
+        {
+          "value": 40000,
+          "written": "四万",
+          "readings": [
+            "よんまん"
+          ],
+          "special": false
+        },
+        {
+          "value": 50000,
+          "written": "五万",
+          "readings": [
+            "ごまん"
+          ],
+          "special": false
+        },
+        {
+          "value": 60000,
+          "written": "六万",
+          "readings": [
+            "ろくまん"
+          ],
+          "special": false
+        },
+        {
+          "value": 70000,
+          "written": "七万",
+          "readings": [
+            "ななまん"
+          ],
+          "special": false
+        },
+        {
+          "value": 80000,
+          "written": "八万",
+          "readings": [
+            "はちまん"
+          ],
+          "special": false
+        },
+        {
+          "value": 90000,
+          "written": "九万",
+          "readings": [
+            "きゅうまん"
+          ],
+          "special": false
+        },
+        {
+          "value": 100000,
+          "written": "十万",
+          "readings": [
+            "じゅうまん"
+          ],
+          "special": false
+        }
+      ],
+      "question": {
+        "written": "何万円",
+        "readings": [
+          "なんまんえん"
+        ]
+      },
+      "notes": [
+        "一万 = 10.000. 十万 = 100.000. La pregunta de la tabla original se refiere a yenes."
+      ]
+    }
+  ],
+  "editorialNotes": [
+    "Se normaliza la grafía とう de la serie general a とお, conforme a la lectura estándar de 十 en esta serie.",
+    "Las cantidades de cien y mil conservan las nueve formas incluidas en la tabla; no se inventa una décima celda.",
+    "Los días del calendario se completan hasta el 31 con la tabla new additions.md del vault.",
+    "Los textos en español y las marcas de lectura especial se han añadido para facilitar el estudio.",
+    "Las preguntas sobre centenas y millares se normalizan como 何百円（なんびゃくえん）y 何千円（なんぜんえん）, conservando el contexto monetario de la tabla."
+  ]
+}

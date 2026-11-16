@@ -7,6 +7,8 @@ import { setupPronunciation } from './pronunciation-ui.ts';
 import { setupKanjiDetails } from './kanji-ui.ts';
 import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDifficultyFilter, rowDifficultyFilters, type RowDifficultyFilter } from './lib/row-difficulty.ts';
 import type { Difficulty, Kanji, StudyItem, StudyItemId } from './types.ts';
+import { loadNavigation, loadStudyDocument, resolveSection, sectionHref } from './lib/content.ts';
+import { renderStudyPage } from './content-ui.ts';
 import './style.css';
 
 const searchIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>';
@@ -19,7 +21,7 @@ function difficultyIcon(value: Difficulty | null): string {
 }
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <a class="skip-link" href="#collection">Saltar a la colección</a>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
   <header class="site-header shell" id="top">
     <a class="brand" href="./" aria-label="80 kanjis, inicio">
       <span class="brand-seal" lang="ja" aria-hidden="true">八</span>
@@ -30,7 +32,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <button class="about-button" id="open-about" type="button" aria-label="Sobre esta colección">?</button>
     </div>
   </header>
-  <main class="shell">
+  <nav class="section-nav shell" id="section-nav" aria-label="Secciones de estudio"></nav>
+  <main class="shell" id="main-content" tabindex="-1">
+    <div id="kanji-page">
     <section class="intro" aria-labelledby="page-title">
       <h1 id="page-title">Un kanji. <span>Tres nuevas palabras.</span></h1>
       <p class="intro-description">80 kanji y 240 ejemplos para aprender a tu ritmo.</p>
@@ -65,12 +69,15 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       </div>
       <p class="collection-end" id="collection-end"><span></span><span lang="ja">一歩ずつ</span> Paso a paso, palabra a palabra.<span></span></p>
     </section>
+    </div>
+    <div id="study-page" hidden><p class="collection-status" role="status">Cargando la sección…</p></div>
   </main>
   <footer class="site-footer shell"><span><strong>80kanjis.</strong> Una pequeña colección, un gran comienzo.</span><a href="#top">Volver arriba <span aria-hidden="true">↑</span></a></footer>
 
   <dialog id="about-dialog" aria-labelledby="about-title">
     <div class="dialog-header"><span class="eyebrow">SOBRE LA COLECCIÓN</span><button id="close-about" class="clear-button" type="button" aria-label="Cerrar información">${closeIcon}</button></div>
     <h2 id="about-title">Un pequeño paso cada día.</h2>
+    <p>Una herramienta de consulta y estudio: kanji, contadores, kana, verbos, vocabulario, adjetivos y adverbios. Las nuevas secciones reúnen los apuntes organizados del primer curso y las tablas de referencia indicadas en cada página.</p>
     <p>80 kanji y tres ejemplos por carácter, con lecturas en hiragana y significados en español, a partir de <cite>80 kanjis x 3 palabras.pdf</cite>.</p>
     <p>Busca por carácter, palabra, lectura o significado. Puedes escribir sin tildes y usar hiragana o katakana. Las lecturas se muestran siempre junto a las palabras.</p>
     <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
@@ -83,6 +90,19 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </dialog>
 
 `;
+
+const isKanjiPage = !new URL(window.location.href).searchParams.get('section')
+  || new URL(window.location.href).searchParams.get('section') === 'kanji';
+document.querySelector<HTMLElement>('#kanji-page')!.hidden = !isKanjiPage;
+document.querySelector<HTMLElement>('#study-page')!.hidden = isKanjiPage;
+const aboutDialog = document.querySelector<HTMLDialogElement>('#about-dialog')!;
+document.querySelector('#open-about')!.addEventListener('click', () => aboutDialog.showModal());
+document.querySelector('#close-about')!.addEventListener('click', () => aboutDialog.close());
+aboutDialog.addEventListener('click', (event) => {
+  if (event.target !== aboutDialog) return;
+  const bounds = aboutDialog.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) aboutDialog.close();
+});
 
 function element<K extends keyof HTMLElementTagNameMap>(tag: K, className: string, text?: string) {
   const node = document.createElement(tag);
@@ -102,7 +122,6 @@ async function start() {
   const shortcut = document.querySelector<HTMLElement>('#search-shortcut')!;
   const emptyState = document.querySelector<HTMLDivElement>('#empty-state')!;
   const collectionEnd = document.querySelector<HTMLParagraphElement>('#collection-end')!;
-  const dialog = document.querySelector<HTMLDialogElement>('#about-dialog')!;
   const search = createKanjiSearch(kanji);
   const positions = new Map<string, number>(kanji.map((entry, index) => [entry.id, index + 1]));
   const difficulties = collectionDifficulties(source);
@@ -248,14 +267,6 @@ async function start() {
     difficultyFilter = button.dataset.rowFilter as RowDifficultyFilter;
     updateSearch();
   }));
-  document.querySelector('#open-about')!.addEventListener('click', () => dialog.showModal());
-  document.querySelector('#close-about')!.addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', (event) => {
-    if (event.target === dialog) {
-      const bounds = dialog.getBoundingClientRect();
-      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
-    }
-  });
   document.addEventListener('keydown', (event) => {
     const target = event.target as HTMLElement;
     if (event.key === '/' && !event.isComposing && !event.metaKey && !event.ctrlKey && !event.altKey && !document.querySelector('dialog[open]') && !target.closest('input, textarea, [contenteditable="true"]')) {
@@ -273,7 +284,33 @@ async function start() {
   render();
 }
 
-void start().catch(() => {
+async function boot() {
+  const navigation = await loadNavigation();
+  const section = resolveSection(navigation, window.location.href);
+  const menu = document.querySelector('#section-nav')!;
+  for (const item of navigation.sections) {
+    const link = element('a', 'section-link', item.label);
+    link.href = sectionHref(item, document.baseURI);
+    if (item.id === section.id) link.setAttribute('aria-current', 'page');
+    menu.append(link);
+  }
+  if (section.kind === 'kanji') await start();
+  else {
+    const content = await loadStudyDocument(section);
+    renderStudyPage(document.querySelector('#study-page')!, content, section);
+    document.title = `${section.label} · 80kanjis`;
+  }
+}
+
+void boot().catch((error: unknown) => {
+  if (!isKanjiPage) {
+    const host = document.querySelector('#study-page')!;
+    const message = element('p', 'collection-status load-error', error instanceof Error ? error.message : 'No se pudo cargar esta sección.');
+    const back = element('a', 'section-link', 'Volver a 80 kanjis');
+    back.href = sectionHref({ id: 'kanji', label: '80 kanjis', kind: 'kanji', file: 'collection.json' }, document.baseURI);
+    host.replaceChildren(message, back);
+    return;
+  }
   const status = document.querySelector<HTMLElement>('#collection-status')!;
   status.hidden = false;
   status.textContent = 'No se pudo cargar la colección. Recarga la página para volver a intentarlo.';

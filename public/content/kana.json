@@ -1,0 +1,892 @@
+{
+  "$schema": "./study.schema.json#/$defs/kana",
+  "version": 1,
+  "kind": "kana",
+  "title": "Kana",
+  "description": "Hiragana y katakana, lado a lado: sonidos básicos, marcas sonoras y combinaciones.",
+  "sources": [
+    {
+      "id": "kana-chart",
+      "label": "Tabla de kana · Embajada de Japón en Canadá",
+      "type": "reference",
+      "url": "https://www.ca.emb-japan.go.jp/2018_shared_images/Hello_Japan/hello%21japan_Japanese.pdf"
+    }
+  ],
+  "groups": [
+    {
+      "id": "basic",
+      "label": "Básicos"
+    },
+    {
+      "id": "voiced",
+      "label": "Dakuten y handakuten"
+    },
+    {
+      "id": "combined",
+      "label": "Combinaciones"
+    }
+  ],
+  "guides": [
+    {
+      "id": "scripts",
+      "title": "Dos escrituras para los mismos sonidos",
+      "sourceId": "kana-chart",
+      "paragraphs": [
+        "El hiragana aparece en terminaciones, partículas y muchas palabras japonesas. El katakana se usa, entre otros casos, para préstamos y nombres extranjeros.",
+        "Las letras latinas son una ayuda inicial: intenta reconocer el kana directamente."
+      ]
+    },
+    {
+      "id": "small",
+      "title": "Kana pequeños y consonantes dobles",
+      "sourceId": "kana-chart",
+      "paragraphs": [
+        "きゃ es una combinación; no se lee como きや. ゃ・ゅ・ょ pequeños modifican el sonido anterior.",
+        "っ y ッ pequeños indican una pausa breve antes de la consonante siguiente: きって. La marca ー alarga la vocal en katakana."
+      ]
+    },
+    {
+      "id": "particles",
+      "title": "Lecturas que dependen de su función",
+      "sourceId": "kana-chart",
+      "paragraphs": [
+        "は se pronuncia wa cuando es partícula; へ se pronuncia e cuando marca dirección. を se pronuncia normalmente o.",
+        "ぢ y じ comparten normalmente la pronunciación ji; づ y ず, zu. La grafía depende de la palabra."
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "kana-3042",
+      "hiragana": "あ",
+      "katakana": "ア",
+      "romaji": "a",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3044",
+      "hiragana": "い",
+      "katakana": "イ",
+      "romaji": "i",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3046",
+      "hiragana": "う",
+      "katakana": "ウ",
+      "romaji": "u",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3048",
+      "hiragana": "え",
+      "katakana": "エ",
+      "romaji": "e",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304a",
+      "hiragana": "お",
+      "katakana": "オ",
+      "romaji": "o",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304b",
+      "hiragana": "か",
+      "katakana": "カ",
+      "romaji": "ka",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304d",
+      "hiragana": "き",
+      "katakana": "キ",
+      "romaji": "ki",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304f",
+      "hiragana": "く",
+      "katakana": "ク",
+      "romaji": "ku",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3051",
+      "hiragana": "け",
+      "katakana": "ケ",
+      "romaji": "ke",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3053",
+      "hiragana": "こ",
+      "katakana": "コ",
+      "romaji": "ko",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3055",
+      "hiragana": "さ",
+      "katakana": "サ",
+      "romaji": "sa",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3057",
+      "hiragana": "し",
+      "katakana": "シ",
+      "romaji": "shi",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3059",
+      "hiragana": "す",
+      "katakana": "ス",
+      "romaji": "su",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-305b",
+      "hiragana": "せ",
+      "katakana": "セ",
+      "romaji": "se",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-305d",
+      "hiragana": "そ",
+      "katakana": "ソ",
+      "romaji": "so",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-305f",
+      "hiragana": "た",
+      "katakana": "タ",
+      "romaji": "ta",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3061",
+      "hiragana": "ち",
+      "katakana": "チ",
+      "romaji": "chi",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3064",
+      "hiragana": "つ",
+      "katakana": "ツ",
+      "romaji": "tsu",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3066",
+      "hiragana": "て",
+      "katakana": "テ",
+      "romaji": "te",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3068",
+      "hiragana": "と",
+      "katakana": "ト",
+      "romaji": "to",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-306a",
+      "hiragana": "な",
+      "katakana": "ナ",
+      "romaji": "na",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-306b",
+      "hiragana": "に",
+      "katakana": "ニ",
+      "romaji": "ni",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-306c",
+      "hiragana": "ぬ",
+      "katakana": "ヌ",
+      "romaji": "nu",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-306d",
+      "hiragana": "ね",
+      "katakana": "ネ",
+      "romaji": "ne",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-306e",
+      "hiragana": "の",
+      "katakana": "ノ",
+      "romaji": "no",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-306f",
+      "hiragana": "は",
+      "katakana": "ハ",
+      "romaji": "ha",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3072",
+      "hiragana": "ひ",
+      "katakana": "ヒ",
+      "romaji": "hi",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3075",
+      "hiragana": "ふ",
+      "katakana": "フ",
+      "romaji": "fu",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3078",
+      "hiragana": "へ",
+      "katakana": "ヘ",
+      "romaji": "he",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-307b",
+      "hiragana": "ほ",
+      "katakana": "ホ",
+      "romaji": "ho",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-307e",
+      "hiragana": "ま",
+      "katakana": "マ",
+      "romaji": "ma",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-307f",
+      "hiragana": "み",
+      "katakana": "ミ",
+      "romaji": "mi",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3080",
+      "hiragana": "む",
+      "katakana": "ム",
+      "romaji": "mu",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3081",
+      "hiragana": "め",
+      "katakana": "メ",
+      "romaji": "me",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3082",
+      "hiragana": "も",
+      "katakana": "モ",
+      "romaji": "mo",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3084",
+      "hiragana": "や",
+      "katakana": "ヤ",
+      "romaji": "ya",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3086",
+      "hiragana": "ゆ",
+      "katakana": "ユ",
+      "romaji": "yu",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3088",
+      "hiragana": "よ",
+      "katakana": "ヨ",
+      "romaji": "yo",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3089",
+      "hiragana": "ら",
+      "katakana": "ラ",
+      "romaji": "ra",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-308a",
+      "hiragana": "り",
+      "katakana": "リ",
+      "romaji": "ri",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-308b",
+      "hiragana": "る",
+      "katakana": "ル",
+      "romaji": "ru",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-308c",
+      "hiragana": "れ",
+      "katakana": "レ",
+      "romaji": "re",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-308d",
+      "hiragana": "ろ",
+      "katakana": "ロ",
+      "romaji": "ro",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-308f",
+      "hiragana": "わ",
+      "katakana": "ワ",
+      "romaji": "wa",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3092",
+      "hiragana": "を",
+      "katakana": "ヲ",
+      "romaji": "wo",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3093",
+      "hiragana": "ん",
+      "katakana": "ン",
+      "romaji": "n",
+      "group": "basic",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304c",
+      "hiragana": "が",
+      "katakana": "ガ",
+      "romaji": "ga",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304e",
+      "hiragana": "ぎ",
+      "katakana": "ギ",
+      "romaji": "gi",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3050",
+      "hiragana": "ぐ",
+      "katakana": "グ",
+      "romaji": "gu",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3052",
+      "hiragana": "げ",
+      "katakana": "ゲ",
+      "romaji": "ge",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3054",
+      "hiragana": "ご",
+      "katakana": "ゴ",
+      "romaji": "go",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3056",
+      "hiragana": "ざ",
+      "katakana": "ザ",
+      "romaji": "za",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3058",
+      "hiragana": "じ",
+      "katakana": "ジ",
+      "romaji": "ji",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-305a",
+      "hiragana": "ず",
+      "katakana": "ズ",
+      "romaji": "zu",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-305c",
+      "hiragana": "ぜ",
+      "katakana": "ゼ",
+      "romaji": "ze",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-305e",
+      "hiragana": "ぞ",
+      "katakana": "ゾ",
+      "romaji": "zo",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3060",
+      "hiragana": "だ",
+      "katakana": "ダ",
+      "romaji": "da",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3062",
+      "hiragana": "ぢ",
+      "katakana": "ヂ",
+      "romaji": "ji",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3065",
+      "hiragana": "づ",
+      "katakana": "ヅ",
+      "romaji": "zu",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3067",
+      "hiragana": "で",
+      "katakana": "デ",
+      "romaji": "de",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3069",
+      "hiragana": "ど",
+      "katakana": "ド",
+      "romaji": "do",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3070",
+      "hiragana": "ば",
+      "katakana": "バ",
+      "romaji": "ba",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3073",
+      "hiragana": "び",
+      "katakana": "ビ",
+      "romaji": "bi",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3076",
+      "hiragana": "ぶ",
+      "katakana": "ブ",
+      "romaji": "bu",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3079",
+      "hiragana": "べ",
+      "katakana": "ベ",
+      "romaji": "be",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-307c",
+      "hiragana": "ぼ",
+      "katakana": "ボ",
+      "romaji": "bo",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3071",
+      "hiragana": "ぱ",
+      "katakana": "パ",
+      "romaji": "pa",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3074",
+      "hiragana": "ぴ",
+      "katakana": "ピ",
+      "romaji": "pi",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-3077",
+      "hiragana": "ぷ",
+      "katakana": "プ",
+      "romaji": "pu",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-307a",
+      "hiragana": "ぺ",
+      "katakana": "ペ",
+      "romaji": "pe",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-307d",
+      "hiragana": "ぽ",
+      "katakana": "ポ",
+      "romaji": "po",
+      "group": "voiced",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304d3083",
+      "hiragana": "きゃ",
+      "katakana": "キャ",
+      "romaji": "kya",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304d3085",
+      "hiragana": "きゅ",
+      "katakana": "キュ",
+      "romaji": "kyu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304d3087",
+      "hiragana": "きょ",
+      "katakana": "キョ",
+      "romaji": "kyo",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30573083",
+      "hiragana": "しゃ",
+      "katakana": "シャ",
+      "romaji": "sha",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30573085",
+      "hiragana": "しゅ",
+      "katakana": "シュ",
+      "romaji": "shu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30573087",
+      "hiragana": "しょ",
+      "katakana": "ショ",
+      "romaji": "sho",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30613083",
+      "hiragana": "ちゃ",
+      "katakana": "チャ",
+      "romaji": "cha",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30613085",
+      "hiragana": "ちゅ",
+      "katakana": "チュ",
+      "romaji": "chu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30613087",
+      "hiragana": "ちょ",
+      "katakana": "チョ",
+      "romaji": "cho",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-306b3083",
+      "hiragana": "にゃ",
+      "katakana": "ニャ",
+      "romaji": "nya",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-306b3085",
+      "hiragana": "にゅ",
+      "katakana": "ニュ",
+      "romaji": "nyu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-306b3087",
+      "hiragana": "にょ",
+      "katakana": "ニョ",
+      "romaji": "nyo",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30723083",
+      "hiragana": "ひゃ",
+      "katakana": "ヒャ",
+      "romaji": "hya",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30723085",
+      "hiragana": "ひゅ",
+      "katakana": "ヒュ",
+      "romaji": "hyu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30723087",
+      "hiragana": "ひょ",
+      "katakana": "ヒョ",
+      "romaji": "hyo",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-307f3083",
+      "hiragana": "みゃ",
+      "katakana": "ミャ",
+      "romaji": "mya",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-307f3085",
+      "hiragana": "みゅ",
+      "katakana": "ミュ",
+      "romaji": "myu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-307f3087",
+      "hiragana": "みょ",
+      "katakana": "ミョ",
+      "romaji": "myo",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-308a3083",
+      "hiragana": "りゃ",
+      "katakana": "リャ",
+      "romaji": "rya",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-308a3085",
+      "hiragana": "りゅ",
+      "katakana": "リュ",
+      "romaji": "ryu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-308a3087",
+      "hiragana": "りょ",
+      "katakana": "リョ",
+      "romaji": "ryo",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304e3083",
+      "hiragana": "ぎゃ",
+      "katakana": "ギャ",
+      "romaji": "gya",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304e3085",
+      "hiragana": "ぎゅ",
+      "katakana": "ギュ",
+      "romaji": "gyu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-304e3087",
+      "hiragana": "ぎょ",
+      "katakana": "ギョ",
+      "romaji": "gyo",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30583083",
+      "hiragana": "じゃ",
+      "katakana": "ジャ",
+      "romaji": "ja",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30583085",
+      "hiragana": "じゅ",
+      "katakana": "ジュ",
+      "romaji": "ju",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30583087",
+      "hiragana": "じょ",
+      "katakana": "ジョ",
+      "romaji": "jo",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30733083",
+      "hiragana": "びゃ",
+      "katakana": "ビャ",
+      "romaji": "bya",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30733085",
+      "hiragana": "びゅ",
+      "katakana": "ビュ",
+      "romaji": "byu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30733087",
+      "hiragana": "びょ",
+      "katakana": "ビョ",
+      "romaji": "byo",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30743083",
+      "hiragana": "ぴゃ",
+      "katakana": "ピャ",
+      "romaji": "pya",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30743085",
+      "hiragana": "ぴゅ",
+      "katakana": "ピュ",
+      "romaji": "pyu",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    },
+    {
+      "id": "kana-30743087",
+      "hiragana": "ぴょ",
+      "katakana": "ピョ",
+      "romaji": "pyo",
+      "group": "combined",
+      "sourceId": "kana-chart"
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "$schema": "./study.schema.json#/$defs/lexicon",
+  "version": 1,
+  "kind": "lexicon",
+  "title": "Adjetivos y adverbios",
+  "description": "Describe cómo son las cosas y cómo suceden: adjetivos い, adjetivos な y adverbios.",
+  "sources": [
+    {
+      "id": "vocabulary-note",
+      "label": "02 Vocabulario temático",
+      "type": "vault",
+      "path": "Primer curso organizado/02 Vocabulario/02 Vocabulario temático.md",
+      "sha256": "82e537c4156ba65c203caa60a35ec1c11cf3133e618e4cde89f4486b97a6c66d"
+    },
+    {
+      "id": "modifiers-note",
+      "label": "03 Adjetivos y adverbios",
+      "type": "vault",
+      "path": "Primer curso organizado/01 Gramática/03 Adjetivos y adverbios.md",
+      "sha256": "1a3cb27ede616f039ce9fdd68d31913b768b9220854146b9487fb5fda5c24d0b"
+    }
+  ],
+  "groups": [
+    {
+      "id": "i",
+      "label": "Adjetivos い"
+    },
+    {
+      "id": "na",
+      "label": "Adjetivos な"
+    },
+    {
+      "id": "adverb",
+      "label": "Adverbios"
+    }
+  ],
+  "guides": [
+    {
+      "id": "types",
+      "title": "い y な: no basta con mirar la última letra",
+      "sourceId": "modifiers-note",
+      "paragraphs": [
+        "Los adjetivos な llevan な al modificar un nombre: きれいな はこ. きれい y ゆうめい son adjetivos な aunque terminen gráficamente en い."
+      ]
+    },
+    {
+      "id": "i-forms",
+      "title": "Conjugar un adjetivo い",
+      "sourceId": "modifiers-note",
+      "paragraphs": [
+        "たのしいです → たのしくないです → たのしかったです → たのしくなかったです.",
+        "いい usa la raíz よ-: よくない, よかった, よくなかった. かっこいい sigue el mismo patrón."
+      ]
+    },
+    {
+      "id": "na-forms",
+      "title": "Conjugar un adjetivo な",
+      "sourceId": "modifiers-note",
+      "paragraphs": [
+        "べんりです → べんりではありません → べんりでした → べんりではありませんでした."
+      ]
+    },
+    {
+      "id": "adverbs",
+      "title": "Convertir un adjetivo en adverbio",
+      "sourceId": "modifiers-note",
+      "paragraphs": [
+        "Adjetivo い: quitar い y añadir く. はやい → はやく.",
+        "Adjetivo な: añadir に. しずか → しずかに. いい → よく es la excepción."
+      ]
+    },
+    {
+      "id": "joining",
+      "title": "Unir dos adjetivos",
+      "sourceId": "modifiers-note",
+      "paragraphs": [
+        "El primer adjetivo い termina en くて; el primer adjetivo な termina en で. El último expresa el tiempo y la cortesía."
+      ],
+      "examples": [
+        {
+          "written": "この まちは しずかで べんりです。",
+          "reading": "この まちは しずかで べんりです。",
+          "meaning": "Esta ciudad es tranquila y práctica."
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "modifier-tanoshii",
+      "written": "楽しい",
+      "reading": "たのしい",
+      "romaji": "tanoshii",
+      "meaning": "divertido",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-ureshii",
+      "written": "嬉しい",
+      "reading": "うれしい",
+      "romaji": "ureshii",
+      "meaning": "contento/feliz",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-urayamashii",
+      "written": "羨ましい",
+      "reading": "うらやましい",
+      "romaji": "urayamashii",
+      "meaning": "sentir envidia; envidiable",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-muzukashii",
+      "written": "難しい",
+      "reading": "むずかしい",
+      "romaji": "muzukashii",
+      "meaning": "difícil",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-yasashii",
+      "written": "易しい",
+      "reading": "やさしい",
+      "romaji": "yasashii",
+      "meaning": "fácil; también amable con otro kanji/contexto",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-hayai",
+      "written": "早い／速い",
+      "reading": "はやい",
+      "romaji": "hayai",
+      "meaning": "temprano/rápido",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-osoi",
+      "written": "遅い",
+      "reading": "おそい",
+      "romaji": "osoi",
+      "meaning": "tarde/lento",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-atsui",
+      "written": "暑い",
+      "reading": "あつい",
+      "romaji": "atsui",
+      "meaning": "calor ambiental",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-atatakai",
+      "written": "暖かい",
+      "reading": "あたたかい",
+      "romaji": "atatakai",
+      "meaning": "templado/cálido",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-tsumaranai",
+      "written": "つまらない",
+      "reading": "つまらない",
+      "romaji": "tsumaranai",
+      "meaning": "aburrido",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-isogashii",
+      "written": "忙しい",
+      "reading": "いそがしい",
+      "romaji": "isogashii",
+      "meaning": "ocupado",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-wakai",
+      "written": "若い",
+      "reading": "わかい",
+      "romaji": "wakai",
+      "meaning": "joven",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-warui",
+      "written": "悪い",
+      "reading": "わるい",
+      "romaji": "warui",
+      "meaning": "malo",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-nagai",
+      "written": "長い",
+      "reading": "ながい",
+      "romaji": "nagai",
+      "meaning": "largo",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-kurai",
+      "written": "暗い",
+      "reading": "くらい",
+      "romaji": "kurai",
+      "meaning": "oscuro",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-kuroi",
+      "written": "黒い",
+      "reading": "くろい",
+      "romaji": "kuroi",
+      "meaning": "negro",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-omoshiroi",
+      "written": "面白い",
+      "reading": "おもしろい",
+      "romaji": "omoshiroi",
+      "meaning": "interesante/divertido",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-mendoukusai",
+      "written": "面倒くさい",
+      "reading": "めんどうくさい",
+      "romaji": "mendoukusai",
+      "meaning": "pesado/engorroso; coloquial",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-oshii",
+      "written": "惜しい",
+      "reading": "おしい",
+      "romaji": "oshii",
+      "meaning": "por poco/casi; una lástima",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-benri",
+      "written": "便利",
+      "reading": "べんり",
+      "romaji": "benri",
+      "meaning": "práctico/cómodo",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-kantan",
+      "written": "簡単",
+      "reading": "かんたん",
+      "romaji": "kantan",
+      "meaning": "fácil/simple",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-taihen",
+      "written": "大変",
+      "reading": "たいへん",
+      "romaji": "taihen",
+      "meaning": "duro/serio; muy según construcción",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-shizuka",
+      "written": "静か",
+      "reading": "しずか",
+      "romaji": "shizuka",
+      "meaning": "tranquilo/silencioso",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-genki",
+      "written": "元気",
+      "reading": "げんき",
+      "romaji": "genki",
+      "meaning": "bien, sano, enérgico",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-kirei",
+      "written": "きれい",
+      "reading": "きれい",
+      "romaji": "kirei",
+      "meaning": "bonito/limpio",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-yuumei",
+      "written": "有名",
+      "reading": "ゆうめい",
+      "romaji": "yuumei",
+      "meaning": "famoso",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-jouzu",
+      "written": "上手",
+      "reading": "じょうず",
+      "romaji": "jouzu",
+      "meaning": "hábil",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-heta",
+      "written": "下手",
+      "reading": "へた",
+      "romaji": "heta",
+      "meaning": "torpe/poco hábil",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-tokui",
+      "written": "得意",
+      "reading": "とくい",
+      "romaji": "tokui",
+      "meaning": "punto fuerte; se me da bien",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-kanpeki",
+      "written": "完璧",
+      "reading": "かんぺき",
+      "romaji": "kanpeki",
+      "meaning": "perfecto/sin fallos",
+      "group": "na",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-oishii",
+      "written": "おいしい",
+      "reading": "おいしい",
+      "romaji": "oishii",
+      "meaning": "rico / delicioso",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-mazui",
+      "written": "まずい",
+      "reading": "まずい",
+      "romaji": "mazui",
+      "meaning": "de mal sabor; problemático según el contexto",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-amai",
+      "written": "あまい",
+      "reading": "あまい",
+      "romaji": "amai",
+      "meaning": "dulce; indulgente o ingenuo según el contexto",
+      "group": "i",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "modifier-ii-yoi",
+      "written": "いい／よい",
+      "reading": "いい／よい",
+      "romaji": "ii / yoi",
+      "meaning": "bueno",
+      "group": "i",
+      "sourceId": "modifiers-note"
+    },
+    {
+      "id": "adverb-totemo",
+      "written": "とても",
+      "reading": "とても",
+      "romaji": "totemo",
+      "meaning": "muy",
+      "group": "adverb",
+      "sourceId": "modifiers-note",
+      "note": "とても おもしろいです。"
+    },
+    {
+      "id": "adverb-kanari",
+      "written": "かなり",
+      "reading": "かなり",
+      "romaji": "kanari",
+      "meaning": "bastante",
+      "group": "adverb",
+      "sourceId": "modifiers-note",
+      "note": "かなり さむいです。"
+    },
+    {
+      "id": "adverb-chotto",
+      "written": "ちょっと",
+      "reading": "ちょっと",
+      "romaji": "chotto",
+      "meaning": "un poco",
+      "group": "adverb",
+      "sourceId": "modifiers-note",
+      "note": "ちょっと いそがしいです。"
+    },
+    {
+      "id": "adverb-sukoshi",
+      "written": "すこし",
+      "reading": "すこし",
+      "romaji": "sukoshi",
+      "meaning": "un poco",
+      "group": "adverb",
+      "sourceId": "modifiers-note",
+      "note": "にほんごが すこし わかります。"
+    },
+    {
+      "id": "adverb-amari",
+      "written": "あまり",
+      "reading": "あまり",
+      "romaji": "amari",
+      "meaning": "no muy",
+      "group": "adverb",
+      "sourceId": "modifiers-note",
+      "note": "Se usa con una forma negativa."
+    },
+    {
+      "id": "adverb-zenzen",
+      "written": "ぜんぜん",
+      "reading": "ぜんぜん",
+      "romaji": "zenzen",
+      "meaning": "en absoluto",
+      "group": "adverb",
+      "sourceId": "modifiers-note",
+      "note": "Se usa con una forma negativa."
+    },
+    {
+      "id": "adverb-takusan",
+      "written": "たくさん",
+      "reading": "たくさん",
+      "romaji": "takusan",
+      "meaning": "mucho(s), con nombres o verbos",
+      "group": "adverb",
+      "sourceId": "modifiers-note",
+      "note": "たくさん たべます。"
+    },
+    {
+      "id": "adverb-hotondo",
+      "written": "ほとんど",
+      "reading": "ほとんど",
+      "romaji": "hotondo",
+      "meaning": "casi/casi todo",
+      "group": "adverb",
+      "sourceId": "modifiers-note",
+      "note": "ほとんど まいにち"
+    }
+  ]
+}

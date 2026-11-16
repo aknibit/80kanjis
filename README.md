@@ -1,6 +1,6 @@
 # 80 kanjis
 
-A small Spanish-language kanji collection built with **TypeScript + Vite**, without a UI framework, database, server, or runtime API. All 80 kanji, 232 unique words (240 examples), readings, Spanish translations, and published difficulties live in **public/collection.json**, the single source of truth.
+A Spanish-language Japanese study tool built with **TypeScript + Vite**, without a UI framework, database, server, or runtime API. The landing page remains the collection of 80 kanji and 232 unique words (240 examples), whose source of truth is **public/collection.json**. Counters, kana, verbs, thematic vocabulary, adjectives, and adverbs each load their own versioned JSON from **public/content/**. See [CONTENIDO.md](CONTENIDO.md) for the content format, provenance, and PR review workflow.
 
 ## Run locally
 
@@ -20,10 +20,12 @@ The project has a single static application. Difficulty classifications are disp
 | `npm run dev` | Local development server with live reload |
 | `npm run build` | Type-check and build the application into `dist/` |
 | `npm run preview` | Preview the production build locally |
+| `npm run check:content` | Validate canonical content, IDs, groups, sources, and section references |
 
 Validate the collection and build:
 
 ```sh
+npm run check:content
 npm test
 npm run build
 npm run check:build
@@ -33,7 +35,7 @@ npm run check:build
 
 Upload the **contents of `dist/`** to any static host or CDN. Set the build command to `npm run build` and the output directory to `dist` when using a Git-based host. Vite uses relative asset URLs, so the same build works at a domain root or a subdirectory. There are no client-side routes or rewrite rules to configure.
 
-Serve `index.html` and `collection.json` with revalidation (`Cache-Control: no-cache`). The content-hashed files in `assets/` can use `Cache-Control: public, max-age=31536000, immutable`.
+Serve `index.html`, `collection.json`, and the JSON files in `content/` with revalidation (`Cache-Control: no-cache`). The content-hashed files in `assets/` can use `Cache-Control: public, max-age=31536000, immutable`.
 
 Typography loads DM Sans, Noto Serif JP, and Noto Sans JP from Google Fonts, with system fallbacks. Kanji and written words retain Noto Serif JP; vocabulary readings use Noto Sans JP at 16 px with a darker color, including in dialogs. Basic on/kun readings in support dialogs use the same Japanese sans-serif family. The collection and search do not depend on that service.
 
@@ -53,6 +55,9 @@ To publish later changes, push to `main`. You can also select **Run workflow** f
 
 ## Features
 
+- Six menu entries: 80 kanji (the default home page), counters, kana, verbs, vocabulary, and adjectives/adverbs. Sections use CDN-compatible query URLs and load only their own content file. New sections include search, group filters, usage notes, source references, and stable entry IDs for future quiz reuse.
+- Counter reference with 20 expandable groups, explicit pronunciation variants and sound changes, questions, calendar dates through the 31st, and a distinction between counters and number units. Kana compares hiragana and katakana for 104 basic, voiced, and contracted sounds. The curated vault supplies 50 verbs, 132 vocabulary entries, and 42 adjectives/adverbs.
+- Typed runtime content validation, JSON Schema editing support, and a read-only PR workflow that tests and builds every proposed change. The build never depends on an accessible Obsidian vault.
 - The collection is one continuous white surface with four study columns per row: one labeled Kanji and three labeled Vocabulario. Fine vertical rules separate the columns, with subtle horizontal rules between rows and no individual card borders or backgrounds. Smaller screens use a grouped 2×2 layout with matching separators.
 - Search across kanji, written words, kana readings, and Spanish meanings.
 - Case-insensitive and accent-insensitive Spanish matching; hiragana, katakana, and half-width kana matching that preserves dakuten/handakuten.

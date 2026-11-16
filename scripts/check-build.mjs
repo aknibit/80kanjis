@@ -23,8 +23,12 @@ for (const file of await readdir('public/data')) {
   assert.deepEqual(await readFile(`dist/data/${file}`), await readFile(`public/data/${file}`),
     `Missing or changed dictionary credit/license: ${file}`);
 }
+for (const file of await readdir('public/content')) {
+  assert.deepEqual(await readFile(`dist/content/${file}`), await readFile(`public/content/${file}`),
+    `Missing or changed canonical section content: ${file}`);
+}
 const html = await readFile('dist/index.html', 'utf8');
 assert.match(html, /<script\b[^>]*\bsrc="\.\/assets\/index-[^"]+\.js"/);
 assert.doesNotMatch(html, /(?:src|href)="\/(?:src|assets)\//,
   'Production HTML must use compiled, relative assets for GitHub project Pages.');
-console.log('Static build verified: canonical collection, audio, visible readings, and read-only difficulties.');
+console.log('Static build verified: canonical collection and sections, audio, visible readings, and read-only difficulties.');

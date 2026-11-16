@@ -1,0 +1,209 @@
+import type { ContentEntry, ContentKind, NavigationDocument, NavigationSection, StudyDocument } from '../content-types.ts';
+import { normalizeSearch } from './search.ts';
+
+type RecordValue = Record<string, unknown>;
+const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const kanaReading = /^[ぁ-ゖー\s／/]+$/u;
+
+function check(condition: unknown, message: string): asserts condition {
+  if (!condition) throw new Error(message);
+}
+
+function record(value: unknown, required: readonly string[], optional: readonly string[] = []): RecordValue {
+  check(typeof value === 'object' && value !== null && !Array.isArray(value), 'Se esperaba un objeto de contenido.');
+  const item = value as RecordValue;
+  check(required.every((key) => Object.hasOwn(item, key)), `Faltan campos obligatorios: ${required.join(', ')}.`);
+  check(Object.keys(item).every((key) => required.includes(key) || optional.includes(key)), 'Hay campos de contenido desconocidos.');
+  return item;
+}
+
+function text(value: unknown): asserts value is string {
+  check(typeof value === 'string' && value.trim().length > 0, 'Hay un texto vacío o no válido.');
+}
+
+function id(value: unknown): asserts value is string {
+  text(value);
+  check(slug.test(value), `Identificador no válido: ${value}.`);
+}
+
+function array(value: unknown, min = 0): asserts value is unknown[] {
+  check(Array.isArray(value) && value.length >= min && value.length <= 5000, 'Lista de contenido vacía o no válida.');
+}
+
+function texts(value: unknown, min = 0): asserts value is string[] {
+  array(value, min);
+  value.forEach(text);
+}
+
+function unique(value: unknown[], field = 'id'): void {
+  const values = value.map((item) => (item as RecordValue)[field]);
+  check(new Set(values).size === values.length, `Hay valores repetidos de ${field}.`);
+}
+
+function parse(text: string): unknown {
+  check(text.length <= 2_000_000, 'El archivo de contenido es demasiado grande.');
+  try { return JSON.parse(text) as unknown; }
+  catch { throw new Error('El archivo no contiene JSON válido.'); }
+}
+
+function isKind(value: unknown): value is ContentKind {
+  return value === 'counters' || value === 'kana' || value === 'lexicon';
+}
+
+function https(value: unknown): void {
+  text(value);
+  check(new URL(value).protocol === 'https:', 'La referencia debe usar HTTPS.');
+}
+
+export function parseNavigation(input: string): NavigationDocument {
+  const data = record(parse(input), ['version', 'sections'], ['$schema']);
+  if (data.$schema !== undefined) text(data.$schema);
+  check(data.version === 1, 'Versión de navegación no compatible.');
+  array(data.sections, 1);
+  for (const value of data.sections) {
+    const section = record(value, ['id', 'label', 'kind', 'file']);
+    id(section.id); text(section.label); text(section.file);
+    if (section.kind === 'kanji') {
+      check(section.id === 'kanji' && section.file === 'collection.json', 'La colección de kanji debe conservar su fuente.');
+    } else {
+      check(isKind(section.kind) && section.id !== 'kanji', 'Tipo de sección desconocido.');
+      check(/^content\/[a-z0-9-]+\.json$/.test(section.file), 'Ruta de contenido no válida.');
+    }
+  }
+  unique(data.sections);
+  check((data.sections[0] as RecordValue).id === 'kanji', '80 kanjis debe ser la primera sección.');
+  return data as unknown as NavigationDocument;
+}
+
+/** Shared with PR checks: reject malformed content before it reaches the UI. */
+export function parseStudyDocument(input: string, expectedKind?: ContentKind): StudyDocument {
+  const data = record(parse(input), ['version', 'kind', 'title', 'description', 'sources', 'groups', 'guides', 'entries'], ['$schema', 'editorialNotes']);
+  if (data.$schema !== undefined) text(data.$schema);
+  check(data.version === 1 && isKind(data.kind), 'Versión o tipo de contenido no compatible.');
+  check(!expectedKind || data.kind === expectedKind, 'El archivo no corresponde al tipo de sección.');
+  text(data.title); text(data.description);
+  array(data.sources, 1); array(data.groups, 1); array(data.guides); array(data.entries, 1);
+  for (const value of data.sources) {
+    const source = record(value, ['id', 'label', 'type'], ['path', 'sha256', 'url']);
+    id(source.id); text(source.label);
+    check(['vault', 'attachment', 'reference'].includes(String(source.type)), 'Tipo de fuente desconocido.');
+    if (source.type === 'vault' || source.path !== undefined) {
+      text(source.path);
+      check(!source.path.startsWith('/') && !source.path.split('/').includes('..') && source.path.endsWith('.md'), 'La nota de origen debe tener una ruta relativa.');
+    }
+    if (source.type === 'vault' || source.sha256 !== undefined) {
+      text(source.sha256);
+      check(/^[a-f0-9]{64}$/.test(source.sha256), 'Huella de la nota de origen no válida.');
+    }
+    if (source.type === 'reference' || source.url !== undefined) https(source.url);
+  }
+  for (const value of data.groups) {
+    const group = record(value, ['id', 'label']);
+    id(group.id); text(group.label);
+  }
+  unique(data.sources); unique(data.groups); unique(data.guides); unique(data.entries);
+  const sources = new Set(data.sources.map((source) => (source as RecordValue).id));
+  const groups = new Set(data.groups.map((group) => (group as RecordValue).id));
+  for (const value of data.guides) {
+    const guide = record(value, ['id', 'title', 'sourceId', 'paragraphs'], ['examples']);
+    id(guide.id); text(guide.title); texts(guide.paragraphs, 1);
+    check(sources.has(guide.sourceId), 'La guía referencia una fuente desconocida.');
+    if (guide.examples !== undefined) {
+      array(guide.examples, 1);
+      for (const value of guide.examples) {
+        const example = record(value, ['written', 'reading', 'meaning']);
+        text(example.written); text(example.reading); text(example.meaning);
+      }
+    }
+  }
+  for (const value of data.entries) {
+    const common = ['id', 'group', 'sourceId'];
+    const entry = data.kind === 'counters'
+      ? record(value, [...common, 'written', 'title', 'description', 'type', 'forms', 'question', 'notes'])
+      : data.kind === 'kana'
+        ? record(value, [...common, 'hiragana', 'katakana', 'romaji'])
+        : record(value, [...common, 'written', 'reading', 'romaji', 'meaning'], ['note']);
+    id(entry.id);
+    check(groups.has(entry.group), `Grupo desconocido en ${entry.id}.`);
+    check(sources.has(entry.sourceId), `Fuente desconocida en ${entry.id}.`);
+    if (data.kind === 'counters') {
+      text(entry.written); text(entry.title); text(entry.description); texts(entry.notes);
+      check(entry.type === 'counter' || entry.type === 'number', 'Tipo de contador desconocido.');
+      array(entry.forms, 1);
+      let previous = 0;
+      for (const value of entry.forms) {
+        const form = record(value, ['value', 'written', 'readings', 'special']);
+        check(typeof form.value === 'number' && Number.isSafeInteger(form.value) && form.value > previous, 'Las cantidades deben ser positivas, únicas y estar ordenadas.');
+        previous = form.value;
+        text(form.written); texts(form.readings, 1);
+        check(form.readings.every((reading) => kanaReading.test(reading)), 'Lectura de contador no válida.');
+        check(new Set(form.readings).size === form.readings.length, 'Lectura de contador repetida.');
+        check(typeof form.special === 'boolean', 'Falta la marca de lectura especial.');
+      }
+      const question = record(entry.question, ['written', 'readings']);
+      text(question.written); texts(question.readings, 1);
+      check(question.readings.every((reading) => kanaReading.test(reading)), 'Lectura de pregunta no válida.');
+    } else if (data.kind === 'kana') {
+      text(entry.hiragana); text(entry.katakana); text(entry.romaji);
+      check(/^[ぁ-ゖ]+$/u.test(entry.hiragana) && /^[ァ-ヶ]+$/u.test(entry.katakana), 'Los kana deben usar su escritura correspondiente.');
+      check(normalizeSearch(entry.katakana) === entry.hiragana, 'Hiragana y katakana no representan el mismo sonido.');
+    } else {
+      text(entry.written); text(entry.reading); text(entry.romaji); text(entry.meaning);
+      check(kanaReading.test(entry.reading), 'La lectura debe estar en hiragana.');
+      if (entry.note !== undefined) text(entry.note);
+    }
+  }
+  if (data.editorialNotes !== undefined) {
+    check(data.kind === 'counters', 'Las notas de transcripción corresponden a contadores.');
+    texts(data.editorialNotes);
+  }
+  return data as unknown as StudyDocument;
+}
+
+async function fetchFile(file: string): Promise<string> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+  try {
+    const response = await fetch(new URL(file, document.baseURI), { cache: 'no-store', signal: controller.signal });
+    if (!response.ok) throw new Error('No se pudo cargar el contenido.');
+    return await response.text();
+  } finally { clearTimeout(timeout); }
+}
+
+export async function loadNavigation(): Promise<NavigationDocument> {
+  return parseNavigation(await fetchFile('content/navigation.json'));
+}
+
+export async function loadStudyDocument(section: NavigationSection): Promise<StudyDocument> {
+  check(isKind(section.kind) && /^content\/[a-z0-9-]+\.json$/.test(section.file), 'Sección de contenido no válida.');
+  return parseStudyDocument(await fetchFile(section.file), section.kind);
+}
+
+export function resolveSection(navigation: NavigationDocument, url: string): NavigationSection {
+  const id = new URL(url).searchParams.get('section') || 'kanji';
+  const section = navigation.sections.find((item) => item.id === id);
+  check(section, 'Esta sección no existe.');
+  return section;
+}
+
+/** Query-based pages work on a CDN subdirectory without server rewrite rules. */
+export function sectionHref(section: NavigationSection, base: string): string {
+  const url = new URL(base);
+  url.search = ''; url.hash = '';
+  if (section.id !== 'kanji') url.searchParams.set('section', section.id);
+  return url.href;
+}
+
+export function searchContent<T extends ContentEntry>(entries: readonly T[], query: string, group = 'all'): readonly T[] {
+  const terms = normalizeSearch(query).split(/\s+/).filter(Boolean);
+  return entries.filter((entry) => {
+    if (group !== 'all' && entry.group !== group) return false;
+    const searchable = 'forms' in entry
+      ? [entry.written, entry.title, entry.description, ...entry.notes, entry.question.written,
+        ...entry.question.readings, ...entry.forms.flatMap((form) => [String(form.value), form.written, ...form.readings])]
+      : 'hiragana' in entry ? [entry.hiragana, entry.katakana, entry.romaji]
+        : [entry.written, entry.reading, entry.romaji, entry.meaning, entry.note ?? ''];
+    const text = normalizeSearch(searchable.join(' '));
+    return terms.every((term) => text.includes(term));
+  });
+}

@@ -1,0 +1,1256 @@
+{
+  "$schema": "./study.schema.json#/$defs/lexicon",
+  "version": 1,
+  "kind": "lexicon",
+  "title": "Vocabulario",
+  "description": "Palabras del curso organizadas por tema, con su escritura habitual y su lectura en hiragana.",
+  "sources": [
+    {
+      "id": "vocabulary-note",
+      "label": "02 Vocabulario temático",
+      "type": "vault",
+      "path": "Primer curso organizado/02 Vocabulario/02 Vocabulario temático.md",
+      "sha256": "82e537c4156ba65c203caa60a35ec1c11cf3133e618e4cde89f4486b97a6c66d"
+    }
+  ],
+  "groups": [
+    {
+      "id": "topic-1",
+      "label": "Personas, familia y trato"
+    },
+    {
+      "id": "topic-2",
+      "label": "Escuela y aprendizaje"
+    },
+    {
+      "id": "topic-3",
+      "label": "Lugares y edificios"
+    },
+    {
+      "id": "topic-4",
+      "label": "Objetos"
+    },
+    {
+      "id": "topic-5",
+      "label": "Comida y bebida"
+    },
+    {
+      "id": "topic-6",
+      "label": "Animales y naturaleza"
+    },
+    {
+      "id": "topic-7",
+      "label": "Cuerpo y aspecto"
+    },
+    {
+      "id": "topic-8",
+      "label": "Formas, dirección y posición"
+    },
+    {
+      "id": "topic-9",
+      "label": "Sustantivos abstractos y actividades"
+    }
+  ],
+  "guides": [
+    {
+      "id": "usage",
+      "title": "Palabras que cambian con el contexto",
+      "sourceId": "vocabulary-note",
+      "paragraphs": [
+        "休日 es un día libre o festivo; no implica unas vacaciones largas.",
+        "自分 es uno mismo; 僕 es una forma principalmente masculina e informal de decir yo.",
+        "同じ puede ir delante de un nombre sin な."
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "vocab-hito",
+      "written": "人",
+      "reading": "ひと",
+      "romaji": "hito",
+      "meaning": "persona",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kata",
+      "written": "方",
+      "reading": "かた",
+      "romaji": "kata",
+      "meaning": "persona, forma respetuosa",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kazoku",
+      "written": "家族",
+      "reading": "かぞく",
+      "romaji": "kazoku",
+      "meaning": "familia propia",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-gokazoku",
+      "written": "ご家族",
+      "reading": "ごかぞく",
+      "romaji": "gokazoku",
+      "meaning": "familia de otra persona, cortés",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-minasan",
+      "written": "皆さん",
+      "reading": "みなさん",
+      "romaji": "minasan",
+      "meaning": "todos ustedes",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hoka-no-hito",
+      "written": "ほかの人",
+      "reading": "ほかの ひと",
+      "romaji": "hoka no hito",
+      "meaning": "otra persona / los demás",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-okyakusan",
+      "written": "お客さん",
+      "reading": "おきゃくさん",
+      "romaji": "okyakusan",
+      "meaning": "cliente/invitado",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-ten-in",
+      "written": "店員",
+      "reading": "てんいん",
+      "romaji": "ten'in",
+      "meaning": "dependiente/a",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-gijutsusha",
+      "written": "技術者",
+      "reading": "ぎじゅつしゃ",
+      "romaji": "gijutsusha",
+      "meaning": "técnico/a, ingeniero/a",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-bengoshi",
+      "written": "弁護士",
+      "reading": "べんごし",
+      "romaji": "bengoshi",
+      "meaning": "abogado/a",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-jibun",
+      "written": "自分",
+      "reading": "じぶん",
+      "romaji": "jibun",
+      "meaning": "uno mismo; reflexivo, no simple sinónimo de わたし",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-boku",
+      "written": "僕",
+      "reading": "ぼく",
+      "romaji": "boku",
+      "meaning": "yo, uso principalmente masculino e informal",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-uchi",
+      "written": "うち",
+      "reading": "うち",
+      "romaji": "uchi",
+      "meaning": "casa/grupo propio; en ciertos dialectos, «yo»",
+      "group": "topic-1",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shukudai",
+      "written": "宿題",
+      "reading": "しゅくだい",
+      "romaji": "shukudai",
+      "meaning": "deberes",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shitsumon",
+      "written": "質問",
+      "reading": "しつもん",
+      "romaji": "shitsumon",
+      "meaning": "pregunta",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-jisho",
+      "written": "辞書",
+      "reading": "じしょ",
+      "romaji": "jisho",
+      "meaning": "diccionario",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-zasshi",
+      "written": "雑誌",
+      "reading": "ざっし",
+      "romaji": "zasshi",
+      "meaning": "revista",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kakitori",
+      "written": "書き取り",
+      "reading": "かきとり",
+      "romaji": "kakitori",
+      "meaning": "dictado",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kikitori",
+      "written": "聞き取り",
+      "reading": "ききとり",
+      "romaji": "kikitori",
+      "meaning": "comprensión auditiva / captación al oído",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-choukairyoku",
+      "written": "聴解力",
+      "reading": "ちょうかいりょく",
+      "romaji": "choukairyoku",
+      "meaning": "capacidad de comprensión auditiva",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-jugyou",
+      "written": "授業",
+      "reading": "じゅぎょう",
+      "romaji": "jugyou",
+      "meaning": "clase como actividad/sesión",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kyoushitsu",
+      "written": "教室",
+      "reading": "きょうしつ",
+      "romaji": "kyoushitsu",
+      "meaning": "aula",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kurasuruumu",
+      "written": "クラスルーム",
+      "reading": "くらするーむ",
+      "romaji": "kurasuruumu",
+      "meaning": "aula, préstamo del inglés",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shougakkou",
+      "written": "小学校",
+      "reading": "しょうがっこう",
+      "romaji": "shougakkou",
+      "meaning": "escuela primaria",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-chuugakkou",
+      "written": "中学校",
+      "reading": "ちゅうがっこう",
+      "romaji": "chuugakkou",
+      "meaning": "secundaria obligatoria",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-koukou-koutou-gakkou",
+      "written": "高校／高等学校",
+      "reading": "こうこう／こうとうがっこう",
+      "romaji": "koukou / koutou gakkou",
+      "meaning": "bachillerato/secundaria superior",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-senmon-gakkou",
+      "written": "専門学校",
+      "reading": "せんもんがっこう",
+      "romaji": "senmon gakkou",
+      "meaning": "escuela profesional/especializada",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-daigaku",
+      "written": "大学",
+      "reading": "だいがく",
+      "romaji": "daigaku",
+      "meaning": "universidad",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-toshoshitsu",
+      "written": "図書室",
+      "reading": "としょしつ",
+      "romaji": "toshoshitsu",
+      "meaning": "biblioteca/sala de lectura de una institución",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-toshokan",
+      "written": "図書館",
+      "reading": "としょかん",
+      "romaji": "toshokan",
+      "meaning": "biblioteca pública o edificio de biblioteca",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shiken",
+      "written": "試験",
+      "reading": "しけん",
+      "romaji": "shiken",
+      "meaning": "examen",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kaki-shiken",
+      "written": "書き試験",
+      "reading": "かきしけん",
+      "romaji": "kaki shiken",
+      "meaning": "examen escrito; 筆記試験 es más habitual",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-jimaku",
+      "written": "字幕",
+      "reading": "じまく",
+      "romaji": "jimaku",
+      "meaning": "subtítulos",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kotaeawase",
+      "written": "答え合わせ",
+      "reading": "こたえあわせ",
+      "romaji": "kotaeawase",
+      "meaning": "corrección/comparación de respuestas",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-junbi",
+      "written": "準備",
+      "reading": "じゅんび",
+      "romaji": "junbi",
+      "meaning": "preparación",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-junbi-undou",
+      "written": "準備運動",
+      "reading": "じゅんびうんどう",
+      "romaji": "junbi undou",
+      "meaning": "calentamiento",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-undou",
+      "written": "運動",
+      "reading": "うんどう",
+      "romaji": "undou",
+      "meaning": "ejercicio",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kyuukei",
+      "written": "休憩",
+      "reading": "きゅうけい",
+      "romaji": "kyuukei",
+      "meaning": "pausa/descanso",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kyuujitsu",
+      "written": "休日",
+      "reading": "きゅうじつ",
+      "romaji": "kyuujitsu",
+      "meaning": "día libre/festivo, no necesariamente «vacaciones» largas",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kisoku",
+      "written": "規則",
+      "reading": "きそく",
+      "romaji": "kisoku",
+      "meaning": "reglas/normas",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-nicchoku",
+      "written": "日直",
+      "reading": "にっちょく",
+      "romaji": "nicchoku",
+      "meaning": "encargado/a del día en la clase",
+      "group": "topic-2",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shokudou",
+      "written": "食堂",
+      "reading": "しょくどう",
+      "romaji": "shokudou",
+      "meaning": "comedor/cafetería de institución",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kissaten",
+      "written": "喫茶店",
+      "reading": "きっさてん",
+      "romaji": "kissaten",
+      "meaning": "cafetería tradicional/tetería",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-ginkou",
+      "written": "銀行",
+      "reading": "ぎんこう",
+      "romaji": "ginkou",
+      "meaning": "banco",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-bijutsukan",
+      "written": "美術館",
+      "reading": "びじゅつかん",
+      "romaji": "bijutsukan",
+      "meaning": "museo de arte",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-yuubinkyoku",
+      "written": "郵便局",
+      "reading": "ゆうびんきょく",
+      "romaji": "yuubinkyoku",
+      "meaning": "oficina de correos",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hanaya",
+      "written": "花屋",
+      "reading": "はなや",
+      "romaji": "hanaya",
+      "meaning": "floristería",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-yaoya",
+      "written": "八百屋",
+      "reading": "やおや",
+      "romaji": "yaoya",
+      "meaning": "verdulería/frutería",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-jimusho",
+      "written": "事務所",
+      "reading": "じむしょ",
+      "romaji": "jimusho",
+      "meaning": "oficina",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-washitsu",
+      "written": "和室",
+      "reading": "わしつ",
+      "romaji": "washitsu",
+      "meaning": "habitación/aula de estilo japonés",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-saka",
+      "written": "坂",
+      "reading": "さか",
+      "romaji": "saka",
+      "meaning": "cuesta/pendiente",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-chikamichi",
+      "written": "近道",
+      "reading": "ちかみち",
+      "romaji": "chikamichi",
+      "meaning": "atajo",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-jigoku",
+      "written": "地獄",
+      "reading": "じごく",
+      "romaji": "jigoku",
+      "meaning": "infierno",
+      "group": "topic-3",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tsukue",
+      "written": "机",
+      "reading": "つくえ",
+      "romaji": "tsukue",
+      "meaning": "escritorio/mesa",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hakuban",
+      "written": "白板",
+      "reading": "はくばん",
+      "romaji": "hakuban",
+      "meaning": "pizarra blanca",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hako",
+      "written": "箱",
+      "reading": "はこ",
+      "romaji": "hako",
+      "meaning": "caja",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kushi",
+      "written": "くし",
+      "reading": "くし",
+      "romaji": "kushi",
+      "meaning": "peine",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hata",
+      "written": "旗",
+      "reading": "はた",
+      "romaji": "hata",
+      "meaning": "bandera",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hone",
+      "written": "骨",
+      "reading": "ほね",
+      "romaji": "hone",
+      "meaning": "hueso",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kutsu",
+      "written": "靴",
+      "reading": "くつ",
+      "romaji": "kutsu",
+      "meaning": "zapatos",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tsuno",
+      "written": "角",
+      "reading": "つの",
+      "romaji": "tsuno",
+      "meaning": "cuerno",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hashira",
+      "written": "柱",
+      "reading": "はしら",
+      "romaji": "hashira",
+      "meaning": "columna/pilar; contador mitológico",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-mushimegane",
+      "written": "虫眼鏡",
+      "reading": "むしめがね",
+      "romaji": "mushimegane",
+      "meaning": "lupa",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-nikki",
+      "written": "日記",
+      "reading": "にっき",
+      "romaji": "nikki",
+      "meaning": "diario personal",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-techou",
+      "written": "手帳",
+      "reading": "てちょう",
+      "romaji": "techou",
+      "meaning": "agenda/cuaderno de bolsillo",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-enpitsu",
+      "written": "鉛筆",
+      "reading": "えんぴつ",
+      "romaji": "enpitsu",
+      "meaning": "lápiz",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-fude",
+      "written": "筆",
+      "reading": "ふで",
+      "romaji": "fude",
+      "meaning": "pincel de escritura",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-fudebako",
+      "written": "筆箱",
+      "reading": "ふでばこ",
+      "romaji": "fudebako",
+      "meaning": "estuche",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-fue",
+      "written": "笛",
+      "reading": "ふえ",
+      "romaji": "fue",
+      "meaning": "flauta/silbato según el tipo",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kikai",
+      "written": "機械",
+      "reading": "きかい",
+      "romaji": "kikai",
+      "meaning": "máquina/maquinaria",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-onsei",
+      "written": "音声",
+      "reading": "おんせい",
+      "romaji": "onsei",
+      "meaning": "voz/audio",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-oto",
+      "written": "音",
+      "reading": "おと",
+      "romaji": "oto",
+      "meaning": "sonido/ruido",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shashin",
+      "written": "写真",
+      "reading": "しゃしん",
+      "romaji": "shashin",
+      "meaning": "fotografía",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-nengajou",
+      "written": "年賀状",
+      "reading": "ねんがじょう",
+      "romaji": "nengajou",
+      "meaning": "postal de Año Nuevo",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-otoshidama",
+      "written": "お年玉",
+      "reading": "おとしだま",
+      "romaji": "otoshidama",
+      "meaning": "dinero/regalo de Año Nuevo para niños",
+      "group": "topic-4",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hikiniku",
+      "written": "ひき肉",
+      "reading": "ひきにく",
+      "romaji": "hikiniku",
+      "meaning": "carne picada",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-namahamu",
+      "written": "生ハム",
+      "reading": "なまはむ",
+      "romaji": "namahamu",
+      "meaning": "jamón curado/crudo, usado para jamón serrano",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-niku",
+      "written": "肉",
+      "reading": "にく",
+      "romaji": "niku",
+      "meaning": "carne",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-mikan",
+      "written": "みかん",
+      "reading": "みかん",
+      "romaji": "mikan",
+      "meaning": "mandarina",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tai",
+      "written": "鯛",
+      "reading": "たい",
+      "romaji": "tai",
+      "meaning": "dorada/pargo",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-koi",
+      "written": "鯉",
+      "reading": "こい",
+      "romaji": "koi",
+      "meaning": "carpa",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-ebi",
+      "written": "海老",
+      "reading": "えび",
+      "romaji": "ebi",
+      "meaning": "gamba/camarón",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-okaki",
+      "written": "おかき",
+      "reading": "おかき",
+      "romaji": "okaki",
+      "meaning": "galleta de arroz",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kabu",
+      "written": "蕪",
+      "reading": "かぶ",
+      "romaji": "kabu",
+      "meaning": "nabo",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-akakabu",
+      "written": "赤かぶ",
+      "reading": "あかかぶ",
+      "romaji": "akakabu",
+      "meaning": "nabo/rabanito rojo",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shio",
+      "written": "塩",
+      "reading": "しお",
+      "romaji": "shio",
+      "meaning": "sal",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kai",
+      "written": "貝",
+      "reading": "かい",
+      "romaji": "kai",
+      "meaning": "molusco/concha, no «marisco» en general",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-ringo",
+      "written": "林檎",
+      "reading": "りんご",
+      "romaji": "ringo",
+      "meaning": "manzana",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tamago",
+      "written": "卵",
+      "reading": "たまご",
+      "romaji": "tamago",
+      "meaning": "huevo",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-pai",
+      "written": "パイ",
+      "reading": "ぱい",
+      "romaji": "pai",
+      "meaning": "tarta/pie",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-biiru",
+      "written": "ビール",
+      "reading": "びーる",
+      "romaji": "biiru",
+      "meaning": "cerveza",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-koohii",
+      "written": "コーヒー",
+      "reading": "こーひー",
+      "romaji": "koohii",
+      "meaning": "café",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-bangohan",
+      "written": "晩ご飯",
+      "reading": "ばんごはん",
+      "romaji": "bangohan",
+      "meaning": "cena/comida de la noche",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-yorugohan",
+      "written": "夜ご飯",
+      "reading": "よるごはん",
+      "romaji": "yorugohan",
+      "meaning": "cena, coloquial",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-yuushoku",
+      "written": "夕食",
+      "reading": "ゆうしょく",
+      "romaji": "yuushoku",
+      "meaning": "cena, término más formal/escrito",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-washoku",
+      "written": "和食",
+      "reading": "わしょく",
+      "romaji": "washoku",
+      "meaning": "comida japonesa",
+      "group": "topic-5",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hebi",
+      "written": "蛇",
+      "reading": "へび",
+      "romaji": "hebi",
+      "meaning": "serpiente",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-oumu",
+      "written": "鸚鵡",
+      "reading": "おうむ",
+      "romaji": "oumu",
+      "meaning": "loro",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-fukurou",
+      "written": "梟",
+      "reading": "ふくろう",
+      "romaji": "fukurou",
+      "meaning": "búho",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-namakemono",
+      "written": "怠け者",
+      "reading": "なまけもの",
+      "romaji": "namakemono",
+      "meaning": "perezoso; perezoso (animal) según contexto",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hiyoko",
+      "written": "ひよこ",
+      "reading": "ひよこ",
+      "romaji": "hiyoko",
+      "meaning": "pollito",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hinadori",
+      "written": "雛鳥",
+      "reading": "ひなどり",
+      "romaji": "hinadori",
+      "meaning": "cría de ave",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-uma",
+      "written": "馬",
+      "reading": "うま",
+      "romaji": "uma",
+      "meaning": "caballo",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-ushi",
+      "written": "牛",
+      "reading": "うし",
+      "romaji": "ushi",
+      "meaning": "vaca/buey/ganado bovino",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tatsu",
+      "written": "龍／辰",
+      "reading": "たつ",
+      "romaji": "tatsu",
+      "meaning": "dragón; 辰 es el signo zodiacal",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-mangetsu",
+      "written": "満月",
+      "reading": "まんげつ",
+      "romaji": "mangetsu",
+      "meaning": "luna llena",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hi",
+      "written": "火",
+      "reading": "ひ",
+      "romaji": "hi",
+      "meaning": "fuego; también lectura de «día» en compuestos distintos",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kaji",
+      "written": "火事",
+      "reading": "かじ",
+      "romaji": "kaji",
+      "meaning": "incendio",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kisetsu",
+      "written": "季節",
+      "reading": "きせつ",
+      "romaji": "kisetsu",
+      "meaning": "estación del año",
+      "group": "topic-6",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-ashi",
+      "written": "足",
+      "reading": "あし",
+      "romaji": "ashi",
+      "meaning": "pie/pierna",
+      "group": "topic-7",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hige",
+      "written": "髭",
+      "reading": "ひげ",
+      "romaji": "hige",
+      "meaning": "barba/bigote",
+      "group": "topic-7",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-kakkou",
+      "written": "格好",
+      "reading": "かっこう",
+      "romaji": "kakkou",
+      "meaning": "aspecto/forma/vestimenta según contexto",
+      "group": "topic-7",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shikaku",
+      "written": "四角",
+      "reading": "しかく",
+      "romaji": "shikaku",
+      "meaning": "cuadrado",
+      "group": "topic-8",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-ue",
+      "written": "上",
+      "reading": "うえ",
+      "romaji": "ue",
+      "meaning": "encima/arriba",
+      "group": "topic-8",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shita",
+      "written": "下",
+      "reading": "した",
+      "romaji": "shita",
+      "meaning": "debajo/abajo",
+      "group": "topic-8",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tate",
+      "written": "縦",
+      "reading": "たて",
+      "romaji": "tate",
+      "meaning": "vertical",
+      "group": "topic-8",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-yoko",
+      "written": "横",
+      "reading": "よこ",
+      "romaji": "yoko",
+      "meaning": "horizontal",
+      "group": "topic-8",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tokeimawari",
+      "written": "時計回り",
+      "reading": "とけいまわり",
+      "romaji": "tokeimawari",
+      "meaning": "sentido horario",
+      "group": "topic-8",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-hantokeimawari",
+      "written": "反時計回り",
+      "reading": "はんとけいまわり",
+      "romaji": "hantokeimawari",
+      "meaning": "sentido antihorario",
+      "group": "topic-8",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tsugi",
+      "written": "次",
+      "reading": "つぎ",
+      "romaji": "tsugi",
+      "meaning": "siguiente",
+      "group": "topic-8",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tsugi-no",
+      "written": "次の",
+      "reading": "つぎの",
+      "romaji": "tsugi no",
+      "meaning": "el/la siguiente + nombre",
+      "group": "topic-8",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-ryokou",
+      "written": "旅行",
+      "reading": "りょこう",
+      "romaji": "ryokou",
+      "meaning": "viaje; viajar con りょこうします",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-tabi",
+      "written": "旅",
+      "reading": "たび",
+      "romaji": "tabi",
+      "meaning": "viaje, tono más literario/evocador",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-gijutsu",
+      "written": "技術",
+      "reading": "ぎじゅつ",
+      "romaji": "gijutsu",
+      "meaning": "técnica/tecnología",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-zeikin",
+      "written": "税金",
+      "reading": "ぜいきん",
+      "romaji": "zeikin",
+      "meaning": "impuestos",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shuuri",
+      "written": "修理",
+      "reading": "しゅうり",
+      "romaji": "shuuri",
+      "meaning": "reparación",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shiawase",
+      "written": "幸せ",
+      "reading": "しあわせ",
+      "romaji": "shiawase",
+      "meaning": "felicidad; dicha",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-chikara-ryoku",
+      "written": "力",
+      "reading": "ちから／りょく",
+      "romaji": "chikara / ryoku",
+      "meaning": "fuerza/capacidad; りょく en compuestos",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-shunpatsuryoku",
+      "written": "瞬発力",
+      "reading": "しゅんぱつりょく",
+      "romaji": "shunpatsuryoku",
+      "meaning": "potencia explosiva/agilidad",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-monozukuri",
+      "written": "ものづくり",
+      "reading": "ものづくり",
+      "romaji": "monozukuri",
+      "meaning": "fabricación/artesanía con énfasis cultural en calidad y dedicación",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-otsukimi",
+      "written": "お月見",
+      "reading": "おつきみ",
+      "romaji": "otsukimi",
+      "meaning": "contemplación/festival de la luna",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-onaji",
+      "written": "同じ",
+      "reading": "おなじ",
+      "romaji": "onaji",
+      "meaning": "igual/el mismo; funciona delante de un nombre sin な",
+      "group": "topic-9",
+      "sourceId": "vocabulary-note"
+    }
+  ]
+}

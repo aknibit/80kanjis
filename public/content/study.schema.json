@@ -1,0 +1,694 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contenido de estudio de japonés",
+  "description": "Esquema de edición. Las referencias, identificadores únicos, lecturas emparejadas y cantidades ordenadas también se comprueban en CI.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/navigation"
+    },
+    {
+      "$ref": "#/$defs/counters"
+    },
+    {
+      "$ref": "#/$defs/kana"
+    },
+    {
+      "$ref": "#/$defs/lexicon"
+    }
+  ],
+  "$defs": {
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "type": {
+          "enum": [
+            "vault",
+            "attachment",
+            "reference"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+\\.md$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "type"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "vault"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "path",
+              "sha256"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "reference"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "url"
+            ]
+          }
+        }
+      ]
+    },
+    "group": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "id",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "guide": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sourceId": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "paragraphs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        },
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "written": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "reading": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "meaning": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "written",
+              "reading",
+              "meaning"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "sourceId",
+        "paragraphs"
+      ],
+      "additionalProperties": false
+    },
+    "navigation": {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "version": {
+          "const": 1
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "kind": {
+                "enum": [
+                  "kanji",
+                  "counters",
+                  "kana",
+                  "lexicon"
+                ]
+              },
+              "file": {
+                "type": "string",
+                "pattern": "^(collection\\.json|content/[a-z0-9-]+\\.json)$"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "kind",
+              "file"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "kind": {
+                      "const": "kanji"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "id": {
+                      "const": "kanji"
+                    },
+                    "file": {
+                      "const": "collection.json"
+                    }
+                  }
+                },
+                "else": {
+                  "properties": {
+                    "file": {
+                      "pattern": "^content/[a-z0-9-]+\\.json$"
+                    },
+                    "id": {
+                      "not": {
+                        "const": "kanji"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 5000,
+          "prefixItems": [
+            {
+              "properties": {
+                "id": {
+                  "const": "kanji"
+                },
+                "kind": {
+                  "const": "kanji"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "version",
+        "sections"
+      ],
+      "additionalProperties": false
+    },
+    "counters": {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "counters"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/group"
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        },
+        "guides": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guide"
+          },
+          "minItems": 0,
+          "maxItems": 5000
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "group": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "sourceId": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "type": {
+                "enum": [
+                  "counter",
+                  "number"
+                ]
+              },
+              "written": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "notes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "minItems": 0,
+                "maxItems": 5000
+              },
+              "forms": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "written": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "\\S"
+                    },
+                    "readings": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "^[ぁ-ゖー\\s／/]+$"
+                      },
+                      "minItems": 1,
+                      "maxItems": 5000,
+                      "uniqueItems": true
+                    },
+                    "special": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "written",
+                    "readings",
+                    "special"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1,
+                "maxItems": 5000
+              },
+              "question": {
+                "type": "object",
+                "properties": {
+                  "written": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "readings": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[ぁ-ゖー\\s／/]+$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 5000
+                  }
+                },
+                "required": [
+                  "written",
+                  "readings"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "id",
+              "group",
+              "sourceId",
+              "type",
+              "written",
+              "title",
+              "description",
+              "notes",
+              "forms",
+              "question"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        },
+        "editorialNotes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 0,
+          "maxItems": 5000
+        }
+      },
+      "required": [
+        "version",
+        "kind",
+        "title",
+        "description",
+        "sources",
+        "groups",
+        "guides",
+        "entries"
+      ],
+      "additionalProperties": false
+    },
+    "kana": {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "kana"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/group"
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        },
+        "guides": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guide"
+          },
+          "minItems": 0,
+          "maxItems": 5000
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "group": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "sourceId": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "hiragana": {
+                "type": "string",
+                "pattern": "^[ぁ-ゖ]+$"
+              },
+              "katakana": {
+                "type": "string",
+                "pattern": "^[ァ-ヶ]+$"
+              },
+              "romaji": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "id",
+              "group",
+              "sourceId",
+              "hiragana",
+              "katakana",
+              "romaji"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        }
+      },
+      "required": [
+        "version",
+        "kind",
+        "title",
+        "description",
+        "sources",
+        "groups",
+        "guides",
+        "entries"
+      ],
+      "additionalProperties": false
+    },
+    "lexicon": {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "lexicon"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/group"
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        },
+        "guides": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guide"
+          },
+          "minItems": 0,
+          "maxItems": 5000
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "group": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "sourceId": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              },
+              "written": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "reading": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[ぁ-ゖー\\s／/]+$"
+              },
+              "romaji": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "meaning": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "note": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "id",
+              "group",
+              "sourceId",
+              "written",
+              "reading",
+              "romaji",
+              "meaning"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 5000
+        }
+      },
+      "required": [
+        "version",
+        "kind",
+        "title",
+        "description",
+        "sources",
+        "groups",
+        "guides",
+        "entries"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
