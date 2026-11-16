@@ -16,6 +16,8 @@ const verbs = documents.get('verbs') as LexiconDocument;
 
 test('the navigation keeps the 80 kanji home first and maps each section to its canonical file', () => {
   assert.equal(navigation.sections[0].id, 'kanji');
+  assert.equal(navigation.sections.at(-1)!.id, 'kana');
+  assert.equal(navigation.sections.at(-1)!.placement, 'support');
   for (const id of ['kanji', 'counters', 'kana', 'verbs', 'vocabulary', 'modifiers']) {
     assert.ok(navigation.sections.some((section) => section.id === id));
   }
@@ -67,6 +69,73 @@ test('kana covers the basic, voiced and contracted sounds without conflating dup
   assert.equal(searchContent(kana.entries, 'キャ')[0].hiragana, 'きゃ');
 });
 
+test('kana charts preserve the vowel columns and the gaps of the Japanese syllabary', () => {
+  const position = (hiragana: string) => kana.entries.find((entry) => entry.hiragana === hiragana)!.position;
+  assert.deepEqual(['あ', 'い', 'う', 'え', 'お'].map(position), [1, 2, 3, 4, 5].map((row) => ({ column: 1, row })));
+  assert.deepEqual(position('か'), { column: 2, row: 1 });
+  assert.deepEqual(['や', 'ゆ', 'よ'].map(position), [1, 3, 5].map((row) => ({ column: 8, row })));
+  assert.deepEqual(['わ', 'を'].map(position), [1, 5].map((row) => ({ column: 10, row })));
+  assert.deepEqual(['きゃ', 'きゅ', 'きょ'].map(position), [1, 2, 3].map((row) => ({ column: 2, row })));
+  for (const change of [
+    (data: any) => { delete data.entries[0].position; },
+    (data: any) => { data.entries[0].position.row = 0; },
+    (data: any) => { data.entries[0].position.row = 16; },
+    (data: any) => { data.entries[0].position.column = 1.5; },
+    (data: any) => { data.entries[1].position = data.entries[0].position; },
+  ]) {
+    const data = structuredClone(kana); change(data);
+    assert.throws(() => parseStudyDocument(JSON.stringify(data)));
+  }
+});
+
+test('kana variants and combinations share the columns of their basic sound families', () => {
+  const families = [
+    ['あいうえお'],
+    ['かきくけこ', 'がぎぐげご', 'きゃ きゅ きょ', 'ぎゃ ぎゅ ぎょ'],
+    ['さしすせそ', 'ざじずぜぞ', 'しゃ しゅ しょ', 'じゃ じゅ じょ'],
+    ['たちつてと', 'だぢづでど', 'ちゃ ちゅ ちょ'],
+    ['なにぬねの', 'にゃ にゅ にょ'],
+    ['はひふへほ', 'ばびぶべぼ', 'ぱぴぷぺぽ', 'ひゃ ひゅ ひょ', 'びゃ びゅ びょ', 'ぴゃ ぴゅ ぴょ'],
+    ['まみむめも', 'みゃ みゅ みょ'],
+    ['やゆよ'],
+    ['らりるれろ', 'りゃ りゅ りょ'],
+    ['わを'],
+    ['ん'],
+  ];
+  const covered = new Set<string>();
+  families.forEach((family, index) => {
+    for (const sounds of family) {
+      for (const sound of sounds.includes(' ') ? sounds.split(' ') : [...sounds]) {
+        const entry = kana.entries.find((entry) => entry.hiragana === sound)!;
+        assert.ok(entry, sound);
+        assert.equal(entry.position.column, index + 1, sound);
+        covered.add(entry.id);
+      }
+    }
+  });
+  assert.equal(covered.size, kana.entries.length);
+  for (const [sounds, column, firstRow] of [
+    ['ばびぶべぼ', 6, 1],
+    ['ぱぴぷぺぽ', 6, 6],
+    ['きゃ きゅ きょ', 2, 1],
+    ['ぎゃ ぎゅ ぎょ', 2, 4],
+    ['しゃ しゅ しょ', 3, 1],
+    ['じゃ じゅ じょ', 3, 4],
+    ['ひゃ ひゅ ひょ', 6, 1],
+    ['びゃ びゅ びょ', 6, 4],
+    ['ぴゃ ぴゅ ぴょ', 6, 7],
+  ] as const) {
+    const syllables = sounds.includes(' ') ? sounds.split(' ') : [...sounds];
+    assert.deepEqual(syllables.map((sound) => kana.entries.find((entry) => entry.hiragana === sound)!.position),
+      syllables.map((_, index) => ({ column, row: firstRow + index })));
+  }
+  for (const [group, rowCount] of [['basic', 5], ['voiced', 10], ['combined', 9]] as const) {
+    const entries = kana.entries.filter((entry) => entry.group === group);
+    assert.equal(Math.max(...entries.map((entry) => entry.position.row)), rowCount, group);
+    assert.equal(new Set(entries.map((entry) => entry.position.row)).size, rowCount, group);
+  }
+});
+
 test('content search combines groups and terms and handles accents, kana width and readings', () => {
   assert.ok(searchContent(counters.entries, 'lapices').some((entry) => entry.id === 'hon'));
   assert.deepEqual(searchContent(counters.entries, 'さんぼん').map((entry) => entry.id), ['hon']);
@@ -86,6 +155,8 @@ test('invalid navigation, unsafe paths, duplicate sections and a different landi
     (data) => { data.sections[1].file = 'https://example.test/content.json'; },
     (data) => { data.sections[1].kind = 'unknown'; },
     (data) => { data.sections[0].file = 'another.json'; },
+    (data) => { data.sections[0].placement = 'support'; },
+    (data) => { data.sections[1].placement = 'unknown'; },
   ];
   for (const change of changes) {
     const data = structuredClone(navigation); change(data);
@@ -123,6 +194,7 @@ test('malformed study data, broken references and inconsistent readings fail bef
 });
 
 test('loaders request only relative canonical files and reject missing or wrong content', async (t) => {
+  const verbsSection = navigation.sections.find((section) => section.id === 'verbs')!;
   Object.defineProperty(globalThis, 'document', { value: { baseURI: 'https://example.github.io/80kanjis/?section=verbs' }, configurable: true });
   t.after(() => { Reflect.deleteProperty(globalThis, 'document'); });
   const urls: string[] = [];
@@ -132,11 +204,11 @@ test('loaders request only relative canonical files and reject missing or wrong 
     return new Response(JSON.stringify(url.pathname.endsWith('navigation.json') ? navigation : verbs));
   });
   assert.deepEqual(await loadNavigation(), navigation);
-  assert.deepEqual(await loadStudyDocument(navigation.sections[3]), verbs);
+  assert.deepEqual(await loadStudyDocument(verbsSection), verbs);
   assert.deepEqual(urls, ['https://example.github.io/80kanjis/content/navigation.json', 'https://example.github.io/80kanjis/content/verbs.json']);
   await assert.rejects(() => loadStudyDocument(navigation.sections[0]));
   fetch.mock.mockImplementation(async () => new Response('', { status: 404 }));
   await assert.rejects(() => loadNavigation(), /cargar el contenido/);
   fetch.mock.mockImplementation(async () => new Response(JSON.stringify(kana)));
-  await assert.rejects(() => loadStudyDocument(navigation.sections[3]), /tipo de sección/);
+  await assert.rejects(() => loadStudyDocument(verbsSection), /tipo de sección/);
 });

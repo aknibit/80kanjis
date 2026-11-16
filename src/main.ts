@@ -288,12 +288,16 @@ async function boot() {
   const navigation = await loadNavigation();
   const section = resolveSection(navigation, window.location.href);
   const menu = document.querySelector('#section-nav')!;
+  const primary = element('div', 'section-nav-main');
+  const support = element('div', 'section-nav-support');
   for (const item of navigation.sections) {
     const link = element('a', 'section-link', item.label);
     link.href = sectionHref(item, document.baseURI);
     if (item.id === section.id) link.setAttribute('aria-current', 'page');
-    menu.append(link);
+    (item.placement === 'support' ? support : primary).append(link);
   }
+  menu.append(primary);
+  if (support.children.length > 0) menu.append(support);
   if (section.kind === 'kanji') await start();
   else {
     const content = await loadStudyDocument(section);

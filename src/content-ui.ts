@@ -1,4 +1,4 @@
-import type { ContentEntry, CounterEntry, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
+import type { ContentEntry, ContentGroup, CounterEntry, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
 import { searchContent } from './lib/content.ts';
 
 function node<K extends keyof HTMLElementTagNameMap>(tag: K, className = '', text?: string) {
@@ -25,10 +25,10 @@ function renderCounter(entry: CounterEntry): HTMLElement {
   const body = node('div', 'counter-body');
   for (const note of entry.notes) body.append(node('p', 'counter-note', note));
   const table = node('table', 'counter-table');
-  table.append(node('caption', 'visually-hidden', `${entry.title}: cantidades, escritura y lecturas`));
+  table.append(node('caption', 'visually-hidden', `${entry.title}: traducciones, escritura y lecturas`));
   const head = node('thead');
   const headers = node('tr');
-  for (const label of ['Cantidad', 'Escritura', 'Lectura']) {
+  for (const label of ['Traducción', 'Escritura', 'Lectura']) {
     const cell = node('th', '', label);
     cell.scope = 'col';
     headers.append(cell);
@@ -37,7 +37,7 @@ function renderCounter(entry: CounterEntry): HTMLElement {
   const rows = node('tbody');
   for (const form of entry.forms) {
     const row = node('tr', form.special ? 'counter-special' : '');
-    const quantity = node('th', '', form.value.toLocaleString('es'));
+    const quantity = node('th', '', form.meaning);
     quantity.scope = 'row';
     const reading = node('td', 'counter-reading-cell');
     reading.append(japanese('span', 'word-reading', form.readings.join(' · ')));
@@ -46,7 +46,7 @@ function renderCounter(entry: CounterEntry): HTMLElement {
     rows.append(row);
   }
   const question = node('tr', 'counter-question');
-  const questionLabel = node('th', '', '¿Cuántos?');
+  const questionLabel = node('th', '', entry.question.meaning);
   questionLabel.scope = 'row';
   question.append(questionLabel, japanese('td', 'counter-written', entry.question.written),
     japanese('td', 'word-reading', entry.question.readings.join(' · ')));
@@ -71,7 +71,7 @@ function renderWord(entry: LexiconEntry, group: string): HTMLElement {
 }
 
 function renderKana(entry: KanaEntry): HTMLElement {
-  const item = node('li', 'kana-entry');
+  const item = node('div', 'kana-entry');
   item.dataset.entryId = entry.id;
   const letters = node('div', 'kana-letters');
   const hiragana = japanese('span', 'kana-hiragana', entry.hiragana);
@@ -81,6 +81,35 @@ function renderKana(entry: KanaEntry): HTMLElement {
   letters.append(hiragana, katakana);
   item.append(letters, node('span', 'entry-romaji', entry.romaji));
   return item;
+}
+
+function renderKanaChart(entries: readonly KanaEntry[], group: ContentGroup, frame: readonly KanaEntry[]): HTMLElement {
+  const section = node('section', 'kana-chart-group');
+  const title = node('h2', 'kana-chart-title', group.label);
+  title.id = `kana-chart-${group.id}`;
+  const surface = node('div', 'kana-chart-surface');
+  const table = node('table', 'kana-chart');
+  table.dir = 'rtl';
+  table.append(node('caption', 'visually-hidden', `${group.label}: columnas de derecha a izquierda, sonidos de arriba abajo.`));
+  const columns = [...new Set(frame.map((entry) => entry.position.column))].sort((a, b) => a - b);
+  const rowCount = Math.max(...frame.filter((entry) => entry.group === group.id).map((entry) => entry.position.row));
+  table.style.setProperty('--kana-columns', String(columns.length));
+  if (entries.some((entry) => entry.hiragana.length > 1)) table.classList.add('kana-chart--combined');
+  const cells = new Map(entries.map((entry) => [`${entry.position.column}:${entry.position.row}`, entry]));
+  const body = node('tbody');
+  for (let row = 1; row <= rowCount; row += 1) {
+    const line = node('tr');
+    for (const column of columns) {
+      const cell = node('td');
+      const entry = cells.get(`${column}:${row}`);
+      if (entry) cell.append(renderKana(entry));
+      else cell.setAttribute('aria-label', 'Sin kana en esta posición');
+      line.append(cell);
+    }
+    body.append(line);
+  }
+  table.append(body); surface.append(table); section.append(title, surface);
+  return section;
 }
 
 function renderGuides(data: StudyDocument): HTMLElement {
@@ -150,9 +179,15 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   const count = node('span', 'study-result-count');
   count.setAttribute('role', 'status'); count.setAttribute('aria-live', 'polite'); count.setAttribute('aria-atomic', 'true');
   toolbar.append(filters, count);
-  const results = node(data.kind === 'counters' ? 'div' : 'ul', `study-results study-results--${data.kind}`);
+  const results = node(data.kind === 'lexicon' ? 'ul' : 'div', `study-results study-results--${data.kind}`);
   results.id = 'study-results';
-  if (data.kind !== 'counters') results.setAttribute('role', 'list');
+  if (data.kind === 'lexicon') results.setAttribute('role', 'list');
+  if (data.kind === 'kana') {
+    results.classList.add('kana-chart-scroll');
+    results.tabIndex = 0;
+    results.setAttribute('role', 'region');
+    results.setAttribute('aria-labelledby', title.id);
+  }
   const empty = node('div', 'empty-state');
   empty.append(node('h3', '', 'No encontramos resultados.'), node('p', '', 'Prueba otra búsqueda o cambia el grupo.'));
   const reset = node('button', 'reset-button', 'Ver todo'); reset.type = 'button'; empty.append(reset);
@@ -190,8 +225,15 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
       button.querySelector('.filter-count')!.textContent = String(id === 'all' ? matching.length : matching.filter((entry) => entry.group === id).length);
     }
     const fragment = document.createDocumentFragment();
-    for (const entry of entries) fragment.append('forms' in entry ? renderCounter(entry)
-      : 'hiragana' in entry ? renderKana(entry) : renderWord(entry, groups.get(entry.group)!));
+    if (data.kind === 'kana') {
+      for (const group of data.groups) {
+        const groupEntries = (entries as readonly KanaEntry[]).filter((entry) => entry.group === group.id);
+        if (groupEntries.length > 0) fragment.append(renderKanaChart(groupEntries, group, data.entries));
+      }
+    } else {
+      for (const entry of entries) fragment.append('forms' in entry ? renderCounter(entry)
+        : renderWord(entry as LexiconEntry, groups.get(entry.group)!));
+    }
     results.replaceChildren(fragment);
     clear.hidden = !input.value;
     empty.hidden = entries.length > 0; results.hidden = entries.length === 0;

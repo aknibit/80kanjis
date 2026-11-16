@@ -80,6 +80,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un objeto",
           "written": "一つ",
           "readings": [
             "ひとつ"
@@ -88,6 +89,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos objetos",
           "written": "二つ",
           "readings": [
             "ふたつ"
@@ -96,6 +98,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres objetos",
           "written": "三つ",
           "readings": [
             "みっつ"
@@ -104,6 +107,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro objetos",
           "written": "四つ",
           "readings": [
             "よっつ"
@@ -112,6 +116,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco objetos",
           "written": "五つ",
           "readings": [
             "いつつ"
@@ -120,6 +125,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis objetos",
           "written": "六つ",
           "readings": [
             "むっつ"
@@ -128,6 +134,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete objetos",
           "written": "七つ",
           "readings": [
             "ななつ"
@@ -136,6 +143,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho objetos",
           "written": "八つ",
           "readings": [
             "やっつ"
@@ -144,6 +152,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve objetos",
           "written": "九つ",
           "readings": [
             "ここのつ"
@@ -152,6 +161,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez objetos",
           "written": "十",
           "readings": [
             "とお"
@@ -160,6 +170,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos objetos?",
         "written": "いくつ",
         "readings": [
           "いくつ"
@@ -180,6 +191,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un objeto pequeño",
           "written": "一個",
           "readings": [
             "いっこ"
@@ -188,6 +200,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos objetos pequeños",
           "written": "二個",
           "readings": [
             "にこ"
@@ -196,6 +209,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres objetos pequeños",
           "written": "三個",
           "readings": [
             "さんこ"
@@ -204,6 +218,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro objetos pequeños",
           "written": "四個",
           "readings": [
             "よんこ"
@@ -212,6 +227,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco objetos pequeños",
           "written": "五個",
           "readings": [
             "ごこ"
@@ -220,6 +236,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis objetos pequeños",
           "written": "六個",
           "readings": [
             "ろっこ"
@@ -228,6 +245,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete objetos pequeños",
           "written": "七個",
           "readings": [
             "ななこ"
@@ -236,6 +254,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho objetos pequeños",
           "written": "八個",
           "readings": [
             "はっこ"
@@ -244,6 +263,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve objetos pequeños",
           "written": "九個",
           "readings": [
             "きゅうこ"
@@ -252,6 +272,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez objetos pequeños",
           "written": "十個",
           "readings": [
             "じゅっこ",
@@ -261,6 +282,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos objetos pequeños?",
         "written": "何個",
         "readings": [
           "なんこ"
@@ -279,6 +301,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "una persona",
           "written": "一人",
           "readings": [
             "ひとり"
@@ -287,6 +310,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos personas",
           "written": "二人",
           "readings": [
             "ふたり"
@@ -295,6 +319,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres personas",
           "written": "三人",
           "readings": [
             "さんにん"
@@ -303,6 +328,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro personas",
           "written": "四人",
           "readings": [
             "よにん"
@@ -311,6 +337,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco personas",
           "written": "五人",
           "readings": [
             "ごにん"
@@ -319,6 +346,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis personas",
           "written": "六人",
           "readings": [
             "ろくにん"
@@ -327,6 +355,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete personas",
           "written": "七人",
           "readings": [
             "ななにん"
@@ -335,6 +364,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho personas",
           "written": "八人",
           "readings": [
             "はちにん"
@@ -343,6 +373,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve personas",
           "written": "九人",
           "readings": [
             "きゅうにん"
@@ -351,6 +382,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez personas",
           "written": "十人",
           "readings": [
             "じゅうにん"
@@ -359,6 +391,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántas personas?",
         "written": "何人",
         "readings": [
           "なんにん"
@@ -379,6 +412,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un objeto plano",
           "written": "一枚",
           "readings": [
             "いちまい"
@@ -387,6 +421,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos objetos planos",
           "written": "二枚",
           "readings": [
             "にまい"
@@ -395,6 +430,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres objetos planos",
           "written": "三枚",
           "readings": [
             "さんまい"
@@ -403,6 +439,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro objetos planos",
           "written": "四枚",
           "readings": [
             "よんまい"
@@ -411,6 +448,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco objetos planos",
           "written": "五枚",
           "readings": [
             "ごまい"
@@ -419,6 +457,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis objetos planos",
           "written": "六枚",
           "readings": [
             "ろくまい"
@@ -427,6 +466,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete objetos planos",
           "written": "七枚",
           "readings": [
             "ななまい"
@@ -435,6 +475,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho objetos planos",
           "written": "八枚",
           "readings": [
             "はちまい"
@@ -443,6 +484,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve objetos planos",
           "written": "九枚",
           "readings": [
             "きゅうまい"
@@ -451,6 +493,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez objetos planos",
           "written": "十枚",
           "readings": [
             "じゅうまい"
@@ -459,6 +502,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos objetos planos?",
         "written": "何枚",
         "readings": [
           "なんまい"
@@ -477,6 +521,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un vehículo o una máquina",
           "written": "一台",
           "readings": [
             "いちだい"
@@ -485,6 +530,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos vehículos o máquinas",
           "written": "二台",
           "readings": [
             "にだい"
@@ -493,6 +539,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres vehículos o máquinas",
           "written": "三台",
           "readings": [
             "さんだい"
@@ -501,6 +548,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro vehículos o máquinas",
           "written": "四台",
           "readings": [
             "よんだい"
@@ -509,6 +557,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco vehículos o máquinas",
           "written": "五台",
           "readings": [
             "ごだい"
@@ -517,6 +566,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis vehículos o máquinas",
           "written": "六台",
           "readings": [
             "ろくだい"
@@ -525,6 +575,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete vehículos o máquinas",
           "written": "七台",
           "readings": [
             "ななだい"
@@ -533,6 +584,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho vehículos o máquinas",
           "written": "八台",
           "readings": [
             "はちだい"
@@ -541,6 +593,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve vehículos o máquinas",
           "written": "九台",
           "readings": [
             "きゅうだい"
@@ -549,6 +602,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez vehículos o máquinas",
           "written": "十台",
           "readings": [
             "じゅうだい"
@@ -557,6 +611,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos vehículos o máquinas?",
         "written": "何台",
         "readings": [
           "なんだい"
@@ -575,6 +630,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un libro o cuaderno",
           "written": "一冊",
           "readings": [
             "いっさつ"
@@ -583,6 +639,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos libros o cuadernos",
           "written": "二冊",
           "readings": [
             "にさつ"
@@ -591,6 +648,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres libros o cuadernos",
           "written": "三冊",
           "readings": [
             "さんさつ"
@@ -599,6 +657,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro libros o cuadernos",
           "written": "四冊",
           "readings": [
             "よんさつ"
@@ -607,6 +666,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco libros o cuadernos",
           "written": "五冊",
           "readings": [
             "ごさつ"
@@ -615,6 +675,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis libros o cuadernos",
           "written": "六冊",
           "readings": [
             "ろくさつ"
@@ -623,6 +684,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete libros o cuadernos",
           "written": "七冊",
           "readings": [
             "ななさつ"
@@ -631,6 +693,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho libros o cuadernos",
           "written": "八冊",
           "readings": [
             "はっさつ"
@@ -639,6 +702,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve libros o cuadernos",
           "written": "九冊",
           "readings": [
             "きゅうさつ"
@@ -647,6 +711,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez libros o cuadernos",
           "written": "十冊",
           "readings": [
             "じゅっさつ",
@@ -656,6 +721,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos libros o cuadernos?",
         "written": "何冊",
         "readings": [
           "なんさつ"
@@ -674,6 +740,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un objeto alargado",
           "written": "一本",
           "readings": [
             "いっぽん"
@@ -682,6 +749,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos objetos alargados",
           "written": "二本",
           "readings": [
             "にほん"
@@ -690,6 +758,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres objetos alargados",
           "written": "三本",
           "readings": [
             "さんぼん"
@@ -698,6 +767,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro objetos alargados",
           "written": "四本",
           "readings": [
             "よんほん"
@@ -706,6 +776,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco objetos alargados",
           "written": "五本",
           "readings": [
             "ごほん"
@@ -714,6 +785,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis objetos alargados",
           "written": "六本",
           "readings": [
             "ろっぽん"
@@ -722,6 +794,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete objetos alargados",
           "written": "七本",
           "readings": [
             "ななほん"
@@ -730,6 +803,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho objetos alargados",
           "written": "八本",
           "readings": [
             "はっぽん"
@@ -738,6 +812,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve objetos alargados",
           "written": "九本",
           "readings": [
             "きゅうほん"
@@ -746,6 +821,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez objetos alargados",
           "written": "十本",
           "readings": [
             "じゅっぽん",
@@ -755,6 +831,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos objetos alargados?",
         "written": "何本",
         "readings": [
           "なんぼん"
@@ -773,6 +850,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un animal pequeño",
           "written": "一匹",
           "readings": [
             "いっぴき"
@@ -781,6 +859,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos animales pequeños",
           "written": "二匹",
           "readings": [
             "にひき"
@@ -789,6 +868,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres animales pequeños",
           "written": "三匹",
           "readings": [
             "さんびき"
@@ -797,6 +877,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro animales pequeños",
           "written": "四匹",
           "readings": [
             "よんひき"
@@ -805,6 +886,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco animales pequeños",
           "written": "五匹",
           "readings": [
             "ごひき"
@@ -813,6 +895,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis animales pequeños",
           "written": "六匹",
           "readings": [
             "ろっぴき"
@@ -821,6 +904,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete animales pequeños",
           "written": "七匹",
           "readings": [
             "ななひき"
@@ -829,6 +913,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho animales pequeños",
           "written": "八匹",
           "readings": [
             "はっぴき"
@@ -837,6 +922,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve animales pequeños",
           "written": "九匹",
           "readings": [
             "きゅうひき"
@@ -845,6 +931,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez animales pequeños",
           "written": "十匹",
           "readings": [
             "じゅっぴき",
@@ -854,6 +941,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos animales pequeños?",
         "written": "何匹",
         "readings": [
           "なんびき"
@@ -874,6 +962,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un ave",
           "written": "一羽",
           "readings": [
             "いちわ"
@@ -882,6 +971,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos aves",
           "written": "二羽",
           "readings": [
             "にわ"
@@ -890,6 +980,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres aves",
           "written": "三羽",
           "readings": [
             "さんば"
@@ -898,6 +989,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro aves",
           "written": "四羽",
           "readings": [
             "よんわ"
@@ -906,6 +998,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco aves",
           "written": "五羽",
           "readings": [
             "ごわ"
@@ -914,6 +1007,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis aves",
           "written": "六羽",
           "readings": [
             "ろくわ"
@@ -922,6 +1016,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete aves",
           "written": "七羽",
           "readings": [
             "ななわ",
@@ -931,6 +1026,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho aves",
           "written": "八羽",
           "readings": [
             "はちわ"
@@ -939,6 +1035,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve aves",
           "written": "九羽",
           "readings": [
             "きゅうわ"
@@ -947,6 +1044,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez aves",
           "written": "十羽",
           "readings": [
             "じゅっぱ",
@@ -956,6 +1054,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántas aves?",
         "written": "何羽",
         "readings": [
           "なんば"
@@ -976,6 +1075,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un par de zapatos o calcetines",
           "written": "一足",
           "readings": [
             "いっそく"
@@ -984,6 +1084,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos pares de zapatos o calcetines",
           "written": "二足",
           "readings": [
             "にそく"
@@ -992,6 +1093,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres pares de zapatos o calcetines",
           "written": "三足",
           "readings": [
             "さんぞく"
@@ -1000,6 +1102,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro pares de zapatos o calcetines",
           "written": "四足",
           "readings": [
             "よんそく"
@@ -1008,6 +1111,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco pares de zapatos o calcetines",
           "written": "五足",
           "readings": [
             "ごそく"
@@ -1016,6 +1120,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis pares de zapatos o calcetines",
           "written": "六足",
           "readings": [
             "ろくそく"
@@ -1024,6 +1129,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete pares de zapatos o calcetines",
           "written": "七足",
           "readings": [
             "ななそく"
@@ -1032,6 +1138,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho pares de zapatos o calcetines",
           "written": "八足",
           "readings": [
             "はっそく"
@@ -1040,6 +1147,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve pares de zapatos o calcetines",
           "written": "九足",
           "readings": [
             "きゅうそく"
@@ -1048,6 +1156,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez pares de zapatos o calcetines",
           "written": "十足",
           "readings": [
             "じゅっそく",
@@ -1057,6 +1166,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos pares de zapatos o calcetines?",
         "written": "何足",
         "readings": [
           "なんぞく"
@@ -1075,6 +1185,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un vaso o una taza",
           "written": "一杯",
           "readings": [
             "いっぱい"
@@ -1083,6 +1194,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos vasos o tazas",
           "written": "二杯",
           "readings": [
             "にはい"
@@ -1091,6 +1203,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres vasos o tazas",
           "written": "三杯",
           "readings": [
             "さんばい"
@@ -1099,6 +1212,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro vasos o tazas",
           "written": "四杯",
           "readings": [
             "よんはい"
@@ -1107,6 +1221,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco vasos o tazas",
           "written": "五杯",
           "readings": [
             "ごはい"
@@ -1115,6 +1230,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis vasos o tazas",
           "written": "六杯",
           "readings": [
             "ろっぱい"
@@ -1123,6 +1239,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete vasos o tazas",
           "written": "七杯",
           "readings": [
             "ななはい"
@@ -1131,6 +1248,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho vasos o tazas",
           "written": "八杯",
           "readings": [
             "はっぱい"
@@ -1139,6 +1257,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve vasos o tazas",
           "written": "九杯",
           "readings": [
             "きゅうはい"
@@ -1147,6 +1266,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez vasos o tazas",
           "written": "十杯",
           "readings": [
             "じゅっぱい",
@@ -1156,6 +1276,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos vasos o tazas?",
         "written": "何杯",
         "readings": [
           "なんばい"
@@ -1174,6 +1295,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un animal grande",
           "written": "一頭",
           "readings": [
             "いっとう"
@@ -1182,6 +1304,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos animales grandes",
           "written": "二頭",
           "readings": [
             "にとう"
@@ -1190,6 +1313,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres animales grandes",
           "written": "三頭",
           "readings": [
             "さんとう"
@@ -1198,6 +1322,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro animales grandes",
           "written": "四頭",
           "readings": [
             "よんとう"
@@ -1206,6 +1331,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco animales grandes",
           "written": "五頭",
           "readings": [
             "ごとう"
@@ -1214,6 +1340,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis animales grandes",
           "written": "六頭",
           "readings": [
             "ろくとう"
@@ -1222,6 +1349,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete animales grandes",
           "written": "七頭",
           "readings": [
             "ななとう"
@@ -1230,6 +1358,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho animales grandes",
           "written": "八頭",
           "readings": [
             "はっとう"
@@ -1238,6 +1367,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve animales grandes",
           "written": "九頭",
           "readings": [
             "きゅうとう"
@@ -1246,6 +1376,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez animales grandes",
           "written": "十頭",
           "readings": [
             "じゅっとう",
@@ -1255,6 +1386,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos animales grandes?",
         "written": "何頭",
         "readings": [
           "なんとう"
@@ -1273,6 +1405,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un día",
           "written": "一日",
           "readings": [
             "いちにち"
@@ -1281,6 +1414,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos días",
           "written": "二日間",
           "readings": [
             "ふつかかん"
@@ -1289,6 +1423,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres días",
           "written": "三日間",
           "readings": [
             "みっかかん"
@@ -1297,6 +1432,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro días",
           "written": "四日間",
           "readings": [
             "よっかかん"
@@ -1305,6 +1441,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco días",
           "written": "五日間",
           "readings": [
             "いつかかん"
@@ -1313,6 +1450,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis días",
           "written": "六日間",
           "readings": [
             "むいかかん"
@@ -1321,6 +1459,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete días",
           "written": "七日間",
           "readings": [
             "なのかかん"
@@ -1329,6 +1468,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho días",
           "written": "八日間",
           "readings": [
             "ようかかん"
@@ -1337,6 +1477,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve días",
           "written": "九日間",
           "readings": [
             "ここのかかん"
@@ -1345,6 +1486,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez días",
           "written": "十日間",
           "readings": [
             "とおかかん"
@@ -1353,6 +1495,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos días?",
         "written": "何日間",
         "readings": [
           "なんにちかん"
@@ -1373,6 +1516,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "una semana",
           "written": "一週間",
           "readings": [
             "いっしゅうかん"
@@ -1381,6 +1525,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos semanas",
           "written": "二週間",
           "readings": [
             "にしゅうかん"
@@ -1389,6 +1534,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres semanas",
           "written": "三週間",
           "readings": [
             "さんしゅうかん"
@@ -1397,6 +1543,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro semanas",
           "written": "四週間",
           "readings": [
             "よんしゅうかん"
@@ -1405,6 +1552,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco semanas",
           "written": "五週間",
           "readings": [
             "ごしゅうかん"
@@ -1413,6 +1561,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis semanas",
           "written": "六週間",
           "readings": [
             "ろくしゅうかん"
@@ -1421,6 +1570,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete semanas",
           "written": "七週間",
           "readings": [
             "ななしゅうかん"
@@ -1429,6 +1579,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho semanas",
           "written": "八週間",
           "readings": [
             "はっしゅうかん"
@@ -1437,6 +1588,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve semanas",
           "written": "九週間",
           "readings": [
             "きゅうしゅうかん"
@@ -1445,6 +1597,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez semanas",
           "written": "十週間",
           "readings": [
             "じゅっしゅうかん",
@@ -1454,6 +1607,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántas semanas?",
         "written": "何週間",
         "readings": [
           "なんしゅうかん"
@@ -1472,6 +1626,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un mes",
           "written": "一か月",
           "readings": [
             "いっかげつ"
@@ -1480,6 +1635,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos meses",
           "written": "二か月",
           "readings": [
             "にかげつ"
@@ -1488,6 +1644,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres meses",
           "written": "三か月",
           "readings": [
             "さんかげつ"
@@ -1496,6 +1653,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro meses",
           "written": "四か月",
           "readings": [
             "よんかげつ"
@@ -1504,6 +1662,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco meses",
           "written": "五か月",
           "readings": [
             "ごかげつ"
@@ -1512,6 +1671,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis meses",
           "written": "六か月",
           "readings": [
             "ろっかげつ"
@@ -1520,6 +1680,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete meses",
           "written": "七か月",
           "readings": [
             "ななかげつ"
@@ -1528,6 +1689,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho meses",
           "written": "八か月",
           "readings": [
             "はっかげつ"
@@ -1536,6 +1698,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve meses",
           "written": "九か月",
           "readings": [
             "きゅうかげつ"
@@ -1544,6 +1707,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez meses",
           "written": "十か月",
           "readings": [
             "じゅっかげつ",
@@ -1553,6 +1717,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos meses?",
         "written": "何か月",
         "readings": [
           "なんかげつ"
@@ -1573,6 +1738,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "un año de edad",
           "written": "一歳",
           "readings": [
             "いっさい"
@@ -1581,6 +1747,7 @@
         },
         {
           "value": 2,
+          "meaning": "dos años de edad",
           "written": "二歳",
           "readings": [
             "にさい"
@@ -1589,6 +1756,7 @@
         },
         {
           "value": 3,
+          "meaning": "tres años de edad",
           "written": "三歳",
           "readings": [
             "さんさい"
@@ -1597,6 +1765,7 @@
         },
         {
           "value": 4,
+          "meaning": "cuatro años de edad",
           "written": "四歳",
           "readings": [
             "よんさい"
@@ -1605,6 +1774,7 @@
         },
         {
           "value": 5,
+          "meaning": "cinco años de edad",
           "written": "五歳",
           "readings": [
             "ごさい"
@@ -1613,6 +1783,7 @@
         },
         {
           "value": 6,
+          "meaning": "seis años de edad",
           "written": "六歳",
           "readings": [
             "ろくさい"
@@ -1621,6 +1792,7 @@
         },
         {
           "value": 7,
+          "meaning": "siete años de edad",
           "written": "七歳",
           "readings": [
             "ななさい"
@@ -1629,6 +1801,7 @@
         },
         {
           "value": 8,
+          "meaning": "ocho años de edad",
           "written": "八歳",
           "readings": [
             "はっさい"
@@ -1637,6 +1810,7 @@
         },
         {
           "value": 9,
+          "meaning": "nueve años de edad",
           "written": "九歳",
           "readings": [
             "きゅうさい"
@@ -1645,6 +1819,7 @@
         },
         {
           "value": 10,
+          "meaning": "diez años de edad",
           "written": "十歳",
           "readings": [
             "じゅっさい",
@@ -1654,6 +1829,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos años de edad?",
         "written": "何歳",
         "readings": [
           "なんさい"
@@ -1674,6 +1850,7 @@
       "forms": [
         {
           "value": 1,
+          "meaning": "día uno del mes",
           "written": "一日",
           "readings": [
             "ついたち"
@@ -1682,6 +1859,7 @@
         },
         {
           "value": 2,
+          "meaning": "día dos del mes",
           "written": "二日",
           "readings": [
             "ふつか"
@@ -1690,6 +1868,7 @@
         },
         {
           "value": 3,
+          "meaning": "día tres del mes",
           "written": "三日",
           "readings": [
             "みっか"
@@ -1698,6 +1877,7 @@
         },
         {
           "value": 4,
+          "meaning": "día cuatro del mes",
           "written": "四日",
           "readings": [
             "よっか"
@@ -1706,6 +1886,7 @@
         },
         {
           "value": 5,
+          "meaning": "día cinco del mes",
           "written": "五日",
           "readings": [
             "いつか"
@@ -1714,6 +1895,7 @@
         },
         {
           "value": 6,
+          "meaning": "día seis del mes",
           "written": "六日",
           "readings": [
             "むいか"
@@ -1722,6 +1904,7 @@
         },
         {
           "value": 7,
+          "meaning": "día siete del mes",
           "written": "七日",
           "readings": [
             "なのか"
@@ -1730,6 +1913,7 @@
         },
         {
           "value": 8,
+          "meaning": "día ocho del mes",
           "written": "八日",
           "readings": [
             "ようか"
@@ -1738,6 +1922,7 @@
         },
         {
           "value": 9,
+          "meaning": "día nueve del mes",
           "written": "九日",
           "readings": [
             "ここのか"
@@ -1746,6 +1931,7 @@
         },
         {
           "value": 10,
+          "meaning": "día diez del mes",
           "written": "十日",
           "readings": [
             "とおか"
@@ -1754,6 +1940,7 @@
         },
         {
           "value": 11,
+          "meaning": "día once del mes",
           "written": "十一日",
           "readings": [
             "じゅういちにち"
@@ -1762,6 +1949,7 @@
         },
         {
           "value": 12,
+          "meaning": "día doce del mes",
           "written": "十二日",
           "readings": [
             "じゅうににち"
@@ -1770,6 +1958,7 @@
         },
         {
           "value": 13,
+          "meaning": "día trece del mes",
           "written": "十三日",
           "readings": [
             "じゅうさんにち"
@@ -1778,6 +1967,7 @@
         },
         {
           "value": 14,
+          "meaning": "día catorce del mes",
           "written": "十四日",
           "readings": [
             "じゅうよっか"
@@ -1786,6 +1976,7 @@
         },
         {
           "value": 15,
+          "meaning": "día quince del mes",
           "written": "十五日",
           "readings": [
             "じゅうごにち"
@@ -1794,6 +1985,7 @@
         },
         {
           "value": 16,
+          "meaning": "día dieciséis del mes",
           "written": "十六日",
           "readings": [
             "じゅうろくにち"
@@ -1802,6 +1994,7 @@
         },
         {
           "value": 17,
+          "meaning": "día diecisiete del mes",
           "written": "十七日",
           "readings": [
             "じゅうしちにち"
@@ -1810,6 +2003,7 @@
         },
         {
           "value": 18,
+          "meaning": "día dieciocho del mes",
           "written": "十八日",
           "readings": [
             "じゅうはちにち"
@@ -1818,6 +2012,7 @@
         },
         {
           "value": 19,
+          "meaning": "día diecinueve del mes",
           "written": "十九日",
           "readings": [
             "じゅうくにち"
@@ -1826,6 +2021,7 @@
         },
         {
           "value": 20,
+          "meaning": "día veinte del mes",
           "written": "二十日",
           "readings": [
             "はつか"
@@ -1834,6 +2030,7 @@
         },
         {
           "value": 21,
+          "meaning": "día veintiuno del mes",
           "written": "二十一日",
           "readings": [
             "にじゅういちにち"
@@ -1842,6 +2039,7 @@
         },
         {
           "value": 22,
+          "meaning": "día veintidós del mes",
           "written": "二十二日",
           "readings": [
             "にじゅうににち"
@@ -1850,6 +2048,7 @@
         },
         {
           "value": 23,
+          "meaning": "día veintitrés del mes",
           "written": "二十三日",
           "readings": [
             "にじゅうさんにち"
@@ -1858,6 +2057,7 @@
         },
         {
           "value": 24,
+          "meaning": "día veinticuatro del mes",
           "written": "二十四日",
           "readings": [
             "にじゅうよっか"
@@ -1866,6 +2066,7 @@
         },
         {
           "value": 25,
+          "meaning": "día veinticinco del mes",
           "written": "二十五日",
           "readings": [
             "にじゅうごにち"
@@ -1874,6 +2075,7 @@
         },
         {
           "value": 26,
+          "meaning": "día veintiséis del mes",
           "written": "二十六日",
           "readings": [
             "にじゅうろくにち"
@@ -1882,6 +2084,7 @@
         },
         {
           "value": 27,
+          "meaning": "día veintisiete del mes",
           "written": "二十七日",
           "readings": [
             "にじゅうしちにち"
@@ -1890,6 +2093,7 @@
         },
         {
           "value": 28,
+          "meaning": "día veintiocho del mes",
           "written": "二十八日",
           "readings": [
             "にじゅうはちにち"
@@ -1898,6 +2102,7 @@
         },
         {
           "value": 29,
+          "meaning": "día veintinueve del mes",
           "written": "二十九日",
           "readings": [
             "にじゅうくにち"
@@ -1906,6 +2111,7 @@
         },
         {
           "value": 30,
+          "meaning": "día treinta del mes",
           "written": "三十日",
           "readings": [
             "さんじゅうにち"
@@ -1914,6 +2120,7 @@
         },
         {
           "value": 31,
+          "meaning": "día treinta y uno del mes",
           "written": "三十一日",
           "readings": [
             "さんじゅういちにち"
@@ -1922,6 +2129,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Qué día del mes?",
         "written": "何日",
         "readings": [
           "なんにち"
@@ -1942,6 +2150,7 @@
       "forms": [
         {
           "value": 100,
+          "meaning": "cien",
           "written": "百",
           "readings": [
             "ひゃく"
@@ -1950,6 +2159,7 @@
         },
         {
           "value": 200,
+          "meaning": "doscientos",
           "written": "二百",
           "readings": [
             "にひゃく"
@@ -1958,6 +2168,7 @@
         },
         {
           "value": 300,
+          "meaning": "trescientos",
           "written": "三百",
           "readings": [
             "さんびゃく"
@@ -1966,6 +2177,7 @@
         },
         {
           "value": 400,
+          "meaning": "cuatrocientos",
           "written": "四百",
           "readings": [
             "よんひゃく"
@@ -1974,6 +2186,7 @@
         },
         {
           "value": 500,
+          "meaning": "quinientos",
           "written": "五百",
           "readings": [
             "ごひゃく"
@@ -1982,6 +2195,7 @@
         },
         {
           "value": 600,
+          "meaning": "seiscientos",
           "written": "六百",
           "readings": [
             "ろっぴゃく"
@@ -1990,6 +2204,7 @@
         },
         {
           "value": 700,
+          "meaning": "setecientos",
           "written": "七百",
           "readings": [
             "ななひゃく"
@@ -1998,6 +2213,7 @@
         },
         {
           "value": 800,
+          "meaning": "ochocientos",
           "written": "八百",
           "readings": [
             "はっぴゃく"
@@ -2006,6 +2222,7 @@
         },
         {
           "value": 900,
+          "meaning": "novecientos",
           "written": "九百",
           "readings": [
             "きゅうひゃく"
@@ -2014,6 +2231,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántas centenas de yenes?",
         "written": "何百円",
         "readings": [
           "なんびゃくえん"
@@ -2034,6 +2252,7 @@
       "forms": [
         {
           "value": 1000,
+          "meaning": "mil",
           "written": "千",
           "readings": [
             "せん"
@@ -2042,6 +2261,7 @@
         },
         {
           "value": 2000,
+          "meaning": "dos mil",
           "written": "二千",
           "readings": [
             "にせん"
@@ -2050,6 +2270,7 @@
         },
         {
           "value": 3000,
+          "meaning": "tres mil",
           "written": "三千",
           "readings": [
             "さんぜん"
@@ -2058,6 +2279,7 @@
         },
         {
           "value": 4000,
+          "meaning": "cuatro mil",
           "written": "四千",
           "readings": [
             "よんせん"
@@ -2066,6 +2288,7 @@
         },
         {
           "value": 5000,
+          "meaning": "cinco mil",
           "written": "五千",
           "readings": [
             "ごせん"
@@ -2074,6 +2297,7 @@
         },
         {
           "value": 6000,
+          "meaning": "seis mil",
           "written": "六千",
           "readings": [
             "ろくせん"
@@ -2082,6 +2306,7 @@
         },
         {
           "value": 7000,
+          "meaning": "siete mil",
           "written": "七千",
           "readings": [
             "ななせん"
@@ -2090,6 +2315,7 @@
         },
         {
           "value": 8000,
+          "meaning": "ocho mil",
           "written": "八千",
           "readings": [
             "はっせん"
@@ -2098,6 +2324,7 @@
         },
         {
           "value": 9000,
+          "meaning": "nueve mil",
           "written": "九千",
           "readings": [
             "きゅうせん"
@@ -2106,6 +2333,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántos miles de yenes?",
         "written": "何千円",
         "readings": [
           "なんぜんえん"
@@ -2126,6 +2354,7 @@
       "forms": [
         {
           "value": 10000,
+          "meaning": "diez mil",
           "written": "一万",
           "readings": [
             "いちまん"
@@ -2134,6 +2363,7 @@
         },
         {
           "value": 20000,
+          "meaning": "veinte mil",
           "written": "二万",
           "readings": [
             "にまん"
@@ -2142,6 +2372,7 @@
         },
         {
           "value": 30000,
+          "meaning": "treinta mil",
           "written": "三万",
           "readings": [
             "さんまん"
@@ -2150,6 +2381,7 @@
         },
         {
           "value": 40000,
+          "meaning": "cuarenta mil",
           "written": "四万",
           "readings": [
             "よんまん"
@@ -2158,6 +2390,7 @@
         },
         {
           "value": 50000,
+          "meaning": "cincuenta mil",
           "written": "五万",
           "readings": [
             "ごまん"
@@ -2166,6 +2399,7 @@
         },
         {
           "value": 60000,
+          "meaning": "sesenta mil",
           "written": "六万",
           "readings": [
             "ろくまん"
@@ -2174,6 +2408,7 @@
         },
         {
           "value": 70000,
+          "meaning": "setenta mil",
           "written": "七万",
           "readings": [
             "ななまん"
@@ -2182,6 +2417,7 @@
         },
         {
           "value": 80000,
+          "meaning": "ochenta mil",
           "written": "八万",
           "readings": [
             "はちまん"
@@ -2190,6 +2426,7 @@
         },
         {
           "value": 90000,
+          "meaning": "noventa mil",
           "written": "九万",
           "readings": [
             "きゅうまん"
@@ -2198,6 +2435,7 @@
         },
         {
           "value": 100000,
+          "meaning": "cien mil",
           "written": "十万",
           "readings": [
             "じゅうまん"
@@ -2206,6 +2444,7 @@
         }
       ],
       "question": {
+        "meaning": "¿Cuántas decenas de millar de yenes?",
         "written": "何万円",
         "readings": [
           "なんまんえん"

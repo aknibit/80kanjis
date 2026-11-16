@@ -17,6 +17,10 @@ Los archivos de `public/` son la fuente de la verdad publicada. El navegador los
 
 Cada archivo nuevo declara `version`, `kind`, `title`, `description`, `sources`, `groups`, `guides` y `entries`. Los textos de estudio y sus clasificaciones viven en esos archivos, no en los componentes TypeScript.
 
+El menú conserva primero las secciones principales. `placement: "support"` coloca Kana separado al final, a la derecha; en móvil sigue visible mientras el menú principal permite desplazamiento horizontal.
+
+En Kana, los tres grupos comparten las mismas once columnas por familia de sonidos: vocales, k/g, s/z, t/d, n, h/b/p, m, y, r, w y ん, desde la derecha. Así, か・が・きゃ・ぎゃ quedan en la misma columna. `position.row` avanza hacia abajo dentro de cada grupo: los básicos y dakuten usan a・i・u・e・o; handakuten ocupa un segundo bloque de cinco filas en la columna h/b/p. Las combinaciones usan bloques ya・yu・yo, seguidos de las variantes con dakuten y handakuten en sus mismas columnas. Se admiten hasta quince filas y se conservan los huecos de や・ゆ・よ y わ・を. Se comprueba que no haya posiciones duplicadas dentro de un grupo. Los tres grupos comparten el desplazamiento horizontal, también al filtrar o buscar.
+
 ## Procedencia
 
 La importación inicial del 16 de noviembre de 2026 usa las notas temáticas de **日本語 / Primer curso organizado**, que ya documentan correcciones del archivo original. Se conservan sus lecturas, traducciones y distinciones de uso. Las redacciones personales y el archivo de apuntes sin corregir no se han importado.
@@ -33,7 +37,7 @@ El vault no contiene una tabla completa de kana: esa sección se completa con la
 2. Para una entrada nueva, elige un `id` único y estable, con letras latinas minúsculas, números y guiones.
 3. Usa un `group` y un `sourceId` declarados en el mismo archivo. Añade la fuente si no existe.
 4. Las lecturas léxicas se escriben en hiragana. Las variantes de contadores se guardan como lecturas distintas dentro de `readings`, nunca escondidas en un campo de texto.
-5. Guarda las cantidades de un contador ordenadas y sin duplicados. `special` indica una lectura irregular o un cambio de sonido; no es una dificultad de estudio.
+5. Guarda las cantidades de un contador ordenadas y sin duplicados. Cada forma y pregunta incluye `meaning` con su traducción completa al español: por ejemplo, `tres objetos`, `cuatro semanas` o `¿Cuántas semanas?`. La tabla muestra esa traducción en lugar de `value`, que conserva la cantidad numérica para ordenar y validar. `special` indica una lectura irregular o un cambio de sonido; no es una dificultad de estudio.
 6. Si el cambio necesita una explicación, usa `note`, `notes` o una guía en `guides`, según el tipo de entrada.
 
 Ejemplo de una entrada léxica:

@@ -15,12 +15,6 @@
       "kind": "counters"
     },
     {
-      "id": "kana",
-      "label": "Kana",
-      "file": "content/kana.json",
-      "kind": "kana"
-    },
-    {
       "id": "verbs",
       "label": "Verbos",
       "file": "content/verbs.json",
@@ -37,6 +31,13 @@
       "label": "Adjetivos y adverbios",
       "file": "content/modifiers.json",
       "kind": "lexicon"
+    },
+    {
+      "id": "kana",
+      "label": "Kana",
+      "file": "content/kana.json",
+      "kind": "kana",
+      "placement": "support"
     }
   ]
 }

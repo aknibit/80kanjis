@@ -206,6 +206,12 @@
               "file": {
                 "type": "string",
                 "pattern": "^(collection\\.json|content/[a-z0-9-]+\\.json)$"
+              },
+              "placement": {
+                "enum": [
+                  "primary",
+                  "support"
+                ]
               }
             },
             "required": [
@@ -370,6 +376,11 @@
                 "items": {
                   "type": "object",
                   "properties": {
+                    "meaning": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "\\S"
+                    },
                     "value": {
                       "type": "integer",
                       "minimum": 1
@@ -395,6 +406,7 @@
                     }
                   },
                   "required": [
+                    "meaning",
                     "value",
                     "written",
                     "readings",
@@ -408,6 +420,11 @@
               "question": {
                 "type": "object",
                 "properties": {
+                  "meaning": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
                   "written": {
                     "type": "string",
                     "minLength": 1,
@@ -425,6 +442,7 @@
                   }
                 },
                 "required": [
+                  "meaning",
                   "written",
                   "readings"
                 ],
@@ -546,6 +564,26 @@
                 "type": "string",
                 "minLength": 1,
                 "pattern": "\\S"
+              },
+              "position": {
+                "type": "object",
+                "properties": {
+                  "column": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 32
+                  },
+                  "row": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 15
+                  }
+                },
+                "required": [
+                  "column",
+                  "row"
+                ],
+                "additionalProperties": false
               }
             },
             "required": [
@@ -554,7 +592,8 @@
               "sourceId",
               "hiragana",
               "katakana",
-              "romaji"
+              "romaji",
+              "position"
             ],
             "additionalProperties": false
           },

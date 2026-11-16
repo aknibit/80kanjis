@@ -3,7 +3,7 @@
   "version": 1,
   "kind": "kana",
   "title": "Kana",
-  "description": "Hiragana y katakana, lado a lado: sonidos básicos, marcas sonoras y combinaciones.",
+  "description": "Hiragana y katakana en orden japonés: de arriba abajo y de derecha a izquierda.",
   "sources": [
     {
       "id": "kana-chart",
@@ -62,7 +62,11 @@
       "katakana": "ア",
       "romaji": "a",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 1,
+        "row": 1
+      }
     },
     {
       "id": "kana-3044",
@@ -70,7 +74,11 @@
       "katakana": "イ",
       "romaji": "i",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 1,
+        "row": 2
+      }
     },
     {
       "id": "kana-3046",
@@ -78,7 +86,11 @@
       "katakana": "ウ",
       "romaji": "u",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 1,
+        "row": 3
+      }
     },
     {
       "id": "kana-3048",
@@ -86,7 +98,11 @@
       "katakana": "エ",
       "romaji": "e",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 1,
+        "row": 4
+      }
     },
     {
       "id": "kana-304a",
@@ -94,7 +110,11 @@
       "katakana": "オ",
       "romaji": "o",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 1,
+        "row": 5
+      }
     },
     {
       "id": "kana-304b",
@@ -102,7 +122,11 @@
       "katakana": "カ",
       "romaji": "ka",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 1
+      }
     },
     {
       "id": "kana-304d",
@@ -110,7 +134,11 @@
       "katakana": "キ",
       "romaji": "ki",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 2
+      }
     },
     {
       "id": "kana-304f",
@@ -118,7 +146,11 @@
       "katakana": "ク",
       "romaji": "ku",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 3
+      }
     },
     {
       "id": "kana-3051",
@@ -126,7 +158,11 @@
       "katakana": "ケ",
       "romaji": "ke",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 4
+      }
     },
     {
       "id": "kana-3053",
@@ -134,7 +170,11 @@
       "katakana": "コ",
       "romaji": "ko",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 5
+      }
     },
     {
       "id": "kana-3055",
@@ -142,7 +182,11 @@
       "katakana": "サ",
       "romaji": "sa",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 1
+      }
     },
     {
       "id": "kana-3057",
@@ -150,7 +194,11 @@
       "katakana": "シ",
       "romaji": "shi",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 2
+      }
     },
     {
       "id": "kana-3059",
@@ -158,7 +206,11 @@
       "katakana": "ス",
       "romaji": "su",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 3
+      }
     },
     {
       "id": "kana-305b",
@@ -166,7 +218,11 @@
       "katakana": "セ",
       "romaji": "se",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 4
+      }
     },
     {
       "id": "kana-305d",
@@ -174,7 +230,11 @@
       "katakana": "ソ",
       "romaji": "so",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 5
+      }
     },
     {
       "id": "kana-305f",
@@ -182,7 +242,11 @@
       "katakana": "タ",
       "romaji": "ta",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 1
+      }
     },
     {
       "id": "kana-3061",
@@ -190,7 +254,11 @@
       "katakana": "チ",
       "romaji": "chi",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 2
+      }
     },
     {
       "id": "kana-3064",
@@ -198,7 +266,11 @@
       "katakana": "ツ",
       "romaji": "tsu",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 3
+      }
     },
     {
       "id": "kana-3066",
@@ -206,7 +278,11 @@
       "katakana": "テ",
       "romaji": "te",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 4
+      }
     },
     {
       "id": "kana-3068",
@@ -214,7 +290,11 @@
       "katakana": "ト",
       "romaji": "to",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 5
+      }
     },
     {
       "id": "kana-306a",
@@ -222,7 +302,11 @@
       "katakana": "ナ",
       "romaji": "na",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 5,
+        "row": 1
+      }
     },
     {
       "id": "kana-306b",
@@ -230,7 +314,11 @@
       "katakana": "ニ",
       "romaji": "ni",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 5,
+        "row": 2
+      }
     },
     {
       "id": "kana-306c",
@@ -238,7 +326,11 @@
       "katakana": "ヌ",
       "romaji": "nu",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 5,
+        "row": 3
+      }
     },
     {
       "id": "kana-306d",
@@ -246,7 +338,11 @@
       "katakana": "ネ",
       "romaji": "ne",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 5,
+        "row": 4
+      }
     },
     {
       "id": "kana-306e",
@@ -254,7 +350,11 @@
       "katakana": "ノ",
       "romaji": "no",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 5,
+        "row": 5
+      }
     },
     {
       "id": "kana-306f",
@@ -262,7 +362,11 @@
       "katakana": "ハ",
       "romaji": "ha",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 1
+      }
     },
     {
       "id": "kana-3072",
@@ -270,7 +374,11 @@
       "katakana": "ヒ",
       "romaji": "hi",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 2
+      }
     },
     {
       "id": "kana-3075",
@@ -278,7 +386,11 @@
       "katakana": "フ",
       "romaji": "fu",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 3
+      }
     },
     {
       "id": "kana-3078",
@@ -286,7 +398,11 @@
       "katakana": "ヘ",
       "romaji": "he",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 4
+      }
     },
     {
       "id": "kana-307b",
@@ -294,7 +410,11 @@
       "katakana": "ホ",
       "romaji": "ho",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 5
+      }
     },
     {
       "id": "kana-307e",
@@ -302,7 +422,11 @@
       "katakana": "マ",
       "romaji": "ma",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 7,
+        "row": 1
+      }
     },
     {
       "id": "kana-307f",
@@ -310,7 +434,11 @@
       "katakana": "ミ",
       "romaji": "mi",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 7,
+        "row": 2
+      }
     },
     {
       "id": "kana-3080",
@@ -318,7 +446,11 @@
       "katakana": "ム",
       "romaji": "mu",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 7,
+        "row": 3
+      }
     },
     {
       "id": "kana-3081",
@@ -326,7 +458,11 @@
       "katakana": "メ",
       "romaji": "me",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 7,
+        "row": 4
+      }
     },
     {
       "id": "kana-3082",
@@ -334,7 +470,11 @@
       "katakana": "モ",
       "romaji": "mo",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 7,
+        "row": 5
+      }
     },
     {
       "id": "kana-3084",
@@ -342,7 +482,11 @@
       "katakana": "ヤ",
       "romaji": "ya",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 8,
+        "row": 1
+      }
     },
     {
       "id": "kana-3086",
@@ -350,7 +494,11 @@
       "katakana": "ユ",
       "romaji": "yu",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 8,
+        "row": 3
+      }
     },
     {
       "id": "kana-3088",
@@ -358,7 +506,11 @@
       "katakana": "ヨ",
       "romaji": "yo",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 8,
+        "row": 5
+      }
     },
     {
       "id": "kana-3089",
@@ -366,7 +518,11 @@
       "katakana": "ラ",
       "romaji": "ra",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 9,
+        "row": 1
+      }
     },
     {
       "id": "kana-308a",
@@ -374,7 +530,11 @@
       "katakana": "リ",
       "romaji": "ri",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 9,
+        "row": 2
+      }
     },
     {
       "id": "kana-308b",
@@ -382,7 +542,11 @@
       "katakana": "ル",
       "romaji": "ru",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 9,
+        "row": 3
+      }
     },
     {
       "id": "kana-308c",
@@ -390,7 +554,11 @@
       "katakana": "レ",
       "romaji": "re",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 9,
+        "row": 4
+      }
     },
     {
       "id": "kana-308d",
@@ -398,7 +566,11 @@
       "katakana": "ロ",
       "romaji": "ro",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 9,
+        "row": 5
+      }
     },
     {
       "id": "kana-308f",
@@ -406,7 +578,11 @@
       "katakana": "ワ",
       "romaji": "wa",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 10,
+        "row": 1
+      }
     },
     {
       "id": "kana-3092",
@@ -414,7 +590,11 @@
       "katakana": "ヲ",
       "romaji": "wo",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 10,
+        "row": 5
+      }
     },
     {
       "id": "kana-3093",
@@ -422,7 +602,11 @@
       "katakana": "ン",
       "romaji": "n",
       "group": "basic",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 11,
+        "row": 1
+      }
     },
     {
       "id": "kana-304c",
@@ -430,7 +614,11 @@
       "katakana": "ガ",
       "romaji": "ga",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 1
+      }
     },
     {
       "id": "kana-304e",
@@ -438,7 +626,11 @@
       "katakana": "ギ",
       "romaji": "gi",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 2
+      }
     },
     {
       "id": "kana-3050",
@@ -446,7 +638,11 @@
       "katakana": "グ",
       "romaji": "gu",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 3
+      }
     },
     {
       "id": "kana-3052",
@@ -454,7 +650,11 @@
       "katakana": "ゲ",
       "romaji": "ge",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 4
+      }
     },
     {
       "id": "kana-3054",
@@ -462,7 +662,11 @@
       "katakana": "ゴ",
       "romaji": "go",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 5
+      }
     },
     {
       "id": "kana-3056",
@@ -470,7 +674,11 @@
       "katakana": "ザ",
       "romaji": "za",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 1
+      }
     },
     {
       "id": "kana-3058",
@@ -478,7 +686,11 @@
       "katakana": "ジ",
       "romaji": "ji",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 2
+      }
     },
     {
       "id": "kana-305a",
@@ -486,7 +698,11 @@
       "katakana": "ズ",
       "romaji": "zu",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 3
+      }
     },
     {
       "id": "kana-305c",
@@ -494,7 +710,11 @@
       "katakana": "ゼ",
       "romaji": "ze",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 4
+      }
     },
     {
       "id": "kana-305e",
@@ -502,7 +722,11 @@
       "katakana": "ゾ",
       "romaji": "zo",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 5
+      }
     },
     {
       "id": "kana-3060",
@@ -510,7 +734,11 @@
       "katakana": "ダ",
       "romaji": "da",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 1
+      }
     },
     {
       "id": "kana-3062",
@@ -518,7 +746,11 @@
       "katakana": "ヂ",
       "romaji": "ji",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 2
+      }
     },
     {
       "id": "kana-3065",
@@ -526,7 +758,11 @@
       "katakana": "ヅ",
       "romaji": "zu",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 3
+      }
     },
     {
       "id": "kana-3067",
@@ -534,7 +770,11 @@
       "katakana": "デ",
       "romaji": "de",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 4
+      }
     },
     {
       "id": "kana-3069",
@@ -542,7 +782,11 @@
       "katakana": "ド",
       "romaji": "do",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 5
+      }
     },
     {
       "id": "kana-3070",
@@ -550,7 +794,11 @@
       "katakana": "バ",
       "romaji": "ba",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 1
+      }
     },
     {
       "id": "kana-3073",
@@ -558,7 +806,11 @@
       "katakana": "ビ",
       "romaji": "bi",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 2
+      }
     },
     {
       "id": "kana-3076",
@@ -566,7 +818,11 @@
       "katakana": "ブ",
       "romaji": "bu",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 3
+      }
     },
     {
       "id": "kana-3079",
@@ -574,7 +830,11 @@
       "katakana": "ベ",
       "romaji": "be",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 4
+      }
     },
     {
       "id": "kana-307c",
@@ -582,7 +842,11 @@
       "katakana": "ボ",
       "romaji": "bo",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 5
+      }
     },
     {
       "id": "kana-3071",
@@ -590,7 +854,11 @@
       "katakana": "パ",
       "romaji": "pa",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 6
+      }
     },
     {
       "id": "kana-3074",
@@ -598,7 +866,11 @@
       "katakana": "ピ",
       "romaji": "pi",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 7
+      }
     },
     {
       "id": "kana-3077",
@@ -606,7 +878,11 @@
       "katakana": "プ",
       "romaji": "pu",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 8
+      }
     },
     {
       "id": "kana-307a",
@@ -614,7 +890,11 @@
       "katakana": "ペ",
       "romaji": "pe",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 9
+      }
     },
     {
       "id": "kana-307d",
@@ -622,7 +902,11 @@
       "katakana": "ポ",
       "romaji": "po",
       "group": "voiced",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 10
+      }
     },
     {
       "id": "kana-304d3083",
@@ -630,7 +914,11 @@
       "katakana": "キャ",
       "romaji": "kya",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 1
+      }
     },
     {
       "id": "kana-304d3085",
@@ -638,7 +926,11 @@
       "katakana": "キュ",
       "romaji": "kyu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 2
+      }
     },
     {
       "id": "kana-304d3087",
@@ -646,7 +938,11 @@
       "katakana": "キョ",
       "romaji": "kyo",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 3
+      }
     },
     {
       "id": "kana-30573083",
@@ -654,7 +950,11 @@
       "katakana": "シャ",
       "romaji": "sha",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 1
+      }
     },
     {
       "id": "kana-30573085",
@@ -662,7 +962,11 @@
       "katakana": "シュ",
       "romaji": "shu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 2
+      }
     },
     {
       "id": "kana-30573087",
@@ -670,7 +974,11 @@
       "katakana": "ショ",
       "romaji": "sho",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 3
+      }
     },
     {
       "id": "kana-30613083",
@@ -678,7 +986,11 @@
       "katakana": "チャ",
       "romaji": "cha",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 1
+      }
     },
     {
       "id": "kana-30613085",
@@ -686,7 +998,11 @@
       "katakana": "チュ",
       "romaji": "chu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 2
+      }
     },
     {
       "id": "kana-30613087",
@@ -694,7 +1010,11 @@
       "katakana": "チョ",
       "romaji": "cho",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 4,
+        "row": 3
+      }
     },
     {
       "id": "kana-306b3083",
@@ -702,7 +1022,11 @@
       "katakana": "ニャ",
       "romaji": "nya",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 5,
+        "row": 1
+      }
     },
     {
       "id": "kana-306b3085",
@@ -710,7 +1034,11 @@
       "katakana": "ニュ",
       "romaji": "nyu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 5,
+        "row": 2
+      }
     },
     {
       "id": "kana-306b3087",
@@ -718,7 +1046,11 @@
       "katakana": "ニョ",
       "romaji": "nyo",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 5,
+        "row": 3
+      }
     },
     {
       "id": "kana-30723083",
@@ -726,7 +1058,11 @@
       "katakana": "ヒャ",
       "romaji": "hya",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 1
+      }
     },
     {
       "id": "kana-30723085",
@@ -734,7 +1070,11 @@
       "katakana": "ヒュ",
       "romaji": "hyu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 2
+      }
     },
     {
       "id": "kana-30723087",
@@ -742,7 +1082,11 @@
       "katakana": "ヒョ",
       "romaji": "hyo",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 3
+      }
     },
     {
       "id": "kana-307f3083",
@@ -750,7 +1094,11 @@
       "katakana": "ミャ",
       "romaji": "mya",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 7,
+        "row": 1
+      }
     },
     {
       "id": "kana-307f3085",
@@ -758,7 +1106,11 @@
       "katakana": "ミュ",
       "romaji": "myu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 7,
+        "row": 2
+      }
     },
     {
       "id": "kana-307f3087",
@@ -766,7 +1118,11 @@
       "katakana": "ミョ",
       "romaji": "myo",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 7,
+        "row": 3
+      }
     },
     {
       "id": "kana-308a3083",
@@ -774,7 +1130,11 @@
       "katakana": "リャ",
       "romaji": "rya",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 9,
+        "row": 1
+      }
     },
     {
       "id": "kana-308a3085",
@@ -782,7 +1142,11 @@
       "katakana": "リュ",
       "romaji": "ryu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 9,
+        "row": 2
+      }
     },
     {
       "id": "kana-308a3087",
@@ -790,7 +1154,11 @@
       "katakana": "リョ",
       "romaji": "ryo",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 9,
+        "row": 3
+      }
     },
     {
       "id": "kana-304e3083",
@@ -798,7 +1166,11 @@
       "katakana": "ギャ",
       "romaji": "gya",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 4
+      }
     },
     {
       "id": "kana-304e3085",
@@ -806,7 +1178,11 @@
       "katakana": "ギュ",
       "romaji": "gyu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 5
+      }
     },
     {
       "id": "kana-304e3087",
@@ -814,7 +1190,11 @@
       "katakana": "ギョ",
       "romaji": "gyo",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 2,
+        "row": 6
+      }
     },
     {
       "id": "kana-30583083",
@@ -822,7 +1202,11 @@
       "katakana": "ジャ",
       "romaji": "ja",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 4
+      }
     },
     {
       "id": "kana-30583085",
@@ -830,7 +1214,11 @@
       "katakana": "ジュ",
       "romaji": "ju",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 5
+      }
     },
     {
       "id": "kana-30583087",
@@ -838,7 +1226,11 @@
       "katakana": "ジョ",
       "romaji": "jo",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 3,
+        "row": 6
+      }
     },
     {
       "id": "kana-30733083",
@@ -846,7 +1238,11 @@
       "katakana": "ビャ",
       "romaji": "bya",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 4
+      }
     },
     {
       "id": "kana-30733085",
@@ -854,7 +1250,11 @@
       "katakana": "ビュ",
       "romaji": "byu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 5
+      }
     },
     {
       "id": "kana-30733087",
@@ -862,7 +1262,11 @@
       "katakana": "ビョ",
       "romaji": "byo",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 6
+      }
     },
     {
       "id": "kana-30743083",
@@ -870,7 +1274,11 @@
       "katakana": "ピャ",
       "romaji": "pya",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 7
+      }
     },
     {
       "id": "kana-30743085",
@@ -878,7 +1286,11 @@
       "katakana": "ピュ",
       "romaji": "pyu",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 8
+      }
     },
     {
       "id": "kana-30743087",
@@ -886,7 +1298,11 @@
       "katakana": "ピョ",
       "romaji": "pyo",
       "group": "combined",
-      "sourceId": "kana-chart"
+      "sourceId": "kana-chart",
+      "position": {
+        "column": 6,
+        "row": 9
+      }
     }
   ]
 }

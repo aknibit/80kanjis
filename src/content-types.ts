@@ -5,6 +5,7 @@ export interface NavigationSection {
   readonly label: string;
   readonly kind: 'kanji' | ContentKind;
   readonly file: string;
+  readonly placement?: 'primary' | 'support';
 }
 
 export interface NavigationDocument {
@@ -57,11 +58,12 @@ export interface CounterEntry extends EntryBase {
   readonly notes: readonly string[];
   readonly forms: readonly {
     readonly value: number;
+    readonly meaning: string;
     readonly written: string;
     readonly readings: readonly string[];
     readonly special: boolean;
   }[];
-  readonly question: { readonly written: string; readonly readings: readonly string[] };
+  readonly question: { readonly meaning: string; readonly written: string; readonly readings: readonly string[] };
 }
 
 export interface CounterDocument extends DocumentBase {
@@ -74,6 +76,8 @@ export interface KanaEntry extends EntryBase {
   readonly hiragana: string;
   readonly katakana: string;
   readonly romaji: string;
+  /** Sound families share columns from the right; rows advance downwards within each group. */
+  readonly position: { readonly column: number; readonly row: number };
 }
 
 export interface KanaDocument extends DocumentBase {

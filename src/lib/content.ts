@@ -61,10 +61,12 @@ export function parseNavigation(input: string): NavigationDocument {
   check(data.version === 1, 'Versión de navegación no compatible.');
   array(data.sections, 1);
   for (const value of data.sections) {
-    const section = record(value, ['id', 'label', 'kind', 'file']);
+    const section = record(value, ['id', 'label', 'kind', 'file'], ['placement']);
     id(section.id); text(section.label); text(section.file);
+    check(section.placement === undefined || section.placement === 'primary' || section.placement === 'support', 'Ubicación de menú no válida.');
     if (section.kind === 'kanji') {
       check(section.id === 'kanji' && section.file === 'collection.json', 'La colección de kanji debe conservar su fuente.');
+      check(section.placement !== 'support', 'La página de entrada debe estar en el menú principal.');
     } else {
       check(isKind(section.kind) && section.id !== 'kanji', 'Tipo de sección desconocido.');
       check(/^content\/[a-z0-9-]+\.json$/.test(section.file), 'Ruta de contenido no válida.');
@@ -116,12 +118,13 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
       }
     }
   }
+  const kanaPositions = new Set<string>();
   for (const value of data.entries) {
     const common = ['id', 'group', 'sourceId'];
     const entry = data.kind === 'counters'
       ? record(value, [...common, 'written', 'title', 'description', 'type', 'forms', 'question', 'notes'])
       : data.kind === 'kana'
-        ? record(value, [...common, 'hiragana', 'katakana', 'romaji'])
+        ? record(value, [...common, 'hiragana', 'katakana', 'romaji', 'position'])
         : record(value, [...common, 'written', 'reading', 'romaji', 'meaning'], ['note']);
     id(entry.id);
     check(groups.has(entry.group), `Grupo desconocido en ${entry.id}.`);
@@ -132,21 +135,29 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
       array(entry.forms, 1);
       let previous = 0;
       for (const value of entry.forms) {
-        const form = record(value, ['value', 'written', 'readings', 'special']);
+        const form = record(value, ['value', 'meaning', 'written', 'readings', 'special']);
         check(typeof form.value === 'number' && Number.isSafeInteger(form.value) && form.value > previous, 'Las cantidades deben ser positivas, únicas y estar ordenadas.');
         previous = form.value;
-        text(form.written); texts(form.readings, 1);
+        text(form.meaning); text(form.written); texts(form.readings, 1);
         check(form.readings.every((reading) => kanaReading.test(reading)), 'Lectura de contador no válida.');
         check(new Set(form.readings).size === form.readings.length, 'Lectura de contador repetida.');
         check(typeof form.special === 'boolean', 'Falta la marca de lectura especial.');
       }
-      const question = record(entry.question, ['written', 'readings']);
-      text(question.written); texts(question.readings, 1);
+      const question = record(entry.question, ['meaning', 'written', 'readings']);
+      text(question.meaning); text(question.written); texts(question.readings, 1);
       check(question.readings.every((reading) => kanaReading.test(reading)), 'Lectura de pregunta no válida.');
     } else if (data.kind === 'kana') {
       text(entry.hiragana); text(entry.katakana); text(entry.romaji);
       check(/^[ぁ-ゖ]+$/u.test(entry.hiragana) && /^[ァ-ヶ]+$/u.test(entry.katakana), 'Los kana deben usar su escritura correspondiente.');
       check(normalizeSearch(entry.katakana) === entry.hiragana, 'Hiragana y katakana no representan el mismo sonido.');
+      const position = record(entry.position, ['column', 'row']);
+      check(typeof position.column === 'number' && Number.isInteger(position.column) && position.column >= 1 && position.column <= 32,
+        'Columna de kana no válida.');
+      check(typeof position.row === 'number' && Number.isInteger(position.row) && position.row >= 1 && position.row <= 15,
+        'Fila de kana no válida.');
+      const cell = `${entry.group}:${position.column}:${position.row}`;
+      check(!kanaPositions.has(cell), 'Dos kana ocupan la misma posición de la tabla.');
+      kanaPositions.add(cell);
     } else {
       text(entry.written); text(entry.reading); text(entry.romaji); text(entry.meaning);
       check(kanaReading.test(entry.reading), 'La lectura debe estar en hiragana.');
@@ -199,8 +210,8 @@ export function searchContent<T extends ContentEntry>(entries: readonly T[], que
   return entries.filter((entry) => {
     if (group !== 'all' && entry.group !== group) return false;
     const searchable = 'forms' in entry
-      ? [entry.written, entry.title, entry.description, ...entry.notes, entry.question.written,
-        ...entry.question.readings, ...entry.forms.flatMap((form) => [String(form.value), form.written, ...form.readings])]
+      ? [entry.written, entry.title, entry.description, ...entry.notes, entry.question.meaning, entry.question.written,
+        ...entry.question.readings, ...entry.forms.flatMap((form) => [String(form.value), form.meaning, form.written, ...form.readings])]
       : 'hiragana' in entry ? [entry.hiragana, entry.katakana, entry.romaji]
         : [entry.written, entry.reading, entry.romaji, entry.meaning, entry.note ?? ''];
     const text = normalizeSearch(searchable.join(' '));
