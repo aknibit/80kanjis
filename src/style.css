@@ -397,9 +397,10 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .counter-symbol { min-width: 76px; font-family: var(--japanese); font-size: 26px; line-height: 1.5; color: var(--accent); }
 .counter-title { font-size: 16px; color: var(--title-soft); font-weight: 500; }
 .counter-heading { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.counter-endings { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
+/* Right-aligned, next to the form count; extra chips wrap from the right too. */
+.counter-endings { display: flex; flex-direction: column; align-items: flex-end; gap: 5px; padding-right: 12px; }
 .counter-endings-label { font-size: 11px; color: var(--faint); }
-.counter-ending-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.counter-ending-list { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
 .counter-ending { padding: 2px 8px; border: 1px solid var(--chip-border); border-radius: 5px; background: var(--chip-bg); font-family: var(--japanese-reading); font-size: 14px; line-height: 1.5; letter-spacing: .04em; color: var(--reading); }
 /* 〜 marks an ending, like the counter symbol (〜本 → 〜ほん); the alt text keeps it out of screen readers. */
 .counter-ending::before { content: '〜'; content: '〜' / ''; color: var(--faint); }
@@ -440,7 +441,8 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .counter-form-count { grid-column: 3; grid-row: 1; }
   .counter-summary::after { grid-column: 4; grid-row: 1; }
   .counter-description { grid-column: 2 / -1; grid-row: 2; }
-  .counter-endings { grid-column: 2 / -1; grid-row: 3; }
+  /* Right-aligned, so they can also use the symbol column and wrap less. */
+  .counter-endings { grid-column: 1 / -1; grid-row: 3; }
   .study-row { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 12px; }
   .study-block:nth-child(3) { border-inline-start: 0; }
   .study-block:nth-child(n + 3) { border-top: 1px solid var(--line); padding-top: 12px; }
