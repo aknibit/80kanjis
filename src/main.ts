@@ -10,6 +10,7 @@ import type { CollectionDocument, Difficulty, Kanji, StudyItem, StudyItemId } fr
 import { loadNavigation, loadStudyDocument, resolveSection, sectionHref } from './lib/content.ts';
 import { renderStudyPage } from './content-ui.ts';
 import { setupThemeToggle } from './theme.ts';
+import { fitPlaceholder } from './search-placeholder.ts';
 import './style.css';
 
 const searchIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>';
@@ -51,7 +52,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <label class="visually-hidden" for="search">Buscar en japonés o español por kanji, lectura o significado</label>
         <div class="search-box">
           ${searchIcon}
-          <input id="search" type="search" placeholder="Busca en japonés o español: kanji, lectura o significado…" spellcheck="false" aria-controls="kanji-grid" />
+          <input id="search" type="search" spellcheck="false" aria-controls="kanji-grid" />
           <button id="clear-search" class="clear-button" type="button" aria-label="Borrar búsqueda" hidden>${closeIcon}</button>
           <kbd id="search-shortcut" aria-hidden="true">/</kbd>
         </div>
@@ -102,6 +103,7 @@ const isKanjiPage = !new URL(window.location.href).searchParams.get('section')
 document.querySelector<HTMLElement>('#kanji-page')!.hidden = !isKanjiPage;
 document.querySelector<HTMLElement>('#study-page')!.hidden = isKanjiPage;
 setupThemeToggle(document.querySelector<HTMLButtonElement>('#theme-toggle')!);
+fitPlaceholder(document.querySelector<HTMLInputElement>('#search')!, 'Busca en japonés o español: kanji, lectura o significado…', 'Kanji, lectura o significado…');
 const aboutDialog = document.querySelector<HTMLDialogElement>('#about-dialog')!;
 document.querySelector('#open-about')!.addEventListener('click', () => aboutDialog.showModal());
 document.querySelector('#close-about')!.addEventListener('click', () => aboutDialog.close());

@@ -54,6 +54,17 @@ Tamaños de referencia (noviembre de 2026). Si un cambio los aumenta de forma ap
 - **El tema es lo único que la web guarda en el navegador.** `check:build` falla si el bundle o `index.html` usan `localStorage` con otra clave, o si usan `sessionStorage`, IndexedDB o cookies. Guardar cualquier otra cosa (dificultades, progreso…) es una decisión de producto: no la tomes de forma implícita.
 - **Cabecera en móvil:** el adorno «日本語 — ESPAÑOL» se oculta por debajo de 430 px para que quepan los botones de tema y de información. Si añades algo a la cabecera, comprueba que cabe entre 320 y 1000 px de ancho.
 
+## Móvil
+
+Revisa cualquier cambio de interfaz entre 320 y 430 px de ancho, con emulación táctil, además del escritorio.
+
+- **Menú:** por debajo de 680 px se reparte en varias líneas para que se vean todas las secciones, y «Kana» queda al final. Con las seis secciones actuales ocupa dos líneas a 320 px con solo 5 px de margen: si añades una sección o alargas un nombre, comprueba que no pasa a tres líneas.
+- **Filtros:** en el teléfono ocupan todo el ancho y se desplazan hasta el borde de la pantalla; el contador de resultados va debajo.
+- **Buscador:** el texto de ayuda se asigna con `fitPlaceholder()` (`src/search-placeholder.ts`), con una versión larga y una corta. Se muestra la larga solo si cabe, medida con la fuente real. La corta tiene que caber a 320 px; evita caracteres fuera de Latin‑1, como «ō», que DM Sans no incluye.
+- **Controles táctiles:** con puntero táctil, los botones Audio/Info miden 30 px de alto a la vista, pero un `::after` invisible amplía su zona táctil a 44 px. No los conviertas en cajas de 44 px.
+- **Fichas de los 80 kanji:** en el teléfono (≤600 px) cada tarjeta es una lista. El kanji, sus significados, Info y la dificultad forman la cabecera, separada por una línea fina; debajo van las tres palabras, sin columnas ni líneas entre ellas. Así la lectura queda en la misma línea que la palabra a partir de 360 px. Se eligió frente al 2×2 (lecturas que saltaban de línea y orden de lectura confuso) aunque alarga la página un 22 %. En tablets se mantiene el 2×2 y en escritorio las cuatro columnas. Se hace solo con CSS (`display: contents` y grid), sin tocar el HTML.
+- **Kana:** las columnas se estrechan a 84 px (104 px en las combinaciones) para mostrar más sílabas sin cambiar el orden tradicional de la tabla.
+
 ## Fuentes recortadas
 
 Cada familia es un único WOFF2 con solo los caracteres que usa la web. Los genera `scripts/subset-fonts.py`:

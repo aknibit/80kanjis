@@ -1,5 +1,6 @@
 import type { ContentEntry, ContentGroup, CounterEntry, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
 import { searchContent } from './lib/content.ts';
+import { fitPlaceholder } from './search-placeholder.ts';
 
 function node<K extends keyof HTMLElementTagNameMap>(tag: K, className = '', text?: string) {
   const result = document.createElement(tag);
@@ -166,9 +167,9 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>';
   const input = node('input');
   input.id = 'study-search'; input.type = 'search'; input.autocomplete = 'off'; input.spellcheck = false;
-  input.placeholder = data.kind === 'kana' ? 'Busca un kana o su lectura en letras latinas…'
-    : data.kind === 'counters' ? 'Busca qué contar, un contador o una lectura…'
-      : 'Busca en japonés o español: escritura, lectura o significado…';
+  if (data.kind === 'kana') fitPlaceholder(input, 'Busca un kana o su lectura en letras latinas…', 'Kana o lectura: ka, shi…');
+  else if (data.kind === 'counters') fitPlaceholder(input, 'Busca qué contar, un contador o una lectura…', 'Qué contar o lectura…');
+  else fitPlaceholder(input, 'Busca en japonés o español: escritura, lectura o significado…', 'Palabra, lectura o significado…');
   input.setAttribute('aria-controls', 'study-results');
   const clear = node('button', 'clear-button', '×');
   clear.type = 'button'; clear.setAttribute('aria-label', 'Borrar búsqueda');
