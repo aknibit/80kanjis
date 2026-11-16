@@ -6,6 +6,15 @@
     <meta name="theme-color" content="#f8f7f3" />
     <meta name="description" content="Estudia japonés con 80 kanji, contadores, kana, verbos, vocabulario, adjetivos y adverbios. Lecturas y significados en español para aprender paso a paso." />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script>
+      // Apply the saved or system theme before the first paint; src/theme.ts runs the toggle.
+      (() => {
+        let theme = null;
+        try { theme = localStorage.getItem('80kanjis-theme'); } catch {}
+        if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
     <!-- Start the data and main font with the HTML instead of after the app bundle runs. -->
     <link rel="preload" href="./content/navigation.json" as="fetch" crossorigin />
     <link rel="preload" href="./collection.json" as="fetch" crossorigin />

@@ -34,7 +34,25 @@ Tamaños de referencia (noviembre de 2026). Si un cambio los aumenta de forma ap
 | `noto-sans-jp.woff2` | 84 KB |
 | `noto-serif-jp.woff2` | 195 KB |
 | JS (gzip) | 31 KB |
-| CSS (gzip) | 6 KB |
+| CSS (gzip) | 7 KB, incluidos los dos temas |
+
+## Tema claro y oscuro
+
+- **Los colores solo se usan a través de variables.** Están definidas en `src/style.css`: los valores claros en `:root` y los oscuros en `:root[data-theme='dark']`. No escribas colores literales en las reglas. Cada variable nueva necesita valor claro y oscuro.
+- **Dos excepciones intencionadas:** `::selection` y `dialog::backdrop` tienen una regla explícita por tema, porque esos pseudoelementos no heredan bien las variables en navegadores antiguos.
+- **`--accent` es para texto; `--accent-fill` es para fondos** con `--on-accent` encima. En claro coinciden; en oscuro no, porque un verde legible como texto es demasiado claro como fondo.
+- **Los valores claros son el diseño original.** Al pasar el CSS a variables se comprobó que el modo claro queda idéntico píxel a píxel. No los cambies al retocar el oscuro.
+- **Contraste:** en oscuro, cada color de texto debe tener al menos 4,5:1 sobre su fondo (WCAG AA). El mínimo actual es 4,6, el del texto de ejemplo del buscador.
+- **En oscuro, el contenido de estudio va en blanco puro (`#fff`),** por legibilidad: un blanco grisáceo cansaba al leer. Incluye kanji, palabras, lecturas en kana y significados, a través de `--text`, `--reading`, `--reading-ending`, `--meaning`, `--meaning-strong`, `--chip-text`, `--table-label`, `--title-soft`, `--dialog-example` y `--guide-example`. Las etiquetas, el rōmaji, las notas y los textos de ayuda siguen en gris para mantener la jerarquía. Si añades texto de estudio nuevo, usa una de esas variables.
+- **Cómo se aplica el tema:**
+  - un script en línea en `index.html` lee la preferencia y pone `data-theme` en `<html>` antes de pintar, para que no haya un destello del tema equivocado;
+  - `src/theme.ts` gestiona el botón;
+  - si cambias la clave (`80kanjis-theme`) o sus valores (`light`/`dark`), cámbialos en los dos sitios;
+  - sin preferencia guardada, la página sigue al sistema, también en vivo;
+  - elegir el mismo tema que el sistema borra la preferencia.
+- **El script en línea debe seguir siendo mínimo,** síncrono y sin peticiones de red: bloquea el análisis del HTML.
+- **El tema es lo único que la web guarda en el navegador.** `check:build` falla si el bundle o `index.html` usan `localStorage` con otra clave, o si usan `sessionStorage`, IndexedDB o cookies. Guardar cualquier otra cosa (dificultades, progreso…) es una decisión de producto: no la tomes de forma implícita.
+- **Cabecera en móvil:** el adorno «日本語 — ESPAÑOL» se oculta por debajo de 430 px para que quepan los botones de tema y de información. Si añades algo a la cabecera, comprueba que cabe entre 320 y 1000 px de ancho.
 
 ## Fuentes recortadas
 

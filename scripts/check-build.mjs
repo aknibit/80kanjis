@@ -5,7 +5,7 @@ const files = (await readdir('dist/assets')).filter((file) => file.endsWith('.js
 assert.ok(files.length > 0, 'Run npm run build first.');
 const script = (await Promise.all(files.map((file) => readFile(`dist/assets/${file}`, 'utf8')))).join('\n');
 
-for (const removed of ['showOpenFilePicker', 'createWritable', 'localStorage',
+for (const removed of ['showOpenFilePicker', 'createWritable',
   'difficulties-dialog', 'open-difficulties', 'import-file', 'createElement("select")',
   'show-readings', '__EDITABLE_DIFFICULTIES__']) {
   assert.ok(!script.includes(removed), `Removed capability is still bundled: ${removed}`);
@@ -28,6 +28,15 @@ for (const file of await readdir('public/content')) {
     `Missing or changed canonical section content: ${file}`);
 }
 const html = await readFile('dist/index.html', 'utf8');
+// The theme preference is the only browser storage allowed (AGENTS.md).
+for (const [name, code] of [['Bundle', script], ['index.html', html]]) {
+  assert.doesNotMatch(code, /sessionStorage|indexedDB|document\.cookie/, `${name} must not use browser storage.`);
+  const uses = code.match(/localStorage/g)?.length ?? 0;
+  const themeUses = code.match(/localStorage\.(?:getItem|setItem|removeItem)\(["']80kanjis-theme["']/g)?.length ?? 0;
+  assert.equal(uses, themeUses, `${name} may only use localStorage for the 80kanjis-theme preference.`);
+}
+assert.match(html, /<script>[\s\S]*localStorage\.getItem\('80kanjis-theme'\)[\s\S]*<\/script>[\s\S]*<script type="module"/,
+  'index.html must apply the theme in an inline script before the app bundle.');
 assert.match(html, /<script\b[^>]*\bsrc="\.\/assets\/index-[^"]+\.js"/);
 assert.doesNotMatch(html, /(?:src|href)="\/(?:src|assets)\//,
   'Production HTML must use compiled, relative assets for GitHub project Pages.');
@@ -43,4 +52,4 @@ assert.equal(fonts.length, 3, 'Expected DM Sans, Noto Sans JP and Noto Serif JP.
 for (const font of fonts) assert.ok(assets.includes(font), `Missing font: ${font}`);
 const preloadedFont = html.match(/<link rel="preload" href="\.\/assets\/([^"]+\.woff2)" as="font" type="font\/woff2" crossorigin/)?.[1];
 assert.ok(preloadedFont && fonts.includes(preloadedFont), 'The preloaded font must be the file the stylesheet uses.');
-console.log('Static build verified: canonical collection and sections, audio, visible readings, read-only difficulties, preloads, and self-hosted fonts.');
+console.log('Static build verified: canonical collection and sections, audio, visible readings, read-only difficulties, theme-only storage, preloads, and self-hosted fonts.');

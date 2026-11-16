@@ -9,11 +9,14 @@ import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDiff
 import type { CollectionDocument, Difficulty, Kanji, StudyItem, StudyItemId } from './types.ts';
 import { loadNavigation, loadStudyDocument, resolveSection, sectionHref } from './lib/content.ts';
 import { renderStudyPage } from './content-ui.ts';
+import { setupThemeToggle } from './theme.ts';
 import './style.css';
 
 const searchIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>';
 const arrowIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>';
 const closeIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg>';
+const moonIcon = '<svg class="theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7Z"/></svg>';
+const sunIcon = '<svg class="theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.8v2.1M12 19.1v2.1M2.8 12h2.1M19.1 12h2.1M5.5 5.5 7 7M17 17l1.5 1.5M5.5 18.5 7 17M17 7l1.5-1.5"/></svg>';
 
 function difficultyIcon(value: Difficulty | null): string {
   const filled = value === 'easy' ? 1 : value === 'medium' ? 2 : value === 'hard' ? 3 : 0;
@@ -29,7 +32,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </a>
     <div class="header-right">
       <span class="language-pair"><span lang="ja">日本語</span><span class="language-line"></span>ESPAÑOL</span>
-      <button class="about-button" id="open-about" type="button" aria-label="Sobre esta colección">?</button>
+      <div class="header-actions">
+        <button class="theme-button" id="theme-toggle" type="button" aria-label="Modo oscuro" aria-pressed="false">${moonIcon}${sunIcon}</button>
+        <button class="about-button" id="open-about" type="button" aria-label="Sobre esta colección">?</button>
+      </div>
     </div>
   </header>
   <nav class="section-nav shell" id="section-nav" aria-label="Secciones de estudio"></nav>
@@ -82,7 +88,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>Busca por carácter, palabra, lectura o significado. Puedes escribir sin tildes y usar hiragana o katakana. Las lecturas se muestran siempre junto a las palabras.</p>
     <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
     <p>En las fichas, uno, dos o tres puntos destacados indican fácil, medio y difícil. Tres puntos atenuados indican que la dificultad está sin marcar.</p>
-    <p>En el vocabulario, el kanji de la fila aparece en verde oscuro, los otros de los 80 en azul y los avanzados en rojo oscuro. Pulsa cualquier kanji para consultar su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
+    <p>En el vocabulario, el kanji de la fila aparece en verde, los otros de los 80 en azul y los avanzados en rojo. Pulsa cualquier kanji para consultar su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
     <p class="dialog-note">Se conserva la escritura del documento, con las conversiones revisadas a kanji de la colección y los de apoyo 個, 色 y 庭. 時 y 前 ya aparecían en el vocabulario original y también se pueden consultar como kanji de apoyo. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
     <p class="dialog-note">Los significados de los 80 kanji se han revisado y ampliado. Sus lecturas principales se han contrastado con <a href="https://www.edrdg.org/wiki/KANJIDIC_Project.html" target="_blank" rel="noopener">KANJIDIC2, de EDRDG y Jim Breen</a> y <a href="https://www.kanjipedia.jp/" target="_blank" rel="noopener">KanjiPedia</a>. Las aportaciones derivadas de KANJIDIC2 se ofrecen bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. <a href="data/CREDITS.txt" target="_blank" rel="noopener">Fuentes y criterios de revisión</a>.</p>
     <p class="dialog-note">Pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar, con voces de Tokio y Kansai. Los botones con «IA» usan voz generada por <a href="${synthesizedSource.url}" target="_blank" rel="noopener">${synthesizedSource.name}</a> (${synthesizedSource.voice}), bajo sus <a href="${synthesizedSource.termsUrl}" target="_blank" rel="noopener">condiciones de uso</a>. Los audios están pendientes de revisión por un hablante nativo. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes y créditos de cada audio</a>.</p>
@@ -95,6 +101,7 @@ const isKanjiPage = !new URL(window.location.href).searchParams.get('section')
   || new URL(window.location.href).searchParams.get('section') === 'kanji';
 document.querySelector<HTMLElement>('#kanji-page')!.hidden = !isKanjiPage;
 document.querySelector<HTMLElement>('#study-page')!.hidden = isKanjiPage;
+setupThemeToggle(document.querySelector<HTMLButtonElement>('#theme-toggle')!);
 const aboutDialog = document.querySelector<HTMLDialogElement>('#about-dialog')!;
 document.querySelector('#open-about')!.addEventListener('click', () => aboutDialog.showModal());
 document.querySelector('#close-about')!.addEventListener('click', () => aboutDialog.close());
