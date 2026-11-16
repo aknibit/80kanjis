@@ -67,13 +67,43 @@ function renderCounter(entry: CounterEntry): HTMLElement {
 function renderWord(entry: LexiconEntry, group: string): HTMLElement {
   const row = node('li', 'lexicon-row');
   row.dataset.entryId = entry.id;
-  const term = node('div', 'lexicon-term');
-  term.append(japanese('h3', 'lexicon-written', entry.written), japanese('p', 'word-reading', entry.reading),
-    node('p', 'entry-romaji', entry.romaji));
-  const explanation = node('div', 'lexicon-explanation');
-  explanation.append(node('p', 'lexicon-meaning', entry.meaning));
-  if (entry.note) explanation.append(node('p', 'entry-note', entry.note));
-  row.append(term, explanation, node('span', 'entry-group', group));
+  // An entry with examples opens like a counter. A summary only admits phrasing content, so it uses spans
+  // where the static row has a heading and paragraphs.
+  const opens = Boolean(entry.examples?.length);
+  const block = opens ? 'span' : 'div';
+  const line = opens ? 'span' : 'p';
+  const term = node(block, 'lexicon-term');
+  term.append(japanese(opens ? 'span' : 'h3', 'lexicon-written', entry.written), japanese(line, 'word-reading', entry.reading),
+    node(line, 'entry-romaji', entry.romaji));
+  const explanation = node(block, 'lexicon-explanation');
+  explanation.append(node(line, 'lexicon-meaning', entry.meaning));
+  if (entry.note) explanation.append(node(line, 'entry-note', entry.note));
+  const tag = node('span', 'entry-group', group);
+  if (!opens) {
+    row.append(term, explanation, tag);
+    return row;
+  }
+  row.classList.add('lexicon-row--opens');
+  const details = node('details', 'lexicon-details');
+  const summary = node('summary', 'lexicon-summary');
+  summary.append(term, explanation, tag);
+  const body = node('div', 'lexicon-body');
+  const list = node('ul', 'lexicon-examples');
+  list.id = `examples-${entry.id}`;
+  const label = node('p', 'lexicon-examples-label', 'Ejemplos');
+  label.id = `${list.id}-label`;
+  list.setAttribute('aria-labelledby', label.id);
+  for (const example of entry.examples!) {
+    const item = node('li', 'lexicon-example');
+    item.append(japanese('p', 'lexicon-example-written', example.written));
+    // A sentence without kanji (テニスが できます。) needs no reading line, as in the guides.
+    if (example.reading !== example.written) item.append(japanese('p', 'lexicon-example-reading', example.reading));
+    item.append(node('p', 'lexicon-example-meaning', example.meaning));
+    list.append(item);
+  }
+  body.append(label, list);
+  details.append(summary, body);
+  row.append(details);
   return row;
 }
 
@@ -187,6 +217,8 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   count.setAttribute('role', 'status'); count.setAttribute('aria-live', 'polite'); count.setAttribute('aria-atomic', 'true');
   toolbar.append(filters, count);
   const results = node(data.kind === 'lexicon' ? 'ul' : 'div', `study-results study-results--${data.kind}`);
+  // Every row keeps a column for + / − when some entry opens, so meanings and tags stay aligned.
+  if (data.kind === 'lexicon' && data.entries.some((entry) => entry.examples?.length)) results.classList.add('study-results--opens');
   results.id = 'study-results';
   if (data.kind === 'lexicon') results.setAttribute('role', 'list');
   if (data.kind === 'kana') {

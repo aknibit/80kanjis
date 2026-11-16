@@ -363,14 +363,31 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .guide-written { font-family: var(--japanese); font-size: 20px; }
 .study-sources ul { padding-left: 20px; }
 .study-sources a { text-underline-offset: 3px; }
-.lexicon-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(100px, .5fr); align-items: center; gap: 20px; padding: 16px 20px; }
+.study-results--lexicon { --lexicon-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(100px, .5fr); }
+/* When some entry opens, every row keeps a last column for + / −, so meanings and tags stay aligned. */
+.study-results--opens { --lexicon-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(100px, .5fr) 16px; }
+.lexicon-row, .lexicon-summary { display: grid; grid-template-columns: var(--lexicon-columns); align-items: center; gap: 20px; padding: 16px 20px; }
 .lexicon-row + .lexicon-row { border-top: 1px solid var(--line); }
+.lexicon-row.lexicon-row--opens { display: block; padding: 0; }
+.lexicon-summary { cursor: pointer; list-style: none; }
+.lexicon-summary .lexicon-term > *, .lexicon-summary .lexicon-explanation > * { display: block; }
+.lexicon-body { padding: 0 20px 18px; }
+.lexicon-examples-label { margin: 0 0 8px; font-size: 11px; color: var(--faint); }
+.lexicon-examples { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px 28px; margin: 0; padding: 0; list-style: none; }
+.lexicon-example { padding-left: 14px; border-left: 2px solid var(--action-border); }
+/* Sentences are spaced by phrase; keep-all wraps only at those spaces, never inside a word. */
+.lexicon-example p { margin: 0; }
+.lexicon-example-written, .lexicon-example-reading { word-break: keep-all; overflow-wrap: break-word; }
+.lexicon-example-written { font-family: var(--japanese); font-size: 19px; line-height: 1.6; color: var(--text); }
+.lexicon-example-reading { font-family: var(--japanese-reading); font-size: 13px; line-height: 1.6; letter-spacing: .04em; color: var(--reading); }
+.lexicon-example-meaning { margin-top: 2px; font-size: 14px; line-height: 1.6; color: var(--meaning); }
 .lexicon-written { font-family: var(--japanese); font-size: 24px; font-weight: 500; line-height: 1.6; color: var(--accent); margin: 0; overflow-wrap: anywhere; }
 .lexicon-term .word-reading { margin: 2px 0 0; }
 .entry-romaji { font-size: 12px; color: var(--faint); line-height: 1.5; margin: 3px 0 0; }
 .lexicon-meaning { font-size: 16px; line-height: 1.65; color: var(--meaning-strong); margin: 0; }
 .entry-note { font-size: 13px; color: var(--body-soft); line-height: 1.6; margin: 6px 0 0; }
-.entry-group { justify-self: end; text-align: right; color: var(--faint); font-size: 11px; line-height: 1.6; }
+/* The group is a tag, like the counter endings, but its text stays grey: it is a label, not study content. */
+.entry-group { justify-self: end; max-width: 100%; padding: 2px 8px; border: 1px solid var(--chip-border); border-radius: 5px; background: var(--chip-bg); color: var(--text-soft); font-size: 12px; line-height: 1.5; text-align: center; }
 .study-results--kana { --kana-column-width: 112px; background: transparent; }
 .kana-chart-group { width: max-content; margin-left: auto; }
 .kana-chart-group + .kana-chart-group { margin-top: 18px; }
@@ -390,9 +407,9 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kana-katakana { color: var(--kanji-collection); }
 .counter-entry + .counter-entry { border-top: 1px solid var(--line); }
 .counter-summary { display: grid; grid-template-columns: minmax(0, 1fr) 220px auto 16px; align-items: center; gap: 18px; padding: 16px 20px; cursor: pointer; list-style: none; }
-.counter-summary::-webkit-details-marker { display: none; }
-.counter-summary::after { content: '+'; color: var(--accent); font-size: 22px; line-height: 1; text-align: center; }
-.counter-entry[open] > .counter-summary::after { content: '−'; }
+.counter-summary::-webkit-details-marker, .lexicon-summary::-webkit-details-marker { display: none; }
+.counter-summary::after, .lexicon-summary::after { content: '+'; color: var(--accent); font-size: 22px; line-height: 1; text-align: center; }
+.counter-entry[open] > .counter-summary::after, .lexicon-details[open] > .lexicon-summary::after { content: '−'; }
 .counter-name { display: flex; align-items: center; gap: 16px; min-width: 0; }
 .counter-symbol { min-width: 76px; font-family: var(--japanese); font-size: 26px; line-height: 1.5; color: var(--accent); }
 .counter-title { font-size: 16px; color: var(--title-soft); font-weight: 500; }
@@ -459,8 +476,15 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 @media (max-width: 600px) {
   .section-nav { padding-block: 8px; }
   .section-link { font-size: 13px; padding-inline: 10px; }
-  .lexicon-row { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 14px 16px; }
-  .entry-group { justify-self: start; text-align: left; }
+  .study-results--lexicon { --lexicon-columns: minmax(0, 1fr); }
+  .lexicon-row, .lexicon-summary { gap: 8px; padding: 14px 16px; }
+  /* + / − stays at the top right, next to the word. */
+  .lexicon-summary { grid-template-columns: minmax(0, 1fr) 16px; column-gap: 12px; }
+  .lexicon-summary > * { grid-column: 1; }
+  .lexicon-summary::after { grid-column: 2; grid-row: 1; align-self: start; padding-top: 10px; }
+  .lexicon-body { padding: 0 16px 16px; }
+  .lexicon-examples { grid-template-columns: minmax(0, 1fr); }
+  .entry-group { justify-self: start; }
   .lexicon-written { font-size: 23px; }
   .counter-summary { padding: 14px 12px; }
   .counter-name { gap: 10px; }

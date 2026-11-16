@@ -106,6 +106,33 @@
       ],
       "additionalProperties": false
     },
+    "example": {
+      "type": "object",
+      "description": "Frase corta: escritura, lectura en kana (sin kanji) y traducción.",
+      "properties": {
+        "written": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "reading": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[ぁ-ゖァ-ヶー\\s、。？！]+$"
+        },
+        "meaning": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "written",
+        "reading",
+        "meaning"
+      ],
+      "additionalProperties": false
+    },
     "guide": {
       "type": "object",
       "properties": {
@@ -135,30 +162,7 @@
         "examples": {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "written": {
-                "type": "string",
-                "minLength": 1,
-                "pattern": "\\S"
-              },
-              "reading": {
-                "type": "string",
-                "minLength": 1,
-                "pattern": "\\S"
-              },
-              "meaning": {
-                "type": "string",
-                "minLength": 1,
-                "pattern": "\\S"
-              }
-            },
-            "required": [
-              "written",
-              "reading",
-              "meaning"
-            ],
-            "additionalProperties": false
+            "$ref": "#/$defs/example"
           },
           "minItems": 1,
           "maxItems": 5000
@@ -713,6 +717,14 @@
                 "type": "string",
                 "minLength": 1,
                 "pattern": "\\S"
+              },
+              "examples": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/example"
+                },
+                "minItems": 1,
+                "maxItems": 5000
               }
             },
             "required": [

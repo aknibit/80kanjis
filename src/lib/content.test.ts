@@ -168,6 +168,20 @@ test('content search combines groups and terms and handles accents, kana width a
   assert.ok(searchContent(verbs.entries, '', 'expressions').length >= 8);
 });
 
+test('verbs open with the 20 essential verbs, in study order', () => {
+  assert.equal(verbs.groups[0].id, 'essentials');
+  const essentials = verbs.entries.filter((entry) => entry.group === 'essentials');
+  assert.equal(essentials.length, 20);
+  assert.deepEqual(verbs.entries.slice(0, 20), essentials);
+  assert.equal(essentials[0].written, '起きます');
+  assert.equal(essentials.at(-1)!.written, '寝ます');
+  assert.ok(essentials.some((entry) => entry.written === '来ます'));
+  // Every verb opens to simple examples; the conjugated verb counts, and multi-word verbs may be spaced.
+  for (const entry of verbs.entries) assert.ok((entry.examples?.length ?? 0) >= 2, entry.id);
+  const photo = essentials.find((entry) => entry.id === 'verb-shashin-o-torimasu')!;
+  assert.ok(photo.examples!.some((example) => example.written.includes('写真を 撮りました')));
+});
+
 test('invalid navigation, unsafe paths, duplicate sections and a different landing page are rejected', () => {
   const changes: ((data: any) => void)[] = [
     (data) => { data.version = 99; },
@@ -200,6 +214,11 @@ test('malformed study data, broken references and inconsistent readings fail bef
     (data) => { data.sources[0].path = '/private/note.md'; },
     (data) => { data.sources[0].sha256 = 'not-a-checksum'; },
     (data) => { data.sources[0].url = 'javascript:alert(1)'; },
+    (data) => { data.entries[0].examples = []; },
+    (data) => { data.entries[0].examples[0].reading = data.entries[0].examples[0].written; },
+    (data) => { data.entries[0].examples[0].meaning = ' '; },
+    (data) => { data.entries[0].examples[0].romaji = 'kyuujitsu'; },
+    (data) => { data.entries[0].examples[0] = { ...data.entries[1].examples[0] }; },
   ];
   for (const change of changes) {
     const data = structuredClone(verbs); change(data);

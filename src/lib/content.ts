@@ -1,9 +1,13 @@
-import type { ContentEntry, ContentKind, NavigationDocument, NavigationSection, StudyDocument } from '../content-types.ts';
+import type { ContentEntry, ContentExample, ContentKind, NavigationDocument, NavigationSection, StudyDocument } from '../content-types.ts';
 import { normalizeSearch } from './search.ts';
 
 type RecordValue = Record<string, unknown>;
 const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const kanaReading = /^[ぁ-ゖー\s／/]+$/u;
+// Example sentences are read in kana: hiragana, katakana for loanwords, spaces and punctuation, never kanji.
+// The full-width comma, question and exclamation marks are escaped: the font subset reads literal characters,
+// so it only includes them once the content uses them.
+const sentenceReading = /^[ぁ-ゖァ-ヶー\s\u3001。\uff1f\uff01]+$/u;
 
 function check(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -28,6 +32,16 @@ function id(value: unknown): asserts value is string {
 
 function array(value: unknown, min = 0): asserts value is unknown[] {
   check(Array.isArray(value) && value.length >= min && value.length <= 5000, 'Lista de contenido vacía o no válida.');
+}
+
+function examples(value: unknown): ContentExample[] {
+  array(value, 1);
+  return value.map((item) => {
+    const example = record(item, ['written', 'reading', 'meaning']);
+    text(example.written); text(example.reading); text(example.meaning);
+    check(sentenceReading.test(example.reading), 'La lectura de un ejemplo debe estar en kana.');
+    return { written: example.written, reading: example.reading, meaning: example.meaning };
+  });
 }
 
 function texts(value: unknown, min = 0): asserts value is string[] {
@@ -110,13 +124,7 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
     const guide = record(value, ['id', 'title', 'sourceId', 'paragraphs'], ['examples']);
     id(guide.id); text(guide.title); texts(guide.paragraphs, 1);
     check(sources.has(guide.sourceId), 'La guía referencia una fuente desconocida.');
-    if (guide.examples !== undefined) {
-      array(guide.examples, 1);
-      for (const value of guide.examples) {
-        const example = record(value, ['written', 'reading', 'meaning']);
-        text(example.written); text(example.reading); text(example.meaning);
-      }
-    }
+    if (guide.examples !== undefined) examples(guide.examples);
   }
   const kanaPositions = new Set<string>();
   for (const value of data.entries) {
@@ -125,7 +133,7 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
       ? record(value, [...common, 'written', 'endings', 'title', 'description', 'type', 'forms', 'question', 'notes'])
       : data.kind === 'kana'
         ? record(value, [...common, 'hiragana', 'katakana', 'romaji', 'position'])
-        : record(value, [...common, 'written', 'reading', 'romaji', 'meaning'], ['note']);
+        : record(value, [...common, 'written', 'reading', 'romaji', 'meaning'], ['note', 'examples']);
     id(entry.id);
     check(groups.has(entry.group), `Grupo desconocido en ${entry.id}.`);
     check(sources.has(entry.sourceId), `Fuente desconocida en ${entry.id}.`);
@@ -172,6 +180,13 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
       text(entry.written); text(entry.reading); text(entry.romaji); text(entry.meaning);
       check(kanaReading.test(entry.reading), 'La lectura debe estar en hiragana.');
       if (entry.note !== undefined) text(entry.note);
+      if (entry.examples !== undefined) {
+        // Each example shows the entry itself, conjugated or not: 起きます → 起きました, 写真を撮ります → 写真を 撮りました.
+        const stems = entry.written.split('／').map((form) => form.replace(/\s/gu, '').replace(/ます$/u, ''));
+        for (const example of examples(entry.examples)) {
+          check(stems.some((stem) => example.written.replace(/\s/gu, '').includes(stem)), `Un ejemplo de ${entry.id} no usa la entrada.`);
+        }
+      }
     }
   }
   if (data.editorialNotes !== undefined) {

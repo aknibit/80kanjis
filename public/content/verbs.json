@@ -18,9 +18,18 @@
       "type": "vault",
       "path": "Primer curso organizado/01 Gramática/02 Cópula, verbos y formas.md",
       "sha256": "98335fc80ad66c1cf883ebe5330edd829d8ded725381af05b5f70347cde6c4bc"
+    },
+    {
+      "id": "essential-verbs",
+      "label": "Lista de 20 verbos esenciales proporcionada para esta colección",
+      "type": "attachment"
     }
   ],
   "groups": [
+    {
+      "id": "essentials",
+      "label": "Verbos esenciales"
+    },
     {
       "id": "main",
       "label": "Verbos del curso"
@@ -82,13 +91,424 @@
   ],
   "entries": [
     {
+      "id": "verb-okimasu",
+      "written": "起きます",
+      "reading": "おきます",
+      "romaji": "okimasu",
+      "meaning": "levantarse/despertarse",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "休日は 遅く 起きます。",
+          "reading": "きゅうじつは おそく おきます。",
+          "meaning": "Los días libres me levanto tarde."
+        },
+        {
+          "written": "子どもは 早く 起きます。",
+          "reading": "こどもは はやく おきます。",
+          "meaning": "Los niños se levantan temprano."
+        }
+      ]
+    },
+    {
+      "id": "verb-tabemasu",
+      "written": "食べます",
+      "reading": "たべます",
+      "romaji": "tabemasu",
+      "meaning": "comer",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "食堂で 晩ご飯を 食べます。",
+          "reading": "しょくどうで ばんごはんを たべます。",
+          "meaning": "Ceno en el comedor."
+        },
+        {
+          "written": "林檎を 二つ 食べました。",
+          "reading": "りんごを ふたつ たべました。",
+          "meaning": "Me comí dos manzanas."
+        }
+      ]
+    },
+    {
+      "id": "verb-hatarakimasu",
+      "written": "働きます",
+      "reading": "はたらきます",
+      "romaji": "hatarakimasu",
+      "meaning": "trabajar",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "銀行で 働きます。",
+          "reading": "ぎんこうで はたらきます。",
+          "meaning": "Trabajo en un banco."
+        },
+        {
+          "written": "弁護士は 事務所で 働きます。",
+          "reading": "べんごしは じむしょで はたらきます。",
+          "meaning": "La abogada trabaja en el despacho."
+        }
+      ]
+    },
+    {
+      "id": "verb-benkyou-shimasu",
+      "written": "勉強します",
+      "reading": "べんきょうします",
+      "romaji": "benkyou shimasu",
+      "meaning": "estudiar",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "図書館で 勉強します。",
+          "reading": "としょかんで べんきょうします。",
+          "meaning": "Estudio en la biblioteca."
+        },
+        {
+          "written": "大学で 文学を 勉強しました。",
+          "reading": "だいがくで ぶんがくを べんきょうしました。",
+          "meaning": "Estudié literatura en la universidad."
+        }
+      ]
+    },
+    {
+      "id": "verb-yasumimasu",
+      "written": "休みます",
+      "reading": "やすみます",
+      "romaji": "yasumimasu",
+      "meaning": "descansar, ausentarse, tomarse el día libre",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "休日は うちで 休みます。",
+          "reading": "きゅうじつは うちで やすみます。",
+          "meaning": "Los días libres descanso en casa."
+        },
+        {
+          "written": "授業を 休みました。",
+          "reading": "じゅぎょうを やすみました。",
+          "meaning": "Falté a clase."
+        }
+      ]
+    },
+    {
+      "id": "verb-nomimasu",
+      "written": "飲みます",
+      "reading": "のみます",
+      "romaji": "nomimasu",
+      "meaning": "beber",
+      "group": "essentials",
+      "sourceId": "essential-verbs",
+      "examples": [
+        {
+          "written": "喫茶店で コーヒーを 飲みます。",
+          "reading": "きっさてんで コーヒーを のみます。",
+          "meaning": "Tomo café en la cafetería."
+        },
+        {
+          "written": "ビールは 飲みません。",
+          "reading": "ビールは のみません。",
+          "meaning": "No bebo cerveza."
+        }
+      ]
+    },
+    {
+      "id": "verb-owarimasu",
+      "written": "終わります",
+      "reading": "おわります",
+      "romaji": "owarimasu",
+      "meaning": "terminar/acabar (intransitivo)",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "授業が 終わりました。",
+          "reading": "じゅぎょうが おわりました。",
+          "meaning": "La clase ha terminado."
+        },
+        {
+          "written": "試験は 早く 終わりました。",
+          "reading": "しけんは はやく おわりました。",
+          "meaning": "El examen terminó pronto."
+        }
+      ]
+    },
+    {
+      "id": "verb-ikimasu",
+      "written": "行きます",
+      "reading": "いきます",
+      "romaji": "ikimasu",
+      "meaning": "ir",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "郵便局へ 行きます。",
+          "reading": "ゆうびんきょくへ いきます。",
+          "meaning": "Voy a correos."
+        },
+        {
+          "written": "車で 美術館へ 行きました。",
+          "reading": "くるまで びじゅつかんへ いきました。",
+          "meaning": "Fui en coche al museo de arte."
+        }
+      ]
+    },
+    {
+      "id": "verb-kimasu",
+      "written": "来ます",
+      "reading": "きます",
+      "romaji": "kimasu",
+      "meaning": "venir",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "先生が 教室に 来ます。",
+          "reading": "せんせいが きょうしつに きます。",
+          "meaning": "El profesor viene al aula."
+        },
+        {
+          "written": "お客さんが 来ました。",
+          "reading": "おきゃくさんが きました。",
+          "meaning": "Han llegado los invitados."
+        }
+      ]
+    },
+    {
+      "id": "verb-suimasu",
+      "written": "吸います",
+      "reading": "すいます",
+      "romaji": "suimasu",
+      "meaning": "fumar/aspirar; たばこを すいます",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "たばこは 吸いません。",
+          "reading": "たばこは すいません。",
+          "meaning": "No fumo."
+        },
+        {
+          "written": "森の中で きれいな 空気を 吸います。",
+          "reading": "もりのなかで きれいな くうきを すいます。",
+          "meaning": "En el bosque respiro aire limpio."
+        }
+      ]
+    },
+    {
+      "id": "verb-kikimasu",
+      "written": "聞きます",
+      "reading": "ききます",
+      "romaji": "kikimasu",
+      "meaning": "escuchar o preguntar; cambia la partícula",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "雨の音を 聞きます。",
+          "reading": "あめのおとを ききます。",
+          "meaning": "Escucho el sonido de la lluvia."
+        },
+        {
+          "written": "先生に 聞きます。",
+          "reading": "せんせいに ききます。",
+          "meaning": "Le pregunto al profesor."
+        }
+      ]
+    },
+    {
+      "id": "verb-mimasu",
+      "written": "見ます",
+      "reading": "みます",
+      "romaji": "mimasu",
+      "meaning": "ver/mirar",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "家族の 写真を 見ます。",
+          "reading": "かぞくの しゃしんを みます。",
+          "meaning": "Miro las fotos de mi familia."
+        },
+        {
+          "written": "満月を 見ました。",
+          "reading": "まんげつを みました。",
+          "meaning": "Vi la luna llena."
+        }
+      ]
+    },
+    {
+      "id": "verb-kakimasu",
+      "written": "書きます",
+      "reading": "かきます",
+      "romaji": "kakimasu",
+      "meaning": "escribir",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "鉛筆で 日記を 書きます。",
+          "reading": "えんぴつで にっきを かきます。",
+          "meaning": "Escribo el diario a lápiz."
+        },
+        {
+          "written": "年賀状を 書きました。",
+          "reading": "ねんがじょうを かきました。",
+          "meaning": "Escribí las postales de Año Nuevo."
+        }
+      ]
+    },
+    {
+      "id": "verb-kaimasu",
+      "written": "買います",
+      "reading": "かいます",
+      "romaji": "kaimasu",
+      "meaning": "comprar",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "八百屋で みかんを 買います。",
+          "reading": "やおやで みかんを かいます。",
+          "meaning": "Compro mandarinas en la frutería."
+        },
+        {
+          "written": "雑誌を 二冊 買いました。",
+          "reading": "ざっしを にさつ かいました。",
+          "meaning": "Compré dos revistas."
+        }
+      ]
+    },
+    {
       "id": "verb-aimasu",
       "written": "会います",
       "reading": "あいます",
       "romaji": "aimasu",
       "meaning": "encontrarse con alguien: 人に あいます",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "喫茶店で 先生に 会います。",
+          "reading": "きっさてんで せんせいに あいます。",
+          "meaning": "Me encuentro con el profesor en la cafetería."
+        },
+        {
+          "written": "休日に 家族に 会いました。",
+          "reading": "きゅうじつに かぞくに あいました。",
+          "meaning": "El día libre vi a mi familia."
+        }
+      ]
+    },
+    {
+      "id": "verb-yomimasu",
+      "written": "読みます",
+      "reading": "よみます",
+      "romaji": "yomimasu",
+      "meaning": "leer",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "図書館で 雑誌を 読みます。",
+          "reading": "としょかんで ざっしを よみます。",
+          "meaning": "Leo revistas en la biblioteca."
+        },
+        {
+          "written": "字幕を 読みます。",
+          "reading": "じまくを よみます。",
+          "meaning": "Leo los subtítulos."
+        }
+      ]
+    },
+    {
+      "id": "verb-shashin-o-torimasu",
+      "written": "写真を撮ります",
+      "reading": "しゃしんを とります",
+      "romaji": "shashin o torimasu",
+      "meaning": "hacer una foto",
+      "group": "essentials",
+      "sourceId": "essential-verbs",
+      "examples": [
+        {
+          "written": "家族の 写真を 撮ります。",
+          "reading": "かぞくの しゃしんを とります。",
+          "meaning": "Hago fotos a mi familia."
+        },
+        {
+          "written": "満月の 写真を 撮りました。",
+          "reading": "まんげつの しゃしんを とりました。",
+          "meaning": "Hice una foto de la luna llena."
+        }
+      ]
+    },
+    {
+      "id": "verb-tenisu-o-shimasu",
+      "written": "テニスをします",
+      "reading": "てにすを します",
+      "romaji": "tenisu o shimasu",
+      "meaning": "jugar al tenis",
+      "group": "essentials",
+      "sourceId": "essential-verbs",
+      "examples": [
+        {
+          "written": "休日は テニスを します。",
+          "reading": "きゅうじつは テニスを します。",
+          "meaning": "Los días libres juego al tenis."
+        },
+        {
+          "written": "先生と テニスを しました。",
+          "reading": "せんせいと テニスを しました。",
+          "meaning": "Jugué al tenis con el profesor."
+        }
+      ]
+    },
+    {
+      "id": "verb-kaerimasu",
+      "written": "帰ります",
+      "reading": "かえります",
+      "romaji": "kaerimasu",
+      "meaning": "regresar/volver a casa",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "夕がた うちへ 帰ります。",
+          "reading": "ゆうがた うちへ かえります。",
+          "meaning": "Vuelvo a casa al final de la tarde."
+        },
+        {
+          "written": "車で 帰りました。",
+          "reading": "くるまで かえりました。",
+          "meaning": "Volví en coche."
+        }
+      ]
+    },
+    {
+      "id": "verb-nemasu",
+      "written": "寝ます",
+      "reading": "ねます",
+      "romaji": "nemasu",
+      "meaning": "acostarse/dormir",
+      "group": "essentials",
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "和室で 寝ます。",
+          "reading": "わしつで ねます。",
+          "meaning": "Duermo en la habitación de estilo japonés."
+        },
+        {
+          "written": "一日中 寝ました。",
+          "reading": "いちにちじゅう ねました。",
+          "meaning": "Dormí todo el día."
+        }
+      ]
     },
     {
       "id": "verb-aisatsu-shimasu",
@@ -97,7 +517,19 @@
       "romaji": "aisatsu shimasu",
       "meaning": "saludar",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "先生に あいさつします。",
+          "reading": "せんせいに あいさつします。",
+          "meaning": "Saludo al profesor."
+        },
+        {
+          "written": "店員が お客さんに あいさつしました。",
+          "reading": "てんいんが おきゃくさんに あいさつしました。",
+          "meaning": "El dependiente saludó a los clientes."
+        }
+      ]
     },
     {
       "id": "verb-agemasu",
@@ -106,7 +538,19 @@
       "romaji": "agemasu",
       "meaning": "dar (en general, desde mi perspectiva hacia fuera)",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "子どもに お年玉を あげます。",
+          "reading": "こどもに おとしだまを あげます。",
+          "meaning": "Les doy el dinero de Año Nuevo a los niños."
+        },
+        {
+          "written": "馬に 林檎を あげました。",
+          "reading": "うまに りんごを あげました。",
+          "meaning": "Le di una manzana al caballo."
+        }
+      ]
     },
     {
       "id": "verb-arukimasu",
@@ -115,7 +559,19 @@
       "romaji": "arukimasu",
       "meaning": "caminar",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "川べりを 歩きます。",
+          "reading": "かわべりを あるきます。",
+          "meaning": "Camino por la orilla del río."
+        },
+        {
+          "written": "大学まで 歩きました。",
+          "reading": "だいがくまで あるきました。",
+          "meaning": "Fui andando hasta la universidad."
+        }
+      ]
     },
     {
       "id": "verb-arimasu",
@@ -124,7 +580,19 @@
       "romaji": "arimasu",
       "meaning": "haber/estar, inanimados; tener según contexto",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "机の 上に 辞書が あります。",
+          "reading": "つくえの うえに じしょが あります。",
+          "meaning": "Hay un diccionario encima del escritorio."
+        },
+        {
+          "written": "宿題が たくさん あります。",
+          "reading": "しゅくだいが たくさん あります。",
+          "meaning": "Tengo muchos deberes."
+        }
+      ]
     },
     {
       "id": "verb-iimasu",
@@ -133,16 +601,19 @@
       "romaji": "iimasu",
       "meaning": "decir",
       "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-ikimasu",
-      "written": "行きます",
-      "reading": "いきます",
-      "romaji": "ikimasu",
-      "meaning": "ir",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "先生に 名前を 言います。",
+          "reading": "せんせいに なまえを いいます。",
+          "meaning": "Le digo mi nombre al profesor."
+        },
+        {
+          "written": "本名を 言いませんでした。",
+          "reading": "ほんみょうを いいませんでした。",
+          "meaning": "No dije mi nombre real."
+        }
+      ]
     },
     {
       "id": "verb-imasu",
@@ -151,7 +622,19 @@
       "romaji": "imasu",
       "meaning": "haber/estar, personas y animales",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "教室に 先生が います。",
+          "reading": "きょうしつに せんせいが います。",
+          "meaning": "El profesor está en el aula."
+        },
+        {
+          "written": "森の中に 梟が います。",
+          "reading": "もりのなかに ふくろうが います。",
+          "meaning": "Hay un búho en el bosque."
+        }
+      ]
     },
     {
       "id": "verb-ukemasu",
@@ -160,7 +643,19 @@
       "romaji": "ukemasu",
       "meaning": "recibir/tomar; por ejemplo, recibir una clase",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "試験を 受けます。",
+          "reading": "しけんを うけます。",
+          "meaning": "Me presento a un examen."
+        },
+        {
+          "written": "和室で 授業を 受けました。",
+          "reading": "わしつで じゅぎょうを うけました。",
+          "meaning": "Tuve clase en una sala de estilo japonés."
+        }
+      ]
     },
     {
       "id": "verb-umaremasu",
@@ -169,52 +664,19 @@
       "romaji": "umaremasu",
       "meaning": "nacer",
       "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-okimasu",
-      "written": "起きます",
-      "reading": "おきます",
-      "romaji": "okimasu",
-      "meaning": "levantarse/despertarse",
-      "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-owarimasu",
-      "written": "終わります",
-      "reading": "おわります",
-      "romaji": "owarimasu",
-      "meaning": "terminar/acabar (intransitivo)",
-      "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-kaimasu",
-      "written": "買います",
-      "reading": "かいます",
-      "romaji": "kaimasu",
-      "meaning": "comprar",
-      "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-kaerimasu",
-      "written": "帰ります",
-      "reading": "かえります",
-      "romaji": "kaerimasu",
-      "meaning": "regresar/volver a casa",
-      "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-kakimasu",
-      "written": "書きます",
-      "reading": "かきます",
-      "romaji": "kakimasu",
-      "meaning": "escribir",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "赤ちゃんが 生まれました。",
+          "reading": "あかちゃんが うまれました。",
+          "meaning": "Ha nacido un bebé."
+        },
+        {
+          "written": "子犬が 三匹 生まれました。",
+          "reading": "こいぬが さんびき うまれました。",
+          "meaning": "Han nacido tres cachorros."
+        }
+      ]
     },
     {
       "id": "verb-kakimasu-63cf",
@@ -223,25 +685,19 @@
       "romaji": "kakimasu",
       "meaning": "dibujar; suele escribirse 絵を描きます",
       "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-kikimasu",
-      "written": "聞きます",
-      "reading": "ききます",
-      "romaji": "kikimasu",
-      "meaning": "escuchar o preguntar; cambia la partícula",
-      "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-kimasu",
-      "written": "来ます",
-      "reading": "きます",
-      "romaji": "kimasu",
-      "meaning": "venir",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "鉛筆で 馬を 描きます。",
+          "reading": "えんぴつで うまを かきます。",
+          "meaning": "Dibujo un caballo a lápiz."
+        },
+        {
+          "written": "白板に 四角を 描きました。",
+          "reading": "はくばんに しかくを かきました。",
+          "meaning": "Dibujé un cuadrado en la pizarra blanca."
+        }
+      ]
     },
     {
       "id": "verb-kurabemasu",
@@ -250,7 +706,19 @@
       "romaji": "kurabemasu",
       "meaning": "comparar",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "二つの 写真を 比べます。",
+          "reading": "ふたつの しゃしんを くらべます。",
+          "meaning": "Comparo dos fotos."
+        },
+        {
+          "written": "大学と 専門学校を 比べました。",
+          "reading": "だいがくと せんもんがっこうを くらべました。",
+          "meaning": "Comparé la universidad con la escuela profesional."
+        }
+      ]
     },
     {
       "id": "verb-kuremasu",
@@ -259,7 +727,19 @@
       "romaji": "kuremasu",
       "meaning": "darme a mí o a mi grupo cercano",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "先生が 辞書を くれました。",
+          "reading": "せんせいが じしょを くれました。",
+          "meaning": "El profesor me dio un diccionario."
+        },
+        {
+          "written": "家族が 年賀状を くれました。",
+          "reading": "かぞくが ねんがじょうを くれました。",
+          "meaning": "Mi familia me mandó una postal de Año Nuevo."
+        }
+      ]
     },
     {
       "id": "verb-kurushimimasu",
@@ -268,7 +748,19 @@
       "romaji": "kurushimimasu",
       "meaning": "sufrir",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "税金に 苦しみます。",
+          "reading": "ぜいきんに くるしみます。",
+          "meaning": "Sufro con los impuestos."
+        },
+        {
+          "written": "聞き取りに 苦しみました。",
+          "reading": "ききとりに くるしみました。",
+          "meaning": "Me costó mucho la comprensión auditiva."
+        }
+      ]
     },
     {
       "id": "verb-kotaeawase-o-shimasu",
@@ -277,7 +769,19 @@
       "romaji": "kotaeawase o shimasu",
       "meaning": "corregir/contrastar respuestas",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "授業で 答え合わせを します。",
+          "reading": "じゅぎょうで こたえあわせを します。",
+          "meaning": "Corregimos las respuestas en clase."
+        },
+        {
+          "written": "宿題の 答え合わせを しました。",
+          "reading": "しゅくだいの こたえあわせを しました。",
+          "meaning": "Corregí las respuestas de los deberes."
+        }
+      ]
     },
     {
       "id": "verb-shimasu",
@@ -286,16 +790,19 @@
       "romaji": "shimasu",
       "meaning": "hacer, practicar una actividad",
       "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-suimasu",
-      "written": "吸います",
-      "reading": "すいます",
-      "romaji": "suimasu",
-      "meaning": "fumar/aspirar; たばこを すいます",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "宿題を します。",
+          "reading": "しゅくだいを します。",
+          "meaning": "Hago los deberes."
+        },
+        {
+          "written": "家族と 旅行を します。",
+          "reading": "かぞくと りょこうを します。",
+          "meaning": "Viajo con mi familia."
+        }
+      ]
     },
     {
       "id": "verb-suwarimasu",
@@ -304,16 +811,19 @@
       "romaji": "suwarimasu",
       "meaning": "sentarse; asiento marcado con に",
       "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-tabemasu",
-      "written": "食べます",
-      "reading": "たべます",
-      "romaji": "tabemasu",
-      "meaning": "comer",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "箱の 上に 座ります。",
+          "reading": "はこの うえに すわります。",
+          "meaning": "Me siento encima de la caja."
+        },
+        {
+          "written": "子どもが 木の下に 座りました。",
+          "reading": "こどもが きのしたに すわりました。",
+          "meaning": "El niño se sentó bajo el árbol."
+        }
+      ]
     },
     {
       "id": "verb-tsukurimasu",
@@ -322,7 +832,19 @@
       "romaji": "tsukurimasu",
       "meaning": "crear, fabricar, cocinar",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "晩ご飯を 作ります。",
+          "reading": "ばんごはんを つくります。",
+          "meaning": "Preparo la cena."
+        },
+        {
+          "written": "パイを 作りました。",
+          "reading": "パイを つくりました。",
+          "meaning": "Hice una tarta."
+        }
+      ]
     },
     {
       "id": "verb-nakimasu",
@@ -331,7 +853,19 @@
       "romaji": "nakimasu",
       "meaning": "emitir un sonido animal / llorar",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "牛が 鳴きます。",
+          "reading": "うしが なきます。",
+          "meaning": "La vaca muge."
+        },
+        {
+          "written": "子どもが 泣きました。",
+          "reading": "こどもが なきました。",
+          "meaning": "El niño lloró."
+        }
+      ]
     },
     {
       "id": "verb-naraimasu",
@@ -340,16 +874,19 @@
       "romaji": "naraimasu",
       "meaning": "aprender de alguien, tomar lecciones",
       "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-nemasu",
-      "written": "寝ます",
-      "reading": "ねます",
-      "romaji": "nemasu",
-      "meaning": "acostarse/dormir",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "笛を 習います。",
+          "reading": "ふえを ならいます。",
+          "meaning": "Tomo clases de flauta."
+        },
+        {
+          "written": "先生に テニスを 習いました。",
+          "reading": "せんせいに テニスを ならいました。",
+          "meaning": "Aprendí a jugar al tenis con un profesor."
+        }
+      ]
     },
     {
       "id": "verb-nemurimasu",
@@ -358,7 +895,19 @@
       "romaji": "nemurimasu",
       "meaning": "dormir/estar dormido",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "授業で 眠りました。",
+          "reading": "じゅぎょうで ねむりました。",
+          "meaning": "Me quedé dormido en clase."
+        },
+        {
+          "written": "怠け者は 一日中 眠ります。",
+          "reading": "なまけものは いちにちじゅう ねむります。",
+          "meaning": "El perezoso duerme todo el día."
+        }
+      ]
     },
     {
       "id": "verb-hajimarimasu",
@@ -367,7 +916,19 @@
       "romaji": "hajimarimasu",
       "meaning": "empezar (intransitivo)",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "授業が 始まります。",
+          "reading": "じゅぎょうが はじまります。",
+          "meaning": "Empieza la clase."
+        },
+        {
+          "written": "旅行が 始まりました。",
+          "reading": "りょこうが はじまりました。",
+          "meaning": "Ha empezado el viaje."
+        }
+      ]
     },
     {
       "id": "verb-hajimemasu",
@@ -376,16 +937,19 @@
       "romaji": "hajimemasu",
       "meaning": "empezar algo (transitivo)",
       "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-hatarakimasu",
-      "written": "働きます",
-      "reading": "はたらきます",
-      "romaji": "hatarakimasu",
-      "meaning": "trabajar",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "宿題を 始めます。",
+          "reading": "しゅくだいを はじめます。",
+          "meaning": "Empiezo los deberes."
+        },
+        {
+          "written": "先生が 授業を 始めました。",
+          "reading": "せんせいが じゅぎょうを はじめました。",
+          "meaning": "El profesor empezó la clase."
+        }
+      ]
     },
     {
       "id": "verb-hanashimasu",
@@ -394,25 +958,19 @@
       "romaji": "hanashimasu",
       "meaning": "hablar",
       "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-benkyou-shimasu",
-      "written": "勉強します",
-      "reading": "べんきょうします",
-      "romaji": "benkyou shimasu",
-      "meaning": "estudiar",
-      "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-mimasu",
-      "written": "見ます",
-      "reading": "みます",
-      "romaji": "mimasu",
-      "meaning": "ver/mirar",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "家族と 話します。",
+          "reading": "かぞくと はなします。",
+          "meaning": "Hablo con mi familia."
+        },
+        {
+          "written": "店員と 話しました。",
+          "reading": "てんいんと はなしました。",
+          "meaning": "Hablé con el dependiente."
+        }
+      ]
     },
     {
       "id": "verb-moraimasu",
@@ -421,7 +979,19 @@
       "romaji": "moraimasu",
       "meaning": "recibir",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "子どもは お年玉を もらいます。",
+          "reading": "こどもは おとしだまを もらいます。",
+          "meaning": "Los niños reciben dinero de Año Nuevo."
+        },
+        {
+          "written": "先生に 辞書を もらいました。",
+          "reading": "せんせいに じしょを もらいました。",
+          "meaning": "Recibí un diccionario del profesor."
+        }
+      ]
     },
     {
       "id": "verb-yaku-shimasu",
@@ -430,25 +1000,19 @@
       "romaji": "yaku shimasu",
       "meaning": "traducir",
       "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-yasumimasu",
-      "written": "休みます",
-      "reading": "やすみます",
-      "romaji": "yasumimasu",
-      "meaning": "descansar, ausentarse, tomarse el día libre",
-      "group": "main",
-      "sourceId": "verbs-note"
-    },
-    {
-      "id": "verb-yomimasu",
-      "written": "読みます",
-      "reading": "よみます",
-      "romaji": "yomimasu",
-      "meaning": "leer",
-      "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "雑誌を 訳します。",
+          "reading": "ざっしを やくします。",
+          "meaning": "Traduzco una revista."
+        },
+        {
+          "written": "字幕を 訳しました。",
+          "reading": "じまくを やくしました。",
+          "meaning": "Traduje los subtítulos."
+        }
+      ]
     },
     {
       "id": "verb-rokuon-shimasu",
@@ -457,7 +1021,19 @@
       "romaji": "rokuon shimasu",
       "meaning": "grabar audio",
       "group": "main",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "授業を 録音します。",
+          "reading": "じゅぎょうを ろくおんします。",
+          "meaning": "Grabo la clase."
+        },
+        {
+          "written": "雨の音を 録音しました。",
+          "reading": "あめのおとを ろくおんしました。",
+          "meaning": "Grabé el sonido de la lluvia."
+        }
+      ]
     },
     {
       "id": "verb-wakarimasu",
@@ -466,7 +1042,19 @@
       "romaji": "wakarimasu",
       "meaning": "entender",
       "group": "expressions",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "質問が 分かりました。",
+          "reading": "しつもんが わかりました。",
+          "meaning": "He entendido la pregunta."
+        },
+        {
+          "written": "規則が 分かりません。",
+          "reading": "きそくが わかりません。",
+          "meaning": "No entiendo las normas."
+        }
+      ]
     },
     {
       "id": "verb-oboete-imasu",
@@ -475,7 +1063,19 @@
       "romaji": "oboete imasu",
       "meaning": "recordar / tener memorizado",
       "group": "expressions",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "先生の 名前を 覚えて います。",
+          "reading": "せんせいの なまえを おぼえて います。",
+          "meaning": "Recuerdo el nombre del profesor."
+        },
+        {
+          "written": "かん字を たくさん 覚えて います。",
+          "reading": "かんじを たくさん おぼえて います。",
+          "meaning": "Me sé muchos kanji."
+        }
+      ]
     },
     {
       "id": "verb-dekimasu",
@@ -484,7 +1084,19 @@
       "romaji": "dekimasu",
       "meaning": "poder hacer; estar hecho",
       "group": "expressions",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "テニスが できます。",
+          "reading": "テニスが できます。",
+          "meaning": "Sé jugar al tenis."
+        },
+        {
+          "written": "晩ご飯が できました。",
+          "reading": "ばんごはんが できました。",
+          "meaning": "La cena está lista."
+        }
+      ]
     },
     {
       "id": "verb-kokoro-ga-oremasu",
@@ -493,7 +1105,19 @@
       "romaji": "kokoro ga oremasu",
       "meaning": "desanimarse/perder la motivación",
       "group": "expressions",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "難しい 試験で 心が 折れました。",
+          "reading": "むずかしい しけんで こころが おれました。",
+          "meaning": "Me desanimé con un examen difícil."
+        },
+        {
+          "written": "長い 坂で 心が 折れます。",
+          "reading": "ながい さかで こころが おれます。",
+          "meaning": "Las cuestas largas me desaniman."
+        }
+      ]
     },
     {
       "id": "verb-meshiagarimasu",
@@ -502,7 +1126,19 @@
       "romaji": "meshiagarimasu",
       "meaning": "comer/beber, forma respetuosa",
       "group": "expressions",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "先生は 和食を 召し上がります。",
+          "reading": "せんせいは わしょくを めしあがります。",
+          "meaning": "El profesor come comida japonesa."
+        },
+        {
+          "written": "お客さんが コーヒーを 召し上がりました。",
+          "reading": "おきゃくさんが コーヒーを めしあがりました。",
+          "meaning": "El invitado tomó café."
+        }
+      ]
     },
     {
       "id": "verb-shuuri-shimasu",
@@ -511,7 +1147,19 @@
       "romaji": "shuuri shimasu",
       "meaning": "reparar",
       "group": "expressions",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "技術者が 機械を 修理します。",
+          "reading": "ぎじゅつしゃが きかいを しゅうりします。",
+          "meaning": "El técnico repara la máquina."
+        },
+        {
+          "written": "靴を 修理しました。",
+          "reading": "くつを しゅうりしました。",
+          "meaning": "Arreglé los zapatos."
+        }
+      ]
     },
     {
       "id": "verb-junbi-shimasu",
@@ -520,7 +1168,19 @@
       "romaji": "junbi shimasu",
       "meaning": "preparar",
       "group": "expressions",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "先生は 授業を 準備します。",
+          "reading": "せんせいは じゅぎょうを じゅんびします。",
+          "meaning": "El profesor prepara la clase."
+        },
+        {
+          "written": "晩ご飯を 準備しました。",
+          "reading": "ばんごはんを じゅんびしました。",
+          "meaning": "Preparé la cena."
+        }
+      ]
     },
     {
       "id": "verb-undou-shimasu",
@@ -529,7 +1189,19 @@
       "romaji": "undou shimasu",
       "meaning": "hacer ejercicio",
       "group": "expressions",
-      "sourceId": "verbs-note"
+      "sourceId": "verbs-note",
+      "examples": [
+        {
+          "written": "暑い 日は 運動しません。",
+          "reading": "あつい ひは うんどうしません。",
+          "meaning": "Los días de calor no hago ejercicio."
+        },
+        {
+          "written": "子どもは 校庭で 運動します。",
+          "reading": "こどもは こうていで うんどうします。",
+          "meaning": "Los niños hacen ejercicio en el patio de la escuela."
+        }
+      ]
     }
   ]
 }

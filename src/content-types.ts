@@ -27,12 +27,19 @@ export interface ContentGroup {
   readonly label: string;
 }
 
+/** A short sentence: written as on the page, its reading in kana and a Spanish translation. */
+export interface ContentExample {
+  readonly written: string;
+  readonly reading: string;
+  readonly meaning: string;
+}
+
 export interface ContentGuide {
   readonly id: string;
   readonly title: string;
   readonly sourceId: string;
   readonly paragraphs: readonly string[];
-  readonly examples?: readonly { readonly written: string; readonly reading: string; readonly meaning: string }[];
+  readonly examples?: readonly ContentExample[];
 }
 
 interface DocumentBase {
@@ -93,6 +100,8 @@ export interface LexiconEntry extends EntryBase {
   readonly romaji: string;
   readonly meaning: string;
   readonly note?: string;
+  /** Simple sentences that use the entry with vocabulary from the site; the row opens to show them. */
+  readonly examples?: readonly ContentExample[];
 }
 
 export interface LexiconDocument extends DocumentBase {
