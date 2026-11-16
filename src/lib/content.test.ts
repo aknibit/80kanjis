@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { parseNavigation, parseStudyDocument, resolveSection, sectionHref, searchContent, loadNavigation, loadStudyDocument } from './content.ts';
+import { parseNavigation, parseStudyDocument, resolveSection, sectionHref, searchContent, shuffled, loadNavigation, loadStudyDocument } from './content.ts';
 import type { StudyDocument, CounterDocument, KanaDocument, LexiconDocument } from '../content-types.ts';
 
 const root = new URL('../../public/', import.meta.url);
@@ -29,6 +29,26 @@ test('the navigation keeps the 80 kanji home first and maps each section to its 
   }
   assert.equal(resolveSection(navigation, 'https://example.test/study/').id, 'kanji');
   assert.throws(() => resolveSection(navigation, 'https://example.test/?section=unknown'));
+});
+
+test('shuffling returns a reordered copy with the same entries and leaves the original order untouched', () => {
+  const entries = documents.get('vocabulary')!.entries;
+  const original = [...entries];
+  let seed = 7;
+  const random = () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
+  const result = shuffled(entries, random);
+  assert.deepEqual(entries, original);
+  assert.notDeepEqual(result, original);
+  assert.deepEqual([...result].sort((a, b) => a.id.localeCompare(b.id)), [...original].sort((a, b) => a.id.localeCompare(b.id)));
+  assert.deepEqual(shuffled([], random), []);
+});
+
+test('vocabulary uses cards, and card sections have no examples because cards do not open', () => {
+  assert.equal(navigation.sections.find((section) => section.id === 'vocabulary')!.layout, 'cards');
+  for (const section of navigation.sections.filter((item) => item.layout === 'cards')) {
+    const data = documents.get(section.id) as LexiconDocument;
+    for (const entry of data.entries) assert.equal(entry.examples, undefined, `${section.id}: ${entry.id}`);
+  }
 });
 
 test('all section files round-trip and declare complete sources rather than code-owned content', () => {
@@ -193,6 +213,8 @@ test('invalid navigation, unsafe paths, duplicate sections and a different landi
     (data) => { data.sections[0].file = 'another.json'; },
     (data) => { data.sections[0].placement = 'support'; },
     (data) => { data.sections[1].placement = 'unknown'; },
+    (data) => { data.sections[1].layout = 'cards'; },
+    (data) => { data.sections.find((section: any) => section.id === 'vocabulary').layout = 'grid'; },
   ];
   for (const change of changes) {
     const data = structuredClone(navigation); change(data);

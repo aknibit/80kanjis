@@ -19,11 +19,15 @@ Cada archivo nuevo declara `version`, `kind`, `title`, `description`, `sources`,
 
 El menú conserva primero las secciones principales. `placement: "support"` coloca Kana separado al final, a la derecha; en móvil sigue visible mientras el menú principal permite desplazamiento horizontal.
 
+Una sección léxica puede declarar `layout: "cards"` en el menú, como Vocabulario. Sus entradas se muestran como fichas compactas en tantas columnas como quepan y sin igualar alturas. Los filtros ocupan varias líneas en lugar de desplazarse. Con «Todo», las fichas aparecen en orden aleatorio en cada visita y cada una indica su grupo en el pie; con un grupo seleccionado, siguen el orden del archivo, que conviene que siga teniendo sentido, y no repiten el grupo. Las fichas no se despliegan, así que una sección en fichas no puede tener entradas con `examples`; los tests lo comprueban. Sin `layout`, la sección usa filas, como Verbos y Adjetivos y adverbios.
+
 En Kana, los tres grupos comparten las mismas once columnas por familia de sonidos: vocales, k/g, s/z, t/d, n, h/b/p, m, y, r, w y ん, desde la derecha. Así, か・が・きゃ・ぎゃ quedan en la misma columna. `position.row` avanza hacia abajo dentro de cada grupo: los básicos y dakuten usan a・i・u・e・o; handakuten ocupa un segundo bloque de cinco filas en la columna h/b/p. Las combinaciones usan bloques ya・yu・yo, seguidos de las variantes con dakuten y handakuten en sus mismas columnas. Se admiten hasta quince filas y se conservan los huecos de や・ゆ・よ y わ・を. Se comprueba que no haya posiciones duplicadas dentro de un grupo. Los tres grupos comparten el desplazamiento horizontal, también al filtrar o buscar.
 
 ## Procedencia
 
 La importación inicial del 16 de noviembre de 2026 usa las notas temáticas de **日本語 / Primer curso organizado**, que ya documentan correcciones del archivo original. Se conservan sus lecturas, traducciones y distinciones de uso. Las redacciones personales y el archivo de apuntes sin corregir no se han importado.
+
+En el vocabulario, `meaning` es solo la traducción y `note` recoge el matiz de registro, uso o contexto (`cena` y `coloquial`, en lugar de `cena, coloquial`). Las fichas muestran la nota más pequeña y en gris. El 16 de noviembre de 2026 se separaron así 29 significados importados, sin cambiar su contenido salvo para que la nota se entienda sola (`«viajar» se dice りょこうします`). Ese día también se escribieron con kanji tres entradas que estaban en kana, siguiendo el criterio del curso de usar kanji aunque sean poco frecuentes (林檎, 鸚鵡): うち como 家／内, くし como 櫛 y みかん como 蜜柑. Siguen en kana おかき, ひよこ y ものづくり, que se escriben así habitualmente, y los préstamos en katakana.
 
 Las fuentes del vault se registran con el nombre, la ruta relativa de la nota y su SHA-256 en el momento de importación. La huella identifica esa revisión; el build no exige tener iCloud u Obsidian disponibles. El vault original no se modifica. Los cambios posteriores se trasladan al JSON y se revisan en el PR; no hay sincronización automática que pueda sobrescribir una edición.
 

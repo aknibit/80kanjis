@@ -75,9 +75,10 @@ export function parseNavigation(input: string): NavigationDocument {
   check(data.version === 1, 'Versión de navegación no compatible.');
   array(data.sections, 1);
   for (const value of data.sections) {
-    const section = record(value, ['id', 'label', 'kind', 'file'], ['placement']);
+    const section = record(value, ['id', 'label', 'kind', 'file'], ['placement', 'layout']);
     id(section.id); text(section.label); text(section.file);
     check(section.placement === undefined || section.placement === 'primary' || section.placement === 'support', 'Ubicación de menú no válida.');
+    check(section.layout === undefined || (section.layout === 'cards' && section.kind === 'lexicon'), 'Solo las secciones léxicas admiten la presentación en fichas.');
     if (section.kind === 'kanji') {
       check(section.id === 'kanji' && section.file === 'collection.json', 'La colección de kanji debe conservar su fuente.');
       check(section.placement !== 'support', 'La página de entrada debe estar en el menú principal.');
@@ -242,4 +243,14 @@ export function searchContent<T extends ContentEntry>(entries: readonly T[], que
     const text = normalizeSearch(searchable.join(' '));
     return terms.every((term) => text.includes(term));
   });
+}
+
+/** A shuffled copy (Fisher-Yates); the original order stays untouched. */
+export function shuffled<T>(items: readonly T[], random: () => number = Math.random): T[] {
+  const result = [...items];
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const other = Math.floor(random() * (index + 1));
+    [result[index], result[other]] = [result[other], result[index]];
+  }
+  return result;
 }

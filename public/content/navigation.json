@@ -24,7 +24,8 @@
       "id": "vocabulary",
       "label": "Vocabulario",
       "file": "content/vocabulary.json",
-      "kind": "lexicon"
+      "kind": "lexicon",
+      "layout": "cards"
     },
     {
       "id": "modifiers",

@@ -6,6 +6,8 @@ export interface NavigationSection {
   readonly kind: 'kanji' | ContentKind;
   readonly file: string;
   readonly placement?: 'primary' | 'support';
+  /** Lexicon only: compact cards in as many columns as fit, one list per group, with wrapping filters. */
+  readonly layout?: 'cards';
 }
 
 export interface NavigationDocument {

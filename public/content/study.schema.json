@@ -216,6 +216,9 @@
                   "primary",
                   "support"
                 ]
+              },
+              "layout": {
+                "const": "cards"
               }
             },
             "required": [
@@ -253,6 +256,20 @@
                       "not": {
                         "const": "kanji"
                       }
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "required": [
+                    "layout"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "kind": {
+                      "const": "lexicon"
                     }
                   }
                 }

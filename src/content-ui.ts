@@ -1,5 +1,6 @@
 import type { ContentEntry, ContentGroup, CounterEntry, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
-import { searchContent } from './lib/content.ts';
+import { searchContent, shuffled } from './lib/content.ts';
+import { setupMasonry } from './masonry.ts';
 import { fitPlaceholder } from './search-placeholder.ts';
 
 function node<K extends keyof HTMLElementTagNameMap>(tag: K, className = '', text?: string) {
@@ -12,6 +13,16 @@ function node<K extends keyof HTMLElementTagNameMap>(tag: K, className = '', tex
 function japanese<K extends keyof HTMLElementTagNameMap>(tag: K, className: string, text: string) {
   const result = node(tag, className, text);
   result.lang = 'ja';
+  return result;
+}
+
+/** Text that may wrap after each slash, so that 高校／高等学校 or contemplación/festival never splits inside a word. */
+function slashed<K extends keyof HTMLElementTagNameMap>(tag: K, className: string, text: string) {
+  const result = node(tag, className);
+  for (const part of text.split(/(?<=[/／])/)) {
+    if (result.firstChild) result.append(document.createElement('wbr'));
+    result.append(part);
+  }
   return result;
 }
 
@@ -64,8 +75,12 @@ function renderCounter(entry: CounterEntry): HTMLElement {
   return details;
 }
 
-function renderWord(entry: LexiconEntry, group: string): HTMLElement {
-  const row = node('li', 'lexicon-row');
+/**
+ * A lexicon entry as a row, or as a card for sections with "layout": "cards". Its group shows as a tag, unless `group`
+ * is undefined: cards leave it out while a group is selected, since the filter already names it.
+ */
+function renderWord(entry: LexiconEntry, group: string | undefined, card = false): HTMLElement {
+  const row = node('li', card ? 'lexicon-card' : 'lexicon-row');
   row.dataset.entryId = entry.id;
   // An entry with examples opens like a counter. A summary only admits phrasing content, so it uses spans
   // where the static row has a heading and paragraphs.
@@ -73,20 +88,22 @@ function renderWord(entry: LexiconEntry, group: string): HTMLElement {
   const block = opens ? 'span' : 'div';
   const line = opens ? 'span' : 'p';
   const term = node(block, 'lexicon-term');
-  term.append(japanese(opens ? 'span' : 'h3', 'lexicon-written', entry.written), japanese(line, 'word-reading', entry.reading),
-    node(line, 'entry-romaji', entry.romaji));
+  const written = slashed(opens ? 'span' : 'h3', 'lexicon-written', entry.written);
+  const reading = slashed(line, 'word-reading', entry.reading);
+  written.lang = 'ja'; reading.lang = 'ja';
+  term.append(written, reading, node(line, 'entry-romaji', entry.romaji));
   const explanation = node(block, 'lexicon-explanation');
-  explanation.append(node(line, 'lexicon-meaning', entry.meaning));
-  if (entry.note) explanation.append(node(line, 'entry-note', entry.note));
-  const tag = node('span', 'entry-group', group);
+  explanation.append(slashed(line, 'lexicon-meaning', entry.meaning));
+  if (entry.note) explanation.append(slashed(line, 'entry-note', entry.note));
+  const tags = group === undefined ? [] : [node('span', 'entry-group', group)];
   if (!opens) {
-    row.append(term, explanation, tag);
+    row.append(term, explanation, ...tags);
     return row;
   }
   row.classList.add('lexicon-row--opens');
   const details = node('details', 'lexicon-details');
   const summary = node('summary', 'lexicon-summary');
-  summary.append(term, explanation, tag);
+  summary.append(term, explanation, ...tags);
   const body = node('div', 'lexicon-body');
   const list = node('ul', 'lexicon-examples');
   list.id = `examples-${entry.id}`;
@@ -194,6 +211,8 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   intro.append(title, node('p', 'intro-description', data.description));
   const collection = node('section', 'study-collection');
   collection.setAttribute('aria-label', data.title);
+  const cards = data.kind === 'lexicon' && section.layout === 'cards';
+  if (cards) collection.classList.add('study-collection--cards');
   const form = node('form', 'search-form');
   form.setAttribute('role', 'search');
   const label = node('label', 'visually-hidden', `Buscar en ${section.label}`);
@@ -217,8 +236,9 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   count.setAttribute('role', 'status'); count.setAttribute('aria-live', 'polite'); count.setAttribute('aria-atomic', 'true');
   toolbar.append(filters, count);
   const results = node(data.kind === 'lexicon' ? 'ul' : 'div', `study-results study-results--${data.kind}`);
+  if (cards) results.classList.add('study-results--cards');
   // Every row keeps a column for + / − when some entry opens, so meanings and tags stay aligned.
-  if (data.kind === 'lexicon' && data.entries.some((entry) => entry.examples?.length)) results.classList.add('study-results--opens');
+  else if (data.kind === 'lexicon' && data.entries.some((entry) => entry.examples?.length)) results.classList.add('study-results--opens');
   results.id = 'study-results';
   if (data.kind === 'lexicon') results.setAttribute('role', 'list');
   if (data.kind === 'kana') {
@@ -236,6 +256,10 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   host.replaceChildren(intro, collection);
 
   const groups = new Map(data.groups.map((group) => [group.id, group.label]));
+  // Cards under «Todo» come in a random order, shuffled once per visit so that searching keeps it.
+  // A selected group shows its entries in their thematic order.
+  const randomOrder = cards ? shuffled<ContentEntry>(data.entries) : data.entries;
+  const placeCards = cards ? setupMasonry(results) : undefined;
   const filterButtons = new Map<string, HTMLButtonElement>();
   let selectedGroup = 'all';
   let urlTimer: ReturnType<typeof setTimeout> | undefined;
@@ -257,7 +281,7 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   }
 
   function render() {
-    const matching = searchContent<ContentEntry>(data.entries, input.value);
+    const matching = searchContent<ContentEntry>(selectedGroup === 'all' ? randomOrder : data.entries, input.value);
     const entries = matching.filter((entry) => selectedGroup === 'all' || entry.group === selectedGroup);
     for (const [id, button] of filterButtons) {
       button.setAttribute('aria-pressed', String(id === selectedGroup));
@@ -270,12 +294,15 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
         if (groupEntries.length > 0) fragment.append(renderKanaChart(groupEntries, group, data.entries));
       }
     } else {
+      // Rows always show their group; cards only under «Todo».
+      const tagged = !cards || selectedGroup === 'all';
       for (const entry of entries) fragment.append('forms' in entry ? renderCounter(entry)
-        : renderWord(entry as LexiconEntry, groups.get(entry.group)!));
+        : renderWord(entry as LexiconEntry, tagged ? groups.get(entry.group)! : undefined, cards));
     }
     results.replaceChildren(fragment);
     clear.hidden = !input.value;
     empty.hidden = entries.length > 0; results.hidden = entries.length === 0;
+    placeCards?.();
     const noun = data.kind === 'counters' ? 'grupos' : data.kind === 'kana' ? 'sonidos' : 'entradas';
     count.textContent = `${entries.length} de ${data.entries.length} ${noun}`;
   }
