@@ -56,7 +56,8 @@
       "sourceId": "counter-note",
       "paragraphs": [
         "Los contadores se combinan con el número. Es mejor aprender la lectura de la combinación completa, porque algunos sonidos cambian.",
-        "Las formas destacadas tienen una lectura especial o un cambio de sonido. Si aparecen dos lecturas, ambas están recogidas en la tabla."
+        "Las formas destacadas tienen una lectura especial o un cambio de sonido. Si aparecen dos lecturas, ambas están recogidas en la tabla.",
+        "La columna «Ejemplo» muestra un uso real de cada forma. La escritura y la lectura solo recogen el número con el contador: 一本 es «uno» de algo alargado, como un lápiz o una botella."
       ]
     },
     {
@@ -64,7 +65,7 @@
       "title": "Para expresar orden: 目",
       "sourceId": "counter-note",
       "paragraphs": [
-        "Añadir め a un contador indica orden: ひとつめ, el primero; ひとりめ, la primera persona; ごほんめ, el quinto objeto alargado."
+        "Añadir め a un contador indica orden: ひとつめ, el primero; ひとりめ, la primera persona; ごほんめ, el quinto lápiz."
       ]
     }
   ],
@@ -72,6 +73,9 @@
     {
       "id": "tsu",
       "written": "〜つ",
+      "endings": [
+        "つ"
+      ],
       "title": "Objetos en general",
       "description": "Una forma general de contar cosas cuando no se necesita un contador más específico.",
       "group": "objects",
@@ -80,7 +84,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un objeto",
+          "meaning": "una pregunta",
           "written": "一つ",
           "readings": [
             "ひとつ"
@@ -89,7 +93,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos objetos",
+          "meaning": "dos ideas",
           "written": "二つ",
           "readings": [
             "ふたつ"
@@ -98,7 +102,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres objetos",
+          "meaning": "tres razones",
           "written": "三つ",
           "readings": [
             "みっつ"
@@ -107,7 +111,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro objetos",
+          "meaning": "cuatro estaciones del año",
           "written": "四つ",
           "readings": [
             "よっつ"
@@ -116,7 +120,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco objetos",
+          "meaning": "cinco opciones",
           "written": "五つ",
           "readings": [
             "いつつ"
@@ -125,7 +129,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis objetos",
+          "meaning": "seis errores",
           "written": "六つ",
           "readings": [
             "むっつ"
@@ -134,7 +138,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete objetos",
+          "meaning": "siete deseos",
           "written": "七つ",
           "readings": [
             "ななつ"
@@ -143,7 +147,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho objetos",
+          "meaning": "ocho reglas",
           "written": "八つ",
           "readings": [
             "やっつ"
@@ -152,7 +156,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve objetos",
+          "meaning": "nueve problemas",
           "written": "九つ",
           "readings": [
             "ここのつ"
@@ -161,7 +165,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez objetos",
+          "meaning": "diez promesas",
           "written": "十",
           "readings": [
             "とお"
@@ -170,7 +174,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos objetos?",
+        "meaning": "¿Cuántas cosas?",
         "written": "いくつ",
         "readings": [
           "いくつ"
@@ -183,6 +187,9 @@
     {
       "id": "ko",
       "written": "〜個",
+      "endings": [
+        "こ"
+      ],
       "title": "Objetos pequeños",
       "description": "Fruta, piezas y objetos pequeños de forma compacta.",
       "group": "objects",
@@ -191,7 +198,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un objeto pequeño",
+          "meaning": "una manzana",
           "written": "一個",
           "readings": [
             "いっこ"
@@ -200,7 +207,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos objetos pequeños",
+          "meaning": "dos huevos",
           "written": "二個",
           "readings": [
             "にこ"
@@ -209,7 +216,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres objetos pequeños",
+          "meaning": "tres naranjas",
           "written": "三個",
           "readings": [
             "さんこ"
@@ -218,7 +225,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro objetos pequeños",
+          "meaning": "cuatro caramelos",
           "written": "四個",
           "readings": [
             "よんこ"
@@ -227,7 +234,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco objetos pequeños",
+          "meaning": "cinco piezas de puzle",
           "written": "五個",
           "readings": [
             "ごこ"
@@ -236,7 +243,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis objetos pequeños",
+          "meaning": "seis gomas de borrar",
           "written": "六個",
           "readings": [
             "ろっこ"
@@ -245,7 +252,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete objetos pequeños",
+          "meaning": "siete pelotas",
           "written": "七個",
           "readings": [
             "ななこ"
@@ -254,7 +261,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho objetos pequeños",
+          "meaning": "ocho tomates",
           "written": "八個",
           "readings": [
             "はっこ"
@@ -263,7 +270,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve objetos pequeños",
+          "meaning": "nueve bolas de arroz",
           "written": "九個",
           "readings": [
             "きゅうこ"
@@ -272,7 +279,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez objetos pequeños",
+          "meaning": "diez cajas",
           "written": "十個",
           "readings": [
             "じゅっこ",
@@ -282,7 +289,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos objetos pequeños?",
+        "meaning": "¿Cuántos huevos?",
         "written": "何個",
         "readings": [
           "なんこ"
@@ -293,6 +300,10 @@
     {
       "id": "nin",
       "written": "〜人",
+      "endings": [
+        "にん",
+        "り"
+      ],
       "title": "Personas",
       "description": "Para contar personas.",
       "group": "living",
@@ -301,7 +312,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "una persona",
+          "meaning": "un estudiante",
           "written": "一人",
           "readings": [
             "ひとり"
@@ -310,7 +321,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos personas",
+          "meaning": "dos amigas",
           "written": "二人",
           "readings": [
             "ふたり"
@@ -319,7 +330,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres personas",
+          "meaning": "tres hermanos",
           "written": "三人",
           "readings": [
             "さんにん"
@@ -328,7 +339,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro personas",
+          "meaning": "cuatro profesoras",
           "written": "四人",
           "readings": [
             "よにん"
@@ -337,7 +348,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco personas",
+          "meaning": "cinco niños",
           "written": "五人",
           "readings": [
             "ごにん"
@@ -346,7 +357,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis personas",
+          "meaning": "seis clientes",
           "written": "六人",
           "readings": [
             "ろくにん"
@@ -355,7 +366,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete personas",
+          "meaning": "siete jugadores",
           "written": "七人",
           "readings": [
             "ななにん"
@@ -364,7 +375,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho personas",
+          "meaning": "ocho compañeros de clase",
           "written": "八人",
           "readings": [
             "はちにん"
@@ -373,7 +384,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve personas",
+          "meaning": "nueve turistas",
           "written": "九人",
           "readings": [
             "きゅうにん"
@@ -382,7 +393,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez personas",
+          "meaning": "diez invitados",
           "written": "十人",
           "readings": [
             "じゅうにん"
@@ -404,6 +415,9 @@
     {
       "id": "mai",
       "written": "〜枚",
+      "endings": [
+        "まい"
+      ],
       "title": "Objetos planos",
       "description": "Papel, fotografías, prendas y otros objetos finos o planos.",
       "group": "objects",
@@ -412,7 +426,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un objeto plano",
+          "meaning": "una hoja de papel",
           "written": "一枚",
           "readings": [
             "いちまい"
@@ -421,7 +435,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos objetos planos",
+          "meaning": "dos fotografías",
           "written": "二枚",
           "readings": [
             "にまい"
@@ -430,7 +444,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres objetos planos",
+          "meaning": "tres camisetas",
           "written": "三枚",
           "readings": [
             "さんまい"
@@ -439,7 +453,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro objetos planos",
+          "meaning": "cuatro platos",
           "written": "四枚",
           "readings": [
             "よんまい"
@@ -448,7 +462,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco objetos planos",
+          "meaning": "cinco entradas de cine",
           "written": "五枚",
           "readings": [
             "ごまい"
@@ -457,7 +471,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis objetos planos",
+          "meaning": "seis sellos",
           "written": "六枚",
           "readings": [
             "ろくまい"
@@ -466,7 +480,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete objetos planos",
+          "meaning": "siete postales",
           "written": "七枚",
           "readings": [
             "ななまい"
@@ -475,7 +489,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho objetos planos",
+          "meaning": "ocho pañuelos",
           "written": "八枚",
           "readings": [
             "はちまい"
@@ -484,7 +498,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve objetos planos",
+          "meaning": "nueve sobres",
           "written": "九枚",
           "readings": [
             "きゅうまい"
@@ -493,7 +507,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez objetos planos",
+          "meaning": "diez billetes de mil yenes",
           "written": "十枚",
           "readings": [
             "じゅうまい"
@@ -502,7 +516,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos objetos planos?",
+        "meaning": "¿Cuántas fotografías?",
         "written": "何枚",
         "readings": [
           "なんまい"
@@ -513,6 +527,9 @@
     {
       "id": "dai",
       "written": "〜台",
+      "endings": [
+        "だい"
+      ],
       "title": "Vehículos y máquinas",
       "description": "Coches, bicicletas, ordenadores y aparatos.",
       "group": "objects",
@@ -521,7 +538,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un vehículo o una máquina",
+          "meaning": "una bicicleta",
           "written": "一台",
           "readings": [
             "いちだい"
@@ -530,7 +547,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos vehículos o máquinas",
+          "meaning": "dos coches",
           "written": "二台",
           "readings": [
             "にだい"
@@ -539,7 +556,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres vehículos o máquinas",
+          "meaning": "tres ordenadores",
           "written": "三台",
           "readings": [
             "さんだい"
@@ -548,7 +565,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro vehículos o máquinas",
+          "meaning": "cuatro lavadoras",
           "written": "四台",
           "readings": [
             "よんだい"
@@ -557,7 +574,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco vehículos o máquinas",
+          "meaning": "cinco televisores",
           "written": "五台",
           "readings": [
             "ごだい"
@@ -566,7 +583,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis vehículos o máquinas",
+          "meaning": "seis camiones",
           "written": "六台",
           "readings": [
             "ろくだい"
@@ -575,7 +592,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete vehículos o máquinas",
+          "meaning": "siete motos",
           "written": "七台",
           "readings": [
             "ななだい"
@@ -584,7 +601,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho vehículos o máquinas",
+          "meaning": "ocho cámaras",
           "written": "八台",
           "readings": [
             "はちだい"
@@ -593,7 +610,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve vehículos o máquinas",
+          "meaning": "nueve impresoras",
           "written": "九台",
           "readings": [
             "きゅうだい"
@@ -602,7 +619,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez vehículos o máquinas",
+          "meaning": "diez autobuses",
           "written": "十台",
           "readings": [
             "じゅうだい"
@@ -611,7 +628,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos vehículos o máquinas?",
+        "meaning": "¿Cuántos coches?",
         "written": "何台",
         "readings": [
           "なんだい"
@@ -622,6 +639,9 @@
     {
       "id": "satsu",
       "written": "〜冊",
+      "endings": [
+        "さつ"
+      ],
       "title": "Libros y cuadernos",
       "description": "Libros, revistas y volúmenes encuadernados.",
       "group": "objects",
@@ -630,7 +650,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un libro o cuaderno",
+          "meaning": "un libro",
           "written": "一冊",
           "readings": [
             "いっさつ"
@@ -639,7 +659,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos libros o cuadernos",
+          "meaning": "dos cuadernos",
           "written": "二冊",
           "readings": [
             "にさつ"
@@ -648,7 +668,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres libros o cuadernos",
+          "meaning": "tres revistas",
           "written": "三冊",
           "readings": [
             "さんさつ"
@@ -657,7 +677,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro libros o cuadernos",
+          "meaning": "cuatro diccionarios",
           "written": "四冊",
           "readings": [
             "よんさつ"
@@ -666,7 +686,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco libros o cuadernos",
+          "meaning": "cinco mangas",
           "written": "五冊",
           "readings": [
             "ごさつ"
@@ -675,7 +695,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis libros o cuadernos",
+          "meaning": "seis novelas",
           "written": "六冊",
           "readings": [
             "ろくさつ"
@@ -684,7 +704,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete libros o cuadernos",
+          "meaning": "siete libros de texto",
           "written": "七冊",
           "readings": [
             "ななさつ"
@@ -693,7 +713,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho libros o cuadernos",
+          "meaning": "ocho álbumes de fotos",
           "written": "八冊",
           "readings": [
             "はっさつ"
@@ -702,7 +722,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve libros o cuadernos",
+          "meaning": "nueve catálogos",
           "written": "九冊",
           "readings": [
             "きゅうさつ"
@@ -711,7 +731,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez libros o cuadernos",
+          "meaning": "diez guías de viaje",
           "written": "十冊",
           "readings": [
             "じゅっさつ",
@@ -721,7 +741,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos libros o cuadernos?",
+        "meaning": "¿Cuántos libros?",
         "written": "何冊",
         "readings": [
           "なんさつ"
@@ -732,6 +752,11 @@
     {
       "id": "hon",
       "written": "〜本",
+      "endings": [
+        "ほん",
+        "ぽん",
+        "ぼん"
+      ],
       "title": "Objetos alargados",
       "description": "Lápices, botellas, paraguas y objetos largos o cilíndricos.",
       "group": "objects",
@@ -740,7 +765,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un objeto alargado",
+          "meaning": "un lápiz",
           "written": "一本",
           "readings": [
             "いっぽん"
@@ -749,7 +774,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos objetos alargados",
+          "meaning": "dos botellas",
           "written": "二本",
           "readings": [
             "にほん"
@@ -758,7 +783,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres objetos alargados",
+          "meaning": "tres paraguas",
           "written": "三本",
           "readings": [
             "さんぼん"
@@ -767,7 +792,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro objetos alargados",
+          "meaning": "cuatro plátanos",
           "written": "四本",
           "readings": [
             "よんほん"
@@ -776,7 +801,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco objetos alargados",
+          "meaning": "cinco árboles",
           "written": "五本",
           "readings": [
             "ごほん"
@@ -785,7 +810,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis objetos alargados",
+          "meaning": "seis bolígrafos",
           "written": "六本",
           "readings": [
             "ろっぽん"
@@ -794,7 +819,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete objetos alargados",
+          "meaning": "siete películas",
           "written": "七本",
           "readings": [
             "ななほん"
@@ -803,7 +828,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho objetos alargados",
+          "meaning": "ocho flores",
           "written": "八本",
           "readings": [
             "はっぽん"
@@ -812,7 +837,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve objetos alargados",
+          "meaning": "nueve corbatas",
           "written": "九本",
           "readings": [
             "きゅうほん"
@@ -821,7 +846,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez objetos alargados",
+          "meaning": "diez llamadas de teléfono",
           "written": "十本",
           "readings": [
             "じゅっぽん",
@@ -831,7 +856,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos objetos alargados?",
+        "meaning": "¿Cuántas botellas?",
         "written": "何本",
         "readings": [
           "なんぼん"
@@ -842,6 +867,11 @@
     {
       "id": "hiki",
       "written": "〜匹",
+      "endings": [
+        "ひき",
+        "ぴき",
+        "びき"
+      ],
       "title": "Animales pequeños",
       "description": "Perros, gatos, peces, insectos y otros animales pequeños.",
       "group": "living",
@@ -850,7 +880,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un animal pequeño",
+          "meaning": "un perro",
           "written": "一匹",
           "readings": [
             "いっぴき"
@@ -859,7 +889,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos animales pequeños",
+          "meaning": "dos gatos",
           "written": "二匹",
           "readings": [
             "にひき"
@@ -868,7 +898,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres animales pequeños",
+          "meaning": "tres peces",
           "written": "三匹",
           "readings": [
             "さんびき"
@@ -877,7 +907,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro animales pequeños",
+          "meaning": "cuatro ratones",
           "written": "四匹",
           "readings": [
             "よんひき"
@@ -886,7 +916,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco animales pequeños",
+          "meaning": "cinco mosquitos",
           "written": "五匹",
           "readings": [
             "ごひき"
@@ -895,7 +925,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis animales pequeños",
+          "meaning": "seis ranas",
           "written": "六匹",
           "readings": [
             "ろっぴき"
@@ -904,7 +934,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete animales pequeños",
+          "meaning": "siete hámsteres",
           "written": "七匹",
           "readings": [
             "ななひき"
@@ -913,7 +943,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho animales pequeños",
+          "meaning": "ocho tortugas",
           "written": "八匹",
           "readings": [
             "はっぴき"
@@ -922,7 +952,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve animales pequeños",
+          "meaning": "nueve hormigas",
           "written": "九匹",
           "readings": [
             "きゅうひき"
@@ -931,7 +961,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez animales pequeños",
+          "meaning": "diez abejas",
           "written": "十匹",
           "readings": [
             "じゅっぴき",
@@ -941,7 +971,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos animales pequeños?",
+        "meaning": "¿Cuántos gatos?",
         "written": "何匹",
         "readings": [
           "なんびき"
@@ -954,6 +984,11 @@
     {
       "id": "wa",
       "written": "〜羽",
+      "endings": [
+        "わ",
+        "ば",
+        "ぱ"
+      ],
       "title": "Aves",
       "description": "Aves; también se usa tradicionalmente con conejos.",
       "group": "living",
@@ -962,7 +997,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un ave",
+          "meaning": "un pájaro",
           "written": "一羽",
           "readings": [
             "いちわ"
@@ -971,7 +1006,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos aves",
+          "meaning": "dos gallinas",
           "written": "二羽",
           "readings": [
             "にわ"
@@ -980,7 +1015,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres aves",
+          "meaning": "tres palomas",
           "written": "三羽",
           "readings": [
             "さんば"
@@ -989,7 +1024,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro aves",
+          "meaning": "cuatro patos",
           "written": "四羽",
           "readings": [
             "よんわ"
@@ -998,7 +1033,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco aves",
+          "meaning": "cinco cuervos",
           "written": "五羽",
           "readings": [
             "ごわ"
@@ -1007,7 +1042,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis aves",
+          "meaning": "seis gorriones",
           "written": "六羽",
           "readings": [
             "ろくわ"
@@ -1016,7 +1051,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete aves",
+          "meaning": "siete búhos",
           "written": "七羽",
           "readings": [
             "ななわ",
@@ -1026,7 +1061,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho aves",
+          "meaning": "ocho grullas de papel",
           "written": "八羽",
           "readings": [
             "はちわ"
@@ -1035,7 +1070,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve aves",
+          "meaning": "nueve pingüinos",
           "written": "九羽",
           "readings": [
             "きゅうわ"
@@ -1044,7 +1079,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez aves",
+          "meaning": "diez gaviotas",
           "written": "十羽",
           "readings": [
             "じゅっぱ",
@@ -1054,7 +1089,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántas aves?",
+        "meaning": "¿Cuántos pájaros?",
         "written": "何羽",
         "readings": [
           "なんば"
@@ -1067,6 +1102,10 @@
     {
       "id": "soku",
       "written": "〜足",
+      "endings": [
+        "そく",
+        "ぞく"
+      ],
       "title": "Pares de calzado",
       "description": "Pares de zapatos, calcetines y otros tipos de calzado.",
       "group": "objects",
@@ -1075,7 +1114,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un par de zapatos o calcetines",
+          "meaning": "un par de zapatos",
           "written": "一足",
           "readings": [
             "いっそく"
@@ -1084,7 +1123,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos pares de zapatos o calcetines",
+          "meaning": "dos pares de calcetines",
           "written": "二足",
           "readings": [
             "にそく"
@@ -1093,7 +1132,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres pares de zapatos o calcetines",
+          "meaning": "tres pares de sandalias",
           "written": "三足",
           "readings": [
             "さんぞく"
@@ -1102,7 +1141,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro pares de zapatos o calcetines",
+          "meaning": "cuatro pares de botas",
           "written": "四足",
           "readings": [
             "よんそく"
@@ -1111,7 +1150,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco pares de zapatos o calcetines",
+          "meaning": "cinco pares de zapatillas de deporte",
           "written": "五足",
           "readings": [
             "ごそく"
@@ -1120,7 +1159,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis pares de zapatos o calcetines",
+          "meaning": "seis pares de medias",
           "written": "六足",
           "readings": [
             "ろくそく"
@@ -1129,7 +1168,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete pares de zapatos o calcetines",
+          "meaning": "siete pares de chanclas",
           "written": "七足",
           "readings": [
             "ななそく"
@@ -1138,7 +1177,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho pares de zapatos o calcetines",
+          "meaning": "ocho pares de zapatillas de casa",
           "written": "八足",
           "readings": [
             "はっそく"
@@ -1147,7 +1186,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve pares de zapatos o calcetines",
+          "meaning": "nueve pares de zapatos de tacón",
           "written": "九足",
           "readings": [
             "きゅうそく"
@@ -1156,7 +1195,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez pares de zapatos o calcetines",
+          "meaning": "diez pares de botas de lluvia",
           "written": "十足",
           "readings": [
             "じゅっそく",
@@ -1166,7 +1205,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos pares de zapatos o calcetines?",
+        "meaning": "¿Cuántos pares de zapatos?",
         "written": "何足",
         "readings": [
           "なんぞく"
@@ -1177,6 +1216,11 @@
     {
       "id": "hai",
       "written": "〜杯",
+      "endings": [
+        "はい",
+        "ぱい",
+        "ばい"
+      ],
       "title": "Vasos y tazas",
       "description": "Vasos, tazas y recipientes llenos de bebida u otro contenido.",
       "group": "objects",
@@ -1185,7 +1229,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un vaso o una taza",
+          "meaning": "un vaso de agua",
           "written": "一杯",
           "readings": [
             "いっぱい"
@@ -1194,7 +1238,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos vasos o tazas",
+          "meaning": "dos tazas de café",
           "written": "二杯",
           "readings": [
             "にはい"
@@ -1203,7 +1247,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres vasos o tazas",
+          "meaning": "tres cervezas",
           "written": "三杯",
           "readings": [
             "さんばい"
@@ -1212,7 +1256,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro vasos o tazas",
+          "meaning": "cuatro tazas de té",
           "written": "四杯",
           "readings": [
             "よんはい"
@@ -1221,7 +1265,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco vasos o tazas",
+          "meaning": "cinco cuencos de arroz",
           "written": "五杯",
           "readings": [
             "ごはい"
@@ -1230,7 +1274,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis vasos o tazas",
+          "meaning": "seis copas de vino",
           "written": "六杯",
           "readings": [
             "ろっぱい"
@@ -1239,7 +1283,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete vasos o tazas",
+          "meaning": "siete cucharadas de azúcar",
           "written": "七杯",
           "readings": [
             "ななはい"
@@ -1248,7 +1292,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho vasos o tazas",
+          "meaning": "ocho vasos de zumo",
           "written": "八杯",
           "readings": [
             "はっぱい"
@@ -1257,7 +1301,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve vasos o tazas",
+          "meaning": "nueve cuencos de ramen",
           "written": "九杯",
           "readings": [
             "きゅうはい"
@@ -1266,7 +1310,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez vasos o tazas",
+          "meaning": "diez vasos de leche",
           "written": "十杯",
           "readings": [
             "じゅっぱい",
@@ -1276,7 +1320,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos vasos o tazas?",
+        "meaning": "¿Cuántas tazas de café?",
         "written": "何杯",
         "readings": [
           "なんばい"
@@ -1287,6 +1331,9 @@
     {
       "id": "tou",
       "written": "〜頭",
+      "endings": [
+        "とう"
+      ],
       "title": "Animales grandes",
       "description": "Elefantes, caballos y otros animales grandes.",
       "group": "living",
@@ -1295,7 +1342,7 @@
       "forms": [
         {
           "value": 1,
-          "meaning": "un animal grande",
+          "meaning": "un elefante",
           "written": "一頭",
           "readings": [
             "いっとう"
@@ -1304,7 +1351,7 @@
         },
         {
           "value": 2,
-          "meaning": "dos animales grandes",
+          "meaning": "dos caballos",
           "written": "二頭",
           "readings": [
             "にとう"
@@ -1313,7 +1360,7 @@
         },
         {
           "value": 3,
-          "meaning": "tres animales grandes",
+          "meaning": "tres vacas",
           "written": "三頭",
           "readings": [
             "さんとう"
@@ -1322,7 +1369,7 @@
         },
         {
           "value": 4,
-          "meaning": "cuatro animales grandes",
+          "meaning": "cuatro jirafas",
           "written": "四頭",
           "readings": [
             "よんとう"
@@ -1331,7 +1378,7 @@
         },
         {
           "value": 5,
-          "meaning": "cinco animales grandes",
+          "meaning": "cinco osos",
           "written": "五頭",
           "readings": [
             "ごとう"
@@ -1340,7 +1387,7 @@
         },
         {
           "value": 6,
-          "meaning": "seis animales grandes",
+          "meaning": "seis cerdos",
           "written": "六頭",
           "readings": [
             "ろくとう"
@@ -1349,7 +1396,7 @@
         },
         {
           "value": 7,
-          "meaning": "siete animales grandes",
+          "meaning": "siete leones",
           "written": "七頭",
           "readings": [
             "ななとう"
@@ -1358,7 +1405,7 @@
         },
         {
           "value": 8,
-          "meaning": "ocho animales grandes",
+          "meaning": "ocho ballenas",
           "written": "八頭",
           "readings": [
             "はっとう"
@@ -1367,7 +1414,7 @@
         },
         {
           "value": 9,
-          "meaning": "nueve animales grandes",
+          "meaning": "nueve tigres",
           "written": "九頭",
           "readings": [
             "きゅうとう"
@@ -1376,7 +1423,7 @@
         },
         {
           "value": 10,
-          "meaning": "diez animales grandes",
+          "meaning": "diez ovejas",
           "written": "十頭",
           "readings": [
             "じゅっとう",
@@ -1386,7 +1433,7 @@
         }
       ],
       "question": {
-        "meaning": "¿Cuántos animales grandes?",
+        "meaning": "¿Cuántos caballos?",
         "written": "何頭",
         "readings": [
           "なんとう"
@@ -1397,6 +1444,10 @@
     {
       "id": "days",
       "written": "〜日間",
+      "endings": [
+        "かかん",
+        "にちかん"
+      ],
       "title": "Duración en días",
       "description": "Un periodo de tiempo, distinto del día del calendario.",
       "group": "time",
@@ -1508,6 +1559,9 @@
     {
       "id": "weeks",
       "written": "〜週間",
+      "endings": [
+        "しゅうかん"
+      ],
       "title": "Semanas",
       "description": "Duración de un periodo en semanas.",
       "group": "time",
@@ -1618,6 +1672,9 @@
     {
       "id": "months",
       "written": "〜か月",
+      "endings": [
+        "かげつ"
+      ],
       "title": "Meses de duración",
       "description": "La duración en meses; no los nombres de los meses del año.",
       "group": "time",
@@ -1730,6 +1787,9 @@
     {
       "id": "age",
       "written": "〜歳",
+      "endings": [
+        "さい"
+      ],
       "title": "Edad",
       "description": "Años de edad de una persona.",
       "group": "time",
@@ -1842,6 +1902,10 @@
     {
       "id": "dates",
       "written": "〜日",
+      "endings": [
+        "にち",
+        "か"
+      ],
       "title": "Días del mes",
       "description": "Fechas del calendario. La lectura cambia en varios días.",
       "group": "time",
@@ -2142,6 +2206,11 @@
     {
       "id": "hundreds",
       "written": "百",
+      "endings": [
+        "ひゃく",
+        "ぴゃく",
+        "びゃく"
+      ],
       "title": "Centenas",
       "description": "Unidades de cien; se incluyen como números, no como contadores de objetos.",
       "group": "numbers",
@@ -2244,6 +2313,10 @@
     {
       "id": "thousands",
       "written": "千",
+      "endings": [
+        "せん",
+        "ぜん"
+      ],
       "title": "Millares",
       "description": "Unidades de mil; se incluyen como números.",
       "group": "numbers",
@@ -2346,6 +2419,9 @@
     {
       "id": "ten-thousands",
       "written": "万",
+      "endings": [
+        "まん"
+      ],
       "title": "Decenas de millar",
       "description": "En japonés, 万 agrupa los números en unidades de diez mil.",
       "group": "numbers",

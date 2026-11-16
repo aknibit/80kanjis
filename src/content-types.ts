@@ -53,6 +53,8 @@ interface EntryBase {
 export interface CounterEntry extends EntryBase {
   readonly type: 'counter' | 'number';
   readonly written: string;
+  /** Hiragana endings of the counter, most common first (for example ほん, ぽん, ぼん). */
+  readonly endings: readonly string[];
   readonly title: string;
   readonly description: string;
   readonly notes: readonly string[];

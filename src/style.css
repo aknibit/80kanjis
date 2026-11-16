@@ -389,13 +389,20 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kana-hiragana { color: var(--accent); }
 .kana-katakana { color: var(--kanji-collection); }
 .counter-entry + .counter-entry { border-top: 1px solid var(--line); }
-.counter-summary { display: grid; grid-template-columns: minmax(200px, .9fr) minmax(0, 1.4fr) auto 16px; align-items: center; gap: 18px; padding: 16px 20px; cursor: pointer; list-style: none; }
+.counter-summary { display: grid; grid-template-columns: minmax(0, 1fr) 220px auto 16px; align-items: center; gap: 18px; padding: 16px 20px; cursor: pointer; list-style: none; }
 .counter-summary::-webkit-details-marker { display: none; }
 .counter-summary::after { content: '+'; color: var(--accent); font-size: 22px; line-height: 1; text-align: center; }
 .counter-entry[open] > .counter-summary::after { content: '−'; }
-.counter-name { display: flex; align-items: center; gap: 16px; }
+.counter-name { display: flex; align-items: center; gap: 16px; min-width: 0; }
 .counter-symbol { min-width: 76px; font-family: var(--japanese); font-size: 26px; line-height: 1.5; color: var(--accent); }
 .counter-title { font-size: 16px; color: var(--title-soft); font-weight: 500; }
+.counter-heading { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.counter-endings { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
+.counter-endings-label { font-size: 11px; color: var(--faint); }
+.counter-ending-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.counter-ending { padding: 2px 8px; border: 1px solid var(--chip-border); border-radius: 5px; background: var(--chip-bg); font-family: var(--japanese-reading); font-size: 14px; line-height: 1.5; letter-spacing: .04em; color: var(--reading); }
+/* 〜 marks an ending, like the counter symbol (〜本 → 〜ほん); the alt text keeps it out of screen readers. */
+.counter-ending::before { content: '〜'; content: '〜' / ''; color: var(--faint); }
 .counter-description { font-size: 14px; color: var(--body-soft); line-height: 1.6; }
 .counter-form-count { font-size: 12px; color: var(--faint); white-space: nowrap; }
 .counter-body { padding: 0 20px 20px; }
@@ -403,10 +410,16 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .counter-table { border-collapse: collapse; width: 100%; table-layout: fixed; }
 .counter-table th, .counter-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--table-line); overflow-wrap: anywhere; }
 .counter-table thead th { font-size: 11px; font-weight: 500; color: var(--faint); }
-.counter-table th:first-child { width: 36%; }
-.counter-table th:nth-child(2) { width: 24%; }
+.counter-table th:first-child { width: 32%; }
+.counter-table th:nth-child(2) { width: 22%; }
+/* Writing and reading read as one pair: writing right-aligned, reading left-aligned, meeting at the column edge. */
+.counter-table td, .counter-table tbody th { vertical-align: baseline; }
+.counter-table th:nth-child(2), .counter-table td:nth-child(2) { text-align: right; padding-right: 7px; }
+.counter-table th:nth-child(3), .counter-table td:nth-child(3) { padding-left: 7px; }
+/* Readings break only between variants (at « · »), never inside a word. */
+.counter-table .word-reading { word-break: keep-all; overflow-wrap: break-word; }
 .counter-table tbody th { font-size: 13px; color: var(--table-label); font-weight: 400; }
-.counter-written { font-family: var(--japanese); font-size: 21px; line-height: 1.6; }
+.counter-written { font-family: var(--japanese); font-size: 21px; line-height: 1.6; white-space: nowrap; }
 .counter-special .word-reading { color: var(--accent); font-weight: 500; }
 .special-reading { display: inline-flex; margin-left: 8px; padding: 1px 5px; border-radius: 3px; background: var(--action-bg); color: var(--accent); font-size: 10px; line-height: 1.6; white-space: nowrap; }
 .counter-question { background: var(--row-highlight); }
@@ -419,10 +432,15 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-type { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 }
 @media (max-width: 900px) {
-  .counter-summary { grid-template-columns: minmax(0, 1fr) auto 16px; gap: 10px; }
-  .counter-description { grid-column: 1 / -1; grid-row: 2; }
-  .counter-form-count { grid-column: 2; grid-row: 1; }
-  .counter-summary::after { grid-column: 3; grid-row: 1; }
+  /* Description and endings get their own rows, aligned under the title. */
+  .counter-summary { grid-template-columns: auto minmax(0, 1fr) auto 16px; column-gap: 12px; row-gap: 8px; }
+  .counter-name, .counter-heading { display: contents; }
+  .counter-symbol { grid-column: 1; grid-row: 1; }
+  .counter-title { grid-column: 2; grid-row: 1; }
+  .counter-form-count { grid-column: 3; grid-row: 1; }
+  .counter-summary::after { grid-column: 4; grid-row: 1; }
+  .counter-description { grid-column: 2 / -1; grid-row: 2; }
+  .counter-endings { grid-column: 2 / -1; grid-row: 3; }
   .study-row { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 12px; }
   .study-block:nth-child(3) { border-inline-start: 0; }
   .study-block:nth-child(n + 3) { border-top: 1px solid var(--line); padding-top: 12px; }
@@ -446,8 +464,13 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .counter-name { gap: 10px; }
   .counter-symbol { min-width: 64px; font-size: 24px; }
   .counter-title { font-size: 14px; }
+  .counter-ending { font-size: 13px; }
   .counter-body { padding: 0 12px 14px; }
-  .counter-table th, .counter-table td { padding: 7px 4px; }
+  /* The example keeps a third of the width, writing takes only what it needs and reading the rest. */
+  .counter-table { table-layout: auto; }
+  .counter-table th:first-child { width: 34%; }
+  .counter-table th:nth-child(2) { width: 1%; }
+  .counter-table th, .counter-table td { padding: 7px 4px; overflow-wrap: break-word; }
   .counter-written { font-size: 19px; }
   .counter-form-count { font-size: 11px; }
   .special-reading { font-size: 11px; }

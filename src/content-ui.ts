@@ -20,16 +20,22 @@ function renderCounter(entry: CounterEntry): HTMLElement {
   details.dataset.entryId = entry.id;
   const summary = node('summary', 'counter-summary');
   const name = node('span', 'counter-name');
-  name.append(japanese('span', 'counter-symbol', entry.written), node('span', 'counter-title', entry.title));
-  const description = node('span', 'counter-description', entry.description);
-  summary.append(name, description, node('span', 'counter-form-count', `${entry.forms.length} formas`));
+  const heading = node('span', 'counter-heading');
+  heading.append(node('span', 'counter-title', entry.title), node('span', 'counter-description', entry.description));
+  name.append(japanese('span', 'counter-symbol', entry.written), heading);
+  // The most common endings, as chips in their own column; CSS prefixes each with 〜, like the counter symbol.
+  const endings = node('span', 'counter-endings');
+  const endingList = japanese('span', 'counter-ending-list', '');
+  for (const ending of entry.endings) endingList.append(node('span', 'counter-ending', ending));
+  endings.append(node('span', 'counter-endings-label', 'Terminaciones'), endingList);
+  summary.append(name, endings, node('span', 'counter-form-count', `${entry.forms.length} formas`));
   const body = node('div', 'counter-body');
   for (const note of entry.notes) body.append(node('p', 'counter-note', note));
   const table = node('table', 'counter-table');
-  table.append(node('caption', 'visually-hidden', `${entry.title}: traducciones, escritura y lecturas`));
+  table.append(node('caption', 'visually-hidden', `${entry.title}: ejemplos, escritura y lecturas`));
   const head = node('thead');
   const headers = node('tr');
-  for (const label of ['Traducción', 'Escritura', 'Lectura']) {
+  for (const label of ['Ejemplo', 'Escritura', 'Lectura']) {
     const cell = node('th', '', label);
     cell.scope = 'col';
     headers.append(cell);

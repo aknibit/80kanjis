@@ -122,7 +122,7 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
   for (const value of data.entries) {
     const common = ['id', 'group', 'sourceId'];
     const entry = data.kind === 'counters'
-      ? record(value, [...common, 'written', 'title', 'description', 'type', 'forms', 'question', 'notes'])
+      ? record(value, [...common, 'written', 'endings', 'title', 'description', 'type', 'forms', 'question', 'notes'])
       : data.kind === 'kana'
         ? record(value, [...common, 'hiragana', 'katakana', 'romaji', 'position'])
         : record(value, [...common, 'written', 'reading', 'romaji', 'meaning'], ['note']);
@@ -134,6 +134,7 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
       check(entry.type === 'counter' || entry.type === 'number', 'Tipo de contador desconocido.');
       array(entry.forms, 1);
       let previous = 0;
+      const readingGroups: string[][] = [];
       for (const value of entry.forms) {
         const form = record(value, ['value', 'meaning', 'written', 'readings', 'special']);
         check(typeof form.value === 'number' && Number.isSafeInteger(form.value) && form.value > previous, 'Las cantidades deben ser positivas, únicas y estar ordenadas.');
@@ -142,10 +143,19 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
         check(form.readings.every((reading) => kanaReading.test(reading)), 'Lectura de contador no válida.');
         check(new Set(form.readings).size === form.readings.length, 'Lectura de contador repetida.');
         check(typeof form.special === 'boolean', 'Falta la marca de lectura especial.');
+        readingGroups.push(form.readings);
       }
       const question = record(entry.question, ['meaning', 'written', 'readings']);
       text(question.meaning); text(question.written); texts(question.readings, 1);
       check(question.readings.every((reading) => kanaReading.test(reading)), 'Lectura de pregunta no válida.');
+      // Endings go from most to least common; a form or the question counts once if any reading ends with it.
+      texts(entry.endings, 1);
+      check(entry.endings.every((ending) => kanaReading.test(ending)), 'Terminación de contador no válida.');
+      check(new Set(entry.endings).size === entry.endings.length, 'Terminación de contador repetida.');
+      readingGroups.push(question.readings);
+      const uses = entry.endings.map((ending) => readingGroups.filter((group) => group.some((reading) => reading.endsWith(ending))).length);
+      check(uses.every((count) => count > 0), `Ninguna lectura de ${entry.id} usa una de sus terminaciones.`);
+      check(uses.every((count, index) => index === 0 || count <= uses[index - 1]), `Las terminaciones de ${entry.id} deben ir de más a menos frecuentes.`);
     } else if (data.kind === 'kana') {
       text(entry.hiragana); text(entry.katakana); text(entry.romaji);
       check(/^[ぁ-ゖ]+$/u.test(entry.hiragana) && /^[ァ-ヶ]+$/u.test(entry.katakana), 'Los kana deben usar su escritura correspondiente.');

@@ -351,6 +351,18 @@
                 "minLength": 1,
                 "pattern": "\\S"
               },
+              "endings": {
+                "description": "Terminaciones en hiragana, de más a menos frecuentes entre las formas y la pregunta.",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[ぁ-ゖー]+$"
+                },
+                "minItems": 1,
+                "maxItems": 20,
+                "uniqueItems": true
+              },
               "title": {
                 "type": "string",
                 "minLength": 1,
@@ -455,6 +467,7 @@
               "sourceId",
               "type",
               "written",
+              "endings",
               "title",
               "description",
               "notes",

@@ -61,6 +61,24 @@ test('counter data distinguishes a day of duration, the first calendar day and n
   assert.equal(find('ten-thousands').forms[9].value, 100000);
 });
 
+test('counter endings list the sound changes from most to least common', () => {
+  const endings = (id: string) => counters.entries.find((entry) => entry.id === id)!.endings;
+  assert.deepEqual(endings('hon'), ['ほん', 'ぽん', 'ぼん']);
+  assert.deepEqual(endings('nin'), ['にん', 'り']);
+  assert.deepEqual(endings('dates'), ['にち', 'か']);
+  assert.deepEqual(endings('hundreds'), ['ひゃく', 'ぴゃく', 'びゃく']);
+  assert.ok(counters.entries.every((entry) => entry.endings.length > 0));
+  const withEndings = (id: string, value: string[]) => {
+    const data = structuredClone(counters) as any;
+    data.entries.find((entry: { id: string }) => entry.id === id).endings = value;
+    return JSON.stringify(data);
+  };
+  assert.throws(() => parseStudyDocument(withEndings('hon', ['ほん', 'ぼん', 'ぽん'])), /más a menos frecuentes/);
+  assert.throws(() => parseStudyDocument(withEndings('mai', ['まい', 'ばい'])), /Ninguna lectura/);
+  assert.throws(() => parseStudyDocument(withEndings('mai', [])));
+  assert.throws(() => parseStudyDocument(withEndings('mai', ['mai'])));
+});
+
 test('kana covers the basic, voiced and contracted sounds without conflating duplicate romanizations', () => {
   assert.equal(kana.entries.filter((entry) => entry.group === 'basic').length, 46);
   assert.equal(kana.entries.filter((entry) => entry.group === 'voiced').length, 25);
@@ -139,6 +157,10 @@ test('kana variants and combinations share the columns of their basic sound fami
 test('content search combines groups and terms and handles accents, kana width and readings', () => {
   assert.ok(searchContent(counters.entries, 'lapices').some((entry) => entry.id === 'hon'));
   assert.deepEqual(searchContent(counters.entries, 'さんぼん').map((entry) => entry.id), ['hon']);
+  // Each counter row shows a different real use, so searching an object finds its counter.
+  assert.deepEqual(searchContent(counters.entries, 'peliculas').map((entry) => entry.id), ['hon']);
+  assert.deepEqual(searchContent(counters.entries, 'ballenas').map((entry) => entry.id), ['tou']);
+  assert.deepEqual(searchContent(counters.entries, 'grullas').map((entry) => entry.id), ['wa']);
   assert.equal(searchContent(counters.entries, 'さんぼん', 'time').length, 0);
   assert.ok(searchContent(verbs.entries, 'escribir').some((entry) => entry.written === '書きます'));
   assert.ok(searchContent(verbs.entries, 'ｶｷﾏｽ').some((entry) => entry.written === '書きます'));
