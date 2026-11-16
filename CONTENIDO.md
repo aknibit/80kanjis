@@ -39,6 +39,7 @@ El vault no contiene una tabla completa de kana: esa sección se completa con la
 4. Las lecturas léxicas se escriben en hiragana. Las variantes de contadores se guardan como lecturas distintas dentro de `readings`, nunca escondidas en un campo de texto.
 5. Guarda las cantidades de un contador ordenadas y sin duplicados. Cada forma y pregunta incluye `meaning` con su traducción completa al español: por ejemplo, `tres objetos`, `cuatro semanas` o `¿Cuántas semanas?`. La tabla muestra esa traducción en lugar de `value`, que conserva la cantidad numérica para ordenar y validar. `special` indica una lectura irregular o un cambio de sonido; no es una dificultad de estudio.
 6. Si el cambio necesita una explicación, usa `note`, `notes` o una guía en `guides`, según el tipo de entrada.
+7. Si el texto usa un carácter que no aparecía antes (un kanji, un kana o un símbolo nuevo), ejecuta `npm run fonts` e incluye en el commit los archivos regenerados de `src/fonts/`. Las fuentes solo contienen los caracteres del contenido; consulta las limitaciones en [AGENTS.md](AGENTS.md).
 
 Ejemplo de una entrada léxica:
 
@@ -67,7 +68,7 @@ npm run build
 npm run check:build
 ```
 
-La validación comprueba versiones, campos obligatorios y desconocidos, IDs únicos, rutas seguras, fuentes, referencias de grupos, lecturas, correspondencias hiragana/katakana y cantidades ordenadas. El chequeo del build verifica que los JSON publicados son idénticos a los archivos canónicos.
+La validación comprueba versiones, campos obligatorios y desconocidos, IDs únicos, rutas seguras, fuentes, referencias de grupos, lecturas, correspondencias hiragana/katakana, cantidades ordenadas y que las fuentes incluyan todos los caracteres. El chequeo del build verifica que los JSON publicados son idénticos a los archivos canónicos.
 
 `Validate pull request` ejecuta estas comprobaciones en cada PR, sin publicar. El workflow de Pages las repite antes de desplegar los cambios de `main`.
 

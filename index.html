@@ -6,6 +6,10 @@
     <meta name="theme-color" content="#f8f7f3" />
     <meta name="description" content="Estudia japonés con 80 kanji, contadores, kana, verbos, vocabulario, adjetivos y adverbios. Lecturas y significados en español para aprender paso a paso." />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <!-- Start the data and main font with the HTML instead of after the app bundle runs. -->
+    <link rel="preload" href="./content/navigation.json" as="fetch" crossorigin />
+    <link rel="preload" href="./collection.json" as="fetch" crossorigin />
+    <link rel="preload" href="/src/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin />
     <title>80 kanjis — Una pequeña colección, un gran comienzo.</title>
   </head>
   <body>

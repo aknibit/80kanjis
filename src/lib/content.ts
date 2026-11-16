@@ -175,7 +175,7 @@ async function fetchFile(file: string): Promise<string> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
   try {
-    const response = await fetch(new URL(file, document.baseURI), { cache: 'no-store', signal: controller.signal });
+    const response = await fetch(new URL(file, document.baseURI), { signal: controller.signal });
     if (!response.ok) throw new Error('No se pudo cargar el contenido.');
     return await response.text();
   } finally { clearTimeout(timeout); }

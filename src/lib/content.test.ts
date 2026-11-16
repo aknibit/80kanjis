@@ -200,7 +200,7 @@ test('loaders request only relative canonical files and reject missing or wrong 
   const urls: string[] = [];
   const fetch = t.mock.method(globalThis, 'fetch', async (url: URL, options: RequestInit) => {
     urls.push(url.href);
-    assert.equal(options.cache, 'no-store');
+    assert.equal(options.cache, undefined, 'Default HTTP caching lets the request reuse the HTML preload and revalidate with ETag.');
     return new Response(JSON.stringify(url.pathname.endsWith('navigation.json') ? navigation : verbs));
   });
   assert.deepEqual(await loadNavigation(), navigation);

@@ -6,7 +6,7 @@ import { pronunciationSource, synthesizedSource } from './data/pronunciations.ts
 import { setupPronunciation } from './pronunciation-ui.ts';
 import { setupKanjiDetails } from './kanji-ui.ts';
 import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDifficultyFilter, rowDifficultyFilters, type RowDifficultyFilter } from './lib/row-difficulty.ts';
-import type { Difficulty, Kanji, StudyItem, StudyItemId } from './types.ts';
+import type { CollectionDocument, Difficulty, Kanji, StudyItem, StudyItemId } from './types.ts';
 import { loadNavigation, loadStudyDocument, resolveSection, sectionHref } from './lib/content.ts';
 import { renderStudyPage } from './content-ui.ts';
 import './style.css';
@@ -111,8 +111,7 @@ function element<K extends keyof HTMLElementTagNameMap>(tag: K, className: strin
   return node;
 }
 
-async function start() {
-  const source = await loadCollection();
+function start(source: CollectionDocument) {
   const kanji = collectionRows(source);
   const studyCatalog = createStudyCatalog(kanji);
   const input = document.querySelector<HTMLInputElement>('#search')!;
@@ -285,7 +284,8 @@ async function start() {
 }
 
 async function boot() {
-  const navigation = await loadNavigation();
+  // Request the collection alongside the navigation instead of after it; index.html preloads both.
+  const [navigation, collection] = await Promise.all([loadNavigation(), isKanjiPage ? loadCollection() : null]);
   const section = resolveSection(navigation, window.location.href);
   const menu = document.querySelector('#section-nav')!;
   const primary = element('div', 'section-nav-main');
@@ -298,7 +298,7 @@ async function boot() {
   }
   menu.append(primary);
   if (support.children.length > 0) menu.append(support);
-  if (section.kind === 'kanji') await start();
+  if (section.kind === 'kanji') start(collection ?? await loadCollection());
   else {
     const content = await loadStudyDocument(section);
     renderStudyPage(document.querySelector('#study-page')!, content, section);

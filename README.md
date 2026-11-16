@@ -20,7 +20,8 @@ The project has a single static application. Difficulty classifications are disp
 | `npm run dev` | Local development server with live reload |
 | `npm run build` | Type-check and build the application into `dist/` |
 | `npm run preview` | Preview the production build locally |
-| `npm run check:content` | Validate canonical content, IDs, groups, sources, and section references |
+| `npm run check:content` | Validate canonical content, IDs, groups, sources, section references, and font coverage |
+| `npm run fonts` | Rebuild the font subsets in `src/fonts/` (requires `python3 -m pip install fonttools brotli`) |
 
 Validate the collection and build:
 
@@ -37,7 +38,7 @@ Upload the **contents of `dist/`** to any static host or CDN. Set the build comm
 
 Serve `index.html`, `collection.json`, and the JSON files in `content/` with revalidation (`Cache-Control: no-cache`). The content-hashed files in `assets/` can use `Cache-Control: public, max-age=31536000, immutable`.
 
-Typography loads DM Sans, Noto Serif JP, and Noto Sans JP from Google Fonts, with system fallbacks. Kanji and written words retain Noto Serif JP; vocabulary readings use Noto Sans JP at 16 px with a darker color, including in dialogs. Basic on/kun readings in support dialogs use the same Japanese sans-serif family. The collection and search do not depend on that service.
+Typography uses self-hosted subsets of DM Sans, Noto Serif JP, and Noto Sans JP in `src/fonts/`, one WOFF2 per family with system fallbacks and no third-party requests. Because the content is a closed set, `scripts/subset-fonts.py` keeps only the characters in `public/` and the interface source (DM Sans also keeps Latin-1 for typed searches); `npm run check:content` fails when new text needs `npm run fonts`. `index.html` preloads `collection.json`, `content/navigation.json`, and DM Sans so they download with the page instead of after the app bundle runs. Kanji and written words retain Noto Serif JP; vocabulary readings use Noto Sans JP at 16 px with a darker color, including in dialogs. Basic on/kun readings in support dialogs use the same Japanese sans-serif family. The collection and search do not depend on that service.
 
 ## Deploy to GitHub Pages
 
@@ -147,7 +148,7 @@ The optional `supportingKanji` section supplies reference information for charac
 
 The real file uses two-space indentation, one field per line, and stable source order for readable Git diffs. `easy`, `medium`, `hard`, and `null` mean Fácil, Medio, Difícil, and Sin marcar. Difficulty is required on every kanji and word. The four ratings in a row are independent. On readings are in katakana and kun readings in hiragana; a dot separates okurigana (for example `み.る`). Either reading group may be empty, but a kanji must have at least one reading overall. These dictionary additions are separate from the PDF's complete-word readings.
 
-The app fetches **one `collection.json` on startup** with `cache: 'no-store'`, relative to its deployment URL. Content and ratings are not compiled into JavaScript. Replacing that file on the CDN updates both without rebuilding the application; configure the CDN to revalidate it. Invalid versions, duplicate kanji/words, incomplete content, invalid levels, and broken vocabulary references are rejected with a load error instead of silently using an older copy.
+The app fetches **one `collection.json` on startup**, relative to its deployment URL, through the normal HTTP cache: it reuses the request preloaded by `index.html` and revalidates with the server's ETag. GitHub Pages sends `Cache-Control: max-age=600`, so returning visitors can see a previous copy for up to 10 minutes after a deploy. Content and ratings are not compiled into JavaScript. Replacing that file on the CDN updates both without rebuilding the application, unless it adds characters the font subsets lack (run `npm run fonts` and rebuild; see [AGENTS.md](AGENTS.md)); configure the CDN to revalidate it. Invalid versions, duplicate kanji/words, incomplete content, invalid levels, and broken vocabulary references are rejected with a load error instead of silently using an older copy.
 
 To edit readings or translations, update this JSON and reload the page. Runtime study IDs remain `kanji:<character>` and `word:<written>`. Changing a word's reading makes a mismatched audio unavailable until the corresponding recording is updated.
 
@@ -157,7 +158,7 @@ To edit readings or translations, update this JSON and reload the page. Runtime 
 2. Review `git diff -- public/collection.json` before committing. The two-space indentation and stable ordering keep changes readable.
 3. Reload the local page to read the updated file. When deploying data changes, publish the updated `collection.json` on the CDN.
 
-Word definitions are shared across rows. The browser reads the source file on every startup and does not store or override classifications locally.
+Word definitions are shared across rows. The browser reads the source file on every startup (from its HTTP cache when still valid) and does not store or override classifications locally.
 
 ## Source notes
 

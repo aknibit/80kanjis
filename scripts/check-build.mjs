@@ -31,4 +31,16 @@ const html = await readFile('dist/index.html', 'utf8');
 assert.match(html, /<script\b[^>]*\bsrc="\.\/assets\/index-[^"]+\.js"/);
 assert.doesNotMatch(html, /(?:src|href)="\/(?:src|assets)\//,
   'Production HTML must use compiled, relative assets for GitHub project Pages.');
-console.log('Static build verified: canonical collection and sections, audio, visible readings, and read-only difficulties.');
+for (const file of ['content/navigation.json', 'collection.json']) {
+  assert.ok(html.includes(`<link rel="preload" href="./${file}" as="fetch" crossorigin`),
+    `${file} must be requested by the HTML, not after the app bundle runs.`);
+}
+const assets = await readdir('dist/assets');
+const css = (await Promise.all(assets.filter((file) => file.endsWith('.css')).map((file) => readFile(`dist/assets/${file}`, 'utf8')))).join('\n');
+assert.doesNotMatch(css, /@import|fonts\.googleapis|fonts\.gstatic/, 'Fonts must be self-hosted, without third-party CSS.');
+const fonts = [...css.matchAll(/url\(\.\/([^)]+\.woff2)\)/g)].map((match) => match[1]);
+assert.equal(fonts.length, 3, 'Expected DM Sans, Noto Sans JP and Noto Serif JP.');
+for (const font of fonts) assert.ok(assets.includes(font), `Missing font: ${font}`);
+const preloadedFont = html.match(/<link rel="preload" href="\.\/assets\/([^"]+\.woff2)" as="font" type="font\/woff2" crossorigin/)?.[1];
+assert.ok(preloadedFont && fonts.includes(preloadedFont), 'The preloaded font must be the file the stylesheet uses.');
+console.log('Static build verified: canonical collection and sections, audio, visible readings, read-only difficulties, preloads, and self-hosted fonts.');

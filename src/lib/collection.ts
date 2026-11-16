@@ -101,7 +101,7 @@ export async function loadCollection(): Promise<CollectionDocument> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
   try {
-    const response = await fetch(new URL('collection.json', document.baseURI), { cache: 'no-store', signal: controller.signal });
+    const response = await fetch(new URL('collection.json', document.baseURI), { signal: controller.signal });
     if (!response.ok) throw new Error('No se pudo cargar la colección.');
     return parseCollection(await response.text());
   } finally { clearTimeout(timeout); }

@@ -89,7 +89,7 @@ test('the loader uses one dynamic CDN-relative JSON for content and difficulties
   t.mock.method(globalThis, 'fetch', async (url: URL, options: RequestInit) => {
     requests += 1;
     assert.equal(url.href, 'https://cdn.example/study/collection.json');
-    assert.equal(options.cache, 'no-store');
+    assert.equal(options.cache, undefined, 'Default HTTP caching lets the request reuse the HTML preload and revalidate with ETag.');
     return new Response(JSON.stringify(collectionDocument));
   });
   assert.deepEqual(await loadCollection(), collectionDocument);
