@@ -1,4 +1,4 @@
-import type { ContentEntry, ContentExample, ContentKind, NavigationDocument, NavigationSection, StudyDocument } from '../content-types.ts';
+import type { ContentEntry, ContentExample, ContentKind, ExampleForm, Inflection, NavigationDocument, NavigationSection, StudyDocument } from '../content-types.ts';
 import { normalizeSearch } from './search.ts';
 
 type RecordValue = Record<string, unknown>;
@@ -8,6 +8,32 @@ const kanaReading = /^[ぁ-ゖー\s／/]+$/u;
 // The full-width comma, question and exclamation marks are escaped: the font subset reads literal characters,
 // so it only includes them once the content uses them.
 const sentenceReading = /^[ぁ-ゖァ-ヶー\s\u3001。\uff1f\uff01]+$/u;
+const sentenceEnd = /(?<=[。\uff1f\uff01])/u;
+
+/** The order in which a conjugating entry shows its examples: present above past, affirmative before negative. */
+/** The order of the course, which the examples follow: affirmative present and past, then negative present and past. */
+export const exampleForms: readonly ExampleForm[] = ['present-affirmative', 'past-affirmative', 'present-negative', 'past-negative'];
+const inflections: readonly Inflection[] = ['i-adjective', 'na-adjective'];
+
+/**
+ * The polite form as the course teaches it: たのしいです, たのしくないです, たのしかったです, たのしくなかったです and
+ * べんりです, べんりではありません, べんりでした, べんりではありませんでした. いい conjugates from よい: よくないです.
+ */
+export function politeForm(word: string, inflection: Inflection, form: ExampleForm): string {
+  if (inflection === 'na-adjective') {
+    return word + { 'present-affirmative': 'です', 'present-negative': 'ではありません', 'past-affirmative': 'でした',
+      'past-negative': 'ではありませんでした' }[form];
+  }
+  if (form === 'present-affirmative') return `${word}です`;
+  const stem = word.replace(/いい$/u, 'よい').slice(0, -1);
+  return stem + { 'present-negative': 'くないです', 'past-affirmative': 'かったです', 'past-negative': 'くなかったです' }[form];
+}
+
+/** The form closes one of the sentences, so べんりではありません does not match べんりではありませんでした. */
+function endsWithForm(sentence: string, words: string, inflection: Inflection, form: ExampleForm): boolean {
+  const clauses = sentence.replace(/\s/gu, '').split(sentenceEnd).map((clause) => clause.replace(/[。\uff1f\uff01]$/u, ''));
+  return words.split('／').some((word) => clauses.some((clause) => clause.endsWith(politeForm(word, inflection, form))));
+}
 
 function check(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -34,13 +60,14 @@ function array(value: unknown, min = 0): asserts value is unknown[] {
   check(Array.isArray(value) && value.length >= min && value.length <= 5000, 'Lista de contenido vacía o no válida.');
 }
 
-function examples(value: unknown): ContentExample[] {
+function examples(value: unknown, withForms = false): ContentExample[] {
   array(value, 1);
   return value.map((item) => {
-    const example = record(item, ['written', 'reading', 'meaning']);
+    const example = record(item, ['written', 'reading', 'meaning'], withForms ? ['form'] : []);
     text(example.written); text(example.reading); text(example.meaning);
     check(sentenceReading.test(example.reading), 'La lectura de un ejemplo debe estar en kana.');
-    return { written: example.written, reading: example.reading, meaning: example.meaning };
+    check(example.form === undefined || exampleForms.includes(example.form as ExampleForm), 'Forma de ejemplo desconocida.');
+    return { written: example.written, reading: example.reading, meaning: example.meaning, form: example.form as ExampleForm | undefined };
   });
 }
 
@@ -115,12 +142,15 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
     if (source.type === 'reference' || source.url !== undefined) https(source.url);
   }
   for (const value of data.groups) {
-    const group = record(value, ['id', 'label']);
+    const group = record(value, ['id', 'label'], ['inflection']);
     id(group.id); text(group.label);
+    check(group.inflection === undefined || (data.kind === 'lexicon' && inflections.includes(group.inflection as Inflection)),
+      'Solo un grupo léxico puede declarar cómo se conjuga, y debe ser como adjetivos い o な.');
   }
   unique(data.sources); unique(data.groups); unique(data.guides); unique(data.entries);
   const sources = new Set(data.sources.map((source) => (source as RecordValue).id));
   const groups = new Set(data.groups.map((group) => (group as RecordValue).id));
+  const groupInflections = new Map(data.groups.map((group) => [(group as RecordValue).id, (group as RecordValue).inflection as Inflection | undefined]));
   for (const value of data.guides) {
     const guide = record(value, ['id', 'title', 'sourceId', 'paragraphs'], ['examples']);
     id(guide.id); text(guide.title); texts(guide.paragraphs, 1);
@@ -181,7 +211,17 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
       text(entry.written); text(entry.reading); text(entry.romaji); text(entry.meaning);
       check(kanaReading.test(entry.reading), 'La lectura debe estar en hiragana.');
       if (entry.note !== undefined) text(entry.note);
-      if (entry.examples !== undefined) {
+      const inflection = groupInflections.get(entry.group);
+      if (entry.examples !== undefined && inflection) {
+        // An adjective shows its four polite forms, in order, each closing its sentence in writing and in the reading.
+        const list = examples(entry.examples, true);
+        check(list.map((example) => example.form).join() === exampleForms.join(),
+          `Los ejemplos de ${entry.id} deben mostrar, en orden, presente y pasado afirmativos, y presente y pasado negativos.`);
+        for (const example of list) {
+          check(endsWithForm(example.written, entry.written, inflection, example.form!)
+            && endsWithForm(example.reading, entry.reading, inflection, example.form!), `Un ejemplo de ${entry.id} no termina con su forma.`);
+        }
+      } else if (entry.examples !== undefined) {
         // Each example shows the entry itself, conjugated or not: 起きます → 起きました, 写真を撮ります → 写真を 撮りました.
         const stems = entry.written.split('／').map((form) => form.replace(/\s/gu, '').replace(/ます$/u, ''));
         for (const example of examples(entry.examples)) {

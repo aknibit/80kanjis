@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { parseNavigation, parseStudyDocument, resolveSection, sectionHref, searchContent, shuffled, loadNavigation, loadStudyDocument } from './content.ts';
+import { exampleForms, parseNavigation, parseStudyDocument, politeForm, resolveSection, sectionHref, searchContent, shuffled, loadNavigation, loadStudyDocument } from './content.ts';
 import type { StudyDocument, CounterDocument, KanaDocument, LexiconDocument } from '../content-types.ts';
 
 const root = new URL('../../public/', import.meta.url);
@@ -200,6 +200,55 @@ test('verbs open with the 20 essential verbs, in study order', () => {
   for (const entry of verbs.entries) assert.ok((entry.examples?.length ?? 0) >= 2, entry.id);
   const photo = essentials.find((entry) => entry.id === 'verb-shashin-o-torimasu')!;
   assert.ok(photo.examples!.some((example) => example.written.includes('写真を 撮りました')));
+});
+
+test('polite forms follow the course: く/かった for い adjectives, ではありません/でした for な, and いい from よい', () => {
+  assert.deepEqual(exampleForms.map((form) => politeForm('楽しい', 'i-adjective', form)),
+    ['楽しいです', '楽しかったです', '楽しくないです', '楽しくなかったです']);
+  assert.deepEqual(exampleForms.map((form) => politeForm('いい', 'i-adjective', form)),
+    ['いいです', 'よかったです', 'よくないです', 'よくなかったです']);
+  assert.deepEqual(exampleForms.map((form) => politeForm('きれい', 'na-adjective', form)),
+    ['きれいです', 'きれいでした', 'きれいではありません', 'きれいではありませんでした']);
+});
+
+test('adjectives open to the four polite forms in order, and adverbs to examples', () => {
+  const modifiers = documents.get('modifiers') as LexiconDocument;
+  const inflecting = new Set(modifiers.groups.filter((group) => group.inflection).map((group) => group.id));
+  assert.deepEqual([...inflecting], ['i', 'na']);
+  for (const entry of modifiers.entries) {
+    if (inflecting.has(entry.group)) assert.deepEqual(entry.examples?.map((example) => example.form), exampleForms, entry.id);
+    else assert.ok((entry.examples?.length ?? 0) >= 2 && entry.examples!.every((example) => !example.form), entry.id);
+  }
+  // い adjectives stay together, before the な ones, so the list reads in study order.
+  const order = ['i', 'na', 'adverb'];
+  const groups = modifiers.entries.map((entry) => entry.group);
+  assert.deepEqual(groups, [...groups].sort((a, b) => order.indexOf(a) - order.indexOf(b)));
+  const find = (id: string) => modifiers.entries.find((entry) => entry.id === id)!;
+  assert.match(find('modifier-ii-yoi').examples![2].written, /よくないです。$/);
+  assert.match(find('modifier-kirei').examples![2].written, /きれいでは ありません。$/);
+
+  const rejects = (change: (data: any) => void) => {
+    const data = structuredClone(modifiers) as any; change(data);
+    assert.throws(() => parseStudyDocument(JSON.stringify(data)));
+  };
+  const entry = (data: any, id: string) => data.entries.find((item: { id: string }) => item.id === id);
+  // きれい is a な adjective: the い negative is the classic mistake.
+  rejects((data) => { Object.assign(entry(data, 'modifier-kirei').examples[2], { written: '教室は きれくないです。', reading: 'きょうしつは きれくないです。' }); });
+  rejects((data) => { entry(data, 'modifier-tanoshii').examples[1].reading = 'きゅうじつは たのしいかったです。'; });
+  // The present negative of a な adjective is not enough for its past negative.
+  rejects((data) => { Object.assign(entry(data, 'modifier-benri').examples[3], { written: '虫眼鏡は 便利ではありません。', reading: 'むしめがねは べんりではありません。' }); });
+  rejects((data) => { entry(data, 'modifier-tanoshii').examples.reverse(); });
+  // The order of the course: present negative after past affirmative, not before.
+  rejects((data) => { const list = entry(data, 'modifier-tanoshii').examples; [list[1], list[2]] = [list[2], list[1]]; });
+  rejects((data) => { entry(data, 'modifier-tanoshii').examples.pop(); });
+  rejects((data) => { delete entry(data, 'modifier-tanoshii').examples[0].form; });
+  rejects((data) => { entry(data, 'modifier-tanoshii').examples[0].form = 'future'; });
+  rejects((data) => { entry(data, 'adverb-totemo').examples[0].form = 'present-affirmative'; });
+  rejects((data) => { data.groups[2].inflection = 'verb'; });
+  rejects((data) => { data.guides.find((guide: { examples?: unknown }) => guide.examples).examples[0].form = 'present-affirmative'; });
+  const counterGroup = structuredClone(counters) as any;
+  counterGroup.groups[0].inflection = 'i-adjective';
+  assert.throws(() => parseStudyDocument(JSON.stringify(counterGroup)));
 });
 
 test('invalid navigation, unsafe paths, duplicate sections and a different landing page are rejected', () => {

@@ -1,4 +1,4 @@
-import type { ContentEntry, ContentGroup, CounterEntry, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
+import type { ContentEntry, ContentGroup, CounterEntry, ExampleForm, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
 import { searchContent, shuffled } from './lib/content.ts';
 import { setupMasonry } from './masonry.ts';
 import { fitPlaceholder } from './search-placeholder.ts';
@@ -25,6 +25,13 @@ function slashed<K extends keyof HTMLElementTagNameMap>(tag: K, className: strin
   }
   return result;
 }
+
+const formLabels: Record<ExampleForm, string> = {
+  'present-affirmative': 'Presente afirmativo',
+  'past-affirmative': 'Pasado afirmativo',
+  'present-negative': 'Presente negativo',
+  'past-negative': 'Pasado negativo',
+};
 
 function renderCounter(entry: CounterEntry): HTMLElement {
   const details = node('details', 'counter-entry');
@@ -105,13 +112,15 @@ function renderWord(entry: LexiconEntry, group: string | undefined, card = false
   const summary = node('summary', 'lexicon-summary');
   summary.append(term, explanation, ...tags);
   const body = node('div', 'lexicon-body');
-  const list = node('ul', 'lexicon-examples');
+  // The four forms of an adjective read as a table: present above past, affirmative to the left of negative.
+  const list = node('ul', entry.examples![0].form ? 'lexicon-examples lexicon-examples--forms' : 'lexicon-examples');
   list.id = `examples-${entry.id}`;
   const label = node('p', 'lexicon-examples-label', 'Ejemplos');
   label.id = `${list.id}-label`;
   list.setAttribute('aria-labelledby', label.id);
   for (const example of entry.examples!) {
     const item = node('li', 'lexicon-example');
+    if (example.form) item.append(node('p', 'lexicon-example-form', formLabels[example.form]));
     item.append(japanese('p', 'lexicon-example-written', example.written));
     // A sentence without kanji (テニスが できます。) needs no reading line, as in the guides.
     if (example.reading !== example.written) item.append(japanese('p', 'lexicon-example-reading', example.reading));

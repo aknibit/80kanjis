@@ -24,16 +24,25 @@ export interface ContentSource {
   readonly url?: string;
 }
 
+/** How the entries of a lexicon group conjugate; their examples then show the four polite forms. */
+export type Inflection = 'i-adjective' | 'na-adjective';
+
 export interface ContentGroup {
   readonly id: string;
   readonly label: string;
+  readonly inflection?: Inflection;
 }
+
+/** Polite affirmative or negative, present or past, in the order of the course: たのしいです, たのしかったです, たのしくないです, たのしくなかったです. */
+export type ExampleForm = 'present-affirmative' | 'past-affirmative' | 'present-negative' | 'past-negative';
 
 /** A short sentence: written as on the page, its reading in kana and a Spanish translation. */
 export interface ContentExample {
   readonly written: string;
   readonly reading: string;
   readonly meaning: string;
+  /** Only in groups with an inflection: the form the sentence ends with. */
+  readonly form?: ExampleForm;
 }
 
 export interface ContentGuide {

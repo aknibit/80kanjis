@@ -23,11 +23,13 @@
   "groups": [
     {
       "id": "i",
-      "label": "Adjetivos い"
+      "label": "Adjetivos い",
+      "inflection": "i-adjective"
     },
     {
       "id": "na",
-      "label": "Adjetivos な"
+      "label": "Adjetivos な",
+      "inflection": "na-adjective"
     },
     {
       "id": "adverb",
@@ -48,7 +50,7 @@
       "title": "Conjugar un adjetivo い",
       "sourceId": "modifiers-note",
       "paragraphs": [
-        "たのしいです → たのしくないです → たのしかったです → たのしくなかったです.",
+        "たのしいです → たのしかったです → たのしくないです → たのしくなかったです.",
         "いい usa la raíz よ-: よくない, よかった, よくなかった. かっこいい sigue el mismo patrón."
       ]
     },
@@ -57,7 +59,7 @@
       "title": "Conjugar un adjetivo な",
       "sourceId": "modifiers-note",
       "paragraphs": [
-        "べんりです → べんりではありません → べんりでした → べんりではありませんでした."
+        "べんりです → べんりでした → べんりではありません → べんりではありませんでした."
       ]
     },
     {
@@ -93,7 +95,33 @@
       "romaji": "tanoshii",
       "meaning": "divertido",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "旅行は 楽しいです。",
+          "reading": "りょこうは たのしいです。",
+          "meaning": "Viajar es divertido.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "休日は 楽しかったです。",
+          "reading": "きゅうじつは たのしかったです。",
+          "meaning": "El día libre fue divertido.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "宿題は 楽しくないです。",
+          "reading": "しゅくだいは たのしくないです。",
+          "meaning": "Los deberes no son divertidos.",
+          "form": "present-negative"
+        },
+        {
+          "written": "授業は 楽しくなかったです。",
+          "reading": "じゅぎょうは たのしくなかったです。",
+          "meaning": "La clase no fue divertida.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-ureshii",
@@ -102,7 +130,33 @@
       "romaji": "ureshii",
       "meaning": "contento/feliz",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "年賀状は 嬉しいです。",
+          "reading": "ねんがじょうは うれしいです。",
+          "meaning": "Las postales de Año Nuevo me alegran.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "お客さんの 花たばが 嬉しかったです。",
+          "reading": "おきゃくさんの はなたばが うれしかったです。",
+          "meaning": "Me alegró el ramo de flores del invitado.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "試験は 嬉しくないです。",
+          "reading": "しけんは うれしくないです。",
+          "meaning": "Los exámenes no me alegran.",
+          "form": "present-negative"
+        },
+        {
+          "written": "百円の お年玉は 嬉しくなかったです。",
+          "reading": "ひゃくえんの おとしだまは うれしくなかったです。",
+          "meaning": "Un regalo de Año Nuevo de cien yenes no me alegró.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-urayamashii",
@@ -111,7 +165,33 @@
       "romaji": "urayamashii",
       "meaning": "sentir envidia; envidiable",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "怠け者が 羨ましいです。",
+          "reading": "なまけものが うらやましいです。",
+          "meaning": "Envidio al perezoso.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "子どもの お年玉が 羨ましかったです。",
+          "reading": "こどもの おとしだまが うらやましかったです。",
+          "meaning": "Envidiaba el dinero de Año Nuevo de los niños.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "忙しい 人は 羨ましくないです。",
+          "reading": "いそがしい ひとは うらやましくないです。",
+          "meaning": "No envidio a la gente ocupada.",
+          "form": "present-negative"
+        },
+        {
+          "written": "王さまは 羨ましくなかったです。",
+          "reading": "おうさまは うらやましくなかったです。",
+          "meaning": "No envidiaba al rey.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-muzukashii",
@@ -120,7 +200,33 @@
       "romaji": "muzukashii",
       "meaning": "difícil",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "かん字は 難しいです。",
+          "reading": "かんじは むずかしいです。",
+          "meaning": "Los kanji son difíciles.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "書き試験は 難しかったです。",
+          "reading": "かきしけんは むずかしかったです。",
+          "meaning": "El examen escrito fue difícil.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この 質問は 難しくないです。",
+          "reading": "この しつもんは むずかしくないです。",
+          "meaning": "Esta pregunta no es difícil.",
+          "form": "present-negative"
+        },
+        {
+          "written": "宿題は 難しくなかったです。",
+          "reading": "しゅくだいは むずかしくなかったです。",
+          "meaning": "Los deberes no fueron difíciles.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-yasashii",
@@ -129,7 +235,33 @@
       "romaji": "yasashii",
       "meaning": "fácil; también amable con otro kanji/contexto",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "この え本は 易しいです。",
+          "reading": "この えほんは やさしいです。",
+          "meaning": "Este libro ilustrado es fácil.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "書き取りは 易しかったです。",
+          "reading": "かきとりは やさしかったです。",
+          "meaning": "El dictado fue fácil.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "文学は 易しくないです。",
+          "reading": "ぶんがくは やさしくないです。",
+          "meaning": "La literatura no es fácil.",
+          "form": "present-negative"
+        },
+        {
+          "written": "試験の 質問は 易しくなかったです。",
+          "reading": "しけんの しつもんは やさしくなかったです。",
+          "meaning": "Las preguntas del examen no fueron fáciles.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-hayai",
@@ -138,7 +270,33 @@
       "romaji": "hayai",
       "meaning": "temprano/rápido",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "でん車は 速いです。",
+          "reading": "でんしゃは はやいです。",
+          "meaning": "El tren es rápido.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "晩ご飯は 早かったです。",
+          "reading": "ばんごはんは はやかったです。",
+          "meaning": "La cena fue temprano.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "牛は 速くないです。",
+          "reading": "うしは はやくないです。",
+          "meaning": "Las vacas no son rápidas.",
+          "form": "present-negative"
+        },
+        {
+          "written": "男の子は 足が 速くなかったです。",
+          "reading": "おとこのこは あしが はやくなかったです。",
+          "meaning": "El niño no corría rápido.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-osoi",
@@ -147,7 +305,33 @@
       "romaji": "osoi",
       "meaning": "tarde/lento",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "怠け者は 遅いです。",
+          "reading": "なまけものは おそいです。",
+          "meaning": "Los perezosos son lentos.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "夕食は 遅かったです。",
+          "reading": "ゆうしょくは おそかったです。",
+          "meaning": "La cena fue tarde.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "でん車は 遅くないです。",
+          "reading": "でんしゃは おそくないです。",
+          "meaning": "El tren no es lento.",
+          "form": "present-negative"
+        },
+        {
+          "written": "お客さんは 遅くなかったです。",
+          "reading": "おきゃくさんは おそくなかったです。",
+          "meaning": "Los invitados no llegaron tarde.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-atsui",
@@ -156,7 +340,33 @@
       "romaji": "atsui",
       "meaning": "calor ambiental",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "八月は 暑いです。",
+          "reading": "はちがつは あついです。",
+          "meaning": "En agosto hace calor.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "教室は 暑かったです。",
+          "reading": "きょうしつは あつかったです。",
+          "meaning": "En el aula hacía calor.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "中庭は 暑くないです。",
+          "reading": "なかにわは あつくないです。",
+          "meaning": "En el patio interior no hace calor.",
+          "form": "present-negative"
+        },
+        {
+          "written": "九月は 暑くなかったです。",
+          "reading": "くがつは あつくなかったです。",
+          "meaning": "En septiembre no hizo calor.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-atatakai",
@@ -165,7 +375,33 @@
       "romaji": "atatakai",
       "meaning": "templado/cálido",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "四月は 暖かいです。",
+          "reading": "しがつは あたたかいです。",
+          "meaning": "En abril hace un tiempo templado.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "和室は 暖かかったです。",
+          "reading": "わしつは あたたかかったです。",
+          "meaning": "La habitación de estilo japonés estaba templada.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この 上ぎは 暖かくないです。",
+          "reading": "この うわぎは あたたかくないです。",
+          "meaning": "Esta chaqueta no abriga.",
+          "form": "present-negative"
+        },
+        {
+          "written": "二月は 暖かくなかったです。",
+          "reading": "にがつは あたたかくなかったです。",
+          "meaning": "En febrero no hizo un tiempo templado.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-tsumaranai",
@@ -174,7 +410,33 @@
       "romaji": "tsumaranai",
       "meaning": "aburrido",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "この 雑誌は つまらないです。",
+          "reading": "この ざっしは つまらないです。",
+          "meaning": "Esta revista es aburrida.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "美術館は つまらなかったです。",
+          "reading": "びじゅつかんは つまらなかったです。",
+          "meaning": "El museo de arte fue aburrido.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "テニスは つまらなくないです。",
+          "reading": "テニスは つまらなくないです。",
+          "meaning": "El tenis no es aburrido.",
+          "form": "present-negative"
+        },
+        {
+          "written": "お月見は つまらなくなかったです。",
+          "reading": "おつきみは つまらなくなかったです。",
+          "meaning": "El festival de la luna no fue aburrido.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-isogashii",
@@ -183,7 +445,33 @@
       "romaji": "isogashii",
       "meaning": "ocupado",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "弁護士は 忙しいです。",
+          "reading": "べんごしは いそがしいです。",
+          "meaning": "La abogada está ocupada.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "郵便局は 忙しかったです。",
+          "reading": "ゆうびんきょくは いそがしかったです。",
+          "meaning": "En correos había mucho trabajo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "休日は 忙しくないです。",
+          "reading": "きゅうじつは いそがしくないです。",
+          "meaning": "En los días libres no estoy ocupado.",
+          "form": "present-negative"
+        },
+        {
+          "written": "店員は 忙しくなかったです。",
+          "reading": "てんいんは いそがしくなかったです。",
+          "meaning": "El dependiente no estaba ocupado.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-wakai",
@@ -192,7 +480,33 @@
       "romaji": "wakai",
       "meaning": "joven",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "先生は 若いです。",
+          "reading": "せんせいは わかいです。",
+          "meaning": "El profesor es joven.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "その 弁護士は 若かったです。",
+          "reading": "その べんごしは わかかったです。",
+          "meaning": "Esa abogada era joven.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "王さまは 若くないです。",
+          "reading": "おうさまは わかくないです。",
+          "meaning": "El rey no es joven.",
+          "form": "present-negative"
+        },
+        {
+          "written": "お客さんは 若くなかったです。",
+          "reading": "おきゃくさんは わかくなかったです。",
+          "meaning": "Los invitados no eran jóvenes.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-warui",
@@ -201,7 +515,33 @@
       "romaji": "warui",
       "meaning": "malo",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "天気が 悪いです。",
+          "reading": "てんきが わるいです。",
+          "meaning": "Hace mal tiempo.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "教室の 空気が 悪かったです。",
+          "reading": "きょうしつの くうきが わるかったです。",
+          "meaning": "El aire del aula estaba cargado.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この 機械は 悪くないです。",
+          "reading": "この きかいは わるくないです。",
+          "meaning": "Esta máquina no está mal.",
+          "form": "present-negative"
+        },
+        {
+          "written": "試験は 悪くなかったです。",
+          "reading": "しけんは わるくなかったです。",
+          "meaning": "El examen no estuvo mal.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-nagai",
@@ -210,7 +550,33 @@
       "romaji": "nagai",
       "meaning": "largo",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "この 坂は 長いです。",
+          "reading": "この さかは ながいです。",
+          "meaning": "Esta cuesta es larga.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "旅は 長かったです。",
+          "reading": "たびは ながかったです。",
+          "meaning": "El viaje fue largo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "休憩は 長くないです。",
+          "reading": "きゅうけいは ながくないです。",
+          "meaning": "La pausa no es larga.",
+          "form": "present-negative"
+        },
+        {
+          "written": "王さまの 髭は 長くなかったです。",
+          "reading": "おうさまの ひげは ながくなかったです。",
+          "meaning": "La barba del rey no era larga.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-kurai",
@@ -219,7 +585,33 @@
       "romaji": "kurai",
       "meaning": "oscuro",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "森の中は 暗いです。",
+          "reading": "もりのなかは くらいです。",
+          "meaning": "Dentro del bosque está oscuro.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "夕ぐれの 山みちは 暗かったです。",
+          "reading": "ゆうぐれの やまみちは くらかったです。",
+          "meaning": "Al anochecer, el sendero de montaña estaba oscuro.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "図書館は 暗くないです。",
+          "reading": "としょかんは くらくないです。",
+          "meaning": "La biblioteca no es oscura.",
+          "form": "present-negative"
+        },
+        {
+          "written": "教室は 暗くなかったです。",
+          "reading": "きょうしつは くらくなかったです。",
+          "meaning": "El aula no estaba oscura.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-kuroi",
@@ -228,7 +620,33 @@
       "romaji": "kuroi",
       "meaning": "negro",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "先生の 靴は 黒いです。",
+          "reading": "せんせいの くつは くろいです。",
+          "meaning": "Los zapatos del profesor son negros.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "子犬は 黒かったです。",
+          "reading": "こいぬは くろかったです。",
+          "meaning": "El cachorro era negro.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この 牛は 黒くないです。",
+          "reading": "この うしは くろくないです。",
+          "meaning": "Esta vaca no es negra.",
+          "form": "present-negative"
+        },
+        {
+          "written": "筆箱は 黒くなかったです。",
+          "reading": "ふでばこは くろくなかったです。",
+          "meaning": "El estuche no era negro.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-omoshiroi",
@@ -237,7 +655,33 @@
       "romaji": "omoshiroi",
       "meaning": "interesante/divertido",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "鸚鵡は 面白いです。",
+          "reading": "おうむは おもしろいです。",
+          "meaning": "Los loros son graciosos.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "先生の 授業は 面白かったです。",
+          "reading": "せんせいの じゅぎょうは おもしろかったです。",
+          "meaning": "La clase del profesor fue interesante.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "規則は 面白くないです。",
+          "reading": "きそくは おもしろくないです。",
+          "meaning": "Las normas no son interesantes.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その 雑誌は 面白くなかったです。",
+          "reading": "その ざっしは おもしろくなかったです。",
+          "meaning": "Esa revista no era interesante.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-mendoukusai",
@@ -246,7 +690,33 @@
       "romaji": "mendoukusai",
       "meaning": "pesado/engorroso; coloquial",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "宿題は 面倒くさいです。",
+          "reading": "しゅくだいは めんどうくさいです。",
+          "meaning": "Los deberes son un rollo.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "準備は 面倒くさかったです。",
+          "reading": "じゅんびは めんどうくさかったです。",
+          "meaning": "La preparación fue un rollo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "答え合わせは 面倒くさくないです。",
+          "reading": "こたえあわせは めんどうくさくないです。",
+          "meaning": "Corregir las respuestas no es pesado.",
+          "form": "present-negative"
+        },
+        {
+          "written": "靴の 修理は 面倒くさくなかったです。",
+          "reading": "くつの しゅうりは めんどうくさくなかったです。",
+          "meaning": "Arreglar los zapatos no fue pesado.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-oshii",
@@ -255,106 +725,33 @@
       "romaji": "oshii",
       "meaning": "por poco/casi; una lástima",
       "group": "i",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-benri",
-      "written": "便利",
-      "reading": "べんり",
-      "romaji": "benri",
-      "meaning": "práctico/cómodo",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-kantan",
-      "written": "簡単",
-      "reading": "かんたん",
-      "romaji": "kantan",
-      "meaning": "fácil/simple",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-taihen",
-      "written": "大変",
-      "reading": "たいへん",
-      "romaji": "taihen",
-      "meaning": "duro/serio; muy según construcción",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-shizuka",
-      "written": "静か",
-      "reading": "しずか",
-      "romaji": "shizuka",
-      "meaning": "tranquilo/silencioso",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-genki",
-      "written": "元気",
-      "reading": "げんき",
-      "romaji": "genki",
-      "meaning": "bien, sano, enérgico",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-kirei",
-      "written": "きれい",
-      "reading": "きれい",
-      "romaji": "kirei",
-      "meaning": "bonito/limpio",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-yuumei",
-      "written": "有名",
-      "reading": "ゆうめい",
-      "romaji": "yuumei",
-      "meaning": "famoso",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-jouzu",
-      "written": "上手",
-      "reading": "じょうず",
-      "romaji": "jouzu",
-      "meaning": "hábil",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-heta",
-      "written": "下手",
-      "reading": "へた",
-      "romaji": "heta",
-      "meaning": "torpe/poco hábil",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-tokui",
-      "written": "得意",
-      "reading": "とくい",
-      "romaji": "tokui",
-      "meaning": "punto fuerte; se me da bien",
-      "group": "na",
-      "sourceId": "vocabulary-note"
-    },
-    {
-      "id": "modifier-kanpeki",
-      "written": "完璧",
-      "reading": "かんぺき",
-      "romaji": "kanpeki",
-      "meaning": "perfecto/sin fallos",
-      "group": "na",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "この さく文は 惜しいです。",
+          "reading": "この さくぶんは おしいです。",
+          "meaning": "Esta redacción casi está perfecta.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "試験は 惜しかったです。",
+          "reading": "しけんは おしかったです。",
+          "meaning": "Por poco apruebo el examen.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "お金は 惜しくないです。",
+          "reading": "おかねは おしくないです。",
+          "meaning": "No me da pena gastar el dinero.",
+          "form": "present-negative"
+        },
+        {
+          "written": "書き取りは ぜんぜん 惜しくなかったです。",
+          "reading": "かきとりは ぜんぜん おしくなかったです。",
+          "meaning": "El dictado no estuvo ni cerca.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-oishii",
@@ -363,7 +760,33 @@
       "romaji": "oishii",
       "meaning": "rico / delicioso",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "この 林檎は おいしいです。",
+          "reading": "この りんごは おいしいです。",
+          "meaning": "Esta manzana está rica.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "和食は おいしかったです。",
+          "reading": "わしょくは おいしかったです。",
+          "meaning": "La comida japonesa estaba deliciosa.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "食堂の 晩ご飯は おいしくないです。",
+          "reading": "しょくどうの ばんごはんは おいしくないです。",
+          "meaning": "La cena del comedor no está rica.",
+          "form": "present-negative"
+        },
+        {
+          "written": "パイは おいしくなかったです。",
+          "reading": "パイは おいしくなかったです。",
+          "meaning": "La tarta no estaba rica.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-mazui",
@@ -372,7 +795,33 @@
       "romaji": "mazui",
       "meaning": "de mal sabor; problemático según el contexto",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "この コーヒーは まずいです。",
+          "reading": "この コーヒーは まずいです。",
+          "meaning": "Este café está malo.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "卵は まずかったです。",
+          "reading": "たまごは まずかったです。",
+          "meaning": "El huevo sabía mal.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "食堂の 肉は まずくないです。",
+          "reading": "しょくどうの にくは まずくないです。",
+          "meaning": "La carne del comedor no está mala.",
+          "form": "present-negative"
+        },
+        {
+          "written": "海老は まずくなかったです。",
+          "reading": "えびは まずくなかったです。",
+          "meaning": "Las gambas no estaban malas.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-amai",
@@ -381,7 +830,33 @@
       "romaji": "amai",
       "meaning": "dulce; indulgente o ingenuo según el contexto",
       "group": "i",
-      "sourceId": "vocabulary-note"
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "この 蜜柑は あまいです。",
+          "reading": "この みかんは あまいです。",
+          "meaning": "Esta mandarina es dulce.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "草もちは あまかったです。",
+          "reading": "くさもちは あまかったです。",
+          "meaning": "El mochi de artemisa era dulce.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "おかきは あまくないです。",
+          "reading": "おかきは あまくないです。",
+          "meaning": "Las galletas de arroz no son dulces.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先生は あまくなかったです。",
+          "reading": "せんせいは あまくなかったです。",
+          "meaning": "El profesor no era indulgente.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "modifier-ii-yoi",
@@ -390,7 +865,418 @@
       "romaji": "ii / yoi",
       "meaning": "bueno",
       "group": "i",
-      "sourceId": "modifiers-note"
+      "sourceId": "modifiers-note",
+      "examples": [
+        {
+          "written": "天気が いいです。",
+          "reading": "てんきが いいです。",
+          "meaning": "Hace buen tiempo.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "旅行は よかったです。",
+          "reading": "りょこうは よかったです。",
+          "meaning": "El viaje estuvo bien.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この 辞書は よくないです。",
+          "reading": "この じしょは よくないです。",
+          "meaning": "Este diccionario no es bueno.",
+          "form": "present-negative"
+        },
+        {
+          "written": "天気は よくなかったです。",
+          "reading": "てんきは よくなかったです。",
+          "meaning": "No hizo buen tiempo.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-benri",
+      "written": "便利",
+      "reading": "べんり",
+      "romaji": "benri",
+      "meaning": "práctico/cómodo",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "辞書は 便利です。",
+          "reading": "じしょは べんりです。",
+          "meaning": "Los diccionarios son prácticos.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "近道は 便利でした。",
+          "reading": "ちかみちは べんりでした。",
+          "meaning": "El atajo fue práctico.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この 機械は 便利では ありません。",
+          "reading": "この きかいは べんりでは ありません。",
+          "meaning": "Esta máquina no es práctica.",
+          "form": "present-negative"
+        },
+        {
+          "written": "虫眼鏡は 便利では ありませんでした。",
+          "reading": "むしめがねは べんりでは ありませんでした。",
+          "meaning": "La lupa no resultó práctica.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-kantan",
+      "written": "簡単",
+      "reading": "かんたん",
+      "romaji": "kantan",
+      "meaning": "fácil/simple",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "準備運動は 簡単です。",
+          "reading": "じゅんびうんどうは かんたんです。",
+          "meaning": "El calentamiento es sencillo.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "機械の 修理は 簡単でした。",
+          "reading": "きかいの しゅうりは かんたんでした。",
+          "meaning": "Reparar la máquina fue fácil.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "かん字は 簡単では ありません。",
+          "reading": "かんじは かんたんでは ありません。",
+          "meaning": "Los kanji no son fáciles.",
+          "form": "present-negative"
+        },
+        {
+          "written": "聞き取りは 簡単では ありませんでした。",
+          "reading": "ききとりは かんたんでは ありませんでした。",
+          "meaning": "La comprensión auditiva no fue fácil.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-taihen",
+      "written": "大変",
+      "reading": "たいへん",
+      "romaji": "taihen",
+      "meaning": "duro/serio; muy según construcción",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "日直は 大変です。",
+          "reading": "にっちょくは たいへんです。",
+          "meaning": "Ser el encargado del día es duro.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "火事は 大変でした。",
+          "reading": "かじは たいへんでした。",
+          "meaning": "El incendio fue terrible.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "運動は 大変では ありません。",
+          "reading": "うんどうは たいへんでは ありません。",
+          "meaning": "El ejercicio no es duro.",
+          "form": "present-negative"
+        },
+        {
+          "written": "宿題は 大変では ありませんでした。",
+          "reading": "しゅくだいは たいへんでは ありませんでした。",
+          "meaning": "Los deberes no fueron duros.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-shizuka",
+      "written": "静か",
+      "reading": "しずか",
+      "romaji": "shizuka",
+      "meaning": "tranquilo/silencioso",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "図書館は 静かです。",
+          "reading": "としょかんは しずかです。",
+          "meaning": "La biblioteca es silenciosa.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "山村は 静かでした。",
+          "reading": "さんそんは しずかでした。",
+          "meaning": "El pueblo de montaña era tranquilo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "鸚鵡は 静かでは ありません。",
+          "reading": "おうむは しずかでは ありません。",
+          "meaning": "Los loros no son silenciosos.",
+          "form": "present-negative"
+        },
+        {
+          "written": "教室は 静かでは ありませんでした。",
+          "reading": "きょうしつは しずかでは ありませんでした。",
+          "meaning": "El aula no estaba en silencio.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-genki",
+      "written": "元気",
+      "reading": "げんき",
+      "romaji": "genki",
+      "meaning": "bien, sano, enérgico",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "赤ちゃんは 元気です。",
+          "reading": "あかちゃんは げんきです。",
+          "meaning": "El bebé está bien.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "年よりは 元気でした。",
+          "reading": "としよりは げんきでした。",
+          "meaning": "El anciano estaba en forma.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "子犬は 元気では ありません。",
+          "reading": "こいぬは げんきでは ありません。",
+          "meaning": "El cachorro no está bien.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先生は 元気では ありませんでした。",
+          "reading": "せんせいは げんきでは ありませんでした。",
+          "meaning": "El profesor no se encontraba bien.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-kirei",
+      "written": "きれい",
+      "reading": "きれい",
+      "romaji": "kirei",
+      "meaning": "bonito/limpio",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "白い花は きれいです。",
+          "reading": "しろいはなは きれいです。",
+          "meaning": "Las flores blancas son bonitas.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "夕日は きれいでした。",
+          "reading": "ゆうひは きれいでした。",
+          "meaning": "El sol del atardecer era precioso.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "教室は きれいでは ありません。",
+          "reading": "きょうしつは きれいでは ありません。",
+          "meaning": "El aula no está limpia.",
+          "form": "present-negative"
+        },
+        {
+          "written": "川べりは きれいでは ありませんでした。",
+          "reading": "かわべりは きれいでは ありませんでした。",
+          "meaning": "La orilla del río no estaba limpia.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-yuumei",
+      "written": "有名",
+      "reading": "ゆうめい",
+      "romaji": "yuumei",
+      "meaning": "famoso",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "ふじ山は 有名です。",
+          "reading": "ふじさんは ゆうめいです。",
+          "meaning": "El monte Fuji es famoso.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "その 王さまは 有名でした。",
+          "reading": "その おうさまは ゆうめいでした。",
+          "meaning": "Ese rey era famoso.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この 喫茶店は 有名では ありません。",
+          "reading": "この きっさてんは ゆうめいでは ありません。",
+          "meaning": "Esta cafetería no es famosa.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その 美術館は 有名では ありませんでした。",
+          "reading": "その びじゅつかんは ゆうめいでは ありませんでした。",
+          "meaning": "Ese museo de arte no era famoso.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-jouzu",
+      "written": "上手",
+      "reading": "じょうず",
+      "romaji": "jouzu",
+      "meaning": "hábil",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "先生は テニスが 上手です。",
+          "reading": "せんせいは テニスが じょうずです。",
+          "meaning": "El profesor juega bien al tenis.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "子どもは 口ぶえが 上手でした。",
+          "reading": "こどもは くちぶえが じょうずでした。",
+          "meaning": "El niño silbaba bien.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "王さまは 笛が 上手では ありません。",
+          "reading": "おうさまは ふえが じょうずでは ありません。",
+          "meaning": "El rey no toca bien la flauta.",
+          "form": "present-negative"
+        },
+        {
+          "written": "技術者は 修理が 上手では ありませんでした。",
+          "reading": "ぎじゅつしゃは しゅうりが じょうずでは ありませんでした。",
+          "meaning": "El técnico no era bueno reparando.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-heta",
+      "written": "下手",
+      "reading": "へた",
+      "romaji": "heta",
+      "meaning": "torpe/poco hábil",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "僕は かん字が 下手です。",
+          "reading": "ぼくは かんじが へたです。",
+          "meaning": "Se me dan mal los kanji.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "テニスは 下手でした。",
+          "reading": "テニスは へたでした。",
+          "meaning": "Se me daba mal el tenis.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "その 男の子は 運動が 下手では ありません。",
+          "reading": "その おとこのこは うんどうが へたでは ありません。",
+          "meaning": "A ese niño no se le da mal el deporte.",
+          "form": "present-negative"
+        },
+        {
+          "written": "女の人は 写真が 下手では ありませんでした。",
+          "reading": "おんなのひとは しゃしんが へたでは ありませんでした。",
+          "meaning": "A la mujer no se le daban mal las fotos.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-tokui",
+      "written": "得意",
+      "reading": "とくい",
+      "romaji": "tokui",
+      "meaning": "punto fuerte; se me da bien",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "書き取りが 得意です。",
+          "reading": "かきとりが とくいです。",
+          "meaning": "Se me dan bien los dictados.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "先生は さく文が 得意でした。",
+          "reading": "せんせいは さくぶんが とくいでした。",
+          "meaning": "Al profesor se le daba bien la redacción.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "聞き取りは 得意では ありません。",
+          "reading": "ききとりは とくいでは ありません。",
+          "meaning": "La comprensión auditiva no es mi fuerte.",
+          "form": "present-negative"
+        },
+        {
+          "written": "弁護士は 運動が 得意では ありませんでした。",
+          "reading": "べんごしは うんどうが とくいでは ありませんでした。",
+          "meaning": "A la abogada no se le daba bien el deporte.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-kanpeki",
+      "written": "完璧",
+      "reading": "かんぺき",
+      "romaji": "kanpeki",
+      "meaning": "perfecto/sin fallos",
+      "group": "na",
+      "sourceId": "vocabulary-note",
+      "examples": [
+        {
+          "written": "この 写真は 完璧です。",
+          "reading": "この しゃしんは かんぺきです。",
+          "meaning": "Esta foto es perfecta.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "晩ご飯は 完璧でした。",
+          "reading": "ばんごはんは かんぺきでした。",
+          "meaning": "La cena fue perfecta.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "僕の かん字は 完璧では ありません。",
+          "reading": "ぼくの かんじは かんぺきでは ありません。",
+          "meaning": "Mis kanji no son perfectos.",
+          "form": "present-negative"
+        },
+        {
+          "written": "字幕は 完璧では ありませんでした。",
+          "reading": "じまくは かんぺきでは ありませんでした。",
+          "meaning": "Los subtítulos no eran perfectos.",
+          "form": "past-negative"
+        }
+      ]
     },
     {
       "id": "adverb-totemo",
@@ -400,7 +1286,18 @@
       "meaning": "muy",
       "group": "adverb",
       "sourceId": "modifiers-note",
-      "note": "とても おもしろいです。"
+      "examples": [
+        {
+          "written": "ふじ山は とても きれいです。",
+          "reading": "ふじさんは とても きれいです。",
+          "meaning": "El monte Fuji es muy bonito."
+        },
+        {
+          "written": "和食は とても おいしかったです。",
+          "reading": "わしょくは とても おいしかったです。",
+          "meaning": "La comida japonesa estaba muy rica."
+        }
+      ]
     },
     {
       "id": "adverb-kanari",
@@ -410,7 +1307,18 @@
       "meaning": "bastante",
       "group": "adverb",
       "sourceId": "modifiers-note",
-      "note": "かなり さむいです。"
+      "examples": [
+        {
+          "written": "八月は かなり 暑いです。",
+          "reading": "はちがつは かなり あついです。",
+          "meaning": "En agosto hace bastante calor."
+        },
+        {
+          "written": "試験は かなり 難しかったです。",
+          "reading": "しけんは かなり むずかしかったです。",
+          "meaning": "El examen fue bastante difícil."
+        }
+      ]
     },
     {
       "id": "adverb-chotto",
@@ -420,7 +1328,18 @@
       "meaning": "un poco",
       "group": "adverb",
       "sourceId": "modifiers-note",
-      "note": "ちょっと いそがしいです。"
+      "examples": [
+        {
+          "written": "ちょっと 忙しいです。",
+          "reading": "ちょっと いそがしいです。",
+          "meaning": "Estoy un poco ocupado."
+        },
+        {
+          "written": "この 靴は ちょっと 大きいです。",
+          "reading": "この くつは ちょっと おおきいです。",
+          "meaning": "Estos zapatos son un poco grandes."
+        }
+      ]
     },
     {
       "id": "adverb-sukoshi",
@@ -430,7 +1349,18 @@
       "meaning": "un poco",
       "group": "adverb",
       "sourceId": "modifiers-note",
-      "note": "にほんごが すこし わかります。"
+      "examples": [
+        {
+          "written": "かん字が すこし 分かります。",
+          "reading": "かんじが すこし わかります。",
+          "meaning": "Entiendo un poco los kanji."
+        },
+        {
+          "written": "コーヒーを すこし 飲みました。",
+          "reading": "コーヒーを すこし のみました。",
+          "meaning": "Bebí un poco de café."
+        }
+      ]
     },
     {
       "id": "adverb-amari",
@@ -440,7 +1370,19 @@
       "meaning": "no muy",
       "group": "adverb",
       "sourceId": "modifiers-note",
-      "note": "Se usa con una forma negativa."
+      "note": "Se usa con una forma negativa.",
+      "examples": [
+        {
+          "written": "宿題は あまり 難しくないです。",
+          "reading": "しゅくだいは あまり むずかしくないです。",
+          "meaning": "Los deberes no son muy difíciles."
+        },
+        {
+          "written": "ビールは あまり 飲みません。",
+          "reading": "ビールは あまり のみません。",
+          "meaning": "No bebo mucha cerveza."
+        }
+      ]
     },
     {
       "id": "adverb-zenzen",
@@ -450,7 +1392,19 @@
       "meaning": "en absoluto",
       "group": "adverb",
       "sourceId": "modifiers-note",
-      "note": "Se usa con una forma negativa."
+      "note": "Se usa con una forma negativa.",
+      "examples": [
+        {
+          "written": "規則が ぜんぜん 分かりません。",
+          "reading": "きそくが ぜんぜん わかりません。",
+          "meaning": "No entiendo las normas en absoluto."
+        },
+        {
+          "written": "テニスは ぜんぜん できません。",
+          "reading": "テニスは ぜんぜん できません。",
+          "meaning": "No sé jugar nada al tenis."
+        }
+      ]
     },
     {
       "id": "adverb-takusan",
@@ -460,7 +1414,18 @@
       "meaning": "mucho(s), con nombres o verbos",
       "group": "adverb",
       "sourceId": "modifiers-note",
-      "note": "たくさん たべます。"
+      "examples": [
+        {
+          "written": "晩ご飯を たくさん 食べました。",
+          "reading": "ばんごはんを たくさん たべました。",
+          "meaning": "Cené mucho."
+        },
+        {
+          "written": "図書館に 雑誌が たくさん あります。",
+          "reading": "としょかんに ざっしが たくさん あります。",
+          "meaning": "En la biblioteca hay muchas revistas."
+        }
+      ]
     },
     {
       "id": "adverb-hotondo",
@@ -470,7 +1435,18 @@
       "meaning": "casi/casi todo",
       "group": "adverb",
       "sourceId": "modifiers-note",
-      "note": "ほとんど まいにち"
+      "examples": [
+        {
+          "written": "宿題は ほとんど 終わりました。",
+          "reading": "しゅくだいは ほとんど おわりました。",
+          "meaning": "Casi he terminado los deberes."
+        },
+        {
+          "written": "字幕は ほとんど 分かりませんでした。",
+          "reading": "じまくは ほとんど わかりませんでした。",
+          "meaning": "Casi no entendí los subtítulos."
+        }
+      ]
     }
   ]
 }

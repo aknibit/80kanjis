@@ -374,10 +374,12 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .lexicon-body { padding: 0 20px 18px; }
 .lexicon-examples-label { margin: 0 0 8px; font-size: 11px; color: var(--faint); }
 .lexicon-examples { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px 28px; margin: 0; padding: 0; list-style: none; }
+.lexicon-examples--forms { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .lexicon-example { padding-left: 14px; border-left: 2px solid var(--action-border); }
 /* Sentences are spaced by phrase; keep-all wraps only at those spaces, never inside a word. */
 .lexicon-example p { margin: 0; }
 .lexicon-example-written, .lexicon-example-reading { word-break: keep-all; overflow-wrap: break-word; }
+.lexicon-example-form { font-size: 11px; font-weight: 500; line-height: 1.6; color: var(--faint); }
 .lexicon-example-written { font-family: var(--japanese); font-size: 19px; line-height: 1.6; color: var(--text); }
 .lexicon-example-reading { font-family: var(--japanese-reading); font-size: 13px; line-height: 1.6; letter-spacing: .04em; color: var(--reading); }
 .lexicon-example-meaning { margin-top: 2px; font-size: 14px; line-height: 1.6; color: var(--meaning); }

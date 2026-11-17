@@ -98,6 +98,13 @@
           "type": "string",
           "minLength": 1,
           "pattern": "\\S"
+        },
+        "inflection": {
+          "description": "Solo en secciones léxicas: cómo se conjugan las entradas del grupo. Sus ejemplos muestran entonces las cuatro formas corteses, en orden.",
+          "enum": [
+            "i-adjective",
+            "na-adjective"
+          ]
         }
       },
       "required": [
@@ -124,6 +131,15 @@
           "type": "string",
           "minLength": 1,
           "pattern": "\\S"
+        },
+        "form": {
+          "description": "Solo en entradas de un grupo con inflection: la forma con la que termina la frase. Van en este orden.",
+          "enum": [
+            "present-affirmative",
+            "past-affirmative",
+            "present-negative",
+            "past-negative"
+          ]
         }
       },
       "required": [
