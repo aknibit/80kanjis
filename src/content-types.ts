@@ -121,4 +121,19 @@ export interface LexiconDocument extends DocumentBase {
 }
 
 export type StudyDocument = CounterDocument | KanaDocument | LexiconDocument;
+
+/** Sentences for one of the 80 kanji: two simple ones, then four with adjectives, adverbs and counters. */
+export interface KanjiSentences {
+  readonly kanji: string;
+  readonly simple: readonly ContentExample[];
+  readonly advanced: readonly ContentExample[];
+}
+
+/** Loaded when a kanji dialog first opens, so the collection that loads with the page stays small. */
+export interface KanjiSentencesDocument {
+  readonly version: 1;
+  readonly kind: 'kanji-sentences';
+  readonly description: string;
+  readonly entries: readonly KanjiSentences[];
+}
 export type ContentEntry = CounterEntry | KanaEntry | LexiconEntry;

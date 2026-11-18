@@ -1,4 +1,4 @@
-import type { ContentEntry, ContentExample, ContentKind, ExampleForm, Inflection, NavigationDocument, NavigationSection, StudyDocument } from '../content-types.ts';
+import type { ContentEntry, ContentExample, ContentKind, ExampleForm, Inflection, KanjiSentencesDocument, NavigationDocument, NavigationSection, StudyDocument } from '../content-types.ts';
 import { normalizeSearch } from './search.ts';
 
 type RecordValue = Record<string, unknown>;
@@ -254,6 +254,44 @@ export async function loadNavigation(): Promise<NavigationDocument> {
 export async function loadStudyDocument(section: NavigationSection): Promise<StudyDocument> {
   check(isKind(section.kind) && /^content\/[a-z0-9-]+\.json$/.test(section.file), 'Sección de contenido no válida.');
   return parseStudyDocument(await fetchFile(section.file), section.kind);
+}
+
+export const kanjiSentencesFile = 'content/kanji-sentences.json';
+
+/**
+ * The sentences of the kanji dialog: two simple ones and four with adjectives, adverbs and counters per kanji.
+ * Each one writes its kanji, and writing and reading split into the same blocks. That they cover every kanji and only
+ * use words of the site is checked before publishing (scripts/check-content.ts), not in the browser.
+ */
+export function parseKanjiSentences(input: string, characters: readonly string[]): KanjiSentencesDocument {
+  const data = record(parse(input), ['version', 'kind', 'description', 'entries'], ['$schema']);
+  if (data.$schema !== undefined) text(data.$schema);
+  check(data.version === 1 && data.kind === 'kanji-sentences', 'Versión o tipo de las frases no compatible.');
+  text(data.description);
+  array(data.entries, 1);
+  const known = new Set(characters);
+  const seen = new Set<string>();
+  const blocks = (sentence: string) => sentence.trim().split(/\s+/u).length;
+  for (const value of data.entries) {
+    const entry = record(value, ['kanji', 'simple', 'advanced']);
+    text(entry.kanji);
+    check(known.has(entry.kanji), `Hay frases de un kanji que no está en la colección: ${entry.kanji}.`);
+    check(!seen.has(entry.kanji), `Frases repetidas para ${entry.kanji}.`);
+    seen.add(entry.kanji);
+    const simple = examples(entry.simple);
+    const advanced = examples(entry.advanced);
+    check(simple.length === 2 && advanced.length === 4,
+      `${entry.kanji} debe tener dos frases sencillas y cuatro con adjetivos, adverbios y contadores.`);
+    for (const sentence of [...simple, ...advanced]) {
+      check(sentence.written.includes(entry.kanji), `Una frase de ${entry.kanji} no lo escribe: ${sentence.written}`);
+      check(blocks(sentence.written) === blocks(sentence.reading), `La lectura de «${sentence.written}» no tiene los mismos bloques.`);
+    }
+  }
+  return data as unknown as KanjiSentencesDocument;
+}
+
+export async function loadKanjiSentences(characters: readonly string[]): Promise<KanjiSentencesDocument> {
+  return parseKanjiSentences(await fetchFile(kanjiSentencesFile), characters);
 }
 
 export function resolveSection(navigation: NavigationDocument, url: string): NavigationSection {

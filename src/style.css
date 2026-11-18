@@ -347,6 +347,30 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kanji-dialog-examples p { font-size: 14px; line-height: 1.5; margin: 3px 0 0; color: var(--dialog-example); }
 .kanji-dialog .kanji-dialog-source { margin: 18px 0 0; font-size: 12px; }
 .kanji-dialog-source a:hover { color: var(--accent); }
+/* Anchored to the top instead of centred: switching tabs or kanji changes the height without moving the tabs. */
+.kanji-dialog { --kanji-dialog-top: max(24px, 6dvh); margin-top: var(--kanji-dialog-top); max-height: calc(100dvh - var(--kanji-dialog-top) - 24px); }
+/* The 80 kanji show their vocabulary or their sentences in two tabs, wide enough for most sentences to fit in a line. */
+.kanji-dialog[data-kind='collection'] { width: 640px; max-width: min(640px, calc(100vw - 32px)); }
+.kanji-dialog-tabs { display: flex; gap: 4px; margin: 22px 0 0; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+/* The line under the tabs already opens the list. */
+.kanji-dialog-panel .kanji-dialog-examples li:first-child { border-top: 0; }
+.kanji-dialog-tab { min-height: 36px; padding: 6px 14px; border: 0; border-radius: 5px; background: transparent; color: var(--text-soft); font: inherit; font-size: 14px; }
+.kanji-dialog-tab:hover { background: var(--hover); }
+.kanji-dialog-tab[aria-selected='true'] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.kanji-dialog-tab:focus-visible, .kanji-dialog-panel:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.kanji-dialog .kanji-sentence-group { margin: 14px 0 8px; font-size: 11px; line-height: 1.5; color: var(--muted); }
+.kanji-dialog .kanji-sentence-group:first-child { margin-top: 12px; }
+.kanji-sentence-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.kanji-sentence { padding-left: 14px; border-left: 2px solid var(--action-border); }
+.kanji-dialog .kanji-sentence p { margin: 0; }
+/* Sentences only break at the spaces between blocks, like the examples of the other sections. */
+.kanji-sentence-written, .kanji-sentence-reading { word-break: keep-all; overflow-wrap: break-word; }
+.kanji-dialog .kanji-sentence-written { font-family: var(--japanese); font-size: 19px; line-height: 1.6; color: var(--text); }
+.kanji-dialog .kanji-sentence-reading { font-family: var(--japanese-reading); font-size: 13px; line-height: 1.6; letter-spacing: .04em; color: var(--reading); }
+.kanji-dialog .kanji-sentence-meaning { margin-top: 2px; font-size: 14px; line-height: 1.5; color: var(--dialog-example); }
+/* The same tone and shadow as the kanji in the vocabulary above, without the hover of a button. */
+.kanji-sentence-target { --kanji-shadow: color-mix(in srgb, var(--accent) 22%, transparent); --kanji-glow: color-mix(in srgb, var(--accent) 12%, transparent); font-weight: 500; color: var(--accent); text-shadow: 0 1px 3px var(--kanji-shadow), 0 2px 8px var(--kanji-glow); }
+.kanji-dialog .kanji-sentence-status { margin: 0; font-size: 13px; line-height: 1.6; color: var(--muted); }
 
 .study-search-icon { display: inline-flex; flex: 0 0 24px; color: var(--icon); }
 .study-search-icon svg { width: 24px; height: 24px; }
