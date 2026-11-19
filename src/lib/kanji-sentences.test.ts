@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { collectionDocument } from '../../tests/collection-fixture.ts';
 import { kanjiSentencesFile, loadKanjiSentences, parseKanjiSentences, parseNavigation, parseStudyDocument } from './content.ts';
-import { createSiteVocabulary, exampleProblems, kanjiSentenceProblems, readSentence } from './site-vocabulary.ts';
+import { createSiteVocabulary, exampleProblems, harderWords, kanjiSentenceProblems, levelProblems, readSentence } from './site-vocabulary.ts';
 import type { CounterDocument, KanjiSentencesDocument, LexiconDocument } from '../content-types.ts';
 
 const root = new URL('../../public/', import.meta.url);
@@ -95,6 +95,34 @@ test('the examples of the sections and the counters also only use words of the s
   const verbs = lexicons.map((data) => structuredClone(data) as any);
   verbs.find((data) => data.title === 'Verbos').entries[0].examples[0] = sentence('暑い 日は 遅く 起きます。', 'あつい ひは おそく おきます。');
   assert.match(exampleProblems(verbs, counters, vocabulary).join('\n'), /^Verbos · 起きます · 暑い 日は 遅く 起きます。: No se puede leer «日は遅く起き»/);
+});
+
+test('each context only uses words as easy as what it illustrates, or easier', () => {
+  const lexicons = documents.filter((data): data is LexiconDocument => data.kind === 'lexicon');
+  const counters = documents.find((data): data is CounterDocument => data.kind === 'counters')!;
+  assert.deepEqual(levelProblems(collectionDocument, lexicons, counters, sentences, vocabulary), []);
+  // Words in kana count too: the one that starts each block, with its ending. この is grammar, not a word of the site.
+  const words = (written: string, reading = written) => readSentence({ written, reading }, vocabulary).words.map((word) => word.written).sort();
+  assert.deepEqual(words('えきで かさを かして ください。'), ['えき', 'かさ', 'かします']);
+  assert.deepEqual(words('時間が ありませんでした。', 'じかんが ありませんでした。'), ['あります', '時間']);
+  // After では, ありません is the negative of です, not the verb あります.
+  assert.deepEqual(words('この へやは 静かでは ありませんでした。', 'この へやは しずかでは ありませんでした。'), ['へや', '静か']);
+  // A word that starts in kana is read whole: かん字, not か, ん and the word 字.
+  assert.deepEqual(words('かん字は 難しいです。', 'かんじは むずかしいです。'), ['かん字', '難しい']);
+  // An easy entry only uses easy words, a medium one easy and medium words; the entry itself does not count.
+  const meeting = sentence('えきで ともだちに 会いました。', 'えきで ともだちに あいました。');
+  assert.deepEqual(harderWords(meeting, 'easy', [], vocabulary), ['会います']);
+  assert.deepEqual(harderWords(meeting, 'easy', ['verb-aimasu'], vocabulary), []);
+  assert.deepEqual(harderWords(meeting, 'medium', [], vocabulary), []);
+  // A word in two lists counts at its easiest level: 早い is easy in the collection, 早い／速い medium.
+  assert.deepEqual(harderWords(sentence('バスは 早いです。', 'バスは はやいです。'), 'easy', [], vocabulary), []);
+  // In the sentences of a kanji, the word that writes it may be of any level: 川 is easy, 川上 medium.
+  const changed = structuredClone(sentences) as any;
+  const river = changed.entries.find((entry: { kanji: string }) => entry.kanji === '川');
+  river.simple[0] = sentence('川上は とても 静かです。', 'かわかみは とても しずかです。');
+  river.simple[1] = sentence('川上で ともだちに 会いました。', 'かわかみで ともだちに あいました。');
+  assert.deepEqual(levelProblems(collectionDocument, lexicons, counters, changed, vocabulary),
+    ['Frases de 川 (fácil) · 川上で ともだちに 会いました。: 会います']);
 });
 
 test('the publishing check reports missing kanji, repeated sentences and advanced sentences without modifiers or counters', () => {

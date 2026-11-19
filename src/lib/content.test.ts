@@ -149,7 +149,7 @@ test('each counter form and question has a Japanese example and an everyday sent
   // 十 in the general series is read とお, and the 1st of the month ついたち, not いちにち.
   assert.equal(counters.entries.find((entry) => entry.id === 'tsu')!.forms[9].example.reading, 'とおまで かぞえる');
   assert.equal(counters.entries.find((entry) => entry.id === 'dates')!.forms[0].example.reading, 'いちがつ ついたち');
-  assert.deepEqual(hon.forms[0].sentence, { written: '鉛筆を 一本 かして ください。', reading: 'えんぴつを いっぽん かして ください。', meaning: '¿Me prestas un lápiz?' });
+  assert.deepEqual(hon.forms[0].sentence, { written: '鉛筆を 一本 ください。', reading: 'えんぴつを いっぽん ください。', meaning: 'Un lápiz, por favor.' });
   for (const entry of counters.entries) {
     for (const item of [...entry.forms, entry.question]) {
       for (const sample of [item.example, item.sentence]) {
@@ -173,7 +173,7 @@ test('each counter form and question has a Japanese example and an everyday sent
     (data) => { delete data.entries[6].forms[0].sentence; },
     (data) => { delete data.entries[6].question.sentence; },
     (data) => { data.entries[6].forms[0].sentence.written = '鉛筆を 二本 貸して ください。'; },
-    (data) => { data.entries[6].forms[0].sentence.reading = 'えんぴつを いっぽん かして ください'; },
+    (data) => { data.entries[6].forms[0].sentence.reading = 'えんぴつを いっぽん ください'; },
     (data) => { data.entries[6].forms[0].sentence = { ...data.entries[6].forms[0].example }; },
   ];
   for (const change of changes) {
@@ -331,10 +331,15 @@ test('verbs open with the 20 essential verbs, in study order', () => {
   assert.equal(essentials[0].written, '起きます');
   assert.equal(essentials.at(-1)!.written, '寝ます');
   assert.ok(essentials.some((entry) => entry.written === '来ます'));
-  // Every verb opens to simple examples; the conjugated verb counts, and multi-word verbs may be spaced.
-  for (const entry of verbs.entries) assert.ok((entry.examples?.length ?? 0) >= 2, entry.id);
+  // Every verb opens to its four polite forms, like the adjectives; multi-word verbs may be spaced.
+  assert.ok(verbs.groups.every((group) => group.inflection === 'verb'));
+  for (const entry of verbs.entries) assert.deepEqual(entry.examples?.map((example) => example.form), exampleForms, entry.id);
   const photo = essentials.find((entry) => entry.id === 'verb-shashin-o-torimasu')!;
   assert.ok(photo.examples!.some((example) => example.written.includes('写真を 撮りました')));
+  // Each example closes with its form: a present negative cannot stand in for the past negative.
+  const wrongForm = structuredClone(verbs) as any;
+  wrongForm.entries[0].examples[3] = { ...wrongForm.entries[0].examples[2], form: 'past-negative' };
+  assert.throws(() => parseStudyDocument(JSON.stringify(wrongForm)), /no termina con su forma/);
 });
 
 test('polite forms follow the course: く/かった for い adjectives, ではありません/でした for な, and いい from よい', () => {
@@ -344,6 +349,8 @@ test('polite forms follow the course: く/かった for い adjectives, では�
     ['いいです', 'よかったです', 'よくないです', 'よくなかったです']);
   assert.deepEqual(exampleForms.map((form) => politeForm('きれい', 'na-adjective', form)),
     ['きれいです', 'きれいでした', 'きれいではありません', 'きれいではありませんでした']);
+  assert.deepEqual(exampleForms.map((form) => politeForm('起きます', 'verb', form)),
+    ['起きます', '起きました', '起きません', '起きませんでした']);
 });
 
 test('adjectives open to the four polite forms in order, and adverbs to examples', () => {

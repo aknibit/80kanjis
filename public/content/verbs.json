@@ -33,15 +33,18 @@
   "groups": [
     {
       "id": "essentials",
-      "label": "Verbos esenciales"
+      "label": "Verbos esenciales",
+      "inflection": "verb"
     },
     {
       "id": "main",
-      "label": "Verbos del curso"
+      "label": "Verbos del curso",
+      "inflection": "verb"
     },
     {
       "id": "expressions",
-      "label": "Expresiones verbales"
+      "label": "Expresiones verbales",
+      "inflection": "verb"
     }
   ],
   "guides": [
@@ -106,14 +109,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "まいあさ 七時に 起きます。",
-          "reading": "まいあさ しちじに おきます。",
-          "meaning": "Me levanto cada mañana a las siete."
+          "written": "まいあさ 早く 起きます。",
+          "reading": "まいあさ はやく おきます。",
+          "meaning": "Cada mañana me levanto temprano.",
+          "form": "present-affirmative"
         },
         {
-          "written": "日よう日は 十時に 起きました。",
-          "reading": "にちようびは じゅうじに おきました。",
-          "meaning": "El domingo me levanté a las diez."
+          "written": "日よう日は ひるに 起きました。",
+          "reading": "にちようびは ひるに おきました。",
+          "meaning": "El domingo me levanté a mediodía.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "土よう日は 早く 起きません。",
+          "reading": "どようびは はやく おきません。",
+          "meaning": "Los sábados no me levanto temprano.",
+          "form": "present-negative"
+        },
+        {
+          "written": "おとといは ひるまで 起きませんでした。",
+          "reading": "おとといは ひるまで おきませんでした。",
+          "meaning": "Anteayer no me levanté hasta mediodía.",
+          "form": "past-negative"
         }
       ]
     },
@@ -128,14 +145,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "食堂で 晩ご飯を 食べます。",
-          "reading": "しょくどうで ばんごはんを たべます。",
-          "meaning": "Ceno en el comedor."
+          "written": "家族と 晩ご飯を 食べます。",
+          "reading": "かぞくと ばんごはんを たべます。",
+          "meaning": "Ceno con mi familia.",
+          "form": "present-affirmative"
         },
         {
           "written": "レストランで さかなを 食べました。",
           "reading": "レストランで さかなを たべました。",
-          "meaning": "Comí pescado en el restaurante."
+          "meaning": "Comí pescado en el restaurante.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "肉は 食べません。",
+          "reading": "にくは たべません。",
+          "meaning": "No como carne.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは あさごはんを 食べませんでした。",
+          "reading": "きのうは あさごはんを たべませんでした。",
+          "meaning": "Ayer no desayuné.",
+          "form": "past-negative"
         }
       ]
     },
@@ -150,14 +181,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "銀行で 働きます。",
-          "reading": "ぎんこうで はたらきます。",
-          "meaning": "Trabajo en un banco."
-        },
-        {
           "written": "ちちは かいしゃで 働きます。",
           "reading": "ちちは かいしゃで はたらきます。",
-          "meaning": "Mi padre trabaja en una empresa."
+          "meaning": "Mi padre trabaja en una empresa.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "きょ年は 銀行で 働きました。",
+          "reading": "きょねんは ぎんこうで はたらきました。",
+          "meaning": "El año pasado trabajé en un banco.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "日よう日は 働きません。",
+          "reading": "にちようびは はたらきません。",
+          "meaning": "Los domingos no trabajo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先しゅうは 働きませんでした。",
+          "reading": "せんしゅうは はたらきませんでした。",
+          "meaning": "La semana pasada no trabajé.",
+          "form": "past-negative"
         }
       ]
     },
@@ -172,14 +217,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "図書館で 勉強します。",
-          "reading": "としょかんで べんきょうします。",
-          "meaning": "Estudio en la biblioteca."
+          "written": "まい日 日本ごを 勉強します。",
+          "reading": "まいにち にほんごを べんきょうします。",
+          "meaning": "Estudio japonés todos los días.",
+          "form": "present-affirmative"
         },
         {
           "written": "大学で えいごを 勉強しました。",
           "reading": "だいがくで えいごを べんきょうしました。",
-          "meaning": "Estudié inglés en la universidad."
+          "meaning": "Estudié inglés en la universidad.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "よるは 勉強しません。",
+          "reading": "よるは べんきょうしません。",
+          "meaning": "Por la noche no estudio.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 勉強しませんでした。",
+          "reading": "きのうは べんきょうしませんでした。",
+          "meaning": "Ayer no estudié.",
+          "form": "past-negative"
         }
       ]
     },
@@ -194,14 +253,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "日よう日は うちで 休みます。",
-          "reading": "にちようびは うちで やすみます。",
-          "meaning": "Los domingos descanso en casa."
+          "written": "あしたは しごとを 休みます。",
+          "reading": "あしたは しごとを やすみます。",
+          "meaning": "Mañana me tomo el día libre en el trabajo.",
+          "form": "present-affirmative"
         },
         {
           "written": "授業を 休みました。",
           "reading": "じゅぎょうを やすみました。",
-          "meaning": "Falté a clase."
+          "meaning": "Falté a clase.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "月よう日の 授業は 休みません。",
+          "reading": "げつようびの じゅぎょうは やすみません。",
+          "meaning": "A la clase de los lunes no falto.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 大学を 休みませんでした。",
+          "reading": "きのうは だいがくを やすみませんでした。",
+          "meaning": "Ayer no falté a la universidad.",
+          "form": "past-negative"
         }
       ]
     },
@@ -218,12 +291,26 @@
         {
           "written": "まいあさ おちゃを 飲みます。",
           "reading": "まいあさ おちゃを のみます。",
-          "meaning": "Cada mañana tomo té."
+          "meaning": "Cada mañana tomo té.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "きのうは ともだちと ワインを 飲みました。",
+          "reading": "きのうは ともだちと ワインを のみました。",
+          "meaning": "Ayer bebí vino con un amigo.",
+          "form": "past-affirmative"
         },
         {
           "written": "ビールは 飲みません。",
           "reading": "ビールは のみません。",
-          "meaning": "No bebo cerveza."
+          "meaning": "No bebo cerveza.",
+          "form": "present-negative"
+        },
+        {
+          "written": "今日は コーヒーを 飲みませんでした。",
+          "reading": "きょうは コーヒーを のみませんでした。",
+          "meaning": "Hoy no he tomado café.",
+          "form": "past-negative"
         }
       ]
     },
@@ -238,14 +325,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "授業が 終わりました。",
-          "reading": "じゅぎょうが おわりました。",
-          "meaning": "La clase ha terminado."
+          "written": "今日の 授業は ひるに 終わります。",
+          "reading": "きょうの じゅぎょうは ひるに おわります。",
+          "meaning": "La clase de hoy termina a mediodía.",
+          "form": "present-affirmative"
         },
         {
-          "written": "えいがは 九時に 終わりました。",
-          "reading": "えいがは くじに おわりました。",
-          "meaning": "La película terminó a las nueve."
+          "written": "授業が 終わりました。",
+          "reading": "じゅぎょうが おわりました。",
+          "meaning": "La clase ha terminado.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "宿題が 終わりません。",
+          "reading": "しゅくだいが おわりません。",
+          "meaning": "No acabo los deberes.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは しごとが 終わりませんでした。",
+          "reading": "きのうは しごとが おわりませんでした。",
+          "meaning": "Ayer no terminé el trabajo.",
+          "form": "past-negative"
         }
       ]
     },
@@ -260,14 +361,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "郵便局へ 行きます。",
-          "reading": "ゆうびんきょくへ いきます。",
-          "meaning": "Voy a correos."
+          "written": "まい日 バスで 大学へ 行きます。",
+          "reading": "まいにち バスで だいがくへ いきます。",
+          "meaning": "Voy a la universidad en autobús todos los días.",
+          "form": "present-affirmative"
         },
         {
-          "written": "バスで 美術館へ 行きました。",
-          "reading": "バスで びじゅつかんへ いきました。",
-          "meaning": "Fui al museo de arte en autobús."
+          "written": "先月 日本へ 行きました。",
+          "reading": "せんげつ にほんへ いきました。",
+          "meaning": "El mes pasado fui a Japón.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "あしたは かいしゃへ 行きません。",
+          "reading": "あしたは かいしゃへ いきません。",
+          "meaning": "Mañana no voy a la empresa.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは どこへも 行きませんでした。",
+          "reading": "きのうは どこへも いきませんでした。",
+          "meaning": "Ayer no fui a ningún sitio.",
+          "form": "past-negative"
         }
       ]
     },
@@ -282,14 +397,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "先生が 教室に 来ます。",
-          "reading": "せんせいが きょうしつに きます。",
-          "meaning": "El profesor viene al aula."
+          "written": "あした ちちが 日本から 来ます。",
+          "reading": "あした ちちが にほんから きます。",
+          "meaning": "Mañana viene mi padre de Japón.",
+          "form": "present-affirmative"
         },
         {
-          "written": "ともだちが うちへ 来ました。",
-          "reading": "ともだちが うちへ きました。",
-          "meaning": "Un amigo vino a casa."
+          "written": "きのう ともだちが へやに 来ました。",
+          "reading": "きのう ともだちが へやに きました。",
+          "meaning": "Ayer vino un amigo a mi habitación.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "バスが 来ません。",
+          "reading": "バスが きません。",
+          "meaning": "El autobús no viene.",
+          "form": "present-negative"
+        },
+        {
+          "written": "ともだちは コンサートに 来ませんでした。",
+          "reading": "ともだちは コンサートに きませんでした。",
+          "meaning": "Mi amigo no vino al concierto.",
+          "form": "past-negative"
         }
       ]
     },
@@ -304,14 +433,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "たばこは 吸いません。",
-          "reading": "たばこは すいません。",
-          "meaning": "No fumo."
-        },
-        {
           "written": "森の中で きれいな 空気を 吸います。",
           "reading": "もりのなかで きれいな くうきを すいます。",
-          "meaning": "En el bosque respiro aire limpio."
+          "meaning": "En el bosque respiro aire limpio.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "山で つめたい 空気を 吸いました。",
+          "reading": "やまで つめたい くうきを すいました。",
+          "meaning": "En la montaña respiré aire frío.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "たばこは 吸いません。",
+          "reading": "たばこは すいません。",
+          "meaning": "No fumo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "ちちは 一日中 たばこを 吸いませんでした。",
+          "reading": "ちちは いちにちじゅう たばこを すいませんでした。",
+          "meaning": "Mi padre no fumó en todo el día.",
+          "form": "past-negative"
         }
       ]
     },
@@ -328,12 +471,26 @@
         {
           "written": "まいばん 音がくを 聞きます。",
           "reading": "まいばん おんがくを ききます。",
-          "meaning": "Escucho música cada noche."
+          "meaning": "Escucho música cada noche.",
+          "form": "present-affirmative"
         },
         {
-          "written": "先生に 聞きます。",
-          "reading": "せんせいに ききます。",
-          "meaning": "Le pregunto al profesor."
+          "written": "ともだちに 宿題を 聞きました。",
+          "reading": "ともだちに しゅくだいを ききました。",
+          "meaning": "Le pregunté a un amigo por los deberes.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "えいごの うたは 聞きません。",
+          "reading": "えいごの うたは ききません。",
+          "meaning": "No escucho canciones en inglés.",
+          "form": "present-negative"
+        },
+        {
+          "written": "ちちには 聞きませんでした。",
+          "reading": "ちちには ききませんでした。",
+          "meaning": "A mi padre no le pregunté.",
+          "form": "past-negative"
         }
       ]
     },
@@ -350,12 +507,26 @@
         {
           "written": "家族の 写真を 見ます。",
           "reading": "かぞくの しゃしんを みます。",
-          "meaning": "Miro las fotos de mi familia."
+          "meaning": "Miro las fotos de mi familia.",
+          "form": "present-affirmative"
         },
         {
           "written": "テレビで サッカーを 見ました。",
           "reading": "テレビで サッカーを みました。",
-          "meaning": "Vi el fútbol en la tele."
+          "meaning": "Vi el fútbol en la tele.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "よるは テレビを 見ません。",
+          "reading": "よるは テレビを みません。",
+          "meaning": "Por la noche no veo la tele.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先月は えいがを 見ませんでした。",
+          "reading": "せんげつは えいがを みませんでした。",
+          "meaning": "El mes pasado no vi ninguna película.",
+          "form": "past-negative"
         }
       ]
     },
@@ -372,12 +543,26 @@
         {
           "written": "ボールペンで てがみを 書きます。",
           "reading": "ボールペンで てがみを かきます。",
-          "meaning": "Escribo una carta con bolígrafo."
+          "meaning": "Escribo una carta con bolígrafo.",
+          "form": "present-affirmative"
         },
         {
-          "written": "かん字で 名前を 書きました。",
-          "reading": "かんじで なまえを かきました。",
-          "meaning": "Escribí mi nombre en kanji."
+          "written": "ノートに 質問を 書きました。",
+          "reading": "ノートに しつもんを かきました。",
+          "meaning": "Escribí la pregunta en la libreta.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "鉛筆では 書きません。",
+          "reading": "えんぴつでは かきません。",
+          "meaning": "No escribo a lápiz.",
+          "form": "present-negative"
+        },
+        {
+          "written": "ローマ字は 書きませんでした。",
+          "reading": "ローマじは かきませんでした。",
+          "meaning": "No escribí en alfabeto latino.",
+          "form": "past-negative"
         }
       ]
     },
@@ -392,14 +577,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "スーパーで やさいを 買います。",
-          "reading": "スーパーで やさいを かいます。",
-          "meaning": "Compro verdura en el súper."
+          "written": "みせで やさいを 買います。",
+          "reading": "みせで やさいを かいます。",
+          "meaning": "Compro verdura en la tienda.",
+          "form": "present-affirmative"
         },
         {
           "written": "雑誌を 二冊 買いました。",
           "reading": "ざっしを にさつ かいました。",
-          "meaning": "Compré dos revistas."
+          "meaning": "Compré dos revistas.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "ワインは 買いません。",
+          "reading": "ワインは かいません。",
+          "meaning": "No compro vino.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その かばんは 買いませんでした。",
+          "reading": "その かばんは かいませんでした。",
+          "meaning": "Ese bolso no lo compré.",
+          "form": "past-negative"
         }
       ]
     },
@@ -416,12 +615,26 @@
         {
           "written": "えきで ともだちに 会います。",
           "reading": "えきで ともだちに あいます。",
-          "meaning": "Quedo con un amigo en la estación."
+          "meaning": "Quedo con un amigo en la estación.",
+          "form": "present-affirmative"
         },
         {
           "written": "土よう日に 家族に 会いました。",
           "reading": "どようびに かぞくに あいました。",
-          "meaning": "El sábado vi a mi familia."
+          "meaning": "El sábado vi a mi familia.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "かれには あまり 会いません。",
+          "reading": "かれには あまり あいません。",
+          "meaning": "A él no lo veo mucho.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 先生に 会いませんでした。",
+          "reading": "きのうは せんせいに あいませんでした。",
+          "meaning": "Ayer no vi al profesor.",
+          "form": "past-negative"
         }
       ]
     },
@@ -436,14 +649,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "図書館で 雑誌を 読みます。",
-          "reading": "としょかんで ざっしを よみます。",
-          "meaning": "Leo revistas en la biblioteca."
+          "written": "まいあさ しんぶんを 読みます。",
+          "reading": "まいあさ しんぶんを よみます。",
+          "meaning": "Leo el periódico cada mañana.",
+          "form": "present-affirmative"
         },
         {
-          "written": "でん車で しんぶんを 読みます。",
-          "reading": "でんしゃで しんぶんを よみます。",
-          "meaning": "Leo el periódico en el tren."
+          "written": "きのう 日本ごの 本を 読みました。",
+          "reading": "きのう にほんごの ほんを よみました。",
+          "meaning": "Ayer leí un libro en japonés.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "雑誌は 読みません。",
+          "reading": "ざっしは よみません。",
+          "meaning": "No leo revistas.",
+          "form": "present-negative"
+        },
+        {
+          "written": "えいごの てがみは 読みませんでした。",
+          "reading": "えいごの てがみは よみませんでした。",
+          "meaning": "La carta en inglés no la leí.",
+          "form": "past-negative"
         }
       ]
     },
@@ -460,12 +687,26 @@
         {
           "written": "家族の 写真を 撮ります。",
           "reading": "かぞくの しゃしんを とります。",
-          "meaning": "Hago fotos a mi familia."
+          "meaning": "Hago fotos a mi familia.",
+          "form": "present-affirmative"
         },
         {
-          "written": "お花見で 写真を 撮りました。",
-          "reading": "おはなみで しゃしんを とりました。",
-          "meaning": "Hice fotos en el hanami."
+          "written": "旅行で たくさん 写真を 撮りました。",
+          "reading": "りょこうで たくさん しゃしんを とりました。",
+          "meaning": "En el viaje hice muchas fotos.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "教室では 写真を 撮りません。",
+          "reading": "きょうしつでは しゃしんを とりません。",
+          "meaning": "En el aula no hago fotos.",
+          "form": "present-negative"
+        },
+        {
+          "written": "コンサートでは 写真を 撮りませんでした。",
+          "reading": "コンサートでは しゃしんを とりませんでした。",
+          "meaning": "En el concierto no hice fotos.",
+          "form": "past-negative"
         }
       ]
     },
@@ -481,13 +722,27 @@
       "examples": [
         {
           "written": "土よう日は テニスを します。",
-          "reading": "どようびは テニスを します。",
-          "meaning": "Los sábados juego al tenis."
+          "reading": "どようびは てにすを します。",
+          "meaning": "Los sábados juego al tenis.",
+          "form": "present-affirmative"
         },
         {
           "written": "ともだちと テニスを しました。",
-          "reading": "ともだちと テニスを しました。",
-          "meaning": "Jugué al tenis con un amigo."
+          "reading": "ともだちと てにすを しました。",
+          "meaning": "Jugué al tenis con un amigo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "よるは テニスを しません。",
+          "reading": "よるは てにすを しません。",
+          "meaning": "Por la noche no juego al tenis.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先月は テニスを しませんでした。",
+          "reading": "せんげつは てにすを しませんでした。",
+          "meaning": "El mes pasado no jugué al tenis.",
+          "form": "past-negative"
         }
       ]
     },
@@ -502,14 +757,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "夕がた うちへ 帰ります。",
-          "reading": "ゆうがた うちへ かえります。",
-          "meaning": "Vuelvo a casa al final de la tarde."
+          "written": "らい月 スペインへ 帰ります。",
+          "reading": "らいげつ スペインへ かえります。",
+          "meaning": "El mes que viene vuelvo a España.",
+          "form": "present-affirmative"
         },
         {
           "written": "タクシーで 帰りました。",
           "reading": "タクシーで かえりました。",
-          "meaning": "Volví en taxi."
+          "meaning": "Volví en taxi.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "今年は 日本へ 帰りません。",
+          "reading": "ことしは にほんへ かえりません。",
+          "meaning": "Este año no vuelvo a Japón.",
+          "form": "present-negative"
+        },
+        {
+          "written": "ちちは きのう 帰りませんでした。",
+          "reading": "ちちは きのう かえりませんでした。",
+          "meaning": "Mi padre no volvió a casa ayer.",
+          "form": "past-negative"
         }
       ]
     },
@@ -524,14 +793,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "和室で 寝ます。",
-          "reading": "わしつで ねます。",
-          "meaning": "Duermo en la habitación de estilo japonés."
+          "written": "まいばん 早く 寝ます。",
+          "reading": "まいばん はやく ねます。",
+          "meaning": "Cada noche me acuesto temprano.",
+          "form": "present-affirmative"
         },
         {
-          "written": "きのうは 十一時に 寝ました。",
-          "reading": "きのうは じゅういちじに ねました。",
-          "meaning": "Ayer me acosté a las once."
+          "written": "日よう日は 一日中 寝ました。",
+          "reading": "にちようびは いちにちじゅう ねました。",
+          "meaning": "El domingo dormí todo el día.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "土よう日は 早く 寝ません。",
+          "reading": "どようびは はやく ねません。",
+          "meaning": "Los sábados no me acuesto temprano.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 子どもが 寝ませんでした。",
+          "reading": "きのうは こどもが ねませんでした。",
+          "meaning": "Ayer el niño no se durmió.",
+          "form": "past-negative"
         }
       ]
     },
@@ -548,12 +831,26 @@
         {
           "written": "先生に あいさつします。",
           "reading": "せんせいに あいさつします。",
-          "meaning": "Saludo al profesor."
+          "meaning": "Saludo al profesor.",
+          "form": "present-affirmative"
         },
         {
           "written": "あさ ともだちに あいさつしました。",
           "reading": "あさ ともだちに あいさつしました。",
-          "meaning": "Por la mañana saludé a un amigo."
+          "meaning": "Por la mañana saludé a un amigo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "かれは あいさつしません。",
+          "reading": "かれは あいさつしません。",
+          "meaning": "Él no saluda.",
+          "form": "present-negative"
+        },
+        {
+          "written": "けさは みんなに あいさつしませんでした。",
+          "reading": "けさは みんなに あいさつしませんでした。",
+          "meaning": "Esta mañana no saludé a todo el mundo.",
+          "form": "past-negative"
         }
       ]
     },
@@ -570,12 +867,26 @@
         {
           "written": "ははに 花を あげます。",
           "reading": "ははに はなを あげます。",
-          "meaning": "Le doy flores a mi madre."
+          "meaning": "Le doy flores a mi madre.",
+          "form": "present-affirmative"
         },
         {
           "written": "ともだちに おみやげを あげました。",
           "reading": "ともだちに おみやげを あげました。",
-          "meaning": "Le di un recuerdo del viaje a un amigo."
+          "meaning": "Le di un recuerdo del viaje a un amigo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "子どもに お金は あげません。",
+          "reading": "こどもに おかねは あげません。",
+          "meaning": "A los niños no les doy dinero.",
+          "form": "present-negative"
+        },
+        {
+          "written": "今年は ちちに プレゼントを あげませんでした。",
+          "reading": "ことしは ちちに プレゼントを あげませんでした。",
+          "meaning": "Este año no le di ningún regalo a mi padre.",
+          "form": "past-negative"
         }
       ]
     },
@@ -592,12 +903,26 @@
         {
           "written": "川べりを 歩きます。",
           "reading": "かわべりを あるきます。",
-          "meaning": "Camino por la orilla del río."
+          "meaning": "Camino por la orilla del río.",
+          "form": "present-affirmative"
         },
         {
           "written": "大学まで 歩きました。",
           "reading": "だいがくまで あるきました。",
-          "meaning": "Fui andando hasta la universidad."
+          "meaning": "Fui andando hasta la universidad.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "ちちは あまり 歩きません。",
+          "reading": "ちちは あまり あるきません。",
+          "meaning": "Mi padre no camina mucho.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは ぜんぜん 歩きませんでした。",
+          "reading": "きのうは ぜんぜん あるきませんでした。",
+          "meaning": "Ayer no caminé nada.",
+          "form": "past-negative"
         }
       ]
     },
@@ -614,12 +939,26 @@
         {
           "written": "机の 上に 辞書が あります。",
           "reading": "つくえの うえに じしょが あります。",
-          "meaning": "Hay un diccionario encima del escritorio."
+          "meaning": "Hay un diccionario encima del escritorio.",
+          "form": "present-affirmative"
         },
         {
-          "written": "あしたは やくそくが あります。",
-          "reading": "あしたは やくそくが あります。",
-          "meaning": "Mañana tengo un compromiso."
+          "written": "きのう 大学で コンサートが ありました。",
+          "reading": "きのう だいがくで コンサートが ありました。",
+          "meaning": "Ayer hubo un concierto en la universidad.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この へやには テレビが ありません。",
+          "reading": "この へやには テレビが ありません。",
+          "meaning": "En esta habitación no hay tele.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先しゅうは 授業が ありませんでした。",
+          "reading": "せんしゅうは じゅぎょうが ありませんでした。",
+          "meaning": "La semana pasada no hubo clase.",
+          "form": "past-negative"
         }
       ]
     },
@@ -634,14 +973,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "先生に 名前を 言います。",
-          "reading": "せんせいに なまえを いいます。",
-          "meaning": "Le digo mi nombre al profesor."
+          "written": "あした 家族に 言います。",
+          "reading": "あした かぞくに いいます。",
+          "meaning": "Mañana se lo digo a mi familia.",
+          "form": "present-affirmative"
         },
         {
-          "written": "本名を 言いませんでした。",
-          "reading": "ほんみょうを いいませんでした。",
-          "meaning": "No dije mi nombre real."
+          "written": "ともだちに 日本ごで 言いました。",
+          "reading": "ともだちに にほんごで いいました。",
+          "meaning": "Se lo dije a un amigo en japonés.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "ははには 言いません。",
+          "reading": "ははには いいません。",
+          "meaning": "A mi madre no se lo digo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "かいしゃの 人には 言いませんでした。",
+          "reading": "かいしゃの ひとには いいませんでした。",
+          "meaning": "A la gente de la empresa no se lo dije.",
+          "form": "past-negative"
         }
       ]
     },
@@ -658,12 +1011,26 @@
         {
           "written": "教室に 先生が います。",
           "reading": "きょうしつに せんせいが います。",
-          "meaning": "El profesor está en el aula."
+          "meaning": "El profesor está en el aula.",
+          "form": "present-affirmative"
         },
         {
-          "written": "へやに 子どもが います。",
-          "reading": "へやに こどもが います。",
-          "meaning": "Hay un niño en la habitación."
+          "written": "森の中に 白い犬が いました。",
+          "reading": "もりのなかに しろいいぬが いました。",
+          "meaning": "En el bosque había un perro blanco.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "日よう日は 教室に 学生が いません。",
+          "reading": "にちようびは きょうしつに がくせいが いません。",
+          "meaning": "Los domingos no hay estudiantes en el aula.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 図書館に 人が いませんでした。",
+          "reading": "きのうは としょかんに ひとが いませんでした。",
+          "meaning": "Ayer no había gente en la biblioteca.",
+          "form": "past-negative"
         }
       ]
     },
@@ -680,12 +1047,26 @@
         {
           "written": "試験を 受けます。",
           "reading": "しけんを うけます。",
-          "meaning": "Me presento a un examen."
+          "meaning": "Me presento a un examen.",
+          "form": "present-affirmative"
         },
         {
           "written": "和室で 授業を 受けました。",
           "reading": "わしつで じゅぎょうを うけました。",
-          "meaning": "Tuve clase en una sala de estilo japonés."
+          "meaning": "Tuve clase en una sala de estilo japonés.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "らい年は 試験を 受けません。",
+          "reading": "らいねんは しけんを うけません。",
+          "meaning": "El año que viene no me presento al examen.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先月は 日本ごの 授業を 受けませんでした。",
+          "reading": "せんげつは にほんごの じゅぎょうを うけませんでした。",
+          "meaning": "El mes pasado no fui a clases de japonés.",
+          "form": "past-negative"
         }
       ]
     },
@@ -700,14 +1081,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "赤ちゃんが 生まれました。",
-          "reading": "あかちゃんが うまれました。",
-          "meaning": "Ha nacido un bebé."
+          "written": "らい月 赤ちゃんが 生まれます。",
+          "reading": "らいげつ あかちゃんが うまれます。",
+          "meaning": "El mes que viene nace el bebé.",
+          "form": "present-affirmative"
         },
         {
           "written": "子犬が 三匹 生まれました。",
           "reading": "こいぬが さんびき うまれました。",
-          "meaning": "Han nacido tres cachorros."
+          "meaning": "Han nacido tres cachorros.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "赤ちゃんは まだ 生まれません。",
+          "reading": "あかちゃんは まだ うまれません。",
+          "meaning": "El bebé todavía no ha nacido.",
+          "form": "present-negative"
+        },
+        {
+          "written": "ちちは スペインでは 生まれませんでした。",
+          "reading": "ちちは スペインでは うまれませんでした。",
+          "meaning": "Mi padre no nació en España.",
+          "form": "past-negative"
         }
       ]
     },
@@ -722,14 +1117,28 @@
       "sourceId": "class-handouts",
       "examples": [
         {
-          "written": "ともだちに てがみを おくりました。",
-          "reading": "ともだちに てがみを おくりました。",
-          "meaning": "Le envié una carta a un amigo."
-        },
-        {
           "written": "日本の 家族に にもつを おくります。",
           "reading": "にほんの かぞくに にもつを おくります。",
-          "meaning": "Le envío un paquete a mi familia de Japón."
+          "meaning": "Le envío un paquete a mi familia de Japón.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "ともだちに てがみを おくりました。",
+          "reading": "ともだちに てがみを おくりました。",
+          "meaning": "Le envié una carta a un amigo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "今年は 年賀状を おくりません。",
+          "reading": "ことしは ねんがじょうを おくりません。",
+          "meaning": "Este año no envío postales de Año Nuevo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その 写真は おくりませんでした。",
+          "reading": "その しゃしんは おくりませんでした。",
+          "meaning": "Esa foto no la envié.",
+          "form": "past-negative"
         }
       ]
     },
@@ -746,12 +1155,26 @@
         {
           "written": "先生は 日本ごを おしえます。",
           "reading": "せんせいは にほんごを おしえます。",
-          "meaning": "La profesora enseña japonés."
+          "meaning": "La profesora enseña japonés.",
+          "form": "present-affirmative"
         },
         {
           "written": "ともだちに スペインごを おしえました。",
           "reading": "ともだちに スペインごを おしえました。",
-          "meaning": "Le enseñé español a un amigo."
+          "meaning": "Le enseñé español a un amigo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "わたしは えいごは おしえません。",
+          "reading": "わたしは えいごは おしえません。",
+          "meaning": "Yo no enseño inglés.",
+          "form": "present-negative"
+        },
+        {
+          "written": "かれは 名前を おしえませんでした。",
+          "reading": "かれは なまえを おしえませんでした。",
+          "meaning": "Él no me dijo su nombre.",
+          "form": "past-negative"
         }
       ]
     },
@@ -766,14 +1189,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "鉛筆で 馬を 描きます。",
-          "reading": "えんぴつで うまを かきます。",
-          "meaning": "Dibujo un caballo a lápiz."
+          "written": "鉛筆で 花を 描きます。",
+          "reading": "えんぴつで はなを かきます。",
+          "meaning": "Dibujo flores a lápiz.",
+          "form": "present-affirmative"
         },
         {
           "written": "日よう日に 山の えを 描きました。",
           "reading": "にちようびに やまの えを かきました。",
-          "meaning": "El domingo pinté un cuadro de la montaña."
+          "meaning": "El domingo pinté un cuadro de la montaña.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "人の えは 描きません。",
+          "reading": "ひとの えは かきません。",
+          "meaning": "No dibujo personas.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先月は えを 描きませんでした。",
+          "reading": "せんげつは えを かきませんでした。",
+          "meaning": "El mes pasado no pinté ningún cuadro.",
+          "form": "past-negative"
         }
       ]
     },
@@ -788,14 +1225,28 @@
       "sourceId": "class-handouts",
       "examples": [
         {
-          "written": "かさを かして ください。",
-          "reading": "かさを かして ください。",
-          "meaning": "¿Me prestas el paraguas?"
+          "written": "ともだちに じてん車を かします。",
+          "reading": "ともだちに じてんしゃを かします。",
+          "meaning": "Le presto la bici a un amigo.",
+          "form": "present-affirmative"
         },
         {
           "written": "ともだちに 本を 二冊 かしました。",
           "reading": "ともだちに ほんを にさつ かしました。",
-          "meaning": "Le presté dos libros a un amigo."
+          "meaning": "Le presté dos libros a un amigo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "お金は かしません。",
+          "reading": "おかねは かしません。",
+          "meaning": "No presto dinero.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その 人に かさを かしませんでした。",
+          "reading": "その ひとに かさを かしませんでした。",
+          "meaning": "A esa persona no le presté el paraguas.",
+          "form": "past-negative"
         }
       ]
     },
@@ -810,14 +1261,28 @@
       "sourceId": "class-handouts",
       "examples": [
         {
-          "written": "図書館で 本を かりました。",
-          "reading": "としょかんで ほんを かりました。",
-          "meaning": "Saqué un libro de la biblioteca."
+          "written": "ともだちに ノートを かります。",
+          "reading": "ともだちに ノートを かります。",
+          "meaning": "Le pido prestada la libreta a un amigo.",
+          "form": "present-affirmative"
         },
         {
-          "written": "ともだちに お金を かりました。",
-          "reading": "ともだちに おかねを かりました。",
-          "meaning": "Un amigo me prestó dinero."
+          "written": "図書館で 本を かりました。",
+          "reading": "としょかんで ほんを かりました。",
+          "meaning": "Saqué un libro de la biblioteca.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "お金は かりません。",
+          "reading": "おかねは かりません。",
+          "meaning": "No pido dinero prestado.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 辞書を かりませんでした。",
+          "reading": "きのうは じしょを かりませんでした。",
+          "meaning": "Ayer no tomé prestado el diccionario.",
+          "form": "past-negative"
         }
       ]
     },
@@ -834,12 +1299,26 @@
         {
           "written": "はさみで かみを きります。",
           "reading": "はさみで かみを きります。",
-          "meaning": "Corto el papel con las tijeras."
+          "meaning": "Corto el papel con las tijeras.",
+          "form": "present-affirmative"
         },
         {
           "written": "ナイフで パンを きりました。",
           "reading": "ナイフで パンを きりました。",
-          "meaning": "Corté el pan con un cuchillo."
+          "meaning": "Corté el pan con un cuchillo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "はさみでは パンを きりません。",
+          "reading": "はさみでは パンを きりません。",
+          "meaning": "El pan no lo corto con tijeras.",
+          "form": "present-negative"
+        },
+        {
+          "written": "ちちは 林檎を きりませんでした。",
+          "reading": "ちちは りんごを きりませんでした。",
+          "meaning": "Mi padre no cortó la manzana.",
+          "form": "past-negative"
         }
       ]
     },
@@ -856,12 +1335,26 @@
         {
           "written": "二つの 写真を 比べます。",
           "reading": "ふたつの しゃしんを くらべます。",
-          "meaning": "Comparo dos fotos."
+          "meaning": "Comparo dos fotos.",
+          "form": "present-affirmative"
         },
         {
           "written": "日本と スペインの りょうりを 比べました。",
           "reading": "にほんと スペインの りょうりを くらべました。",
-          "meaning": "Comparé la cocina japonesa con la española."
+          "meaning": "Comparé la cocina japonesa con la española.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "ほかの 人と 自分を 比べません。",
+          "reading": "ほかの ひとと じぶんを くらべません。",
+          "meaning": "No me comparo con los demás.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先生は 学生を 比べませんでした。",
+          "reading": "せんせいは がくせいを くらべませんでした。",
+          "meaning": "El profesor no comparó a los alumnos.",
+          "form": "past-negative"
         }
       ]
     },
@@ -876,14 +1369,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "先生が 辞書を くれました。",
-          "reading": "せんせいが じしょを くれました。",
-          "meaning": "El profesor me dio un diccionario."
+          "written": "ともだちは いつも おみやげを くれます。",
+          "reading": "ともだちは いつも おみやげを くれます。",
+          "meaning": "Mis amigos siempre me traen algún recuerdo de sus viajes.",
+          "form": "present-affirmative"
         },
         {
-          "written": "ははが かさを くれました。",
-          "reading": "ははが かさを くれました。",
-          "meaning": "Mi madre me dio un paraguas."
+          "written": "先生が 辞書を くれました。",
+          "reading": "せんせいが じしょを くれました。",
+          "meaning": "El profesor me dio un diccionario.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "ちちは お金を くれません。",
+          "reading": "ちちは おかねを くれません。",
+          "meaning": "Mi padre no me da dinero.",
+          "form": "present-negative"
+        },
+        {
+          "written": "かれは プレゼントを くれませんでした。",
+          "reading": "かれは プレゼントを くれませんでした。",
+          "meaning": "Él no me hizo ningún regalo.",
+          "form": "past-negative"
         }
       ]
     },
@@ -900,12 +1407,26 @@
         {
           "written": "日本ごの かん字に 苦しみます。",
           "reading": "にほんごの かんじに くるしみます。",
-          "meaning": "Sufro con los kanji del japonés."
+          "meaning": "Sufro con los kanji del japonés.",
+          "form": "present-affirmative"
         },
         {
-          "written": "聞き取りに 苦しみました。",
-          "reading": "ききとりに くるしみました。",
-          "meaning": "Me costó mucho la comprensión auditiva."
+          "written": "きょ年は 試験に 苦しみました。",
+          "reading": "きょねんは しけんに くるしみました。",
+          "meaning": "El año pasado sufrí con los exámenes.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "かん字には もう 苦しみません。",
+          "reading": "かんじには もう くるしみません。",
+          "meaning": "Con los kanji ya no sufro.",
+          "form": "present-negative"
+        },
+        {
+          "written": "この 宿題には 苦しみませんでした。",
+          "reading": "この しゅくだいには くるしみませんでした。",
+          "meaning": "Con estos deberes no sufrí.",
+          "form": "past-negative"
         }
       ]
     },
@@ -922,12 +1443,26 @@
         {
           "written": "授業で 答え合わせを します。",
           "reading": "じゅぎょうで こたえあわせを します。",
-          "meaning": "Corregimos las respuestas en clase."
+          "meaning": "Corregimos las respuestas en clase.",
+          "form": "present-affirmative"
         },
         {
           "written": "宿題の 答え合わせを しました。",
           "reading": "しゅくだいの こたえあわせを しました。",
-          "meaning": "Corregí las respuestas de los deberes."
+          "meaning": "Corregí las respuestas de los deberes.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "今日は 答え合わせを しません。",
+          "reading": "きょうは こたえあわせを しません。",
+          "meaning": "Hoy no corregimos las respuestas.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 試験の 答え合わせを しませんでした。",
+          "reading": "きのうは しけんの こたえあわせを しませんでした。",
+          "meaning": "Ayer no corregimos las respuestas del examen.",
+          "form": "past-negative"
         }
       ]
     },
@@ -944,12 +1479,26 @@
         {
           "written": "宿題を します。",
           "reading": "しゅくだいを します。",
-          "meaning": "Hago los deberes."
+          "meaning": "Hago los deberes.",
+          "form": "present-affirmative"
         },
         {
-          "written": "日よう日に ともだちと サッカーを します。",
-          "reading": "にちようびに ともだちと サッカーを します。",
-          "meaning": "El domingo juego al fútbol con amigos."
+          "written": "日よう日に ともだちと サッカーを しました。",
+          "reading": "にちようびに ともだちと サッカーを しました。",
+          "meaning": "El domingo jugué al fútbol con unos amigos.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "スポーツは しません。",
+          "reading": "スポーツは しません。",
+          "meaning": "No hago deporte.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは しごとを しませんでした。",
+          "reading": "きのうは しごとを しませんでした。",
+          "meaning": "Ayer no trabajé.",
+          "form": "past-negative"
         }
       ]
     },
@@ -966,12 +1515,26 @@
         {
           "written": "いすに 座ります。",
           "reading": "いすに すわります。",
-          "meaning": "Me siento en la silla."
+          "meaning": "Me siento en la silla.",
+          "form": "present-affirmative"
         },
         {
           "written": "子どもが 木の下に 座りました。",
           "reading": "こどもが きのしたに すわりました。",
-          "meaning": "El niño se sentó bajo el árbol."
+          "meaning": "El niño se sentó bajo el árbol.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "でん車では 座りません。",
+          "reading": "でんしゃでは すわりません。",
+          "meaning": "En el tren no me siento.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 一日中 座りませんでした。",
+          "reading": "きのうは いちにちじゅう すわりませんでした。",
+          "meaning": "Ayer no me senté en todo el día.",
+          "form": "past-negative"
         }
       ]
     },
@@ -988,12 +1551,26 @@
         {
           "written": "晩ご飯を 作ります。",
           "reading": "ばんごはんを つくります。",
-          "meaning": "Preparo la cena."
+          "meaning": "Preparo la cena.",
+          "form": "present-affirmative"
         },
         {
           "written": "日本の りょうりを 作りました。",
           "reading": "にほんの りょうりを つくりました。",
-          "meaning": "Hice un plato japonés."
+          "meaning": "Hice un plato japonés.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "あさごはんは 作りません。",
+          "reading": "あさごはんは つくりません。",
+          "meaning": "No me preparo el desayuno.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは ひるごはんを 作りませんでした。",
+          "reading": "きのうは ひるごはんを つくりませんでした。",
+          "meaning": "Ayer no hice la comida.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1010,12 +1587,26 @@
         {
           "written": "牛が 鳴きます。",
           "reading": "うしが なきます。",
-          "meaning": "La vaca muge."
+          "meaning": "La vaca muge.",
+          "form": "present-affirmative"
         },
         {
           "written": "子どもが 泣きました。",
           "reading": "こどもが なきました。",
-          "meaning": "El niño lloró."
+          "meaning": "El niño lloró.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この 赤ちゃんは 泣きません。",
+          "reading": "この あかちゃんは なきません。",
+          "meaning": "Este bebé no llora.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 子犬が 鳴きませんでした。",
+          "reading": "きのうは こいぬが なきませんでした。",
+          "meaning": "Ayer el cachorro no ladró.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1032,12 +1623,26 @@
         {
           "written": "先生に 日本ごを 習います。",
           "reading": "せんせいに にほんごを ならいます。",
-          "meaning": "Aprendo japonés con una profesora."
+          "meaning": "Aprendo japonés con una profesora.",
+          "form": "present-affirmative"
         },
         {
           "written": "ともだちに ダンスを 習いました。",
           "reading": "ともだちに ダンスを ならいました。",
-          "meaning": "Un amigo me enseñó a bailar."
+          "meaning": "Un amigo me enseñó a bailar.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "えいごは 習いません。",
+          "reading": "えいごは ならいません。",
+          "meaning": "No voy a clases de inglés.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きょ年は テニスを 習いませんでした。",
+          "reading": "きょねんは テニスを ならいませんでした。",
+          "meaning": "El año pasado no fui a clases de tenis.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1052,14 +1657,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "授業で 眠りました。",
-          "reading": "じゅぎょうで ねむりました。",
-          "meaning": "Me quedé dormido en clase."
-        },
-        {
           "written": "赤ちゃんは 一日中 眠ります。",
           "reading": "あかちゃんは いちにちじゅう ねむります。",
-          "meaning": "El bebé duerme todo el día."
+          "meaning": "El bebé duerme todo el día.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "授業で 眠りました。",
+          "reading": "じゅぎょうで ねむりました。",
+          "meaning": "Me quedé dormido en clase.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "子犬は よる 眠りません。",
+          "reading": "こいぬは よる ねむりません。",
+          "meaning": "El cachorro no duerme por la noche.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは あまり 眠りませんでした。",
+          "reading": "きのうは あまり ねむりませんでした。",
+          "meaning": "Ayer no dormí mucho.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1076,12 +1695,26 @@
         {
           "written": "授業が 始まります。",
           "reading": "じゅぎょうが はじまります。",
-          "meaning": "Empieza la clase."
+          "meaning": "Empieza la clase.",
+          "form": "present-affirmative"
         },
         {
-          "written": "コンサートは 七時に 始まります。",
-          "reading": "コンサートは しちじに はじまります。",
-          "meaning": "El concierto empieza a las siete."
+          "written": "コンサートは 七時に 始まりました。",
+          "reading": "コンサートは しちじに はじまりました。",
+          "meaning": "El concierto empezó a las siete.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "えいがは まだ 始まりません。",
+          "reading": "えいがは まだ はじまりません。",
+          "meaning": "La película todavía no empieza.",
+          "form": "present-negative"
+        },
+        {
+          "written": "授業は 九時に 始まりませんでした。",
+          "reading": "じゅぎょうは くじに はじまりませんでした。",
+          "meaning": "La clase no empezó a las nueve.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1098,12 +1731,26 @@
         {
           "written": "宿題を 始めます。",
           "reading": "しゅくだいを はじめます。",
-          "meaning": "Empiezo los deberes."
+          "meaning": "Empiezo los deberes.",
+          "form": "present-affirmative"
         },
         {
           "written": "先生が 授業を 始めました。",
           "reading": "せんせいが じゅぎょうを はじめました。",
-          "meaning": "El profesor empezó la clase."
+          "meaning": "El profesor empezó la clase.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "らい月まで 準備を 始めません。",
+          "reading": "らいげつまで じゅんびを はじめません。",
+          "meaning": "No empiezo los preparativos hasta el mes que viene.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは しごとを 始めませんでした。",
+          "reading": "きのうは しごとを はじめませんでした。",
+          "meaning": "Ayer no empecé a trabajar.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1120,12 +1767,26 @@
         {
           "written": "でんわで 家族と 話します。",
           "reading": "でんわで かぞくと はなします。",
-          "meaning": "Hablo con mi familia por teléfono."
+          "meaning": "Hablo con mi familia por teléfono.",
+          "form": "present-affirmative"
         },
         {
-          "written": "先生と 日本ごで 話しました。",
-          "reading": "せんせいと にほんごで はなしました。",
-          "meaning": "Hablé en japonés con la profesora."
+          "written": "ともだちと 日本ごで 話しました。",
+          "reading": "ともだちと にほんごで はなしました。",
+          "meaning": "Hablé en japonés con un amigo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "家族とは えいごで 話しません。",
+          "reading": "かぞくとは えいごで はなしません。",
+          "meaning": "Con mi familia no hablo en inglés.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは ちちと 話しませんでした。",
+          "reading": "きのうは ちちと はなしませんでした。",
+          "meaning": "Ayer no hablé con mi padre.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1140,14 +1801,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "たん生日に プレゼントを もらいました。",
-          "reading": "たんじょうびに プレゼントを もらいました。",
-          "meaning": "Me dieron un regalo por mi cumpleaños."
+          "written": "子どもは お年玉を もらいます。",
+          "reading": "こどもは おとしだまを もらいます。",
+          "meaning": "Los niños reciben dinero de Año Nuevo.",
+          "form": "present-affirmative"
         },
         {
           "written": "先生に 辞書を もらいました。",
           "reading": "せんせいに じしょを もらいました。",
-          "meaning": "Recibí un diccionario del profesor."
+          "meaning": "Recibí un diccionario del profesor.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "お客さんから お金は もらいません。",
+          "reading": "おきゃくさんから おかねは もらいません。",
+          "meaning": "No acepto dinero de los clientes.",
+          "form": "present-negative"
+        },
+        {
+          "written": "たん生日に プレゼントを もらいませんでした。",
+          "reading": "たんじょうびに プレゼントを もらいませんでした。",
+          "meaning": "Por mi cumpleaños no me hicieron ningún regalo.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1164,12 +1839,26 @@
         {
           "written": "えいごの てがみを 訳します。",
           "reading": "えいごの てがみを やくします。",
-          "meaning": "Traduzco una carta en inglés."
+          "meaning": "Traduzco una carta en inglés.",
+          "form": "present-affirmative"
         },
         {
           "written": "日本ごの うたを スペインごに 訳しました。",
           "reading": "にほんごの うたを スペインごに やくしました。",
-          "meaning": "Traduje una canción japonesa al español."
+          "meaning": "Traduje una canción japonesa al español.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "名前は 訳しません。",
+          "reading": "なまえは やくしません。",
+          "meaning": "Los nombres no se traducen.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その しんぶんは 訳しませんでした。",
+          "reading": "その しんぶんは やくしませんでした。",
+          "meaning": "Ese periódico no lo traduje.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1186,12 +1875,26 @@
         {
           "written": "授業を 録音します。",
           "reading": "じゅぎょうを ろくおんします。",
-          "meaning": "Grabo la clase."
+          "meaning": "Grabo la clase.",
+          "form": "present-affirmative"
         },
         {
           "written": "雨の音を 録音しました。",
           "reading": "あめのおとを ろくおんしました。",
-          "meaning": "Grabé el sonido de la lluvia."
+          "meaning": "Grabé el sonido de la lluvia.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "コンサートは 録音しません。",
+          "reading": "コンサートは ろくおんしません。",
+          "meaning": "Los conciertos no los grabo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうの 授業は 録音しませんでした。",
+          "reading": "きのうの じゅぎょうは ろくおんしませんでした。",
+          "meaning": "No grabé la clase de ayer.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1206,14 +1909,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "質問が 分かりました。",
-          "reading": "しつもんが わかりました。",
-          "meaning": "He entendido la pregunta."
+          "written": "ちちは えいごが すこし 分かります。",
+          "reading": "ちちは えいごが すこし わかります。",
+          "meaning": "Mi padre entiende un poco de inglés.",
+          "form": "present-affirmative"
         },
         {
-          "written": "先生の 日本ごが 分かりません。",
-          "reading": "せんせいの にほんごが わかりません。",
-          "meaning": "No entiendo el japonés de la profesora."
+          "written": "質問が 分かりました。",
+          "reading": "しつもんが わかりました。",
+          "meaning": "He entendido la pregunta.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この 宿題が 分かりません。",
+          "reading": "この しゅくだいが わかりません。",
+          "meaning": "No entiendo estos deberes.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうの 授業が 分かりませんでした。",
+          "reading": "きのうの じゅぎょうが わかりませんでした。",
+          "meaning": "No entendí la clase de ayer.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1228,14 +1945,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "先生の 名前を 覚えて います。",
-          "reading": "せんせいの なまえを おぼえて います。",
-          "meaning": "Recuerdo el nombre del profesor."
-        },
-        {
           "written": "かん字を たくさん 覚えて います。",
           "reading": "かんじを たくさん おぼえて います。",
-          "meaning": "Me sé muchos kanji."
+          "meaning": "Me sé muchos kanji.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "かれは わたしの たん生日を 覚えて いました。",
+          "reading": "かれは わたしの たんじょうびを おぼえて いました。",
+          "meaning": "Él se acordaba de mi cumpleaños.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "その 人の 名前は 覚えて いません。",
+          "reading": "その ひとの なまえは おぼえて いません。",
+          "meaning": "No recuerdo el nombre de esa persona.",
+          "form": "present-negative"
+        },
+        {
+          "written": "子どもは えいごの うたを 覚えて いませんでした。",
+          "reading": "こどもは えいごの うたを おぼえて いませんでした。",
+          "meaning": "El niño no se acordaba de la canción en inglés.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1252,12 +1983,26 @@
         {
           "written": "テニスが できます。",
           "reading": "テニスが できます。",
-          "meaning": "Sé jugar al tenis."
+          "meaning": "Sé jugar al tenis.",
+          "form": "present-affirmative"
         },
         {
           "written": "晩ご飯が できました。",
           "reading": "ばんごはんが できました。",
-          "meaning": "La cena está lista."
+          "meaning": "La cena está lista.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "わたしは ダンスが できません。",
+          "reading": "わたしは ダンスが できません。",
+          "meaning": "No sé bailar.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは 宿題が できませんでした。",
+          "reading": "きのうは しゅくだいが できませんでした。",
+          "meaning": "Ayer no pude hacer los deberes.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1272,14 +2017,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "難しい 試験で 心が 折れました。",
-          "reading": "むずかしい しけんで こころが おれました。",
-          "meaning": "Me desanimé con un examen difícil."
-        },
-        {
           "written": "長い 宿題で 心が 折れます。",
           "reading": "ながい しゅくだいで こころが おれます。",
-          "meaning": "Los deberes largos me desaniman."
+          "meaning": "Los deberes largos me desaniman.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "難しい 試験で 心が 折れました。",
+          "reading": "むずかしい しけんで こころが おれました。",
+          "meaning": "Me desanimé con un examen difícil.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "ははは しごとで 心が 折れません。",
+          "reading": "ははは しごとで こころが おれません。",
+          "meaning": "Mi madre no se desanima con el trabajo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうの 試験では 心が 折れませんでした。",
+          "reading": "きのうの しけんでは こころが おれませんでした。",
+          "meaning": "En el examen de ayer no me desanimé.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1296,12 +2055,26 @@
         {
           "written": "先生は 日本の りょうりを 召し上がります。",
           "reading": "せんせいは にほんの りょうりを めしあがります。",
-          "meaning": "La profesora come comida japonesa."
+          "meaning": "La profesora come comida japonesa.",
+          "form": "present-affirmative"
         },
         {
           "written": "お客さんが コーヒーを 召し上がりました。",
           "reading": "おきゃくさんが コーヒーを めしあがりました。",
-          "meaning": "El invitado tomó café."
+          "meaning": "El invitado tomó café.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "先生は おさけを 召し上がりません。",
+          "reading": "せんせいは おさけを めしあがりません。",
+          "meaning": "El profesor no bebe alcohol.",
+          "form": "present-negative"
+        },
+        {
+          "written": "お客さんは 肉を 召し上がりませんでした。",
+          "reading": "おきゃくさんは にくを めしあがりませんでした。",
+          "meaning": "El invitado no comió carne.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1318,12 +2091,26 @@
         {
           "written": "ちちが じてん車を 修理します。",
           "reading": "ちちが じてんしゃを しゅうりします。",
-          "meaning": "Mi padre arregla la bicicleta."
+          "meaning": "Mi padre arregla la bicicleta.",
+          "form": "present-affirmative"
         },
         {
           "written": "靴を 修理しました。",
           "reading": "くつを しゅうりしました。",
-          "meaning": "Arreglé los zapatos."
+          "meaning": "Arreglé los zapatos.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この みせでは パソコンを 修理しません。",
+          "reading": "この みせでは パソコンを しゅうりしません。",
+          "meaning": "En esta tienda no arreglan ordenadores.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その とけいは 修理しませんでした。",
+          "reading": "その とけいは しゅうりしませんでした。",
+          "meaning": "Ese reloj no lo arreglé.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1340,12 +2127,26 @@
         {
           "written": "先生は 授業を 準備します。",
           "reading": "せんせいは じゅぎょうを じゅんびします。",
-          "meaning": "El profesor prepara la clase."
+          "meaning": "El profesor prepara la clase.",
+          "form": "present-affirmative"
         },
         {
           "written": "晩ご飯を 準備しました。",
           "reading": "ばんごはんを じゅんびしました。",
-          "meaning": "Preparé la cena."
+          "meaning": "Preparé la cena.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "ちちは あさごはんを 準備しません。",
+          "reading": "ちちは あさごはんを じゅんびしません。",
+          "meaning": "Mi padre no prepara el desayuno.",
+          "form": "present-negative"
+        },
+        {
+          "written": "旅行の にもつを 準備しませんでした。",
+          "reading": "りょこうの にもつを じゅんびしませんでした。",
+          "meaning": "No preparé el equipaje del viaje.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1360,14 +2161,28 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "さむい あさは 運動しません。",
-          "reading": "さむい あさは うんどうしません。",
-          "meaning": "Las mañanas frías no hago ejercicio."
+          "written": "まい日 すこし 運動します。",
+          "reading": "まいにち すこし うんどうします。",
+          "meaning": "Hago un poco de ejercicio todos los días.",
+          "form": "present-affirmative"
         },
         {
-          "written": "子どもは 校庭で 運動します。",
-          "reading": "こどもは こうていで うんどうします。",
-          "meaning": "Los niños hacen ejercicio en el patio de la escuela."
+          "written": "日よう日に 川べりで 運動しました。",
+          "reading": "にちようびに かわべりで うんどうしました。",
+          "meaning": "El domingo hice ejercicio en la orilla del río.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "さむい あさは 運動しません。",
+          "reading": "さむい あさは うんどうしません。",
+          "meaning": "Las mañanas frías no hago ejercicio.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先しゅうは ぜんぜん 運動しませんでした。",
+          "reading": "せんしゅうは ぜんぜん うんどうしませんでした。",
+          "meaning": "La semana pasada no hice nada de ejercicio.",
+          "form": "past-negative"
         }
       ]
     },
@@ -1385,12 +2200,26 @@
         {
           "written": "まいばん 家族に でんわを かけます。",
           "reading": "まいばん かぞくに でんわを かけます。",
-          "meaning": "Cada noche llamo a mi familia."
+          "meaning": "Cada noche llamo a mi familia.",
+          "form": "present-affirmative"
         },
         {
           "written": "きのう 先生に でんわを かけました。",
           "reading": "きのう せんせいに でんわを かけました。",
-          "meaning": "Ayer llamé a la profesora."
+          "meaning": "Ayer llamé a la profesora.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "かれには でんわを かけません。",
+          "reading": "かれには でんわを かけません。",
+          "meaning": "A él no lo llamo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "きのうは ははに でんわを かけませんでした。",
+          "reading": "きのうは ははに でんわを かけませんでした。",
+          "meaning": "Ayer no llamé a mi madre.",
+          "form": "past-negative"
         }
       ]
     }

@@ -27,7 +27,7 @@ export interface ContentSource {
 }
 
 /** How the entries of a lexicon group conjugate; their examples then show the four polite forms. */
-export type Inflection = 'i-adjective' | 'na-adjective';
+export type Inflection = 'i-adjective' | 'na-adjective' | 'verb';
 
 export interface ContentGroup {
   readonly id: string;

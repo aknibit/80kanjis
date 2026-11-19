@@ -103,10 +103,11 @@
           "pattern": "\\S"
         },
         "inflection": {
-          "description": "Solo en secciones léxicas: cómo se conjugan las entradas del grupo. Sus ejemplos muestran entonces las cuatro formas corteses, en orden.",
+          "description": "Solo en secciones léxicas: cómo se conjugan las entradas del grupo (adjetivos い o な, o verbos en forma ます). Sus ejemplos muestran entonces las cuatro formas corteses, en orden.",
           "enum": [
             "i-adjective",
-            "na-adjective"
+            "na-adjective",
+            "verb"
           ]
         }
       },

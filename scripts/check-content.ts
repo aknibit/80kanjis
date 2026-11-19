@@ -1,7 +1,7 @@
 import { readFile, readdir } from 'node:fs/promises';
 import { kanjiSentencesFile, parseKanjiSentences, parseNavigation, parseStudyDocument } from '../src/lib/content.ts';
 import { parseCollection } from '../src/lib/collection.ts';
-import { createSiteVocabulary, exampleProblems, kanjiSentenceProblems } from '../src/lib/site-vocabulary.ts';
+import { createSiteVocabulary, exampleProblems, kanjiSentenceProblems, levelProblems } from '../src/lib/site-vocabulary.ts';
 import type { CounterDocument, LexiconDocument, StudyDocument } from '../src/content-types.ts';
 import type { CollectionDocument } from '../src/types.ts';
 
@@ -39,6 +39,10 @@ console.log(`Frases de los kanji: ${sentences.entries.length} kanji, ${sentences
 const exampleIssues = exampleProblems(lexicons, counters, vocabulary);
 if (exampleIssues.length > 0) throw new Error(`Ejemplos de las secciones (${exampleIssues.length}):\n${exampleIssues.join('\n')}`);
 console.log('Ejemplos de las secciones: solo usan palabras de la web.');
+// Each context only uses words as easy as what it illustrates, or easier.
+const levelIssues = levelProblems(collection, lexicons, counters, sentences, vocabulary);
+if (levelIssues.length > 0) throw new Error(`Frases con palabras más difíciles que lo que muestran (${levelIssues.length}):\n${levelIssues.join('\n')}`);
+console.log('Niveles: cada frase usa palabras de su dificultad o más fáciles.');
 
 const contentFiles = (await readdir(new URL('content/', root))).filter((file) => file.endsWith('.json'));
 for (const file of contentFiles) {

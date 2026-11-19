@@ -14,14 +14,19 @@ const sentenceEnd = /(?<=[。\uff1f\uff01])/u;
 /** The order in which a conjugating entry shows its examples: present above past, affirmative before negative. */
 /** The order of the course, which the examples follow: affirmative present and past, then negative present and past. */
 export const exampleForms: readonly ExampleForm[] = ['present-affirmative', 'past-affirmative', 'present-negative', 'past-negative'];
-const inflections: readonly Inflection[] = ['i-adjective', 'na-adjective'];
+const inflections: readonly Inflection[] = ['i-adjective', 'na-adjective', 'verb'];
 export const difficulties: readonly Difficulty[] = ['easy', 'medium', 'hard'];
 
 /**
- * The polite form as the course teaches it: たのしいです, たのしくないです, たのしかったです, たのしくなかったです and
- * べんりです, べんりではありません, べんりでした, べんりではありませんでした. いい conjugates from よい: よくないです.
+ * The polite form as the course teaches it: たのしいです, たのしくないです, たのしかったです, たのしくなかったです,
+ * べんりです, べんりではありません, べんりでした, べんりではありませんでした, and 起きます, 起きました, 起きません,
+ * 起きませんでした. いい conjugates from よい: よくないです.
  */
 export function politeForm(word: string, inflection: Inflection, form: ExampleForm): string {
+  if (inflection === 'verb') {
+    return word.replace(/ます$/u, '') + { 'present-affirmative': 'ます', 'past-affirmative': 'ました', 'present-negative': 'ません',
+      'past-negative': 'ませんでした' }[form];
+  }
   if (inflection === 'na-adjective') {
     return word + { 'present-affirmative': 'です', 'present-negative': 'ではありません', 'past-affirmative': 'でした',
       'past-negative': 'ではありませんでした' }[form];
@@ -33,8 +38,10 @@ export function politeForm(word: string, inflection: Inflection, form: ExampleFo
 
 /** The form closes one of the sentences, so べんりではありません does not match べんりではありませんでした. */
 function endsWithForm(sentence: string, words: string, inflection: Inflection, form: ExampleForm): boolean {
-  const clauses = sentence.replace(/\s/gu, '').split(sentenceEnd).map((clause) => clause.replace(/[。\uff1f\uff01]$/u, ''));
-  return words.split('／').some((word) => clauses.some((clause) => clause.endsWith(politeForm(word, inflection, form))));
+  // Katakana may stay in a reading (テニスを しました), so both sides compare in hiragana.
+  const kana = (text: string) => text.replace(/\s/gu, '').replace(/[ァ-ヶ]/gu, (character) => String.fromCharCode(character.charCodeAt(0) - 0x60));
+  const clauses = kana(sentence).split(sentenceEnd).map((clause) => clause.replace(/[。\uff1f\uff01]$/u, ''));
+  return kana(words).split('／').some((word) => clauses.some((clause) => clause.endsWith(kana(politeForm(word, inflection, form)))));
 }
 
 function check(condition: unknown, message: string): asserts condition {
@@ -240,7 +247,8 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
       if (entry.note !== undefined) text(entry.note);
       const inflection = groupInflections.get(entry.group);
       if (entry.examples !== undefined && inflection) {
-        // An adjective shows its four polite forms, in order, each closing its sentence in writing and in the reading.
+        // An adjective or a verb shows its four polite forms, in order, each closing its sentence in writing and in the
+        // reading: 起きます, 起きました, 起きません, 起きませんでした.
         const list = examples(entry.examples, true);
         check(list.map((example) => example.form).join() === exampleForms.join(),
           `Los ejemplos de ${entry.id} deben mostrar, en orden, presente y pasado afirmativos, y presente y pasado negativos.`);
@@ -248,10 +256,11 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
           check(endsWithForm(example.written, entry.written, inflection, example.form!)
             && endsWithForm(example.reading, entry.reading, inflection, example.form!), `Un ejemplo de ${entry.id} no termina con su forma.`);
         }
-      } else if (entry.examples !== undefined) {
+      }
+      if (entry.examples !== undefined && (!inflection || inflection === 'verb')) {
         // Each example shows the entry itself, conjugated or not: 起きます → 起きました, 写真を撮ります → 写真を 撮りました.
         const stems = entry.written.split('／').map((form) => form.replace(/\s/gu, '').replace(/ます$/u, ''));
-        for (const example of examples(entry.examples)) {
+        for (const example of examples(entry.examples, inflection === 'verb')) {
           check(stems.some((stem) => example.written.replace(/\s/gu, '').includes(stem)), `Un ejemplo de ${entry.id} no usa la entrada.`);
         }
       }
