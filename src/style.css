@@ -103,6 +103,9 @@
   /* Shadows */
   --search-shadow: #2a342004;
   --dialog-shadow: #23281a30;
+  /* Study surfaces (kanji rows, lists, cards, kana charts): a hairline outlines them, about the tone of the filter
+     borders, and a two-layer shadow lifts them off the page, as in the dark theme. */
+  --card-shadow: 0 0 0 1px #23281a1f, 0 2px 4px #23281a14, 0 6px 16px #23281a12;
 }
 :root[data-theme='dark'] {
   color-scheme: dark;
@@ -185,6 +188,9 @@
   --hard-tint: #36211e;
   --search-shadow: #0000001a;
   --dialog-shadow: #00000099;
+  /* A dark shadow alone barely shows on the dark page: a light hairline and a lit top edge outline the surface, and a
+     deeper shadow below lifts it. */
+  --card-shadow: 0 0 0 1px #ffffff1a, inset 0 1px 0 #ffffff0f, 0 2px 4px #00000080, 0 6px 16px #00000066;
 }
 
 * { box-sizing: border-box; }
@@ -341,6 +347,9 @@ h2 { margin: 0; font-size: 21px; font-weight: 550; letter-spacing: -.4px; }
 /* The last dot ends 3 px before the edge of its icon: the negative margin lines it up with the column edge. */
 .study-controls .difficulty-badge { justify-content: flex-end; padding: 0; }
 .study-controls .difficulty-icon { margin-inline-end: -3px; }
+/* The dots of the four columns end 8 px before the edge, a little apart from the rule between columns, and sit 2 px
+   above the centre of the button beside them. */
+.study-controls { margin-right: 8px; transform: translateY(-2px); }
 .collection-end { margin: 40px 0 44px; display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 13px; color: var(--end-text); }
 .collection-end > span:empty { width: 35px; height: 1px; background: var(--rule); }
 .collection-end > [lang='ja'] { color: var(--end-japanese); }
@@ -512,6 +521,11 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .lexicon-example-meaning { margin-top: 2px; font-size: 14px; line-height: 1.6; color: var(--meaning); }
 .lexicon-written { font-family: var(--japanese); font-size: 24px; font-weight: 500; line-height: 1.6; color: var(--accent); margin: 0; overflow-wrap: anywhere; }
 .lexicon-term .word-reading { margin: 2px 0 0; }
+/* Rows: the reading to the right of the word, on its baseline, as in the vocabulary of the kanji page; it drops below
+   when both do not fit. The romaji goes under both. */
+.lexicon-row .lexicon-term { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 14px; }
+.lexicon-row .lexicon-term .word-reading { margin: 0; }
+.lexicon-row .lexicon-term .entry-romaji { flex-basis: 100%; }
 .entry-romaji { font-size: 12px; color: var(--faint); line-height: 1.5; margin: 3px 0 0; }
 .lexicon-meaning { font-size: 16px; line-height: 1.65; color: var(--meaning-strong); margin: 0; }
 .entry-note { font-size: 13px; color: var(--body-soft); line-height: 1.6; margin: 6px 0 0; }
@@ -555,7 +569,9 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kana-chart-group { width: max-content; margin-left: auto; }
 .kana-chart-group + .kana-chart-group { margin-top: 18px; }
 .kana-chart-title { direction: ltr; margin: 0 0 8px; text-align: right; font-size: 13px; font-weight: 500; letter-spacing: 0; color: var(--body-soft); }
-.kana-chart-scroll { direction: rtl; width: fit-content; max-width: 100%; margin-left: auto; overflow-x: auto; scrollbar-width: thin; }
+/* The scroller would clip the shadow of the charts: it gets room for it on the sides and below, taken back from its
+   margins so the charts stay where they were. It spans the full width; each chart aligns itself to the right. */
+.kana-chart-scroll { direction: rtl; margin: 0 -8px -16px; padding: 0 8px 16px; overflow-x: auto; scrollbar-width: thin; }
 .kana-chart-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .kana-chart-surface { overflow: hidden; border-radius: 10px; background: var(--surface); }
 .kana-chart { width: calc(var(--kana-columns) * var(--kana-column-width)); min-width: calc(var(--kana-columns) * var(--kana-column-width)); border-collapse: collapse; table-layout: fixed; }
@@ -569,7 +585,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kana-hiragana { color: var(--accent); }
 .kana-katakana { color: var(--kanji-collection); }
 .counter-entry + .counter-entry { border-top: 1px solid var(--line); }
-.counter-summary { display: grid; grid-template-columns: minmax(0, 1fr) 220px auto 16px; align-items: center; gap: 18px; padding: 16px 20px; cursor: pointer; list-style: none; }
+.counter-summary { display: grid; grid-template-columns: minmax(0, 1fr) 260px auto 16px; align-items: center; gap: 18px; padding: 16px 20px; cursor: pointer; list-style: none; }
 .counter-summary::-webkit-details-marker, .lexicon-summary::-webkit-details-marker { display: none; }
 .counter-summary::after, .lexicon-summary::after { content: '+'; color: var(--accent); font-size: 22px; line-height: 1; text-align: center; }
 .counter-entry[open] > .counter-summary::after, .lexicon-details[open] > .lexicon-summary::after { content: '−'; }
@@ -616,6 +632,10 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .counter-sentence .counter-example-written { font-size: 16px; }
 .counter-question { background: var(--row-highlight); }
 .counter-table tbody tr:last-child > * { border-bottom: 0; }
+/* White on the off-white page alone was too faint: every study surface carries --card-shadow. The card and kana
+   lists are not surfaces themselves; their cards and charts are. */
+.study-row, .study-results, .lexicon-card, .kana-chart-surface { box-shadow: var(--card-shadow); }
+.study-results--cards, .study-results--kana { box-shadow: none; }
 
 @media (max-width: 1100px) {
   .shell { width: calc(100% - 64px); }
@@ -739,7 +759,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-block--vocabulary + .study-block--vocabulary { padding-top: 4px; }
   .study-meta, .study-block--kanji .study-content { display: contents; }
   .study-identity { grid-column: -2; grid-row: 1; justify-self: end; }
-  .study-controls { grid-column: -2; grid-row: 2; justify-self: end; margin: 0; }
+  .study-controls { grid-column: -2; grid-row: 2; justify-self: end; margin: 0; transform: none; }
   .study-block--vocabulary .study-content { grid-column: 1; grid-row: 1 / span 2; min-height: 0; }
   .study-block--kanji .kanji-character { grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; margin: 0; }
   .study-block--kanji .kanji-meanings { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
