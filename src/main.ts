@@ -5,7 +5,8 @@ import { createStudyCatalog } from './lib/study-catalog.ts';
 import { pronunciationSource, synthesizedSource } from './data/pronunciations.ts';
 import { setupPronunciation } from './pronunciation-ui.ts';
 import { setupKanjiDetails } from './kanji-ui.ts';
-import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDifficultyFilter, rowDifficultyFilters, type RowDifficultyFilter } from './lib/row-difficulty.ts';
+import { getRowDifficulty, getRowFilterState, matchesRowDifficulty } from './lib/row-difficulty.ts';
+import { setupDifficultySelector, type DifficultySelector } from './difficulty-selector.ts';
 import type { CollectionDocument, Kanji, StudyItem, StudyItemId } from './types.ts';
 import { loadNavigation, loadStudyDocument, resolveSection, sectionHref } from './lib/content.ts';
 import { renderStudyPage } from './content-ui.ts';
@@ -36,6 +37,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </header>
   <nav class="section-nav shell" id="section-nav" aria-label="Secciones de estudio"></nav>
   <main class="shell" id="main-content" tabindex="-1">
+    <div class="difficulty-selector" id="difficulty-selector" hidden></div>
     <div id="kanji-page">
     <section class="intro" aria-labelledby="page-title">
       <h1 id="page-title">80 kanjis.<span> 240 palabras.</span></h1>
@@ -53,13 +55,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         </div>
       </form>
 
-      <div class="collection-toolbar">
-        <div id="row-filters" class="row-filters" role="group" aria-label="Filtrar filas por dificultad" aria-describedby="row-filter-hint">
-          ${Object.entries(rowDifficultyFilters).map(([value, label]) => `<button type="button" class="row-filter" data-row-filter="${value}" aria-pressed="${value === 'all'}" aria-controls="kanji-grid" disabled${value === 'unrated' ? ' hidden' : ''}>${label} <span class="filter-count">—</span></button>`).join('')}
-        </div>
+      <div class="collection-toolbar collection-toolbar--count">
         <span id="result-count" role="status" aria-live="polite" aria-atomic="true">80 de 80 kanji</span>
+        <p id="row-filter-hint" class="filter-hint">La dificultad más alta de la fila decide. Fácil requiere las cuatro entradas en fácil.</p>
       </div>
-      <p id="row-filter-hint" class="filter-hint">La dificultad más alta de la fila decide. Fácil requiere las cuatro entradas en fácil.</p>
       <p id="collection-status" class="collection-status" role="status" aria-live="polite">Cargando la colección…</p>
       <p id="audio-status" class="audio-status" role="status" aria-live="polite"></p>
       <div id="kanji-grid" class="kanji-grid"></div>
@@ -82,6 +81,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>Una herramienta de consulta y estudio: kanji, contadores, kana, verbos, vocabulario, adjetivos y adverbios. Las nuevas secciones reúnen los apuntes organizados del primer curso y las tablas de referencia indicadas en cada página.</p>
     <p>80 kanji y tres ejemplos por carácter, con lecturas en hiragana y significados en español, a partir de <cite>80 kanjis x 3 palabras.pdf</cite>.</p>
     <p>Busca por carácter, palabra, lectura o significado. Puedes escribir sin tildes y usar hiragana o katakana. Las lecturas se muestran siempre junto a las palabras.</p>
+    <p>La dificultad que elijas arriba a la derecha vale para todas las secciones, y este navegador la recuerda para la próxima visita.</p>
     <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
     <p>En las fichas, uno, dos o tres puntos destacados indican fácil, medio y difícil. Tres puntos atenuados indican que la dificultad está sin marcar.</p>
     <p>En el vocabulario, el kanji de la fila aparece en verde, los otros de los 80 en azul y los avanzados en rojo. Pulsa cualquier kanji para consultar su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
@@ -98,6 +98,7 @@ const isKanjiPage = !new URL(window.location.href).searchParams.get('section')
 document.querySelector<HTMLElement>('#kanji-page')!.hidden = !isKanjiPage;
 document.querySelector<HTMLElement>('#study-page')!.hidden = isKanjiPage;
 setupThemeToggle(document.querySelector<HTMLButtonElement>('#theme-toggle')!);
+const difficulty = setupDifficultySelector(document.querySelector<HTMLElement>('#difficulty-selector')!);
 fitPlaceholder(document.querySelector<HTMLInputElement>('#search')!, 'Busca en japonés o español: kanji, lectura o significado…', 'Kanji, lectura o significado…');
 const aboutDialog = document.querySelector<HTMLDialogElement>('#about-dialog')!;
 document.querySelector('#open-about')!.addEventListener('click', () => aboutDialog.showModal());
@@ -115,7 +116,7 @@ function element<K extends keyof HTMLElementTagNameMap>(tag: K, className: strin
   return node;
 }
 
-function start(source: CollectionDocument) {
+function start(source: CollectionDocument, difficulty: DifficultySelector) {
   const kanji = collectionRows(source);
   const studyCatalog = createStudyCatalog(kanji);
   const input = document.querySelector<HTMLInputElement>('#search')!;
@@ -133,8 +134,6 @@ function start(source: CollectionDocument) {
   const studyRows = new Map(studyCatalog.rows.map((row) => [row.id, row]));
   const pronunciation = setupPronunciation(document.querySelector('#audio-status')!);
   const kanjiDetails = setupKanjiDetails(source);
-  let difficultyFilter = parseRowDifficultyFilter(new URLSearchParams(window.location.search).get('difficulty'));
-  const filterButtons = [...document.querySelectorAll<HTMLButtonElement>('[data-row-filter]')];
 
   function createStudyBlock(item: StudyItem, entry: Kanji, blockIndex: number): HTMLElement {
     const block = element('article', `study-block study-block--${item.type}`);
@@ -206,19 +205,10 @@ function start(source: CollectionDocument) {
     pronunciation.stop();
     document.querySelector<HTMLElement>('#audio-status')!.textContent = '';
     const candidates = search(input.value);
-    const filters = getRowFilterState(candidates.map((entry) => rowRatings.get(entry.id) ?? null), difficultyFilter);
-    if (filters.selected !== difficultyFilter) {
-      difficultyFilter = filters.selected;
-      updateUrl();
-    }
-    const results = candidates.filter((entry) => matchesRowDifficulty(rowRatings.get(entry.id) ?? null, difficultyFilter));
-    filterButtons.forEach((button) => {
-      const filter = button.dataset.rowFilter as RowDifficultyFilter;
-      button.setAttribute('aria-pressed', String(filter === difficultyFilter));
-      button.disabled = false;
-      button.hidden = !filters.available.includes(filter);
-      button.querySelector('.filter-count')!.textContent = String(filters.counts[filter]);
-    });
+    // The shared difficulty drop-down counts these results; Sin completar only appears while some row is incomplete.
+    const filters = getRowFilterState(candidates.map((entry) => rowRatings.get(entry.id) ?? null), difficulty.value);
+    difficulty.showCounts(Object.fromEntries(filters.available.map((filter) => [filter, filters.counts[filter]])));
+    const results = candidates.filter((entry) => matchesRowDifficulty(rowRatings.get(entry.id) ?? null, difficulty.value));
     grid.replaceChildren(...results.map(createRow));
     count.textContent = `${results.length} de ${kanji.length} kanji`;
     clearButton.hidden = !input.value;
@@ -233,8 +223,6 @@ function start(source: CollectionDocument) {
     const url = new URL(window.location.href);
     if (input.value.trim()) url.searchParams.set('q', input.value.trim());
     else url.searchParams.delete('q');
-    if (difficultyFilter !== 'all') url.searchParams.set('difficulty', difficultyFilter);
-    else url.searchParams.delete('difficulty');
     window.history.replaceState(null, '', url);
   }
   function updateSearch() {
@@ -263,13 +251,10 @@ function start(source: CollectionDocument) {
   document.querySelector('form')!.addEventListener('submit', (event) => event.preventDefault());
   clearButton.addEventListener('click', resetSearch);
   document.querySelector('#reset-search')!.addEventListener('click', () => {
-    difficultyFilter = 'all';
+    difficulty.select('all');
     resetSearch();
   });
-  filterButtons.forEach((button) => button.addEventListener('click', () => {
-    difficultyFilter = button.dataset.rowFilter as RowDifficultyFilter;
-    updateSearch();
-  }));
+  difficulty.connect(render, 'row-filter-hint');
   document.addEventListener('keydown', (event) => {
     const target = event.target as HTMLElement;
     if (event.key === '/' && !event.isComposing && !event.metaKey && !event.ctrlKey && !event.altKey && !document.querySelector('dialog[open]') && !target.closest('input, textarea, [contenteditable="true"]')) {
@@ -280,7 +265,7 @@ function start(source: CollectionDocument) {
   window.addEventListener('popstate', () => {
     clearTimeout(urlTimer);
     input.value = new URLSearchParams(window.location.search).get('q') ?? '';
-    difficultyFilter = parseRowDifficultyFilter(new URLSearchParams(window.location.search).get('difficulty'));
+    difficulty.followUrl();
     render();
   });
   document.querySelector<HTMLElement>('#collection-status')!.hidden = true;
@@ -302,10 +287,10 @@ async function boot() {
   }
   menu.append(primary);
   if (support.children.length > 0) menu.append(support);
-  if (section.kind === 'kanji') start(collection ?? await loadCollection());
+  if (section.kind === 'kanji') start(collection ?? await loadCollection(), difficulty);
   else {
     const content = await loadStudyDocument(section);
-    renderStudyPage(document.querySelector('#study-page')!, content, section);
+    renderStudyPage(document.querySelector('#study-page')!, content, section, difficulty);
     document.title = `${section.label} · 80kanjis`;
   }
 }

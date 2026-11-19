@@ -1,12 +1,21 @@
 import type { Difficulty, StudyItemId, StudyRow } from '../types.ts';
 
 export const rowDifficultyFilters = {
-  all: 'Todo', easy: 'Fácil', medium: 'Medio', hard: 'Difícil', unrated: 'Sin completar',
+  all: 'Todas', easy: 'Fácil', medium: 'Medio', hard: 'Difícil', unrated: 'Sin completar',
 } as const;
 export type RowDifficultyFilter = keyof typeof rowDifficultyFilters;
 
 export function parseRowDifficultyFilter(value: string | null): RowDifficultyFilter {
   return value !== null && Object.hasOwn(rowDifficultyFilters, value) ? value as RowDifficultyFilter : 'all';
+}
+
+/**
+ * The choice of the difficulty filter shared by every section when a page opens: a valid one in the address wins, so
+ * a shared link opens at its level; otherwise the one saved in the browser; otherwise Todas. Sin completar only exists
+ * on the kanji page; the other sections offer Todas and the three levels.
+ */
+export function initialRowDifficultyFilter(fromUrl: string | null, saved: string | null): RowDifficultyFilter {
+  return parseRowDifficultyFilter(fromUrl !== null && Object.hasOwn(rowDifficultyFilters, fromUrl) ? fromUrl : saved);
 }
 
 /** A row stays whole. Unmarked items cannot make a partially rated row easy. */

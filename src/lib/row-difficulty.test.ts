@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import type { Difficulty } from '../types.ts';
 import { studyCatalog } from '../../tests/collection-fixture.ts';
-import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDifficultyFilter } from './row-difficulty.ts';
+import { getRowDifficulty, getRowFilterState, initialRowDifficultyFilter, matchesRowDifficulty, parseRowDifficultyFilter } from './row-difficulty.ts';
 
 const row = studyCatalog.rows[0];
 const classify = (ratings: (Difficulty | null)[]) => getRowDifficulty(row, (id) => ratings[row.itemIds.indexOf(id)] ?? null);
@@ -73,4 +73,14 @@ test('URL filters validate known values and keep incomplete rows out of easy', (
   assert.equal(matchesRowDifficulty('medium', 'hard'), false);
   assert.equal(matchesRowDifficulty('hard', 'hard'), true);
   for (const value of ['easy', 'medium', 'hard', null] as const) assert.ok(matchesRowDifficulty(value, 'all'));
+});
+
+test('the difficulty shared by every section comes from a valid address, then from the browser, then Todas', () => {
+  assert.equal(initialRowDifficultyFilter('hard', 'easy'), 'hard');
+  assert.equal(initialRowDifficultyFilter('all', 'easy'), 'all');
+  assert.equal(initialRowDifficultyFilter(null, 'medium'), 'medium');
+  // A wrong address or a wrong saved value does not choose anything.
+  assert.equal(initialRowDifficultyFilter('unknown', 'easy'), 'easy');
+  assert.equal(initialRowDifficultyFilter(null, 'toString'), 'all');
+  assert.equal(initialRowDifficultyFilter(null, null), 'all');
 });

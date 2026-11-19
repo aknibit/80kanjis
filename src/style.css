@@ -244,20 +244,36 @@ kbd { font-family: inherit; font-size: 14px; min-width: 28px; height: 30px; disp
 .row-filter { display: inline-flex; flex-shrink: 0; align-items: center; gap: 8px; min-height: 40px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 5px; background: transparent; color: var(--text-soft); font-size: 14px; white-space: nowrap; }
 .row-filter:hover { background: var(--hover); }
 .row-filter[aria-pressed='true'] { color: var(--on-accent); background: var(--accent-fill); border-color: var(--accent-fill); }
-.row-filter[data-row-filter='medium'][aria-pressed='true'],
-.row-filter[data-difficulty-filter='medium'][aria-pressed='true'] { background: var(--medium-fill); border-color: var(--medium-fill); }
-.row-filter[data-row-filter='hard'][aria-pressed='true'],
-.row-filter[data-difficulty-filter='hard'][aria-pressed='true'] { background: var(--hard-fill); border-color: var(--hard-fill); }
-/* Counters: groups above, difficulty below; both combine. */
-.filter-rows { display: grid; gap: 6px; min-width: 0; }
-.filter-rows + .study-result-count { align-self: start; margin-top: 4px; }
-/* Difficulty filters, in Contadores and on the kanji page, have no title: each button keeps a tint of its level,
-   and fills with it when pressed. Todo and Sin completar stay neutral. */
-.row-filter:is([data-difficulty-filter], [data-row-filter]):not([aria-pressed='true']) { color: var(--text); background: var(--difficulty-all-tint); border-color: var(--difficulty-all-tint); }
-.row-filter:is([data-difficulty-filter='easy'], [data-row-filter='easy']):not([aria-pressed='true']) { background: var(--easy-tint); border-color: var(--easy-tint); }
-.row-filter:is([data-difficulty-filter='medium'], [data-row-filter='medium']):not([aria-pressed='true']) { background: var(--medium-tint); border-color: var(--medium-tint); }
-.row-filter:is([data-difficulty-filter='hard'], [data-row-filter='hard']):not([aria-pressed='true']) { background: var(--hard-tint); border-color: var(--hard-tint); }
-.row-filter:is([data-difficulty-filter], [data-row-filter]):not([aria-pressed='true']):hover { border-color: var(--line-strong); }
+/* The difficulty drop-down every section shares (difficulty-selector.ts), floated to the right of the page title.
+   The button takes the tint of the choice; each option keeps its own tint and fills with it when selected. Todas and
+   Sin completar stay neutral. */
+.difficulty-selector { position: relative; z-index: 5; float: right; display: grid; justify-items: end; gap: 6px; margin: 24px 0 12px 20px; }
+.difficulty-selector-label { font-size: 11px; font-weight: 650; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+.difficulty-trigger, .difficulty-option { --choice-tint: var(--difficulty-all-tint); --choice-fill: var(--accent-fill); --choice-dots: var(--no-difficulty); }
+:is(.difficulty-trigger, .difficulty-option)[data-difficulty-filter='easy'] { --choice-tint: var(--easy-tint); --choice-dots: var(--easy); }
+:is(.difficulty-trigger, .difficulty-option)[data-difficulty-filter='medium'] { --choice-tint: var(--medium-tint); --choice-fill: var(--medium-fill); --choice-dots: var(--medium); }
+:is(.difficulty-trigger, .difficulty-option)[data-difficulty-filter='hard'] { --choice-tint: var(--hard-tint); --choice-fill: var(--hard-fill); --choice-dots: var(--hard); }
+.difficulty-trigger { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 6px 8px 6px 12px; border: 1px solid var(--choice-tint); border-radius: 5px; background: var(--choice-tint); color: var(--text); font-size: 14px; white-space: nowrap; }
+.difficulty-trigger:hover, .difficulty-trigger[aria-expanded='true'] { border-color: var(--line-strong); }
+.difficulty-trigger:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.difficulty-chevron { width: 16px; height: 16px; color: var(--muted); transition: transform .15s; }
+.difficulty-trigger[aria-expanded='true'] .difficulty-chevron { transform: rotate(180deg); }
+.difficulty-choice-icon { display: inline-flex; flex-shrink: 0; justify-content: center; color: var(--choice-dots); }
+.difficulty-choice-icon .difficulty-icon { width: 24px; height: 12px; }
+.difficulty-trigger .difficulty-choice-icon:empty { display: none; }
+.difficulty-options { position: absolute; top: calc(100% + 6px); right: 0; display: grid; gap: 4px; min-width: 100%; width: max-content; margin: 0; padding: 6px; list-style: none; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-raised); box-shadow: 0 12px 32px var(--dialog-shadow); }
+.difficulty-option { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px 0 10px; border: 1px solid var(--choice-tint); border-radius: 5px; background: var(--choice-tint); color: var(--text); font-size: 14px; white-space: nowrap; cursor: pointer; user-select: none; }
+.difficulty-option:hover { border-color: var(--line-strong); }
+.difficulty-option[aria-selected='true'] { border-color: var(--choice-fill); background: var(--choice-fill); color: var(--on-accent); }
+.difficulty-option[aria-selected='true'] .difficulty-choice-icon { color: currentColor; }
+.difficulty-option .filter-count { justify-self: end; }
+/* The option the arrow keys reach, only while the keyboard drives the list. */
+.difficulty-trigger:focus-visible + .difficulty-options .is-active { outline: 2px solid currentColor; outline-offset: -4px; }
+/* The page content goes back to the full width below the drop-down. */
+.collection, .study-collection { clear: both; }
+/* The kanji page: its count, and how a row gets its difficulty. */
+.collection-toolbar--count { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+.collection-toolbar--count .filter-hint { margin: 0; }
 .row-filter:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
 .filter-count { font-size: 12px; opacity: .85; font-variant-numeric: tabular-nums; }
 .filter-hint { margin: 0 0 10px; color: var(--muted); font-size: 12px; line-height: 1.5; }
@@ -638,6 +654,10 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-collection--cards .row-filters { gap: 6px; }
   .study-collection--cards .row-filter { gap: 6px; min-height: 36px; padding: 5px 10px; font-size: 13px; }
   .study-collection--cards .study-result-count { margin-top: 0; }
+  /* The drop-down keeps to the intro's top padding; its list grows wide enough for a thumb. */
+  .difficulty-selector { gap: 4px; margin: 20px 0 10px 12px; }
+  .difficulty-selector-label { font-size: 10px; letter-spacing: 1.4px; }
+  .difficulty-options { min-width: 200px; }
   /* Two columns down to 320 px: 2 × 132 px + the gap fit in its 284 px. */
   .study-results--cards { --card-min: 132px; }
   .lexicon-card { --card-pad: 12px; padding-top: 14px; }
@@ -696,4 +716,6 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-action { position: relative; }
   .study-action::after { content: ''; position: absolute; inset: -7px -2px; }
   .study-guides > summary, .study-sources > summary { padding-block: 12px; }
+  /* The difficulty drop-down and its options are full 44 px targets. */
+  .difficulty-trigger, .difficulty-option { min-height: 44px; }
 }

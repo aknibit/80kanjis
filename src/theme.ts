@@ -1,7 +1,7 @@
 /**
  * Light/dark toggle. The inline script in index.html applies the saved or system theme
  * before the first paint; keep its storage key and values in sync with this module.
- * The theme preference is the only thing this site stores in the browser (see AGENTS.md).
+ * With the shared difficulty (difficulty-selector.ts), it is the only thing this site stores in the browser (see AGENTS.md).
  */
 type Theme = 'light' | 'dark';
 

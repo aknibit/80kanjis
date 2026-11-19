@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { exampleForms, filterByGroupAndDifficulty, parseDifficultyFilter, parseNavigation, parseStudyDocument, politeForm, resolveSection, sectionHref, searchContent, shuffled, loadNavigation, loadStudyDocument } from './content.ts';
+import { exampleForms, filterByGroupAndDifficulty, parseNavigation, parseStudyDocument, politeForm, resolveSection, sectionHref, searchContent, shuffled, loadNavigation, loadStudyDocument } from './content.ts';
 import type { StudyDocument, CounterDocument, KanaDocument, LexiconDocument } from '../content-types.ts';
 
 const root = new URL('../../public/', import.meta.url);
@@ -225,8 +225,6 @@ test('counter group and difficulty filters combine, and each counts what the oth
   // Kana has no difficulties and keeps filtering by group only.
   assert.equal(filterByGroupAndDifficulty(kana.entries, 'basic', 'all').entries.length, 46);
   assert.equal(filterByGroupAndDifficulty(kana.entries, 'basic', 'easy').entries.length, 0);
-  assert.equal(parseDifficultyFilter('hard'), 'hard');
-  for (const value of ['unrated', 'all', '', null]) assert.equal(parseDifficultyFilter(value), 'all');
 });
 
 test('kana covers the basic, voiced and contracted sounds without conflating duplicate romanizations', () => {

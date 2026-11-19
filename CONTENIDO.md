@@ -186,6 +186,6 @@ Revisa también los cambios de significado y pronunciación: una validación est
 
 ## URLs estáticas
 
-La página de entrada sigue siendo la colección de 80 kanji. Las otras secciones usan `?section=counters`, `?section=kana`, `?section=verbs`, `?section=vocabulary` y `?section=modifiers`. `q` conserva la búsqueda, `group` el filtro de las secciones nuevas y, en Contadores, Verbos, Vocabulario y Adjetivos y adverbios, `difficulty` el de dificultad (`?section=vocabulary&group=topic-5&difficulty=easy`).
+La página de entrada sigue siendo la colección de 80 kanji. Las otras secciones usan `?section=counters`, `?section=kana`, `?section=verbs`, `?section=vocabulary` y `?section=modifiers`. `q` conserva la búsqueda, `group` el filtro de las secciones nuevas y `difficulty` el de dificultad (`?section=vocabulary&group=topic-5&difficulty=easy`). La dificultad es la misma en toda la web y el navegador la recuerda: una dirección con un nivel válido la cambia para todas las secciones.
 
 Todas usan el mismo `index.html`. Se pueden abrir, compartir y recargar desde un subdirectorio de GitHub Pages o un CDN, sin rutas de servidor ni reglas de reescritura.

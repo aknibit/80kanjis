@@ -1,6 +1,7 @@
 import type { ContentEntry, ContentGroup, CounterEntry, CounterExample, ExampleForm, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
 import type { Difficulty } from './types.ts';
-import { difficulties, filterByGroupAndDifficulty, parseDifficultyFilter, searchContent, shuffled, type DifficultyFilter } from './lib/content.ts';
+import { difficulties, filterByGroupAndDifficulty, searchContent, shuffled, type DifficultyFilter } from './lib/content.ts';
+import type { DifficultySelector } from './difficulty-selector.ts';
 import { difficultyIcon, difficultyLabels } from './lib/difficulty.ts';
 import { setupMasonry } from './masonry.ts';
 import { fitPlaceholder } from './search-placeholder.ts';
@@ -258,7 +259,7 @@ function renderSources(data: StudyDocument): HTMLElement {
   return details;
 }
 
-export function renderStudyPage(host: HTMLElement, data: StudyDocument, section: NavigationSection): void {
+export function renderStudyPage(host: HTMLElement, data: StudyDocument, section: NavigationSection, difficulty: DifficultySelector): void {
   const intro = node('section', 'intro');
   const title = node('h1', '', data.title);
   title.id = 'study-page-title';
@@ -289,16 +290,10 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   filters.setAttribute('role', 'group'); filters.setAttribute('aria-label', 'Filtrar por grupo');
   const count = node('span', 'study-result-count');
   count.setAttribute('role', 'status'); count.setAttribute('aria-live', 'polite'); count.setAttribute('aria-atomic', 'true');
-  // Counters and lexicon sections also filter by difficulty, in a second row that combines with the groups: easy
-  // objects. The row has no visible title: its buttons take the tint of their level, like the difficulty dots.
+  // Counters and lexicon sections also filter by difficulty, with the drop-down that every section shares
+  // (difficulty-selector.ts). It combines with the groups: easy objects.
   const leveled = data.kind === 'counters' || data.kind === 'lexicon';
-  const difficultyFilters = node('div', 'row-filters difficulty-filters');
-  if (leveled) {
-    const rows = node('div', 'filter-rows');
-    difficultyFilters.setAttribute('role', 'group'); difficultyFilters.setAttribute('aria-label', 'Filtrar por dificultad');
-    rows.append(filters, difficultyFilters);
-    toolbar.append(rows, count);
-  } else toolbar.append(filters, count);
+  toolbar.append(filters, count);
   const results = node(data.kind === 'lexicon' ? 'ul' : 'div', `study-results study-results--${data.kind}`);
   if (cards) results.classList.add('study-results--cards');
   // Every row keeps a column for + / − when some entry opens, so meanings and tags stay aligned.
@@ -325,9 +320,7 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   const randomOrder = cards ? shuffled<ContentEntry>(data.entries) : data.entries;
   const placeCards = cards ? setupMasonry(results) : undefined;
   const filterButtons = new Map<string, HTMLButtonElement>();
-  const difficultyButtons = new Map<DifficultyFilter, HTMLButtonElement>();
   let selectedGroup = 'all';
-  let selectedDifficulty: DifficultyFilter = 'all';
   let urlTimer: ReturnType<typeof setTimeout> | undefined;
   const filterButton = (label: string, onClick: () => void) => {
     const button = node('button', 'row-filter');
@@ -342,35 +335,26 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     button.dataset.contentGroup = group.id;
     filters.append(button); filterButtons.set(group.id, button);
   }
-  if (leveled) {
-    for (const level of ['all', ...difficulties] as const) {
-      const button = filterButton(level === 'all' ? 'Todo' : difficultyLabels[level], () => { selectedDifficulty = level; });
-      button.dataset.difficultyFilter = level;
-      difficultyFilters.append(button); difficultyButtons.set(level, button);
-    }
-  }
 
   function updateUrl() {
     clearTimeout(urlTimer);
     const url = new URL(window.location.href);
     if (input.value.trim()) url.searchParams.set('q', input.value.trim()); else url.searchParams.delete('q');
     if (selectedGroup !== 'all') url.searchParams.set('group', selectedGroup); else url.searchParams.delete('group');
-    if (selectedDifficulty !== 'all') url.searchParams.set('difficulty', selectedDifficulty); else url.searchParams.delete('difficulty');
     window.history.replaceState(null, '', url);
   }
 
   function render() {
     const matching = searchContent<ContentEntry>(selectedGroup === 'all' ? randomOrder : data.entries, input.value);
     // Each button counts what it would show with the other filter: Objetos counts easy objects while Fácil is on.
-    const { entries, groupCounts, difficultyCounts } = filterByGroupAndDifficulty(matching, selectedGroup, selectedDifficulty);
+    // Sin completar only exists on the kanji page: here it shows everything, and the shared drop-down falls back to Todas.
+    const level: DifficultyFilter = leveled && difficulty.value !== 'unrated' ? difficulty.value : 'all';
+    const { entries, groupCounts, difficultyCounts } = filterByGroupAndDifficulty(matching, selectedGroup, level);
     for (const [id, button] of filterButtons) {
       button.setAttribute('aria-pressed', String(id === selectedGroup));
       button.querySelector('.filter-count')!.textContent = String(groupCounts(id));
     }
-    for (const [id, button] of difficultyButtons) {
-      button.setAttribute('aria-pressed', String(id === selectedDifficulty));
-      button.querySelector('.filter-count')!.textContent = String(difficultyCounts(id));
-    }
+    if (leveled) difficulty.showCounts(Object.fromEntries((['all', ...difficulties] as const).map((id) => [id, difficultyCounts(id)])));
     const fragment = document.createDocumentFragment();
     if (data.kind === 'kana') {
       for (const group of data.groups) {
@@ -395,12 +379,11 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     const params = new URL(window.location.href).searchParams;
     input.value = params.get('q') ?? '';
     selectedGroup = groups.has(params.get('group') ?? '') ? params.get('group')! : 'all';
-    selectedDifficulty = leveled ? parseDifficultyFilter(params.get('difficulty')) : 'all';
     render();
   }
   function clearSearch() { input.value = ''; render(); updateUrl(); input.focus(); }
   clear.addEventListener('click', clearSearch);
-  reset.addEventListener('click', () => { selectedGroup = 'all'; selectedDifficulty = 'all'; clearSearch(); });
+  reset.addEventListener('click', () => { selectedGroup = 'all'; if (leveled) difficulty.select('all'); clearSearch(); });
   form.addEventListener('submit', (event) => event.preventDefault());
   input.addEventListener('input', (event) => {
     if (event instanceof InputEvent && event.isComposing) return;
@@ -415,6 +398,7 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
       event.preventDefault(); input.focus();
     }
   });
-  window.addEventListener('popstate', () => { clearTimeout(urlTimer); restoreUrl(); });
+  window.addEventListener('popstate', () => { clearTimeout(urlTimer); if (leveled) difficulty.followUrl(); restoreUrl(); });
+  if (leveled) difficulty.connect(render);
   restoreUrl();
 }

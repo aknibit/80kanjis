@@ -363,10 +363,6 @@ export function searchContent<T extends ContentEntry>(entries: readonly T[], que
 
 export type DifficultyFilter = Difficulty | 'all';
 
-export function parseDifficultyFilter(value: string | null): DifficultyFilter {
-  return difficulties.includes(value as Difficulty) ? value as Difficulty : 'all';
-}
-
 /**
  * Group and difficulty filter together (easy objects). Each filter counts what the other one lets through, so its
  * numbers say how many entries a click would show; `entries` are the ones that pass both.
