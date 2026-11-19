@@ -1,4 +1,5 @@
 import type { ContentEntry, ContentGroup, CounterEntry, CounterExample, ExampleForm, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
+import type { Difficulty } from './types.ts';
 import { difficulties, filterByGroupAndDifficulty, parseDifficultyFilter, searchContent, shuffled, type DifficultyFilter } from './lib/content.ts';
 import { difficultyIcon, difficultyLabels } from './lib/difficulty.ts';
 import { setupMasonry } from './masonry.ts';
@@ -34,6 +35,18 @@ const formLabels: Record<ExampleForm, string> = {
   'past-negative': 'Pasado negativo',
 };
 
+/** The dots of the kanji cards, named for screen readers and in a tooltip. */
+function difficultyBadge(difficulty: Difficulty, className: string): HTMLElement {
+  const level = difficultyLabels[difficulty];
+  const badge = node('span', `difficulty-badge ${className}`);
+  badge.innerHTML = difficultyIcon(difficulty);
+  badge.dataset.difficulty = difficulty;
+  badge.title = `Dificultad: ${level}`;
+  badge.setAttribute('role', 'img');
+  badge.setAttribute('aria-label', `Dificultad: ${level}`);
+  return badge;
+}
+
 /** The example or sentence of a form: written, its reading in kana and the translation, one under the other. */
 function renderCounterExample(example: CounterExample, kind: 'example' | 'sentence'): HTMLElement {
   const cell = node('td', `counter-${kind}`);
@@ -58,14 +71,7 @@ function renderCounter(entry: CounterEntry): HTMLElement {
   endings.append(node('span', 'counter-endings-label', 'Terminaciones'), endingList);
   // Its difficulty, with the dots of the kanji cards, above the number of forms.
   const meta = node('span', 'counter-meta');
-  const level = difficultyLabels[entry.difficulty];
-  const badge = node('span', 'difficulty-badge counter-difficulty');
-  badge.innerHTML = difficultyIcon(entry.difficulty);
-  badge.dataset.difficulty = entry.difficulty;
-  badge.title = `Dificultad: ${level}`;
-  badge.setAttribute('role', 'img');
-  badge.setAttribute('aria-label', `Dificultad: ${level}`);
-  meta.append(badge, node('span', 'counter-form-count', `${entry.forms.length} formas`));
+  meta.append(difficultyBadge(entry.difficulty, 'counter-difficulty'), node('span', 'counter-form-count', `${entry.forms.length} formas`));
   summary.append(name, endings, meta);
   const body = node('div', 'counter-body');
   for (const note of entry.notes) body.append(node('p', 'counter-note', note));
@@ -135,14 +141,22 @@ function renderWord(entry: LexiconEntry, group: string | undefined, card = false
   explanation.append(slashed(line, 'lexicon-meaning', entry.meaning));
   if (entry.note) explanation.append(slashed(line, 'entry-note', entry.note));
   const tags = group === undefined ? [] : [node('span', 'entry-group', group)];
+  // Its difficulty: in the upper-right corner of a card, read after the meaning; in a row, above the group tag, like
+  // the dots of a counter above its number of forms.
+  let extras = [difficultyBadge(entry.difficulty, 'lexicon-difficulty'), ...tags];
+  if (!card) {
+    const meta = node('span', 'lexicon-meta');
+    meta.append(...extras);
+    extras = [meta];
+  }
   if (!opens) {
-    row.append(term, explanation, ...tags);
+    row.append(term, explanation, ...extras);
     return row;
   }
   row.classList.add('lexicon-row--opens');
   const details = node('details', 'lexicon-details');
   const summary = node('summary', 'lexicon-summary');
-  summary.append(term, explanation, ...tags);
+  summary.append(term, explanation, ...extras);
   const body = node('div', 'lexicon-body');
   // The four forms of an adjective read as a table: present above past, affirmative to the left of negative.
   const list = node('ul', entry.examples![0].form ? 'lexicon-examples lexicon-examples--forms' : 'lexicon-examples');
@@ -275,9 +289,9 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   filters.setAttribute('role', 'group'); filters.setAttribute('aria-label', 'Filtrar por grupo');
   const count = node('span', 'study-result-count');
   count.setAttribute('role', 'status'); count.setAttribute('aria-live', 'polite'); count.setAttribute('aria-atomic', 'true');
-  // Counters also filter by difficulty, in a second row that combines with the groups: easy objects. The row has
-  // no visible title: its buttons take the tint of their level, like the difficulty dots.
-  const leveled = data.kind === 'counters';
+  // Counters and lexicon sections also filter by difficulty, in a second row that combines with the groups: easy
+  // objects. The row has no visible title: its buttons take the tint of their level, like the difficulty dots.
+  const leveled = data.kind === 'counters' || data.kind === 'lexicon';
   const difficultyFilters = node('div', 'row-filters difficulty-filters');
   if (leveled) {
     const rows = node('div', 'filter-rows');

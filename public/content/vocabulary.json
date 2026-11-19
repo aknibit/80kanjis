@@ -80,6 +80,7 @@
       "romaji": "hito",
       "meaning": "persona",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -89,6 +90,7 @@
       "romaji": "kata",
       "meaning": "persona",
       "group": "topic-1",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "forma respetuosa"
     },
@@ -99,6 +101,7 @@
       "romaji": "kazoku",
       "meaning": "familia",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "note": "la propia"
     },
@@ -109,6 +112,7 @@
       "romaji": "gokazoku",
       "meaning": "familia",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "de otra persona, cortés"
     },
@@ -119,6 +123,7 @@
       "romaji": "minasan",
       "meaning": "todos ustedes",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -128,6 +133,7 @@
       "romaji": "hoka no hito",
       "meaning": "otra persona / los demás",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -137,6 +143,7 @@
       "romaji": "okyakusan",
       "meaning": "cliente/invitado",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -146,6 +153,7 @@
       "romaji": "ten'in",
       "meaning": "dependiente/a",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -155,6 +163,7 @@
       "romaji": "gijutsusha",
       "meaning": "técnico/a, ingeniero/a",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -164,6 +173,7 @@
       "romaji": "bengoshi",
       "meaning": "abogado/a",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -173,6 +183,7 @@
       "romaji": "jibun",
       "meaning": "uno mismo",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "reflexivo, no simple sinónimo de わたし"
     },
@@ -183,6 +194,7 @@
       "romaji": "boku",
       "meaning": "yo",
       "group": "topic-1",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "uso principalmente masculino e informal"
     },
@@ -193,6 +205,7 @@
       "romaji": "uchi",
       "meaning": "casa/grupo propio",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "家 para la casa y 内 para el grupo; en ciertos dialectos, «yo», escrito en kana"
     },
@@ -203,6 +216,7 @@
       "romaji": "watashi",
       "meaning": "yo",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -212,6 +226,7 @@
       "romaji": "watashitachi",
       "meaning": "nosotros/as",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -221,6 +236,7 @@
       "romaji": "anata",
       "meaning": "tú/usted",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "se evita si se sabe el nombre: se usa el nombre con さん"
     },
@@ -231,6 +247,7 @@
       "romaji": "minna",
       "meaning": "todos",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "note": "informal; 皆さん al dirigirse a un grupo"
     },
@@ -241,6 +258,7 @@
       "romaji": "gakusei",
       "meaning": "estudiante",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -250,6 +268,7 @@
       "romaji": "daigakusei",
       "meaning": "estudiante universitario/a",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -259,6 +278,7 @@
       "romaji": "isha",
       "meaning": "médico/a",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -268,6 +288,7 @@
       "romaji": "kaishain",
       "meaning": "empleado/a de una empresa",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -277,6 +298,7 @@
       "romaji": "ginkouin",
       "meaning": "empleado/a de banca",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -286,6 +308,7 @@
       "romaji": "enjinia",
       "meaning": "ingeniero/a",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -295,6 +318,7 @@
       "romaji": "tomodachi",
       "meaning": "amigo/a",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -304,6 +328,7 @@
       "romaji": "kare",
       "meaning": "él; novio",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -313,6 +338,7 @@
       "romaji": "kanojo",
       "meaning": "ella; novia",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -322,6 +348,7 @@
       "romaji": "chichi",
       "meaning": "padre",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "note": "el propio, al hablar con otros"
     },
@@ -332,6 +359,7 @@
       "romaji": "haha",
       "meaning": "madre",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "note": "la propia, al hablar con otros"
     },
@@ -342,6 +370,7 @@
       "romaji": "otousan",
       "meaning": "padre",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "el de otra persona; también para llamar al propio"
     },
@@ -352,6 +381,7 @@
       "romaji": "okaasan",
       "meaning": "madre",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "la de otra persona; también para llamar a la propia"
     },
@@ -362,6 +392,7 @@
       "romaji": "otto",
       "meaning": "marido",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "el propio"
     },
@@ -372,6 +403,7 @@
       "romaji": "shujin",
       "meaning": "marido",
       "group": "topic-1",
+      "difficulty": "hard",
       "sourceId": "class-handouts",
       "note": "el propio; más tradicional que おっと"
     },
@@ -382,6 +414,7 @@
       "romaji": "goshujin",
       "meaning": "marido",
       "group": "topic-1",
+      "difficulty": "hard",
       "sourceId": "class-handouts",
       "note": "el de otra persona"
     },
@@ -392,6 +425,7 @@
       "romaji": "tsuma",
       "meaning": "esposa",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "la propia"
     },
@@ -402,6 +436,7 @@
       "romaji": "kanai",
       "meaning": "esposa",
       "group": "topic-1",
+      "difficulty": "hard",
       "sourceId": "class-handouts",
       "note": "la propia; más tradicional que つま"
     },
@@ -412,6 +447,7 @@
       "romaji": "okusan",
       "meaning": "esposa",
       "group": "topic-1",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "la de otra persona"
     },
@@ -422,6 +458,7 @@
       "romaji": "nihonjin",
       "meaning": "japonés/japonesa (persona)",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -431,6 +468,7 @@
       "romaji": "supeinjin",
       "meaning": "español/a (persona)",
       "group": "topic-1",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -440,6 +478,7 @@
       "romaji": "shukudai",
       "meaning": "deberes",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -449,6 +488,7 @@
       "romaji": "shitsumon",
       "meaning": "pregunta",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -458,6 +498,7 @@
       "romaji": "jisho",
       "meaning": "diccionario",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -467,6 +508,7 @@
       "romaji": "zasshi",
       "meaning": "revista",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -476,6 +518,7 @@
       "romaji": "kakitori",
       "meaning": "dictado",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -485,6 +528,7 @@
       "romaji": "kikitori",
       "meaning": "comprensión auditiva / captación al oído",
       "group": "topic-2",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -494,6 +538,7 @@
       "romaji": "choukairyoku",
       "meaning": "capacidad de comprensión auditiva",
       "group": "topic-2",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -503,6 +548,7 @@
       "romaji": "jugyou",
       "meaning": "clase",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "note": "como actividad/sesión"
     },
@@ -513,6 +559,7 @@
       "romaji": "kyoushitsu",
       "meaning": "aula",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -522,6 +569,7 @@
       "romaji": "kurasuruumu",
       "meaning": "aula",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "note": "préstamo del inglés"
     },
@@ -532,6 +580,7 @@
       "romaji": "shougakkou",
       "meaning": "escuela primaria",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -541,6 +590,7 @@
       "romaji": "chuugakkou",
       "meaning": "secundaria obligatoria",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -550,6 +600,7 @@
       "romaji": "koukou / koutou gakkou",
       "meaning": "bachillerato/secundaria superior",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -559,6 +610,7 @@
       "romaji": "senmon gakkou",
       "meaning": "escuela profesional/especializada",
       "group": "topic-2",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -568,6 +620,7 @@
       "romaji": "daigaku",
       "meaning": "universidad",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -577,6 +630,7 @@
       "romaji": "toshoshitsu",
       "meaning": "biblioteca/sala de lectura",
       "group": "topic-2",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "de una institución"
     },
@@ -587,6 +641,7 @@
       "romaji": "toshokan",
       "meaning": "biblioteca",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "pública o edificio de biblioteca"
     },
@@ -597,6 +652,7 @@
       "romaji": "shiken",
       "meaning": "examen",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -606,6 +662,7 @@
       "romaji": "kaki shiken",
       "meaning": "examen escrito",
       "group": "topic-2",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "筆記試験 es más habitual"
     },
@@ -616,6 +673,7 @@
       "romaji": "jimaku",
       "meaning": "subtítulos",
       "group": "topic-2",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -625,6 +683,7 @@
       "romaji": "kotaeawase",
       "meaning": "corrección/comparación de respuestas",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -634,6 +693,7 @@
       "romaji": "junbi",
       "meaning": "preparación",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -643,6 +703,7 @@
       "romaji": "junbi undou",
       "meaning": "calentamiento",
       "group": "topic-2",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -652,6 +713,7 @@
       "romaji": "undou",
       "meaning": "ejercicio",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -661,6 +723,7 @@
       "romaji": "kyuukei",
       "meaning": "pausa/descanso",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -670,6 +733,7 @@
       "romaji": "kyuujitsu",
       "meaning": "día libre/festivo",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "no necesariamente «vacaciones» largas"
     },
@@ -680,6 +744,7 @@
       "romaji": "kisoku",
       "meaning": "reglas/normas",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -689,6 +754,7 @@
       "romaji": "nicchoku",
       "meaning": "encargado/a del día en la clase",
       "group": "topic-2",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -698,6 +764,7 @@
       "romaji": "nihongo",
       "meaning": "japonés (idioma)",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -707,6 +774,7 @@
       "romaji": "eigo",
       "meaning": "inglés (idioma)",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -716,6 +784,7 @@
       "romaji": "supeingo",
       "meaning": "español (idioma)",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -725,6 +794,7 @@
       "romaji": "ji",
       "meaning": "letra, carácter",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -734,6 +804,7 @@
       "romaji": "roomaji",
       "meaning": "alfabeto latino",
       "group": "topic-2",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -743,6 +814,7 @@
       "romaji": "shokudou",
       "meaning": "comedor/cafetería",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "de institución"
     },
@@ -753,6 +825,7 @@
       "romaji": "kissaten",
       "meaning": "cafetería tradicional/tetería",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -762,6 +835,7 @@
       "romaji": "ginkou",
       "meaning": "banco",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -771,6 +845,7 @@
       "romaji": "bijutsukan",
       "meaning": "museo de arte",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -780,6 +855,7 @@
       "romaji": "yuubinkyoku",
       "meaning": "oficina de correos",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -789,6 +865,7 @@
       "romaji": "hanaya",
       "meaning": "floristería",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -798,6 +875,7 @@
       "romaji": "yaoya",
       "meaning": "verdulería/frutería",
       "group": "topic-3",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -807,6 +885,7 @@
       "romaji": "jimusho",
       "meaning": "oficina",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -816,6 +895,7 @@
       "romaji": "washitsu",
       "meaning": "habitación/aula de estilo japonés",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -825,6 +905,7 @@
       "romaji": "saka",
       "meaning": "cuesta/pendiente",
       "group": "topic-3",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -834,6 +915,7 @@
       "romaji": "chikamichi",
       "meaning": "atajo",
       "group": "topic-3",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -843,6 +925,7 @@
       "romaji": "jigoku",
       "meaning": "infierno",
       "group": "topic-3",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -852,6 +935,7 @@
       "romaji": "nihon",
       "meaning": "Japón",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -861,6 +945,7 @@
       "romaji": "supein",
       "meaning": "España",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -870,6 +955,7 @@
       "romaji": "kuni",
       "meaning": "país",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -879,6 +965,7 @@
       "romaji": "machi",
       "meaning": "ciudad, barrio",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -888,6 +975,7 @@
       "romaji": "tokoro",
       "meaning": "lugar, sitio",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -897,6 +985,7 @@
       "romaji": "kaisha",
       "meaning": "empresa",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -906,6 +995,7 @@
       "romaji": "byouin",
       "meaning": "hospital",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -915,6 +1005,7 @@
       "romaji": "heya",
       "meaning": "habitación",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -924,6 +1015,7 @@
       "romaji": "toire / otearai",
       "meaning": "lavabo, servicio",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "おてあらい es más cortés"
     },
@@ -934,6 +1026,7 @@
       "romaji": "kaidan",
       "meaning": "escalera",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -943,6 +1036,7 @@
       "romaji": "erebeetaa",
       "meaning": "ascensor",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -952,6 +1046,7 @@
       "romaji": "chika",
       "meaning": "sótano",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -961,6 +1056,7 @@
       "romaji": "uketsuke",
       "meaning": "recepción",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -970,6 +1066,7 @@
       "romaji": "uriba",
       "meaning": "sección (de una tienda)",
       "group": "topic-3",
+      "difficulty": "hard",
       "sourceId": "class-handouts"
     },
     {
@@ -979,6 +1076,7 @@
       "romaji": "depaato",
       "meaning": "grandes almacenes",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -988,6 +1086,7 @@
       "romaji": "suupaa",
       "meaning": "supermercado",
       "group": "topic-3",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -997,6 +1096,7 @@
       "romaji": "mise",
       "meaning": "tienda",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1006,6 +1106,7 @@
       "romaji": "resutoran",
       "meaning": "restaurante",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1015,6 +1116,7 @@
       "romaji": "eki",
       "meaning": "estación",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1024,6 +1126,7 @@
       "romaji": "kuruma",
       "meaning": "coche",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1033,6 +1136,7 @@
       "romaji": "chikatetsu",
       "meaning": "metro",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1042,6 +1146,7 @@
       "romaji": "jitensha",
       "meaning": "bicicleta",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1051,6 +1156,7 @@
       "romaji": "hikouki",
       "meaning": "avión",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1060,6 +1166,7 @@
       "romaji": "fune",
       "meaning": "barco",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1069,6 +1176,7 @@
       "romaji": "basu",
       "meaning": "autobús",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1078,6 +1186,7 @@
       "romaji": "takushii",
       "meaning": "taxi",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1087,6 +1196,7 @@
       "romaji": "shinkansen",
       "meaning": "tren bala",
       "group": "topic-3",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1096,6 +1206,7 @@
       "romaji": "tsukue",
       "meaning": "escritorio/mesa",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1105,6 +1216,7 @@
       "romaji": "hakuban",
       "meaning": "pizarra blanca",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1114,6 +1226,7 @@
       "romaji": "hako",
       "meaning": "caja",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1123,6 +1236,7 @@
       "romaji": "kushi",
       "meaning": "peine",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1132,6 +1246,7 @@
       "romaji": "hata",
       "meaning": "bandera",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1141,6 +1256,7 @@
       "romaji": "hone",
       "meaning": "hueso",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1150,6 +1266,7 @@
       "romaji": "kutsu",
       "meaning": "zapatos",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1159,6 +1276,7 @@
       "romaji": "tsuno",
       "meaning": "cuerno",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1168,6 +1286,7 @@
       "romaji": "hashira",
       "meaning": "columna/pilar",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "también contador mitológico"
     },
@@ -1178,6 +1297,7 @@
       "romaji": "mushimegane",
       "meaning": "lupa",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1187,6 +1307,7 @@
       "romaji": "nikki",
       "meaning": "diario personal",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1196,6 +1317,7 @@
       "romaji": "techou",
       "meaning": "agenda/cuaderno de bolsillo",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1205,6 +1327,7 @@
       "romaji": "enpitsu",
       "meaning": "lápiz",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1214,6 +1337,7 @@
       "romaji": "fude",
       "meaning": "pincel de escritura",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1223,6 +1347,7 @@
       "romaji": "fudebako",
       "meaning": "estuche",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1232,6 +1357,7 @@
       "romaji": "fue",
       "meaning": "flauta/silbato",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "según el tipo"
     },
@@ -1242,6 +1368,7 @@
       "romaji": "kikai",
       "meaning": "máquina/maquinaria",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1251,6 +1378,7 @@
       "romaji": "onsei",
       "meaning": "voz/audio",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1260,6 +1388,7 @@
       "romaji": "oto",
       "meaning": "sonido/ruido",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1269,6 +1398,7 @@
       "romaji": "shashin",
       "meaning": "fotografía",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1278,6 +1408,7 @@
       "romaji": "nengajou",
       "meaning": "postal de Año Nuevo",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1287,6 +1418,7 @@
       "romaji": "otoshidama",
       "meaning": "dinero/regalo de Año Nuevo para niños",
       "group": "topic-4",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1296,6 +1428,7 @@
       "romaji": "hon",
       "meaning": "libro",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1305,6 +1438,7 @@
       "romaji": "nooto",
       "meaning": "libreta",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1314,6 +1448,7 @@
       "romaji": "boorupen",
       "meaning": "bolígrafo",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1323,6 +1458,7 @@
       "romaji": "keshigomu",
       "meaning": "goma de borrar",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1332,6 +1468,7 @@
       "romaji": "hasami",
       "meaning": "tijeras",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1341,6 +1478,7 @@
       "romaji": "kami",
       "meaning": "papel",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1350,6 +1488,7 @@
       "romaji": "kaban",
       "meaning": "bolso, mochila",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1359,6 +1498,7 @@
       "romaji": "tokei",
       "meaning": "reloj",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1368,6 +1508,7 @@
       "romaji": "kasa",
       "meaning": "paraguas",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1377,6 +1518,7 @@
       "romaji": "kagi",
       "meaning": "llave",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1386,6 +1528,7 @@
       "romaji": "shinbun",
       "meaning": "periódico",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1395,6 +1538,7 @@
       "romaji": "isu",
       "meaning": "silla",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1404,6 +1548,7 @@
       "romaji": "terebi",
       "meaning": "televisión",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1413,6 +1558,7 @@
       "romaji": "kamera",
       "meaning": "cámara",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1422,6 +1568,7 @@
       "romaji": "pasokon",
       "meaning": "ordenador",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1431,6 +1578,7 @@
       "romaji": "denwa",
       "meaning": "teléfono",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1440,6 +1588,7 @@
       "romaji": "meishi",
       "meaning": "tarjeta de visita",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1449,6 +1598,7 @@
       "romaji": "shatsu",
       "meaning": "camisa",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1458,6 +1608,7 @@
       "romaji": "nekutai",
       "meaning": "corbata",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1467,6 +1618,7 @@
       "romaji": "hashi",
       "meaning": "palillos",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1476,6 +1628,7 @@
       "romaji": "supuun",
       "meaning": "cuchara",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1485,6 +1638,7 @@
       "romaji": "naifu",
       "meaning": "cuchillo",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1494,6 +1648,7 @@
       "romaji": "fooku",
       "meaning": "tenedor",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1503,6 +1658,7 @@
       "romaji": "nimotsu",
       "meaning": "equipaje, paquete",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1512,6 +1668,7 @@
       "romaji": "kippu",
       "meaning": "billete (de tren o autobús)",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1521,6 +1678,7 @@
       "romaji": "chiketto",
       "meaning": "entrada (de un espectáculo)",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1530,6 +1688,7 @@
       "romaji": "tegami",
       "meaning": "carta",
       "group": "topic-4",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1539,6 +1698,7 @@
       "romaji": "purezento",
       "meaning": "regalo",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1548,6 +1708,7 @@
       "romaji": "omiyage",
       "meaning": "recuerdo, regalo de un viaje",
       "group": "topic-4",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1557,6 +1718,7 @@
       "romaji": "hikiniku",
       "meaning": "carne picada",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1566,6 +1728,7 @@
       "romaji": "namahamu",
       "meaning": "jamón curado/crudo",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "usado para jamón serrano"
     },
@@ -1576,6 +1739,7 @@
       "romaji": "niku",
       "meaning": "carne",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1585,6 +1749,7 @@
       "romaji": "mikan",
       "meaning": "mandarina",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1594,6 +1759,7 @@
       "romaji": "tai",
       "meaning": "dorada/pargo",
       "group": "topic-5",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1603,6 +1769,7 @@
       "romaji": "koi",
       "meaning": "carpa",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1612,6 +1779,7 @@
       "romaji": "ebi",
       "meaning": "gamba/camarón",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1621,6 +1789,7 @@
       "romaji": "okaki",
       "meaning": "galleta de arroz",
       "group": "topic-5",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1630,6 +1799,7 @@
       "romaji": "kabu",
       "meaning": "nabo",
       "group": "topic-5",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1639,6 +1809,7 @@
       "romaji": "akakabu",
       "meaning": "nabo/rabanito rojo",
       "group": "topic-5",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1648,6 +1819,7 @@
       "romaji": "shio",
       "meaning": "sal",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1657,6 +1829,7 @@
       "romaji": "kai",
       "meaning": "molusco/concha",
       "group": "topic-5",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "no «marisco» en general"
     },
@@ -1667,6 +1840,7 @@
       "romaji": "ringo",
       "meaning": "manzana",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1676,6 +1850,7 @@
       "romaji": "tamago",
       "meaning": "huevo",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1685,6 +1860,7 @@
       "romaji": "pai",
       "meaning": "tarta/pie",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1694,6 +1870,7 @@
       "romaji": "biiru",
       "meaning": "cerveza",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1703,6 +1880,7 @@
       "romaji": "koohii",
       "meaning": "café",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1712,6 +1890,7 @@
       "romaji": "bangohan",
       "meaning": "cena/comida de la noche",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1721,6 +1900,7 @@
       "romaji": "yorugohan",
       "meaning": "cena",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "coloquial"
     },
@@ -1731,6 +1911,7 @@
       "romaji": "yuushoku",
       "meaning": "cena",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "término más formal/escrito"
     },
@@ -1741,6 +1922,7 @@
       "romaji": "washoku",
       "meaning": "comida japonesa",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1750,6 +1932,7 @@
       "romaji": "gohan",
       "meaning": "arroz cocido; comida",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1759,6 +1942,7 @@
       "romaji": "asagohan",
       "meaning": "desayuno",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1768,6 +1952,7 @@
       "romaji": "hirugohan",
       "meaning": "comida (del mediodía)",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1777,6 +1962,7 @@
       "romaji": "pan",
       "meaning": "pan",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1786,6 +1972,7 @@
       "romaji": "sakana",
       "meaning": "pescado, pez",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1795,6 +1982,7 @@
       "romaji": "yasai",
       "meaning": "verdura",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1804,6 +1992,7 @@
       "romaji": "kudamono",
       "meaning": "fruta",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1813,6 +2002,7 @@
       "romaji": "mizu",
       "meaning": "agua",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1822,6 +2012,7 @@
       "romaji": "ocha",
       "meaning": "té (verde)",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1831,6 +2022,7 @@
       "romaji": "koucha",
       "meaning": "té negro",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1840,6 +2032,7 @@
       "romaji": "gyuunyuu",
       "meaning": "leche",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1849,6 +2042,7 @@
       "romaji": "juusu",
       "meaning": "zumo",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1858,6 +2052,7 @@
       "romaji": "osake",
       "meaning": "sake; bebida alcohólica",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1867,6 +2062,7 @@
       "romaji": "wain",
       "meaning": "vino",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1876,6 +2072,7 @@
       "romaji": "chokoreeto",
       "meaning": "chocolate",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1885,6 +2082,7 @@
       "romaji": "ryouri",
       "meaning": "cocina; plato",
       "group": "topic-5",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -1894,6 +2092,7 @@
       "romaji": "tabemono",
       "meaning": "comida, alimento",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1903,6 +2102,7 @@
       "romaji": "nomimono",
       "meaning": "bebida",
       "group": "topic-5",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -1912,6 +2112,7 @@
       "romaji": "hebi",
       "meaning": "serpiente",
       "group": "topic-6",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1921,6 +2122,7 @@
       "romaji": "oumu",
       "meaning": "loro",
       "group": "topic-6",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1930,6 +2132,7 @@
       "romaji": "fukurou",
       "meaning": "búho",
       "group": "topic-6",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1939,6 +2142,7 @@
       "romaji": "namakemono",
       "meaning": "perezoso",
       "group": "topic-6",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "también el animal, según el contexto"
     },
@@ -1949,6 +2153,7 @@
       "romaji": "hiyoko",
       "meaning": "pollito",
       "group": "topic-6",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1958,6 +2163,7 @@
       "romaji": "hinadori",
       "meaning": "cría de ave",
       "group": "topic-6",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1967,6 +2173,7 @@
       "romaji": "uma",
       "meaning": "caballo",
       "group": "topic-6",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1976,6 +2183,7 @@
       "romaji": "ushi",
       "meaning": "vaca/buey/ganado bovino",
       "group": "topic-6",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -1985,6 +2193,7 @@
       "romaji": "tatsu",
       "meaning": "dragón",
       "group": "topic-6",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "辰 es el signo zodiacal"
     },
@@ -1995,6 +2204,7 @@
       "romaji": "mangetsu",
       "meaning": "luna llena",
       "group": "topic-6",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2004,6 +2214,7 @@
       "romaji": "hi",
       "meaning": "fuego",
       "group": "topic-6",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "note": "también lectura de «día» en compuestos distintos"
     },
@@ -2014,6 +2225,7 @@
       "romaji": "kaji",
       "meaning": "incendio",
       "group": "topic-6",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2023,6 +2235,7 @@
       "romaji": "kisetsu",
       "meaning": "estación del año",
       "group": "topic-6",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2032,6 +2245,7 @@
       "romaji": "yama",
       "meaning": "montaña",
       "group": "topic-6",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2041,6 +2255,7 @@
       "romaji": "hana",
       "meaning": "flor",
       "group": "topic-6",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2050,6 +2265,7 @@
       "romaji": "sakura",
       "meaning": "cerezo; flor del cerezo",
       "group": "topic-6",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2059,6 +2275,7 @@
       "romaji": "ashi",
       "meaning": "pie/pierna",
       "group": "topic-7",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2068,6 +2285,7 @@
       "romaji": "hige",
       "meaning": "barba/bigote",
       "group": "topic-7",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2077,6 +2295,7 @@
       "romaji": "kakkou",
       "meaning": "aspecto/forma/vestimenta",
       "group": "topic-7",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "según el contexto"
     },
@@ -2087,6 +2306,7 @@
       "romaji": "shikaku",
       "meaning": "cuadrado",
       "group": "topic-8",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2096,6 +2316,7 @@
       "romaji": "ue",
       "meaning": "encima/arriba",
       "group": "topic-8",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2105,6 +2326,7 @@
       "romaji": "shita",
       "meaning": "debajo/abajo",
       "group": "topic-8",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2114,6 +2336,7 @@
       "romaji": "tate",
       "meaning": "vertical",
       "group": "topic-8",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2123,6 +2346,7 @@
       "romaji": "yoko",
       "meaning": "horizontal",
       "group": "topic-8",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2132,6 +2356,7 @@
       "romaji": "tokeimawari",
       "meaning": "sentido horario",
       "group": "topic-8",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2141,6 +2366,7 @@
       "romaji": "hantokeimawari",
       "meaning": "sentido antihorario",
       "group": "topic-8",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2150,6 +2376,7 @@
       "romaji": "tsugi",
       "meaning": "siguiente",
       "group": "topic-8",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2159,6 +2386,7 @@
       "romaji": "tsugi no",
       "meaning": "el/la siguiente",
       "group": "topic-8",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "note": "delante de un nombre"
     },
@@ -2169,6 +2397,7 @@
       "romaji": "ryokou",
       "meaning": "viaje",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "note": "«viajar» se dice りょこうします"
     },
@@ -2179,6 +2408,7 @@
       "romaji": "tabi",
       "meaning": "viaje",
       "group": "topic-9",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "tono más literario/evocador"
     },
@@ -2189,6 +2419,7 @@
       "romaji": "gijutsu",
       "meaning": "técnica/tecnología",
       "group": "topic-9",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2198,6 +2429,7 @@
       "romaji": "zeikin",
       "meaning": "impuestos",
       "group": "topic-9",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2207,6 +2439,7 @@
       "romaji": "shuuri",
       "meaning": "reparación",
       "group": "topic-9",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2216,6 +2449,7 @@
       "romaji": "shiawase",
       "meaning": "felicidad; dicha",
       "group": "topic-9",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2225,6 +2459,7 @@
       "romaji": "chikara / ryoku",
       "meaning": "fuerza/capacidad",
       "group": "topic-9",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "りょく en compuestos"
     },
@@ -2235,6 +2470,7 @@
       "romaji": "shunpatsuryoku",
       "meaning": "potencia explosiva/agilidad",
       "group": "topic-9",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2244,6 +2480,7 @@
       "romaji": "monozukuri",
       "meaning": "fabricación/artesanía",
       "group": "topic-9",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "note": "con énfasis cultural en calidad y dedicación"
     },
@@ -2254,6 +2491,7 @@
       "romaji": "otsukimi",
       "meaning": "contemplación/festival de la luna",
       "group": "topic-9",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note"
     },
     {
@@ -2263,6 +2501,7 @@
       "romaji": "onaji",
       "meaning": "igual/el mismo",
       "group": "topic-9",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "note": "funciona delante de un nombre sin な"
     },
@@ -2273,6 +2512,7 @@
       "romaji": "en",
       "meaning": "yen",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "note": "detrás del precio: 三百円"
     },
@@ -2283,6 +2523,7 @@
       "romaji": "shigoto",
       "meaning": "trabajo",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2292,6 +2533,7 @@
       "romaji": "yakusoku",
       "meaning": "promesa; cita, compromiso",
       "group": "topic-9",
+      "difficulty": "hard",
       "sourceId": "class-handouts"
     },
     {
@@ -2301,6 +2543,7 @@
       "romaji": "youji",
       "meaning": "asunto pendiente, recado",
       "group": "topic-9",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -2310,6 +2553,7 @@
       "romaji": "ongaku",
       "meaning": "música",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2319,6 +2563,7 @@
       "romaji": "uta",
       "meaning": "canción",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2328,6 +2573,7 @@
       "romaji": "e",
       "meaning": "dibujo, cuadro",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2337,6 +2583,7 @@
       "romaji": "eiga",
       "meaning": "película; cine",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2346,6 +2593,7 @@
       "romaji": "supootsu",
       "meaning": "deporte",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2355,6 +2603,7 @@
       "romaji": "yakyuu",
       "meaning": "béisbol",
       "group": "topic-9",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -2364,6 +2613,7 @@
       "romaji": "sakkaa",
       "meaning": "fútbol",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2373,6 +2623,7 @@
       "romaji": "tenisu",
       "meaning": "tenis",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2382,6 +2633,7 @@
       "romaji": "dansu",
       "meaning": "baile",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2391,6 +2643,7 @@
       "romaji": "konsaato",
       "meaning": "concierto",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2400,6 +2653,7 @@
       "romaji": "karaoke",
       "meaning": "karaoke",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2409,6 +2663,7 @@
       "romaji": "kabuki",
       "meaning": "kabuki",
       "group": "topic-9",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "note": "teatro tradicional japonés"
     },
@@ -2419,6 +2674,7 @@
       "romaji": "ohanami",
       "meaning": "contemplación de los cerezos en flor",
       "group": "topic-9",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -2428,6 +2684,7 @@
       "romaji": "ima",
       "meaning": "ahora",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2437,6 +2694,7 @@
       "romaji": "asa",
       "meaning": "mañana",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "note": "parte del día"
     },
@@ -2447,6 +2705,7 @@
       "romaji": "hiru",
       "meaning": "mediodía",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2456,6 +2715,7 @@
       "romaji": "yoru",
       "meaning": "noche",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2465,6 +2725,7 @@
       "romaji": "ban",
       "meaning": "noche",
       "group": "topic-10",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "también en こんばん y まいばん"
     },
@@ -2475,6 +2736,7 @@
       "romaji": "gozen",
       "meaning": "por la mañana, a. m.",
       "group": "topic-10",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -2484,6 +2746,7 @@
       "romaji": "gogo",
       "meaning": "por la tarde, p. m.",
       "group": "topic-10",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -2493,6 +2756,7 @@
       "romaji": "han",
       "meaning": "y media",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "note": "detrás de la hora"
     },
@@ -2503,6 +2767,7 @@
       "romaji": "jikan",
       "meaning": "tiempo; horas",
       "group": "topic-10",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -2512,6 +2777,7 @@
       "romaji": "hiruyasumi",
       "meaning": "pausa del mediodía",
       "group": "topic-10",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -2521,6 +2787,7 @@
       "romaji": "kyou",
       "meaning": "hoy",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2530,6 +2797,7 @@
       "romaji": "ashita",
       "meaning": "mañana",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "note": "el día siguiente"
     },
@@ -2540,6 +2808,7 @@
       "romaji": "kinou",
       "meaning": "ayer",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2549,6 +2818,7 @@
       "romaji": "ototoi",
       "meaning": "anteayer",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2558,6 +2828,7 @@
       "romaji": "asatte",
       "meaning": "pasado mañana",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2567,6 +2838,7 @@
       "romaji": "kesa",
       "meaning": "esta mañana",
       "group": "topic-10",
+      "difficulty": "medium",
       "sourceId": "class-handouts"
     },
     {
@@ -2576,6 +2848,7 @@
       "romaji": "konban",
       "meaning": "esta noche",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2585,6 +2858,7 @@
       "romaji": "mainichi",
       "meaning": "cada día",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2594,6 +2868,7 @@
       "romaji": "maiasa",
       "meaning": "cada mañana",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2603,6 +2878,7 @@
       "romaji": "maiban",
       "meaning": "cada noche",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2612,6 +2888,7 @@
       "romaji": "getsuyoubi",
       "meaning": "lunes",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2621,6 +2898,7 @@
       "romaji": "kayoubi",
       "meaning": "martes",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2630,6 +2908,7 @@
       "romaji": "suiyoubi",
       "meaning": "miércoles",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2639,6 +2918,7 @@
       "romaji": "mokuyoubi",
       "meaning": "jueves",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2648,6 +2928,7 @@
       "romaji": "kinyoubi",
       "meaning": "viernes",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2657,6 +2938,7 @@
       "romaji": "doyoubi",
       "meaning": "sábado",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2666,6 +2948,7 @@
       "romaji": "nichiyoubi",
       "meaning": "domingo",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2675,6 +2958,7 @@
       "romaji": "senshuu",
       "meaning": "la semana pasada",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2684,6 +2968,7 @@
       "romaji": "konshuu",
       "meaning": "esta semana",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2693,6 +2978,7 @@
       "romaji": "raishuu",
       "meaning": "la semana que viene",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2702,6 +2988,7 @@
       "romaji": "sengetsu",
       "meaning": "el mes pasado",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2711,6 +2998,7 @@
       "romaji": "kongetsu",
       "meaning": "este mes",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2720,6 +3008,7 @@
       "romaji": "raigetsu",
       "meaning": "el mes que viene",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2729,6 +3018,7 @@
       "romaji": "kyonen",
       "meaning": "el año pasado",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2738,6 +3028,7 @@
       "romaji": "kotoshi",
       "meaning": "este año",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2747,6 +3038,7 @@
       "romaji": "rainen",
       "meaning": "el año que viene",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2756,6 +3048,7 @@
       "romaji": "ichigatsu",
       "meaning": "enero",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2765,6 +3058,7 @@
       "romaji": "nigatsu",
       "meaning": "febrero",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2774,6 +3068,7 @@
       "romaji": "sangatsu",
       "meaning": "marzo",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2783,6 +3078,7 @@
       "romaji": "shigatsu",
       "meaning": "abril",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2792,6 +3088,7 @@
       "romaji": "gogatsu",
       "meaning": "mayo",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2801,6 +3098,7 @@
       "romaji": "rokugatsu",
       "meaning": "junio",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2810,6 +3108,7 @@
       "romaji": "shichigatsu",
       "meaning": "julio",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2819,6 +3118,7 @@
       "romaji": "hachigatsu",
       "meaning": "agosto",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2828,6 +3128,7 @@
       "romaji": "kugatsu",
       "meaning": "septiembre",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2837,6 +3138,7 @@
       "romaji": "juugatsu",
       "meaning": "octubre",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2846,6 +3148,7 @@
       "romaji": "juuichigatsu",
       "meaning": "noviembre",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2855,6 +3158,7 @@
       "romaji": "juunigatsu",
       "meaning": "diciembre",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2864,6 +3168,7 @@
       "romaji": "nangatsu",
       "meaning": "¿qué mes?",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     },
     {
@@ -2873,6 +3178,7 @@
       "romaji": "tanjoubi",
       "meaning": "cumpleaños",
       "group": "topic-10",
+      "difficulty": "easy",
       "sourceId": "class-handouts"
     }
   ]

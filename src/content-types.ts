@@ -127,6 +127,8 @@ export interface LexiconEntry extends EntryBase {
   readonly reading: string;
   readonly romaji: string;
   readonly meaning: string;
+  /** How hard the word is to learn: its own traps, raised by its JLPT level. The page filters by it alongside the group. */
+  readonly difficulty: Difficulty;
   readonly note?: string;
   /** Simple sentences that use the entry with vocabulary from the site; the row opens to show them. */
   readonly examples?: readonly ContentExample[];

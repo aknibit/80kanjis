@@ -114,6 +114,34 @@ test('every counter has a difficulty: how hard its readings and its use are to l
   }
 });
 
+test('every word, verb, adjective and adverb has a difficulty: its own traps, which its JLPT level can only raise', () => {
+  const entries = ['vocabulary', 'verbs', 'modifiers'].flatMap((id) => (documents.get(id) as LexiconDocument).entries);
+  const level = (written: string) => entries.find((entry) => entry.written === written)!.difficulty;
+  // N5 without a trap, or a loanword heard as it is, whatever its list says (ビール is N3 there).
+  for (const written of ['宿題', 'テレビ', 'ビール', '起きます', 'おいしい', 'とても']) assert.equal(level(written), 'easy', written);
+  // A second meaning or a nuance (かれ: él; novio, あります against います, あまり with a negative), or N4 and N3.
+  for (const written of ['かれ', 'あります', 'あまり', '店員', '骨']) assert.equal(level(written), 'medium', written);
+  // A special reading, a use that depends on whom one talks to, a な adjective that looks like an い one and takes が,
+  // or N2, N1 and rarer words.
+  for (const written of ['八百屋', '僕', 'くれます', 'きらい', '完璧', '手帳', '鸚鵡']) assert.equal(level(written), 'hard', written);
+  for (const value of [undefined, 'unrated', 'Fácil', null]) {
+    const data = structuredClone(verbs) as any;
+    data.entries[0].difficulty = value;
+    assert.throws(() => parseStudyDocument(JSON.stringify(data)), String(value));
+  }
+});
+
+test('a lexicon entry that is also a word of the 80 kanji keeps the difficulty it has there', async () => {
+  const collection = JSON.parse(await readFile(new URL('collection.json', root), 'utf8')) as { vocabulary: { written: string; difficulty: string }[] };
+  const words = new Map(collection.vocabulary.map((word) => [word.written, word.difficulty]));
+  const shared = ['vocabulary', 'verbs', 'modifiers'].flatMap((id) => (documents.get(id) as LexiconDocument).entries)
+    .filter((entry) => words.has(entry.written));
+  // 小学校, 中学校 and 休日; six months; 青い, 大きい and 小さい. 早い／速い is not the same entry as 早い: telling the
+  // two kanji apart is what makes it medium.
+  assert.equal(shared.length, 12);
+  for (const entry of shared) assert.equal(entry.difficulty, words.get(entry.written), entry.id);
+});
+
 test('each counter form and question has a Japanese example and an everyday sentence that use it with one of its readings', () => {
   const hon = counters.entries.find((entry) => entry.id === 'hon')!;
   assert.deepEqual(hon.forms[0].example, { written: '一本の 鉛筆', reading: 'いっぽんの えんぴつ', meaning: 'un lápiz' });
@@ -187,8 +215,16 @@ test('counter group and difficulty filters combine, and each counts what the oth
   assert.equal(everything.entries.length, counters.entries.length);
   assert.equal(everything.difficultyCounts('easy') + everything.difficultyCounts('medium') + everything.difficultyCounts('hard'), counters.entries.length);
   assert.deepEqual(ids(filterByGroupAndDifficulty(counters.entries, 'numbers', 'hard').entries), []);
-  // Sections without difficulties keep filtering by group only.
-  assert.equal(filterByGroupAndDifficulty(verbs.entries, 'essentials', 'all').entries.length, 20);
+  // Lexicon sections combine them the same way: easy food.
+  const vocabulary = documents.get('vocabulary') as LexiconDocument;
+  const easyFood = filterByGroupAndDifficulty(vocabulary.entries, 'topic-5', 'easy');
+  assert.equal(easyFood.entries.length, 24);
+  assert.ok(easyFood.entries.every((entry) => entry.group === 'topic-5' && entry.difficulty === 'easy'));
+  assert.equal(easyFood.difficultyCounts('all'), 39);
+  assert.equal(easyFood.difficultyCounts('easy') + easyFood.difficultyCounts('medium') + easyFood.difficultyCounts('hard'), 39);
+  // Kana has no difficulties and keeps filtering by group only.
+  assert.equal(filterByGroupAndDifficulty(kana.entries, 'basic', 'all').entries.length, 46);
+  assert.equal(filterByGroupAndDifficulty(kana.entries, 'basic', 'easy').entries.length, 0);
   assert.equal(parseDifficultyFilter('hard'), 'hard');
   for (const value of ['unrated', 'all', '', null]) assert.equal(parseDifficultyFilter(value), 'all');
 });

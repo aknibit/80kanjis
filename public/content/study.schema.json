@@ -792,6 +792,14 @@
                 "type": "string",
                 "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
               },
+              "difficulty": {
+                "description": "Dificultad de estudio de la entrada: sus trampas propias, que el nivel del JLPT solo puede subir. La página filtra por ella junto con el grupo.",
+                "enum": [
+                  "easy",
+                  "medium",
+                  "hard"
+                ]
+              },
               "sourceId": {
                 "type": "string",
                 "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
@@ -833,6 +841,7 @@
             "required": [
               "id",
               "group",
+              "difficulty",
               "sourceId",
               "written",
               "reading",

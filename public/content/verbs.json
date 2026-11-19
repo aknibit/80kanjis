@@ -102,6 +102,7 @@
       "romaji": "okimasu",
       "meaning": "levantarse/despertarse",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -123,6 +124,7 @@
       "romaji": "tabemasu",
       "meaning": "comer",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -144,6 +146,7 @@
       "romaji": "hatarakimasu",
       "meaning": "trabajar",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -165,6 +168,7 @@
       "romaji": "benkyou shimasu",
       "meaning": "estudiar",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -186,6 +190,7 @@
       "romaji": "yasumimasu",
       "meaning": "descansar, ausentarse, tomarse el día libre",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -207,6 +212,7 @@
       "romaji": "nomimasu",
       "meaning": "beber",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "essential-verbs",
       "examples": [
         {
@@ -228,6 +234,7 @@
       "romaji": "owarimasu",
       "meaning": "terminar/acabar (intransitivo)",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -249,6 +256,7 @@
       "romaji": "ikimasu",
       "meaning": "ir",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -270,6 +278,7 @@
       "romaji": "kimasu",
       "meaning": "venir",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -291,6 +300,7 @@
       "romaji": "suimasu",
       "meaning": "fumar/aspirar; たばこを すいます",
       "group": "essentials",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -312,6 +322,7 @@
       "romaji": "kikimasu",
       "meaning": "escuchar o preguntar; cambia la partícula",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -333,6 +344,7 @@
       "romaji": "mimasu",
       "meaning": "ver/mirar",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -354,6 +366,7 @@
       "romaji": "kakimasu",
       "meaning": "escribir",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -375,6 +388,7 @@
       "romaji": "kaimasu",
       "meaning": "comprar",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -396,6 +410,7 @@
       "romaji": "aimasu",
       "meaning": "encontrarse con alguien: 人に あいます",
       "group": "essentials",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -417,6 +432,7 @@
       "romaji": "yomimasu",
       "meaning": "leer",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -438,6 +454,7 @@
       "romaji": "shashin o torimasu",
       "meaning": "hacer una foto",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "essential-verbs",
       "examples": [
         {
@@ -459,6 +476,7 @@
       "romaji": "tenisu o shimasu",
       "meaning": "jugar al tenis",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "essential-verbs",
       "examples": [
         {
@@ -480,6 +498,7 @@
       "romaji": "kaerimasu",
       "meaning": "regresar/volver a casa",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -501,6 +520,7 @@
       "romaji": "nemasu",
       "meaning": "acostarse/dormir",
       "group": "essentials",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -522,6 +542,7 @@
       "romaji": "aisatsu shimasu",
       "meaning": "saludar",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -543,6 +564,7 @@
       "romaji": "agemasu",
       "meaning": "dar (en general, desde mi perspectiva hacia fuera)",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -564,6 +586,7 @@
       "romaji": "arukimasu",
       "meaning": "caminar",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -585,6 +608,7 @@
       "romaji": "arimasu",
       "meaning": "haber/estar, inanimados; tener según contexto",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -606,6 +630,7 @@
       "romaji": "iimasu",
       "meaning": "decir",
       "group": "main",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -627,6 +652,7 @@
       "romaji": "imasu",
       "meaning": "haber/estar, personas y animales",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -648,6 +674,7 @@
       "romaji": "ukemasu",
       "meaning": "recibir/tomar; por ejemplo, recibir una clase",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -669,6 +696,7 @@
       "romaji": "umaremasu",
       "meaning": "nacer",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -690,6 +718,7 @@
       "romaji": "okurimasu",
       "meaning": "enviar",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -711,6 +740,7 @@
       "romaji": "oshiemasu",
       "meaning": "enseñar",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -732,6 +762,7 @@
       "romaji": "kakimasu",
       "meaning": "dibujar; suele escribirse 絵を描きます",
       "group": "main",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -753,6 +784,7 @@
       "romaji": "kashimasu",
       "meaning": "prestar",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -774,6 +806,7 @@
       "romaji": "karimasu",
       "meaning": "tomar prestado",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -795,6 +828,7 @@
       "romaji": "kirimasu",
       "meaning": "cortar",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -816,6 +850,7 @@
       "romaji": "kurabemasu",
       "meaning": "comparar",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -837,6 +872,7 @@
       "romaji": "kuremasu",
       "meaning": "darme a mí o a mi grupo cercano",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -858,6 +894,7 @@
       "romaji": "kurushimimasu",
       "meaning": "sufrir",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -879,6 +916,7 @@
       "romaji": "kotaeawase o shimasu",
       "meaning": "corregir/contrastar respuestas",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -900,6 +938,7 @@
       "romaji": "shimasu",
       "meaning": "hacer, practicar una actividad",
       "group": "main",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -921,6 +960,7 @@
       "romaji": "suwarimasu",
       "meaning": "sentarse; asiento marcado con に",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -942,6 +982,7 @@
       "romaji": "tsukurimasu",
       "meaning": "crear, fabricar, cocinar",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -963,6 +1004,7 @@
       "romaji": "nakimasu",
       "meaning": "emitir un sonido animal / llorar",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -984,6 +1026,7 @@
       "romaji": "naraimasu",
       "meaning": "aprender de alguien, tomar lecciones",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1005,6 +1048,7 @@
       "romaji": "nemurimasu",
       "meaning": "dormir/estar dormido",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1026,6 +1070,7 @@
       "romaji": "hajimarimasu",
       "meaning": "empezar (intransitivo)",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1047,6 +1092,7 @@
       "romaji": "hajimemasu",
       "meaning": "empezar algo (transitivo)",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1068,6 +1114,7 @@
       "romaji": "hanashimasu",
       "meaning": "hablar",
       "group": "main",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1089,6 +1136,7 @@
       "romaji": "moraimasu",
       "meaning": "recibir",
       "group": "main",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1110,6 +1158,7 @@
       "romaji": "yaku shimasu",
       "meaning": "traducir",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1131,6 +1180,7 @@
       "romaji": "rokuon shimasu",
       "meaning": "grabar audio",
       "group": "main",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1152,6 +1202,7 @@
       "romaji": "wakarimasu",
       "meaning": "entender",
       "group": "expressions",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1173,6 +1224,7 @@
       "romaji": "oboete imasu",
       "meaning": "recordar / tener memorizado",
       "group": "expressions",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1194,6 +1246,7 @@
       "romaji": "dekimasu",
       "meaning": "poder hacer; estar hecho",
       "group": "expressions",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1215,6 +1268,7 @@
       "romaji": "kokoro ga oremasu",
       "meaning": "desanimarse/perder la motivación",
       "group": "expressions",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1236,6 +1290,7 @@
       "romaji": "meshiagarimasu",
       "meaning": "comer/beber, forma respetuosa",
       "group": "expressions",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1257,6 +1312,7 @@
       "romaji": "shuuri shimasu",
       "meaning": "reparar",
       "group": "expressions",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1278,6 +1334,7 @@
       "romaji": "junbi shimasu",
       "meaning": "preparar",
       "group": "expressions",
+      "difficulty": "hard",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1299,6 +1356,7 @@
       "romaji": "undou shimasu",
       "meaning": "hacer ejercicio",
       "group": "expressions",
+      "difficulty": "medium",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1320,6 +1378,7 @@
       "romaji": "denwa o kakemasu",
       "meaning": "llamar por teléfono",
       "group": "expressions",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "a alguien: 人に でんわを かけます",
       "examples": [

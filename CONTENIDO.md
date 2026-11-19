@@ -10,9 +10,9 @@ Los archivos de `public/` son la fuente de la verdad publicada. El navegador los
 | Menú | `public/content/navigation.json` | Orden, etiquetas, tipos y archivos de las secciones |
 | Contadores | `public/content/counters.json` | 19 contadores y 3 grupos de números; lecturas, variantes, preguntas, un ejemplo en japonés y una frase de uso diario por forma, y la dificultad de cada contador |
 | Kana | `public/content/kana.json` | 46 sonidos básicos, 25 con marcas y 33 combinaciones; hiragana y katakana |
-| Verbos | `public/content/verbs.json` | 59 entradas en forma ます, cada una con dos ejemplos: primero los 20 verbos esenciales, luego los del curso y las expresiones |
-| Vocabulario | `public/content/vocabulary.json` | 306 entradas agrupadas en diez temas |
-| Adjetivos y adverbios | `public/content/modifiers.json` | 72 entradas: 37 adjetivos い y 18 な, cada uno con cuatro ejemplos (presente y pasado, afirmativo y negativo), y 17 adverbios con dos ejemplos |
+| Verbos | `public/content/verbs.json` | 59 entradas en forma ます, cada una con dos ejemplos: primero los 20 verbos esenciales, luego los del curso y las expresiones; la dificultad de cada verbo |
+| Vocabulario | `public/content/vocabulary.json` | 306 entradas agrupadas en diez temas, cada una con su dificultad |
+| Adjetivos y adverbios | `public/content/modifiers.json` | 71 entradas: 36 adjetivos い y 18 な, cada uno con cuatro ejemplos (presente y pasado, afirmativo y negativo), y 17 adverbios con dos ejemplos; la dificultad de cada entrada |
 | Frases de los kanji | `public/content/kanji-sentences.json` | 480 frases para la ventana de cada uno de los 80 kanji: dos sencillas y cuatro con adjetivos, adverbios y contadores |
 | Esquema de edición | `public/content/study.schema.json` | Formato de los archivos nuevos para editores compatibles con JSON Schema |
 
@@ -83,6 +83,37 @@ Ese mismo día se reescribieron 116 de las 480 frases de los kanji:
 
 Las frases nuevas usan el vocabulario de clase alrededor de las palabras del kanji (日よう日に テニスを します。, 九時に えきで 会いましょう。). Las demás ya usaban palabras de los 80 kanji o de clase y se conservan. En las frases de los kanji quedan pocas palabras del vault, casi siempre porque llevan el kanji (お年玉, 花屋, 高校). Ningún contexto repite otro de la web.
 
+También el 19 de noviembre de 2026 se clasificaron por dificultad las 437 entradas de Verbos, Vocabulario y Adjetivos y adverbios, con el criterio descrito en «Editar o añadir entradas», y después se revisaron a mano. Resultado actual:
+
+| Sección | Fácil | Medio | Difícil |
+| --- | --- | --- | --- |
+| Vocabulario | 167 | 90 | 49 |
+| Verbos | 23 | 21 | 15 |
+| Adjetivos y adverbios | 28 | 36 | 7 |
+
+El nivel del JLPT sale de las listas de Jonathan Waller ([tanos.co.uk](https://www.tanos.co.uk/jlpt/)), las de referencia desde que el examen dejó de publicar listas oficiales en 2010. Se consultaron en la versión de [open-anki-jlpt-decks](https://github.com/jamsinclair/open-anki-jlpt-decks). Esas listas tienen huecos y algunos niveles dudosos. Faltan いい, 高校, りんご y スーパー, y ponen エンジニア en N1, まあまあ y しんかんせん en N2 y ビール en N3. Por eso las palabras de las hojas de clase cuentan como N5 y los préstamos que se reconocen al oírlos no suben. 50 entradas no están en las listas, y su nivel se estimó: por sus partes si son compuestos (準備運動 = 準備 + 運動) y por su frecuencia si no (鯛, 鸚鵡, ひよこ). En esa primera clasificación, el JLPT subió 87 entradas.
+
+Ese mismo día se reajustaron a mano 24 verbos, 62 palabras de Vocabulario y 14 adjetivos y adverbios, según lo que cuestan en clase.
+
+Verbos:
+- a difícil: dar y recibir (あげます, もらいます, como ya estaba くれます), prestar y tomar prestado (かします, かります), 修理します, 準備します, 答え合わせをします, おくります, 受けます, 比べます, 習います y 鳴きます／泣きます;
+- a medio: 歩きます, 生まれます, おしえます, きります, 作ります, 録音します y 覚えています;
+- a fácil: 休みます, 聞きます, 寝ます, 描きます y 分かります.
+
+Vocabulario:
+- a fácil: 家族, ちち, はは, 皆さん, みんな, 授業, 白板, 火, 今日, 今年 y きょ年;
+- a medio: ご家族, おとうさん, おかあさん, おっと, つま, おくさん, 自分, 家／内, ほかの人, ぎんこういん, エンジニア, 書き取り, 日直, 郵便局, ち下, うけつけ, にもつ, ネクタイ, プレゼント, はさみ, おみやげ, めいし, 鯉, 縦, 横, お花見, ようじ, やきゅう, ひる休み, ごぜん, ごご y けさ;
+- a difícil: 書き試験, 準備運動, 専門学校, 図書室, うりば, 近道, 坂, 旗, 笛, 機械, 虫眼鏡, 年賀状, 筆, お年玉, 貝, 髭, 税金, やくそく y 修理.
+
+Adjetivos y adverbios:
+- a fácil: 嬉しい;
+- a medio: つまらない, 若い, ひくい, いい／よい, かっこいい, きれい, しんせつ, すてき, まあまあ y そろそろ;
+- a difícil: 羨ましい, 得意 y だいたい.
+
+Esa revisión manda sobre el criterio: no recalcules esas dificultades.
+
+También ese día se unificaron las dos entradas de あつい: 暑い, del vault («calor ambiental»), y あつい, de las hojas de clase («caliente», de bebidas y cosas). Ahora son una sola, 暑い／熱い, como 早い／速い, con dos ejemplos de cada sentido. Conserva el `id`, la fuente y la dificultad de 暑い, y sigue la grafía del vault, con kanji: 熱 se añadió a las fuentes.
+
 Las entradas escritas solo en hiragana no repiten la lectura en la página (あさ, でんわをかけます), igual que los ejemplos sin kanji. Las de katakana sí la muestran en hiragana (バス, ばす).
 
 `npm run check:content` lee cada contexto con las palabras de la colección, de las secciones léxicas y de los contadores: las frases de los kanji, los ejemplos de las entradas y de las guías, y el ejemplo y la frase de cada forma de un contador. Rechaza un kanji que no forme parte de una de esas palabras o una lectura distinta de la de la web (川 o 森 solos, さんほん en lugar de さんぼん). Acepta las formas conjugadas de verbos y adjetivos い (休みませんでした, 嬉しかった) y el verbo de una expresión aunque haya algo en medio (写真を 三枚 撮りました). También comprueba que haya frases para todos los kanji, en el orden de la colección, y que las cuatro avanzadas usen adjetivos, adverbios y contadores. Las palabras en kana (とても, おかき, ひよこ) no se pueden comprobar así: revísalas a mano, igual que la naturalidad de la frase y su traducción.
@@ -100,6 +131,9 @@ El vault no contiene una tabla completa de kana: esa sección se completa con la
 6. Si el cambio necesita una explicación, usa `note`, `notes` o una guía en `guides`, según el tipo de entrada.
    Una entrada léxica puede llevar `examples`, con frases que usen la propia entrada y vocabulario que ya esté en la web. Con ejemplos, la fila se despliega para mostrarlos. Cada ejemplo tiene `written`, `reading` y `meaning`, como los de las guías. En `written` y `reading`, separa los bloques con espacios, como en los libros para principiantes (`休日は 遅く 起きます。`): la frase solo salta de línea en esos espacios. `reading` va en kana, sin kanji; los préstamos pueden quedarse en katakana (`コーヒーを のみます。`). Si la frase no tiene kanji, `reading` repite `written` y la lectura no se muestra (`テニスが できます。`). La validación rechaza un ejemplo que no contenga la entrada, aunque esté conjugada (起きました cuenta para 起きます).
    Un grupo léxico puede declarar `inflection`: `"i-adjective"` o `"na-adjective"`. Cada ejemplo de sus entradas indica entonces su `form` (`present-affirmative`, `past-affirmative`, `present-negative` o `past-negative`), y la fila muestra los cuatro en una tabla de 2 × 2 (afirmativo arriba y negativo abajo; presente a la izquierda y pasado a la derecha), cada uno con el nombre de su forma. Tienen que ser los cuatro y en ese orden, y cada frase debe terminar con la forma cortés correspondiente, en la escritura y en la lectura: la validación rechaza `きれくないです` o `べんりではありません` en el lugar del pasado negativo. Escribe `では ありません` con espacio, como `覚えて います`: ありません es otra palabra, y así el bloque más largo cabe en una línea a 320 px.
+   Cada entrada léxica declara su `difficulty` (`easy`, `medium` o `hard`), con el mismo sentido que en los contadores: lo que cuesta aprenderla. La validación rechaza una entrada sin ella. La página la muestra con los puntos de las fichas de kanji y filtra por ella en una segunda fila, como en Contadores. Una entrada que también es una palabra de la colección conserva la dificultad que tiene allí (小学校, 青い, los meses), y un test lo comprueba. 早い／速い no es la misma entrada que 早い: hay que distinguir los dos kanji, y queda en medio. Una dificultad revisada a mano (ver «Procedencia») manda sobre el criterio. Para las demás, se decide en dos pasos, y queda el nivel más alto:
+   - **Sus trampas.** Sin ninguna, fácil. Medio: un segundo sentido o un matiz (かれ: él; novio, ごはん), un préstamo acortado (パソコン, デパート), una pareja que se confunde (あります/います, さむい/つめたい), una partícula propia (会います, すき) o una forma que engaña al conjugar (いい, かっこいい, きれい). Difícil: una lectura especial de kanji que se estudian (八百屋), un uso que depende de con quién se habla o de quién es (しゅじん, かない, 僕, くれます, 召し上がります) o un adjetivo な que parece い y además lleva が (きらい). Los kanji ajenos al curso no cuentan: 鸚鵡 se juzga como おうむ, porque la lectura siempre se ve.
+   - **Su nivel del JLPT,** que solo puede subirla. N5 no cambia nada; N4 y N3 la suben al menos a medio; N2, N1 y las palabras demasiado raras para estar en las listas, a difícil. Las palabras de las hojas de clase cuentan como N5, y los préstamos que se reconocen al oírlos no suben. Que una palabra haya que memorizarla sin pista tampoco la sube, porque eso ya lo mide el JLPT: 宿題 y ぎゅうにゅう son N5, no tienen trampa y son fáciles.
 7. Cada contador lista en `endings` sus terminaciones en hiragana (por ejemplo `["ほん", "ぽん", "ぼん"]`), que se muestran en su cabecera. Van de más a menos frecuentes: una forma o la pregunta cuenta una vez si alguna de sus lecturas termina así. La validación rechaza una terminación que ninguna lectura use o un orden que no respete esa frecuencia. Las lecturas irregulares, como ひとり o ついたち, no necesitan terminación propia.
 8. Si añades un kanji a la colección, añade también sus seis frases en `kanji-sentences.json`, en la misma posición. Cada frase tiene `written`, `reading` y `meaning`, con los bloques separados por espacios como en los ejemplos léxicos; `simple` lleva dos y `advanced`, cuatro.
 9. Si el texto usa un carácter que no aparecía antes (un kanji, un kana o un símbolo nuevo), ejecuta `npm run fonts` e incluye en el commit los archivos regenerados de `src/fonts/`. Las fuentes solo contienen los caracteres del contenido; consulta las limitaciones en [AGENTS.md](AGENTS.md).
@@ -118,7 +152,7 @@ Ejemplo de una entrada léxica:
 }
 ```
 
-Las dificultades y los audios existentes siguen asociados a `collection.json` y sus identificadores originales. Las nuevas secciones muestran lecturas y contenidos de consulta; no se generan audios ni clasificaciones por defecto.
+Las dificultades y los audios de los 80 kanji siguen asociados a `collection.json` y sus identificadores originales. Las otras secciones no tienen audios. Contadores, Verbos, Vocabulario y Adjetivos y adverbios guardan la dificultad de cada entrada en su propio archivo; Kana no tiene.
 
 Para añadir otra sección léxica, crea un archivo con `kind: "lexicon"` y añádelo al menú. No requiere otro componente de presentación. Los tipos nuevos de contenido sí necesitan su definición y su vista.
 
@@ -139,6 +173,6 @@ Revisa también los cambios de significado y pronunciación: una validación est
 
 ## URLs estáticas
 
-La página de entrada sigue siendo la colección de 80 kanji. Las otras secciones usan `?section=counters`, `?section=kana`, `?section=verbs`, `?section=vocabulary` y `?section=modifiers`. `q` conserva la búsqueda, `group` el filtro de las secciones nuevas y, en Contadores, `difficulty` el de dificultad.
+La página de entrada sigue siendo la colección de 80 kanji. Las otras secciones usan `?section=counters`, `?section=kana`, `?section=verbs`, `?section=vocabulary` y `?section=modifiers`. `q` conserva la búsqueda, `group` el filtro de las secciones nuevas y, en Contadores, Verbos, Vocabulario y Adjetivos y adverbios, `difficulty` el de dificultad (`?section=vocabulary&group=topic-5&difficulty=easy`).
 
 Todas usan el mismo `index.html`. Se pueden abrir, compartir y recargar desde un subdirectorio de GitHub Pages o un CDN, sin rutas de servidor ni reglas de reescritura.

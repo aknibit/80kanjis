@@ -100,6 +100,7 @@
       "romaji": "tanoshii",
       "meaning": "divertido",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -135,6 +136,7 @@
       "romaji": "ureshii",
       "meaning": "contento/feliz",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -170,6 +172,7 @@
       "romaji": "urayamashii",
       "meaning": "sentir envidia; envidiable",
       "group": "i",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -205,6 +208,7 @@
       "romaji": "muzukashii",
       "meaning": "difícil",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -240,6 +244,7 @@
       "romaji": "yasashii",
       "meaning": "fácil; también amable con otro kanji/contexto",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -275,6 +280,7 @@
       "romaji": "hayai",
       "meaning": "temprano/rápido",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -310,6 +316,7 @@
       "romaji": "osoi",
       "meaning": "tarde/lento",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -340,12 +347,14 @@
     },
     {
       "id": "modifier-atsui",
-      "written": "暑い",
+      "written": "暑い／熱い",
       "reading": "あつい",
       "romaji": "atsui",
-      "meaning": "calor ambiental",
+      "meaning": "caluroso/caliente",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
+      "note": "暑い, del tiempo; 熱い, de bebidas y cosas",
       "examples": [
         {
           "written": "八月は 暑いです。",
@@ -354,9 +363,9 @@
           "form": "present-affirmative"
         },
         {
-          "written": "教室は 暑かったです。",
-          "reading": "きょうしつは あつかったです。",
-          "meaning": "En el aula hacía calor.",
+          "written": "けさの コーヒーは 熱かったです。",
+          "reading": "けさの コーヒーは あつかったです。",
+          "meaning": "El café de esta mañana estaba caliente.",
           "form": "past-affirmative"
         },
         {
@@ -366,9 +375,9 @@
           "form": "present-negative"
         },
         {
-          "written": "九月は 暑くなかったです。",
-          "reading": "くがつは あつくなかったです。",
-          "meaning": "En septiembre no hizo calor.",
+          "written": "食堂の ごはんは 熱くなかったです。",
+          "reading": "しょくどうの ごはんは あつくなかったです。",
+          "meaning": "La comida del comedor no estaba caliente.",
           "form": "past-negative"
         }
       ]
@@ -380,6 +389,7 @@
       "romaji": "atatakai",
       "meaning": "templado/cálido",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -415,6 +425,7 @@
       "romaji": "tsumaranai",
       "meaning": "aburrido",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -450,6 +461,7 @@
       "romaji": "isogashii",
       "meaning": "ocupado",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -485,6 +497,7 @@
       "romaji": "wakai",
       "meaning": "joven",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -520,6 +533,7 @@
       "romaji": "warui",
       "meaning": "malo",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -555,6 +569,7 @@
       "romaji": "nagai",
       "meaning": "largo",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -590,6 +605,7 @@
       "romaji": "kurai",
       "meaning": "oscuro",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -625,6 +641,7 @@
       "romaji": "kuroi",
       "meaning": "negro",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -660,6 +677,7 @@
       "romaji": "omoshiroi",
       "meaning": "interesante/divertido",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -695,6 +713,7 @@
       "romaji": "mendoukusai",
       "meaning": "pesado/engorroso; coloquial",
       "group": "i",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -730,6 +749,7 @@
       "romaji": "oshii",
       "meaning": "por poco/casi; una lástima",
       "group": "i",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -765,6 +785,7 @@
       "romaji": "oishii",
       "meaning": "rico / delicioso",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -800,6 +821,7 @@
       "romaji": "mazui",
       "meaning": "de mal sabor; problemático según el contexto",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -835,6 +857,7 @@
       "romaji": "amai",
       "meaning": "dulce; indulgente o ingenuo según el contexto",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -870,6 +893,7 @@
       "romaji": "ii / yoi",
       "meaning": "bueno",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "modifiers-note",
       "examples": [
         {
@@ -905,6 +929,7 @@
       "romaji": "atarashii",
       "meaning": "nuevo",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -940,6 +965,7 @@
       "romaji": "furui",
       "meaning": "viejo, antiguo",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "para cosas, no para la edad de las personas",
       "examples": [
@@ -976,6 +1002,7 @@
       "romaji": "takai",
       "meaning": "caro; alto",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1011,6 +1038,7 @@
       "romaji": "yasui",
       "meaning": "barato",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1046,6 +1074,7 @@
       "romaji": "hikui",
       "meaning": "bajo",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1081,6 +1110,7 @@
       "romaji": "samui",
       "meaning": "frío",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "del tiempo; para cosas y bebidas, つめたい",
       "examples": [
@@ -1117,6 +1147,7 @@
       "romaji": "tsumetai",
       "meaning": "frío",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "al tacto: bebidas y cosas",
       "examples": [
@@ -1147,48 +1178,13 @@
       ]
     },
     {
-      "id": "modifier-atsui-caliente",
-      "written": "あつい",
-      "reading": "あつい",
-      "romaji": "atsui",
-      "meaning": "caliente",
-      "group": "i",
-      "sourceId": "class-handouts",
-      "note": "bebidas y cosas; el calor del tiempo es 暑い",
-      "examples": [
-        {
-          "written": "この おちゃは あついです。",
-          "reading": "この おちゃは あついです。",
-          "meaning": "Este té está caliente.",
-          "form": "present-affirmative"
-        },
-        {
-          "written": "けさの コーヒーは あつかったです。",
-          "reading": "けさの コーヒーは あつかったです。",
-          "meaning": "El café de esta mañana estaba caliente.",
-          "form": "past-affirmative"
-        },
-        {
-          "written": "この こうちゃは あつくないです。",
-          "reading": "この こうちゃは あつくないです。",
-          "meaning": "Este té negro no está caliente.",
-          "form": "present-negative"
-        },
-        {
-          "written": "食堂の ごはんは あつくなかったです。",
-          "reading": "しょくどうの ごはんは あつくなかったです。",
-          "meaning": "La comida del comedor no estaba caliente.",
-          "form": "past-negative"
-        }
-      ]
-    },
-    {
       "id": "modifier-akai",
       "written": "赤い",
       "reading": "あかい",
       "romaji": "akai",
       "meaning": "rojo",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1224,6 +1220,7 @@
       "romaji": "shiroi",
       "meaning": "blanco",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1259,6 +1256,7 @@
       "romaji": "aoi",
       "meaning": "azul",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1294,6 +1292,7 @@
       "romaji": "ookii",
       "meaning": "grande",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1329,6 +1328,7 @@
       "romaji": "chiisai",
       "meaning": "pequeño",
       "group": "i",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1364,6 +1364,7 @@
       "romaji": "kakkoii",
       "meaning": "guapo, con estilo",
       "group": "i",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "como いい: かっこよくないです",
       "examples": [
@@ -1400,6 +1401,7 @@
       "romaji": "benri",
       "meaning": "práctico/cómodo",
       "group": "na",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1435,6 +1437,7 @@
       "romaji": "kantan",
       "meaning": "fácil/simple",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1470,6 +1473,7 @@
       "romaji": "taihen",
       "meaning": "duro/serio; muy según construcción",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1505,6 +1509,7 @@
       "romaji": "shizuka",
       "meaning": "tranquilo/silencioso",
       "group": "na",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1540,6 +1545,7 @@
       "romaji": "genki",
       "meaning": "bien, sano, enérgico",
       "group": "na",
+      "difficulty": "easy",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1575,6 +1581,7 @@
       "romaji": "kirei",
       "meaning": "bonito/limpio",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1610,6 +1617,7 @@
       "romaji": "yuumei",
       "meaning": "famoso",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1645,6 +1653,7 @@
       "romaji": "jouzu",
       "meaning": "hábil",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1680,6 +1689,7 @@
       "romaji": "heta",
       "meaning": "torpe/poco hábil",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1715,6 +1725,7 @@
       "romaji": "tokui",
       "meaning": "punto fuerte; se me da bien",
       "group": "na",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1750,6 +1761,7 @@
       "romaji": "kanpeki",
       "meaning": "perfecto/sin fallos",
       "group": "na",
+      "difficulty": "hard",
       "sourceId": "vocabulary-note",
       "examples": [
         {
@@ -1785,6 +1797,7 @@
       "romaji": "nigiyaka",
       "meaning": "animado, con ambiente",
       "group": "na",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1820,6 +1833,7 @@
       "romaji": "shinsetsu",
       "meaning": "amable",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1855,6 +1869,7 @@
       "romaji": "hima",
       "meaning": "libre, desocupado",
       "group": "na",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1890,6 +1905,7 @@
       "romaji": "suteki",
       "meaning": "precioso, encantador",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -1925,6 +1941,7 @@
       "romaji": "suki",
       "meaning": "que gusta",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "lo que gusta va con が: さかなが すきです",
       "examples": [
@@ -1961,6 +1978,7 @@
       "romaji": "kirai",
       "meaning": "que no gusta",
       "group": "na",
+      "difficulty": "hard",
       "sourceId": "class-handouts",
       "note": "con が, como すき",
       "examples": [
@@ -1997,6 +2015,7 @@
       "romaji": "nigate",
       "meaning": "que se da mal",
       "group": "na",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "con が; además no gusta, a diferencia de 下手",
       "examples": [
@@ -2033,6 +2052,7 @@
       "romaji": "totemo",
       "meaning": "muy",
       "group": "adverb",
+      "difficulty": "easy",
       "sourceId": "modifiers-note",
       "examples": [
         {
@@ -2054,6 +2074,7 @@
       "romaji": "kanari",
       "meaning": "bastante",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "modifiers-note",
       "examples": [
         {
@@ -2075,6 +2096,7 @@
       "romaji": "chotto",
       "meaning": "un poco",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "modifiers-note",
       "examples": [
         {
@@ -2096,6 +2118,7 @@
       "romaji": "sukoshi",
       "meaning": "un poco",
       "group": "adverb",
+      "difficulty": "easy",
       "sourceId": "modifiers-note",
       "examples": [
         {
@@ -2117,6 +2140,7 @@
       "romaji": "amari",
       "meaning": "no muy",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "modifiers-note",
       "note": "Se usa con una forma negativa.",
       "examples": [
@@ -2139,6 +2163,7 @@
       "romaji": "zenzen",
       "meaning": "en absoluto",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "modifiers-note",
       "note": "Se usa con una forma negativa.",
       "examples": [
@@ -2161,6 +2186,7 @@
       "romaji": "takusan",
       "meaning": "mucho(s), con nombres o verbos",
       "group": "adverb",
+      "difficulty": "easy",
       "sourceId": "modifiers-note",
       "examples": [
         {
@@ -2182,6 +2208,7 @@
       "romaji": "hotondo",
       "meaning": "casi/casi todo",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "modifiers-note",
       "examples": [
         {
@@ -2203,6 +2230,7 @@
       "romaji": "yoku",
       "meaning": "bien; a menudo",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -2224,6 +2252,7 @@
       "romaji": "daitai",
       "meaning": "más o menos, casi todo",
       "group": "adverb",
+      "difficulty": "hard",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -2245,6 +2274,7 @@
       "romaji": "maamaa",
       "meaning": "así así, regular",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -2266,6 +2296,7 @@
       "romaji": "itsumo",
       "meaning": "siempre",
       "group": "adverb",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -2287,6 +2318,7 @@
       "romaji": "tokidoki",
       "meaning": "a veces",
       "group": "adverb",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -2308,6 +2340,7 @@
       "romaji": "issho ni",
       "meaning": "juntos",
       "group": "adverb",
+      "difficulty": "easy",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -2329,6 +2362,7 @@
       "romaji": "mou",
       "meaning": "ya",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {
@@ -2350,6 +2384,7 @@
       "romaji": "mada",
       "meaning": "todavía",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "note": "まだです: todavía no",
       "examples": [
@@ -2372,6 +2407,7 @@
       "romaji": "sorosoro",
       "meaning": "ya va siendo hora",
       "group": "adverb",
+      "difficulty": "medium",
       "sourceId": "class-handouts",
       "examples": [
         {

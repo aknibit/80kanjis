@@ -185,7 +185,7 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
       ? record(value, [...common, 'written', 'difficulty', 'endings', 'title', 'description', 'type', 'forms', 'question', 'notes'])
       : data.kind === 'kana'
         ? record(value, [...common, 'hiragana', 'katakana', 'romaji', 'position'])
-        : record(value, [...common, 'written', 'reading', 'romaji', 'meaning'], ['note', 'examples']);
+        : record(value, [...common, 'written', 'reading', 'romaji', 'meaning', 'difficulty'], ['note', 'examples']);
     id(entry.id);
     check(groups.has(entry.group), `Grupo desconocido en ${entry.id}.`);
     check(sources.has(entry.sourceId), `Fuente desconocida en ${entry.id}.`);
@@ -236,6 +236,7 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
     } else {
       text(entry.written); text(entry.reading); text(entry.romaji); text(entry.meaning);
       check(kanaReading.test(entry.reading), 'La lectura debe estar en hiragana.');
+      check(difficulties.includes(entry.difficulty as Difficulty), `Dificultad desconocida en ${entry.id}.`);
       if (entry.note !== undefined) text(entry.note);
       const inflection = groupInflections.get(entry.group);
       if (entry.examples !== undefined && inflection) {
