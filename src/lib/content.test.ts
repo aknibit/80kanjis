@@ -119,8 +119,8 @@ test('every word, verb, adjective and adverb has a difficulty: its own traps, wh
   const level = (written: string) => entries.find((entry) => entry.written === written)!.difficulty;
   // N5 without a trap, or a loanword heard as it is, whatever its list says (ビール is N3 there).
   for (const written of ['宿題', 'テレビ', 'ビール', '起きます', 'おいしい', 'とても']) assert.equal(level(written), 'easy', written);
-  // A second meaning or a nuance (かれ: él; novio, あります against います, あまり with a negative), or N4 and N3.
-  for (const written of ['かれ', 'あります', 'あまり', '店員', '骨']) assert.equal(level(written), 'medium', written);
+  // A second meaning or a nuance (かれ: él; novio, 会います with に, あまり with a negative), or N4 and N3.
+  for (const written of ['かれ', '会います', 'あまり', '店員', '骨']) assert.equal(level(written), 'medium', written);
   // A special reading, a use that depends on whom one talks to, a な adjective that looks like an い one and takes が,
   // or N2, N1 and rarer words.
   for (const written of ['八百屋', '僕', 'くれます', 'きらい', '完璧', '手帳', '鸚鵡']) assert.equal(level(written), 'hard', written);

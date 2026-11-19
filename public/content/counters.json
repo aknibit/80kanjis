@@ -387,9 +387,9 @@
             "meaning": "cinco botones"
           },
           "sentence": {
-            "written": "この シャツの ボタンは 五個です。",
-            "reading": "この シャツの ボタンは ごこです。",
-            "meaning": "Esta camisa tiene cinco botones."
+            "written": "シャツに ボタンが 五個 あります。",
+            "reading": "シャツに ボタンが ごこ あります。",
+            "meaning": "La camisa tiene cinco botones."
           }
         },
         {
@@ -405,9 +405,9 @@
             "meaning": "seis gomas de borrar"
           },
           "sentence": {
-            "written": "けしゴムを 六個 買いました。",
-            "reading": "けしゴムを ろっこ かいました。",
-            "meaning": "Compré seis gomas de borrar."
+            "written": "かばんに けしゴムが 六個 あります。",
+            "reading": "かばんに けしゴムが ろっこ あります。",
+            "meaning": "En la mochila hay seis gomas de borrar."
           }
         },
         {
@@ -423,9 +423,9 @@
             "meaning": "siete pelotas"
           },
           "sentence": {
-            "written": "テニスの ボールを 七個 買いました。",
-            "reading": "テニスの ボールを ななこ かいました。",
-            "meaning": "Compré siete pelotas de tenis."
+            "written": "ボールが 七個 あります。",
+            "reading": "ボールが ななこ あります。",
+            "meaning": "Hay siete pelotas."
           }
         },
         {
@@ -490,9 +490,9 @@
           "なんこ"
         ],
         "example": {
-          "written": "卵は 何個 食べますか。",
-          "reading": "たまごは なんこ たべますか。",
-          "meaning": "¿Cuántos huevos te comes?"
+          "written": "卵は 何個 ありますか。",
+          "reading": "たまごは なんこ ありますか。",
+          "meaning": "¿Cuántos huevos hay?"
         },
         "sentence": {
           "written": "卵を 何個 買いますか。",
@@ -917,14 +917,14 @@
           "なんまい"
         ],
         "example": {
-          "written": "写真は 何枚 撮りましたか。",
-          "reading": "しゃしんは なんまい とりましたか。",
-          "meaning": "¿Cuántas fotos sacaste?"
+          "written": "写真は 何枚 ありますか。",
+          "reading": "しゃしんは なんまい ありますか。",
+          "meaning": "¿Cuántas fotografías hay?"
         },
         "sentence": {
-          "written": "旅行で 写真を 何枚 撮りましたか。",
-          "reading": "りょこうで しゃしんを なんまい とりましたか。",
-          "meaning": "¿Cuántas fotos sacaste en el viaje?"
+          "written": "写真を 何枚 撮りましたか。",
+          "reading": "しゃしんを なんまい とりましたか。",
+          "meaning": "¿Cuántas fotos sacaste?"
         }
       },
       "notes": []
@@ -955,9 +955,9 @@
             "meaning": "una bicicleta"
           },
           "sentence": {
-            "written": "あたらしい じてん車を 一台 買いました。",
-            "reading": "あたらしい じてんしゃを いちだい かいました。",
-            "meaning": "Compré una bicicleta nueva."
+            "written": "わたしは じてん車が 一台 あります。",
+            "reading": "わたしは じてんしゃが いちだい あります。",
+            "meaning": "Tengo una bicicleta."
           }
         },
         {
@@ -991,9 +991,9 @@
             "meaning": "tres cámaras"
           },
           "sentence": {
-            "written": "ちちは カメラを 三台 買いました。",
-            "reading": "ちちは カメラを さんだい かいました。",
-            "meaning": "Mi padre compró tres cámaras."
+            "written": "ちちは カメラが 三台 あります。",
+            "reading": "ちちは カメラが さんだい あります。",
+            "meaning": "Mi padre tiene tres cámaras."
           }
         },
         {
@@ -1009,9 +1009,9 @@
             "meaning": "cuatro taxis"
           },
           "sentence": {
-            "written": "えきに タクシーが 四台 来ました。",
-            "reading": "えきに タクシーが よんだい きました。",
-            "meaning": "Llegaron cuatro taxis a la estación."
+            "written": "えきに タクシーが 四台 あります。",
+            "reading": "えきに タクシーが よんだい あります。",
+            "meaning": "Hay cuatro taxis en la estación."
           }
         },
         {
@@ -1027,9 +1027,9 @@
             "meaning": "cinco televisores"
           },
           "sentence": {
-            "written": "この レストランの テレビは 五台です。",
-            "reading": "この レストランの テレビは ごだいです。",
-            "meaning": "Este restaurante tiene cinco televisores."
+            "written": "この みせには テレビが 五台 あります。",
+            "reading": "この みせには テレビが ごだい あります。",
+            "meaning": "Esta tienda tiene cinco televisores."
           }
         },
         {
@@ -1063,9 +1063,9 @@
             "meaning": "siete motos"
           },
           "sentence": {
-            "written": "えきで バイクを 七台 見ました。",
-            "reading": "えきで バイクを ななだい みました。",
-            "meaning": "Vi siete motos en la estación."
+            "written": "大学に バイクが 七台 あります。",
+            "reading": "だいがくに バイクが ななだい あります。",
+            "meaning": "En la universidad hay siete motos."
           }
         },
         {
@@ -1099,9 +1099,9 @@
             "meaning": "nueve impresoras"
           },
           "sentence": {
-            "written": "かいしゃは プリンターを 九台 買いました。",
-            "reading": "かいしゃは プリンターを きゅうだい かいました。",
-            "meaning": "La empresa compró nueve impresoras."
+            "written": "かいしゃに プリンターが 九台 あります。",
+            "reading": "かいしゃに プリンターが きゅうだい あります。",
+            "meaning": "En la empresa hay nueve impresoras."
           }
         },
         {
@@ -1129,13 +1129,13 @@
           "なんだい"
         ],
         "example": {
-          "written": "車は 何台ですか。",
-          "reading": "くるまは なんだいですか。",
+          "written": "車は 何台 ありますか。",
+          "reading": "くるまは なんだい ありますか。",
           "meaning": "¿Cuántos coches hay?"
         },
         "sentence": {
-          "written": "あの かいしゃの 車は 何台ですか。",
-          "reading": "あの かいしゃの くるまは なんだいですか。",
+          "written": "あの かいしゃには 車が 何台 ありますか。",
+          "reading": "あの かいしゃには くるまが なんだい ありますか。",
           "meaning": "¿Cuántos coches tiene aquella empresa?"
         }
       },
@@ -1185,9 +1185,9 @@
             "meaning": "dos cuadernos"
           },
           "sentence": {
-            "written": "ノートを 二冊 買いました。",
-            "reading": "ノートを にさつ かいました。",
-            "meaning": "Compré dos libretas."
+            "written": "かばんに ノートが 二冊 あります。",
+            "reading": "かばんに ノートが にさつ あります。",
+            "meaning": "En la mochila hay dos libretas."
           }
         },
         {
@@ -1203,9 +1203,9 @@
             "meaning": "tres revistas"
           },
           "sentence": {
-            "written": "雑誌を 三冊 買いました。",
-            "reading": "ざっしを さんさつ かいました。",
-            "meaning": "Compré tres revistas."
+            "written": "へやに 雑誌が 三冊 あります。",
+            "reading": "へやに ざっしが さんさつ あります。",
+            "meaning": "En la habitación hay tres revistas."
           }
         },
         {
@@ -1330,9 +1330,9 @@
             "meaning": "diez guías de viaje"
           },
           "sentence": {
-            "written": "日本の ガイドブックを 十冊 買いました。",
-            "reading": "にほんの ガイドブックを じゅっさつ かいました。",
-            "meaning": "Compré diez guías de Japón."
+            "written": "ガイドブックが 十冊 あります。",
+            "reading": "ガイドブックが じゅっさつ あります。",
+            "meaning": "Hay diez guías de viaje."
           }
         }
       ],
@@ -3067,8 +3067,8 @@
           "meaning": "¿Cuántas semanas de vacaciones tienes?"
         },
         "sentence": {
-          "written": "大学の 休みは 何週間ですか。",
-          "reading": "だいがくの やすみは なんしゅうかんですか。",
+          "written": "大学の 休みは 何週間 ありますか。",
+          "reading": "だいがくの やすみは なんしゅうかん ありますか。",
           "meaning": "¿Cuántas semanas de vacaciones tiene la universidad?"
         }
       },

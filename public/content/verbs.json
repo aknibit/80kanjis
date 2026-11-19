@@ -933,7 +933,7 @@
       "romaji": "arimasu",
       "meaning": "haber/estar, inanimados; tener según contexto",
       "group": "main",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
@@ -1005,13 +1005,13 @@
       "romaji": "imasu",
       "meaning": "haber/estar, personas y animales",
       "group": "main",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "教室に 先生が います。",
-          "reading": "きょうしつに せんせいが います。",
-          "meaning": "El profesor está en el aula.",
+          "written": "へやに 子犬が います。",
+          "reading": "へやに こいぬが います。",
+          "meaning": "Hay un cachorro en la habitación.",
           "form": "present-affirmative"
         },
         {
@@ -1027,9 +1027,9 @@
           "form": "present-negative"
         },
         {
-          "written": "きのうは 図書館に 人が いませんでした。",
-          "reading": "きのうは としょかんに ひとが いませんでした。",
-          "meaning": "Ayer no había gente en la biblioteca.",
+          "written": "きのうは びょういんに いしゃが いませんでした。",
+          "reading": "きのうは びょういんに いしゃが いませんでした。",
+          "meaning": "Ayer no había médico en el hospital.",
           "form": "past-negative"
         }
       ]

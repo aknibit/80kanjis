@@ -38,8 +38,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <main class="shell" id="main-content" tabindex="-1">
     <div id="kanji-page">
     <section class="intro" aria-labelledby="page-title">
-      <h1 id="page-title">Un kanji. <span>Tres nuevas palabras.</span></h1>
-      <p class="intro-description">80 kanji y 240 ejemplos para aprender a tu ritmo.</p>
+      <h1 id="page-title">80 kanjis.<span> 240 palabras.</span></h1>
+      <p class="intro-description">Infinidad de ejemplos para aprender a tu ritmo.</p>
     </section>
 
     <section class="collection" id="collection" aria-label="Colección de kanji" tabindex="-1">
