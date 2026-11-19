@@ -179,6 +179,33 @@
       ],
       "additionalProperties": false
     },
+    "counterExample": {
+      "type": "object",
+      "description": "Uso real de la forma o la pregunta (example) o frase completa de uso diario (sentence): escritura con bloques separados por espacios, que incluye la forma; lectura en kana con los mismos bloques, que usa una de sus lecturas; y traducción. La frase termina en 。, ？ o ！.",
+      "properties": {
+        "written": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "reading": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[ぁ-ゖァ-ヶー\\s、。？！]+$"
+        },
+        "meaning": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "written",
+        "reading",
+        "meaning"
+      ],
+      "additionalProperties": false
+    },
     "guide": {
       "type": "object",
       "properties": {
@@ -403,6 +430,14 @@
                 "type": "string",
                 "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
               },
+              "difficulty": {
+                "description": "Dificultad de estudio del contador; la página filtra por ella junto con el grupo.",
+                "enum": [
+                  "easy",
+                  "medium",
+                  "hard"
+                ]
+              },
               "sourceId": {
                 "type": "string",
                 "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
@@ -455,11 +490,6 @@
                 "items": {
                   "type": "object",
                   "properties": {
-                    "meaning": {
-                      "type": "string",
-                      "minLength": 1,
-                      "pattern": "\\S"
-                    },
                     "value": {
                       "type": "integer",
                       "minimum": 1
@@ -482,14 +512,21 @@
                     },
                     "special": {
                       "type": "boolean"
+                    },
+                    "example": {
+                      "$ref": "#/$defs/counterExample"
+                    },
+                    "sentence": {
+                      "$ref": "#/$defs/counterExample"
                     }
                   },
                   "required": [
-                    "meaning",
                     "value",
                     "written",
                     "readings",
-                    "special"
+                    "special",
+                    "example",
+                    "sentence"
                   ],
                   "additionalProperties": false
                 },
@@ -499,11 +536,6 @@
               "question": {
                 "type": "object",
                 "properties": {
-                  "meaning": {
-                    "type": "string",
-                    "minLength": 1,
-                    "pattern": "\\S"
-                  },
                   "written": {
                     "type": "string",
                     "minLength": 1,
@@ -518,12 +550,19 @@
                     },
                     "minItems": 1,
                     "maxItems": 5000
+                  },
+                  "example": {
+                    "$ref": "#/$defs/counterExample"
+                  },
+                  "sentence": {
+                    "$ref": "#/$defs/counterExample"
                   }
                 },
                 "required": [
-                  "meaning",
                   "written",
-                  "readings"
+                  "readings",
+                  "example",
+                  "sentence"
                 ],
                 "additionalProperties": false
               }
@@ -531,6 +570,7 @@
             "required": [
               "id",
               "group",
+              "difficulty",
               "sourceId",
               "type",
               "written",

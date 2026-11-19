@@ -1,12 +1,12 @@
 import { collectionRows, loadCollection } from './lib/collection.ts';
-import { collectionDifficulties, difficultyLabels } from './lib/difficulty.ts';
+import { collectionDifficulties, difficultyIcon, difficultyLabels } from './lib/difficulty.ts';
 import { createKanjiSearch } from './lib/search.ts';
 import { createStudyCatalog } from './lib/study-catalog.ts';
 import { pronunciationSource, synthesizedSource } from './data/pronunciations.ts';
 import { setupPronunciation } from './pronunciation-ui.ts';
 import { setupKanjiDetails } from './kanji-ui.ts';
 import { getRowDifficulty, getRowFilterState, matchesRowDifficulty, parseRowDifficultyFilter, rowDifficultyFilters, type RowDifficultyFilter } from './lib/row-difficulty.ts';
-import type { CollectionDocument, Difficulty, Kanji, StudyItem, StudyItemId } from './types.ts';
+import type { CollectionDocument, Kanji, StudyItem, StudyItemId } from './types.ts';
 import { loadNavigation, loadStudyDocument, resolveSection, sectionHref } from './lib/content.ts';
 import { renderStudyPage } from './content-ui.ts';
 import { setupThemeToggle } from './theme.ts';
@@ -18,11 +18,6 @@ const arrowIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 const closeIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg>';
 const moonIcon = '<svg class="theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7Z"/></svg>';
 const sunIcon = '<svg class="theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.8v2.1M12 19.1v2.1M2.8 12h2.1M19.1 12h2.1M5.5 5.5 7 7M17 17l1.5 1.5M5.5 18.5 7 17M17 7l1.5-1.5"/></svg>';
-
-function difficultyIcon(value: Difficulty | null): string {
-  const filled = value === 'easy' ? 1 : value === 'medium' ? 2 : value === 'hard' ? 3 : 0;
-  return `<svg class="difficulty-icon" viewBox="0 0 32 16" aria-hidden="true" focusable="false">${[6, 16, 26].map((x, index) => `<circle cx="${x}" cy="8" r="3.2"${index < filled ? ' class="is-filled"' : ''}/>`).join('')}</svg>`;
-}
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <a class="skip-link" href="#main-content">Saltar al contenido</a>

@@ -1,5 +1,6 @@
-import type { ContentEntry, ContentGroup, CounterEntry, ExampleForm, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
-import { searchContent, shuffled } from './lib/content.ts';
+import type { ContentEntry, ContentGroup, CounterEntry, CounterExample, ExampleForm, LexiconEntry, KanaEntry, NavigationSection, StudyDocument } from './content-types.ts';
+import { difficulties, filterByGroupAndDifficulty, parseDifficultyFilter, searchContent, shuffled, type DifficultyFilter } from './lib/content.ts';
+import { difficultyIcon, difficultyLabels } from './lib/difficulty.ts';
 import { setupMasonry } from './masonry.ts';
 import { fitPlaceholder } from './search-placeholder.ts';
 
@@ -33,6 +34,15 @@ const formLabels: Record<ExampleForm, string> = {
   'past-negative': 'Pasado negativo',
 };
 
+/** The example or sentence of a form: written, its reading in kana and the translation, one under the other. */
+function renderCounterExample(example: CounterExample, kind: 'example' | 'sentence'): HTMLElement {
+  const cell = node('td', `counter-${kind}`);
+  cell.setAttribute('role', 'cell');
+  cell.append(japanese('span', 'counter-example-written', example.written),
+    japanese('span', 'counter-example-reading', example.reading), node('span', 'counter-example-meaning', example.meaning));
+  return cell;
+}
+
 function renderCounter(entry: CounterEntry): HTMLElement {
   const details = node('details', 'counter-entry');
   details.dataset.entryId = entry.id;
@@ -46,36 +56,52 @@ function renderCounter(entry: CounterEntry): HTMLElement {
   const endingList = japanese('span', 'counter-ending-list', '');
   for (const ending of entry.endings) endingList.append(node('span', 'counter-ending', ending));
   endings.append(node('span', 'counter-endings-label', 'Terminaciones'), endingList);
-  summary.append(name, endings, node('span', 'counter-form-count', `${entry.forms.length} formas`));
+  // Its difficulty, with the dots of the kanji cards, above the number of forms.
+  const meta = node('span', 'counter-meta');
+  const level = difficultyLabels[entry.difficulty];
+  const badge = node('span', 'difficulty-badge counter-difficulty');
+  badge.innerHTML = difficultyIcon(entry.difficulty);
+  badge.dataset.difficulty = entry.difficulty;
+  badge.title = `Dificultad: ${level}`;
+  badge.setAttribute('role', 'img');
+  badge.setAttribute('aria-label', `Dificultad: ${level}`);
+  meta.append(badge, node('span', 'counter-form-count', `${entry.forms.length} formas`));
+  summary.append(name, endings, meta);
   const body = node('div', 'counter-body');
   for (const note of entry.notes) body.append(node('p', 'counter-note', note));
+  // Phones lay the table out as a grid, which can drop its semantics in some screen readers; explicit roles keep them.
   const table = node('table', 'counter-table');
-  table.append(node('caption', 'visually-hidden', `${entry.title}: ejemplos, escritura y lecturas`));
+  table.setAttribute('role', 'table');
+  table.append(node('caption', 'visually-hidden', `${entry.title}: escritura, lecturas, ejemplos y frases`));
   const head = node('thead');
   const headers = node('tr');
-  for (const label of ['Ejemplo', 'Escritura', 'Lectura']) {
+  head.setAttribute('role', 'rowgroup'); headers.setAttribute('role', 'row');
+  for (const label of ['Escritura', 'Lectura', 'Ejemplo', 'Frase']) {
     const cell = node('th', '', label);
     cell.scope = 'col';
+    cell.setAttribute('role', 'columnheader');
     headers.append(cell);
   }
   head.append(headers);
   const rows = node('tbody');
-  for (const form of entry.forms) {
-    const row = node('tr', form.special ? 'counter-special' : '');
-    const quantity = node('th', '', form.meaning);
-    quantity.scope = 'row';
+  rows.setAttribute('role', 'rowgroup');
+  // Each row is headed by its writing, which pairs with the reading next to it.
+  const row = (className: string, item: { written: string; readings: readonly string[]; example: CounterExample; sentence: CounterExample },
+    special = false) => {
+    const line = node('tr', className);
+    line.setAttribute('role', 'row');
+    const written = japanese('th', 'counter-written', item.written);
+    written.scope = 'row';
+    written.setAttribute('role', 'rowheader');
     const reading = node('td', 'counter-reading-cell');
-    reading.append(japanese('span', 'word-reading', form.readings.join(' · ')));
-    if (form.special) reading.append(node('span', 'special-reading', 'Lectura especial'));
-    row.append(quantity, japanese('td', 'counter-written', form.written), reading);
-    rows.append(row);
-  }
-  const question = node('tr', 'counter-question');
-  const questionLabel = node('th', '', entry.question.meaning);
-  questionLabel.scope = 'row';
-  question.append(questionLabel, japanese('td', 'counter-written', entry.question.written),
-    japanese('td', 'word-reading', entry.question.readings.join(' · ')));
-  rows.append(question);
+    reading.setAttribute('role', 'cell');
+    reading.append(japanese('span', 'word-reading', item.readings.join(' · ')));
+    if (special) reading.append(node('span', 'special-reading', 'Lectura especial'));
+    line.append(written, reading, renderCounterExample(item.example, 'example'), renderCounterExample(item.sentence, 'sentence'));
+    return line;
+  };
+  for (const form of entry.forms) rows.append(row(form.special ? 'counter-special' : '', form, form.special));
+  rows.append(row('counter-question', entry.question));
   table.append(head, rows);
   body.append(table);
   details.append(summary, body);
@@ -243,7 +269,18 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   filters.setAttribute('role', 'group'); filters.setAttribute('aria-label', 'Filtrar por grupo');
   const count = node('span', 'study-result-count');
   count.setAttribute('role', 'status'); count.setAttribute('aria-live', 'polite'); count.setAttribute('aria-atomic', 'true');
-  toolbar.append(filters, count);
+  // Counters also filter by difficulty, in a second row that combines with the groups: easy objects.
+  const leveled = data.kind === 'counters';
+  const difficultyFilters = node('div', 'row-filters difficulty-filters');
+  if (leveled) {
+    const rows = node('div', 'filter-rows');
+    const label = node('span', 'filter-label', 'Dificultad');
+    label.id = 'difficulty-filter-label';
+    difficultyFilters.setAttribute('role', 'group'); difficultyFilters.setAttribute('aria-labelledby', label.id);
+    difficultyFilters.append(label);
+    rows.append(filters, difficultyFilters);
+    toolbar.append(rows, count);
+  } else toolbar.append(filters, count);
   const results = node(data.kind === 'lexicon' ? 'ul' : 'div', `study-results study-results--${data.kind}`);
   if (cards) results.classList.add('study-results--cards');
   // Every row keeps a column for + / − when some entry opens, so meanings and tags stay aligned.
@@ -257,7 +294,7 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     results.setAttribute('aria-labelledby', title.id);
   }
   const empty = node('div', 'empty-state');
-  empty.append(node('h3', '', 'No encontramos resultados.'), node('p', '', 'Prueba otra búsqueda o cambia el grupo.'));
+  empty.append(node('h3', '', 'No encontramos resultados.'), node('p', '', `Prueba otra búsqueda o cambia ${leveled ? 'los filtros' : 'el grupo'}.`));
   const reset = node('button', 'reset-button', 'Ver todo'); reset.type = 'button'; empty.append(reset);
   collection.append(form, toolbar);
   if (data.guides.length) collection.append(renderGuides(data));
@@ -270,15 +307,29 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   const randomOrder = cards ? shuffled<ContentEntry>(data.entries) : data.entries;
   const placeCards = cards ? setupMasonry(results) : undefined;
   const filterButtons = new Map<string, HTMLButtonElement>();
+  const difficultyButtons = new Map<DifficultyFilter, HTMLButtonElement>();
   let selectedGroup = 'all';
+  let selectedDifficulty: DifficultyFilter = 'all';
   let urlTimer: ReturnType<typeof setTimeout> | undefined;
-  for (const group of [{ id: 'all', label: 'Todo' }, ...data.groups]) {
+  const filterButton = (label: string, onClick: () => void) => {
     const button = node('button', 'row-filter');
-    button.type = 'button'; button.dataset.contentGroup = group.id;
+    button.type = 'button';
     button.setAttribute('aria-controls', results.id);
-    button.append(node('span', '', group.label), node('span', 'filter-count'));
-    button.addEventListener('click', () => { selectedGroup = group.id; render(); updateUrl(); });
+    button.append(node('span', '', label), node('span', 'filter-count'));
+    button.addEventListener('click', () => { onClick(); render(); updateUrl(); });
+    return button;
+  };
+  for (const group of [{ id: 'all', label: 'Todo' }, ...data.groups]) {
+    const button = filterButton(group.label, () => { selectedGroup = group.id; });
+    button.dataset.contentGroup = group.id;
     filters.append(button); filterButtons.set(group.id, button);
+  }
+  if (leveled) {
+    for (const level of ['all', ...difficulties] as const) {
+      const button = filterButton(level === 'all' ? 'Todas' : difficultyLabels[level], () => { selectedDifficulty = level; });
+      button.dataset.difficultyFilter = level;
+      difficultyFilters.append(button); difficultyButtons.set(level, button);
+    }
   }
 
   function updateUrl() {
@@ -286,15 +337,21 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     const url = new URL(window.location.href);
     if (input.value.trim()) url.searchParams.set('q', input.value.trim()); else url.searchParams.delete('q');
     if (selectedGroup !== 'all') url.searchParams.set('group', selectedGroup); else url.searchParams.delete('group');
+    if (selectedDifficulty !== 'all') url.searchParams.set('difficulty', selectedDifficulty); else url.searchParams.delete('difficulty');
     window.history.replaceState(null, '', url);
   }
 
   function render() {
     const matching = searchContent<ContentEntry>(selectedGroup === 'all' ? randomOrder : data.entries, input.value);
-    const entries = matching.filter((entry) => selectedGroup === 'all' || entry.group === selectedGroup);
+    // Each button counts what it would show with the other filter: Objetos counts easy objects while Fácil is on.
+    const { entries, groupCounts, difficultyCounts } = filterByGroupAndDifficulty(matching, selectedGroup, selectedDifficulty);
     for (const [id, button] of filterButtons) {
       button.setAttribute('aria-pressed', String(id === selectedGroup));
-      button.querySelector('.filter-count')!.textContent = String(id === 'all' ? matching.length : matching.filter((entry) => entry.group === id).length);
+      button.querySelector('.filter-count')!.textContent = String(groupCounts(id));
+    }
+    for (const [id, button] of difficultyButtons) {
+      button.setAttribute('aria-pressed', String(id === selectedDifficulty));
+      button.querySelector('.filter-count')!.textContent = String(difficultyCounts(id));
     }
     const fragment = document.createDocumentFragment();
     if (data.kind === 'kana') {
@@ -320,11 +377,12 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     const params = new URL(window.location.href).searchParams;
     input.value = params.get('q') ?? '';
     selectedGroup = groups.has(params.get('group') ?? '') ? params.get('group')! : 'all';
+    selectedDifficulty = leveled ? parseDifficultyFilter(params.get('difficulty')) : 'all';
     render();
   }
   function clearSearch() { input.value = ''; render(); updateUrl(); input.focus(); }
   clear.addEventListener('click', clearSearch);
-  reset.addEventListener('click', () => { selectedGroup = 'all'; clearSearch(); });
+  reset.addEventListener('click', () => { selectedGroup = 'all'; selectedDifficulty = 'all'; clearSearch(); });
   form.addEventListener('submit', (event) => event.preventDefault());
   input.addEventListener('input', (event) => {
     if (event instanceof InputEvent && event.isComposing) return;

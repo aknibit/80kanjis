@@ -1,4 +1,5 @@
-import type { ContentEntry, ContentExample, ContentKind, ExampleForm, Inflection, KanjiSentencesDocument, NavigationDocument, NavigationSection, StudyDocument } from '../content-types.ts';
+import type { ContentEntry, ContentExample, ContentKind, CounterExample, ExampleForm, Inflection, KanjiSentencesDocument, NavigationDocument, NavigationSection, StudyDocument } from '../content-types.ts';
+import type { Difficulty } from '../types.ts';
 import { normalizeSearch } from './search.ts';
 
 type RecordValue = Record<string, unknown>;
@@ -14,6 +15,7 @@ const sentenceEnd = /(?<=[。\uff1f\uff01])/u;
 /** The order of the course, which the examples follow: affirmative present and past, then negative present and past. */
 export const exampleForms: readonly ExampleForm[] = ['present-affirmative', 'past-affirmative', 'present-negative', 'past-negative'];
 const inflections: readonly Inflection[] = ['i-adjective', 'na-adjective'];
+export const difficulties: readonly Difficulty[] = ['easy', 'medium', 'hard'];
 
 /**
  * The polite form as the course teaches it: たのしいです, たのしくないです, たのしかったです, たのしくなかったです and
@@ -69,6 +71,25 @@ function examples(value: unknown, withForms = false): ContentExample[] {
     check(example.form === undefined || exampleForms.includes(example.form as ExampleForm), 'Forma de ejemplo desconocida.');
     return { written: example.written, reading: example.reading, meaning: example.meaning, form: example.form as ExampleForm | undefined };
   });
+}
+
+/**
+ * The example or sentence of a counter form or question writes that form and reads it with one of its readings, in
+ * the same blocks: 一本の 鉛筆 / いっぽんの えんぴつ for 一本, 鉛筆は 何本 ありますか。 for 何本. A sentence is complete:
+ * it ends with 。, ？ or ！.
+ */
+function counterExample(value: unknown, written: string, readings: readonly string[], complete = false): CounterExample {
+  const example = record(value, ['written', 'reading', 'meaning']);
+  text(example.written); text(example.reading); text(example.meaning);
+  check(sentenceReading.test(example.reading), 'La lectura de un ejemplo debe estar en kana.');
+  check(!complete || (/[。\uff1f\uff01]$/u.test(example.written) && /[。\uff1f\uff01]$/u.test(example.reading)),
+    `La frase «${example.written}» debe estar completa y terminar en punto.`);
+  const blocks = (sentence: string) => sentence.trim().split(/\s+/u).length;
+  check(blocks(example.written) === blocks(example.reading), `La lectura de «${example.written}» no tiene los mismos bloques.`);
+  const solidReading = example.reading.replace(/\s/gu, '');
+  check(example.written.replace(/\s/gu, '').includes(written) && readings.some((reading) => solidReading.includes(reading)),
+    `El ejemplo «${example.written}» no usa ${written} con su lectura.`);
+  return { written: example.written, reading: example.reading, meaning: example.meaning };
 }
 
 function texts(value: unknown, min = 0): asserts value is string[] {
@@ -161,7 +182,7 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
   for (const value of data.entries) {
     const common = ['id', 'group', 'sourceId'];
     const entry = data.kind === 'counters'
-      ? record(value, [...common, 'written', 'endings', 'title', 'description', 'type', 'forms', 'question', 'notes'])
+      ? record(value, [...common, 'written', 'difficulty', 'endings', 'title', 'description', 'type', 'forms', 'question', 'notes'])
       : data.kind === 'kana'
         ? record(value, [...common, 'hiragana', 'katakana', 'romaji', 'position'])
         : record(value, [...common, 'written', 'reading', 'romaji', 'meaning'], ['note', 'examples']);
@@ -171,22 +192,27 @@ export function parseStudyDocument(input: string, expectedKind?: ContentKind): S
     if (data.kind === 'counters') {
       text(entry.written); text(entry.title); text(entry.description); texts(entry.notes);
       check(entry.type === 'counter' || entry.type === 'number', 'Tipo de contador desconocido.');
+      check(difficulties.includes(entry.difficulty as Difficulty), `Dificultad desconocida en ${entry.id}.`);
       array(entry.forms, 1);
       let previous = 0;
       const readingGroups: string[][] = [];
       for (const value of entry.forms) {
-        const form = record(value, ['value', 'meaning', 'written', 'readings', 'special']);
+        const form = record(value, ['value', 'written', 'readings', 'special', 'example', 'sentence']);
         check(typeof form.value === 'number' && Number.isSafeInteger(form.value) && form.value > previous, 'Las cantidades deben ser positivas, únicas y estar ordenadas.');
         previous = form.value;
-        text(form.meaning); text(form.written); texts(form.readings, 1);
+        text(form.written); texts(form.readings, 1);
         check(form.readings.every((reading) => kanaReading.test(reading)), 'Lectura de contador no válida.');
         check(new Set(form.readings).size === form.readings.length, 'Lectura de contador repetida.');
         check(typeof form.special === 'boolean', 'Falta la marca de lectura especial.');
+        counterExample(form.example, form.written, form.readings);
+        counterExample(form.sentence, form.written, form.readings, true);
         readingGroups.push(form.readings);
       }
-      const question = record(entry.question, ['meaning', 'written', 'readings']);
-      text(question.meaning); text(question.written); texts(question.readings, 1);
+      const question = record(entry.question, ['written', 'readings', 'example', 'sentence']);
+      text(question.written); texts(question.readings, 1);
       check(question.readings.every((reading) => kanaReading.test(reading)), 'Lectura de pregunta no válida.');
+      counterExample(question.example, question.written, question.readings);
+      counterExample(question.sentence, question.written, question.readings, true);
       // Endings go from most to least common; a form or the question counts once if any reading ends with it.
       texts(entry.endings, 1);
       check(entry.endings.every((ending) => kanaReading.test(ending)), 'Terminación de contador no válida.');
@@ -311,16 +337,46 @@ export function sectionHref(section: NavigationSection, base: string): string {
 
 export function searchContent<T extends ContentEntry>(entries: readonly T[], query: string, group = 'all'): readonly T[] {
   const terms = normalizeSearch(query).split(/\s+/).filter(Boolean);
+  const example = (item: CounterExample) => [item.written, item.reading, item.meaning];
   return entries.filter((entry) => {
     if (group !== 'all' && entry.group !== group) return false;
     const searchable = 'forms' in entry
-      ? [entry.written, entry.title, entry.description, ...entry.notes, entry.question.meaning, entry.question.written,
-        ...entry.question.readings, ...entry.forms.flatMap((form) => [String(form.value), form.meaning, form.written, ...form.readings])]
+      ? [entry.written, entry.title, entry.description, ...entry.notes, entry.question.written, ...entry.question.readings,
+        ...example(entry.question.example), ...example(entry.question.sentence),
+        ...entry.forms.flatMap((form) => [String(form.value), form.written, ...form.readings, ...example(form.example), ...example(form.sentence)])]
       : 'hiragana' in entry ? [entry.hiragana, entry.katakana, entry.romaji]
         : [entry.written, entry.reading, entry.romaji, entry.meaning, entry.note ?? ''];
     const text = normalizeSearch(searchable.join(' '));
     return terms.every((term) => text.includes(term));
   });
+}
+
+export type DifficultyFilter = Difficulty | 'all';
+
+export function parseDifficultyFilter(value: string | null): DifficultyFilter {
+  return difficulties.includes(value as Difficulty) ? value as Difficulty : 'all';
+}
+
+/**
+ * Group and difficulty filter together (easy objects). Each filter counts what the other one lets through, so its
+ * numbers say how many entries a click would show; `entries` are the ones that pass both.
+ */
+export function filterByGroupAndDifficulty<T extends ContentEntry>(entries: readonly T[], group: string, difficulty: DifficultyFilter) {
+  const level = (entry: T) => ('difficulty' in entry ? entry.difficulty : undefined);
+  const inGroup = entries.filter((entry) => group === 'all' || entry.group === group);
+  const atLevel = entries.filter((entry) => difficulty === 'all' || level(entry) === difficulty);
+  const groupCounts = new Map<string, number>([['all', atLevel.length]]);
+  for (const entry of atLevel) groupCounts.set(entry.group, (groupCounts.get(entry.group) ?? 0) + 1);
+  const difficultyCounts = new Map<DifficultyFilter, number>([['all', inGroup.length], ...difficulties.map((item): [Difficulty, number] => [item, 0])]);
+  for (const entry of inGroup) {
+    const value = level(entry);
+    if (value) difficultyCounts.set(value, difficultyCounts.get(value)! + 1);
+  }
+  return {
+    entries: inGroup.filter((entry) => difficulty === 'all' || level(entry) === difficulty),
+    groupCounts: (id: string) => groupCounts.get(id) ?? 0,
+    difficultyCounts: (id: DifficultyFilter) => difficultyCounts.get(id) ?? 0,
+  };
 }
 
 /** A shuffled copy (Fisher-Yates); the original order stays untouched. */

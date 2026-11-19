@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { exampleForms, parseNavigation, parseStudyDocument, politeForm, resolveSection, sectionHref, searchContent, shuffled, loadNavigation, loadStudyDocument } from './content.ts';
+import { exampleForms, filterByGroupAndDifficulty, parseDifficultyFilter, parseNavigation, parseStudyDocument, politeForm, resolveSection, sectionHref, searchContent, shuffled, loadNavigation, loadStudyDocument } from './content.ts';
 import type { StudyDocument, CounterDocument, KanaDocument, LexiconDocument } from '../content-types.ts';
 
 const root = new URL('../../public/', import.meta.url);
@@ -99,6 +99,80 @@ test('counter endings list the sound changes from most to least common', () => {
   assert.throws(() => parseStudyDocument(withEndings('mai', ['mai'])));
 });
 
+test('every counter has a difficulty, and the levels follow the study plan', () => {
+  const level = (difficulty: string) => counters.entries.filter((entry) => entry.difficulty === difficulty).map((entry) => entry.id);
+  assert.deepEqual(level('easy'), ['tsu', 'ko', 'nin', 'mai', 'days', 'weeks', 'age', 'dates', 'hundreds', 'thousands', 'ten-thousands']);
+  assert.deepEqual(level('medium'), ['satsu', 'hon', 'hiki', 'soku', 'hai']);
+  assert.deepEqual(level('hard'), ['dai', 'wa', 'tou', 'months']);
+  for (const value of [undefined, 'unrated', 'Fácil', null]) {
+    const data = structuredClone(counters) as any;
+    data.entries[0].difficulty = value;
+    assert.throws(() => parseStudyDocument(JSON.stringify(data)), String(value));
+  }
+});
+
+test('each counter form and question has a Japanese example and an everyday sentence that use it with one of its readings', () => {
+  const hon = counters.entries.find((entry) => entry.id === 'hon')!;
+  assert.deepEqual(hon.forms[0].example, { written: '一本の 鉛筆', reading: 'いっぽんの えんぴつ', meaning: 'un lápiz' });
+  assert.equal(hon.question.example.reading, 'えんぴつは なんぼん ありますか。');
+  // 十 in the general series is read とお, and the 1st of the month ついたち, not いちにち.
+  assert.equal(counters.entries.find((entry) => entry.id === 'tsu')!.forms[9].example.reading, 'とおまで かぞえる');
+  assert.equal(counters.entries.find((entry) => entry.id === 'dates')!.forms[0].example.reading, 'いちがつ ついたち');
+  assert.deepEqual(hon.forms[0].sentence, { written: '鉛筆を 一本 貸して ください。', reading: 'えんぴつを いっぽん かして ください。', meaning: '¿Me prestas un lápiz?' });
+  for (const entry of counters.entries) {
+    for (const item of [...entry.forms, entry.question]) {
+      for (const sample of [item.example, item.sentence]) {
+        assert.ok(sample.written.replace(/\s/gu, '').includes(item.written), `${entry.id}: ${item.written}`);
+      }
+      assert.match(item.sentence.written, /[。？！]$/u, `${entry.id}: ${item.sentence.written}`);
+    }
+  }
+  const changes: ((data: any) => void)[] = [
+    (data) => { delete data.entries[6].forms[0].example; },
+    (data) => { delete data.entries[6].question.example; },
+    (data) => { data.entries[6].forms[0].meaning = 'un lápiz'; },
+    (data) => { data.entries[6].forms[0].example.meaning = ' '; },
+    // Another form, a reading that is not the form's, kanji in the reading and blocks that do not match.
+    (data) => { data.entries[6].forms[0].example.written = '二本の 鉛筆'; },
+    (data) => { data.entries[6].forms[0].example.reading = 'いちほんの えんぴつ'; },
+    (data) => { data.entries[6].forms[0].example.reading = 'いっぽんの 鉛筆'; },
+    (data) => { data.entries[6].forms[0].example.reading = 'いっぽんのえんぴつ'; },
+    (data) => { data.entries[6].question.example.written = '鉛筆は 何冊 ありますか。'; },
+    // The everyday sentence follows the same rules and is complete.
+    (data) => { delete data.entries[6].forms[0].sentence; },
+    (data) => { delete data.entries[6].question.sentence; },
+    (data) => { data.entries[6].forms[0].sentence.written = '鉛筆を 二本 貸して ください。'; },
+    (data) => { data.entries[6].forms[0].sentence.reading = 'えんぴつを いっぽん かして ください'; },
+    (data) => { data.entries[6].forms[0].sentence = { ...data.entries[6].forms[0].example }; },
+  ];
+  for (const change of changes) {
+    const data = structuredClone(counters); change(data);
+    assert.throws(() => parseStudyDocument(JSON.stringify(data)));
+  }
+});
+
+test('counter group and difficulty filters combine, and each counts what the other lets through', () => {
+  const ids = (entries: readonly { id: string }[]) => entries.map((entry) => entry.id);
+  const easyObjects = filterByGroupAndDifficulty(counters.entries, 'objects', 'easy');
+  assert.deepEqual(ids(easyObjects.entries), ['tsu', 'ko', 'mai']);
+  // Objetos and the other groups count easy counters; the difficulties count objects.
+  assert.equal(easyObjects.groupCounts('all'), 11);
+  assert.equal(easyObjects.groupCounts('objects'), 3);
+  assert.equal(easyObjects.groupCounts('time'), 4);
+  assert.equal(easyObjects.groupCounts('living'), 1);
+  assert.equal(easyObjects.difficultyCounts('all'), 8);
+  assert.equal(easyObjects.difficultyCounts('medium'), 4);
+  assert.equal(easyObjects.difficultyCounts('hard'), 1);
+  const everything = filterByGroupAndDifficulty(counters.entries, 'all', 'all');
+  assert.equal(everything.entries.length, counters.entries.length);
+  assert.equal(everything.difficultyCounts('easy') + everything.difficultyCounts('medium') + everything.difficultyCounts('hard'), counters.entries.length);
+  assert.deepEqual(ids(filterByGroupAndDifficulty(counters.entries, 'numbers', 'hard').entries), []);
+  // Sections without difficulties keep filtering by group only.
+  assert.equal(filterByGroupAndDifficulty(verbs.entries, 'essentials', 'all').entries.length, 20);
+  assert.equal(parseDifficultyFilter('hard'), 'hard');
+  for (const value of ['unrated', 'all', '', null]) assert.equal(parseDifficultyFilter(value), 'all');
+});
+
 test('kana covers the basic, voiced and contracted sounds without conflating duplicate romanizations', () => {
   assert.equal(kana.entries.filter((entry) => entry.group === 'basic').length, 46);
   assert.equal(kana.entries.filter((entry) => entry.group === 'voiced').length, 25);
@@ -182,6 +256,11 @@ test('content search combines groups and terms and handles accents, kana width a
   assert.deepEqual(searchContent(counters.entries, 'ballenas').map((entry) => entry.id), ['tou']);
   assert.deepEqual(searchContent(counters.entries, 'grullas').map((entry) => entry.id), ['wa']);
   assert.equal(searchContent(counters.entries, 'さんぼん', 'time').length, 0);
+  // The Japanese examples are searchable too, in writing, in kana and in translation.
+  assert.deepEqual(searchContent(counters.entries, '鉛筆').map((entry) => entry.id), ['hon']);
+  assert.deepEqual(searchContent(counters.entries, 'ひつじ').map((entry) => entry.id), ['tou']);
+  assert.deepEqual(searchContent(counters.entries, 'tanabata').map((entry) => entry.id), ['dates']);
+  assert.deepEqual(searchContent(counters.entries, 'karaoke').map((entry) => entry.id), ['nin']);
   assert.ok(searchContent(verbs.entries, 'escribir').some((entry) => entry.written === '書きます'));
   assert.ok(searchContent(verbs.entries, 'ｶｷﾏｽ').some((entry) => entry.written === '書きます'));
   assert.equal(searchContent(verbs.entries, 'escribir comer').length, 0);

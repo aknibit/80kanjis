@@ -1,3 +1,5 @@
+import type { Difficulty } from './types.ts';
+
 export type ContentKind = 'counters' | 'kana' | 'lexicon';
 
 export interface NavigationSection {
@@ -68,9 +70,17 @@ interface EntryBase {
   readonly sourceId: string;
 }
 
+/**
+ * A real use of a counter form or question, in Japanese with its reading and translation: 一本の 鉛筆, いっぽんの えんぴつ,
+ * un lápiz. It writes the form, and its reading uses one of the form's readings.
+ */
+export type CounterExample = Omit<ContentExample, 'form'>;
+
 export interface CounterEntry extends EntryBase {
   readonly type: 'counter' | 'number';
   readonly written: string;
+  /** How hard the counter is to learn; the page filters by it alongside the group. */
+  readonly difficulty: Difficulty;
   /** Hiragana endings of the counter, most common first (for example ほん, ぽん, ぼん). */
   readonly endings: readonly string[];
   readonly title: string;
@@ -78,12 +88,19 @@ export interface CounterEntry extends EntryBase {
   readonly notes: readonly string[];
   readonly forms: readonly {
     readonly value: number;
-    readonly meaning: string;
     readonly written: string;
     readonly readings: readonly string[];
     readonly special: boolean;
+    readonly example: CounterExample;
+    /** A complete everyday sentence with the form: 鉛筆を 一本 貸して ください。 */
+    readonly sentence: CounterExample;
   }[];
-  readonly question: { readonly meaning: string; readonly written: string; readonly readings: readonly string[] };
+  readonly question: {
+    readonly written: string;
+    readonly readings: readonly string[];
+    readonly example: CounterExample;
+    readonly sentence: CounterExample;
+  };
 }
 
 export interface CounterDocument extends DocumentBase {
