@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { collectionDocument } from '../../tests/collection-fixture.ts';
 import { kanjiSentencesFile, loadKanjiSentences, parseKanjiSentences, parseNavigation, parseStudyDocument } from './content.ts';
-import { createSiteVocabulary, kanjiSentenceProblems, readSentence } from './site-vocabulary.ts';
+import { createSiteVocabulary, exampleProblems, kanjiSentenceProblems, readSentence } from './site-vocabulary.ts';
 import type { CounterDocument, KanjiSentencesDocument, LexiconDocument } from '../content-types.ts';
 
 const root = new URL('../../public/', import.meta.url);
@@ -52,12 +52,14 @@ test('the dialog rejects sentences that do not show their kanji or do not match 
 
 test('a kanji counts only as part of a word of the site, read as the site reads it', () => {
   const problems = (written: string, reading: string) => readSentence({ written, reading }, vocabulary).problems;
-  // 川, 水 and 車 are not words of the site on their own; 川べり, 水田 and でん車 are.
+  // 川, 森 and 石 are not words of the site on their own; 川べり, 森林 and 小石 are, and so are 水 and 車.
   assert.equal(problems('川に 行きます。', 'かわに いきます。').length, 1);
-  assert.equal(problems('水を 飲みます。', 'みずを のみます。').length, 1);
-  assert.equal(problems('車で 帰ります。', 'くるまで かえります。').length, 1);
+  assert.equal(problems('森へ 行きます。', 'もりへ いきます。').length, 1);
+  assert.equal(problems('石が あります。', 'いしが あります。').length, 1);
   assert.deepEqual(problems('川べりを 歩きます。', 'かわべりを あるきます。'), []);
   assert.deepEqual(problems('でん車で 帰りました。', 'でんしゃで かえりました。'), []);
+  assert.deepEqual(problems('水を 飲みます。', 'みずを のみます。'), []);
+  assert.deepEqual(problems('車で 帰ります。', 'くるまで かえります。'), []);
   // The reading has to be the site's: 三本 is さんぼん.
   assert.equal(problems('鉛筆が 三本 あります。', 'えんぴつが さんほん あります。').length, 1);
   // Conjugated verbs and adjectives, loanwords in katakana and expressions with something in between.
@@ -77,6 +79,22 @@ test('adjectives, adverbs and counters are recognised from the words the sentenc
   assert.deepEqual(uses('この 机は 円いです。', 'この つくえは まるいです。'), ['adjective']);
   assert.deepEqual(uses('名人の 技術は 完璧でした。', 'めいじんの ぎじゅつは かんぺきでした。'), ['adjective']);
   assert.deepEqual(uses('ひよこが 五わ います。', 'ひよこが ごわ います。'), ['counter']);
+  // かっこいい conjugates like いい: かっこよかった.
+  assert.deepEqual(uses('ダンスは かっこよかったです。', 'ダンスは かっこよかったです。'), ['adjective']);
+});
+
+test('the examples of the sections and the counters also only use words of the site', () => {
+  const lexicons = documents.filter((data): data is LexiconDocument => data.kind === 'lexicon');
+  const counters = documents.find((data): data is CounterDocument => data.kind === 'counters')!;
+  assert.deepEqual(exampleProblems(lexicons, counters, vocabulary), []);
+  // Each problem says where it is: the section, the entry or counter form, and the example.
+  const bottles = structuredClone(counters) as any;
+  bottles.entries.find((entry: { id: string }) => entry.id === 'hon').forms[1].sentence = sentence('瓶を 二本 ください。', 'びんを にほん ください。');
+  assert.deepEqual(exampleProblems(lexicons, bottles, vocabulary),
+    ['Contadores · 二本 · 瓶を 二本 ください。: No se puede leer «瓶を二本くだ» con las palabras de la web y sus lecturas.']);
+  const verbs = lexicons.map((data) => structuredClone(data) as any);
+  verbs.find((data) => data.title === 'Verbos').entries[0].examples[0] = sentence('暑い 日は 遅く 起きます。', 'あつい ひは おそく おきます。');
+  assert.match(exampleProblems(verbs, counters, vocabulary).join('\n'), /^Verbos · 起きます · 暑い 日は 遅く 起きます。: No se puede leer «日は遅く起き»/);
 });
 
 test('the publishing check reports missing kanji, repeated sentences and advanced sentences without modifiers or counters', () => {

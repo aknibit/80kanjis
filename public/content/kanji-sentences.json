@@ -8,14 +8,14 @@
       "kanji": "一",
       "simple": [
         {
-          "written": "僕は 一年生です。",
-          "reading": "ぼくは いちねんせいです。",
+          "written": "わたしは 一年生です。",
+          "reading": "わたしは いちねんせいです。",
           "meaning": "Soy alumno de primer curso."
         },
         {
-          "written": "一日中 寝ました。",
-          "reading": "いちにちじゅう ねました。",
-          "meaning": "Dormí todo el día."
+          "written": "一人で えきへ 行きます。",
+          "reading": "ひとりで えきへ いきます。",
+          "meaning": "Voy solo a la estación."
         }
       ],
       "advanced": [
@@ -30,9 +30,9 @@
           "meaning": "Durante una semana casi no descansé."
         },
         {
-          "written": "一人で 長い 山みちを 歩きました。",
-          "reading": "ひとりで ながい やまみちを あるきました。",
-          "meaning": "Recorrí solo un largo sendero de montaña."
+          "written": "一月 一日は とても さむかったです。",
+          "reading": "いちがつ ついたちは とても さむかったです。",
+          "meaning": "El 1 de enero hizo mucho frío."
         },
         {
           "written": "一年生の かん字は あまり 難しくないです。",
@@ -50,9 +50,9 @@
           "meaning": "En febrero me voy de viaje."
         },
         {
-          "written": "卵を 二個 食べます。",
-          "reading": "たまごを にこ たべます。",
-          "meaning": "Me como dos huevos."
+          "written": "二時に ともだちと 会います。",
+          "reading": "にじに ともだちと あいます。",
+          "meaning": "Quedo con un amigo a las dos."
         }
       ],
       "advanced": [
@@ -109,9 +109,9 @@
           "meaning": "El niño de tres años está lleno de energía."
         },
         {
-          "written": "三人で 静かな 喫茶店に 行きました。",
-          "reading": "さんにんで しずかな きっさてんに いきました。",
-          "meaning": "Fuimos los tres a una cafetería tranquila."
+          "written": "三人で 静かな レストランへ 行きました。",
+          "reading": "さんにんで しずかな レストランへ いきました。",
+          "meaning": "Fuimos los tres a un restaurante tranquilo."
         }
       ]
     },
@@ -119,9 +119,9 @@
       "kanji": "四",
       "simple": [
         {
-          "written": "四月に 入学します。",
-          "reading": "しがつに にゅうがくします。",
-          "meaning": "En abril entro en la escuela."
+          "written": "きょ年の 四月に 入学しました。",
+          "reading": "きょねんの しがつに にゅうがくしました。",
+          "meaning": "Entré en la escuela en abril del año pasado."
         },
         {
           "written": "家族は 四人です。",
@@ -136,9 +136,9 @@
           "meaning": "En abril el tiempo es bastante templado."
         },
         {
-          "written": "きれいな 年賀状を 四枚 もらいました。",
-          "reading": "きれいな ねんがじょうを よんまい もらいました。",
-          "meaning": "Recibí cuatro postales de Año Nuevo bonitas."
+          "written": "きれいな シャツを 四枚 もらいました。",
+          "reading": "きれいな シャツを よんまい もらいました。",
+          "meaning": "Me regalaron cuatro camisas bonitas."
         },
         {
           "written": "あまい 蜜柑を 四個 食べました。",
@@ -156,9 +156,9 @@
       "kanji": "五",
       "simple": [
         {
-          "written": "鯉が 五匹 います。",
-          "reading": "こいが ごひき います。",
-          "meaning": "Hay cinco carpas."
+          "written": "五時に うちへ 帰ります。",
+          "reading": "ごじに うちへ かえります。",
+          "meaning": "Vuelvo a casa a las cinco."
         },
         {
           "written": "ひよこが 五わ います。",
@@ -173,9 +173,9 @@
           "meaning": "El niño de cinco años no entiende nada de kanji."
         },
         {
-          "written": "大きい 鯛を 五匹 買いました。",
-          "reading": "おおきい たいを ごひき かいました。",
-          "meaning": "Compré cinco doradas grandes."
+          "written": "大きい さかなを 五匹 もらいました。",
+          "reading": "おおきい さかなを ごひき もらいました。",
+          "meaning": "Me dieron cinco peces grandes."
         },
         {
           "written": "五日間の 旅行は とても 楽しかったです。",
@@ -235,9 +235,9 @@
           "meaning": "En julio hace calor."
         },
         {
-          "written": "七色の 旗が あります。",
-          "reading": "なないろの はたが あります。",
-          "meaning": "Hay una bandera de siete colores."
+          "written": "七時に あさごはんを 食べます。",
+          "reading": "しちじに あさごはんを たべます。",
+          "meaning": "Desayuno a las siete."
         }
       ],
       "advanced": [
@@ -267,9 +267,9 @@
       "kanji": "八",
       "simple": [
         {
-          "written": "八百屋で 蜜柑を 買います。",
-          "reading": "やおやで みかんを かいます。",
-          "meaning": "Compro mandarinas en la frutería."
+          "written": "八月に 日本へ 行きます。",
+          "reading": "はちがつに にほんへ いきます。",
+          "meaning": "En agosto voy a Japón."
         },
         {
           "written": "八日に 帰ります。",
@@ -284,14 +284,14 @@
           "meaning": "El monte Fuji es muy bonito en agosto."
         },
         {
-          "written": "八歳の 子どもに お年玉を あげました。",
-          "reading": "はっさいの こどもに おとしだまを あげました。",
-          "meaning": "Le di el dinero de Año Nuevo al niño de ocho años."
+          "written": "八歳の 子どもに チョコレートを あげました。",
+          "reading": "はっさいの こどもに チョコレートを あげました。",
+          "meaning": "Le di chocolate al niño de ocho años."
         },
         {
-          "written": "八百屋の 林檎は かなり 大きいです。",
-          "reading": "やおやの りんごは かなり おおきいです。",
-          "meaning": "Las manzanas de la frutería son bastante grandes."
+          "written": "八月の 日本は かなり 暑いです。",
+          "reading": "はちがつの にほんは かなり あついです。",
+          "meaning": "En agosto hace bastante calor en Japón."
         },
         {
           "written": "八月に 二週間 旅行します。",
@@ -309,9 +309,9 @@
           "meaning": "Las clases empiezan en septiembre."
         },
         {
-          "written": "おかきを 九個 食べました。",
-          "reading": "おかきを きゅうこ たべました。",
-          "meaning": "Me comí nueve galletas de arroz."
+          "written": "九時に えきで 会いましょう。",
+          "reading": "くじに えきで あいましょう。",
+          "meaning": "Quedemos a las nueve en la estación."
         }
       ],
       "advanced": [
@@ -321,9 +321,9 @@
           "meaning": "En septiembre hace algo de calor al final de la tarde."
         },
         {
-          "written": "九歳の 子どもは かん字を たくさん 覚えて います。",
-          "reading": "きゅうさいの こどもは かんじを たくさん おぼえて います。",
-          "meaning": "El niño de nueve años se sabe muchos kanji."
+          "written": "九歳の 子どもは かん字を たくさん 書きました。",
+          "reading": "きゅうさいの こどもは かんじを たくさん かきました。",
+          "meaning": "El niño de nueve años escribió muchos kanji."
         },
         {
           "written": "九冊の 雑誌は ほとんど 面白くなかったです。",
@@ -358,9 +358,9 @@
           "meaning": "El viaje de diez días fue un poco largo."
         },
         {
-          "written": "十人の 小学生が 見学に 来ました。",
-          "reading": "じゅうにんの しょうがくせいが けんがくに きました。",
-          "meaning": "Vinieron de visita diez alumnos de primaria."
+          "written": "十人の 小学生が 美術館を 見学しました。",
+          "reading": "じゅうにんの しょうがくせいが びじゅつかんを けんがくしました。",
+          "meaning": "Diez alumnos de primaria visitaron el museo de arte."
         },
         {
           "written": "十月の 夕日は とても きれいです。",
@@ -378,9 +378,9 @@
       "kanji": "百",
       "simple": [
         {
-          "written": "この 鉛筆は 百円です。",
-          "reading": "この えんぴつは ひゃくえんです。",
-          "meaning": "Este lápiz cuesta cien yenes."
+          "written": "この のみものは 百円です。",
+          "reading": "この のみものは ひゃくえんです。",
+          "meaning": "Esta bebida cuesta cien yenes."
         },
         {
           "written": "百円玉が あります。",
@@ -395,9 +395,9 @@
           "meaning": "El niño recibió tres monedas de cien yenes."
         },
         {
-          "written": "百円の 筆箱は あまり 便利では ありません。",
-          "reading": "ひゃくえんの ふでばこは あまり べんりでは ありません。",
-          "meaning": "El estuche de cien yenes no es muy práctico."
+          "written": "百円の かさは あまり 便利では ありません。",
+          "reading": "ひゃくえんの かさは あまり べんりでは ありません。",
+          "meaning": "El paraguas de cien yenes no es muy práctico."
         },
         {
           "written": "百年の 庭木は とても 大きいです。",
@@ -405,9 +405,9 @@
           "meaning": "El árbol centenario del jardín es muy grande."
         },
         {
-          "written": "百円で おいしい おかきを 買いました。",
-          "reading": "ひゃくえんで おいしい おかきを かいました。",
-          "meaning": "Compré unas galletas de arroz deliciosas por cien yenes."
+          "written": "百円で おいしい パンを 買いました。",
+          "reading": "ひゃくえんで おいしい パンを かいました。",
+          "meaning": "Compré un pan delicioso por cien yenes."
         }
       ]
     },
@@ -427,9 +427,9 @@
       ],
       "advanced": [
         {
-          "written": "千円の お年玉は とても 嬉しかったです。",
-          "reading": "せんえんの おとしだまは とても うれしかったです。",
-          "meaning": "El regalo de Año Nuevo de mil yenes me alegró mucho."
+          "written": "千円の プレゼントは とても 嬉しかったです。",
+          "reading": "せんえんの プレゼントは とても うれしかったです。",
+          "meaning": "El regalo de mil yenes me alegró mucho."
         },
         {
           "written": "千円で ビールを 三本 買いました。",
@@ -442,9 +442,9 @@
           "meaning": "¿Cuántos libros ilustrados compraste con mil yenes?"
         },
         {
-          "written": "千円の パイは ぜんぜん おいしくなかったです。",
-          "reading": "せんえんの パイは ぜんぜん おいしくなかったです。",
-          "meaning": "La tarta de mil yenes no estaba nada rica."
+          "written": "千円の ワインは ぜんぜん おいしくなかったです。",
+          "reading": "せんえんの ワインは ぜんぜん おいしくなかったです。",
+          "meaning": "El vino de mil yenes no estaba nada rico."
         }
       ]
     },
@@ -452,14 +452,14 @@
       "kanji": "日",
       "simple": [
         {
-          "written": "日記を 書きます。",
-          "reading": "にっきを かきます。",
-          "meaning": "Escribo un diario."
+          "written": "日よう日に テニスを します。",
+          "reading": "にちようびに テニスを します。",
+          "meaning": "El domingo juego al tenis."
         },
         {
-          "written": "夕日を 見ました。",
-          "reading": "ゆうひを みました。",
-          "meaning": "Vi la puesta de sol."
+          "written": "先生は 日本人です。",
+          "reading": "せんせいは にほんじんです。",
+          "meaning": "La profesora es japonesa."
         }
       ],
       "advanced": [
@@ -469,9 +469,9 @@
           "meaning": "El día festivo estuvo muy tranquilo de principio a fin."
         },
         {
-          "written": "三日間 日記を 書きませんでした。",
-          "reading": "みっかかん にっきを かきませんでした。",
-          "meaning": "Estuve tres días sin escribir el diario."
+          "written": "三日間 日本ごを 勉強しませんでした。",
+          "reading": "みっかかん にほんごを べんきょうしませんでした。",
+          "meaning": "Estuve tres días sin estudiar japonés."
         },
         {
           "written": "その 難しい 試験は 何日ですか。",
@@ -479,9 +479,9 @@
           "meaning": "¿Qué día es ese examen difícil?"
         },
         {
-          "written": "二日間の 休日は とても 楽しかったです。",
-          "reading": "ふつかかんの きゅうじつは とても たのしかったです。",
-          "meaning": "Los dos días libres fueron muy divertidos."
+          "written": "今日は とても いい 天気です。",
+          "reading": "きょうは とても いい てんきです。",
+          "meaning": "Hoy hace muy buen tiempo."
         }
       ]
     },
@@ -494,9 +494,9 @@
           "meaning": "Celebramos la fiesta de la luna."
         },
         {
-          "written": "まん月を 見ました。",
-          "reading": "まんげつを みました。",
-          "meaning": "Vi la luna llena."
+          "written": "こんばん まん月を 見ましょう。",
+          "reading": "こんばん まんげつを みましょう。",
+          "meaning": "Esta noche veamos la luna llena."
         }
       ],
       "advanced": [
@@ -511,14 +511,14 @@
           "meaning": "En dos meses casi no leí revistas."
         },
         {
-          "written": "お月見は とても 楽しかったです。",
-          "reading": "おつきみは とても たのしかったです。",
-          "meaning": "La fiesta de la luna fue muy divertida."
+          "written": "月よう日の 授業は ちょっと 長いです。",
+          "reading": "げつようびの じゅぎょうは ちょっと ながいです。",
+          "meaning": "La clase del lunes es un poco larga."
         },
         {
-          "written": "二月は 二十八日まで あります。",
-          "reading": "にがつは にじゅうはちにちまで あります。",
-          "meaning": "Febrero tiene 28 días."
+          "written": "らい月 ともだちと 二日間 旅行します。",
+          "reading": "らいげつ ともだちと ふつかかん りょこうします。",
+          "meaning": "El mes que viene me voy de viaje dos días con un amigo."
         }
       ]
     },
@@ -531,9 +531,9 @@
           "meaning": "Hubo un incendio."
         },
         {
-          "written": "火山に 行きました。",
-          "reading": "かざんに いきました。",
-          "meaning": "Fui a un volcán."
+          "written": "火よう日に 図書館へ 行きます。",
+          "reading": "かようびに としょかんへ いきます。",
+          "meaning": "El martes voy a la biblioteca."
         }
       ],
       "advanced": [
@@ -563,9 +563,9 @@
       "kanji": "水",
       "simple": [
         {
-          "written": "水草を 買いました。",
-          "reading": "みずくさを かいました。",
-          "meaning": "Compré plantas acuáticas."
+          "written": "水よう日に 日本ごの 授業が あります。",
+          "reading": "すいようびに にほんごの じゅぎょうが あります。",
+          "meaning": "El miércoles tengo clase de japonés."
         },
         {
           "written": "水どうを 修理します。",
@@ -590,9 +590,9 @@
           "meaning": "Los arrozales inundados son muy bonitos al final de la tarde."
         },
         {
-          "written": "水どうの 修理は ちょっと 大変でした。",
-          "reading": "すいどうの しゅうりは ちょっと たいへんでした。",
-          "meaning": "Arreglar la instalación de agua fue un poco duro."
+          "written": "つめたい 水を 二杯 飲みました。",
+          "reading": "つめたい みずを にはい のみました。",
+          "meaning": "Me bebí dos vasos de agua fría."
         }
       ]
     },
@@ -600,9 +600,9 @@
       "kanji": "木",
       "simple": [
         {
-          "written": "木の上に 鸚鵡が います。",
-          "reading": "きのうえに おうむが います。",
-          "meaning": "Hay un loro en lo alto del árbol."
+          "written": "木よう日に ともだちと 会います。",
+          "reading": "もくようびに ともだちと あいます。",
+          "meaning": "El jueves quedo con un amigo."
         },
         {
           "written": "木かげで 休みます。",
@@ -622,9 +622,9 @@
           "meaning": "En el jardín hay tres árboles grandes."
         },
         {
-          "written": "木の上の 梟は ぜんぜん 鳴きませんでした。",
-          "reading": "きのうえの ふくろうは ぜんぜん なきませんでした。",
-          "meaning": "El búho de lo alto del árbol no ululó ni una vez."
+          "written": "木の上の とりは ぜんぜん 鳴きませんでした。",
+          "reading": "きのうえの とりは ぜんぜん なきませんでした。",
+          "meaning": "El pájaro de lo alto del árbol no cantó ni una vez."
         },
         {
           "written": "木かげは とても 気もちが いいです。",
@@ -637,9 +637,9 @@
       "kanji": "金",
       "simple": [
         {
-          "written": "お金が あります。",
-          "reading": "おかねが あります。",
-          "meaning": "Tengo dinero."
+          "written": "金よう日は 時間が ありません。",
+          "reading": "きんようびは じかんが ありません。",
+          "meaning": "El viernes no tengo tiempo."
         },
         {
           "written": "銀行で ちょ金します。",
@@ -649,9 +649,9 @@
       ],
       "advanced": [
         {
-          "written": "税金は ちょっと 面倒くさいです。",
-          "reading": "ぜいきんは ちょっと めんどうくさいです。",
-          "meaning": "Los impuestos son un poco engorrosos."
+          "written": "金よう日の よるは ちょっと 忙しいです。",
+          "reading": "きんようびの よるは ちょっと いそがしいです。",
+          "meaning": "Los viernes por la noche estoy un poco ocupado."
         },
         {
           "written": "お金が ぜんぜん ありません。",
@@ -701,9 +701,9 @@
           "meaning": "La cerámica del museo de arte es muy famosa."
         },
         {
-          "written": "教室に 土足の 子どもは ほとんど いません。",
-          "reading": "きょうしつに どそくの こどもは ほとんど いません。",
-          "meaning": "En el aula casi ningún niño lleva los zapatos de calle."
+          "written": "土よう日に いっしょに えいがを 見ませんか。",
+          "reading": "どようびに いっしょに えいがを みませんか。",
+          "meaning": "¿Vemos una película juntos el sábado?"
         }
       ]
     },
@@ -748,9 +748,9 @@
       "kanji": "川",
       "simple": [
         {
-          "written": "川べりを 歩きます。",
-          "reading": "かわべりを あるきます。",
-          "meaning": "Camino por la orilla del río."
+          "written": "川べりで ともだちと 会いました。",
+          "reading": "かわべりで ともだちと あいました。",
+          "meaning": "Quedé con un amigo en la orilla del río."
         },
         {
           "written": "天の川が 見えます。",
@@ -839,9 +839,9 @@
           "meaning": "Las manzanas de Aomori son muy ricas."
         },
         {
-          "written": "森の中で 梟を 一羽 見ました。",
-          "reading": "もりのなかで ふくろうを いちわ みました。",
-          "meaning": "Vi un búho en el bosque."
+          "written": "森の中で とりを 一羽 見ました。",
+          "reading": "もりのなかで とりを いちわ みました。",
+          "meaning": "Vi un pájaro en el bosque."
         },
         {
           "written": "森の中は かなり 暗かったです。",
@@ -881,9 +881,9 @@
           "meaning": "Compré tres chikuwas."
         },
         {
-          "written": "竹やぶに 蛇が 一匹 いました。",
-          "reading": "たけやぶに へびが いっぴき いました。",
-          "meaning": "Había una serpiente en el bambusal."
+          "written": "竹やぶに ねこが 二匹 いました。",
+          "reading": "たけやぶに ねこが にひき いました。",
+          "meaning": "Había dos gatos en el bambusal."
         },
         {
           "written": "竹わは すこし あまいです。",
@@ -896,9 +896,9 @@
       "kanji": "花",
       "simple": [
         {
-          "written": "花屋で 花たばを 買いました。",
-          "reading": "はなやで はなたばを かいました。",
-          "meaning": "Compré un ramo de flores en la floristería."
+          "written": "お花見に 行きませんか。",
+          "reading": "おはなみに いきませんか。",
+          "meaning": "¿Vamos a ver los cerezos en flor?"
         },
         {
           "written": "花びらが きれいです。",
@@ -975,9 +975,9 @@
           "meaning": "Compré una gema."
         },
         {
-          "written": "靴に 小石が 入って います。",
-          "reading": "くつに こいしが はいって います。",
-          "meaning": "Tengo una piedrecita en el zapato."
+          "written": "小石で 字を 書きました。",
+          "reading": "こいしで じを かきました。",
+          "meaning": "Escribí letras con piedrecitas."
         }
       ],
       "advanced": [
@@ -1066,9 +1066,9 @@
           "meaning": "El escarabajo joya es un insecto muy bonito."
         },
         {
-          "written": "虫眼鏡で 小さい こん虫を 見ました。",
-          "reading": "むしめがねで ちいさい こんちゅうを みました。",
-          "meaning": "Miré un insecto pequeño con la lupa."
+          "written": "こん虫の 本を 二冊 買いました。",
+          "reading": "こんちゅうの ほんを にさつ かいました。",
+          "meaning": "Compré dos libros de insectos."
         },
         {
           "written": "夕がた すず虫が たくさん 鳴きました。",
@@ -1155,9 +1155,9 @@
       "kanji": "年",
       "simple": [
         {
-          "written": "年賀状を 書きます。",
-          "reading": "ねんがじょうを かきます。",
-          "meaning": "Escribo postales de Año Nuevo."
+          "written": "らい年 日本へ 行きます。",
+          "reading": "らいねん にほんへ いきます。",
+          "meaning": "El año que viene voy a Japón."
         },
         {
           "written": "先生は 年上です。",
@@ -1177,9 +1177,9 @@
           "meaning": "Ese señor mayor está lleno de vitalidad."
         },
         {
-          "written": "年上の 弁護士は かなり 有名です。",
-          "reading": "としうえの べんごしは かなり ゆうめいです。",
-          "meaning": "El abogado de más edad es bastante famoso."
+          "written": "今年の 試験は かなり 難しかったです。",
+          "reading": "ことしの しけんは かなり むずかしかったです。",
+          "meaning": "El examen de este año fue bastante difícil."
         },
         {
           "written": "十年は とても 長いです。",
@@ -1229,14 +1229,14 @@
       "kanji": "天",
       "simple": [
         {
-          "written": "天気が いいです。",
-          "reading": "てんきが いいです。",
-          "meaning": "Hace buen tiempo."
+          "written": "あしたの 天気は いいです。",
+          "reading": "あしたの てんきは いいです。",
+          "meaning": "Mañana hará buen tiempo."
         },
         {
-          "written": "天ごくと 地獄の え本を 読みました。",
-          "reading": "てんごくと じごくの えほんを よみました。",
-          "meaning": "Leí un libro ilustrado sobre el cielo y el infierno."
+          "written": "天の川を 見ましょう。",
+          "reading": "あまのがわを みましょう。",
+          "meaning": "Miremos la Vía Láctea."
         }
       ],
       "advanced": [
@@ -1251,9 +1251,9 @@
           "meaning": "Los tres días del viaje fueron casi todos lluviosos."
         },
         {
-          "written": "天気が 悪くて 心が 折れました。",
-          "reading": "てんきが わるくて こころが おれました。",
-          "meaning": "El mal tiempo me desanimó."
+          "written": "今日は 天気が あまり よくないです。",
+          "reading": "きょうは てんきが あまり よくないです。",
+          "meaning": "Hoy no hace muy buen tiempo."
         },
         {
           "written": "天の川の 写真を 一枚 撮りました。",
@@ -1340,9 +1340,9 @@
       "kanji": "夕",
       "simple": [
         {
-          "written": "夕食を 作ります。",
-          "reading": "ゆうしょくを つくります。",
-          "meaning": "Preparo la cena."
+          "written": "夕がた えきで 会いましょう。",
+          "reading": "ゆうがた えきで あいましょう。",
+          "meaning": "Quedemos al final de la tarde en la estación."
         },
         {
           "written": "夕ぐれに 帰ります。",
@@ -1357,9 +1357,9 @@
           "meaning": "El sol del atardecer se veía muy grande."
         },
         {
-          "written": "夕食に 卵を 三個 食べました。",
-          "reading": "ゆうしょくに たまごを さんこ たべました。",
-          "meaning": "Me comí tres huevos en la cena."
+          "written": "夕がた パンを 三つ 食べました。",
+          "reading": "ゆうがた パンを みっつ たべました。",
+          "meaning": "Al final de la tarde me comí tres panes."
         },
         {
           "written": "夕がたは ちょっと 忙しいです。",
@@ -1377,9 +1377,9 @@
       "kanji": "白",
       "simple": [
         {
-          "written": "白板に 書きます。",
-          "reading": "はくばんに かきます。",
-          "meaning": "Escribo en la pizarra blanca."
+          "written": "白い シャツを 買いました。",
+          "reading": "しろい シャツを かいました。",
+          "meaning": "Compré una camisa blanca."
         },
         {
           "written": "僕は 白ぐみです。",
@@ -1399,9 +1399,9 @@
           "meaning": "Hay dos perros blancos."
         },
         {
-          "written": "白板は ちょっと 小さいです。",
-          "reading": "はくばんは ちょっと ちいさいです。",
-          "meaning": "La pizarra blanca es un poco pequeña."
+          "written": "白い花は とても きれいです。",
+          "reading": "しろいはなは とても きれいです。",
+          "meaning": "Las flores blancas son muy bonitas."
         },
         {
           "written": "白ぐみは ぜんぜん 速くなかったです。",
@@ -1426,9 +1426,9 @@
       ],
       "advanced": [
         {
-          "written": "その 青年は 筆が とても 上手です。",
-          "reading": "その せいねんは ふでが とても じょうずです。",
-          "meaning": "Ese joven es muy hábil con el pincel."
+          "written": "その 青年は サッカーが とても 上手です。",
+          "reading": "その せいねんは サッカーが とても じょうずです。",
+          "meaning": "Ese joven juega muy bien al fútbol."
         },
         {
           "written": "青い 鉛筆を 二本 買いました。",
@@ -1451,9 +1451,9 @@
       "kanji": "赤",
       "simple": [
         {
-          "written": "赤ちゃんが 寝て います。",
-          "reading": "あかちゃんが ねて います。",
-          "meaning": "El bebé está durmiendo."
+          "written": "赤い かばんを 買いました。",
+          "reading": "あかい かばんを かいました。",
+          "meaning": "Compré un bolso rojo."
         },
         {
           "written": "赤はんを 食べました。",
@@ -1488,14 +1488,14 @@
       "kanji": "大",
       "simple": [
         {
-          "written": "大学に 行きます。",
-          "reading": "だいがくに いきます。",
-          "meaning": "Voy a la universidad."
+          "written": "あさって 大学へ 行きます。",
+          "reading": "あさって だいがくへ いきます。",
+          "meaning": "Pasado mañana voy a la universidad."
         },
         {
-          "written": "林檎が 大すきです。",
-          "reading": "りんごが だいすきです。",
-          "meaning": "Me encantan las manzanas."
+          "written": "日本の たべものが 大すきです。",
+          "reading": "にほんの たべものが だいすきです。",
+          "meaning": "Me encanta la comida japonesa."
         }
       ],
       "advanced": [
@@ -1584,9 +1584,9 @@
           "meaning": "Los deberes de primaria son un poco pesados."
         },
         {
-          "written": "この 筆箱は すこし 小さいです。",
-          "reading": "この ふでばこは すこし ちいさいです。",
-          "meaning": "Este estuche es un poco pequeño."
+          "written": "この へやは すこし 小さいです。",
+          "reading": "この へやは すこし ちいさいです。",
+          "meaning": "Esta habitación es un poco pequeña."
         },
         {
           "written": "小学校の 校庭は とても 大きいです。",
@@ -1599,9 +1599,9 @@
       "kanji": "上",
       "simple": [
         {
-          "written": "机の 上に 辞書が あります。",
-          "reading": "つくえの うえに じしょが あります。",
-          "meaning": "Hay un diccionario encima de la mesa."
+          "written": "かばんは いすの 上に あります。",
+          "reading": "かばんは いすの うえに あります。",
+          "meaning": "El bolso está encima de la silla."
         },
         {
           "written": "上ぎを 買いました。",
@@ -1621,9 +1621,9 @@
           "meaning": "Compré dos chaquetas negras."
         },
         {
-          "written": "右手を 上げて 質問を 二つ しました。",
-          "reading": "みぎてを あげて しつもんを ふたつ しました。",
-          "meaning": "Levanté la mano derecha e hice dos preguntas."
+          "written": "かれは テニスが かなり 上手です。",
+          "reading": "かれは テニスが かなり じょうずです。",
+          "meaning": "Él juega bastante bien al tenis."
         },
         {
           "written": "年上の 先生は とても 静かな 人です。",
@@ -1648,9 +1648,9 @@
       ],
       "advanced": [
         {
-          "written": "僕は かん字が ちょっと 下手です。",
-          "reading": "ぼくは かんじが ちょっと へたです。",
-          "meaning": "Se me dan un poco mal los kanji."
+          "written": "わたしは えが ちょっと 下手です。",
+          "reading": "わたしは えが ちょっと へたです。",
+          "meaning": "Se me da un poco mal dibujar."
         },
         {
           "written": "箱の 下に 鉛筆が 二本 あります。",
@@ -1673,9 +1673,9 @@
       "kanji": "左",
       "simple": [
         {
-          "written": "左がわに 座ります。",
-          "reading": "ひだりがわに すわります。",
-          "meaning": "Me siento en el lado izquierdo."
+          "written": "トイレは 左がわです。",
+          "reading": "トイレは ひだりがわです。",
+          "meaning": "El lavabo está a la izquierda."
         },
         {
           "written": "左右を 見ます。",
@@ -1700,9 +1700,9 @@
           "meaning": "El aula de la izquierda está muy tranquila."
         },
         {
-          "written": "左右の 柱は とても 大きいです。",
-          "reading": "さゆうの はしらは とても おおきいです。",
-          "meaning": "Las columnas de izquierda y derecha son muy grandes."
+          "written": "左右の 本だなは とても 大きいです。",
+          "reading": "さゆうの ほんだなは とても おおきいです。",
+          "meaning": "Las estanterías de izquierda y derecha son muy grandes."
         }
       ]
     },
@@ -1710,9 +1710,9 @@
       "kanji": "右",
       "simple": [
         {
-          "written": "右がわに 銀行が あります。",
-          "reading": "みぎがわに ぎんこうが あります。",
-          "meaning": "A la derecha hay un banco."
+          "written": "かいだんは 右がわに あります。",
+          "reading": "かいだんは みぎがわに あります。",
+          "meaning": "La escalera está a la derecha."
         },
         {
           "written": "右手を 上げます。",
@@ -1722,9 +1722,9 @@
       ],
       "advanced": [
         {
-          "written": "右がわの 喫茶店の コーヒーは かなり おいしいです。",
-          "reading": "みぎがわの きっさてんの コーヒーは かなり おいしいです。",
-          "meaning": "El café de la cafetería de la derecha está bastante rico."
+          "written": "右がわの みせの パンは かなり おいしいです。",
+          "reading": "みぎがわの みせの パンは かなり おいしいです。",
+          "meaning": "El pan de la tienda de la derecha está bastante rico."
         },
         {
           "written": "右がわに 店員が 二人 います。",
@@ -1737,9 +1737,9 @@
           "meaning": "En la estantería de la derecha hay muchos libros ilustrados."
         },
         {
-          "written": "右手で かん字を きれいに 書きます。",
-          "reading": "みぎてで かんじを きれいに かきます。",
-          "meaning": "Con la mano derecha escribo los kanji con buena letra."
+          "written": "右手で かん字を たくさん 書きました。",
+          "reading": "みぎてで かんじを たくさん かきました。",
+          "meaning": "Escribí muchos kanji con la mano derecha."
         }
       ]
     },
@@ -1752,9 +1752,9 @@
           "meaning": "Esta mesa es redonda."
         },
         {
-          "written": "百円で 買いました。",
-          "reading": "ひゃくえんで かいました。",
-          "meaning": "Lo compré por cien yenes."
+          "written": "おくさんは 百円で かさを 買いました。",
+          "reading": "おくさんは ひゃくえんで かさを かいました。",
+          "meaning": "Su mujer compró un paraguas por cien yenes."
         }
       ],
       "advanced": [
@@ -1796,9 +1796,9 @@
       ],
       "advanced": [
         {
-          "written": "聴解力の 試験は ちょっと 難しかったです。",
-          "reading": "ちょうかいりょくの しけんは ちょっと むずかしかったです。",
-          "meaning": "El examen de comprensión auditiva fue un poco difícil."
+          "written": "学力の 試験は ちょっと 難しかったです。",
+          "reading": "がくりょくの しけんは ちょっと むずかしかったです。",
+          "meaning": "El examen de nivel fue un poco difícil."
         },
         {
           "written": "力もちの 男の人が 箱を 五個 上げました。",
@@ -1806,9 +1806,9 @@
           "meaning": "Un hombre muy fuerte levantó cinco cajas."
         },
         {
-          "written": "瞬発力は あまり ありません。",
-          "reading": "しゅんぱつりょくは あまり ありません。",
-          "meaning": "No tengo mucha potencia explosiva."
+          "written": "その 子どもは 力が あまり ありません。",
+          "reading": "その こどもは ちからが あまり ありません。",
+          "meaning": "Ese niño no tiene mucha fuerza."
         },
         {
           "written": "子どもの 学力は ぜんぜん 悪くないです。",
@@ -1863,8 +1863,8 @@
           "meaning": "Dibujo los ojos y la boca."
         },
         {
-          "written": "旅行の 目てきは 和食です。",
-          "reading": "りょこうの もくてきは わしょくです。",
+          "written": "旅行の 目てきは 日本の りょうりです。",
+          "reading": "りょこうの もくてきは にほんの りょうりです。",
           "meaning": "El objetivo del viaje es la comida japonesa."
         }
       ],
@@ -1900,9 +1900,9 @@
           "meaning": "Aplaudimos."
         },
         {
-          "written": "右手で 書きます。",
-          "reading": "みぎてで かきます。",
-          "meaning": "Escribo con la mano derecha."
+          "written": "右手で フォークを もちます。",
+          "reading": "みぎてで フォークを もちます。",
+          "meaning": "Cojo el tenedor con la mano derecha."
         }
       ],
       "advanced": [
@@ -1917,9 +1917,9 @@
           "meaning": "Apunté tres preguntas en la agenda."
         },
         {
-          "written": "技術者は 機械の 修理が かなり 上手です。",
-          "reading": "ぎじゅつしゃは きかいの しゅうりが かなり じょうずです。",
-          "meaning": "El técnico es bastante hábil reparando máquinas."
+          "written": "先生は ピアノが かなり 上手です。",
+          "reading": "せんせいは ピアノが かなり じょうずです。",
+          "meaning": "La profesora toca bastante bien el piano."
         },
         {
           "written": "手帳は とても 便利です。",
@@ -1937,9 +1937,9 @@
           "meaning": "Tiene las piernas largas."
         },
         {
-          "written": "靴を 一足 買いました。",
-          "reading": "くつを いっそく かいました。",
-          "meaning": "Compré un par de zapatos."
+          "written": "早足で えきへ 行きます。",
+          "reading": "はやあしで えきへ いきます。",
+          "meaning": "Voy a la estación a paso rápido."
         }
       ],
       "advanced": [
@@ -1949,9 +1949,9 @@
           "meaning": "En la pradera hay muchas huellas de caballo."
         },
         {
-          "written": "早足で 長い 坂を 歩きました。",
-          "reading": "はやあしで ながい さかを あるきました。",
-          "meaning": "Recorrí una cuesta larga a paso rápido."
+          "written": "早足で 長い 山みちを 歩きました。",
+          "reading": "はやあしで ながい やまみちを あるきました。",
+          "meaning": "Recorrí un largo sendero de montaña a paso rápido."
         },
         {
           "written": "きれいな 靴を 二足 もらいました。",
@@ -1981,9 +1981,9 @@
       ],
       "advanced": [
         {
-          "written": "梟は 目と耳が とても いいです。",
-          "reading": "ふくろうは めとみみが とても いいです。",
-          "meaning": "El búho tiene muy buena vista y muy buen oído."
+          "written": "ねこは 目と耳が とても いいです。",
+          "reading": "ねこは めとみみが とても いいです。",
+          "meaning": "Los gatos tienen muy buena vista y muy buen oído."
         },
         {
           "written": "先生の 耳うちは ぜんぜん 分かりませんでした。",
@@ -2011,9 +2011,9 @@
           "meaning": "Comparo los timbres."
         },
         {
-          "written": "音声を 録音します。",
-          "reading": "おんせいを ろくおんします。",
-          "meaning": "Grabo el audio."
+          "written": "音がくを 聞きます。",
+          "reading": "おんがくを ききます。",
+          "meaning": "Escucho música."
         }
       ],
       "advanced": [
@@ -2023,9 +2023,9 @@
           "meaning": "El timbre de la flauta es muy bonito."
         },
         {
-          "written": "機械の 音は かなり 大きいです。",
-          "reading": "きかいの おとは かなり おおきいです。",
-          "meaning": "El ruido de la máquina es bastante fuerte."
+          "written": "コンサートの 音は かなり 大きかったです。",
+          "reading": "コンサートの おとは かなり おおきかったです。",
+          "meaning": "El sonido del concierto estaba bastante alto."
         },
         {
           "written": "音ぷを 三つ 書きました。",
@@ -2043,9 +2043,9 @@
       "kanji": "見",
       "simple": [
         {
-          "written": "写真を 見ます。",
-          "reading": "しゃしんを みます。",
-          "meaning": "Miro fotos."
+          "written": "みんなで 写真を 見ます。",
+          "reading": "みんなで しゃしんを みます。",
+          "meaning": "Miramos las fotos todos juntos."
         },
         {
           "written": "美術館を 見学します。",
@@ -2055,9 +2055,9 @@
       ],
       "advanced": [
         {
-          "written": "ふじ山が とても きれいに 見えます。",
-          "reading": "ふじさんが とても きれいに みえます。",
-          "meaning": "El monte Fuji se ve muy bonito."
+          "written": "日本の えいがを 二本 見ました。",
+          "reading": "にほんの えいがを にほん みました。",
+          "meaning": "Vi dos películas japonesas."
         },
         {
           "written": "銀行の 見学は ちょっと つまらなかったです。",
@@ -2065,9 +2065,9 @@
           "meaning": "La visita al banco fue un poco aburrida."
         },
         {
-          "written": "美術館で 写真を たくさん 見ました。",
-          "reading": "びじゅつかんで しゃしんを たくさん みました。",
-          "meaning": "Vi muchas fotos en el museo de arte."
+          "written": "日本で 有名な かぶきを 見ました。",
+          "reading": "にほんで ゆうめいな かぶきを みました。",
+          "meaning": "En Japón vi un kabuki famoso."
         },
         {
           "written": "火山が 二つ 見えます。",
@@ -2085,9 +2085,9 @@
           "meaning": "El profesor se pone de pie."
         },
         {
-          "written": "日直が き立と 言います。",
-          "reading": "にっちょくが きりつと いいます。",
-          "meaning": "El encargado del día dice «¡En pie!»."
+          "written": "いすから 立ちました。",
+          "reading": "いすから たちました。",
+          "meaning": "Me levanté de la silla."
         }
       ],
       "advanced": [
@@ -2102,14 +2102,14 @@
           "meaning": "Ponerse en pie en clase es un poco pesado."
         },
         {
-          "written": "赤ちゃんが 立って とても 嬉しかったです。",
-          "reading": "あかちゃんが たって とても うれしかったです。",
-          "meaning": "Me alegré mucho cuando el bebé se puso de pie."
+          "written": "その 赤ちゃんは もう 立ちます。",
+          "reading": "その あかちゃんは もう たちます。",
+          "meaning": "Ese bebé ya se pone de pie."
         },
         {
-          "written": "大きい 柱が 四本 立って います。",
-          "reading": "おおきい はしらが よんほん たって います。",
-          "meaning": "Hay cuatro columnas grandes en pie."
+          "written": "四人の 学生が 立ちました。",
+          "reading": "よにんの がくせいが たちました。",
+          "meaning": "Se pusieron de pie cuatro estudiantes."
         }
       ]
     },
@@ -2129,9 +2129,9 @@
       ],
       "advanced": [
         {
-          "written": "休日は ほとんど 家で 寝ます。",
-          "reading": "きゅうじつは ほとんど うちで ねます。",
-          "meaning": "Los días libres casi siempre me quedo en casa durmiendo."
+          "written": "ひる休みは いつも 食堂で 食べます。",
+          "reading": "ひるやすみは いつも しょくどうで たべます。",
+          "meaning": "En la pausa del mediodía siempre como en el comedor."
         },
         {
           "written": "休憩は ちょっと 長かったです。",
@@ -2154,14 +2154,14 @@
       "kanji": "出",
       "simple": [
         {
-          "written": "家を 出ます。",
-          "reading": "うちを でます。",
-          "meaning": "Salgo de casa."
+          "written": "七時に うちを 出ます。",
+          "reading": "しちじに うちを でます。",
+          "meaning": "Salgo de casa a las siete."
         },
         {
-          "written": "宿題を 出します。",
-          "reading": "しゅくだいを だします。",
-          "meaning": "Entrego los deberes."
+          "written": "らいしゅう 宿題を 出します。",
+          "reading": "らいしゅう しゅくだいを だします。",
+          "meaning": "La semana que viene entrego los deberes."
         }
       ],
       "advanced": [
@@ -2176,9 +2176,9 @@
           "meaning": "El profesor puso muchos deberes."
         },
         {
-          "written": "年賀状を 八枚 出しました。",
-          "reading": "ねんがじょうを はちまい だしました。",
-          "meaning": "Envié ocho postales de Año Nuevo."
+          "written": "宿題の かみを 八枚 出しました。",
+          "reading": "しゅくだいの かみを はちまい だしました。",
+          "meaning": "Entregué ocho hojas de deberes."
         },
         {
           "written": "でん車の 出ぱつが ちょっと 遅かったです。",
@@ -2213,14 +2213,14 @@
           "meaning": "El examen de ingreso fue muy difícil."
         },
         {
-          "written": "箱に 林檎が 九個 入って います。",
-          "reading": "はこに りんごが きゅうこ はいって います。",
-          "meaning": "En la caja hay nueve manzanas."
+          "written": "九時に 教室に 入りました。",
+          "reading": "くじに きょうしつに はいりました。",
+          "meaning": "Entré en el aula a las nueve."
         },
         {
-          "written": "喫茶店に 入って コーヒーを 二杯 飲みました。",
-          "reading": "きっさてんに はいって コーヒーを にはい のみました。",
-          "meaning": "Entré en una cafetería y me tomé dos cafés."
+          "written": "二人で レストランに 入りました。",
+          "reading": "ふたりで レストランに はいりました。",
+          "meaning": "Entramos los dos en un restaurante."
         }
       ]
     },
@@ -2233,9 +2233,9 @@
           "meaning": "Me encontré con una mujer."
         },
         {
-          "written": "その 女の人は 弁護士です。",
-          "reading": "その おんなのひとは べんごしです。",
-          "meaning": "Esa mujer es abogada."
+          "written": "その 女の人は いしゃです。",
+          "reading": "その おんなのひとは いしゃです。",
+          "meaning": "Esa mujer es médica."
         }
       ],
       "advanced": [
@@ -2245,8 +2245,8 @@
           "meaning": "Hay ocho chicas en el aula."
         },
         {
-          "written": "その 女の人は かなり 有名な 技術者です。",
-          "reading": "その おんなのひとは かなり ゆうめいな ぎじゅつしゃです。",
+          "written": "その 女の人は かなり 有名な エンジニアです。",
+          "reading": "その おんなのひとは かなり ゆうめいな エンジニアです。",
           "meaning": "Esa mujer es una ingeniera bastante famosa."
         },
         {
@@ -2265,9 +2265,9 @@
       "kanji": "男",
       "simple": [
         {
-          "written": "男の人が 座ります。",
-          "reading": "おとこのひとが すわります。",
-          "meaning": "Un hombre se sienta."
+          "written": "その 男の人は ぎんこういんです。",
+          "reading": "その おとこのひとは ぎんこういんです。",
+          "meaning": "Ese hombre trabaja en un banco."
         },
         {
           "written": "男の子が 生まれました。",
@@ -2319,9 +2319,9 @@
           "meaning": "Le regalé dos libros ilustrados al niño."
         },
         {
-          "written": "子犬は ちょっと 怠け者です。",
-          "reading": "こいぬは ちょっと なまけものです。",
-          "meaning": "El cachorro es un poco perezoso."
+          "written": "その 子犬は ちょっと 黒いです。",
+          "reading": "その こいぬは ちょっと くろいです。",
+          "meaning": "Ese cachorro es un poco negro."
         },
         {
           "written": "子どもは 卵を ぜんぜん 食べません。",
@@ -2339,9 +2339,9 @@
       "kanji": "人",
       "simple": [
         {
-          "written": "ほかの 人に 聞きます。",
-          "reading": "ほかの ひとに ききます。",
-          "meaning": "Pregunto a otra persona."
+          "written": "わたしは スペイン人です。",
+          "reading": "わたしは スペインじんです。",
+          "meaning": "Soy español."
         },
         {
           "written": "何人 いますか。",
@@ -2356,14 +2356,14 @@
           "meaning": "Los días festivos, las multitudes son bastante agobiantes."
         },
         {
-          "written": "筆の 名人は とても 有名です。",
-          "reading": "ふでの めいじんは とても ゆうめいです。",
-          "meaning": "El maestro del pincel es muy famoso."
+          "written": "うたの 名人は とても 有名です。",
+          "reading": "うたの めいじんは とても ゆうめいです。",
+          "meaning": "El maestro del canto es muy famoso."
         },
         {
-          "written": "喫茶店に 人が 三人 います。",
-          "reading": "きっさてんに ひとが さんにん います。",
-          "meaning": "Hay tres personas en la cafetería."
+          "written": "えきに 人が 三人 います。",
+          "reading": "えきに ひとが さんにん います。",
+          "meaning": "Hay tres personas en la estación."
         },
         {
           "written": "人げんは とても 面白いです。",
@@ -2376,9 +2376,9 @@
       "kanji": "名",
       "simple": [
         {
-          "written": "名前を 書きます。",
-          "reading": "なまえを かきます。",
-          "meaning": "Escribo mi nombre."
+          "written": "あなたの 名前を 書いて ください。",
+          "reading": "あなたの なまえを かいて ください。",
+          "meaning": "Escribe tu nombre, por favor."
         },
         {
           "written": "本名を 言います。",
@@ -2403,9 +2403,9 @@
           "meaning": "Me aprendí tres nombres."
         },
         {
-          "written": "名人の 技術は 完璧でした。",
-          "reading": "めいじんの ぎじゅつは かんぺきでした。",
-          "meaning": "La técnica del maestro fue perfecta."
+          "written": "名人の えは 完璧でした。",
+          "reading": "めいじんの えは かんぺきでした。",
+          "meaning": "El cuadro del maestro era perfecto."
         }
       ]
     },
@@ -2418,9 +2418,9 @@
           "meaning": "Escribo kanji."
         },
         {
-          "written": "すう字を 読みます。",
-          "reading": "すうじを よみます。",
-          "meaning": "Leo las cifras."
+          "written": "ローマ字で 名前を 書きます。",
+          "reading": "ローマじで なまえを かきます。",
+          "meaning": "Escribo mi nombre en alfabeto latino."
         }
       ],
       "advanced": [
@@ -2467,9 +2467,9 @@
           "meaning": "La redacción fue un poco larga."
         },
         {
-          "written": "文なしの 青年は かなり 幸せです。",
-          "reading": "もんなしの せいねんは かなり しあわせです。",
-          "meaning": "El joven sin dinero es bastante feliz."
+          "written": "文なしの 青年は かなり げん気です。",
+          "reading": "もんなしの せいねんは かなり げんきです。",
+          "meaning": "El joven sin dinero está bastante animado."
         },
         {
           "written": "さく文を 三枚 書きました。",
@@ -2487,9 +2487,9 @@
       "kanji": "本",
       "simple": [
         {
-          "written": "え本を 読みます。",
-          "reading": "えほんを よみます。",
-          "meaning": "Leo un libro ilustrado."
+          "written": "おっとは まいばん 本を 読みます。",
+          "reading": "おっとは まいばん ほんを よみます。",
+          "meaning": "Mi marido lee cada noche."
         },
         {
           "written": "本だなが あります。",
@@ -2524,14 +2524,14 @@
       "kanji": "学",
       "simple": [
         {
-          "written": "大学で 学びます。",
-          "reading": "だいがくで まなびます。",
-          "meaning": "Estudio en la universidad."
+          "written": "わたしたちは 大学で 学びます。",
+          "reading": "わたしたちは だいがくで まなびます。",
+          "meaning": "Nosotros estudiamos en la universidad."
         },
         {
-          "written": "専門学校に 行きます。",
-          "reading": "せんもんがっこうに いきます。",
-          "meaning": "Voy a una escuela profesional."
+          "written": "わたしは 大学生です。",
+          "reading": "わたしは だいがくせいです。",
+          "meaning": "Soy estudiante universitario."
         }
       ],
       "advanced": [
@@ -2546,9 +2546,9 @@
           "meaning": "Los alumnos de primaria aprenden muchos kanji."
         },
         {
-          "written": "専門学校の 授業は かなり 難しいです。",
-          "reading": "せんもんがっこうの じゅぎょうは かなり むずかしいです。",
-          "meaning": "Las clases de la escuela profesional son bastante difíciles."
+          "written": "大学の 授業は かなり 難しいです。",
+          "reading": "だいがくの じゅぎょうは かなり むずかしいです。",
+          "meaning": "Las clases de la universidad son bastante difíciles."
         },
         {
           "written": "大学の 食堂は あまり おいしくないです。",
@@ -2598,9 +2598,9 @@
       "kanji": "先",
       "simple": [
         {
-          "written": "先生に 会います。",
-          "reading": "せんせいに あいます。",
-          "meaning": "Me veo con el profesor."
+          "written": "おととい 先生に 会いました。",
+          "reading": "おととい せんせいに あいました。",
+          "meaning": "Anteayer vi a la profesora."
         },
         {
           "written": "先とうを 歩きます。",
@@ -2635,14 +2635,14 @@
       "kanji": "生",
       "simple": [
         {
-          "written": "生ハムを 食べます。",
-          "reading": "なまハムを たべます。",
-          "meaning": "Como jamón serrano."
+          "written": "あしたは おかあさんの たん生日です。",
+          "reading": "あしたは おかあさんの たんじょうびです。",
+          "meaning": "Mañana es el cumpleaños de tu madre."
         },
         {
-          "written": "赤ちゃんが 生まれました。",
-          "reading": "あかちゃんが うまれました。",
-          "meaning": "Nació un bebé."
+          "written": "わたしは 学生です。",
+          "reading": "わたしは がくせいです。",
+          "meaning": "Soy estudiante."
         }
       ],
       "advanced": [
@@ -2662,9 +2662,9 @@
           "meaning": "Nacieron tres pollitos."
         },
         {
-          "written": "鯛は 卵を たくさん 生みます。",
-          "reading": "たいは たまごを たくさん うみます。",
-          "meaning": "Las doradas ponen muchos huevos."
+          "written": "さかなは 卵を たくさん 生みます。",
+          "reading": "さかなは たまごを たくさん うみます。",
+          "meaning": "Los peces ponen muchos huevos."
         }
       ]
     },
@@ -2694,9 +2694,9 @@
           "meaning": "Adelantamos dos días la fecha del examen."
         },
         {
-          "written": "ちょっと 早めに 帰ります。",
-          "reading": "ちょっと はやめに かえります。",
-          "meaning": "Vuelvo un poco antes."
+          "written": "けさは とても 早く 起きました。",
+          "reading": "けさは とても はやく おきました。",
+          "meaning": "Esta mañana me levanté muy temprano."
         },
         {
           "written": "早い でん車で 青森へ 行きました。",
@@ -2773,9 +2773,9 @@
           "meaning": "El rey tiene tres hijos."
         },
         {
-          "written": "王さまは あまり 幸せでは ありませんでした。",
-          "reading": "おうさまは あまり しあわせでは ありませんでした。",
-          "meaning": "El rey no era muy feliz."
+          "written": "王さまは あまり げん気では ありませんでした。",
+          "reading": "おうさまは あまり げんきでは ありませんでした。",
+          "meaning": "El rey no estaba muy bien."
         }
       ]
     },
@@ -2810,9 +2810,9 @@
           "meaning": "Tengo siete monedas de cien yenes."
         },
         {
-          "written": "お年玉は とても 嬉しいです。",
-          "reading": "おとしだまは とても うれしいです。",
-          "meaning": "El dinero de Año Nuevo me alegra mucho."
+          "written": "その 玉虫は とても きれいでした。",
+          "reading": "その たまむしは とても きれいでした。",
+          "meaning": "Ese escarabajo joya era muy bonito."
         }
       ]
     },
@@ -2847,9 +2847,9 @@
           "meaning": "El hilo rojo del destino es bastante famoso."
         },
         {
-          "written": "赤い糸は 白い糸より すこし 長いです。",
-          "reading": "あかいいとは しろいいとより すこし ながいです。",
-          "meaning": "El hilo rojo es un poco más largo que el blanco."
+          "written": "赤い糸を すこし きりました。",
+          "reading": "あかいいとを すこし きりました。",
+          "meaning": "Corté un poco de hilo rojo."
         }
       ]
     },
@@ -2857,9 +2857,9 @@
       "kanji": "車",
       "simple": [
         {
-          "written": "でん車で 行きます。",
-          "reading": "でんしゃで いきます。",
-          "meaning": "Voy en tren."
+          "written": "おとうさんは でん車で 行きますか。",
+          "reading": "おとうさんは でんしゃで いきますか。",
+          "meaning": "¿Tu padre va en tren?"
         },
         {
           "written": "車りんを 修理します。",
@@ -2884,9 +2884,9 @@
           "meaning": "El tren no es muy rápido."
         },
         {
-          "written": "車りんが 四つ あります。",
-          "reading": "しゃりんが よっつ あります。",
-          "meaning": "Tiene cuatro ruedas."
+          "written": "車の かぎが 二つ あります。",
+          "reading": "くるまの かぎが ふたつ あります。",
+          "meaning": "Hay dos llaves del coche."
         }
       ]
     },
@@ -2899,9 +2899,9 @@
           "meaning": "Me veo con la gente del pueblo."
         },
         {
-          "written": "山村に 行きました。",
-          "reading": "さんそんに いきました。",
-          "meaning": "Fui a un pueblo de montaña."
+          "written": "山村は 静かな ところです。",
+          "reading": "さんそんは しずかな ところです。",
+          "meaning": "El pueblo de montaña es un lugar tranquilo."
         }
       ],
       "advanced": [
@@ -2916,13 +2916,13 @@
           "meaning": "En el pueblo de montaña hay ocho vacas."
         },
         {
-          "written": "町村の 規則は ちょっと 難しいです。",
-          "reading": "ちょうそんの きそくは ちょっと むずかしいです。",
-          "meaning": "Las normas del municipio son un poco difíciles."
+          "written": "町村の 名前は ちょっと 難しいです。",
+          "reading": "ちょうそんの なまえは ちょっと むずかしいです。",
+          "meaning": "Los nombres de los municipios son un poco difíciles."
         },
         {
-          "written": "村の人は 僕に 林檎を 五個 くれました。",
-          "reading": "むらのひとは ぼくに りんごを ごこ くれました。",
+          "written": "村の人は わたしに 林檎を 五個 くれました。",
+          "reading": "むらのひとは わたしに りんごを ごこ くれました。",
           "meaning": "La gente del pueblo me dio cinco manzanas."
         }
       ]
@@ -2958,9 +2958,9 @@
           "meaning": "El tiempo en el pueblo y en la aldea es casi el mismo."
         },
         {
-          "written": "町の中の 喫茶店は ちょっと 暗いです。",
-          "reading": "まちのなかの きっさてんは ちょっと くらいです。",
-          "meaning": "La cafetería del pueblo es un poco oscura."
+          "written": "町の中の レストランは ちょっと 暗いです。",
+          "reading": "まちのなかの レストランは ちょっと くらいです。",
+          "meaning": "El restaurante del centro es un poco oscuro."
         }
       ]
     }

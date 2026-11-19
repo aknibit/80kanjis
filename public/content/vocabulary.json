@@ -11,6 +11,11 @@
       "type": "vault",
       "path": "Primer curso organizado/02 Vocabulario/02 Vocabulario temático.md",
       "sha256": "82e537c4156ba65c203caa60a35ec1c11cf3133e618e4cde89f4486b97a6c66d"
+    },
+    {
+      "id": "class-handouts",
+      "label": "Hojas de vocabulario de clase, temas 1–9",
+      "type": "attachment"
     }
   ],
   "groups": [
@@ -24,7 +29,7 @@
     },
     {
       "id": "topic-3",
-      "label": "Lugares y edificios"
+      "label": "Lugares y transporte"
     },
     {
       "id": "topic-4",
@@ -49,6 +54,10 @@
     {
       "id": "topic-9",
       "label": "Sustantivos abstractos y actividades"
+    },
+    {
+      "id": "topic-10",
+      "label": "Tiempo y calendario"
     }
   ],
   "guides": [
@@ -186,6 +195,243 @@
       "group": "topic-1",
       "sourceId": "vocabulary-note",
       "note": "家 para la casa y 内 para el grupo; en ciertos dialectos, «yo», escrito en kana"
+    },
+    {
+      "id": "vocab-watashi",
+      "written": "わたし",
+      "reading": "わたし",
+      "romaji": "watashi",
+      "meaning": "yo",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-watashitachi",
+      "written": "わたしたち",
+      "reading": "わたしたち",
+      "romaji": "watashitachi",
+      "meaning": "nosotros/as",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-anata",
+      "written": "あなた",
+      "reading": "あなた",
+      "romaji": "anata",
+      "meaning": "tú/usted",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "se evita si se sabe el nombre: se usa el nombre con さん"
+    },
+    {
+      "id": "vocab-minna",
+      "written": "みんな",
+      "reading": "みんな",
+      "romaji": "minna",
+      "meaning": "todos",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "informal; 皆さん al dirigirse a un grupo"
+    },
+    {
+      "id": "vocab-gakusei",
+      "written": "学生",
+      "reading": "がくせい",
+      "romaji": "gakusei",
+      "meaning": "estudiante",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-daigakusei",
+      "written": "大学生",
+      "reading": "だいがくせい",
+      "romaji": "daigakusei",
+      "meaning": "estudiante universitario/a",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-isha",
+      "written": "いしゃ",
+      "reading": "いしゃ",
+      "romaji": "isha",
+      "meaning": "médico/a",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kaishain",
+      "written": "かいしゃいん",
+      "reading": "かいしゃいん",
+      "romaji": "kaishain",
+      "meaning": "empleado/a de una empresa",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ginkouin",
+      "written": "ぎんこういん",
+      "reading": "ぎんこういん",
+      "romaji": "ginkouin",
+      "meaning": "empleado/a de banca",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-enjinia",
+      "written": "エンジニア",
+      "reading": "えんじにあ",
+      "romaji": "enjinia",
+      "meaning": "ingeniero/a",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-tomodachi",
+      "written": "ともだち",
+      "reading": "ともだち",
+      "romaji": "tomodachi",
+      "meaning": "amigo/a",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kare",
+      "written": "かれ",
+      "reading": "かれ",
+      "romaji": "kare",
+      "meaning": "él; novio",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kanojo",
+      "written": "かのじょ",
+      "reading": "かのじょ",
+      "romaji": "kanojo",
+      "meaning": "ella; novia",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-chichi",
+      "written": "ちち",
+      "reading": "ちち",
+      "romaji": "chichi",
+      "meaning": "padre",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "el propio, al hablar con otros"
+    },
+    {
+      "id": "vocab-haha",
+      "written": "はは",
+      "reading": "はは",
+      "romaji": "haha",
+      "meaning": "madre",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "la propia, al hablar con otros"
+    },
+    {
+      "id": "vocab-otousan",
+      "written": "おとうさん",
+      "reading": "おとうさん",
+      "romaji": "otousan",
+      "meaning": "padre",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "el de otra persona; también para llamar al propio"
+    },
+    {
+      "id": "vocab-okaasan",
+      "written": "おかあさん",
+      "reading": "おかあさん",
+      "romaji": "okaasan",
+      "meaning": "madre",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "la de otra persona; también para llamar a la propia"
+    },
+    {
+      "id": "vocab-otto",
+      "written": "おっと",
+      "reading": "おっと",
+      "romaji": "otto",
+      "meaning": "marido",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "el propio"
+    },
+    {
+      "id": "vocab-shujin",
+      "written": "しゅじん",
+      "reading": "しゅじん",
+      "romaji": "shujin",
+      "meaning": "marido",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "el propio; más tradicional que おっと"
+    },
+    {
+      "id": "vocab-goshujin",
+      "written": "ごしゅじん",
+      "reading": "ごしゅじん",
+      "romaji": "goshujin",
+      "meaning": "marido",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "el de otra persona"
+    },
+    {
+      "id": "vocab-tsuma",
+      "written": "つま",
+      "reading": "つま",
+      "romaji": "tsuma",
+      "meaning": "esposa",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "la propia"
+    },
+    {
+      "id": "vocab-kanai",
+      "written": "かない",
+      "reading": "かない",
+      "romaji": "kanai",
+      "meaning": "esposa",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "la propia; más tradicional que つま"
+    },
+    {
+      "id": "vocab-okusan",
+      "written": "おくさん",
+      "reading": "おくさん",
+      "romaji": "okusan",
+      "meaning": "esposa",
+      "group": "topic-1",
+      "sourceId": "class-handouts",
+      "note": "la de otra persona"
+    },
+    {
+      "id": "vocab-nihonjin",
+      "written": "日本人",
+      "reading": "にほんじん",
+      "romaji": "nihonjin",
+      "meaning": "japonés/japonesa (persona)",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-supeinjin",
+      "written": "スペイン人",
+      "reading": "すぺいんじん",
+      "romaji": "supeinjin",
+      "meaning": "español/a (persona)",
+      "group": "topic-1",
+      "sourceId": "class-handouts"
     },
     {
       "id": "vocab-shukudai",
@@ -446,6 +692,51 @@
       "sourceId": "vocabulary-note"
     },
     {
+      "id": "vocab-nihongo",
+      "written": "日本ご",
+      "reading": "にほんご",
+      "romaji": "nihongo",
+      "meaning": "japonés (idioma)",
+      "group": "topic-2",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-eigo",
+      "written": "えいご",
+      "reading": "えいご",
+      "romaji": "eigo",
+      "meaning": "inglés (idioma)",
+      "group": "topic-2",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-supeingo",
+      "written": "スペインご",
+      "reading": "すぺいんご",
+      "romaji": "supeingo",
+      "meaning": "español (idioma)",
+      "group": "topic-2",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ji",
+      "written": "字",
+      "reading": "じ",
+      "romaji": "ji",
+      "meaning": "letra, carácter",
+      "group": "topic-2",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-roomaji",
+      "written": "ローマ字",
+      "reading": "ろーまじ",
+      "romaji": "roomaji",
+      "meaning": "alfabeto latino",
+      "group": "topic-2",
+      "sourceId": "class-handouts"
+    },
+    {
       "id": "vocab-shokudou",
       "written": "食堂",
       "reading": "しょくどう",
@@ -553,6 +844,250 @@
       "meaning": "infierno",
       "group": "topic-3",
       "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-nihon",
+      "written": "日本",
+      "reading": "にほん",
+      "romaji": "nihon",
+      "meaning": "Japón",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-supein",
+      "written": "スペイン",
+      "reading": "すぺいん",
+      "romaji": "supein",
+      "meaning": "España",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kuni",
+      "written": "くに",
+      "reading": "くに",
+      "romaji": "kuni",
+      "meaning": "país",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-machi",
+      "written": "町",
+      "reading": "まち",
+      "romaji": "machi",
+      "meaning": "ciudad, barrio",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-tokoro",
+      "written": "ところ",
+      "reading": "ところ",
+      "romaji": "tokoro",
+      "meaning": "lugar, sitio",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kaisha",
+      "written": "かいしゃ",
+      "reading": "かいしゃ",
+      "romaji": "kaisha",
+      "meaning": "empresa",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-byouin",
+      "written": "びょういん",
+      "reading": "びょういん",
+      "romaji": "byouin",
+      "meaning": "hospital",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-heya",
+      "written": "へや",
+      "reading": "へや",
+      "romaji": "heya",
+      "meaning": "habitación",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-toire",
+      "written": "トイレ／おてあらい",
+      "reading": "といれ／おてあらい",
+      "romaji": "toire / otearai",
+      "meaning": "lavabo, servicio",
+      "group": "topic-3",
+      "sourceId": "class-handouts",
+      "note": "おてあらい es más cortés"
+    },
+    {
+      "id": "vocab-kaidan",
+      "written": "かいだん",
+      "reading": "かいだん",
+      "romaji": "kaidan",
+      "meaning": "escalera",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-erebeetaa",
+      "written": "エレベーター",
+      "reading": "えれべーたー",
+      "romaji": "erebeetaa",
+      "meaning": "ascensor",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-chika",
+      "written": "ち下",
+      "reading": "ちか",
+      "romaji": "chika",
+      "meaning": "sótano",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-uketsuke",
+      "written": "うけつけ",
+      "reading": "うけつけ",
+      "romaji": "uketsuke",
+      "meaning": "recepción",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-uriba",
+      "written": "うりば",
+      "reading": "うりば",
+      "romaji": "uriba",
+      "meaning": "sección (de una tienda)",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-depaato",
+      "written": "デパート",
+      "reading": "でぱーと",
+      "romaji": "depaato",
+      "meaning": "grandes almacenes",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-suupaa",
+      "written": "スーパー",
+      "reading": "すーぱー",
+      "romaji": "suupaa",
+      "meaning": "supermercado",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-mise",
+      "written": "みせ",
+      "reading": "みせ",
+      "romaji": "mise",
+      "meaning": "tienda",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-resutoran",
+      "written": "レストラン",
+      "reading": "れすとらん",
+      "romaji": "resutoran",
+      "meaning": "restaurante",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-eki",
+      "written": "えき",
+      "reading": "えき",
+      "romaji": "eki",
+      "meaning": "estación",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kuruma",
+      "written": "車",
+      "reading": "くるま",
+      "romaji": "kuruma",
+      "meaning": "coche",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-chikatetsu",
+      "written": "ち下てつ",
+      "reading": "ちかてつ",
+      "romaji": "chikatetsu",
+      "meaning": "metro",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-jitensha",
+      "written": "じてん車",
+      "reading": "じてんしゃ",
+      "romaji": "jitensha",
+      "meaning": "bicicleta",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-hikouki",
+      "written": "ひこうき",
+      "reading": "ひこうき",
+      "romaji": "hikouki",
+      "meaning": "avión",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-fune",
+      "written": "ふね",
+      "reading": "ふね",
+      "romaji": "fune",
+      "meaning": "barco",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-basu",
+      "written": "バス",
+      "reading": "ばす",
+      "romaji": "basu",
+      "meaning": "autobús",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-takushii",
+      "written": "タクシー",
+      "reading": "たくしー",
+      "romaji": "takushii",
+      "meaning": "taxi",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-shinkansen",
+      "written": "しんかんせん",
+      "reading": "しんかんせん",
+      "romaji": "shinkansen",
+      "meaning": "tren bala",
+      "group": "topic-3",
+      "sourceId": "class-handouts"
     },
     {
       "id": "vocab-tsukue",
@@ -755,6 +1290,267 @@
       "sourceId": "vocabulary-note"
     },
     {
+      "id": "vocab-hon",
+      "written": "本",
+      "reading": "ほん",
+      "romaji": "hon",
+      "meaning": "libro",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-nooto",
+      "written": "ノート",
+      "reading": "のーと",
+      "romaji": "nooto",
+      "meaning": "libreta",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-boorupen",
+      "written": "ボールペン",
+      "reading": "ぼーるぺん",
+      "romaji": "boorupen",
+      "meaning": "bolígrafo",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-keshigomu",
+      "written": "けしゴム",
+      "reading": "けしごむ",
+      "romaji": "keshigomu",
+      "meaning": "goma de borrar",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-hasami",
+      "written": "はさみ",
+      "reading": "はさみ",
+      "romaji": "hasami",
+      "meaning": "tijeras",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kami",
+      "written": "かみ",
+      "reading": "かみ",
+      "romaji": "kami",
+      "meaning": "papel",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kaban",
+      "written": "かばん",
+      "reading": "かばん",
+      "romaji": "kaban",
+      "meaning": "bolso, mochila",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-tokei",
+      "written": "とけい",
+      "reading": "とけい",
+      "romaji": "tokei",
+      "meaning": "reloj",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kasa",
+      "written": "かさ",
+      "reading": "かさ",
+      "romaji": "kasa",
+      "meaning": "paraguas",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kagi",
+      "written": "かぎ",
+      "reading": "かぎ",
+      "romaji": "kagi",
+      "meaning": "llave",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-shinbun",
+      "written": "しんぶん",
+      "reading": "しんぶん",
+      "romaji": "shinbun",
+      "meaning": "periódico",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-isu",
+      "written": "いす",
+      "reading": "いす",
+      "romaji": "isu",
+      "meaning": "silla",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-terebi",
+      "written": "テレビ",
+      "reading": "てれび",
+      "romaji": "terebi",
+      "meaning": "televisión",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kamera",
+      "written": "カメラ",
+      "reading": "かめら",
+      "romaji": "kamera",
+      "meaning": "cámara",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-pasokon",
+      "written": "パソコン",
+      "reading": "ぱそこん",
+      "romaji": "pasokon",
+      "meaning": "ordenador",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-denwa",
+      "written": "でんわ",
+      "reading": "でんわ",
+      "romaji": "denwa",
+      "meaning": "teléfono",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-meishi",
+      "written": "めいし",
+      "reading": "めいし",
+      "romaji": "meishi",
+      "meaning": "tarjeta de visita",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-shatsu",
+      "written": "シャツ",
+      "reading": "しゃつ",
+      "romaji": "shatsu",
+      "meaning": "camisa",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-nekutai",
+      "written": "ネクタイ",
+      "reading": "ねくたい",
+      "romaji": "nekutai",
+      "meaning": "corbata",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-hashi",
+      "written": "はし",
+      "reading": "はし",
+      "romaji": "hashi",
+      "meaning": "palillos",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-supuun",
+      "written": "スプーン",
+      "reading": "すぷーん",
+      "romaji": "supuun",
+      "meaning": "cuchara",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-naifu",
+      "written": "ナイフ",
+      "reading": "ないふ",
+      "romaji": "naifu",
+      "meaning": "cuchillo",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-fooku",
+      "written": "フォーク",
+      "reading": "ふぉーく",
+      "romaji": "fooku",
+      "meaning": "tenedor",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-nimotsu",
+      "written": "にもつ",
+      "reading": "にもつ",
+      "romaji": "nimotsu",
+      "meaning": "equipaje, paquete",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kippu",
+      "written": "きっぷ",
+      "reading": "きっぷ",
+      "romaji": "kippu",
+      "meaning": "billete (de tren o autobús)",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-chiketto",
+      "written": "チケット",
+      "reading": "ちけっと",
+      "romaji": "chiketto",
+      "meaning": "entrada (de un espectáculo)",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-tegami",
+      "written": "てがみ",
+      "reading": "てがみ",
+      "romaji": "tegami",
+      "meaning": "carta",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-purezento",
+      "written": "プレゼント",
+      "reading": "ぷれぜんと",
+      "romaji": "purezento",
+      "meaning": "regalo",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-omiyage",
+      "written": "おみやげ",
+      "reading": "おみやげ",
+      "romaji": "omiyage",
+      "meaning": "recuerdo, regalo de un viaje",
+      "group": "topic-4",
+      "sourceId": "class-handouts"
+    },
+    {
       "id": "vocab-hikiniku",
       "written": "ひき肉",
       "reading": "ひきにく",
@@ -948,6 +1744,168 @@
       "sourceId": "vocabulary-note"
     },
     {
+      "id": "vocab-gohan",
+      "written": "ごはん",
+      "reading": "ごはん",
+      "romaji": "gohan",
+      "meaning": "arroz cocido; comida",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-asagohan",
+      "written": "あさごはん",
+      "reading": "あさごはん",
+      "romaji": "asagohan",
+      "meaning": "desayuno",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-hirugohan",
+      "written": "ひるごはん",
+      "reading": "ひるごはん",
+      "romaji": "hirugohan",
+      "meaning": "comida (del mediodía)",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-pan",
+      "written": "パン",
+      "reading": "ぱん",
+      "romaji": "pan",
+      "meaning": "pan",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-sakana",
+      "written": "さかな",
+      "reading": "さかな",
+      "romaji": "sakana",
+      "meaning": "pescado, pez",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-yasai",
+      "written": "やさい",
+      "reading": "やさい",
+      "romaji": "yasai",
+      "meaning": "verdura",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kudamono",
+      "written": "くだもの",
+      "reading": "くだもの",
+      "romaji": "kudamono",
+      "meaning": "fruta",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-mizu",
+      "written": "水",
+      "reading": "みず",
+      "romaji": "mizu",
+      "meaning": "agua",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ocha",
+      "written": "おちゃ",
+      "reading": "おちゃ",
+      "romaji": "ocha",
+      "meaning": "té (verde)",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-koucha",
+      "written": "こうちゃ",
+      "reading": "こうちゃ",
+      "romaji": "koucha",
+      "meaning": "té negro",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-gyuunyuu",
+      "written": "ぎゅうにゅう",
+      "reading": "ぎゅうにゅう",
+      "romaji": "gyuunyuu",
+      "meaning": "leche",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-juusu",
+      "written": "ジュース",
+      "reading": "じゅーす",
+      "romaji": "juusu",
+      "meaning": "zumo",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-osake",
+      "written": "おさけ",
+      "reading": "おさけ",
+      "romaji": "osake",
+      "meaning": "sake; bebida alcohólica",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-wain",
+      "written": "ワイン",
+      "reading": "わいん",
+      "romaji": "wain",
+      "meaning": "vino",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-chokoreeto",
+      "written": "チョコレート",
+      "reading": "ちょこれーと",
+      "romaji": "chokoreeto",
+      "meaning": "chocolate",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ryouri",
+      "written": "りょうり",
+      "reading": "りょうり",
+      "romaji": "ryouri",
+      "meaning": "cocina; plato",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-tabemono",
+      "written": "たべもの",
+      "reading": "たべもの",
+      "romaji": "tabemono",
+      "meaning": "comida, alimento",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-nomimono",
+      "written": "のみもの",
+      "reading": "のみもの",
+      "romaji": "nomimono",
+      "meaning": "bebida",
+      "group": "topic-5",
+      "sourceId": "class-handouts"
+    },
+    {
       "id": "vocab-hebi",
       "written": "蛇",
       "reading": "へび",
@@ -1066,6 +2024,33 @@
       "meaning": "estación del año",
       "group": "topic-6",
       "sourceId": "vocabulary-note"
+    },
+    {
+      "id": "vocab-yama",
+      "written": "山",
+      "reading": "やま",
+      "romaji": "yama",
+      "meaning": "montaña",
+      "group": "topic-6",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-hana",
+      "written": "花",
+      "reading": "はな",
+      "romaji": "hana",
+      "meaning": "flor",
+      "group": "topic-6",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-sakura",
+      "written": "さくら",
+      "reading": "さくら",
+      "romaji": "sakura",
+      "meaning": "cerezo; flor del cerezo",
+      "group": "topic-6",
+      "sourceId": "class-handouts"
     },
     {
       "id": "vocab-ashi",
@@ -1280,6 +2265,615 @@
       "group": "topic-9",
       "sourceId": "vocabulary-note",
       "note": "funciona delante de un nombre sin な"
+    },
+    {
+      "id": "vocab-en",
+      "written": "円",
+      "reading": "えん",
+      "romaji": "en",
+      "meaning": "yen",
+      "group": "topic-9",
+      "sourceId": "class-handouts",
+      "note": "detrás del precio: 三百円"
+    },
+    {
+      "id": "vocab-shigoto",
+      "written": "しごと",
+      "reading": "しごと",
+      "romaji": "shigoto",
+      "meaning": "trabajo",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-yakusoku",
+      "written": "やくそく",
+      "reading": "やくそく",
+      "romaji": "yakusoku",
+      "meaning": "promesa; cita, compromiso",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-youji",
+      "written": "ようじ",
+      "reading": "ようじ",
+      "romaji": "youji",
+      "meaning": "asunto pendiente, recado",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ongaku",
+      "written": "音がく",
+      "reading": "おんがく",
+      "romaji": "ongaku",
+      "meaning": "música",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-uta",
+      "written": "うた",
+      "reading": "うた",
+      "romaji": "uta",
+      "meaning": "canción",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-e",
+      "written": "え",
+      "reading": "え",
+      "romaji": "e",
+      "meaning": "dibujo, cuadro",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-eiga",
+      "written": "えいが",
+      "reading": "えいが",
+      "romaji": "eiga",
+      "meaning": "película; cine",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-supootsu",
+      "written": "スポーツ",
+      "reading": "すぽーつ",
+      "romaji": "supootsu",
+      "meaning": "deporte",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-yakyuu",
+      "written": "やきゅう",
+      "reading": "やきゅう",
+      "romaji": "yakyuu",
+      "meaning": "béisbol",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-sakkaa",
+      "written": "サッカー",
+      "reading": "さっかー",
+      "romaji": "sakkaa",
+      "meaning": "fútbol",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-tenisu",
+      "written": "テニス",
+      "reading": "てにす",
+      "romaji": "tenisu",
+      "meaning": "tenis",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-dansu",
+      "written": "ダンス",
+      "reading": "だんす",
+      "romaji": "dansu",
+      "meaning": "baile",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-konsaato",
+      "written": "コンサート",
+      "reading": "こんさーと",
+      "romaji": "konsaato",
+      "meaning": "concierto",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-karaoke",
+      "written": "カラオケ",
+      "reading": "からおけ",
+      "romaji": "karaoke",
+      "meaning": "karaoke",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kabuki",
+      "written": "かぶき",
+      "reading": "かぶき",
+      "romaji": "kabuki",
+      "meaning": "kabuki",
+      "group": "topic-9",
+      "sourceId": "class-handouts",
+      "note": "teatro tradicional japonés"
+    },
+    {
+      "id": "vocab-ohanami",
+      "written": "お花見",
+      "reading": "おはなみ",
+      "romaji": "ohanami",
+      "meaning": "contemplación de los cerezos en flor",
+      "group": "topic-9",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ima",
+      "written": "今",
+      "reading": "いま",
+      "romaji": "ima",
+      "meaning": "ahora",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-asa",
+      "written": "あさ",
+      "reading": "あさ",
+      "romaji": "asa",
+      "meaning": "mañana",
+      "group": "topic-10",
+      "sourceId": "class-handouts",
+      "note": "parte del día"
+    },
+    {
+      "id": "vocab-hiru",
+      "written": "ひる",
+      "reading": "ひる",
+      "romaji": "hiru",
+      "meaning": "mediodía",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-yoru",
+      "written": "よる",
+      "reading": "よる",
+      "romaji": "yoru",
+      "meaning": "noche",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ban",
+      "written": "ばん",
+      "reading": "ばん",
+      "romaji": "ban",
+      "meaning": "noche",
+      "group": "topic-10",
+      "sourceId": "class-handouts",
+      "note": "también en こんばん y まいばん"
+    },
+    {
+      "id": "vocab-gozen",
+      "written": "ごぜん",
+      "reading": "ごぜん",
+      "romaji": "gozen",
+      "meaning": "por la mañana, a. m.",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-gogo",
+      "written": "ごご",
+      "reading": "ごご",
+      "romaji": "gogo",
+      "meaning": "por la tarde, p. m.",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-han",
+      "written": "はん",
+      "reading": "はん",
+      "romaji": "han",
+      "meaning": "y media",
+      "group": "topic-10",
+      "sourceId": "class-handouts",
+      "note": "detrás de la hora"
+    },
+    {
+      "id": "vocab-jikan",
+      "written": "時間",
+      "reading": "じかん",
+      "romaji": "jikan",
+      "meaning": "tiempo; horas",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-hiruyasumi",
+      "written": "ひる休み",
+      "reading": "ひるやすみ",
+      "romaji": "hiruyasumi",
+      "meaning": "pausa del mediodía",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kyou",
+      "written": "今日",
+      "reading": "きょう",
+      "romaji": "kyou",
+      "meaning": "hoy",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ashita",
+      "written": "あした",
+      "reading": "あした",
+      "romaji": "ashita",
+      "meaning": "mañana",
+      "group": "topic-10",
+      "sourceId": "class-handouts",
+      "note": "el día siguiente"
+    },
+    {
+      "id": "vocab-kinou",
+      "written": "きのう",
+      "reading": "きのう",
+      "romaji": "kinou",
+      "meaning": "ayer",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ototoi",
+      "written": "おととい",
+      "reading": "おととい",
+      "romaji": "ototoi",
+      "meaning": "anteayer",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-asatte",
+      "written": "あさって",
+      "reading": "あさって",
+      "romaji": "asatte",
+      "meaning": "pasado mañana",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kesa",
+      "written": "けさ",
+      "reading": "けさ",
+      "romaji": "kesa",
+      "meaning": "esta mañana",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-konban",
+      "written": "こんばん",
+      "reading": "こんばん",
+      "romaji": "konban",
+      "meaning": "esta noche",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-mainichi",
+      "written": "まい日",
+      "reading": "まいにち",
+      "romaji": "mainichi",
+      "meaning": "cada día",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-maiasa",
+      "written": "まいあさ",
+      "reading": "まいあさ",
+      "romaji": "maiasa",
+      "meaning": "cada mañana",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-maiban",
+      "written": "まいばん",
+      "reading": "まいばん",
+      "romaji": "maiban",
+      "meaning": "cada noche",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-getsuyoubi",
+      "written": "月よう日",
+      "reading": "げつようび",
+      "romaji": "getsuyoubi",
+      "meaning": "lunes",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kayoubi",
+      "written": "火よう日",
+      "reading": "かようび",
+      "romaji": "kayoubi",
+      "meaning": "martes",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-suiyoubi",
+      "written": "水よう日",
+      "reading": "すいようび",
+      "romaji": "suiyoubi",
+      "meaning": "miércoles",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-mokuyoubi",
+      "written": "木よう日",
+      "reading": "もくようび",
+      "romaji": "mokuyoubi",
+      "meaning": "jueves",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kinyoubi",
+      "written": "金よう日",
+      "reading": "きんようび",
+      "romaji": "kinyoubi",
+      "meaning": "viernes",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-doyoubi",
+      "written": "土よう日",
+      "reading": "どようび",
+      "romaji": "doyoubi",
+      "meaning": "sábado",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-nichiyoubi",
+      "written": "日よう日",
+      "reading": "にちようび",
+      "romaji": "nichiyoubi",
+      "meaning": "domingo",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-senshuu",
+      "written": "先しゅう",
+      "reading": "せんしゅう",
+      "romaji": "senshuu",
+      "meaning": "la semana pasada",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-konshuu",
+      "written": "今しゅう",
+      "reading": "こんしゅう",
+      "romaji": "konshuu",
+      "meaning": "esta semana",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-raishuu",
+      "written": "らいしゅう",
+      "reading": "らいしゅう",
+      "romaji": "raishuu",
+      "meaning": "la semana que viene",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-sengetsu",
+      "written": "先月",
+      "reading": "せんげつ",
+      "romaji": "sengetsu",
+      "meaning": "el mes pasado",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kongetsu",
+      "written": "今月",
+      "reading": "こんげつ",
+      "romaji": "kongetsu",
+      "meaning": "este mes",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-raigetsu",
+      "written": "らい月",
+      "reading": "らいげつ",
+      "romaji": "raigetsu",
+      "meaning": "el mes que viene",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kyonen",
+      "written": "きょ年",
+      "reading": "きょねん",
+      "romaji": "kyonen",
+      "meaning": "el año pasado",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kotoshi",
+      "written": "今年",
+      "reading": "ことし",
+      "romaji": "kotoshi",
+      "meaning": "este año",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-rainen",
+      "written": "らい年",
+      "reading": "らいねん",
+      "romaji": "rainen",
+      "meaning": "el año que viene",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-ichigatsu",
+      "written": "一月",
+      "reading": "いちがつ",
+      "romaji": "ichigatsu",
+      "meaning": "enero",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-nigatsu",
+      "written": "二月",
+      "reading": "にがつ",
+      "romaji": "nigatsu",
+      "meaning": "febrero",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-sangatsu",
+      "written": "三月",
+      "reading": "さんがつ",
+      "romaji": "sangatsu",
+      "meaning": "marzo",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-shigatsu",
+      "written": "四月",
+      "reading": "しがつ",
+      "romaji": "shigatsu",
+      "meaning": "abril",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-gogatsu",
+      "written": "五月",
+      "reading": "ごがつ",
+      "romaji": "gogatsu",
+      "meaning": "mayo",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-rokugatsu",
+      "written": "六月",
+      "reading": "ろくがつ",
+      "romaji": "rokugatsu",
+      "meaning": "junio",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-shichigatsu",
+      "written": "七月",
+      "reading": "しちがつ",
+      "romaji": "shichigatsu",
+      "meaning": "julio",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-hachigatsu",
+      "written": "八月",
+      "reading": "はちがつ",
+      "romaji": "hachigatsu",
+      "meaning": "agosto",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-kugatsu",
+      "written": "九月",
+      "reading": "くがつ",
+      "romaji": "kugatsu",
+      "meaning": "septiembre",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-juugatsu",
+      "written": "十月",
+      "reading": "じゅうがつ",
+      "romaji": "juugatsu",
+      "meaning": "octubre",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-juuichigatsu",
+      "written": "十一月",
+      "reading": "じゅういちがつ",
+      "romaji": "juuichigatsu",
+      "meaning": "noviembre",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-juunigatsu",
+      "written": "十二月",
+      "reading": "じゅうにがつ",
+      "romaji": "juunigatsu",
+      "meaning": "diciembre",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-nangatsu",
+      "written": "何月",
+      "reading": "なんがつ",
+      "romaji": "nangatsu",
+      "meaning": "¿qué mes?",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
+    },
+    {
+      "id": "vocab-tanjoubi",
+      "written": "たん生日",
+      "reading": "たんじょうび",
+      "romaji": "tanjoubi",
+      "meaning": "cumpleaños",
+      "group": "topic-10",
+      "sourceId": "class-handouts"
     }
   ]
 }
