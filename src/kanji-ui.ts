@@ -75,16 +75,26 @@ function audioStatus(): HTMLElement {
 }
 
 type SentenceAudio = (example: ContentExample, group: SentenceGroup, index: number) => HTMLElement | undefined;
+/** How a sentence is written out: with its kanji highlighted, or also with buttons for the other kanji. */
+type SentenceText = (written: string) => Node;
 
-/** The kanji of the dialog stands out; the rest of the sentence keeps its own spelling. */
-function renderSentence(example: ContentExample, character: string, audio?: HTMLElement): HTMLLIElement {
+/** In the dialog only its kanji stands out: the sentence is plain text, so a screen reader reads it in one go. */
+function highlightKanji(character: string): SentenceText {
+  return (written) => {
+    const fragment = document.createDocumentFragment();
+    written.split(character).forEach((part, index) => {
+      if (index > 0) fragment.append(node('span', 'kanji-sentence-target', character));
+      fragment.append(part);
+    });
+    return fragment;
+  };
+}
+
+function renderSentence(example: ContentExample, text: SentenceText, audio?: HTMLElement): HTMLLIElement {
   const item = node('li', 'kanji-sentence');
   const written = node('p', 'kanji-sentence-written');
   written.lang = 'ja';
-  example.written.split(character).forEach((part, index) => {
-    if (index > 0) written.append(node('span', 'kanji-sentence-target', character));
-    written.append(part);
-  });
+  written.append(text(example.written));
   const reading = node('p', 'kanji-sentence-reading', example.reading);
   reading.lang = 'ja';
   item.append(written, reading, node('p', 'kanji-sentence-meaning', example.meaning));
@@ -92,12 +102,12 @@ function renderSentence(example: ContentExample, character: string, audio?: HTML
   return item;
 }
 
-function renderSentences(sentences: KanjiSentences, audio?: SentenceAudio): DocumentFragment {
+function renderSentences(sentences: KanjiSentences, text: SentenceText, audio?: SentenceAudio): DocumentFragment {
   const fragment = document.createDocumentFragment();
   for (const [group, label] of [['simple', 'Sencillas'], ['advanced', 'Con adjetivos, adverbios y contadores']] as const) {
     const items = node('ul', 'kanji-sentence-list');
     items.setAttribute('aria-label', `Frases ${label.toLowerCase()}`);
-    sentences[group].forEach((example, index) => items.append(renderSentence(example, sentences.kanji, audio?.(example, group, index))));
+    sentences[group].forEach((example, index) => items.append(renderSentence(example, text, audio?.(example, group, index))));
     fragment.append(node('p', 'kanji-sentence-group', label), items);
   }
   return fragment;
@@ -108,6 +118,8 @@ const kanjiTabs: Readonly<Record<KanjiTab, string>> = { vocabulary: 'Vocabulario
 
 /** How a word's own kanji opens: in the dialog, in the full-screen view, or not at all (the kanji the view shows). */
 type KanjiOpening = 'dialog' | 'focus' | 'none';
+/** Where a kanji's details are shown: the dialog or the full-screen view. Both can be open at once. */
+type KanjiView = 'dialog' | 'focus';
 
 /** What the full-screen view needs from the kanji page. */
 export interface KanjiPage {
@@ -180,7 +192,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     pronunciation?.stop();
     dialog.dataset.kind = reference.kind;
     category.textContent = eyebrow(reference);
-    const details = renderDetails(character, reference, 'kanji-dialog', 'dialog');
+    const details = renderDetails(character, reference, 'dialog');
     body.replaceChildren(...details.summary, ...details.study, details.source);
     if (!dialog.open) {
       opener = trigger;
@@ -192,9 +204,12 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
 
   /**
    * What the dialog and the full-screen view show of a kanji: its summary, its vocabulary (and sentences, in tabs) and
-   * its source. Ids start with `prefix`, since both can be open at once.
+   * its source. Ids start with the view's own prefix, since both can be open at once.
    */
-  function renderDetails(character: string, reference: KanjiReference, prefix: string, opening: KanjiOpening) {
+  function renderDetails(character: string, reference: KanjiReference, view: KanjiView) {
+    const prefix = `kanji-${view}`;
+    // The full-screen view already shows its kanji: it stays green there, without being a button.
+    const opening: KanjiOpening = view === 'focus' ? 'none' : 'dialog';
     const advanced = reference.kind === 'advanced';
     const hero = node('div', 'kanji-dialog-hero');
     const glyph = node('span', 'kanji-dialog-character', character);
@@ -249,13 +264,15 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     if (reference.kind === 'collection') {
       const vocabulary = node('div', 'kanji-dialog-panel');
       vocabulary.append(wordStatus, examples);
-      study = renderTabs(prefix, { vocabulary, sentences: renderSentencePanel(character) });
+      // In the full-screen view the other kanji of the sentences open the dialog, as in its vocabulary.
+      const text = view === 'focus' ? linkKanji(character) : highlightKanji(character);
+      study = renderTabs(prefix, { vocabulary, sentences: renderSentencePanel(character, text) });
     } else study = [examplesTitle, wordStatus, examples];
     return { summary: intro, study, source: attribution };
   }
 
   /** Filled once the sentences arrive, unless the panel has made way for another kanji by then. */
-  function renderSentencePanel(character: string): HTMLElement {
+  function renderSentencePanel(character: string, text: SentenceText): HTMLElement {
     const panel = node('div', 'kanji-dialog-panel');
     const status = node('p', 'kanji-sentence-status', 'Cargando frases…');
     status.setAttribute('role', 'status');
@@ -264,7 +281,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       if (!panel.isConnected) return;
       const entry = all.get(character);
       const status = audioStatus();
-      if (entry) panel.replaceChildren(status, renderSentences(entry, pronunciation && ((example, group, index) =>
+      if (entry) panel.replaceChildren(status, renderSentences(entry, text, pronunciation && ((example, group, index) =>
         pronunciation.createSentenceButton(`sentence:${character}:${group}:${index + 1}`, example.written,
           sentenceAudioFile(character, group, index), status))));
       else status.textContent = 'Este kanji todavía no tiene frases.';
@@ -395,7 +412,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       if (reference?.kind !== 'collection') return false;
       pronunciation?.stop();
       shown = character;
-      const details = renderDetails(character, reference, 'kanji-focus', 'none');
+      const details = renderDetails(character, reference, 'focus');
       const intro = node('div', 'kanji-focus-intro');
       intro.append(node('p', 'eyebrow', eyebrow(reference)), ...details.summary);
       const study = node('div', 'kanji-focus-study');
@@ -524,6 +541,23 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       else fragment.append(createTrigger(part.text, className, opening));
     }
     return fragment;
+  }
+
+  /**
+   * A sentence of the full-screen view, whose other kanji are buttons. A button lets the line break around it, so each
+   * block between spaces stays on one line (`.kanji-sentence-block`): sentences only break at those spaces.
+   */
+  function linkKanji(character: string): SentenceText {
+    return (written) => {
+      const fragment = document.createDocumentFragment();
+      written.split(' ').forEach((part, index) => {
+        if (index > 0) fragment.append(' ');
+        const block = node('span', 'kanji-sentence-block');
+        block.append(renderParts(part, character, 'none'));
+        fragment.append(block);
+      });
+      return fragment;
+    };
   }
 
   /** A word of a row: its own kanji, in green, opens the full-screen view if there is one, and the rest the dialog. */

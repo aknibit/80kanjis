@@ -430,6 +430,10 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kanji-dialog .kanji-sentence-meaning { margin-top: 2px; font-size: 14px; line-height: 1.5; color: var(--dialog-example); }
 /* The same tone and shadow as the kanji in the vocabulary above, without the hover of a button. */
 .kanji-sentence-target { --kanji-shadow: color-mix(in srgb, var(--accent) 22%, transparent); --kanji-glow: color-mix(in srgb, var(--accent) 12%, transparent); font-weight: 500; color: var(--accent); text-shadow: 0 1px 3px var(--kanji-shadow), 0 2px 8px var(--kanji-glow); }
+/* The full-screen view colours every kanji of its sentences, as in the vocabulary, at the size of the sentence. */
+.kanji-sentence-written .kanji-link { font-size: inherit; }
+/* Those kanji are buttons, and a line could break around them: each block between spaces stays whole. */
+.kanji-sentence-block { white-space: nowrap; }
 .kanji-dialog .kanji-sentence-status { margin: 0; font-size: 13px; line-height: 1.6; color: var(--muted); }
 /* Full-screen view of one of the 80 kanji, opened by its green kanji in a row: a modal dialog the size of the window,
    with the dialog's content and a bar to go back to the list or step to the previous or next kanji on screen. */
