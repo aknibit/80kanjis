@@ -330,7 +330,7 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   }
   if (leveled) {
     for (const level of ['all', ...difficulties] as const) {
-      const button = filterButton(level === 'all' ? 'Todas' : difficultyLabels[level], () => { selectedDifficulty = level; });
+      const button = filterButton(level === 'all' ? 'Todo' : difficultyLabels[level], () => { selectedDifficulty = level; });
       button.dataset.difficultyFilter = level;
       difficultyFilters.append(button); difficultyButtons.set(level, button);
     }

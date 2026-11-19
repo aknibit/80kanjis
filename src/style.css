@@ -251,12 +251,13 @@ kbd { font-family: inherit; font-size: 14px; min-width: 28px; height: 30px; disp
 /* Counters: groups above, difficulty below; both combine. */
 .filter-rows { display: grid; gap: 6px; min-width: 0; }
 .filter-rows + .study-result-count { align-self: start; margin-top: 4px; }
-/* The difficulty row has no title: each button keeps a tint of its level, and fills with it when pressed. */
-.difficulty-filters .row-filter:not([aria-pressed='true']) { color: var(--text); background: var(--difficulty-all-tint); border-color: var(--difficulty-all-tint); }
-.difficulty-filters .row-filter[data-difficulty-filter='easy']:not([aria-pressed='true']) { background: var(--easy-tint); border-color: var(--easy-tint); }
-.difficulty-filters .row-filter[data-difficulty-filter='medium']:not([aria-pressed='true']) { background: var(--medium-tint); border-color: var(--medium-tint); }
-.difficulty-filters .row-filter[data-difficulty-filter='hard']:not([aria-pressed='true']) { background: var(--hard-tint); border-color: var(--hard-tint); }
-.difficulty-filters .row-filter:not([aria-pressed='true']):hover { border-color: var(--line-strong); }
+/* Difficulty filters, in Contadores and on the kanji page, have no title: each button keeps a tint of its level,
+   and fills with it when pressed. Todo and Sin completar stay neutral. */
+.row-filter:is([data-difficulty-filter], [data-row-filter]):not([aria-pressed='true']) { color: var(--text); background: var(--difficulty-all-tint); border-color: var(--difficulty-all-tint); }
+.row-filter:is([data-difficulty-filter='easy'], [data-row-filter='easy']):not([aria-pressed='true']) { background: var(--easy-tint); border-color: var(--easy-tint); }
+.row-filter:is([data-difficulty-filter='medium'], [data-row-filter='medium']):not([aria-pressed='true']) { background: var(--medium-tint); border-color: var(--medium-tint); }
+.row-filter:is([data-difficulty-filter='hard'], [data-row-filter='hard']):not([aria-pressed='true']) { background: var(--hard-tint); border-color: var(--hard-tint); }
+.row-filter:is([data-difficulty-filter], [data-row-filter]):not([aria-pressed='true']):hover { border-color: var(--line-strong); }
 .row-filter:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
 .filter-count { font-size: 12px; opacity: .85; font-variant-numeric: tabular-nums; }
 .filter-hint { margin: 0 0 10px; color: var(--muted); font-size: 12px; line-height: 1.5; }

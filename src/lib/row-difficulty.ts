@@ -1,7 +1,7 @@
 import type { Difficulty, StudyItemId, StudyRow } from '../types.ts';
 
 export const rowDifficultyFilters = {
-  all: 'Todas', easy: 'Fácil', medium: 'Medio', hard: 'Difícil', unrated: 'Sin completar',
+  all: 'Todo', easy: 'Fácil', medium: 'Medio', hard: 'Difícil', unrated: 'Sin completar',
 } as const;
 export type RowDifficultyFilter = keyof typeof rowDifficultyFilters;
 

@@ -85,9 +85,9 @@ The collection always preserves all four blocks. `src/lib/row-difficulty.ts` der
 - **Medio:** at least one entry is medium and none is hard, even if others are unmarked.
 - **Fácil:** all four entries are explicitly easy.
 - **Sin completar:** only easy/unmarked entries, with at least one unmarked.
-- **Todas:** every row.
+- **Todo:** every row.
 
-Counts reflect the current text search. The selected category is a view of the four existing marks; it does not add another persisted rating. A shared word's classification applies to every row containing it. All classifications come from the fetched JSON. “Sin completar” appears only when the current search results contain incomplete rows. If an old bookmark selects that category when none remain, the view returns to Todas and updates the URL.
+Counts reflect the current text search. The selected category is a view of the four existing marks; it does not add another persisted rating. A shared word's classification applies to every row containing it. All classifications come from the fetched JSON. “Sin completar” appears only when the current search results contain incomplete rows. If an old bookmark selects that category when none remain, the view returns to Todo and updates the URL. Like the difficulty row of Contadores, each button keeps a tint of its level instead of a title.
 
 ### Pronunciation audio
 
