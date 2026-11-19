@@ -18,6 +18,11 @@
       "type": "vault",
       "path": "Primer curso organizado/01 Gramática/03 Adjetivos y adverbios.md",
       "sha256": "1a3cb27ede616f039ce9fdd68d31913b768b9220854146b9487fb5fda5c24d0b"
+    },
+    {
+      "id": "class-handouts",
+      "label": "Hojas de vocabulario de clase, temas 1–9",
+      "type": "attachment"
     }
   ],
   "groups": [
@@ -894,6 +899,501 @@
       ]
     },
     {
+      "id": "modifier-atarashii",
+      "written": "あたらしい",
+      "reading": "あたらしい",
+      "romaji": "atarashii",
+      "meaning": "nuevo",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "この かばんは あたらしいです。",
+          "reading": "この かばんは あたらしいです。",
+          "meaning": "Este bolso es nuevo.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "あの 町の えきは あたらしかったです。",
+          "reading": "あの まちの えきは あたらしかったです。",
+          "meaning": "La estación de aquella ciudad era nueva.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "わたしの 車は あたらしくないです。",
+          "reading": "わたしの くるまは あたらしくないです。",
+          "meaning": "Mi coche no es nuevo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その とけいは あたらしくなかったです。",
+          "reading": "その とけいは あたらしくなかったです。",
+          "meaning": "Ese reloj no era nuevo.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-furui",
+      "written": "ふるい",
+      "reading": "ふるい",
+      "romaji": "furui",
+      "meaning": "viejo, antiguo",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "note": "para cosas, no para la edad de las personas",
+      "examples": [
+        {
+          "written": "この 本は ふるいです。",
+          "reading": "この ほんは ふるいです。",
+          "meaning": "Este libro es viejo.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "大学の 教室は ふるかったです。",
+          "reading": "だいがくの きょうしつは ふるかったです。",
+          "meaning": "Las aulas de la universidad eran viejas.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "わたしの パソコンは ふるくないです。",
+          "reading": "わたしの パソコンは ふるくないです。",
+          "meaning": "Mi ordenador no es viejo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その デパートは ふるくなかったです。",
+          "reading": "その デパートは ふるくなかったです。",
+          "meaning": "Esos grandes almacenes no eran viejos.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-takai",
+      "written": "たかい",
+      "reading": "たかい",
+      "romaji": "takai",
+      "meaning": "caro; alto",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "日本の くだものは たかいです。",
+          "reading": "にほんの くだものは たかいです。",
+          "meaning": "La fruta en Japón es cara.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "しんかんせんの きっぷは たかかったです。",
+          "reading": "しんかんせんの きっぷは たかかったです。",
+          "meaning": "El billete del tren bala era caro.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この ワインは たかくないです。",
+          "reading": "この ワインは たかくないです。",
+          "meaning": "Este vino no es caro.",
+          "form": "present-negative"
+        },
+        {
+          "written": "あの 山は たかくなかったです。",
+          "reading": "あの やまは たかくなかったです。",
+          "meaning": "Aquella montaña no era alta.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-yasui",
+      "written": "やすい",
+      "reading": "やすい",
+      "romaji": "yasui",
+      "meaning": "barato",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "この みせの パンは やすいです。",
+          "reading": "この みせの パンは やすいです。",
+          "meaning": "El pan de esta tienda es barato.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "スーパーの やさいは やすかったです。",
+          "reading": "スーパーの やさいは やすかったです。",
+          "meaning": "La verdura del súper era barata.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "タクシーは やすくないです。",
+          "reading": "タクシーは やすくないです。",
+          "meaning": "El taxi no es barato.",
+          "form": "present-negative"
+        },
+        {
+          "written": "デパートの とけいは やすくなかったです。",
+          "reading": "デパートの とけいは やすくなかったです。",
+          "meaning": "El reloj de los grandes almacenes no era barato.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-hikui",
+      "written": "ひくい",
+      "reading": "ひくい",
+      "romaji": "hikui",
+      "meaning": "bajo",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "この いすは ひくいです。",
+          "reading": "この いすは ひくいです。",
+          "meaning": "Esta silla es baja.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "教室の 机は ひくかったです。",
+          "reading": "きょうしつの つくえは ひくかったです。",
+          "meaning": "Las mesas del aula eran bajas.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "あの 山は ひくくないです。",
+          "reading": "あの やまは ひくくないです。",
+          "meaning": "Aquella montaña no es baja.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その 車は ひくくなかったです。",
+          "reading": "その くるまは ひくくなかったです。",
+          "meaning": "Ese coche no era bajo.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-samui",
+      "written": "さむい",
+      "reading": "さむい",
+      "romaji": "samui",
+      "meaning": "frío",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "note": "del tiempo; para cosas y bebidas, つめたい",
+      "examples": [
+        {
+          "written": "今日は さむいです。",
+          "reading": "きょうは さむいです。",
+          "meaning": "Hoy hace frío.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "きのうの よるは さむかったです。",
+          "reading": "きのうの よるは さむかったです。",
+          "meaning": "Anoche hizo frío.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この へやは さむくないです。",
+          "reading": "この へやは さむくないです。",
+          "meaning": "En esta habitación no hace frío.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先しゅうは さむくなかったです。",
+          "reading": "せんしゅうは さむくなかったです。",
+          "meaning": "La semana pasada no hizo frío.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-tsumetai",
+      "written": "つめたい",
+      "reading": "つめたい",
+      "romaji": "tsumetai",
+      "meaning": "frío",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "note": "al tacto: bebidas y cosas",
+      "examples": [
+        {
+          "written": "この 水は つめたいです。",
+          "reading": "この みずは つめたいです。",
+          "meaning": "Esta agua está fría.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "あさの ぎゅうにゅうは つめたかったです。",
+          "reading": "あさの ぎゅうにゅうは つめたかったです。",
+          "meaning": "La leche de la mañana estaba fría.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この ビールは つめたくないです。",
+          "reading": "この ビールは つめたくないです。",
+          "meaning": "Esta cerveza no está fría.",
+          "form": "present-negative"
+        },
+        {
+          "written": "レストランの ジュースは つめたくなかったです。",
+          "reading": "レストランの ジュースは つめたくなかったです。",
+          "meaning": "El zumo del restaurante no estaba frío.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-atsui-caliente",
+      "written": "あつい",
+      "reading": "あつい",
+      "romaji": "atsui",
+      "meaning": "caliente",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "note": "bebidas y cosas; el calor del tiempo es 暑い",
+      "examples": [
+        {
+          "written": "この おちゃは あついです。",
+          "reading": "この おちゃは あついです。",
+          "meaning": "Este té está caliente.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "けさの コーヒーは あつかったです。",
+          "reading": "けさの コーヒーは あつかったです。",
+          "meaning": "El café de esta mañana estaba caliente.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この こうちゃは あつくないです。",
+          "reading": "この こうちゃは あつくないです。",
+          "meaning": "Este té negro no está caliente.",
+          "form": "present-negative"
+        },
+        {
+          "written": "食堂の ごはんは あつくなかったです。",
+          "reading": "しょくどうの ごはんは あつくなかったです。",
+          "meaning": "La comida del comedor no estaba caliente.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-akai",
+      "written": "赤い",
+      "reading": "あかい",
+      "romaji": "akai",
+      "meaning": "rojo",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "あの 車は 赤いです。",
+          "reading": "あの くるまは あかいです。",
+          "meaning": "Aquel coche es rojo.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "先生の かさは 赤かったです。",
+          "reading": "せんせいの かさは あかかったです。",
+          "meaning": "El paraguas de la profesora era rojo.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "わたしの かばんは 赤くないです。",
+          "reading": "わたしの かばんは あかくないです。",
+          "meaning": "Mi bolso no es rojo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その 花は 赤くなかったです。",
+          "reading": "その はなは あかくなかったです。",
+          "meaning": "Esa flor no era roja.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-shiroi",
+      "written": "白い",
+      "reading": "しろい",
+      "romaji": "shiroi",
+      "meaning": "blanco",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "この シャツは 白いです。",
+          "reading": "この シャツは しろいです。",
+          "meaning": "Esta camisa es blanca.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "ふじ山は 白かったです。",
+          "reading": "ふじさんは しろかったです。",
+          "meaning": "El monte Fuji estaba blanco.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "その かみは 白くないです。",
+          "reading": "その かみは しろくないです。",
+          "meaning": "Ese papel no es blanco.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その ネクタイは 白くなかったです。",
+          "reading": "その ネクタイは しろくなかったです。",
+          "meaning": "Esa corbata no era blanca.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-aoi",
+      "written": "青い",
+      "reading": "あおい",
+      "romaji": "aoi",
+      "meaning": "azul",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "この ボールペンは 青いです。",
+          "reading": "この ボールペンは あおいです。",
+          "meaning": "Este bolígrafo es azul.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "その 車は 青かったです。",
+          "reading": "その くるまは あおかったです。",
+          "meaning": "Ese coche era azul.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "わたしの かさは 青くないです。",
+          "reading": "わたしの かさは あおくないです。",
+          "meaning": "Mi paraguas no es azul.",
+          "form": "present-negative"
+        },
+        {
+          "written": "あの ふねは 青くなかったです。",
+          "reading": "あの ふねは あおくなかったです。",
+          "meaning": "Aquel barco no era azul.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-ookii",
+      "written": "大きい",
+      "reading": "おおきい",
+      "romaji": "ookii",
+      "meaning": "grande",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "わたしの 町は 大きいです。",
+          "reading": "わたしの まちは おおきいです。",
+          "meaning": "Mi ciudad es grande.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "日本の デパートは 大きかったです。",
+          "reading": "にほんの デパートは おおきかったです。",
+          "meaning": "Los grandes almacenes de Japón eran grandes.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この へやは 大きくないです。",
+          "reading": "この へやは おおきくないです。",
+          "meaning": "Esta habitación no es grande.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その にもつは 大きくなかったです。",
+          "reading": "その にもつは おおきくなかったです。",
+          "meaning": "Ese paquete no era grande.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-chiisai",
+      "written": "小さい",
+      "reading": "ちいさい",
+      "romaji": "chiisai",
+      "meaning": "pequeño",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "この カメラは 小さいです。",
+          "reading": "この カメラは ちいさいです。",
+          "meaning": "Esta cámara es pequeña.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "大学の 図書館は 小さかったです。",
+          "reading": "だいがくの としょかんは ちいさかったです。",
+          "meaning": "La biblioteca de la universidad era pequeña.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "わたしの へやは 小さくないです。",
+          "reading": "わたしの へやは ちいさくないです。",
+          "meaning": "Mi habitación no es pequeña.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その えきは 小さくなかったです。",
+          "reading": "その えきは ちいさくなかったです。",
+          "meaning": "Esa estación no era pequeña.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-kakkoii",
+      "written": "かっこいい",
+      "reading": "かっこいい",
+      "romaji": "kakkoii",
+      "meaning": "guapo, con estilo",
+      "group": "i",
+      "sourceId": "class-handouts",
+      "note": "como いい: かっこよくないです",
+      "examples": [
+        {
+          "written": "かれは かっこいいです。",
+          "reading": "かれは かっこいいです。",
+          "meaning": "Él es guapo.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "きのうの ダンスは かっこよかったです。",
+          "reading": "きのうの ダンスは かっこよかったです。",
+          "meaning": "El baile de ayer fue genial.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この シャツは かっこよくないです。",
+          "reading": "この シャツは かっこよくないです。",
+          "meaning": "Esta camisa no tiene estilo.",
+          "form": "present-negative"
+        },
+        {
+          "written": "わたしの ふるい 車は かっこよくなかったです。",
+          "reading": "わたしの ふるい くるまは かっこよくなかったです。",
+          "meaning": "Mi coche viejo no era bonito.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
       "id": "modifier-benri",
       "written": "便利",
       "reading": "べんり",
@@ -1279,6 +1779,254 @@
       ]
     },
     {
+      "id": "modifier-nigiyaka",
+      "written": "にぎやか",
+      "reading": "にぎやか",
+      "romaji": "nigiyaka",
+      "meaning": "animado, con ambiente",
+      "group": "na",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "この 町は にぎやかです。",
+          "reading": "この まちは にぎやかです。",
+          "meaning": "Esta ciudad es animada.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "きのうの お花見は にぎやかでした。",
+          "reading": "きのうの おはなみは にぎやかでした。",
+          "meaning": "La fiesta de los cerezos de ayer fue muy animada.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "日よう日の 大学は にぎやかでは ありません。",
+          "reading": "にちようびの だいがくは にぎやかでは ありません。",
+          "meaning": "La universidad no tiene ambiente los domingos.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先月の コンサートは にぎやかでは ありませんでした。",
+          "reading": "せんげつの コンサートは にぎやかでは ありませんでした。",
+          "meaning": "El concierto del mes pasado no tuvo ambiente.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-shinsetsu",
+      "written": "しんせつ",
+      "reading": "しんせつ",
+      "romaji": "shinsetsu",
+      "meaning": "amable",
+      "group": "na",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "先生は しんせつです。",
+          "reading": "せんせいは しんせつです。",
+          "meaning": "La profesora es amable.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "えきの 人は しんせつでした。",
+          "reading": "えきの ひとは しんせつでした。",
+          "meaning": "La persona de la estación fue amable.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "あの 店員は しんせつでは ありません。",
+          "reading": "あの てんいんは しんせつでは ありません。",
+          "meaning": "Aquel dependiente no es amable.",
+          "form": "present-negative"
+        },
+        {
+          "written": "その レストランの 人は しんせつでは ありませんでした。",
+          "reading": "その レストランの ひとは しんせつでは ありませんでした。",
+          "meaning": "La gente de ese restaurante no fue amable.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-hima",
+      "written": "ひま",
+      "reading": "ひま",
+      "romaji": "hima",
+      "meaning": "libre, desocupado",
+      "group": "na",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "今日は ひまです。",
+          "reading": "きょうは ひまです。",
+          "meaning": "Hoy estoy libre.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "きのうは ひまでした。",
+          "reading": "きのうは ひまでした。",
+          "meaning": "Ayer estuve libre.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "今しゅうは ひまでは ありません。",
+          "reading": "こんしゅうは ひまでは ありません。",
+          "meaning": "Esta semana no estoy libre.",
+          "form": "present-negative"
+        },
+        {
+          "written": "先月は ひまでは ありませんでした。",
+          "reading": "せんげつは ひまでは ありませんでした。",
+          "meaning": "El mes pasado no estuve libre.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-suteki",
+      "written": "すてき",
+      "reading": "すてき",
+      "romaji": "suteki",
+      "meaning": "precioso, encantador",
+      "group": "na",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "その かばんは すてきです。",
+          "reading": "その かばんは すてきです。",
+          "meaning": "Ese bolso es precioso.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "きのうの コンサートは すてきでした。",
+          "reading": "きのうの コンサートは すてきでした。",
+          "meaning": "El concierto de ayer fue precioso.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "この シャツは すてきでは ありません。",
+          "reading": "この シャツは すてきでは ありません。",
+          "meaning": "Esta camisa no es bonita.",
+          "form": "present-negative"
+        },
+        {
+          "written": "あの レストランは すてきでは ありませんでした。",
+          "reading": "あの レストランは すてきでは ありませんでした。",
+          "meaning": "Aquel restaurante no era bonito.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-suki",
+      "written": "すき",
+      "reading": "すき",
+      "romaji": "suki",
+      "meaning": "que gusta",
+      "group": "na",
+      "sourceId": "class-handouts",
+      "note": "lo que gusta va con が: さかなが すきです",
+      "examples": [
+        {
+          "written": "わたしは 音がくが すきです。",
+          "reading": "わたしは おんがくが すきです。",
+          "meaning": "Me gusta la música.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "ちちは やきゅうが すきでした。",
+          "reading": "ちちは やきゅうが すきでした。",
+          "meaning": "A mi padre le gustaba el béisbol.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "かれは さかなが すきでは ありません。",
+          "reading": "かれは さかなが すきでは ありません。",
+          "meaning": "A él no le gusta el pescado.",
+          "form": "present-negative"
+        },
+        {
+          "written": "かのじょは カラオケが すきでは ありませんでした。",
+          "reading": "かのじょは カラオケが すきでは ありませんでした。",
+          "meaning": "A ella no le gustaba el karaoke.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-kirai",
+      "written": "きらい",
+      "reading": "きらい",
+      "romaji": "kirai",
+      "meaning": "que no gusta",
+      "group": "na",
+      "sourceId": "class-handouts",
+      "note": "con が, como すき",
+      "examples": [
+        {
+          "written": "わたしは 肉が きらいです。",
+          "reading": "わたしは にくが きらいです。",
+          "meaning": "No me gusta la carne.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "子どもは やさいが きらいでした。",
+          "reading": "こどもは やさいが きらいでした。",
+          "meaning": "Al niño no le gustaba la verdura.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "ともだちは スポーツが きらいでは ありません。",
+          "reading": "ともだちは スポーツが きらいでは ありません。",
+          "meaning": "A mi amigo no le disgusta el deporte.",
+          "form": "present-negative"
+        },
+        {
+          "written": "かれは 日本の りょうりが きらいでは ありませんでした。",
+          "reading": "かれは にほんの りょうりが きらいでは ありませんでした。",
+          "meaning": "A él no le disgustaba la cocina japonesa.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
+      "id": "modifier-nigate",
+      "written": "にがて",
+      "reading": "にがて",
+      "romaji": "nigate",
+      "meaning": "que se da mal",
+      "group": "na",
+      "sourceId": "class-handouts",
+      "note": "con が; además no gusta, a diferencia de 下手",
+      "examples": [
+        {
+          "written": "わたしは かん字が にがてです。",
+          "reading": "わたしは かんじが にがてです。",
+          "meaning": "Los kanji se me dan mal.",
+          "form": "present-affirmative"
+        },
+        {
+          "written": "かれは スポーツが にがてでした。",
+          "reading": "かれは スポーツが にがてでした。",
+          "meaning": "A él se le daban mal los deportes.",
+          "form": "past-affirmative"
+        },
+        {
+          "written": "わたしは カラオケが にがてでは ありません。",
+          "reading": "わたしは カラオケが にがてでは ありません。",
+          "meaning": "El karaoke no se me da mal.",
+          "form": "present-negative"
+        },
+        {
+          "written": "ともだちは 聞き取りが にがてでは ありませんでした。",
+          "reading": "ともだちは ききとりが にがてでは ありませんでした。",
+          "meaning": "A mi amigo no se le daba mal la comprensión oral.",
+          "form": "past-negative"
+        }
+      ]
+    },
+    {
       "id": "adverb-totemo",
       "written": "とても",
       "reading": "とても",
@@ -1445,6 +2193,196 @@
           "written": "字幕は ほとんど 分かりませんでした。",
           "reading": "じまくは ほとんど わかりませんでした。",
           "meaning": "Casi no entendí los subtítulos."
+        }
+      ]
+    },
+    {
+      "id": "adverb-yoku",
+      "written": "よく",
+      "reading": "よく",
+      "romaji": "yoku",
+      "meaning": "bien; a menudo",
+      "group": "adverb",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "わたしは えいごが よく 分かります。",
+          "reading": "わたしは えいごが よく わかります。",
+          "meaning": "Entiendo bien el inglés."
+        },
+        {
+          "written": "日よう日は よく 図書館へ 行きます。",
+          "reading": "にちようびは よく としょかんへ いきます。",
+          "meaning": "Los domingos voy a menudo a la biblioteca."
+        }
+      ]
+    },
+    {
+      "id": "adverb-daitai",
+      "written": "だいたい",
+      "reading": "だいたい",
+      "romaji": "daitai",
+      "meaning": "más o menos, casi todo",
+      "group": "adverb",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "日本ごが だいたい 分かります。",
+          "reading": "にほんごが だいたい わかります。",
+          "meaning": "Entiendo más o menos el japonés."
+        },
+        {
+          "written": "宿題は だいたい 終わりました。",
+          "reading": "しゅくだいは だいたい おわりました。",
+          "meaning": "Ya he terminado casi todos los deberes."
+        }
+      ]
+    },
+    {
+      "id": "adverb-maamaa",
+      "written": "まあまあ",
+      "reading": "まあまあ",
+      "romaji": "maamaa",
+      "meaning": "así así, regular",
+      "group": "adverb",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "この レストランは まあまあです。",
+          "reading": "この レストランは まあまあです。",
+          "meaning": "Este restaurante está regular."
+        },
+        {
+          "written": "試験は まあまあでした。",
+          "reading": "しけんは まあまあでした。",
+          "meaning": "El examen fue más o menos bien."
+        }
+      ]
+    },
+    {
+      "id": "adverb-itsumo",
+      "written": "いつも",
+      "reading": "いつも",
+      "romaji": "itsumo",
+      "meaning": "siempre",
+      "group": "adverb",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "あさごはんは いつも パンです。",
+          "reading": "あさごはんは いつも パンです。",
+          "meaning": "Siempre desayuno pan."
+        },
+        {
+          "written": "いつも でん車で 大学へ 行きます。",
+          "reading": "いつも でんしゃで だいがくへ いきます。",
+          "meaning": "Siempre voy a la universidad en tren."
+        }
+      ]
+    },
+    {
+      "id": "adverb-tokidoki",
+      "written": "ときどき",
+      "reading": "ときどき",
+      "romaji": "tokidoki",
+      "meaning": "a veces",
+      "group": "adverb",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "ときどき おさけを 飲みます。",
+          "reading": "ときどき おさけを のみます。",
+          "meaning": "A veces bebo alcohol."
+        },
+        {
+          "written": "日よう日は ときどき ともだちと えいがを 見ます。",
+          "reading": "にちようびは ときどき ともだちと えいがを みます。",
+          "meaning": "Algunos domingos veo una película con amigos."
+        }
+      ]
+    },
+    {
+      "id": "adverb-issho-ni",
+      "written": "いっしょに",
+      "reading": "いっしょに",
+      "romaji": "issho ni",
+      "meaning": "juntos",
+      "group": "adverb",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "いっしょに ひるごはんを 食べませんか。",
+          "reading": "いっしょに ひるごはんを たべませんか。",
+          "meaning": "¿Comemos juntos?"
+        },
+        {
+          "written": "土よう日に いっしょに テニスを しましょう。",
+          "reading": "どようびに いっしょに テニスを しましょう。",
+          "meaning": "Juguemos juntos al tenis el sábado."
+        }
+      ]
+    },
+    {
+      "id": "adverb-mou",
+      "written": "もう",
+      "reading": "もう",
+      "romaji": "mou",
+      "meaning": "ya",
+      "group": "adverb",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "もう ひるごはんを 食べましたか。",
+          "reading": "もう ひるごはんを たべましたか。",
+          "meaning": "¿Ya has comido?"
+        },
+        {
+          "written": "もう 十一時です。",
+          "reading": "もう じゅういちじです。",
+          "meaning": "Ya son las once."
+        }
+      ]
+    },
+    {
+      "id": "adverb-mada",
+      "written": "まだ",
+      "reading": "まだ",
+      "romaji": "mada",
+      "meaning": "todavía",
+      "group": "adverb",
+      "sourceId": "class-handouts",
+      "note": "まだです: todavía no",
+      "examples": [
+        {
+          "written": "宿題は まだです。",
+          "reading": "しゅくだいは まだです。",
+          "meaning": "Todavía no he hecho los deberes."
+        },
+        {
+          "written": "まだ 七時です。",
+          "reading": "まだ しちじです。",
+          "meaning": "Todavía son las siete."
+        }
+      ]
+    },
+    {
+      "id": "adverb-sorosoro",
+      "written": "そろそろ",
+      "reading": "そろそろ",
+      "romaji": "sorosoro",
+      "meaning": "ya va siendo hora",
+      "group": "adverb",
+      "sourceId": "class-handouts",
+      "examples": [
+        {
+          "written": "そろそろ 行きましょう。",
+          "reading": "そろそろ いきましょう。",
+          "meaning": "Vámonos ya."
+        },
+        {
+          "written": "そろそろ 帰ります。",
+          "reading": "そろそろ かえります。",
+          "meaning": "Ya me voy a casa."
         }
       ]
     }

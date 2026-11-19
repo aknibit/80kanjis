@@ -41,10 +41,10 @@ function hiragana(text: string): string {
   return text.replace(/[ァ-ヶ]/gu, (character) => String.fromCharCode(character.charCodeAt(0) - 0x60));
 }
 
-/** Forms of an adjective in kana: おいしい, おいしく, おいしかった; いい as よく and よかった; きれい as is. */
+/** Forms of an adjective in kana: おいしい, おいしく, おいしかった; いい as よく and よかった, also in かっこいい; きれい as is. */
 function adjectiveForms(word: string, inflection: 'i' | 'na'): string[] {
   if (inflection === 'na') return [word];
-  const stem = word === 'いい' ? 'よ' : word.slice(0, -1);
+  const stem = word.endsWith('いい') ? `${word.slice(0, -2)}よ` : word.slice(0, -1);
   return [word, `${stem}く`, `${stem}かった`];
 }
 
@@ -162,6 +162,29 @@ export function readSentence(sentence: Pick<ContentExample, 'written' | 'reading
     for (const item of vocabulary.kanaUses) if (block.startsWith(item.form)) uses.add(item.use);
   }
   return { problems, uses: uses as ReadonlySet<WordUse> };
+}
+
+/**
+ * Problems with the other contexts of the site: the examples of the lexicon entries and guides, and the example and
+ * sentence of every counter form and question. Like the kanji sentences, they only write a kanji as part of a word of
+ * the site, with its reading.
+ */
+export function exampleProblems(lexicons: readonly LexiconDocument[], counters: CounterDocument, vocabulary: SiteVocabulary): string[] {
+  const problems: string[] = [];
+  const check = (place: string, sample: Pick<ContentExample, 'written' | 'reading'>) => {
+    for (const problem of readSentence(sample, vocabulary).problems) problems.push(`${place} · ${sample.written}: ${problem}`);
+  };
+  for (const document of lexicons) {
+    for (const guide of document.guides) for (const sample of guide.examples ?? []) check(`${document.title} · ${guide.title}`, sample);
+    for (const entry of document.entries) for (const sample of entry.examples ?? []) check(`${document.title} · ${entry.written}`, sample);
+  }
+  for (const entry of counters.entries) {
+    for (const item of [...entry.forms, entry.question]) {
+      check(`${counters.title} · ${item.written}`, item.example);
+      check(`${counters.title} · ${item.written}`, item.sentence);
+    }
+  }
+  return problems;
 }
 
 const useLabels: Record<WordUse, string> = { adjective: 'adjetivo', adverb: 'adverbio', counter: 'contador' };

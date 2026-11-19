@@ -103,8 +103,8 @@ test('every counter has a difficulty: how hard its readings and its use are to l
   const level = (difficulty: string) => counters.entries.filter((entry) => entry.difficulty === difficulty).map((entry) => entry.id);
   // No sound changes, or only いっ・はっ・じゅっ.
   assert.deepEqual(level('easy'), ['ko', 'mai', 'dai', 'satsu', 'weeks', 'age', 'thousands', 'ten-thousands']);
-  // Alternating endings (ほん・ぽん・ぼん) or a few irregular readings (ひとり, ふたり).
-  assert.deepEqual(level('medium'), ['nin', 'hon', 'hiki', 'soku', 'hai', 'months', 'hundreds']);
+  // Alternating endings (ほん・ぽん・ぼん, ふん・ぷん) or a few irregular readings (ひとり, ふたり, よじ, くじ).
+  assert.deepEqual(level('medium'), ['nin', 'hon', 'hiki', 'soku', 'hai', 'months', 'hours', 'minutes', 'hundreds']);
   // Series to learn by heart (ひとつ, ついたち, ふつかかん), or a use that is hard to delimit (〜頭 against 〜匹).
   assert.deepEqual(level('hard'), ['tsu', 'wa', 'tou', 'days', 'dates']);
   for (const value of [undefined, 'unrated', 'Fácil', null]) {
@@ -121,7 +121,7 @@ test('each counter form and question has a Japanese example and an everyday sent
   // 十 in the general series is read とお, and the 1st of the month ついたち, not いちにち.
   assert.equal(counters.entries.find((entry) => entry.id === 'tsu')!.forms[9].example.reading, 'とおまで かぞえる');
   assert.equal(counters.entries.find((entry) => entry.id === 'dates')!.forms[0].example.reading, 'いちがつ ついたち');
-  assert.deepEqual(hon.forms[0].sentence, { written: '鉛筆を 一本 貸して ください。', reading: 'えんぴつを いっぽん かして ください。', meaning: '¿Me prestas un lápiz?' });
+  assert.deepEqual(hon.forms[0].sentence, { written: '鉛筆を 一本 かして ください。', reading: 'えんぴつを いっぽん かして ください。', meaning: '¿Me prestas un lápiz?' });
   for (const entry of counters.entries) {
     for (const item of [...entry.forms, entry.question]) {
       for (const sample of [item.example, item.sentence]) {

@@ -1,7 +1,7 @@
 import { readFile, readdir } from 'node:fs/promises';
 import { kanjiSentencesFile, parseKanjiSentences, parseNavigation, parseStudyDocument } from '../src/lib/content.ts';
 import { parseCollection } from '../src/lib/collection.ts';
-import { createSiteVocabulary, kanjiSentenceProblems } from '../src/lib/site-vocabulary.ts';
+import { createSiteVocabulary, exampleProblems, kanjiSentenceProblems } from '../src/lib/site-vocabulary.ts';
 import type { CounterDocument, LexiconDocument, StudyDocument } from '../src/content-types.ts';
 import type { CollectionDocument } from '../src/types.ts';
 
@@ -24,16 +24,21 @@ for (const section of navigation.sections) {
   }
 }
 
-// The sentences of the kanji dialog only use words of the site, with their readings.
+// Every context of the site, the kanji sentences and the examples of the sections, only uses words of the site,
+// with their readings.
 if (!collection) throw new Error('Falta la colección de kanji.');
 const counters = documents.find((data): data is CounterDocument => data.kind === 'counters');
 if (!counters) throw new Error('Faltan los contadores, que también cuentan como vocabulario de las frases.');
 const lexicons = documents.filter((data): data is LexiconDocument => data.kind === 'lexicon');
+const vocabulary = createSiteVocabulary(collection, lexicons, counters);
 const sentences = parseKanjiSentences(await readFile(new URL(kanjiSentencesFile, root), 'utf8'), collection.kanji.map((entry) => entry.character));
 referenced.add(kanjiSentencesFile.slice('content/'.length));
-const problems = kanjiSentenceProblems(sentences, collection, createSiteVocabulary(collection, lexicons, counters));
+const problems = kanjiSentenceProblems(sentences, collection, vocabulary);
 if (problems.length > 0) throw new Error(`Frases de los kanji:\n${problems.join('\n')}`);
 console.log(`Frases de los kanji: ${sentences.entries.length} kanji, ${sentences.entries.length * 6} frases.`);
+const exampleIssues = exampleProblems(lexicons, counters, vocabulary);
+if (exampleIssues.length > 0) throw new Error(`Ejemplos de las secciones (${exampleIssues.length}):\n${exampleIssues.join('\n')}`);
+console.log('Ejemplos de las secciones: solo usan palabras de la web.');
 
 const contentFiles = (await readdir(new URL('content/', root))).filter((file) => file.endsWith('.json'));
 for (const file of contentFiles) {
