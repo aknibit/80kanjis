@@ -84,7 +84,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>La dificultad que elijas arriba a la derecha vale para todas las secciones, y este navegador la recuerda para la próxima visita.</p>
     <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
     <p>En las fichas, uno, dos o tres puntos destacados indican fácil, medio y difícil. Tres puntos atenuados indican que la dificultad está sin marcar.</p>
-    <p>En el vocabulario, el kanji de la fila aparece en verde, los otros de los 80 en azul y los avanzados en rojo. Pulsa cualquier kanji para consultar su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
+    <p>En el vocabulario, el kanji de la fila aparece en verde, los otros de los 80 en azul y los avanzados en rojo. Pulsa el kanji verde, el kanji grande de la fila o su botón Info para verlo a pantalla completa y pasar al anterior o al siguiente de la lista, con las flechas del teclado o de la barra superior; los azules y los rojos abren una ventana con su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
     <p class="dialog-note">Se conserva la escritura del documento, con las conversiones revisadas a kanji de la colección y los de apoyo 個, 色 y 庭. 時 y 前 ya aparecían en el vocabulario original y también se pueden consultar como kanji de apoyo. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
     <p class="dialog-note">Los significados de los 80 kanji se han revisado y ampliado. Sus lecturas principales se han contrastado con <a href="https://www.edrdg.org/wiki/KANJIDIC_Project.html" target="_blank" rel="noopener">KANJIDIC2, de EDRDG y Jim Breen</a> y <a href="https://www.kanjipedia.jp/" target="_blank" rel="noopener">KanjiPedia</a>. Las aportaciones derivadas de KANJIDIC2 se ofrecen bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. <a href="data/CREDITS.txt" target="_blank" rel="noopener">Fuentes y criterios de revisión</a>.</p>
     <p class="dialog-note">Pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar, con voces de Tokio y Kansai. Los botones con «IA» usan voz generada por <a href="${synthesizedSource.url}" target="_blank" rel="noopener">${synthesizedSource.name}</a> (${synthesizedSource.voice}), bajo sus <a href="${synthesizedSource.termsUrl}" target="_blank" rel="noopener">condiciones de uso</a>. Los audios están pendientes de revisión por un hablante nativo. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes y créditos de cada audio</a>.</p>
@@ -133,7 +133,16 @@ function start(source: CollectionDocument, difficulty: DifficultySelector) {
   const rowRatings = new Map(studyCatalog.rows.map((row) => [row.id, getRowDifficulty(row, getDifficulty)]));
   const studyRows = new Map(studyCatalog.rows.map((row) => [row.id, row]));
   const pronunciation = setupPronunciation(document.querySelector('#audio-status')!);
-  const kanjiDetails = setupKanjiDetails(source, pronunciation);
+  // The rows on screen, after the search and the difficulty: the full-screen view of a kanji steps through them.
+  let visible: readonly Kanji[] = [];
+  const rowIds = new Map(kanji.map((entry) => [entry.character, entry.id]));
+  const kanjiDetails = setupKanjiDetails(source, pronunciation, {
+    onScreen: () => visible.map((entry) => entry.character),
+    row: (character) => {
+      const id = rowIds.get(character);
+      return id === undefined ? null : grid.querySelector<HTMLElement>(`[data-study-row-id="${CSS.escape(id)}"]`);
+    },
+  });
 
   function createStudyBlock(item: StudyItem, entry: Kanji, blockIndex: number): HTMLElement {
     const block = element('article', `study-block study-block--${item.type}`);
@@ -208,6 +217,7 @@ function start(source: CollectionDocument, difficulty: DifficultySelector) {
     const filters = getRowFilterState(candidates.map((entry) => rowRatings.get(entry.id) ?? null), difficulty.value);
     difficulty.showCounts(Object.fromEntries(filters.available.map((filter) => [filter, filters.counts[filter]])));
     const results = candidates.filter((entry) => matchesRowDifficulty(rowRatings.get(entry.id) ?? null, difficulty.value));
+    visible = results;
     grid.replaceChildren(...results.map(createRow));
     count.textContent = `${results.length} de ${kanji.length} kanji`;
     clearButton.hidden = !input.value;
@@ -263,12 +273,19 @@ function start(source: CollectionDocument, difficulty: DifficultySelector) {
   });
   window.addEventListener('popstate', () => {
     clearTimeout(urlTimer);
-    input.value = new URLSearchParams(window.location.search).get('q') ?? '';
+    const query = new URLSearchParams(window.location.search).get('q') ?? '';
+    const level = difficulty.value;
     difficulty.followUrl();
-    render();
+    // Opening or closing the full-screen kanji only changes ?kanji=: the rows stay, and with them the focus.
+    if (query !== input.value.trim() || difficulty.value !== level) {
+      input.value = query;
+      render();
+    }
+    kanjiDetails.followUrl();
   });
   document.querySelector<HTMLElement>('#collection-status')!.hidden = true;
   render();
+  kanjiDetails.openFromUrl();
 }
 
 async function boot() {

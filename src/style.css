@@ -314,6 +314,8 @@ h2 { margin: 0; font-size: 21px; font-weight: 550; letter-spacing: -.4px; }
 .kanji-link--target { --kanji-tone: var(--accent); }
 .kanji-link--advanced { --kanji-tone: var(--kanji-advanced); }
 .kanji-link:hover { text-shadow: 0 1px 4px var(--kanji-shadow), 0 2px 10px var(--kanji-shadow); }
+/* The kanji the full-screen view already shows is not a button. */
+.kanji-link--current:hover { text-shadow: 0 1px 3px var(--kanji-shadow), 0 2px 8px var(--kanji-glow); }
 .kanji-detail-trigger:focus-visible { outline: none; background: var(--accent-tint); }
 .kanji-link:focus-visible { background: transparent; text-shadow: 0 0 3px currentColor, 0 2px 8px var(--kanji-shadow); }
 .word-reading { font-family: var(--japanese-reading); font-size: 16px; font-weight: 400; color: var(--reading); letter-spacing: .04em; line-height: 1.6; overflow-wrap: anywhere; }
@@ -429,6 +431,45 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 /* The same tone and shadow as the kanji in the vocabulary above, without the hover of a button. */
 .kanji-sentence-target { --kanji-shadow: color-mix(in srgb, var(--accent) 22%, transparent); --kanji-glow: color-mix(in srgb, var(--accent) 12%, transparent); font-weight: 500; color: var(--accent); text-shadow: 0 1px 3px var(--kanji-shadow), 0 2px 8px var(--kanji-glow); }
 .kanji-dialog .kanji-sentence-status { margin: 0; font-size: 13px; line-height: 1.6; color: var(--muted); }
+/* Full-screen view of one of the 80 kanji, opened by its green kanji in a row: a modal dialog the size of the window,
+   with the dialog's content and a bar to go back to the list or step to the previous or next kanji on screen. */
+:root:has(.kanji-focus[open]) { overflow: hidden; }
+.kanji-dialog.kanji-focus { inset: 0; width: auto; height: auto; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; border-radius: 0; background: var(--page); box-shadow: none; overflow-y: auto; overscroll-behavior: contain; }
+.kanji-focus-bar { position: sticky; top: 0; z-index: 1; border-bottom: 1px solid var(--line); background: var(--page); }
+/* The bar spans the content below it: 640 px, or both columns on wide screens. */
+.kanji-focus-bar-content, .kanji-focus-body { max-width: 640px; }
+.kanji-focus-bar-content { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
+.kanji-focus-back { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 6px 14px 6px 10px; border: 1px solid var(--control-border); border-radius: 6px; background: var(--surface-raised); color: var(--text); font-size: 14px; font-weight: 550; white-space: nowrap; }
+.kanji-focus-back:hover { background: var(--hover); }
+.kanji-focus-back svg, .kanji-focus-step svg { width: 18px; height: 18px; flex-shrink: 0; }
+.kanji-focus-nav { display: flex; align-items: center; gap: 6px; }
+.kanji-focus-step { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 40px; height: 40px; padding: 0 9px; border: 1px solid var(--action-border); border-radius: 6px; background: var(--action-bg); color: var(--accent); }
+.kanji-focus-step:not([aria-disabled='true']):hover { background: var(--action-hover-bg); border-color: var(--action-hover-border); color: var(--accent-strong); }
+.kanji-focus-step[aria-disabled='true'] { cursor: default; opacity: .4; }
+.kanji-focus-step-kanji { font-family: var(--japanese); font-size: 19px; font-weight: 500; line-height: 1; }
+.kanji-focus-position { min-width: 64px; font-size: 13px; line-height: 1.25; color: var(--count-text); text-align: center; white-space: nowrap; }
+.kanji-focus-body { display: grid; grid-template-columns: minmax(0, 640px); justify-content: center; padding-block: 28px 56px; }
+.kanji-focus-intro .eyebrow { margin: 0 0 6px; font-size: 12px; }
+.kanji-focus .kanji-dialog-character { font-size: 104px; color: var(--accent); }
+@media (min-width: 901px) {
+  /* Wide screens: the kanji and its readings on the left; its vocabulary and sentences, a little larger, on the right. */
+  .kanji-focus-bar-content, .kanji-focus-body { max-width: 1092px; }
+  .kanji-focus-body { grid-template-columns: minmax(0, 340px) minmax(0, 680px); grid-template-rows: auto 1fr; grid-template-areas: 'intro study' 'source study'; column-gap: 72px; padding-top: 44px; }
+  .kanji-focus-intro { grid-area: intro; }
+  .kanji-focus-study { grid-area: study; }
+  .kanji-dialog.kanji-focus .kanji-dialog-source { grid-area: source; align-self: start; }
+  .kanji-focus .kanji-dialog-hero { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .kanji-focus .kanji-dialog-character { font-size: 168px; line-height: 1.1; }
+  .kanji-dialog.kanji-focus h2 { font-size: 30px; }
+  .kanji-focus .kanji-dialog-readings { flex-wrap: wrap; row-gap: 16px; }
+  .kanji-focus .kanji-dialog-tabs { margin-top: 0; }
+  .kanji-focus .kanji-dialog-written { font-size: 27px; }
+  .kanji-focus .kanji-dialog-examples p, .kanji-dialog.kanji-focus .kanji-sentence-meaning { font-size: 15px; }
+  .kanji-dialog.kanji-focus .kanji-sentence-written { font-size: 22px; }
+  .kanji-dialog.kanji-focus .kanji-sentence-reading { font-size: 14px; }
+  /* Audio centred on the first line of the sentence (22 px × 1.6). */
+  .kanji-focus .kanji-sentence > .audio-button { margin-top: max(0px, calc((35.2px - var(--study-control-height)) / 2)); }
+}
 
 .study-search-icon { display: inline-flex; flex: 0 0 24px; color: var(--icon); }
 .study-search-icon svg { width: 24px; height: 24px; }
@@ -718,16 +759,27 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .kanji-dialog-hero { gap: 16px; }
   .kanji-dialog-character { font-size: 68px; }
   .kanji-dialog h2 { font-size: 23px; }
+  .kanji-focus-bar-content { min-height: 56px; }
+  .kanji-focus-body { padding-top: 20px; }
+  .kanji-focus .kanji-dialog-character { font-size: 80px; }
 }
 @media (max-width: 430px) {
   /* Leaves room for the theme and information buttons. */
   .language-pair { display: none; }
+  /* The full-screen bar keeps the arrows without the next kanji; a kanji outside the list takes two lines. */
+  .kanji-focus-step-kanji { display: none; }
+  .kanji-focus-position { white-space: normal; max-width: 72px; }
 }
 @media (max-width: 380px) {
   .section-link { padding-inline: 7px; }
   /* 8 kana of reading (はんとけいまわり) and 6 of writing (クラスルーム) still fit in one line at 320 px. */
   .lexicon-card { --card-pad: 10px; }
   .lexicon-card .lexicon-written { font-size: 19px; }
+}
+@media (max-width: 370px) {
+  /* The full-screen bar fits «Todos los kanji» from 375 px; below, «Todos» alone, and the rest is still read out. */
+  .kanji-focus-back { padding-inline: 8px 12px; }
+  .kanji-focus-back-more { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -741,4 +793,6 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-guides > summary, .study-sources > summary { padding-block: 12px; }
   /* The difficulty drop-down and its options are full 44 px targets. */
   .difficulty-trigger, .difficulty-option { min-height: 44px; }
+  .kanji-focus-back { min-height: 44px; }
+  .kanji-focus-step { min-width: 44px; height: 44px; }
 }

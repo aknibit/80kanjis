@@ -1,6 +1,7 @@
 import { difficultyLabels } from './lib/difficulty.ts';
-import { createKanjiReferences, wordKanjiParts } from './lib/kanji-reference.ts';
+import { createKanjiReferences, wordKanjiParts, type KanjiReference } from './lib/kanji-reference.ts';
 import { loadKanjiSentences } from './lib/content.ts';
+import { kanjiNeighbours, kanjiParameter } from './lib/kanji-sequence.ts';
 import { vocabularyItemId } from './lib/study-catalog.ts';
 import { sentenceAudioFile, type SentenceGroup } from './lib/sentence-audio.ts';
 import type { PronunciationControls } from './pronunciation-ui.ts';
@@ -105,8 +106,34 @@ function renderSentences(sentences: KanjiSentences, audio?: SentenceAudio): Docu
 type KanjiTab = 'vocabulary' | 'sentences';
 const kanjiTabs: Readonly<Record<KanjiTab, string>> = { vocabulary: 'Vocabulario', sentences: 'Frases' };
 
-/** One native dialog for every kanji; the source owns all reference content. Its words share the page's audio player. */
-export function setupKanjiDetails(source: CollectionDocument, pronunciation?: PronunciationControls) {
+/** How a word's own kanji opens: in the dialog, in the full-screen view, or not at all (the kanji the view shows). */
+type KanjiOpening = 'dialog' | 'focus' | 'none';
+
+/** What the full-screen view needs from the kanji page. */
+export interface KanjiPage {
+  /** The kanji on screen, in collection order: the view steps through them. */
+  onScreen(): readonly string[];
+  /** The row of a kanji, which the page shows again when the view closes on it. */
+  row(character: string): HTMLElement | null;
+}
+
+const icon = (path: string) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${path}"/></svg>`;
+const backIcon = icon('M19 12H5m6-6-6 6 6 6');
+const stepIcons = { previous: icon('m15 5-7 7 7 7'), next: icon('m9 5 7 7-7 7') } as const;
+
+const addressKanji = () => new URL(window.location.href).searchParams.get(kanjiParameter);
+function address(character: string | null): URL {
+  const url = new URL(window.location.href);
+  if (character === null) url.searchParams.delete(kanjiParameter);
+  else url.searchParams.set(kanjiParameter, character);
+  return url;
+}
+
+/**
+ * One native dialog for every kanji; the source owns all reference content. Its words share the page's audio player.
+ * With a `page`, the green kanji of a row opens a full-screen view instead, which steps through the kanji on screen.
+ */
+export function setupKanjiDetails(source: CollectionDocument, pronunciation?: PronunciationControls, page?: KanjiPage) {
   const references = createKanjiReferences(source);
   const dialog = node('dialog', 'kanji-dialog');
   dialog.id = 'kanji-dialog';
@@ -122,14 +149,16 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
   dialog.append(header, body);
   document.body.append(dialog);
   let opener: HTMLElement | null = null;
-  let shown = '';
-  // The tab stays chosen while the page is open, also from one kanji to the next. It is not stored in the browser.
+  // The tab stays chosen while the page is open, also from one kanji to the next and between the dialog and the
+  // full-screen view. It is not stored in the browser.
   let selectedTab: KanjiTab = 'vocabulary';
-  // Requested the first time a dialog opens and kept for the visit; a failed request is retried on the next opening.
+  // Requested the first time a kanji opens and kept for the visit; a failed request is retried on the next opening.
   let sentences: Promise<ReadonlyMap<string, KanjiSentences>> | null = null;
   const requestSentences = () => sentences ??= loadKanjiSentences(source.kanji.map((entry) => entry.character))
     .then((data) => new Map(data.entries.map((entry) => [entry.kanji, entry])))
     .catch((error: unknown) => { sentences = null; throw error; });
+  const eyebrow = (reference: KanjiReference) => (reference.kind === 'advanced' ? 'KANJI AVANZADO · DE APOYO'
+    : `KANJI ${String(reference.position).padStart(2, '0')} DE ${source.kanji.length}`);
 
   close.addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => {
@@ -147,36 +176,50 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
   function open(character: string, trigger: HTMLElement) {
     const reference = references.get(character);
     if (!reference) return;
-    const advanced = reference.kind === 'advanced';
     // A word playing in the previous kanji, or on the page, would lose its Parar button.
     pronunciation?.stop();
-    shown = character;
     dialog.dataset.kind = reference.kind;
-    category.textContent = advanced ? 'KANJI AVANZADO · DE APOYO'
-      : `KANJI ${String(reference.position).padStart(2, '0')} DE ${source.kanji.length}`;
+    category.textContent = eyebrow(reference);
+    const details = renderDetails(character, reference, 'kanji-dialog', 'dialog');
+    body.replaceChildren(...details.summary, ...details.study, details.source);
+    if (!dialog.open) {
+      opener = trigger;
+      dialog.showModal();
+    }
+    dialog.scrollTop = 0;
+    close.focus({ preventScroll: true });
+  }
+
+  /**
+   * What the dialog and the full-screen view show of a kanji: its summary, its vocabulary (and sentences, in tabs) and
+   * its source. Ids start with `prefix`, since both can be open at once.
+   */
+  function renderDetails(character: string, reference: KanjiReference, prefix: string, opening: KanjiOpening) {
+    const advanced = reference.kind === 'advanced';
     const hero = node('div', 'kanji-dialog-hero');
     const glyph = node('span', 'kanji-dialog-character', character);
     glyph.lang = 'ja';
     glyph.setAttribute('aria-hidden', 'true');
     const summary = node('div', 'kanji-dialog-summary');
     const title = node('h2', '', reference.definition.meanings.join(' · '));
-    title.id = 'kanji-dialog-title';
+    title.id = `${prefix}-title`;
     const spokenCharacter = node('span', 'visually-hidden', `${character}: `);
     spokenCharacter.lang = 'ja';
     title.prepend(spokenCharacter);
     const description = node('p', 'kanji-dialog-description', advanced
       ? `Fuera de los ${source.kanji.length} kanji principales. Se incluye como apoyo al vocabulario.`
       : `Forma parte de los ${source.kanji.length} kanji de la colección.`);
-    description.id = 'kanji-dialog-description';
+    description.id = `${prefix}-description`;
     summary.append(title, description);
     hero.append(glyph, summary);
-    body.replaceChildren(hero, renderKanjiReadings(reference.definition, character), renderReadingHint(reference.definition, character));
+    const intro: HTMLElement[] = [hero, renderKanjiReadings(reference.definition, character),
+      renderReadingHint(reference.definition, character)];
     if (reference.definition.note) {
       const note = reference.definition.note.replace(/([ぁ-ゖー])\.(?=[ぁ-ゖー])/gu, '$1');
-      body.append(node('p', 'kanji-dialog-note', note));
+      intro.push(node('p', 'kanji-dialog-note', note));
     }
     if (reference.kind === 'collection') {
-      body.append(node('p', 'kanji-dialog-difficulty', `Dificultad: ${reference.definition.difficulty === null
+      intro.push(node('p', 'kanji-dialog-difficulty', `Dificultad: ${reference.definition.difficulty === null
         ? 'Sin marcar' : difficultyLabels[reference.definition.difficulty]}`));
     }
 
@@ -188,7 +231,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       const japanese = node('div', 'kanji-dialog-word');
       japanese.lang = 'ja';
       const written = node('span', 'kanji-dialog-written');
-      written.append(renderWord(word.written, character));
+      written.append(renderParts(word.written, character, opening));
       japanese.append(written, node('span', 'word-reading', word.reading));
       example.append(japanese, node('p', '', word.meaning));
       const audio = pronunciation?.createButton({ id: vocabularyItemId(word.written), written: word.written, reading: word.reading }, wordStatus);
@@ -202,28 +245,23 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     link.rel = 'noopener';
     attribution.append(link);
     // The 80 kanji show their vocabulary or their sentences, one at a time; support kanji only have vocabulary.
+    let study: HTMLElement[];
     if (reference.kind === 'collection') {
       const vocabulary = node('div', 'kanji-dialog-panel');
       vocabulary.append(wordStatus, examples);
-      body.append(...renderTabs({ vocabulary, sentences: renderSentencePanel(character) }));
-    } else body.append(examplesTitle, wordStatus, examples);
-    body.append(attribution);
-    if (!dialog.open) {
-      opener = trigger;
-      dialog.showModal();
-    }
-    dialog.scrollTop = 0;
-    close.focus({ preventScroll: true });
+      study = renderTabs(prefix, { vocabulary, sentences: renderSentencePanel(character) });
+    } else study = [examplesTitle, wordStatus, examples];
+    return { summary: intro, study, source: attribution };
   }
 
-  /** Filled once the sentences arrive, unless another kanji is shown by then. */
+  /** Filled once the sentences arrive, unless the panel has made way for another kanji by then. */
   function renderSentencePanel(character: string): HTMLElement {
     const panel = node('div', 'kanji-dialog-panel');
     const status = node('p', 'kanji-sentence-status', 'Cargando frases…');
     status.setAttribute('role', 'status');
     panel.append(status);
     requestSentences().then((all) => {
-      if (shown !== character) return;
+      if (!panel.isConnected) return;
       const entry = all.get(character);
       const status = audioStatus();
       if (entry) panel.replaceChildren(status, renderSentences(entry, pronunciation && ((example, group, index) =>
@@ -231,13 +269,13 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
           sentenceAudioFile(character, group, index), status))));
       else status.textContent = 'Este kanji todavía no tiene frases.';
     }, () => {
-      if (shown === character) status.textContent = 'No se pudieron cargar las frases. Vuelve a abrir el kanji para intentarlo de nuevo.';
+      if (panel.isConnected) status.textContent = 'No se pudieron cargar las frases. Vuelve a abrir el kanji para intentarlo de nuevo.';
     });
     return panel;
   }
 
   /** WAI-ARIA tabs: arrows, Home and End move between them, and the chosen panel is the only one shown. */
-  function renderTabs(panels: Readonly<Record<KanjiTab, HTMLElement>>): HTMLElement[] {
+  function renderTabs(prefix: string, panels: Readonly<Record<KanjiTab, HTMLElement>>): HTMLElement[] {
     const list = node('div', 'kanji-dialog-tabs');
     list.setAttribute('role', 'tablist');
     list.setAttribute('aria-label', 'Contenido del kanji');
@@ -245,21 +283,23 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     const buttons = tabs.map((tab) => {
       const button = node('button', 'kanji-dialog-tab', kanjiTabs[tab]);
       button.type = 'button';
-      button.id = `kanji-dialog-tab-${tab}`;
+      button.id = `${prefix}-tab-${tab}`;
       button.setAttribute('role', 'tab');
-      button.setAttribute('aria-controls', `kanji-dialog-panel-${tab}`);
+      button.setAttribute('aria-controls', `${prefix}-panel-${tab}`);
       button.addEventListener('click', () => select(tab));
       const panel = panels[tab];
-      panel.id = `kanji-dialog-panel-${tab}`;
+      panel.id = `${prefix}-panel-${tab}`;
       panel.tabIndex = 0;
       panel.setAttribute('role', 'tabpanel');
       panel.setAttribute('aria-labelledby', button.id);
       return button;
     });
+    // These tabs' own choice: the shared one may have changed in the dialog open on top of the full-screen view.
+    let current: KanjiTab | undefined;
     const select = (tab: KanjiTab, focus = false) => {
       // The other panel is hidden, and with it the Parar button of what was playing.
-      if (tab !== selectedTab) pronunciation?.stop();
-      selectedTab = tab;
+      if (current !== undefined && tab !== current) pronunciation?.stop();
+      current = selectedTab = tab;
       tabs.forEach((item, index) => {
         buttons[index].setAttribute('aria-selected', String(item === tab));
         buttons[index].tabIndex = item === tab ? 0 : -1;
@@ -268,7 +308,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       if (focus) buttons[tabs.indexOf(tab)].focus();
     };
     list.addEventListener('keydown', (event) => {
-      const index = tabs.indexOf(selectedTab);
+      const index = tabs.indexOf(current ?? selectedTab);
       const next = { ArrowRight: index + 1, ArrowLeft: index - 1, Home: 0, End: tabs.length - 1 }[event.key];
       if (next === undefined) return;
       event.preventDefault();
@@ -279,9 +319,183 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     return [list, ...tabs.map((tab) => panels[tab])];
   }
 
-  function createTrigger(character: string, className: string): HTMLButtonElement {
+  /** The full-screen view, when the page provides one. */
+  const focusView = page && setupFocusView(page);
+
+  /**
+   * The full-screen view of one of the 80 kanji. It is a modal dialog the size of the window, so the dialog of another
+   * kanji opens on top of it. Its kanji travels in the address (`?kanji=水`): the browser's Back closes it, and a link
+   * or a reload opens it again.
+   */
+  function setupFocusView(page: KanjiPage) {
+    const view = node('dialog', 'kanji-dialog kanji-focus');
+    view.id = 'kanji-focus';
+    view.setAttribute('aria-labelledby', 'kanji-focus-title');
+    view.setAttribute('aria-describedby', 'kanji-focus-description');
+    const bar = node('div', 'kanji-focus-bar');
+    const barContent = node('div', 'kanji-focus-bar-content shell');
+    const back = node('button', 'kanji-focus-back');
+    back.type = 'button';
+    back.setAttribute('aria-keyshortcuts', 'Escape');
+    // On narrow phones only «Todos» shows; a screen reader still reads «Todos los kanji».
+    back.innerHTML = `${backIcon}<span>Todos<span class="kanji-focus-back-more"> los kanji</span></span>`;
+    const steps = node('nav', 'kanji-focus-nav');
+    steps.setAttribute('aria-label', 'Kanji de la lista');
+    const previous = createStep('previous');
+    const next = createStep('next');
+    const position = node('span', 'kanji-focus-position');
+    steps.append(previous, position, next);
+    barContent.append(back, steps);
+    bar.append(barContent);
+    // Stepping keeps the focus on the arrow, so the new kanji is announced here.
+    const announcement = node('p', 'visually-hidden');
+    announcement.setAttribute('role', 'status');
+    const content = node('div', 'kanji-focus-body shell');
+    view.append(bar, announcement, content);
+    document.body.append(view);
+
+    let shown = '';
+    let opener: HTMLElement | null = null;
+    let openedWith = '';
+    // Whether this page added the view's address to the history: closing then goes back to the list.
+    let pushed = false;
+    let pageTitle = document.title;
+    const positionOf = (character: string) => {
+      const reference = references.get(character);
+      return reference?.kind === 'collection' ? reference.position : 0;
+    };
+    const meanings = (character: string) => references.get(character)!.definition.meanings.join(', ');
+
+    function createStep(direction: keyof typeof stepIcons): HTMLButtonElement {
+      const button = node('button', `kanji-focus-step kanji-focus-step--${direction}`);
+      button.type = 'button';
+      button.setAttribute('aria-keyshortcuts', direction === 'previous' ? 'ArrowLeft' : 'ArrowRight');
+      button.addEventListener('click', () => step(button));
+      return button;
+    }
+
+    /** An arrow without a kanji stays focusable: a disabled button would drop the focus at the end of the list. */
+    function paintStep(button: HTMLButtonElement, direction: keyof typeof stepIcons, character: string | undefined) {
+      const name = direction === 'previous' ? 'anterior' : 'siguiente';
+      button.innerHTML = stepIcons[direction];
+      if (character) {
+        const glyph = japanese(character, 'kanji-focus-step-kanji');
+        if (direction === 'previous') button.append(glyph);
+        else button.prepend(glyph);
+      }
+      const label = character ? `Kanji ${name}: ${character}, ${meanings(character)}` : `No hay kanji ${name} en la lista`;
+      button.dataset.kanji = character ?? '';
+      button.setAttribute('aria-disabled', String(!character));
+      button.setAttribute('aria-label', label);
+      button.title = label;
+    }
+
+    function show(character: string): boolean {
+      const reference = references.get(character);
+      if (reference?.kind !== 'collection') return false;
+      pronunciation?.stop();
+      shown = character;
+      const details = renderDetails(character, reference, 'kanji-focus', 'none');
+      const intro = node('div', 'kanji-focus-intro');
+      intro.append(node('p', 'eyebrow', eyebrow(reference)), ...details.summary);
+      const study = node('div', 'kanji-focus-study');
+      study.append(...details.study);
+      content.replaceChildren(intro, study, details.source);
+      const onScreen = page.onScreen();
+      const neighbours = kanjiNeighbours(onScreen, positionOf, character);
+      position.textContent = neighbours.index === -1 ? 'Fuera de la lista' : `${neighbours.index + 1} de ${onScreen.length}`;
+      paintStep(previous, 'previous', neighbours.previous);
+      paintStep(next, 'next', neighbours.next);
+      document.title = `${character} · 80kanjis`;
+      view.scrollTop = 0;
+      return true;
+    }
+
+    function present(character: string): boolean {
+      const title = document.title;
+      if (!show(character)) return false;
+      if (!view.open) {
+        pageTitle = title;
+        openedWith = character;
+        view.showModal();
+      }
+      back.focus({ preventScroll: true });
+      return true;
+    }
+
+    function step(button: HTMLButtonElement) {
+      const character = button.dataset.kanji;
+      if (!character || !show(character)) return;
+      history.replaceState(history.state, '', address(character));
+      announcement.textContent = `${character}, ${meanings(character)}. ${position.textContent}.`;
+    }
+
+    /** Back on the list: at the row of the last kanji seen, on its Info button, or at the button that opened the view. */
+    function returnFocus() {
+      if (shown === openedWith && opener?.isConnected) {
+        opener.focus({ preventScroll: true });
+        return;
+      }
+      const row = page.row(shown);
+      if (!row) return;
+      const bounds = row.getBoundingClientRect();
+      if (bounds.top < 0 || bounds.bottom > window.innerHeight) row.scrollIntoView({ block: 'start', behavior: 'instant' });
+      row.querySelector<HTMLElement>('.kanji-focus-trigger')?.focus({ preventScroll: true });
+    }
+
+    back.addEventListener('click', () => view.close());
+    view.addEventListener('close', () => {
+      pronunciation?.stop();
+      document.title = pageTitle;
+      // The address of the list again: the entry before the view's, or the same one without the kanji.
+      if (addressKanji() !== null) {
+        if (pushed) history.back();
+        else history.replaceState(history.state, '', address(null));
+      }
+      pushed = false;
+      returnFocus();
+      opener = null;
+      announcement.textContent = '';
+    });
+    view.addEventListener('keydown', (event) => {
+      const button = event.key === 'ArrowLeft' ? previous : event.key === 'ArrowRight' ? next : null;
+      if (!button || event.defaultPrevented || event.isComposing
+        || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      // The arrows already move between the tabs, which prevent the default, and scroll the readings.
+      if ((event.target as Element).closest('.kanji-dialog-readings')) return;
+      event.preventDefault();
+      step(button);
+    });
+
+    /** Follow the address: open, change or close the view. `pushedEntry` says whether the view's entry is this page's. */
+    function follow(pushedEntry: boolean) {
+      const character = addressKanji();
+      if (character === null || references.get(character)?.kind !== 'collection') {
+        // Only the 80 kanji have a full-screen view.
+        if (character !== null) history.replaceState(history.state, '', address(null));
+        if (view.open) view.close();
+        return;
+      }
+      if (view.open && character === shown) return;
+      if (!view.open) opener = null;
+      if (present(character)) pushed = pushedEntry;
+    }
+
+    return {
+      open(character: string, trigger: HTMLElement) {
+        if (!present(character)) return;
+        opener = trigger;
+        history.pushState(history.state, '', address(character));
+        pushed = true;
+      },
+      follow,
+    };
+  }
+
+  function createTrigger(character: string, className: string, opening: 'dialog' | 'focus' = 'dialog'): HTMLButtonElement {
     const reference = references.get(character)!;
-    const button = node('button', `kanji-detail-trigger ${className}`);
+    const focus = opening === 'focus' && focusView;
+    const button = node('button', `kanji-detail-trigger ${className}${focus ? ' kanji-focus-trigger' : ''}`);
     button.type = 'button';
     button.lang = 'es';
     const glyph = node('span', '', character);
@@ -289,33 +503,55 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     button.append(glyph);
     button.dataset.kanji = character;
     const category = reference.kind === 'advanced' ? `Avanzado, fuera de los ${source.kanji.length}` : `De los ${source.kanji.length} kanji`;
-    const label = `${character}: ${reference.definition.meanings.join(', ')}. ${category}. Ver información`;
+    const label = `${character}: ${reference.definition.meanings.join(', ')}. ${category}. ${focus ? 'Ver a pantalla completa' : 'Ver información'}`;
     button.title = label;
     button.setAttribute('aria-label', label);
     button.setAttribute('aria-haspopup', 'dialog');
-    button.setAttribute('aria-controls', dialog.id);
-    button.addEventListener('click', () => open(character, button));
+    button.setAttribute('aria-controls', focus ? 'kanji-focus' : dialog.id);
+    button.addEventListener('click', () => (focus ? focus.open(character, button) : open(character, button)));
     return button;
   }
 
-  function renderWord(written: string, target?: string): DocumentFragment {
+  /** The kanji of a word as buttons; `target`, the kanji of the row or of the open dialog, opens as `opening` says. */
+  function renderParts(written: string, target: string | undefined, opening: KanjiOpening): DocumentFragment {
     const fragment = document.createDocumentFragment();
     for (const part of wordKanjiParts(written, references, target)) {
-      fragment.append(part.kind === 'text' ? document.createTextNode(part.text)
-        : createTrigger(part.text, `kanji-link kanji-link--${part.kind}`));
+      const className = `kanji-link kanji-link--${part.kind}`;
+      if (part.kind === 'text') fragment.append(part.text);
+      else if (part.kind !== 'target') fragment.append(createTrigger(part.text, className));
+      // The kanji the full-screen view already shows stays green, without being a button.
+      else if (opening === 'none') fragment.append(node('span', `${className} kanji-link--current`, part.text));
+      else fragment.append(createTrigger(part.text, className, opening));
     }
     return fragment;
   }
 
-  /** «Info kanji 01»: the visible label leads the accessible name, so voice control can say it. */
+  /** A word of a row: its own kanji, in green, opens the full-screen view if there is one, and the rest the dialog. */
+  function renderWord(written: string, target?: string): DocumentFragment {
+    return renderParts(written, target, 'focus');
+  }
+
+  /**
+   * «Info kanji 01», which opens the full-screen view like the large kanji of the row: the visible label leads the
+   * accessible name, so voice control can say it.
+   */
   function createInfoButton(character: string, position: number): HTMLButtonElement {
-    const button = createTrigger(character, 'study-action info-button');
+    const button = createTrigger(character, 'study-action info-button', 'focus');
     const label = `Info kanji ${String(position).padStart(2, '0')}`;
+    const detail = `pronunciaciones e información de ${character}${focusView ? ' a pantalla completa' : ''}`;
     button.innerHTML = `<svg class="study-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/><path d="M10.5 11H12v6m-1.5 0h3"/></svg><span class="study-action-label">${label}</span>`;
-    button.title = `Ver pronunciaciones e información de ${character}`;
-    button.setAttribute('aria-label', `${label}: pronunciaciones e información de ${character}`);
+    button.title = `Ver ${detail}`;
+    button.setAttribute('aria-label', `${label}: ${detail}`);
     return button;
   }
 
-  return { renderWord, createInfoButton, createKanjiButton: (character: string) => createTrigger(character, 'kanji-character-button') };
+  return {
+    renderWord,
+    createInfoButton,
+    createKanjiButton: (character: string) => createTrigger(character, 'kanji-character-button', 'focus'),
+    /** After going back or forward in the history: open, change or close the full-screen view as the address says. */
+    followUrl: () => focusView?.follow(true),
+    /** On load: open the full-screen view of the kanji in the address, if any. */
+    openFromUrl: () => focusView?.follow(false),
+  };
 }
