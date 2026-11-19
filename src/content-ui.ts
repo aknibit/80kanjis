@@ -122,9 +122,15 @@ function renderWord(entry: LexiconEntry, group: string | undefined, card = false
   const line = opens ? 'span' : 'p';
   const term = node(block, 'lexicon-term');
   const written = slashed(opens ? 'span' : 'h3', 'lexicon-written', entry.written);
-  const reading = slashed(line, 'word-reading', entry.reading);
-  written.lang = 'ja'; reading.lang = 'ja';
-  term.append(written, reading, node(line, 'entry-romaji', entry.romaji));
+  written.lang = 'ja';
+  term.append(written);
+  // A word in hiragana (あさ, でんわをかけます) is its own reading, as in the examples; katakana keeps it (バス, ばす).
+  if (entry.written.replace(/\s/gu, '') !== entry.reading.replace(/\s/gu, '')) {
+    const reading = slashed(line, 'word-reading', entry.reading);
+    reading.lang = 'ja';
+    term.append(reading);
+  }
+  term.append(node(line, 'entry-romaji', entry.romaji));
   const explanation = node(block, 'lexicon-explanation');
   explanation.append(slashed(line, 'lexicon-meaning', entry.meaning));
   if (entry.note) explanation.append(slashed(line, 'entry-note', entry.note));

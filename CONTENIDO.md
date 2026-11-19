@@ -73,6 +73,10 @@ No usan la forma て, salvo 〜て ください y la entrada 覚えて います
 
 Ese día se reescribieron los ejemplos y las frases de los contadores que usaban otras palabras (理由, 友達, 紙, 映画) o gramática posterior (持って います, 住んで います, 一歳に なります). Los animales y objetos que no son palabras de la web se escriben en kana (ねこ, ぞう, つる, きって): así se ven sus usos sin añadir kanji que no se estudian.
 
+También se reescribieron 99 ejemplos de verbos y de adjetivos y adverbios que usaban palabras del vault que no están en las hojas (弁護士, 怠け者, 王さま, 鸚鵡, 税金, 字幕, 満月, 年賀状). Ahora tratan situaciones de clase: horarios, transporte, compras, comida, aficiones y familia (まいあさ 七時に 起きます。, バスで 美術館へ 行きました。). Esas palabras siguen en Vocabulario. En los ejemplos de verbos y adjetivos ya no aparecen; en los contadores solo quedan donde muestran un uso que el vocabulario de clase no cubre (一羽の 鸚鵡, 七枚の 年賀状).
+
+Las entradas escritas solo en hiragana no repiten la lectura en la página (あさ, でんわをかけます), igual que los ejemplos sin kanji. Las de katakana sí la muestran en hiragana (バス, ばす).
+
 `npm run check:content` lee cada contexto con las palabras de la colección, de las secciones léxicas y de los contadores: las frases de los kanji, los ejemplos de las entradas y de las guías, y el ejemplo y la frase de cada forma de un contador. Rechaza un kanji que no forme parte de una de esas palabras o una lectura distinta de la de la web (川 o 森 solos, さんほん en lugar de さんぼん). Acepta las formas conjugadas de verbos y adjetivos い (休みませんでした, 嬉しかった) y el verbo de una expresión aunque haya algo en medio (写真を 三枚 撮りました). También comprueba que haya frases para todos los kanji, en el orden de la colección, y que las cuatro avanzadas usen adjetivos, adverbios y contadores. Las palabras en kana (とても, おかき, ひよこ) no se pueden comprobar así: revísalas a mano, igual que la naturalidad de la frase y su traducción.
 
 El vault no contiene una tabla completa de kana: esa sección se completa con la referencia de la Embajada de Japón indicada en su archivo. Los kana no usan la fuente de kanji decorativa: se presentan en Noto Sans JP para facilitar su reconocimiento.

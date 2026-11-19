@@ -105,14 +105,14 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "休日は 遅く 起きます。",
-          "reading": "きゅうじつは おそく おきます。",
-          "meaning": "Los días libres me levanto tarde."
+          "written": "まいあさ 七時に 起きます。",
+          "reading": "まいあさ しちじに おきます。",
+          "meaning": "Me levanto cada mañana a las siete."
         },
         {
-          "written": "子どもは 早く 起きます。",
-          "reading": "こどもは はやく おきます。",
-          "meaning": "Los niños se levantan temprano."
+          "written": "日よう日は 十時に 起きました。",
+          "reading": "にちようびは じゅうじに おきました。",
+          "meaning": "El domingo me levanté a las diez."
         }
       ]
     },
@@ -131,9 +131,9 @@
           "meaning": "Ceno en el comedor."
         },
         {
-          "written": "林檎を 二つ 食べました。",
-          "reading": "りんごを ふたつ たべました。",
-          "meaning": "Me comí dos manzanas."
+          "written": "レストランで さかなを 食べました。",
+          "reading": "レストランで さかなを たべました。",
+          "meaning": "Comí pescado en el restaurante."
         }
       ]
     },
@@ -152,9 +152,9 @@
           "meaning": "Trabajo en un banco."
         },
         {
-          "written": "弁護士は 事務所で 働きます。",
-          "reading": "べんごしは じむしょで はたらきます。",
-          "meaning": "La abogada trabaja en el despacho."
+          "written": "ちちは かいしゃで 働きます。",
+          "reading": "ちちは かいしゃで はたらきます。",
+          "meaning": "Mi padre trabaja en una empresa."
         }
       ]
     },
@@ -173,9 +173,9 @@
           "meaning": "Estudio en la biblioteca."
         },
         {
-          "written": "大学で 文学を 勉強しました。",
-          "reading": "だいがくで ぶんがくを べんきょうしました。",
-          "meaning": "Estudié literatura en la universidad."
+          "written": "大学で えいごを 勉強しました。",
+          "reading": "だいがくで えいごを べんきょうしました。",
+          "meaning": "Estudié inglés en la universidad."
         }
       ]
     },
@@ -189,9 +189,9 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "休日は うちで 休みます。",
-          "reading": "きゅうじつは うちで やすみます。",
-          "meaning": "Los días libres descanso en casa."
+          "written": "日よう日は うちで 休みます。",
+          "reading": "にちようびは うちで やすみます。",
+          "meaning": "Los domingos descanso en casa."
         },
         {
           "written": "授業を 休みました。",
@@ -210,9 +210,9 @@
       "sourceId": "essential-verbs",
       "examples": [
         {
-          "written": "喫茶店で コーヒーを 飲みます。",
-          "reading": "きっさてんで コーヒーを のみます。",
-          "meaning": "Tomo café en la cafetería."
+          "written": "まいあさ おちゃを 飲みます。",
+          "reading": "まいあさ おちゃを のみます。",
+          "meaning": "Cada mañana tomo té."
         },
         {
           "written": "ビールは 飲みません。",
@@ -236,9 +236,9 @@
           "meaning": "La clase ha terminado."
         },
         {
-          "written": "試験は 早く 終わりました。",
-          "reading": "しけんは はやく おわりました。",
-          "meaning": "El examen terminó pronto."
+          "written": "えいがは 九時に 終わりました。",
+          "reading": "えいがは くじに おわりました。",
+          "meaning": "La película terminó a las nueve."
         }
       ]
     },
@@ -257,9 +257,9 @@
           "meaning": "Voy a correos."
         },
         {
-          "written": "車で 美術館へ 行きました。",
-          "reading": "くるまで びじゅつかんへ いきました。",
-          "meaning": "Fui en coche al museo de arte."
+          "written": "バスで 美術館へ 行きました。",
+          "reading": "バスで びじゅつかんへ いきました。",
+          "meaning": "Fui al museo de arte en autobús."
         }
       ]
     },
@@ -278,9 +278,9 @@
           "meaning": "El profesor viene al aula."
         },
         {
-          "written": "お客さんが 来ました。",
-          "reading": "おきゃくさんが きました。",
-          "meaning": "Han llegado los invitados."
+          "written": "ともだちが うちへ 来ました。",
+          "reading": "ともだちが うちへ きました。",
+          "meaning": "Un amigo vino a casa."
         }
       ]
     },
@@ -315,9 +315,9 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "雨の音を 聞きます。",
-          "reading": "あめのおとを ききます。",
-          "meaning": "Escucho el sonido de la lluvia."
+          "written": "まいばん 音がくを 聞きます。",
+          "reading": "まいばん おんがくを ききます。",
+          "meaning": "Escucho música cada noche."
         },
         {
           "written": "先生に 聞きます。",
@@ -341,9 +341,9 @@
           "meaning": "Miro las fotos de mi familia."
         },
         {
-          "written": "満月を 見ました。",
-          "reading": "まんげつを みました。",
-          "meaning": "Vi la luna llena."
+          "written": "テレビで サッカーを 見ました。",
+          "reading": "テレビで サッカーを みました。",
+          "meaning": "Vi el fútbol en la tele."
         }
       ]
     },
@@ -357,14 +357,14 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "鉛筆で 日記を 書きます。",
-          "reading": "えんぴつで にっきを かきます。",
-          "meaning": "Escribo el diario a lápiz."
+          "written": "ボールペンで てがみを 書きます。",
+          "reading": "ボールペンで てがみを かきます。",
+          "meaning": "Escribo una carta con bolígrafo."
         },
         {
-          "written": "年賀状を 書きました。",
-          "reading": "ねんがじょうを かきました。",
-          "meaning": "Escribí las postales de Año Nuevo."
+          "written": "かん字で 名前を 書きました。",
+          "reading": "かんじで なまえを かきました。",
+          "meaning": "Escribí mi nombre en kanji."
         }
       ]
     },
@@ -378,9 +378,9 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "八百屋で みかんを 買います。",
-          "reading": "やおやで みかんを かいます。",
-          "meaning": "Compro mandarinas en la frutería."
+          "written": "スーパーで やさいを 買います。",
+          "reading": "スーパーで やさいを かいます。",
+          "meaning": "Compro verdura en el súper."
         },
         {
           "written": "雑誌を 二冊 買いました。",
@@ -399,14 +399,14 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "喫茶店で 先生に 会います。",
-          "reading": "きっさてんで せんせいに あいます。",
-          "meaning": "Me encuentro con el profesor en la cafetería."
+          "written": "えきで ともだちに 会います。",
+          "reading": "えきで ともだちに あいます。",
+          "meaning": "Quedo con un amigo en la estación."
         },
         {
-          "written": "休日に 家族に 会いました。",
-          "reading": "きゅうじつに かぞくに あいました。",
-          "meaning": "El día libre vi a mi familia."
+          "written": "土よう日に 家族に 会いました。",
+          "reading": "どようびに かぞくに あいました。",
+          "meaning": "El sábado vi a mi familia."
         }
       ]
     },
@@ -425,9 +425,9 @@
           "meaning": "Leo revistas en la biblioteca."
         },
         {
-          "written": "字幕を 読みます。",
-          "reading": "じまくを よみます。",
-          "meaning": "Leo los subtítulos."
+          "written": "でん車で しんぶんを 読みます。",
+          "reading": "でんしゃで しんぶんを よみます。",
+          "meaning": "Leo el periódico en el tren."
         }
       ]
     },
@@ -446,9 +446,9 @@
           "meaning": "Hago fotos a mi familia."
         },
         {
-          "written": "満月の 写真を 撮りました。",
-          "reading": "まんげつの しゃしんを とりました。",
-          "meaning": "Hice una foto de la luna llena."
+          "written": "お花見で 写真を 撮りました。",
+          "reading": "おはなみで しゃしんを とりました。",
+          "meaning": "Hice fotos en el hanami."
         }
       ]
     },
@@ -462,14 +462,14 @@
       "sourceId": "essential-verbs",
       "examples": [
         {
-          "written": "休日は テニスを します。",
-          "reading": "きゅうじつは テニスを します。",
-          "meaning": "Los días libres juego al tenis."
+          "written": "土よう日は テニスを します。",
+          "reading": "どようびは テニスを します。",
+          "meaning": "Los sábados juego al tenis."
         },
         {
-          "written": "先生と テニスを しました。",
-          "reading": "せんせいと テニスを しました。",
-          "meaning": "Jugué al tenis con el profesor."
+          "written": "ともだちと テニスを しました。",
+          "reading": "ともだちと テニスを しました。",
+          "meaning": "Jugué al tenis con un amigo."
         }
       ]
     },
@@ -488,9 +488,9 @@
           "meaning": "Vuelvo a casa al final de la tarde."
         },
         {
-          "written": "車で 帰りました。",
-          "reading": "くるまで かえりました。",
-          "meaning": "Volví en coche."
+          "written": "タクシーで 帰りました。",
+          "reading": "タクシーで かえりました。",
+          "meaning": "Volví en taxi."
         }
       ]
     },
@@ -509,9 +509,9 @@
           "meaning": "Duermo en la habitación de estilo japonés."
         },
         {
-          "written": "一日中 寝ました。",
-          "reading": "いちにちじゅう ねました。",
-          "meaning": "Dormí todo el día."
+          "written": "きのうは 十一時に 寝ました。",
+          "reading": "きのうは じゅういちじに ねました。",
+          "meaning": "Ayer me acosté a las once."
         }
       ]
     },
@@ -530,9 +530,9 @@
           "meaning": "Saludo al profesor."
         },
         {
-          "written": "店員が お客さんに あいさつしました。",
-          "reading": "てんいんが おきゃくさんに あいさつしました。",
-          "meaning": "El dependiente saludó a los clientes."
+          "written": "あさ ともだちに あいさつしました。",
+          "reading": "あさ ともだちに あいさつしました。",
+          "meaning": "Por la mañana saludé a un amigo."
         }
       ]
     },
@@ -546,14 +546,14 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "子どもに お年玉を あげます。",
-          "reading": "こどもに おとしだまを あげます。",
-          "meaning": "Les doy el dinero de Año Nuevo a los niños."
+          "written": "ははに 花を あげます。",
+          "reading": "ははに はなを あげます。",
+          "meaning": "Le doy flores a mi madre."
         },
         {
-          "written": "馬に 林檎を あげました。",
-          "reading": "うまに りんごを あげました。",
-          "meaning": "Le di una manzana al caballo."
+          "written": "ともだちに おみやげを あげました。",
+          "reading": "ともだちに おみやげを あげました。",
+          "meaning": "Le di un recuerdo del viaje a un amigo."
         }
       ]
     },
@@ -593,9 +593,9 @@
           "meaning": "Hay un diccionario encima del escritorio."
         },
         {
-          "written": "宿題が たくさん あります。",
-          "reading": "しゅくだいが たくさん あります。",
-          "meaning": "Tengo muchos deberes."
+          "written": "あしたは やくそくが あります。",
+          "reading": "あしたは やくそくが あります。",
+          "meaning": "Mañana tengo un compromiso."
         }
       ]
     },
@@ -635,9 +635,9 @@
           "meaning": "El profesor está en el aula."
         },
         {
-          "written": "森の中に 梟が います。",
-          "reading": "もりのなかに ふくろうが います。",
-          "meaning": "Hay un búho en el bosque."
+          "written": "へやに 子どもが います。",
+          "reading": "へやに こどもが います。",
+          "meaning": "Hay un niño en la habitación."
         }
       ]
     },
@@ -740,9 +740,9 @@
           "meaning": "Dibujo un caballo a lápiz."
         },
         {
-          "written": "白板に 四角を 描きました。",
-          "reading": "はくばんに しかくを かきました。",
-          "meaning": "Dibujé un cuadrado en la pizarra blanca."
+          "written": "日よう日に 山の えを 描きました。",
+          "reading": "にちようびに やまの えを かきました。",
+          "meaning": "El domingo pinté un cuadro de la montaña."
         }
       ]
     },
@@ -824,9 +824,9 @@
           "meaning": "Comparo dos fotos."
         },
         {
-          "written": "大学と 専門学校を 比べました。",
-          "reading": "だいがくと せんもんがっこうを くらべました。",
-          "meaning": "Comparé la universidad con la escuela profesional."
+          "written": "日本と スペインの りょうりを 比べました。",
+          "reading": "にほんと スペインの りょうりを くらべました。",
+          "meaning": "Comparé la cocina japonesa con la española."
         }
       ]
     },
@@ -845,9 +845,9 @@
           "meaning": "El profesor me dio un diccionario."
         },
         {
-          "written": "家族が 年賀状を くれました。",
-          "reading": "かぞくが ねんがじょうを くれました。",
-          "meaning": "Mi familia me mandó una postal de Año Nuevo."
+          "written": "ははが かさを くれました。",
+          "reading": "ははが かさを くれました。",
+          "meaning": "Mi madre me dio un paraguas."
         }
       ]
     },
@@ -861,9 +861,9 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "税金に 苦しみます。",
-          "reading": "ぜいきんに くるしみます。",
-          "meaning": "Sufro con los impuestos."
+          "written": "日本ごの かん字に 苦しみます。",
+          "reading": "にほんごの かんじに くるしみます。",
+          "meaning": "Sufro con los kanji del japonés."
         },
         {
           "written": "聞き取りに 苦しみました。",
@@ -908,9 +908,9 @@
           "meaning": "Hago los deberes."
         },
         {
-          "written": "家族と 旅行を します。",
-          "reading": "かぞくと りょこうを します。",
-          "meaning": "Viajo con mi familia."
+          "written": "日よう日に ともだちと サッカーを します。",
+          "reading": "にちようびに ともだちと サッカーを します。",
+          "meaning": "El domingo juego al fútbol con amigos."
         }
       ]
     },
@@ -924,9 +924,9 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "箱の 上に 座ります。",
-          "reading": "はこの うえに すわります。",
-          "meaning": "Me siento encima de la caja."
+          "written": "いすに 座ります。",
+          "reading": "いすに すわります。",
+          "meaning": "Me siento en la silla."
         },
         {
           "written": "子どもが 木の下に 座りました。",
@@ -950,9 +950,9 @@
           "meaning": "Preparo la cena."
         },
         {
-          "written": "パイを 作りました。",
-          "reading": "パイを つくりました。",
-          "meaning": "Hice una tarta."
+          "written": "日本の りょうりを 作りました。",
+          "reading": "にほんの りょうりを つくりました。",
+          "meaning": "Hice un plato japonés."
         }
       ]
     },
@@ -987,14 +987,14 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "笛を 習います。",
-          "reading": "ふえを ならいます。",
-          "meaning": "Tomo clases de flauta."
+          "written": "先生に 日本ごを 習います。",
+          "reading": "せんせいに にほんごを ならいます。",
+          "meaning": "Aprendo japonés con una profesora."
         },
         {
-          "written": "先生に テニスを 習いました。",
-          "reading": "せんせいに テニスを ならいました。",
-          "meaning": "Aprendí a jugar al tenis con un profesor."
+          "written": "ともだちに ダンスを 習いました。",
+          "reading": "ともだちに ダンスを ならいました。",
+          "meaning": "Un amigo me enseñó a bailar."
         }
       ]
     },
@@ -1013,9 +1013,9 @@
           "meaning": "Me quedé dormido en clase."
         },
         {
-          "written": "怠け者は 一日中 眠ります。",
-          "reading": "なまけものは いちにちじゅう ねむります。",
-          "meaning": "El perezoso duerme todo el día."
+          "written": "赤ちゃんは 一日中 眠ります。",
+          "reading": "あかちゃんは いちにちじゅう ねむります。",
+          "meaning": "El bebé duerme todo el día."
         }
       ]
     },
@@ -1034,9 +1034,9 @@
           "meaning": "Empieza la clase."
         },
         {
-          "written": "旅行が 始まりました。",
-          "reading": "りょこうが はじまりました。",
-          "meaning": "Ha empezado el viaje."
+          "written": "コンサートは 七時に 始まります。",
+          "reading": "コンサートは しちじに はじまります。",
+          "meaning": "El concierto empieza a las siete."
         }
       ]
     },
@@ -1071,14 +1071,14 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "家族と 話します。",
-          "reading": "かぞくと はなします。",
-          "meaning": "Hablo con mi familia."
+          "written": "でんわで 家族と 話します。",
+          "reading": "でんわで かぞくと はなします。",
+          "meaning": "Hablo con mi familia por teléfono."
         },
         {
-          "written": "店員と 話しました。",
-          "reading": "てんいんと はなしました。",
-          "meaning": "Hablé con el dependiente."
+          "written": "先生と 日本ごで 話しました。",
+          "reading": "せんせいと にほんごで はなしました。",
+          "meaning": "Hablé en japonés con la profesora."
         }
       ]
     },
@@ -1092,9 +1092,9 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "子どもは お年玉を もらいます。",
-          "reading": "こどもは おとしだまを もらいます。",
-          "meaning": "Los niños reciben dinero de Año Nuevo."
+          "written": "たん生日に プレゼントを もらいました。",
+          "reading": "たんじょうびに プレゼントを もらいました。",
+          "meaning": "Me dieron un regalo por mi cumpleaños."
         },
         {
           "written": "先生に 辞書を もらいました。",
@@ -1113,14 +1113,14 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "雑誌を 訳します。",
-          "reading": "ざっしを やくします。",
-          "meaning": "Traduzco una revista."
+          "written": "えいごの てがみを 訳します。",
+          "reading": "えいごの てがみを やくします。",
+          "meaning": "Traduzco una carta en inglés."
         },
         {
-          "written": "字幕を 訳しました。",
-          "reading": "じまくを やくしました。",
-          "meaning": "Traduje los subtítulos."
+          "written": "日本ごの うたを スペインごに 訳しました。",
+          "reading": "にほんごの うたを スペインごに やくしました。",
+          "meaning": "Traduje una canción japonesa al español."
         }
       ]
     },
@@ -1160,9 +1160,9 @@
           "meaning": "He entendido la pregunta."
         },
         {
-          "written": "規則が 分かりません。",
-          "reading": "きそくが わかりません。",
-          "meaning": "No entiendo las normas."
+          "written": "先生の 日本ごが 分かりません。",
+          "reading": "せんせいの にほんごが わかりません。",
+          "meaning": "No entiendo el japonés de la profesora."
         }
       ]
     },
@@ -1223,9 +1223,9 @@
           "meaning": "Me desanimé con un examen difícil."
         },
         {
-          "written": "長い 坂で 心が 折れます。",
-          "reading": "ながい さかで こころが おれます。",
-          "meaning": "Las cuestas largas me desaniman."
+          "written": "長い 宿題で 心が 折れます。",
+          "reading": "ながい しゅくだいで こころが おれます。",
+          "meaning": "Los deberes largos me desaniman."
         }
       ]
     },
@@ -1239,9 +1239,9 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "先生は 和食を 召し上がります。",
-          "reading": "せんせいは わしょくを めしあがります。",
-          "meaning": "El profesor come comida japonesa."
+          "written": "先生は 日本の りょうりを 召し上がります。",
+          "reading": "せんせいは にほんの りょうりを めしあがります。",
+          "meaning": "La profesora come comida japonesa."
         },
         {
           "written": "お客さんが コーヒーを 召し上がりました。",
@@ -1260,9 +1260,9 @@
       "sourceId": "verbs-note",
       "examples": [
         {
-          "written": "技術者が 機械を 修理します。",
-          "reading": "ぎじゅつしゃが きかいを しゅうりします。",
-          "meaning": "El técnico repara la máquina."
+          "written": "ちちが じてん車を 修理します。",
+          "reading": "ちちが じてんしゃを しゅうりします。",
+          "meaning": "Mi padre arregla la bicicleta."
         },
         {
           "written": "靴を 修理しました。",
