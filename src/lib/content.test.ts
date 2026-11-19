@@ -99,11 +99,14 @@ test('counter endings list the sound changes from most to least common', () => {
   assert.throws(() => parseStudyDocument(withEndings('mai', ['mai'])));
 });
 
-test('every counter has a difficulty, and the levels follow the study plan', () => {
+test('every counter has a difficulty: how hard its readings and its use are to learn', () => {
   const level = (difficulty: string) => counters.entries.filter((entry) => entry.difficulty === difficulty).map((entry) => entry.id);
-  assert.deepEqual(level('easy'), ['tsu', 'ko', 'nin', 'mai', 'days', 'weeks', 'age', 'dates', 'hundreds', 'thousands', 'ten-thousands']);
-  assert.deepEqual(level('medium'), ['satsu', 'hon', 'hiki', 'soku', 'hai']);
-  assert.deepEqual(level('hard'), ['dai', 'wa', 'tou', 'months']);
+  // No sound changes, or only いっ・はっ・じゅっ.
+  assert.deepEqual(level('easy'), ['ko', 'mai', 'dai', 'satsu', 'weeks', 'age', 'thousands', 'ten-thousands']);
+  // Alternating endings (ほん・ぽん・ぼん) or a few irregular readings (ひとり, ふたり).
+  assert.deepEqual(level('medium'), ['nin', 'hon', 'hiki', 'soku', 'hai', 'months', 'hundreds']);
+  // Series to learn by heart (ひとつ, ついたち, ふつかかん), or a use that is hard to delimit (〜頭 against 〜匹).
+  assert.deepEqual(level('hard'), ['tsu', 'wa', 'tou', 'days', 'dates']);
   for (const value of [undefined, 'unrated', 'Fácil', null]) {
     const data = structuredClone(counters) as any;
     data.entries[0].difficulty = value;
@@ -154,14 +157,15 @@ test('each counter form and question has a Japanese example and an everyday sent
 test('counter group and difficulty filters combine, and each counts what the other lets through', () => {
   const ids = (entries: readonly { id: string }[]) => entries.map((entry) => entry.id);
   const easyObjects = filterByGroupAndDifficulty(counters.entries, 'objects', 'easy');
-  assert.deepEqual(ids(easyObjects.entries), ['tsu', 'ko', 'mai']);
+  assert.deepEqual(ids(easyObjects.entries), ['ko', 'mai', 'dai', 'satsu']);
   // Objetos and the other groups count easy counters; the difficulties count objects.
-  assert.equal(easyObjects.groupCounts('all'), 11);
-  assert.equal(easyObjects.groupCounts('objects'), 3);
-  assert.equal(easyObjects.groupCounts('time'), 4);
-  assert.equal(easyObjects.groupCounts('living'), 1);
+  assert.equal(easyObjects.groupCounts('all'), 8);
+  assert.equal(easyObjects.groupCounts('objects'), 4);
+  assert.equal(easyObjects.groupCounts('time'), 2);
+  assert.equal(easyObjects.groupCounts('living'), 0);
   assert.equal(easyObjects.difficultyCounts('all'), 8);
-  assert.equal(easyObjects.difficultyCounts('medium'), 4);
+  assert.equal(easyObjects.difficultyCounts('easy'), 4);
+  assert.equal(easyObjects.difficultyCounts('medium'), 3);
   assert.equal(easyObjects.difficultyCounts('hard'), 1);
   const everything = filterByGroupAndDifficulty(counters.entries, 'all', 'all');
   assert.equal(everything.entries.length, counters.entries.length);

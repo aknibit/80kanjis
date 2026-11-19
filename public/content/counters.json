@@ -79,7 +79,7 @@
       "title": "Objetos en general",
       "description": "Una forma general de contar cosas cuando no se necesita un contador más específico.",
       "group": "objects",
-      "difficulty": "easy",
+      "difficulty": "hard",
       "type": "counter",
       "sourceId": "counter-chart",
       "forms": [
@@ -507,7 +507,7 @@
       "title": "Personas",
       "description": "Para contar personas.",
       "group": "living",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "type": "counter",
       "sourceId": "counter-chart",
       "forms": [
@@ -933,7 +933,7 @@
       "title": "Vehículos y máquinas",
       "description": "Coches, bicicletas, ordenadores y aparatos.",
       "group": "objects",
-      "difficulty": "hard",
+      "difficulty": "easy",
       "type": "counter",
       "sourceId": "counter-chart",
       "forms": [
@@ -1145,7 +1145,7 @@
       "title": "Libros y cuadernos",
       "description": "Libros, revistas y volúmenes encuadernados.",
       "group": "objects",
-      "difficulty": "medium",
+      "difficulty": "easy",
       "type": "counter",
       "sourceId": "counter-chart",
       "forms": [
@@ -2651,7 +2651,7 @@
       "title": "Duración en días",
       "description": "Un periodo de tiempo, distinto del día del calendario.",
       "group": "time",
-      "difficulty": "easy",
+      "difficulty": "hard",
       "type": "counter",
       "sourceId": "counter-chart",
       "forms": [
@@ -3078,7 +3078,7 @@
       "title": "Meses de duración",
       "description": "La duración en meses; no los nombres de los meses del año.",
       "group": "time",
-      "difficulty": "hard",
+      "difficulty": "medium",
       "type": "counter",
       "sourceId": "counter-chart",
       "forms": [
@@ -3509,7 +3509,7 @@
       "title": "Días del mes",
       "description": "Fechas del calendario. La lectura cambia en varios días.",
       "group": "time",
-      "difficulty": "easy",
+      "difficulty": "hard",
       "type": "counter",
       "sourceId": "calendar-note",
       "forms": [
@@ -4103,7 +4103,7 @@
       "title": "Centenas",
       "description": "Unidades de cien; se incluyen como números, no como contadores de objetos.",
       "group": "numbers",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "type": "number",
       "sourceId": "counter-chart",
       "forms": [
