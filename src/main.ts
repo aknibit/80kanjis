@@ -133,7 +133,7 @@ function start(source: CollectionDocument, difficulty: DifficultySelector) {
   const rowRatings = new Map(studyCatalog.rows.map((row) => [row.id, getRowDifficulty(row, getDifficulty)]));
   const studyRows = new Map(studyCatalog.rows.map((row) => [row.id, row]));
   const pronunciation = setupPronunciation(document.querySelector('#audio-status')!);
-  const kanjiDetails = setupKanjiDetails(source);
+  const kanjiDetails = setupKanjiDetails(source, pronunciation);
 
   function createStudyBlock(item: StudyItem, entry: Kanji, blockIndex: number): HTMLElement {
     const block = element('article', `study-block study-block--${item.type}`);

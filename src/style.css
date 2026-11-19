@@ -390,8 +390,12 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kanji-dialog .kanji-dialog-reading-hint { font-size: 12px; line-height: 1.7; margin: 10px 0 0; }
 .kanji-dialog .kanji-dialog-note, .kanji-dialog .kanji-dialog-difficulty { font-size: 14px; line-height: 1.7; margin: 16px 0 20px; }
 .kanji-dialog-examples-title { font-size: 13px; font-weight: 600; margin: 22px 0 8px; }
-.kanji-dialog-examples { list-style: none; padding: 0; margin: 0; }
-.kanji-dialog-examples li { padding: 10px 0; border-top: 1px solid var(--line); }
+.kanji-dialog-examples { --study-control-width: 68px; --study-control-height: 22px; list-style: none; padding: 0; margin: 0; }
+/* Audio sits at the right of each word, centred on its first line, as in the cards on a phone. */
+.kanji-dialog-examples li { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
+.kanji-dialog-examples li > * { grid-column: 1; }
+.kanji-dialog-examples li > .audio-button { grid-column: 2; grid-row: 1; align-self: center; }
+.kanji-dialog-audio-status { margin: 12px 0 2px; }
 .kanji-dialog-word { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
 .kanji-dialog-written { font-family: var(--japanese); font-size: 23px; line-height: 1.5; }
 .kanji-dialog-examples p { font-size: 14px; line-height: 1.5; margin: 3px 0 0; color: var(--dialog-example); }
@@ -690,7 +694,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-block--vocabulary .study-content { grid-column: 1; grid-row: 1 / span 2; min-height: 0; }
   .study-block--kanji .kanji-character { grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; margin: 0; }
   .study-block--kanji .kanji-meanings { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
-  .study-block { --study-control-width: 60px; }
+  .study-block, .kanji-dialog-examples { --study-control-width: 60px; }
   .study-action { gap: 3px; padding-inline: 2px; font-size: 11px; }
   .study-action .study-action-icon { flex-basis: 11px; width: 11px; height: 11px; }
   .audio-origin { font-size: 8px; }
@@ -724,7 +728,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 }
 @media (pointer: coarse) {
   /* Compact controls whose invisible touch area is still 44 px tall. */
-  .study-block { --study-control-height: 30px; }
+  .study-block, .kanji-dialog-examples { --study-control-height: 30px; }
   .study-action { position: relative; }
   .study-action::after { content: ''; position: absolute; inset: -7px -2px; }
   .study-guides > summary, .study-sources > summary { padding-block: 12px; }

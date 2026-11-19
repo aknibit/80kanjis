@@ -1893,7 +1893,7 @@ export const pronunciations = [
 const byItemId = new Map<string, Pronunciation>(pronunciations.map((clip) => [clip.itemId, clip]));
 
 /** Keep the written form AND reading aligned, including words with multiple readings. */
-export function getPronunciation(item: VocabularyStudyItem): Pronunciation | undefined {
+export function getPronunciation(item: Pick<VocabularyStudyItem, 'id' | 'reading'>): Pronunciation | undefined {
   const clip = byItemId.get(item.id);
   return clip?.reading === item.reading ? clip : undefined;
 }

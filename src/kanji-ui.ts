@@ -1,6 +1,8 @@
 import { difficultyLabels } from './lib/difficulty.ts';
 import { createKanjiReferences, wordKanjiParts } from './lib/kanji-reference.ts';
 import { loadKanjiSentences } from './lib/content.ts';
+import { vocabularyItemId } from './lib/study-catalog.ts';
+import type { PronunciationControls } from './pronunciation-ui.ts';
 import type { ContentExample, KanjiSentences } from './content-types.ts';
 import type { CollectionDocument, KanjiReadings } from './types.ts';
 
@@ -91,8 +93,8 @@ function renderSentences(sentences: KanjiSentences): DocumentFragment {
 type KanjiTab = 'vocabulary' | 'sentences';
 const kanjiTabs: Readonly<Record<KanjiTab, string>> = { vocabulary: 'Vocabulario', sentences: 'Frases' };
 
-/** One native dialog for every kanji; the source owns all reference content. */
-export function setupKanjiDetails(source: CollectionDocument) {
+/** One native dialog for every kanji; the source owns all reference content. Its words share the page's audio player. */
+export function setupKanjiDetails(source: CollectionDocument, pronunciation?: PronunciationControls) {
   const references = createKanjiReferences(source);
   const dialog = node('dialog', 'kanji-dialog');
   dialog.id = 'kanji-dialog';
@@ -119,6 +121,7 @@ export function setupKanjiDetails(source: CollectionDocument) {
 
   close.addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => {
+    pronunciation?.stop();
     if (opener?.isConnected) opener.focus({ preventScroll: true });
     opener = null;
   });
@@ -133,6 +136,8 @@ export function setupKanjiDetails(source: CollectionDocument) {
     const reference = references.get(character);
     if (!reference) return;
     const advanced = reference.kind === 'advanced';
+    // A word playing in the previous kanji, or on the page, would lose its Parar button.
+    pronunciation?.stop();
     shown = character;
     dialog.dataset.kind = reference.kind;
     category.textContent = advanced ? 'KANJI AVANZADO · DE APOYO'
@@ -165,6 +170,10 @@ export function setupKanjiDetails(source: CollectionDocument) {
 
     const examplesTitle = node('h3', 'kanji-dialog-examples-title', 'Lecturas en el vocabulario de la colección');
     const examples = node('ul', 'kanji-dialog-examples');
+    // The page's status is behind the modal, so playback errors are announced here.
+    const audioStatus = node('p', 'audio-status kanji-dialog-audio-status');
+    audioStatus.setAttribute('role', 'status');
+    audioStatus.setAttribute('aria-live', 'polite');
     for (const word of reference.vocabulary) {
       const example = node('li', '');
       const japanese = node('div', 'kanji-dialog-word');
@@ -173,6 +182,8 @@ export function setupKanjiDetails(source: CollectionDocument) {
       written.append(renderWord(word.written, character));
       japanese.append(written, node('span', 'word-reading', word.reading));
       example.append(japanese, node('p', '', word.meaning));
+      const audio = pronunciation?.createButton({ id: vocabularyItemId(word.written), written: word.written, reading: word.reading }, audioStatus);
+      if (audio) example.append(audio);
       examples.append(example);
     }
     const attribution = node('p', 'kanji-dialog-source');
@@ -184,9 +195,9 @@ export function setupKanjiDetails(source: CollectionDocument) {
     // The 80 kanji show their vocabulary or their sentences, one at a time; support kanji only have vocabulary.
     if (reference.kind === 'collection') {
       const vocabulary = node('div', 'kanji-dialog-panel');
-      vocabulary.append(examples);
+      vocabulary.append(audioStatus, examples);
       body.append(...renderTabs({ vocabulary, sentences: renderSentencePanel(character) }));
-    } else body.append(examplesTitle, examples);
+    } else body.append(examplesTitle, audioStatus, examples);
     body.append(attribution);
     if (!dialog.open) {
       opener = trigger;
