@@ -1,0 +1,4033 @@
+{
+  "engine": "VOICEVOX Nemo",
+  "engineVersion": "0.26.0",
+  "engineSha256": "70c8e26be64684008264b23705f1439f8f19259a9571cbbeac930452e89b4ce2",
+  "voice": "女声1",
+  "speaker": 10005,
+  "termsUrl": "https://voicevox.hiroshiba.jp/nemo/term/",
+  "encoder": "LAME (lameenc 1.9.0), MP3 32 kbps mono",
+  "replacements": [
+    {
+      "from": "日本人",
+      "to": "にほんじん",
+      "reason": "El motor dice «nippon» aunque el diccionario diga 日本; にほんじん lleva el acento [4] del diccionario."
+    },
+    {
+      "from": "描きます",
+      "to": "書きます",
+      "reason": "La lectura es かきます; el motor lee えがきます. 書きます suena igual, con el mismo acento."
+    }
+  ],
+  "dictionary": [
+    {
+      "surface": "日本",
+      "pronunciation": "ニホン",
+      "accentType": 2,
+      "wordType": "PROPER_NOUN",
+      "reason": "Se enseña «nihon»; el motor dice «nippon»."
+    },
+    {
+      "surface": "にほんじん",
+      "pronunciation": "ニホンジン",
+      "accentType": 4,
+      "wordType": "PROPER_NOUN",
+      "reason": "Acento de 日本人 [4]; sin esta palabra, el kana sale sin caída."
+    },
+    {
+      "surface": "七色",
+      "pronunciation": "ナナイロ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (ナナ'イロ); el motor dice なないろ con otro acento o ななしょく."
+    },
+    {
+      "surface": "竹林",
+      "pronunciation": "タケバヤシ",
+      "accentType": 4,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee たけばやし, como el audio de la palabra; el motor dice ちくりん."
+    },
+    {
+      "surface": "まつ林",
+      "pronunciation": "マツバヤシ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (松林); el motor dice まつりん."
+    },
+    {
+      "surface": "空ばこ",
+      "pronunciation": "カラバコ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (カラ'バコ); el motor dice そらばこ."
+    },
+    {
+      "surface": "土き",
+      "pronunciation": "ドキ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (土器); el motor dice つちき."
+    },
+    {
+      "surface": "まき貝",
+      "pronunciation": "マキガイ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (巻貝); el motor dice まきかい."
+    },
+    {
+      "surface": "ほら貝",
+      "pronunciation": "ホラガイ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (法螺貝); el motor dice ほらかい."
+    },
+    {
+      "surface": "こん虫",
+      "pronunciation": "コンチュウ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (昆虫); el motor dice こんむし."
+    },
+    {
+      "surface": "先とう",
+      "pronunciation": "セントウ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (先頭); el motor dice さきだとう."
+    },
+    {
+      "surface": "文なし",
+      "pronunciation": "モンナシ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (文無し); el motor dice ぶんなし."
+    },
+    {
+      "surface": "上ぎ",
+      "pronunciation": "ウワギ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (上着); el motor dice うえぎ."
+    },
+    {
+      "surface": "赤はん",
+      "pronunciation": "セキハン",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (赤飯); el motor dice あかはん."
+    },
+    {
+      "surface": "雨ぐも",
+      "pronunciation": "アマグモ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Como el audio de la palabra (雨雲); el motor dice あめぐも."
+    },
+    {
+      "surface": "ほう石",
+      "pronunciation": "ホウセキ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 宝石 en el diccionario del motor; el motor dice ほういし."
+    },
+    {
+      "surface": "でん車",
+      "pronunciation": "デンシャ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 電車 en el diccionario del motor; el motor dice でんくるま."
+    },
+    {
+      "surface": "車りん",
+      "pronunciation": "シャリン",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 車輪 en el diccionario del motor; el motor dice くるまりん."
+    },
+    {
+      "surface": "正かい",
+      "pronunciation": "セイカイ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 正解 en el diccionario del motor; el motor dice ただしかい."
+    },
+    {
+      "surface": "正じき",
+      "pronunciation": "ショウジキ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 正直 en el diccionario del motor; el motor dice せいじき."
+    },
+    {
+      "surface": "らい月",
+      "pronunciation": "ライゲツ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 来月 en el diccionario del motor; el motor dice らいつき."
+    },
+    {
+      "surface": "白板",
+      "pronunciation": "ハクバン",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee はくばん; el motor dice しらいた."
+    },
+    {
+      "surface": "目と口",
+      "pronunciation": "メトクチ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Ante は, el motor lee もくとこう."
+    },
+    {
+      "surface": "はは",
+      "pronunciation": "ハハ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "En hiragana, el motor lee las dos は como partículas: «wa wa»."
+    }
+  ],
+  "entries": [
+    {
+      "file": "4e00-s1.mp3",
+      "written": "わたしは 一年生です。",
+      "reading": "わたしは いちねんせいです。",
+      "sourceText": "わたしは 一年生です。",
+      "kana": "ワタシワ'、イチネ'ンセエデ_ス",
+      "sha256": "11e018d5ce9f36a68a5160f9718e467ba73a2cb0e69a3b20a30ec28f5e7d39f9"
+    },
+    {
+      "file": "4e00-s2.mp3",
+      "written": "一人で えきへ 行きます。",
+      "reading": "ひとりで えきへ いきます。",
+      "sourceText": "一人で えきへ 行きます。",
+      "kana": "_ヒト'リデ、エ'キエ、イキマ'_ス",
+      "sha256": "4ae3e25c9baff6fac0dc3db567715a32958806820c9c05f0a37f7728ed383bf2"
+    },
+    {
+      "file": "4e00-a1.mp3",
+      "written": "おいしい コーヒーを 一杯 飲みました。",
+      "reading": "おいしい コーヒーを いっぱい のみました。",
+      "sourceText": "おいしい コーヒーを 一杯 飲みました。",
+      "kana": "オイシ'イ、コオヒ'イオ、イッ'パイ、ノミマ'_シタ",
+      "sha256": "798b2a8f5ef20c32f8c49b316fa0c8be4ce23266f1083ff71cccb9287bce1ee1"
+    },
+    {
+      "file": "4e00-a2.mp3",
+      "written": "ともだちと いっしょに 一週間 旅行しました。",
+      "reading": "ともだちと いっしょに いっしゅうかん りょこうしました。",
+      "sourceText": "ともだちと いっしょに 一週間 旅行しました。",
+      "kana": "トモダ_チト'、イッショニ'、イッシュ'ウカン、リョコオ'/シマ'_シタ",
+      "sha256": "1fd335fa77d8d40a73b016106ef0f949a50101c06c8c251e6bdf7ca283794241"
+    },
+    {
+      "file": "4e00-a3.mp3",
+      "written": "一月の あさは とても 暗いです。",
+      "reading": "いちがつの あさは とても くらいです。",
+      "sourceText": "一月の あさは とても 暗いです。",
+      "kana": "イチガツ'ノ、ア'サワ、トテモ'、クライ'デ_ス",
+      "sha256": "c80baeb4c791d76845ffb1d3b2e3f2b738f1d7f71f6c7d9525ab5f179cb9d638"
+    },
+    {
+      "file": "4e00-a4.mp3",
+      "written": "一年生の 宿題は すこし 難しいです。",
+      "reading": "いちねんせいの しゅくだいは すこし むずかしいです。",
+      "sourceText": "一年生の 宿題は すこし 難しいです。",
+      "kana": "イチネ'ンセエノ、_シュクダイワ'、_スコ'シ、ムズカシ'イデ_ス",
+      "sha256": "5d0e6ad49983b36213c7fe207405f5a27b50c8812556f1c85acd7aca4a456b61"
+    },
+    {
+      "file": "4e8c-s1.mp3",
+      "written": "二月に 旅行します。",
+      "reading": "にがつに りょこうします。",
+      "sourceText": "二月に 旅行します。",
+      "kana": "ニガツ'ニ、リョコオ'/シマ'_ス",
+      "sha256": "2912d75594546dcc595e3c85f875054725ae9daf2aa81ab67d0abdfcdb8022a1"
+    },
+    {
+      "file": "4e8c-s2.mp3",
+      "written": "二日に 大学へ 行きます。",
+      "reading": "ふつかに だいがくへ いきます。",
+      "sourceText": "二日に 大学へ 行きます。",
+      "kana": "_フツカニ'、ダイガクエ'、イキマ'_ス",
+      "sha256": "0a7ac2458f4f8305b6432a1b33b484f92a0c359440ac1735a135abdafc02b209"
+    },
+    {
+      "file": "4e8c-a1.mp3",
+      "written": "へやに いすが 二つ あります。",
+      "reading": "へやに いすが ふたつ あります。",
+      "sourceText": "へやに いすが 二つ あります。",
+      "kana": "ヘヤ'ニ、イスガ'、_フタツ'、アリマ'_ス",
+      "sha256": "0151da33191149ddb32c2d2f1b2284d0f90c16d6052ed2eec4a89e2bb48326ec"
+    },
+    {
+      "file": "4e8c-a2.mp3",
+      "written": "二人で 楽しい 旅行を しました。",
+      "reading": "ふたりで たのしい りょこうを しました。",
+      "sourceText": "二人で 楽しい 旅行を しました。",
+      "kana": "_フタリ'デ、タノシ'イ、リョコオオ'、シマ'_シタ",
+      "sha256": "a3212d627c833bb30944ebd54405b91c8dc49a0a7f5bff45b39c877d4e17b5ca"
+    },
+    {
+      "file": "4e8c-a3.mp3",
+      "written": "二月は とても 忙しかったです。",
+      "reading": "にがつは とても いそがしかったです。",
+      "sourceText": "二月は とても 忙しかったです。",
+      "kana": "ニガツ'ワ、トテモ'、イソガシ'カッタデ_ス",
+      "sha256": "2ab703294c246a119d30fb7f8834402b6bce666120433280f2f3de7c670fbbc7"
+    },
+    {
+      "file": "4e8c-a4.mp3",
+      "written": "二日間 たくさん 寝ました。",
+      "reading": "ふつかかん たくさん ねました。",
+      "sourceText": "二日間 たくさん 寝ました。",
+      "kana": "_フツカ'カン、タ_クサン'、ネマ'_シタ",
+      "sha256": "3c1ca69271ebb70c812a7aec8a4560d6f26d22d5d3c6adcc0bdb6ea6700d1ad7"
+    },
+    {
+      "file": "4e09-s1.mp3",
+      "written": "鉛筆が 三本 あります。",
+      "reading": "えんぴつが さんぼん あります。",
+      "sourceText": "鉛筆が 三本 あります。",
+      "kana": "エン_ピツガ'、サン'ボン、アリマ'_ス",
+      "sha256": "bf0893eb4076f7306856e7a268f9b7faaf2b5096ba0ee4c4fed386071edb02ad"
+    },
+    {
+      "file": "4e09-s2.mp3",
+      "written": "三日に ともだちと テニスを します。",
+      "reading": "みっかに ともだちと テニスを します。",
+      "sourceText": "三日に ともだちと テニスを します。",
+      "kana": "ミッカニ'、トモダ_チト'、テ'ニスオ、シマ'_ス",
+      "sha256": "da4f8dc11078c58a1bca29a6373d9063e0bb1ed34de643b496654be14bc09821"
+    },
+    {
+      "file": "4e09-a1.mp3",
+      "written": "面白い 雑誌を 三冊 買いました。",
+      "reading": "おもしろい ざっしを さんさつ かいました。",
+      "sourceText": "面白い 雑誌を 三冊 買いました。",
+      "kana": "オモシロ'イ、ザッシオ'、サン'サツ、カイマ'_シタ",
+      "sha256": "3cc83f722ef8cf4ac1b7370924794700a6b948478fb57525195b6669d3025bae"
+    },
+    {
+      "file": "4e09-a2.mp3",
+      "written": "三週間 日本ごを たくさん 勉強しました。",
+      "reading": "さんしゅうかん にほんごを たくさん べんきょうしました。",
+      "sourceText": "三週間 日本ごを たくさん 勉強しました。",
+      "kana": "サンシュ'ウカン、ニホンゴオ'、タ_クサン'、ベンキョオ'/シマ'_シタ",
+      "sha256": "1bd6e16def37d6adb08f0e03425793befd04d1a6379c2a5028faf399236d36bc"
+    },
+    {
+      "file": "4e09-a3.mp3",
+      "written": "三歳の 子どもは とても 元気です。",
+      "reading": "さんさいの こどもは とても げんきです。",
+      "sourceText": "三歳の 子どもは とても 元気です。",
+      "kana": "サン'サイノ、コドモワ'、トテモ'、ゲ'ンキデ_ス",
+      "sha256": "b53926bed0deb3029ae61390d3fedf0cae711c2231308e01df75de355c35ea1d"
+    },
+    {
+      "file": "4e09-a4.mp3",
+      "written": "三人で 静かな レストランへ 行きました。",
+      "reading": "さんにんで しずかな レストランへ いきました。",
+      "sourceText": "三人で 静かな レストランへ 行きました。",
+      "kana": "サン'ニンデ、シ'ズカナ、レ'_ストランエ、イキマ'_シタ",
+      "sha256": "119fcc21b0d8e1ca0c67b547436a2e62df564a39eca5efd70c776f76e0c2abae"
+    },
+    {
+      "file": "56db-s1.mp3",
+      "written": "きょ年の 四月に 日本へ 行きました。",
+      "reading": "きょねんの しがつに にほんへ いきました。",
+      "sourceText": "きょ年の 四月に 日本へ 行きました。",
+      "kana": "キョネンノ'、シガツ'ニ、ニホ'ンエ、イキマ'_シタ",
+      "sha256": "48a837347ec1a8ea3624d095aea78a484d9fee0c6af809c63180fba659d2b0bd"
+    },
+    {
+      "file": "56db-s2.mp3",
+      "written": "家族は 四人です。",
+      "reading": "かぞくは よにんです。",
+      "sourceText": "家族は 四人です。",
+      "kana": "カ'ゾクワ、ヨ'ニンデ_ス",
+      "sha256": "f4e8cb1b97f77e911bb83b4492acf6ab944f42b8cd960ea5d3106f6f04068ab7"
+    },
+    {
+      "file": "56db-a1.mp3",
+      "written": "四月は とても 暖かいです。",
+      "reading": "しがつは とても あたたかいです。",
+      "sourceText": "四月は とても 暖かいです。",
+      "kana": "シガツ'ワ、トテモ'、アタタカ'イデ_ス",
+      "sha256": "ab5a1ffa9d66835b8705f7cd7320c39124060773202553638b180518043d4f91"
+    },
+    {
+      "file": "56db-a2.mp3",
+      "written": "机の 上に 白い かみが 四枚 あります。",
+      "reading": "つくえの うえに しろい かみが よんまい あります。",
+      "sourceText": "机の 上に 白い かみが 四枚 あります。",
+      "kana": "_ツクエノ'、ウエニ'、シロ'イ、カミガ'、ヨン'マイ、アリマ'_ス",
+      "sha256": "ee598fa5d05adf73874631a1ae08399b785dc4ad6fae3047798ef0831f54b093"
+    },
+    {
+      "file": "56db-a3.mp3",
+      "written": "おいしい 蜜柑を 四個 食べました。",
+      "reading": "おいしい みかんを よんこ たべました。",
+      "sourceText": "おいしい 蜜柑を 四個 食べました。",
+      "kana": "オイシ'イ、ミ'カンオ、ヨ'ンコ、タベマ'_シタ",
+      "sha256": "ad1b89200010469a4660f783ca23b020786f679432ffb2aafb0effb639606729"
+    },
+    {
+      "file": "56db-a4.mp3",
+      "written": "この 四枚の 写真は とても 面白いです。",
+      "reading": "この よんまいの しゃしんは とても おもしろいです。",
+      "sourceText": "この 四枚の 写真は とても 面白いです。",
+      "kana": "コノ'、ヨン'マイノ、シャシンワ'、トテモ'、オモシロ'イデ_ス",
+      "sha256": "6317bd96b3f3d9255ad9f1cb40d8f96fae8c45c933ae53d66da49bc456046181"
+    },
+    {
+      "file": "4e94-s1.mp3",
+      "written": "五時に かいしゃから 帰ります。",
+      "reading": "ごじに かいしゃから かえります。",
+      "sourceText": "五時に かいしゃから 帰ります。",
+      "kana": "ゴ'ジニ、カ'イシャカラ、カエリマ'_ス",
+      "sha256": "117f00e8d8e9a8e11730572262cbe0cd2ee2c7ab625027e553860067c5ecfa31"
+    },
+    {
+      "file": "4e94-s2.mp3",
+      "written": "五月は 忙しいです。",
+      "reading": "ごがつは いそがしいです。",
+      "sourceText": "五月は 忙しいです。",
+      "kana": "ゴ'ガツワ、イソガシ'イデ_ス",
+      "sha256": "4db9314bf364e31053cb4671d908dcd2799bd892de583deb13549aa50b563b53"
+    },
+    {
+      "file": "4e94-a1.mp3",
+      "written": "五歳の 子どもは ローマ字が すこし 分かります。",
+      "reading": "ごさいの こどもは ローマじが すこし わかります。",
+      "sourceText": "五歳の 子どもは ローマ字が すこし 分かります。",
+      "kana": "ゴ'サイノ、コドモワ'、ロオマ'ジガ、_スコ'シ、ワカリマ'_ス",
+      "sha256": "4279068d4d15a6fb34bd6f201bd33a1756299da5af67dfdf7d176dbb537db934"
+    },
+    {
+      "file": "4e94-a2.mp3",
+      "written": "あたらしい ノートを 五冊 買いました。",
+      "reading": "あたらしい ノートを ごさつ かいました。",
+      "sourceText": "あたらしい ノートを 五冊 買いました。",
+      "kana": "アタラシ'イ、ノ'オトオ、ゴ'サツ、カイマ'_シタ",
+      "sha256": "f391e6291a55e976f56bcb7c18fb2074fc6afd90d33ca0e21036d09fddb5d31a"
+    },
+    {
+      "file": "4e94-a3.mp3",
+      "written": "五日間の 旅行は とても 楽しかったです。",
+      "reading": "いつかかんの りょこうは とても たのしかったです。",
+      "sourceText": "五日間の 旅行は とても 楽しかったです。",
+      "kana": "イ_ツカ'カンノ、リョコオワ'、トテモ'、タノシ'カッタデ_ス",
+      "sha256": "e840fb264e77f84da2be9b9e3bb0330a9c5eddcf52520d236f3884ed2923e2ba"
+    },
+    {
+      "file": "4e94-a4.mp3",
+      "written": "黒い 靴が 五足 あります。",
+      "reading": "くろい くつが ごそく あります。",
+      "sourceText": "黒い 靴が 五足 あります。",
+      "kana": "クロ'イ、_クツ'ガ、ゴ'ソク、アリマ'_ス",
+      "sha256": "e0cb1bc6d3b62ea5c39849144ce91bdf4f7d79c602dd1d51cfb024c04b5380d5"
+    },
+    {
+      "file": "516d-s1.mp3",
+      "written": "ビールを 六本 買いました。",
+      "reading": "ビールを ろっぽん かいました。",
+      "sourceText": "ビールを 六本 買いました。",
+      "kana": "ビ'イルオ、ロッ'ポン、カイマ'_シタ",
+      "sha256": "91689c4bde71024cde788689866f5d5699f8970bc599ba281618ed9562f8eb8b"
+    },
+    {
+      "file": "516d-s2.mp3",
+      "written": "卵が 六個 あります。",
+      "reading": "たまごが ろっこ あります。",
+      "sourceText": "卵が 六個 あります。",
+      "kana": "タマ'ゴガ、ロ'ッコ、アリマ'_ス",
+      "sha256": "a3bcfa6a033c49478557c708143c440b227c0f9b056b5f60d84603de3641a9f3"
+    },
+    {
+      "file": "516d-a1.mp3",
+      "written": "六月の 旅行は とても 楽しかったです。",
+      "reading": "ろくがつの りょこうは とても たのしかったです。",
+      "sourceText": "六月の 旅行は とても 楽しかったです。",
+      "kana": "ロクガツ'ノ、リョコオワ'、トテモ'、タノシ'カッタデ_ス",
+      "sha256": "b8de9ded6170ae1d27ceed09e72983a0271df8f9d62511009732546d9a617c22"
+    },
+    {
+      "file": "516d-a2.mp3",
+      "written": "六歳の 男の子は いつも 元気です。",
+      "reading": "ろくさいの おとこのこは いつも げんきです。",
+      "sourceText": "六歳の 男の子は いつも 元気です。",
+      "kana": "ロク'サイノ、オトコ'ノコワ、イ'ツモ、ゲ'ンキデ_ス",
+      "sha256": "fe8154a996cef6fea4838b9915f49e35320549b1429923595b6bc38f1b612f99"
+    },
+    {
+      "file": "516d-a3.mp3",
+      "written": "一日に コーヒーを 六杯 飲みます。",
+      "reading": "いちにちに コーヒーを ろっぱい のみます。",
+      "sourceText": "一日に コーヒーを 六杯 飲みます。",
+      "kana": "イチニチ'ニ、コオヒ'イオ、ロッ'パイ、ノミマ'_ス",
+      "sha256": "a4da67dc5fedb565c1fc01af33d4534abee321a0abc9f37e479d96e8dcee2a4f"
+    },
+    {
+      "file": "516d-a4.mp3",
+      "written": "おいしい パンが 六個 あります。",
+      "reading": "おいしい パンが ろっこ あります。",
+      "sourceText": "おいしい パンが 六個 あります。",
+      "kana": "オイシ'イ、パ'ンガ、ロ'ッコ、アリマ'_ス",
+      "sha256": "affac18f44f7112a32ca8f30a9870978a7a35c31b17ae79286252ed31d1e1bc2"
+    },
+    {
+      "file": "4e03-s1.mp3",
+      "written": "七月は ひまです。",
+      "reading": "しちがつは ひまです。",
+      "sourceText": "七月は ひまです。",
+      "kana": "_シチガツ'ワ、ヒマデ'_ス",
+      "sha256": "aa3d5da6287a4dc510cef38a30c43869bd4c340d55a826adca0aac6dba2b3547"
+    },
+    {
+      "file": "4e03-s2.mp3",
+      "written": "七時に あさごはんを 食べます。",
+      "reading": "しちじに あさごはんを たべます。",
+      "sourceText": "七時に あさごはんを 食べます。",
+      "kana": "_シチ'ジニ、アサゴ'ハンオ、タベマ'_ス",
+      "sha256": "03a0610d3269487904cc09368f43d2d67c0731f69da55a4f9e46f4f39a50d912"
+    },
+    {
+      "file": "4e03-a1.mp3",
+      "written": "七歳の 子どもは いつも 宿題を します。",
+      "reading": "ななさいの こどもは いつも しゅくだいを します。",
+      "sourceText": "七歳の 子どもは いつも 宿題を します。",
+      "kana": "ナナ'サイノ、コドモワ'、イ'ツモ、_シュクダイオ'、シマ'_ス",
+      "sha256": "577e64f3ecb9b5a310ebc7a54fb9fb788d43b5229c03ee92cfdbeba2288759da"
+    },
+    {
+      "file": "4e03-a2.mp3",
+      "written": "七色の かさは とても 面白いです。",
+      "reading": "なないろの かさは とても おもしろいです。",
+      "sourceText": "七色の かさは とても 面白いです。",
+      "kana": "ナナ'イロノ、カ'サワ、トテモ'、オモシロ'イデ_ス",
+      "sha256": "761a2151ae66a575393ad39d387cdd27b6227f2cc6d0362474e858e7beaca5f3"
+    },
+    {
+      "file": "4e03-a3.mp3",
+      "written": "宿題に 質問が 七つ あります。",
+      "reading": "しゅくだいに しつもんが ななつ あります。",
+      "sourceText": "宿題に 質問が 七つ あります。",
+      "kana": "_シュクダイニ'、_シツモンガ'、ナナ'ツ、アリマ'_ス",
+      "sha256": "8c81ab4a5595f1b764d8929951669d2a5fb284d0675f215f55da75ebaa6e3faa"
+    },
+    {
+      "file": "4e03-a4.mp3",
+      "written": "面白い え本を 七冊 読みました。",
+      "reading": "おもしろい えほんを ななさつ よみました。",
+      "sourceText": "面白い え本を 七冊 読みました。",
+      "kana": "オモシロ'イ、エ'ホンオ、ナナ'サツ、ヨミマ'_シタ",
+      "sha256": "04c3caf7c18aecb988de284e216cb416171b675b0a0d80acecad131e92ef24f7"
+    },
+    {
+      "file": "516b-s1.mp3",
+      "written": "八月に 日本へ 行きます。",
+      "reading": "はちがつに にほんへ いきます。",
+      "sourceText": "八月に 日本へ 行きます。",
+      "kana": "ハチガツ'ニ、ニホ'ンエ、イキマ'_ス",
+      "sha256": "4505cc5173bc5ad0f9b394eb2c3a4cb23f66a265cba27c0ceabe7b42248c2a79"
+    },
+    {
+      "file": "516b-s2.mp3",
+      "written": "八日に 帰ります。",
+      "reading": "ようかに かえります。",
+      "sourceText": "八日に 帰ります。",
+      "kana": "ヨオカニ'、カエリマ'_ス",
+      "sha256": "8afa6b55b651f8723767e892a0422cde66c9b4be217b6a550ce112466eebf8ee"
+    },
+    {
+      "file": "516b-a1.mp3",
+      "written": "八月の ふじ山は とても にぎやかです。",
+      "reading": "はちがつの ふじさんは とても にぎやかです。",
+      "sourceText": "八月の ふじ山は とても にぎやかです。",
+      "kana": "ハチガツ'ノ、フジ'サンワ、トテモ'、ニギ'ヤカデ_ス",
+      "sha256": "153039a90aab9e5f0189c37dab0b2face3cd81f4e50856cc5304541f92ea0dd7"
+    },
+    {
+      "file": "516b-a2.mp3",
+      "written": "八歳の 子どもは チョコレートが 大すきです。",
+      "reading": "はっさいの こどもは チョコレートが だいすきです。",
+      "sourceText": "八歳の 子どもは チョコレートが 大すきです。",
+      "kana": "ハッ'サイノ、コドモワ'、チョコレ'エトガ、ダ'イ_スキデ_ス",
+      "sha256": "c1771fead3230118738a0f51ada1347ae50805f98370966e99455b5d868550c9"
+    },
+    {
+      "file": "516b-a3.mp3",
+      "written": "八月は いつも 家族と 旅行します。",
+      "reading": "はちがつは いつも かぞくと りょこうします。",
+      "sourceText": "八月は いつも 家族と 旅行します。",
+      "kana": "ハチガツ'ワ、イ'ツモ、カ'ゾ_クト、リョコオ'/シマ'_ス",
+      "sha256": "f8e1b05d8507a6ed740e2ac5e5000c19ede807c7e65c4b241002945cec616bf5"
+    },
+    {
+      "file": "516b-a4.mp3",
+      "written": "八月に 二週間 旅行します。",
+      "reading": "はちがつに にしゅうかん りょこうします。",
+      "sourceText": "八月に 二週間 旅行します。",
+      "kana": "ハチガツ'ニ、ニシュ'ウカン、リョコオ'/シマ'_ス",
+      "sha256": "daa59d68886701be46c2874d93a2e0176aed2d389b0359b96507b8cc9fa69404"
+    },
+    {
+      "file": "4e5d-s1.mp3",
+      "written": "九月に ともだちが 来ます。",
+      "reading": "くがつに ともだちが きます。",
+      "sourceText": "九月に ともだちが 来ます。",
+      "kana": "ク'ガツニ、トモダチガ'、キマ'_ス",
+      "sha256": "89bfbe42c95159e044dd47871a605cba24ffcf5546d029916897271c4dd7e909"
+    },
+    {
+      "file": "4e5d-s2.mp3",
+      "written": "林檎を 九個 買いました。",
+      "reading": "りんごを きゅうこ かいました。",
+      "sourceText": "林檎を 九個 買いました。",
+      "kana": "リンゴオ'、キュ'ウコ、カイマ'_シタ",
+      "sha256": "ec1825cc22477cd41da6b6663746e5fceef4f06af7aa69d3492c354d33bd4a1b"
+    },
+    {
+      "file": "4e5d-a1.mp3",
+      "written": "九月の よるは すこし 暖かいです。",
+      "reading": "くがつの よるは すこし あたたかいです。",
+      "sourceText": "九月の よるは すこし 暖かいです。",
+      "kana": "ク'ガツノ、ヨ'ルワ、_スコ'シ、アタタカ'イデ_ス",
+      "sha256": "5ccd1ff91008e39b1cde9f5b071bcabdb91aa891c4c876b2735ea3d650dd03c7"
+    },
+    {
+      "file": "4e5d-a2.mp3",
+      "written": "九歳の 子どもは 日本ごの 本を たくさん 読みました。",
+      "reading": "きゅうさいの こどもは にほんごの ほんを たくさん よみました。",
+      "sourceText": "九歳の 子どもは 日本ごの 本を たくさん 読みました。",
+      "kana": "キュウ'サイノ、コドモワ'、ニホンゴノ'、ホ'ンオ、タ_クサン'、ヨミマ'_シタ",
+      "sha256": "15e2945be5ac1faa0c4dacbd82f6ffbe90258693343717d96d41562d872e0317"
+    },
+    {
+      "file": "4e5d-a3.mp3",
+      "written": "九冊の 雑誌は とても 面白かったです。",
+      "reading": "きゅうさつの ざっしは とても おもしろかったです。",
+      "sourceText": "九冊の 雑誌は とても 面白かったです。",
+      "kana": "キュウ'サツノ、ザッシワ'、トテモ'、オモシロ'カッタデ_ス",
+      "sha256": "5853963497106ea7bfdd5dc7156d05fbe4b53126fd805000101e118d78aeaa3a"
+    },
+    {
+      "file": "4e5d-a4.mp3",
+      "written": "黒い タクシーを 九台 見ました。",
+      "reading": "くろい タクシーを きゅうだい みました。",
+      "sourceText": "黒い タクシーを 九台 見ました。",
+      "kana": "クロ'イ、タ'_クシイオ、キュウ'ダイ、ミマ'_シタ",
+      "sha256": "f08d3bd7ed18705a7926a88c102b0163df820dc15e28b7607d62a057f7d6911c"
+    },
+    {
+      "file": "5341-s1.mp3",
+      "written": "十月に 帰ります。",
+      "reading": "じゅうがつに かえります。",
+      "sourceText": "十月に 帰ります。",
+      "kana": "ジュウガツ'ニ、カエリマ'_ス",
+      "sha256": "61930f316722d6e8ac4aa0b3a2742d176b8fa959fa53d6f6b405ce8a6d493f1d"
+    },
+    {
+      "file": "5341-s2.mp3",
+      "written": "銀行で 十年 働きました。",
+      "reading": "ぎんこうで じゅうねん はたらきました。",
+      "sourceText": "銀行で 十年 働きました。",
+      "kana": "ギンコオデ'、ジュウ'ネン、ハタラキマ'_シタ",
+      "sha256": "1db261127d2732059d0aeb8a477636c9e66e232f4db11869f256aee30f24e3ff"
+    },
+    {
+      "file": "5341-a1.mp3",
+      "written": "十日間の 旅行は すこし 長かったです。",
+      "reading": "とおかかんの りょこうは すこし ながかったです。",
+      "sourceText": "十日間の 旅行は すこし 長かったです。",
+      "kana": "トオカ'カンノ、リョコオワ'、_スコ'シ、ナガ'カッタデ_ス",
+      "sha256": "90e4b364fa85bab483c88376c051b4071dcaad687b3d4d6f73eabe880ce95a21"
+    },
+    {
+      "file": "5341-a2.mp3",
+      "written": "先月 本を 十冊 読みました。",
+      "reading": "せんげつ ほんを じゅっさつ よみました。",
+      "sourceText": "先月 本を 十冊 読みました。",
+      "kana": "セ'ンゲツ、ホ'ンオ、ジュッ'サツ、ヨミマ'_シタ",
+      "sha256": "cf3b76c307d7bb26996aeb6481463d2ec3af8a3640326c698f4cbf7cef22c093"
+    },
+    {
+      "file": "5341-a3.mp3",
+      "written": "十月の 授業は とても 面白いです。",
+      "reading": "じゅうがつの じゅぎょうは とても おもしろいです。",
+      "sourceText": "十月の 授業は とても 面白いです。",
+      "kana": "ジュウガツ'ノ、ジュ'ギョオワ、トテモ'、オモシロ'イデ_ス",
+      "sha256": "8deaf66b679f1bdf2ec85a8978b498f4cd0f7b05347dd8eaf29a4b59f3144cf2"
+    },
+    {
+      "file": "5341-a4.mp3",
+      "written": "かばんに 黒い 鉛筆が 十本 あります。",
+      "reading": "かばんに くろい えんぴつが じゅっぽん あります。",
+      "sourceText": "かばんに 黒い 鉛筆が 十本 あります。",
+      "kana": "カバンニ'、クロ'イ、エン_ピツガ'、ジュッ'ポン、アリマ'_ス",
+      "sha256": "4df40f691c8dca1028c4b6e8cc03913179a72960e2b0fb9f3aa6b0ec522e90e1"
+    },
+    {
+      "file": "767e-s1.mp3",
+      "written": "この のみものは 百円です。",
+      "reading": "この のみものは ひゃくえんです。",
+      "sourceText": "この のみものは 百円です。",
+      "kana": "コノ'、ノミ'モノワ、ヒャク'エンデ_ス",
+      "sha256": "30058a3d3c18b62fee99eeca0f53ff6b835d8fb28ff9b5d4124c5f3b7e4e65f2"
+    },
+    {
+      "file": "767e-s2.mp3",
+      "written": "百円玉が あります。",
+      "reading": "ひゃくえんだまが あります。",
+      "sourceText": "百円玉が あります。",
+      "kana": "ヒャクエンダマガ'、アリマ'_ス",
+      "sha256": "d9b1086fb7b2f036f948ebe259e4252c22d16e455e8a20edaadd486394f9e6fc"
+    },
+    {
+      "file": "767e-a1.mp3",
+      "written": "百円で ノートを 二冊 買いました。",
+      "reading": "ひゃくえんで ノートを にさつ かいました。",
+      "sourceText": "百円で ノートを 二冊 買いました。",
+      "kana": "ヒャク'エンデ、ノ'オトオ、ニ'サツ、カイマ'_シタ",
+      "sha256": "ac407f5a556f806f75ca734f5a6988fd7b277e90724fd095a8b6cfd1f957c311"
+    },
+    {
+      "file": "767e-a2.mp3",
+      "written": "百円の かさは とても 便利です。",
+      "reading": "ひゃくえんの かさは とても べんりです。",
+      "sourceText": "百円の かさは とても 便利です。",
+      "kana": "ヒャク'エンノ、カ'サワ、トテモ'、ベ'ンリデ_ス",
+      "sha256": "04ffe4ce071b15851fce49d1525ed2513d425a77ee865f358b12286598648cfe"
+    },
+    {
+      "file": "767e-a3.mp3",
+      "written": "百日の 旅行は とても 長かったです。",
+      "reading": "ひゃくにちの りょこうは とても ながかったです。",
+      "sourceText": "百日の 旅行は とても 長かったです。",
+      "kana": "ヒャク'ニチノ、リョコオワ'、トテモ'、ナガ'カッタデ_ス",
+      "sha256": "d374891b3af638f5e5b48c2bd4546cf649ee65707630fd76e3486d53be1f5874"
+    },
+    {
+      "file": "767e-a4.mp3",
+      "written": "百円の ボールペンが たくさん あります。",
+      "reading": "ひゃくえんの ボールペンが たくさん あります。",
+      "sourceText": "百円の ボールペンが たくさん あります。",
+      "kana": "ヒャク'エンノ、ボオルペンガ'、タ_クサン'、アリマ'_ス",
+      "sha256": "da6632188a16cb47d94da15e6e84a921607720575aefcec68aebea5f55cb9870"
+    },
+    {
+      "file": "5343-s1.mp3",
+      "written": "この 辞書は 千円です。",
+      "reading": "この じしょは せんえんです。",
+      "sourceText": "この 辞書は 千円です。",
+      "kana": "コノ'、ジ'ショワ、セン'エンデ_ス",
+      "sha256": "ee8214a278f132266e2036221bbbc1b84d1a1ec39ab8ab8671b31ddfe2480dbe"
+    },
+    {
+      "file": "5343-s2.mp3",
+      "written": "この 大学の 学生は 千人です。",
+      "reading": "この だいがくの がくせいは せんにんです。",
+      "sourceText": "この 大学の 学生は 千人です。",
+      "kana": "コノ'、ダイガクノ'、ガ_クセエワ'、セン'ニンデ_ス",
+      "sha256": "4e2af7b748000635a7ecb0de2221be4e9d4312a2b5e6d8d343d3661b32939dd4"
+    },
+    {
+      "file": "5343-a1.mp3",
+      "written": "千円の かばんは とても やすいです。",
+      "reading": "せんえんの かばんは とても やすいです。",
+      "sourceText": "千円の かばんは とても やすいです。",
+      "kana": "セン'エンノ、カバンワ'、トテモ'、ヤス'イデ_ス",
+      "sha256": "98d9207d3c89bb6341e6704cbd66b75d22dbbc22276e316f6fc6e907fe13c6cf"
+    },
+    {
+      "file": "5343-a2.mp3",
+      "written": "千円で ビールを 三本 買いました。",
+      "reading": "せんえんで ビールを さんぼん かいました。",
+      "sourceText": "千円で ビールを 三本 買いました。",
+      "kana": "セン'エンデ、ビ'イルオ、サン'ボン、カイマ'_シタ",
+      "sha256": "727e7adde24e6743dd0541f8680c9ed67fa7dff53005b65b5be13bcef89933b3"
+    },
+    {
+      "file": "5343-a3.mp3",
+      "written": "千円で え本を 何冊 買いましたか。",
+      "reading": "せんえんで えほんを なんさつ かいましたか。",
+      "sourceText": "千円で え本を 何冊 買いましたか。",
+      "kana": "セン'エンデ、エ'ホンオ、ナン'サツ、カイマ'_シタカ",
+      "sha256": "6f07f40a9ec0c604df9c59d49b1bf95cc386e871dbd17cf350607fa35bef2f64"
+    },
+    {
+      "file": "5343-a4.mp3",
+      "written": "千円の ワインは おいしくなかったです。",
+      "reading": "せんえんの ワインは おいしくなかったです。",
+      "sourceText": "千円の ワインは おいしくなかったです。",
+      "kana": "セン'エンノ、ワ'インワ、オイシ'クナカッタデ_ス",
+      "sha256": "d5ac7de73fa7bf70c142aea0a6c19fffdb5ae236a0b612599d291387c87139ac"
+    },
+    {
+      "file": "65e5-s1.mp3",
+      "written": "日よう日に テニスを します。",
+      "reading": "にちようびに テニスを します。",
+      "sourceText": "日よう日に テニスを します。",
+      "kana": "ニチヨオ'ビニ、テ'ニスオ、シマ'_ス",
+      "sha256": "08ba062689d689d1cca7721c991cc06ff9f61aca26c9ab38816171d877198ebf"
+    },
+    {
+      "file": "65e5-s2.mp3",
+      "written": "ともだちは 日本人ですか。",
+      "reading": "ともだちは にほんじんですか。",
+      "sourceText": "ともだちは にほんじんですか。",
+      "kana": "トモダチワ'、ニホンジ'ンデ_スカ",
+      "sha256": "705383ec48cafe8d1a7c7924ab8ee9c30800bae1d2c23efe597ee54106610bf1"
+    },
+    {
+      "file": "65e5-a1.mp3",
+      "written": "休日は 一日中 とても 静かでした。",
+      "reading": "きゅうじつは いちにちじゅう とても しずかでした。",
+      "sourceText": "休日は 一日中 とても 静かでした。",
+      "kana": "キュウジツワ'、イチニチジュウ'、トテモ'、シ'ズカデ_シタ",
+      "sha256": "a5644742db3876f977bcfe101d13a2e33064e4364a8f4c442cdf367cb86958b8"
+    },
+    {
+      "file": "65e5-a2.mp3",
+      "written": "三日間 日本ごを 勉強しませんでした。",
+      "reading": "みっかかん にほんごを べんきょうしませんでした。",
+      "sourceText": "三日間 日本ごを 勉強しませんでした。",
+      "kana": "ミッカ'カン、ニホンゴオ'、ベンキョオ'/シマセ'ンデ_シタ",
+      "sha256": "f30bf8da1dc00c45bf740d481de124e10bdc07bbbddaf3ae3b8dd37dd704734d"
+    },
+    {
+      "file": "65e5-a3.mp3",
+      "written": "日本ごの 雑誌を 二冊 読みました。",
+      "reading": "にほんごの ざっしを にさつ よみました。",
+      "sourceText": "日本ごの 雑誌を 二冊 読みました。",
+      "kana": "ニホンゴノ'、ザッシオ'、ニ'サツ、ヨミマ'_シタ",
+      "sha256": "5915c24a1f533d04a34fcfc60791d7bce736150586d8868d4d0f37a84f4006c7"
+    },
+    {
+      "file": "65e5-a4.mp3",
+      "written": "今日は 宿題が たくさん あります。",
+      "reading": "きょうは しゅくだいが たくさん あります。",
+      "sourceText": "今日は 宿題が たくさん あります。",
+      "kana": "キョ'オワ、_シュクダイガ'、タ_クサン'、アリマ'_ス",
+      "sha256": "f13906d3af0592509b6bd6eb2f9930a28735c88de63abee1d17c9d211596ce51"
+    },
+    {
+      "file": "6708-s1.mp3",
+      "written": "お月見を します。",
+      "reading": "おつきみを します。",
+      "sourceText": "お月見を します。",
+      "kana": "オツ'キミオ、シマ'_ス",
+      "sha256": "4f1d8bff9a3531804fa49ec9a1aec25fc0fcda5d3b793c7c57b7f4f492a21d02"
+    },
+    {
+      "file": "6708-s2.mp3",
+      "written": "こんばん まん月を 見ましょう。",
+      "reading": "こんばん まんげつを みましょう。",
+      "sourceText": "こんばん まん月を 見ましょう。",
+      "kana": "コ'ンバン、マ'ンゲツオ、ミマショ'オ",
+      "sha256": "3bcee1bb72aa0b48245642ac4dc5b51e1ba9207b9f3284a9729b0c0ef50bf6c9"
+    },
+    {
+      "file": "6708-a1.mp3",
+      "written": "九月の まん月は とても 大きいです。",
+      "reading": "くがつの まんげつは とても おおきいです。",
+      "sourceText": "九月の まん月は とても 大きいです。",
+      "kana": "ク'ガツノ、マ'ンゲツワ、トテモ'、オオキ'イデ_ス",
+      "sha256": "53ce56bf2d2159c3179c3335f686c8cdb1f5b881a6312d97fd22c9f50122447c"
+    },
+    {
+      "file": "6708-a2.mp3",
+      "written": "先月 雑誌を たくさん 読みました。",
+      "reading": "せんげつ ざっしを たくさん よみました。",
+      "sourceText": "先月 雑誌を たくさん 読みました。",
+      "kana": "セ'ンゲツ、ザッシオ'、タ_クサン'、ヨミマ'_シタ",
+      "sha256": "d356f69d9d9237c1f22d799ba75e6a40a7ca57ea59f7634c608df3f0634b4e82"
+    },
+    {
+      "file": "6708-a3.mp3",
+      "written": "月よう日は 授業が 三つ あります。",
+      "reading": "げつようびは じゅぎょうが みっつ あります。",
+      "sourceText": "月よう日は 授業が 三つ あります。",
+      "kana": "ゲツヨ'オビワ、ジュ'ギョオガ、ミッツ'、アリマ'_ス",
+      "sha256": "0b47d16272813f4b32d4fa943f0112d4ef78256ee350b62759e10c522712361d"
+    },
+    {
+      "file": "6708-a4.mp3",
+      "written": "らい月 家族と 二週間 旅行します。",
+      "reading": "らいげつ かぞくと にしゅうかん りょこうします。",
+      "sourceText": "らい月 家族と 二週間 旅行します。",
+      "kana": "ラ'イゲツ、カ'ゾ_クト、ニシュ'ウカン、リョコオ'/シマ'_ス",
+      "sha256": "80822c9bade6d67bd54e0d81c412e12f01efacd2911b3f7aa582e5d8411ecf2a"
+    },
+    {
+      "file": "706b-s1.mp3",
+      "written": "火じが ありました。",
+      "reading": "かじが ありました。",
+      "sourceText": "火じが ありました。",
+      "kana": "カ'ジガ、アリマ'_シタ",
+      "sha256": "2047fa9efe10d1056f6ff5e8509bcedcad23f4aa9c8aed823b3d784edd248665"
+    },
+    {
+      "file": "706b-s2.mp3",
+      "written": "火よう日に 銀行へ 行きます。",
+      "reading": "かようびに ぎんこうへ いきます。",
+      "sourceText": "火よう日に 銀行へ 行きます。",
+      "kana": "カヨオ'ビニ、ギンコオエ'、イキマ'_ス",
+      "sha256": "5e8bd29e86cb7588f4a7f6afd08952a693abdd5dd6105fc2afffe856dfd4c7a7"
+    },
+    {
+      "file": "706b-a1.mp3",
+      "written": "火じで 火のこが たくさん 出ました。",
+      "reading": "かじで ひのこが たくさん でました。",
+      "sourceText": "火じで 火のこが たくさん 出ました。",
+      "kana": "カ'ジデ、ヒ'ノ/コ'ガ、タ_クサン'、デマ'_シタ",
+      "sha256": "fcb706b97eec088adb201b87cb84b027a9f8ab66a2a76327ed8d708a0e026b43"
+    },
+    {
+      "file": "706b-a2.mp3",
+      "written": "ふじ山は とても 大きい 火山です。",
+      "reading": "ふじさんは とても おおきい かざんです。",
+      "sourceText": "ふじ山は とても 大きい 火山です。",
+      "kana": "フジ'サンワ、トテモ'、オオキ'イ、カ'ザンデ_ス",
+      "sha256": "cac6f802bfe422ca52b744ebbba8c12a9bd1141b800a678a351b2fa43b1e220d"
+    },
+    {
+      "file": "706b-a3.mp3",
+      "written": "火じの 写真を 二枚 撮りました。",
+      "reading": "かじの しゃしんを にまい とりました。",
+      "sourceText": "火じの 写真を 二枚 撮りました。",
+      "kana": "カ'ジノ、シャシンオ'、ニ'マイ、トリマ'_シタ",
+      "sha256": "66fa0a1679ad80db69a772c886d9423a54c64e6180e712fd5782d89e6c19d91e"
+    },
+    {
+      "file": "706b-a4.mp3",
+      "written": "日本には 火山が たくさん あります。",
+      "reading": "にほんには かざんが たくさん あります。",
+      "sourceText": "日本には 火山が たくさん あります。",
+      "kana": "ニホ'ンニワ、カ'ザンガ、タ_クサン'、アリマ'_ス",
+      "sha256": "e67b9fe7a366895f7405f0f743cf89252207011e4d2db286b564e7e8f5fd4992"
+    },
+    {
+      "file": "6c34-s1.mp3",
+      "written": "水よう日に 日本ごの 授業が あります。",
+      "reading": "すいようびに にほんごの じゅぎょうが あります。",
+      "sourceText": "水よう日に 日本ごの 授業が あります。",
+      "kana": "スイヨ'オビニ、ニホンゴノ'、ジュ'ギョオガ、アリマ'_ス",
+      "sha256": "2ca54ab2efae7aa383ee7f28cf0ff2f288f64878c5ce0938c51f02c5aabd4254"
+    },
+    {
+      "file": "6c34-s2.mp3",
+      "written": "水を 飲みます。",
+      "reading": "みずを のみます。",
+      "sourceText": "水を 飲みます。",
+      "kana": "ミズオ'、ノミマ'_ス",
+      "sha256": "3a03cc119402c833c403ba5c12fdd7c27c2eb312ca8d1c162b6afcda6e861bea"
+    },
+    {
+      "file": "6c34-a1.mp3",
+      "written": "水よう日は いつも 忙しいです。",
+      "reading": "すいようびは いつも いそがしいです。",
+      "sourceText": "水よう日は いつも 忙しいです。",
+      "kana": "スイヨ'オビワ、イ'ツモ、イソガシ'イデ_ス",
+      "sha256": "b6fbd73c48afff71748b8918c9bd0a9c0033511ce5d291de28e495ae868b8812"
+    },
+    {
+      "file": "6c34-a2.mp3",
+      "written": "あさ 水を たくさん 飲みました。",
+      "reading": "あさ みずを たくさん のみました。",
+      "sourceText": "あさ 水を たくさん 飲みました。",
+      "kana": "ア'サ、ミズオ'、タ_クサン'、ノミマ'_シタ",
+      "sha256": "3c723f91b42a8f992df93c2b9465e61fc116a1f877c34a8910e284ee52ad788c"
+    },
+    {
+      "file": "6c34-a3.mp3",
+      "written": "この 水は とても おいしいです。",
+      "reading": "この みずは とても おいしいです。",
+      "sourceText": "この 水は とても おいしいです。",
+      "kana": "コノ'、ミズワ'、トテモ'、オイシ'イデ_ス",
+      "sha256": "705633ac83072df8383c46b7b3ff0582c9d796fef2b5455836638c0025946f19"
+    },
+    {
+      "file": "6c34-a4.mp3",
+      "written": "水よう日に 写真を 三枚 撮りました。",
+      "reading": "すいようびに しゃしんを さんまい とりました。",
+      "sourceText": "水よう日に 写真を 三枚 撮りました。",
+      "kana": "スイヨ'オビニ、シャシンオ'、サン'マイ、トリマ'_シタ",
+      "sha256": "bcb61a3568bf0b53f7714b49a4b1f94e176aa8235da269825e42b1f00df2e80f"
+    },
+    {
+      "file": "6728-s1.mp3",
+      "written": "木よう日に えいがを 見ます。",
+      "reading": "もくようびに えいがを みます。",
+      "sourceText": "木よう日に えいがを 見ます。",
+      "kana": "モクヨオビニ'、エ'イガオ、ミマ'_ス",
+      "sha256": "9a4f13952f248da5b92a9a8b396abf1f4cc55a87cbc04f2efa2f66f9f21fd76f"
+    },
+    {
+      "file": "6728-s2.mp3",
+      "written": "木かげで 休みます。",
+      "reading": "こかげで やすみます。",
+      "sourceText": "木かげで 休みます。",
+      "kana": "コカゲデ'、ヤスミマ'_ス",
+      "sha256": "518a6fa586bfff68700edc264403d43a6b8855a8b5bf8d1e19c043583d78aed1"
+    },
+    {
+      "file": "6728-a1.mp3",
+      "written": "この 机の 木目は とても 面白いです。",
+      "reading": "この つくえの もくめは とても おもしろいです。",
+      "sourceText": "この 机の 木目は とても 面白いです。",
+      "kana": "コノ'、_ツクエノ'、モク'メワ、トテモ'、オモシロ'イデ_ス",
+      "sha256": "c0ca88cf6af0b45e3cfa89e559661ad33575571df8d5095a61c90ea181e2af79"
+    },
+    {
+      "file": "6728-a2.mp3",
+      "written": "大きい 庭木が 三本 あります。",
+      "reading": "おおきい にわきが さんぼん あります。",
+      "sourceText": "大きい 庭木が 三本 あります。",
+      "kana": "オオキ'イ、ニワキガ'、サン'ボン、アリマ'_ス",
+      "sha256": "50a43c62e7bd07177f219b0a8308e43c527adff2c792ac0194c5696feb39f22d"
+    },
+    {
+      "file": "6728-a3.mp3",
+      "written": "木の下で いつも 本を 読みます。",
+      "reading": "きのしたで いつも ほんを よみます。",
+      "sourceText": "木の下で いつも 本を 読みます。",
+      "kana": "キ'ノ/_シタデ'、イ'ツモ、ホ'ンオ、ヨミマ'_ス",
+      "sha256": "9c375e0ae3462526c075b847f68d81c0b3c1a164e3e2a9f3b44f960a8860380e"
+    },
+    {
+      "file": "6728-a4.mp3",
+      "written": "木かげに 子どもが たくさん います。",
+      "reading": "こかげに こどもが たくさん います。",
+      "sourceText": "木かげに 子どもが たくさん います。",
+      "kana": "コカゲニ'、コドモガ'、タ_クサン'、イマ'_ス",
+      "sha256": "372fa55f191589b30d3409742a97605cb7e9d6a0b9bddf408499f00bfd4602ff"
+    },
+    {
+      "file": "91d1-s1.mp3",
+      "written": "金よう日に カラオケへ 行きます。",
+      "reading": "きんようびに カラオケへ いきます。",
+      "sourceText": "金よう日に カラオケへ 行きます。",
+      "kana": "キンヨオ'ビニ、カラオケエ'、イキマ'_ス",
+      "sha256": "935cd51532506b9f27f7ea5b92487b664252b755e03a1a4dda8250fcb7162c3d"
+    },
+    {
+      "file": "91d1-s2.mp3",
+      "written": "銀行で ちょ金します。",
+      "reading": "ぎんこうで ちょきんします。",
+      "sourceText": "銀行で ちょ金します。",
+      "kana": "ギンコオデ'、チョキン'/シマ'_ス",
+      "sha256": "ff9ab14f95d148cda458d59c1bdf413b53572e6e57ccedc84bfdc58909929029"
+    },
+    {
+      "file": "91d1-a1.mp3",
+      "written": "金よう日の よるは とても にぎやかです。",
+      "reading": "きんようびの よるは とても にぎやかです。",
+      "sourceText": "金よう日の よるは とても にぎやかです。",
+      "kana": "キンヨオ'ビノ、ヨ'ルワ、トテモ'、ニギ'ヤカデ_ス",
+      "sha256": "9d9f76012c45525cc1189514c67a6136a0cf6997fe1ce71d388ff4e7fd925191"
+    },
+    {
+      "file": "91d1-a2.mp3",
+      "written": "お金を たくさん ちょ金しました。",
+      "reading": "おかねを たくさん ちょきんしました。",
+      "sourceText": "お金を たくさん ちょ金しました。",
+      "kana": "オカネオ'、タ_クサン'、チョキン'/シマ'_シタ",
+      "sha256": "402ec018bb3d0d67123d1bc9d8ea22b0abb26af645e46d922046be238a251b9e"
+    },
+    {
+      "file": "91d1-a3.mp3",
+      "written": "金色の とけいが 一つ あります。",
+      "reading": "きんいろの とけいが ひとつ あります。",
+      "sourceText": "金色の とけいが 一つ あります。",
+      "kana": "キンイロノ'、トケイガ'、_ヒト'ツ、アリマ'_ス",
+      "sha256": "5f91fb344caadf36649dbec4d9d9e1873bebc8cfa9a5c2392697bc8ed21b4152"
+    },
+    {
+      "file": "91d1-a4.mp3",
+      "written": "ちょ金は とても 楽しいです。",
+      "reading": "ちょきんは とても たのしいです。",
+      "sourceText": "ちょ金は とても 楽しいです。",
+      "kana": "チョキンワ'、トテモ'、タノシ'イデ_ス",
+      "sha256": "74ff99ae098b1d6094ba3cb021d7b63dfd0a98a71b0f118e1d2f5c1fffe4fa79"
+    },
+    {
+      "file": "571f-s1.mp3",
+      "written": "土よう日に 働きます。",
+      "reading": "どようびに はたらきます。",
+      "sourceText": "土よう日に 働きます。",
+      "kana": "ドヨオビニ'、ハタラキマ'_ス",
+      "sha256": "47647c6c5fe769b7e98002cc66ffde4b0cf3cc167522ed9dad8594e3eb746203"
+    },
+    {
+      "file": "571f-s2.mp3",
+      "written": "へやに 土足で 入りません。",
+      "reading": "へやに どそくで はいりません。",
+      "sourceText": "へやに 土足で 入りません。",
+      "kana": "ヘヤ'ニ、ドソクデ'、ハイリマセ'ン",
+      "sha256": "e5180fbe20b5b414b31566b04ef5037b7e7245feed88d52afda28294b214b537"
+    },
+    {
+      "file": "571f-a1.mp3",
+      "written": "小さい 土きが 二個 あります。",
+      "reading": "ちいさい どきが にこ あります。",
+      "sourceText": "小さい 土きが 二個 あります。",
+      "kana": "チイサ'イ、ド'キガ、ニ'コ、アリマ'_ス",
+      "sha256": "1d47f225740f27d36349a3d23115ac567846c0b2ab65ffc8e80d323b8a3c561a"
+    },
+    {
+      "file": "571f-a2.mp3",
+      "written": "赤土の 山は とても 大きいです。",
+      "reading": "あかつちの やまは とても おおきいです。",
+      "sourceText": "赤土の 山は とても 大きいです。",
+      "kana": "アカ_ツチノ'、ヤマ'ワ、トテモ'、オオキ'イデ_ス",
+      "sha256": "7a4143426d5ee399282d63cc4a371b7208cf7f0be275fd0e5e4f58f8b65b2f98"
+    },
+    {
+      "file": "571f-a3.mp3",
+      "written": "日本の 土きは とても 面白いです。",
+      "reading": "にほんの どきは とても おもしろいです。",
+      "sourceText": "日本の 土きは とても 面白いです。",
+      "kana": "ニホ'ンノ、ド'キワ、トテモ'、オモシロ'イデ_ス",
+      "sha256": "82ed7b520b961dd37b46b12bfde81efe57fb65fe2ec0babfab7aa69fc1b58090"
+    },
+    {
+      "file": "571f-a4.mp3",
+      "written": "土よう日に いっしょに えいがを 見ませんか。",
+      "reading": "どようびに いっしょに えいがを みませんか。",
+      "sourceText": "土よう日に いっしょに えいがを 見ませんか。",
+      "kana": "ドヨオビニ'、イッショニ'、エ'イガオ、ミマセ'ンカ",
+      "sha256": "b504e2984452c035b69d707c1b864b8b16792787b64c3fb66f8a863f11c7c1d8"
+    },
+    {
+      "file": "5c71-s1.mp3",
+      "written": "ふじ山を 見ました。",
+      "reading": "ふじさんを みました。",
+      "sourceText": "ふじ山を 見ました。",
+      "kana": "フジ'サンオ、ミマ'_シタ",
+      "sha256": "012f19b042dd4972d6a3fcce58dc5e491a004ab0bcbe0af0db92654873e1f647"
+    },
+    {
+      "file": "5c71-s2.mp3",
+      "written": "山いもを 食べます。",
+      "reading": "やまいもを たべます。",
+      "sourceText": "山いもを 食べます。",
+      "kana": "ヤマイモオ'、タベマ'_ス",
+      "sha256": "7e65ea1bef513ba45b7416880b935d7c47808641c326ed86691315d332837f54"
+    },
+    {
+      "file": "5c71-a1.mp3",
+      "written": "山で 一週間 休みました。",
+      "reading": "やまで いっしゅうかん やすみました。",
+      "sourceText": "山で 一週間 休みました。",
+      "kana": "ヤマ'デ、イッシュ'ウカン、ヤスミマ'_シタ",
+      "sha256": "b08cf372c952bc5908d696642956a087946d4ce5e3c4adba271ef1abda84f07b"
+    },
+    {
+      "file": "5c71-a2.mp3",
+      "written": "山村の よるは とても 静かです。",
+      "reading": "さんそんの よるは とても しずかです。",
+      "sourceText": "山村の よるは とても 静かです。",
+      "kana": "サンソンノ'、ヨ'ルワ、トテモ'、シ'ズカデ_ス",
+      "sha256": "66e0387de078a9672942ac47642f0e316db28364781f7107ce517e099227a07b"
+    },
+    {
+      "file": "5c71-a3.mp3",
+      "written": "スペインにも 山が たくさん あります。",
+      "reading": "スペインにも やまが たくさん あります。",
+      "sourceText": "スペインにも 山が たくさん あります。",
+      "kana": "_スペ'インニモ、ヤマ'ガ、タ_クサン'、アリマ'_ス",
+      "sha256": "c6812618623ca5f8364d82137e9dc2d75c7de1bb49e2aecbcc07b93be09f37ca"
+    },
+    {
+      "file": "5c71-a4.mp3",
+      "written": "ふじ山の 写真を たくさん 撮りました。",
+      "reading": "ふじさんの しゃしんを たくさん とりました。",
+      "sourceText": "ふじ山の 写真を たくさん 撮りました。",
+      "kana": "フジ'サンノ、シャシンオ'、タ_クサン'、トリマ'_シタ",
+      "sha256": "2acc7301436d39e5b5d8306edbc1194b0ac32fe2617926710900aca31ac18496"
+    },
+    {
+      "file": "5ddd-s1.mp3",
+      "written": "川べりで ともだちと 話しました。",
+      "reading": "かわべりで ともだちと はなしました。",
+      "sourceText": "川べりで ともだちと 話しました。",
+      "kana": "カワベリデ'、トモダ_チト'、ハナシマ'_シタ",
+      "sha256": "5e52f4d574d1e12d8e44a917d9c254f2697f3d7e9d627607cdffaa0099cddb2d"
+    },
+    {
+      "file": "5ddd-s2.mp3",
+      "written": "川上へ 行きます。",
+      "reading": "かわかみへ いきます。",
+      "sourceText": "川上へ 行きます。",
+      "kana": "カワカミエ'、イキマ'_ス",
+      "sha256": "4d705c6e07a8d93183bf5f20dd3324e1b39707a01500f032d45f46fdd720ee7e"
+    },
+    {
+      "file": "5ddd-a1.mp3",
+      "written": "川べりで 本を 二冊 読みました。",
+      "reading": "かわべりで ほんを にさつ よみました。",
+      "sourceText": "川べりで 本を 二冊 読みました。",
+      "kana": "カワベリデ'、ホ'ンオ、ニ'サツ、ヨミマ'_シタ",
+      "sha256": "1d500e174654812d581087b6acabd38bcc4b555156d474dd335c508b67b7d341"
+    },
+    {
+      "file": "5ddd-a2.mp3",
+      "written": "川下に 小さい 町が あります。",
+      "reading": "かわしもに ちいさい まちが あります。",
+      "sourceText": "川下に 小さい 町が あります。",
+      "kana": "カワシモニ'、チイサ'イ、マチ'ガ、アリマ'_ス",
+      "sha256": "2a6cd30dbfde6a2380db346976da784d8544eafb960bee3cdf63232c2935e188"
+    },
+    {
+      "file": "5ddd-a3.mp3",
+      "written": "子どもと いっしょに 天の川を 見ました。",
+      "reading": "こどもと いっしょに あまのがわを みました。",
+      "sourceText": "子どもと いっしょに 天の川を 見ました。",
+      "kana": "コドモト'、イッショニ'、アマノ'ガワオ、ミマ'_シタ",
+      "sha256": "749149cc91e38e9c47027b135d98e5778b8a844b2425b53c447463965d96d322"
+    },
+    {
+      "file": "5ddd-a4.mp3",
+      "written": "川上の 水は とても おいしいです。",
+      "reading": "かわかみの みずは とても おいしいです。",
+      "sourceText": "川上の 水は とても おいしいです。",
+      "kana": "カワカミノ'、ミズワ'、トテモ'、オイシ'イデ_ス",
+      "sha256": "53c204179201d2938db8f637bab75fecc3b61b73d5f8f5c17fe588e170524fe6"
+    },
+    {
+      "file": "6797-s1.mp3",
+      "written": "竹林を 見ました。",
+      "reading": "たけばやしを みました。",
+      "sourceText": "竹林を 見ました。",
+      "kana": "タケバヤ'シオ、ミマ'_シタ",
+      "sha256": "576facab883a4eaf27e5bd847f5be631111003564b04ada820a7b5a8fc67fd52"
+    },
+    {
+      "file": "6797-s2.mp3",
+      "written": "まつ林が あります。",
+      "reading": "まつばやしが あります。",
+      "sourceText": "まつ林が あります。",
+      "kana": "マツバ'ヤシガ、アリマ'_ス",
+      "sha256": "0ab57aa114a955b5f21e0098e8c444e9eead7bfa6b459b257ee7766dc012d8a4"
+    },
+    {
+      "file": "6797-a1.mp3",
+      "written": "竹林は すこし 暗いです。",
+      "reading": "たけばやしは すこし くらいです。",
+      "sourceText": "竹林は すこし 暗いです。",
+      "kana": "タケバヤ'シワ、_スコ'シ、クライ'デ_ス",
+      "sha256": "b8250770919d60cb08ffb4b4e07cce0a3e20211566ade16b73bddd977809f1d7"
+    },
+    {
+      "file": "6797-a2.mp3",
+      "written": "山林で 子どもと いっしょに 休みました。",
+      "reading": "さんりんで こどもと いっしょに やすみました。",
+      "sourceText": "山林で 子どもと いっしょに 休みました。",
+      "kana": "サンリンデ'、コドモト'、イッショニ'、ヤスミマ'_シタ",
+      "sha256": "70aad894f5bbef0d08c681abee4f273c0cce5dadcd918e1f3dadcac91ea0f91b"
+    },
+    {
+      "file": "6797-a3.mp3",
+      "written": "まつ林は とても 大きいです。",
+      "reading": "まつばやしは とても おおきいです。",
+      "sourceText": "まつ林は とても 大きいです。",
+      "kana": "マツバ'ヤシワ、トテモ'、オオキ'イデ_ス",
+      "sha256": "5f9392f10b78ae1783081c183aa2c0105e7bd37e7e97b9f7b26700217a9af8c5"
+    },
+    {
+      "file": "6797-a4.mp3",
+      "written": "竹林の 写真を 五枚 撮りました。",
+      "reading": "たけばやしの しゃしんを ごまい とりました。",
+      "sourceText": "竹林の 写真を 五枚 撮りました。",
+      "kana": "タケバヤ'シノ、シャシンオ'、ゴ'マイ、トリマ'_シタ",
+      "sha256": "549ffc3c5f4895cf142bec092d78161cf99ef8ad671352280854b7825b9589c2"
+    },
+    {
+      "file": "68ee-s1.mp3",
+      "written": "森の中で 休みます。",
+      "reading": "もりのなかで やすみます。",
+      "sourceText": "森の中で 休みます。",
+      "kana": "モリノ'/ナ'カデ、ヤスミマ'_ス",
+      "sha256": "8feb50a86434f513fb5f871471f54f63825cb5a9478b62250a3e584f542254c4"
+    },
+    {
+      "file": "68ee-s2.mp3",
+      "written": "青森に 行きます。",
+      "reading": "あおもりに いきます。",
+      "sourceText": "青森に 行きます。",
+      "kana": "アオ'モリニ、イキマ'_ス",
+      "sha256": "b5004946b2811419d0e2e24b547edd0fe5dc4ff48ea067e18030ced08545dbd4"
+    },
+    {
+      "file": "68ee-a1.mp3",
+      "written": "青森の 林檎は とても おいしいです。",
+      "reading": "あおもりの りんごは とても おいしいです。",
+      "sourceText": "青森の 林檎は とても おいしいです。",
+      "kana": "アオ'モリノ、リンゴワ'、トテモ'、オイシ'イデ_ス",
+      "sha256": "274daed3b4cf239bed97386b3bf14b8ed08e625164db2bf7b7106894b6c9a97d"
+    },
+    {
+      "file": "68ee-a2.mp3",
+      "written": "森の中で 本を 一冊 読みました。",
+      "reading": "もりのなかで ほんを いっさつ よみました。",
+      "sourceText": "森の中で 本を 一冊 読みました。",
+      "kana": "モリノ'/ナ'カデ、ホ'ンオ、イッ'サツ、ヨミマ'_シタ",
+      "sha256": "3b2d8522ab1edfc825a86a229572a3bd19d163840f9d335703fabfd2b3cb8ba0"
+    },
+    {
+      "file": "68ee-a3.mp3",
+      "written": "森の中は とても 暗かったです。",
+      "reading": "もりのなかは とても くらかったです。",
+      "sourceText": "森の中は とても 暗かったです。",
+      "kana": "モリノ'/ナ'カワ、トテモ'、クラ'カッタデ_ス",
+      "sha256": "e32aebb58895f241c1c863a5b9baa9f1b643c8d130961c47d08eb95f3b9ca6b9"
+    },
+    {
+      "file": "68ee-a4.mp3",
+      "written": "青森には 林檎が たくさん あります。",
+      "reading": "あおもりには りんごが たくさん あります。",
+      "sourceText": "青森には 林檎が たくさん あります。",
+      "kana": "アオ'モリニワ、リンゴガ'、タ_クサン'、アリマ'_ス",
+      "sha256": "373695aba11ada4fd403e77b4e2ffb3f0a43927e6b9afc013c1624e92658c923"
+    },
+    {
+      "file": "7af9-s1.mp3",
+      "written": "竹うまで 歩きます。",
+      "reading": "たけうまで あるきます。",
+      "sourceText": "竹うまで 歩きます。",
+      "kana": "タケウマデ'、アルキマ'_ス",
+      "sha256": "9db502a1915d18d386079adee9f18fe87fa4a2796a075c0e149126e96d66c900"
+    },
+    {
+      "file": "7af9-s2.mp3",
+      "written": "竹わを 食べました。",
+      "reading": "ちくわを たべました。",
+      "sourceText": "竹わを 食べました。",
+      "kana": "_チクワオ'、タベマ'_シタ",
+      "sha256": "22b38111b3b0b51d5209b2d7050bf29f65f2f144fdf2d3cd9094657f46905d22"
+    },
+    {
+      "file": "7af9-a1.mp3",
+      "written": "竹うまは かなり 難しいです。",
+      "reading": "たけうまは かなり むずかしいです。",
+      "sourceText": "竹うまは かなり 難しいです。",
+      "kana": "タケウマワ'、カ'ナリ、ムズカシ'イデ_ス",
+      "sha256": "abe6165fbf2222327b46baa2b3c52df7cd9e26fc73e3542167c53f6e41b5d1a6"
+    },
+    {
+      "file": "7af9-a2.mp3",
+      "written": "竹わを 三本 買いました。",
+      "reading": "ちくわを さんぼん かいました。",
+      "sourceText": "竹わを 三本 買いました。",
+      "kana": "_チクワオ'、サン'ボン、カイマ'_シタ",
+      "sha256": "b3d350293fb9f217a4425e9d3fa4bac92d892c5d74a05e01d53b340bfb66cc30"
+    },
+    {
+      "file": "7af9-a3.mp3",
+      "written": "竹やぶに 子犬が 二匹 いました。",
+      "reading": "たけやぶに こいぬが にひき いました。",
+      "sourceText": "竹やぶに 子犬が 二匹 いました。",
+      "kana": "タケヤブニ'、コイヌガ'、ニ'_ヒキ、イマ'_シタ",
+      "sha256": "6143fe27c6124a2efec25491e4da0a08e6e5f578eb8bbb281eb84f111ab7f042"
+    },
+    {
+      "file": "7af9-a4.mp3",
+      "written": "竹わは すこし あまいです。",
+      "reading": "ちくわは すこし あまいです。",
+      "sourceText": "竹わは すこし あまいです。",
+      "kana": "_チクワワ'、_スコ'シ、アマイ'デ_ス",
+      "sha256": "9c6b38c75ef885fbc15b870396a3437278349736966b2577850281e5c3ca8ff7"
+    },
+    {
+      "file": "82b1-s1.mp3",
+      "written": "お花見に 行きませんか。",
+      "reading": "おはなみに いきませんか。",
+      "sourceText": "お花見に 行きませんか。",
+      "kana": "オハ'ナミニ、イキマセ'ンカ",
+      "sha256": "b5fbc660e2d5e771abe26bdb4019a37f6a3b64edf6a0e05fe9dada4637fb7729"
+    },
+    {
+      "file": "82b1-s2.mp3",
+      "written": "花びらが 白いです。",
+      "reading": "はなびらが しろいです。",
+      "sourceText": "花びらが 白いです。",
+      "kana": "ハナビ'ラガ、シロ'イデ_ス",
+      "sha256": "75ef1fdfde0f8ece43d39008d8639b847a6c6753cec49b094abfc4a65175fb76"
+    },
+    {
+      "file": "82b1-a1.mp3",
+      "written": "花だんに 白い花が たくさん あります。",
+      "reading": "かだんに しろいはなが たくさん あります。",
+      "sourceText": "花だんに 白い花が たくさん あります。",
+      "kana": "カ'ダンニ、シロ'イ/ハナ'ガ、タ_クサン'、アリマ'_ス",
+      "sha256": "a291096b6d7211917d07da0e0e03a921996ee5e184d86b379f08ffe81ff0dba3"
+    },
+    {
+      "file": "82b1-a2.mp3",
+      "written": "ははに 大きい 花たばを 買いました。",
+      "reading": "ははに おおきい はなたばを かいました。",
+      "sourceText": "ははに 大きい 花たばを 買いました。",
+      "kana": "ハ'ハニ、オオキ'イ、ハナ'タバオ、カイマ'_シタ",
+      "sha256": "7a27eb92578a94b35ee91cef608b27507edd76179ad0e1013876a2fbffbfc99e"
+    },
+    {
+      "file": "82b1-a3.mp3",
+      "written": "白い花の 花びらは 五枚です。",
+      "reading": "しろいはなの はなびらは ごまいです。",
+      "sourceText": "白い花の 花びらは 五枚です。",
+      "kana": "シロ'イ/ハナ'ノ、ハナビ'ラワ、ゴ'マイデ_ス",
+      "sha256": "f829703b411b6a52a221041f8794a38a85e4e6db130afb900b7e5fefc9e346dd"
+    },
+    {
+      "file": "82b1-a4.mp3",
+      "written": "花屋の 人は いつも 忙しいです。",
+      "reading": "はなやの ひとは いつも いそがしいです。",
+      "sourceText": "花屋の 人は いつも 忙しいです。",
+      "kana": "ハナ'ヤノ、_ヒトワ'、イ'ツモ、イソガシ'イデ_ス",
+      "sha256": "3c066ef6614eb712d5429177117719ad24ceb271e9f9ef00a2b87ff167a11aae"
+    },
+    {
+      "file": "8349-s1.mp3",
+      "written": "草もちを 食べます。",
+      "reading": "くさもちを たべます。",
+      "sourceText": "草もちを 食べます。",
+      "kana": "_クサ'モチオ、タベマ'_ス",
+      "sha256": "89637d9539b738e2a5fb46bf3d2895aabd03f7300fb7e510aaddfa6486c50935"
+    },
+    {
+      "file": "8349-s2.mp3",
+      "written": "草はらで 休みます。",
+      "reading": "くさはらで やすみます。",
+      "sourceText": "草はらで 休みます。",
+      "kana": "_クサハラデ'、ヤスミマ'_ス",
+      "sha256": "244377b26b3a04f4f99505c61e4ed6de9d0f1a62119779155f94b9ceeafe7378"
+    },
+    {
+      "file": "8349-a1.mp3",
+      "written": "この 草もちは かなり あまいです。",
+      "reading": "この くさもちは かなり あまいです。",
+      "sourceText": "この 草もちは かなり あまいです。",
+      "kana": "コノ'、_クサ'モチワ、カ'ナリ、アマイ'デ_ス",
+      "sha256": "46e5267a132c2c78bcd628d78db6c493930f690f940f32ca8e2fae0c88a88574"
+    },
+    {
+      "file": "8349-a2.mp3",
+      "written": "中庭に ざっ草が たくさん あります。",
+      "reading": "なかにわに ざっそうが たくさん あります。",
+      "sourceText": "中庭に ざっ草が たくさん あります。",
+      "kana": "ナカニワニ'、ザッソオガ'、タ_クサン'、アリマ'_ス",
+      "sha256": "50110e8995d8def0f7aa665fe17b8720dc0ce8fbdce271d85bc1f4de803648ed"
+    },
+    {
+      "file": "8349-a3.mp3",
+      "written": "草はらに 子どもが 三人 います。",
+      "reading": "くさはらに こどもが さんにん います。",
+      "sourceText": "草はらに 子どもが 三人 います。",
+      "kana": "_クサハラニ'、コドモガ'、サン'ニン、イマ'_ス",
+      "sha256": "ecef833cbe1f974d5a9d1e5be382e3e69c7d012a6cbdaf8be19a03b47c523fb7"
+    },
+    {
+      "file": "8349-a4.mp3",
+      "written": "草はらは とても 暑かったです。",
+      "reading": "くさはらは とても あつかったです。",
+      "sourceText": "草はらは とても 暑かったです。",
+      "kana": "_クサハラワ'、トテモ'、アツ'カッタデ_ス",
+      "sha256": "a0432eff4965e48eaf2555dfc1837a9fe83c1931ae1679484f1bfdd1e5f29ea9"
+    },
+    {
+      "file": "77f3-s1.mp3",
+      "written": "ほう石を 買いました。",
+      "reading": "ほうせきを かいました。",
+      "sourceText": "ほう石を 買いました。",
+      "kana": "ホウセキオ'、カイマ'_シタ",
+      "sha256": "d8be2b48fad7ba76ed3ef443cd53bf68bb3f543b943b6e3060220e4306bbaab1"
+    },
+    {
+      "file": "77f3-s2.mp3",
+      "written": "小石で 字を 書きました。",
+      "reading": "こいしで じを かきました。",
+      "sourceText": "小石で 字を 書きました。",
+      "kana": "コイシデ'、ジ'オ、カキマ'_シタ",
+      "sha256": "c5ea29f4256b75ac47bed0cd1069370a3900eae7d3ff09046cbcdc2af5ae7cb4"
+    },
+    {
+      "file": "77f3-a1.mp3",
+      "written": "この ほう石は とても きれいです。",
+      "reading": "この ほうせきは とても きれいです。",
+      "sourceText": "この ほう石は とても きれいです。",
+      "kana": "コノ'、ホウセキワ'、トテモ'、キ'レイデ_ス",
+      "sha256": "709a3751d4ba0346b426525e8141502a31a4f8d0cec27b2428266c54565b8c72"
+    },
+    {
+      "file": "77f3-a2.mp3",
+      "written": "小さい じ石が 四個 あります。",
+      "reading": "ちいさい じしゃくが よんこ あります。",
+      "sourceText": "小さい じ石が 四個 あります。",
+      "kana": "チイサ'イ、ジシャクガ'、ヨ'ンコ、アリマ'_ス",
+      "sha256": "a32358463745dedf5ef3e726b149f7fe10bb908c04fa56c90952d47e14b991fa"
+    },
+    {
+      "file": "77f3-a3.mp3",
+      "written": "川べりの 小石は かなり 円いです。",
+      "reading": "かわべりの こいしは かなり まるいです。",
+      "sourceText": "川べりの 小石は かなり 円いです。",
+      "kana": "カワベリノ'、コイシワ'、カ'ナリ、マルイ'デ_ス",
+      "sha256": "41d62e637243135b0d7b1538d286227cda613c298980f3971faf2e4e039ba69d"
+    },
+    {
+      "file": "77f3-a4.mp3",
+      "written": "この 箱には ほう石が 七個 あります。",
+      "reading": "この はこには ほうせきが ななこ あります。",
+      "sourceText": "この 箱には ほう石が 七個 あります。",
+      "kana": "コノ'、ハコニワ'、ホウセキガ'、ナ'ナコ、アリマ'_ス",
+      "sha256": "439e48e62ab04cf0df20a65c39b8ae8b5c80d284291f792ed3af098c28576ea9"
+    },
+    {
+      "file": "8c9d-s1.mp3",
+      "written": "貝を 食べます。",
+      "reading": "かいを たべます。",
+      "sourceText": "貝を 食べます。",
+      "kana": "カ'イオ、タベマ'_ス",
+      "sha256": "678366795d526f0975039abed42f2f4ccba2c077a3a6c3a79ae0a049006d29ea"
+    },
+    {
+      "file": "8c9d-s2.mp3",
+      "written": "まき貝が います。",
+      "reading": "まきがいが います。",
+      "sourceText": "まき貝が います。",
+      "kana": "マキ'ガイガ、イマ'_ス",
+      "sha256": "c8033a5b108b00021036d8f32ff6ff2609ee0687e4ed2e34a36d14b6edc61ac4"
+    },
+    {
+      "file": "8c9d-a1.mp3",
+      "written": "貝がらを 十個 もらいました。",
+      "reading": "かいがらを じゅっこ もらいました。",
+      "sourceText": "貝がらを 十個 もらいました。",
+      "kana": "カイガラオ'、ジュ'ッコ、モライマ'_シタ",
+      "sha256": "9b76de216f7a0d84613e4737a297418aadb309fbbe9dfdd4838e428ed134640c"
+    },
+    {
+      "file": "8c9d-a2.mp3",
+      "written": "この 貝は かなり おいしかったです。",
+      "reading": "この かいは かなり おいしかったです。",
+      "sourceText": "この 貝は かなり おいしかったです。",
+      "kana": "コノ'、カ'イワ、カ'ナリ、オイシ'カッタデ_ス",
+      "sha256": "e0fe15f86c52ca2f7d31b2b7a7acaab7837b0a5bacc659c6702ba24f9448992b"
+    },
+    {
+      "file": "8c9d-a3.mp3",
+      "written": "ほら貝は とても 大きいです。",
+      "reading": "ほらがいは とても おおきいです。",
+      "sourceText": "ほら貝は とても 大きいです。",
+      "kana": "ホラ'ガイワ、トテモ'、オオキ'イデ_ス",
+      "sha256": "9ebd76f476e8def973f60b5f8a5e90c8e6f2fa3d6259d551e008d71d5e0efb0f"
+    },
+    {
+      "file": "8c9d-a4.mp3",
+      "written": "きれいな 貝がらが 三つ あります。",
+      "reading": "きれいな かいがらが みっつ あります。",
+      "sourceText": "きれいな 貝がらが 三つ あります。",
+      "kana": "キ'レイナ、カイガラガ'、ミッツ'、アリマ'_ス",
+      "sha256": "89372c2a10f517296d7ca668e229dc6a225dc0649f5ed36892fd2e28fc4cbd37"
+    },
+    {
+      "file": "866b-s1.mp3",
+      "written": "こん虫が 大すきです。",
+      "reading": "こんちゅうが だいすきです。",
+      "sourceText": "こん虫が 大すきです。",
+      "kana": "コンチュウガ'、ダ'イ_スキデ_ス",
+      "sha256": "7032bd21bd5619cb3d6321fb5fdaebbedde4e159da202c6b9d3b2fda1866c354"
+    },
+    {
+      "file": "866b-s2.mp3",
+      "written": "虫かごに こん虫が います。",
+      "reading": "むしかごに こんちゅうが います。",
+      "sourceText": "虫かごに こん虫が います。",
+      "kana": "ム_シカゴニ'、コンチュウガ'、イマ'_ス",
+      "sha256": "f8eb425febf23d9176e949fb2478486cf7413be3fafdbedcd255c915483bc5a1"
+    },
+    {
+      "file": "866b-a1.mp3",
+      "written": "こん虫の 写真を 三枚 撮りました。",
+      "reading": "こんちゅうの しゃしんを さんまい とりました。",
+      "sourceText": "こん虫の 写真を 三枚 撮りました。",
+      "kana": "コンチュウノ'、シャシンオ'、サン'マイ、トリマ'_シタ",
+      "sha256": "daf465ebfe56f8593fd360a1a65a1ee4a5eb004fa69ee09f8bc63694fc21d5c9"
+    },
+    {
+      "file": "866b-a2.mp3",
+      "written": "玉虫は とても 面白い こん虫です。",
+      "reading": "たまむしは とても おもしろい こんちゅうです。",
+      "sourceText": "玉虫は とても 面白い こん虫です。",
+      "kana": "タマ'ムシワ、トテモ'、オモシロ'イ、コンチュウデ'_ス",
+      "sha256": "c2053660bd0200fafc1eb06f0a0317f436bf4befde511150d5e5282d23c27b39"
+    },
+    {
+      "file": "866b-a3.mp3",
+      "written": "こん虫の 本が 二冊 あります。",
+      "reading": "こんちゅうの ほんが にさつ あります。",
+      "sourceText": "こん虫の 本が 二冊 あります。",
+      "kana": "コンチュウノ'、ホ'ンガ、ニ'サツ、アリマ'_ス",
+      "sha256": "e3277356c54fff755c0f73edcdcfd4042129add5ea2c4145ca916e7a5e7202c6"
+    },
+    {
+      "file": "866b-a4.mp3",
+      "written": "子どもと いっしょに こん虫を 見ました。",
+      "reading": "こどもと いっしょに こんちゅうを みました。",
+      "sourceText": "子どもと いっしょに こん虫を 見ました。",
+      "kana": "コドモト'、イッショニ'、コンチュウオ'、ミマ'_シタ",
+      "sha256": "91832cedced31b87ce6b70484843c0e3f0cb33342b1031b8f9f3594a60abc3f4"
+    },
+    {
+      "file": "72ac-s1.mp3",
+      "written": "白い犬が います。",
+      "reading": "しろいいぬが います。",
+      "sourceText": "白い犬が います。",
+      "kana": "シロ'イ/イヌ'ガ、イマ'_ス",
+      "sha256": "5380d109983fb23a615bc8336b9dfd70a9b7f1dd3d8cb0e3ac2cceab2d9d8715"
+    },
+    {
+      "file": "72ac-s2.mp3",
+      "written": "子犬が 大すきです。",
+      "reading": "こいぬが だいすきです。",
+      "sourceText": "子犬が 大すきです。",
+      "kana": "コイヌガ'、ダ'イ_スキデ_ス",
+      "sha256": "a94de6bf052c5a3e334b8ff06eced82d25c618b2fa972a03e2e8a9f52226f250"
+    },
+    {
+      "file": "72ac-a1.mp3",
+      "written": "この 白い犬は 三歳です。",
+      "reading": "この しろいいぬは さんさいです。",
+      "sourceText": "この 白い犬は 三歳です。",
+      "kana": "コノ'、シロ'イ/イヌ'ワ、サン'サイデ_ス",
+      "sha256": "8f10d32a806798ec4e076afc62d0b7276716f4551a8b171b9c6206940f8bfa06"
+    },
+    {
+      "file": "72ac-a2.mp3",
+      "written": "子犬は とても 小さいです。",
+      "reading": "こいぬは とても ちいさいです。",
+      "sourceText": "子犬は とても 小さいです。",
+      "kana": "コイヌワ'、トテモ'、チイサ'イデ_ス",
+      "sha256": "eeaf7a9940d845ca338c18105e1a6617dbeee741eee806652072c09ee7334589"
+    },
+    {
+      "file": "72ac-a3.mp3",
+      "written": "犬ぞりは とても 楽しいです。",
+      "reading": "いぬぞりは とても たのしいです。",
+      "sourceText": "犬ぞりは とても 楽しいです。",
+      "kana": "イヌゾリワ'、トテモ'、タノシ'イデ_ス",
+      "sha256": "83e5420aa97e39c1be959389bf58a273ba66b71f091713236fd872bce62e29fe"
+    },
+    {
+      "file": "72ac-a4.mp3",
+      "written": "子犬と いっしょに 寝ます。",
+      "reading": "こいぬと いっしょに ねます。",
+      "sourceText": "子犬と いっしょに 寝ます。",
+      "kana": "コイヌト'、イッショニ'、ネマ'_ス",
+      "sha256": "51a332a1894b5612a63b928bb3871142b341838da188db3130d006ad1f92c0c8"
+    },
+    {
+      "file": "7530-s1.mp3",
+      "written": "田うえを します。",
+      "reading": "たうえを します。",
+      "sourceText": "田うえを します。",
+      "kana": "タウエ'オ、シマ'_ス",
+      "sha256": "7a372119629f59c6aaaeea0a210acc99061d38bffae8b3af1c979ef316b4ea01"
+    },
+    {
+      "file": "7530-s2.mp3",
+      "written": "田んぼで 働きます。",
+      "reading": "たんぼで はたらきます。",
+      "sourceText": "田んぼで 働きます。",
+      "kana": "タンボデ'、ハタラキマ'_ス",
+      "sha256": "0bf260f55a255dcd297c521fb30028e454adfea3a700f073ecee85a18d078e01"
+    },
+    {
+      "file": "7530-a1.mp3",
+      "written": "田うえは とても 大へんです。",
+      "reading": "たうえは とても たいへんです。",
+      "sourceText": "田うえは とても 大へんです。",
+      "kana": "タウエ'ワ、トテモ'、タイヘンデ'_ス",
+      "sha256": "14804d175e7b66b8c77040697731c2ddde92716307e6682a95dd8bd814905d14"
+    },
+    {
+      "file": "7530-a2.mp3",
+      "written": "ここには 田んぼが たくさん あります。",
+      "reading": "ここには たんぼが たくさん あります。",
+      "sourceText": "ここには 田んぼが たくさん あります。",
+      "kana": "ココニワ'、タンボガ'、タ_クサン'、アリマ'_ス",
+      "sha256": "6f0a3e6952ac182bb2306a13607eeb8aed6ad9cd1f657ce37e0ba9942cf93ea1"
+    },
+    {
+      "file": "7530-a3.mp3",
+      "written": "水田の 水は すこし 暖かいです。",
+      "reading": "すいでんの みずは すこし あたたかいです。",
+      "sourceText": "水田の 水は すこし 暖かいです。",
+      "kana": "スイデンノ'、ミズワ'、_スコ'シ、アタタカ'イデ_ス",
+      "sha256": "14f810ee2961e8976ed6969fbdfedeff40b395d67358c2091a195fa223836258"
+    },
+    {
+      "file": "7530-a4.mp3",
+      "written": "田うえを 三日 しました。",
+      "reading": "たうえを みっか しました。",
+      "sourceText": "田うえを 三日 しました。",
+      "kana": "タウエ'オ、ミッカ'、シマ'_シタ",
+      "sha256": "c6ab47ab0724deacc2d437669e4d1a27fceef7b2a46eaee96dae710f44f3cd5d"
+    },
+    {
+      "file": "5e74-s1.mp3",
+      "written": "らい年 日本へ 行きます。",
+      "reading": "らいねん にほんへ いきます。",
+      "sourceText": "らい年 日本へ 行きます。",
+      "kana": "ライ'ネン、ニホ'ンエ、イキマ'_ス",
+      "sha256": "2657e4b1460d282b471680d420206f65ce2b3493e6230073fdbdc5a00955439f"
+    },
+    {
+      "file": "5e74-s2.mp3",
+      "written": "ともだちは 年上です。",
+      "reading": "ともだちは としうえです。",
+      "sourceText": "ともだちは 年上です。",
+      "kana": "トモダチワ'、トシウエデ'_ス",
+      "sha256": "f694dc4dcc6b67720d3efbb7678820f467225a5a57d2ed76c01fd197c4adeaeb"
+    },
+    {
+      "file": "5e74-a1.mp3",
+      "written": "今年は 日本ごの 本を 五冊 読みました。",
+      "reading": "ことしは にほんごの ほんを ごさつ よみました。",
+      "sourceText": "今年は 日本ごの 本を 五冊 読みました。",
+      "kana": "コトシワ'、ニホンゴノ'、ホ'ンオ、ゴ'サツ、ヨミマ'_シタ",
+      "sha256": "c8200b6435d2ff7f0fa54734d13f68e27e081420816e112e2cbbb17eaafdd32f"
+    },
+    {
+      "file": "5e74-a2.mp3",
+      "written": "わたしの 町には お年よりが たくさん います。",
+      "reading": "わたしの まちには おとしよりが たくさん います。",
+      "sourceText": "わたしの 町には お年よりが たくさん います。",
+      "kana": "ワタシノ'、マチ'ニワ、オトシヨ'リガ、タ_クサン'、イマ'_ス",
+      "sha256": "46e4ab02cf5537dda8f914b98b0d3a8997001571044647bc7f51894b7af5b8f1"
+    },
+    {
+      "file": "5e74-a3.mp3",
+      "written": "きょ年の たん生日は とても 楽しかったです。",
+      "reading": "きょねんの たんじょうびは とても たのしかったです。",
+      "sourceText": "きょ年の たん生日は とても 楽しかったです。",
+      "kana": "キョネンノ'、タンジョオ'ビワ、トテモ'、タノシ'カッタデ_ス",
+      "sha256": "3a6d8e4230d247e4c85410a2b96fd077722fe427a60f221b1e24548b4f422572"
+    },
+    {
+      "file": "5e74-a4.mp3",
+      "written": "十年は とても 長いです。",
+      "reading": "じゅうねんは とても ながいです。",
+      "sourceText": "十年は とても 長いです。",
+      "kana": "ジュウ'ネンワ、トテモ'、ナガ'イデ_ス",
+      "sha256": "1d140e2971961d72106937d9f1b8cc0b8c6485394f60cff56b27c0c1d7b27f55"
+    },
+    {
+      "file": "7a7a-s1.mp3",
+      "written": "空ばこが あります。",
+      "reading": "からばこが あります。",
+      "sourceText": "空ばこが あります。",
+      "kana": "カラ'バコガ、アリマ'_ス",
+      "sha256": "f3e81e259a13691e7372e26a7a6891f9e000381fb8c76910650dd90c4c683c4b"
+    },
+    {
+      "file": "7a7a-s2.mp3",
+      "written": "今日は 青空です。",
+      "reading": "きょうは あおぞらです。",
+      "sourceText": "今日は 青空です。",
+      "kana": "キョ'オワ、アオゾ'ラデ_ス",
+      "sha256": "77d6c182cf181d49517e16408f3fa596421b103e4ca5d417fd7922685f030445"
+    },
+    {
+      "file": "7a7a-a1.mp3",
+      "written": "空色の ノートが 三冊 あります。",
+      "reading": "そらいろの ノートが さんさつ あります。",
+      "sourceText": "空色の ノートが 三冊 あります。",
+      "kana": "ソライロノ'、ノ'オトガ、サン'サツ、アリマ'_ス",
+      "sha256": "8fac8ea900cdc2ef179ad22d6f99669c5cc1966f313eb1e6ef8da6ed216f6ca3"
+    },
+    {
+      "file": "7a7a-a2.mp3",
+      "written": "空ばこは とても 便利です。",
+      "reading": "からばこは とても べんりです。",
+      "sourceText": "空ばこは とても 便利です。",
+      "kana": "カラ'バコワ、トテモ'、ベ'ンリデ_ス",
+      "sha256": "67c4372924f7430d96a92ec702b3cbfc574587b2a28381aa3f1e5ec4fd562779"
+    },
+    {
+      "file": "7a7a-a3.mp3",
+      "written": "教室の 空気が すこし 悪いです。",
+      "reading": "きょうしつの くうきが すこし わるいです。",
+      "sourceText": "教室の 空気が すこし 悪いです。",
+      "kana": "キョオ_シツノ'、ク'ウキガ、_スコ'シ、ワル'イデ_ス",
+      "sha256": "6d1b02f15b59a41d10b563fed0b67dcb8aa88ddaff19be575eb2b96c7defe0eb"
+    },
+    {
+      "file": "7a7a-a4.mp3",
+      "written": "青空の 下で いっしょに ひるごはんを 食べました。",
+      "reading": "あおぞらの したで いっしょに ひるごはんを たべました。",
+      "sourceText": "青空の 下で いっしょに ひるごはんを 食べました。",
+      "kana": "アオゾ'ラノ、_シタデ'、イッショニ'、ヒ'ル/ゴ'ハンオ、タベマ'_シタ",
+      "sha256": "5e479fb6a1e8c2206beb58f183a856c243cf9e4a6637c1326ddb9a793b2ce90c"
+    },
+    {
+      "file": "5929-s1.mp3",
+      "written": "あしたの 天気は いいです。",
+      "reading": "あしたの てんきは いいです。",
+      "sourceText": "あしたの 天気は いいです。",
+      "kana": "ア_シタ'ノ、テ'ンキワ、イ'イデ_ス",
+      "sha256": "b24f8aa62bb0a02e3591bf87d0f1b9555ff68103d789095622e07ed5b81b8e5b"
+    },
+    {
+      "file": "5929-s2.mp3",
+      "written": "天の川を 見ましょう。",
+      "reading": "あまのがわを みましょう。",
+      "sourceText": "天の川を 見ましょう。",
+      "kana": "アマノ'ガワオ、ミマショ'オ",
+      "sha256": "e906ad3acd6e72c751a9d48e9fb1feac4b645bfd20ff3d35e5bc2e7915f04ff1"
+    },
+    {
+      "file": "5929-a1.mp3",
+      "written": "休日の 天気は とても よかったです。",
+      "reading": "きゅうじつの てんきは とても よかったです。",
+      "sourceText": "休日の 天気は とても よかったです。",
+      "kana": "キュウジツノ'、テ'ンキワ、トテモ'、ヨ'カッタデ_ス",
+      "sha256": "9ffd2b6fb9da633893e0867e53f3c95118d67caaca0c7d4ec1ccb2c55d178fa4"
+    },
+    {
+      "file": "5929-a2.mp3",
+      "written": "先月は ほとんど 雨天でした。",
+      "reading": "せんげつは ほとんど うてんでした。",
+      "sourceText": "先月は ほとんど 雨天でした。",
+      "kana": "セ'ンゲツワ、ホト'ンド、ウ'テンデ_シタ",
+      "sha256": "a77bfdca5e4ef55db9b2e18d87f28a05c7c54c00816b60c830707cc3ced7bd2e"
+    },
+    {
+      "file": "5929-a3.mp3",
+      "written": "今日は 天気が あまり よくないです。",
+      "reading": "きょうは てんきが あまり よくないです。",
+      "sourceText": "今日は 天気が あまり よくないです。",
+      "kana": "キョ'オワ、テ'ンキガ、アマリ'、ヨ'クナイデ_ス",
+      "sha256": "5c15e3d80f04aaf5e1f499cdc2f2955010365fa41f0ba0d9ad56dc70c2250c57"
+    },
+    {
+      "file": "5929-a4.mp3",
+      "written": "天の川の 写真を 一枚 撮りました。",
+      "reading": "あまのがわの しゃしんを いちまい とりました。",
+      "sourceText": "天の川の 写真を 一枚 撮りました。",
+      "kana": "アマノ'ガワノ、シャシンオ'、イチ'マイ、トリマ'_シタ",
+      "sha256": "a39792960a1bc585534b8a9de751af0c3d26a32b5436aecf39a6f25b7c4dde3b"
+    },
+    {
+      "file": "6c17-s1.mp3",
+      "written": "げん気ですか。",
+      "reading": "げんきですか。",
+      "sourceText": "げん気ですか。",
+      "kana": "ゲ'ンキデ_スカ",
+      "sha256": "156257ca19648b9066b53fdf07231409f6d5fc2e9ddda604a850bf5d8f170e0d"
+    },
+    {
+      "file": "6c17-s2.mp3",
+      "written": "気もちが いいです。",
+      "reading": "きもちが いいです。",
+      "sourceText": "気もちが いいです。",
+      "kana": "キモチガ'、イ'イデ_ス",
+      "sha256": "ee3fb37283c2ae1239f2a65d9aa5c8f4dcf9407ebcbe88d63e1b6556c7b4db33"
+    },
+    {
+      "file": "6c17-a1.mp3",
+      "written": "赤ちゃんは あまり げん気では ありません。",
+      "reading": "あかちゃんは あまり げんきでは ありません。",
+      "sourceText": "赤ちゃんは あまり げん気では ありません。",
+      "kana": "ア'カチャンワ、アマリ'、ゲ'ンキデワ、アリマセ'ン",
+      "sha256": "8740929b1b01c86e95f612f7661b73da23d1265da1b49ac7e088a1e08e7147f3"
+    },
+    {
+      "file": "6c17-a2.mp3",
+      "written": "げん気な 子どもが 五人 います。",
+      "reading": "げんきな こどもが ごにん います。",
+      "sourceText": "げん気な 子どもが 五人 います。",
+      "kana": "ゲ'ンキナ、コドモガ'、ゴ'ニン、イマ'_ス",
+      "sha256": "0506614ee2874f4f69d6be5731b9426fc7f62522da7a20bedda0f3bb9a0645c4"
+    },
+    {
+      "file": "6c17-a3.mp3",
+      "written": "先生の 気もちが すこし 分かります。",
+      "reading": "せんせいの きもちが すこし わかります。",
+      "sourceText": "先生の 気もちが すこし 分かります。",
+      "kana": "センセ'エノ、キモチガ'、_スコ'シ、ワカリマ'_ス",
+      "sha256": "844adb2d9e5f82cdac6ef389241b9a8ea692f83e555fa70b945ac415990e2e6e"
+    },
+    {
+      "file": "6c17-a4.mp3",
+      "written": "とても 気もちの いい 休日でした。",
+      "reading": "とても きもちの いい きゅうじつでした。",
+      "sourceText": "とても 気もちの いい 休日でした。",
+      "kana": "トテモ'、キモチノ'、イ'イ、キュウジツデ_シタ'",
+      "sha256": "887dac8ead7c280ef522ffd12c2107627ead1fdaf485539570fcd733eb7336c7"
+    },
+    {
+      "file": "96e8-s1.mp3",
+      "written": "雨天では テニスを しません。",
+      "reading": "うてんでは テニスを しません。",
+      "sourceText": "雨天では テニスを しません。",
+      "kana": "ウ'テンデワ、テ'ニスオ、シマセ'ン",
+      "sha256": "f26417dc05bc406f74d1c67ce89e74a167e58c3189f302c8a3ca9ec22c99d3de"
+    },
+    {
+      "file": "96e8-s2.mp3",
+      "written": "雨の音で 起きました。",
+      "reading": "あめのおとで おきました。",
+      "sourceText": "雨の音で 起きました。",
+      "kana": "ア'メノ/オト'デ、オキマ'_シタ",
+      "sha256": "199a6a86d048c53df37808cbc74b578b9c3b4dfb688b7c3853dc5e0ceec5c3c6"
+    },
+    {
+      "file": "96e8-a1.mp3",
+      "written": "大きい 雨ぐもを 二つ 見ました。",
+      "reading": "おおきい あまぐもを ふたつ みました。",
+      "sourceText": "大きい 雨ぐもを 二つ 見ました。",
+      "kana": "オオキ'イ、アマグモオ'、_フタツ'、ミマ'_シタ",
+      "sha256": "452ad2c2d925e58a32a7623e8c3635f5764e91897fe6e2de122c4352ca554c50"
+    },
+    {
+      "file": "96e8-a2.mp3",
+      "written": "雨ふりの 日よう日は いつも えいがを 見ます。",
+      "reading": "あめふりの にちようびは いつも えいがを みます。",
+      "sourceText": "雨ふりの 日よう日は いつも えいがを 見ます。",
+      "kana": "アメ'フリノ、ニチヨオ'ビワ、イ'ツモ、エ'イガオ、ミマ'_ス",
+      "sha256": "f27857dfb6b1fa4de51e6c605f1c7aaa2fbabb9dfe6c82ff1ccd403ce5c9ce48"
+    },
+    {
+      "file": "96e8-a3.mp3",
+      "written": "雨ぐもで 町は とても 暗かったです。",
+      "reading": "あまぐもで まちは とても くらかったです。",
+      "sourceText": "雨ぐもで 町は とても 暗かったです。",
+      "kana": "アマグモデ'、マチ'ワ、トテモ'、クラ'カッタデ_ス",
+      "sha256": "4b7dda4f0365a675c444582116ea92c843710088c5f49e860f9e05c312118b7d"
+    },
+    {
+      "file": "96e8-a4.mp3",
+      "written": "雨天の 旅行は 楽しくないです。",
+      "reading": "うてんの りょこうは たのしくないです。",
+      "sourceText": "雨天の 旅行は 楽しくないです。",
+      "kana": "ウ'テンノ、リョコオワ'、タノシ'クナイデ_ス",
+      "sha256": "ba52bb5f253792a801eb459d80776659bd90d522f981f098377bbd73c1cca1c8"
+    },
+    {
+      "file": "5915-s1.mp3",
+      "written": "夕がた えきで 会いましょう。",
+      "reading": "ゆうがた えきで あいましょう。",
+      "sourceText": "夕がた えきで 会いましょう。",
+      "kana": "ユウガタ'、エ'キデ、アイマショ'オ",
+      "sha256": "2af5e448d5523ef0fb20902c37a2c567be59ede2d1815101c7bef52120664ad0"
+    },
+    {
+      "file": "5915-s2.mp3",
+      "written": "夕ぐれに 帰ります。",
+      "reading": "ゆうぐれに かえります。",
+      "sourceText": "夕ぐれに 帰ります。",
+      "kana": "ユウグレニ'、カエリマ'_ス",
+      "sha256": "e1830c2f522b6a64ba89899b3019cfeefd44e3bb0df28fbcc590e85cf8bd179b"
+    },
+    {
+      "file": "5915-a1.mp3",
+      "written": "夕日は とても 大きかったです。",
+      "reading": "ゆうひは とても おおきかったです。",
+      "sourceText": "夕日は とても 大きかったです。",
+      "kana": "ユウヒワ'、トテモ'、オオキ'カッタデ_ス",
+      "sha256": "0ad36a3f1ff41bf44eb5b2cb22869c4b2004ec09653281fbff9cee2489ad4d2e"
+    },
+    {
+      "file": "5915-a2.mp3",
+      "written": "夕がた パンを 三つ 食べました。",
+      "reading": "ゆうがた パンを みっつ たべました。",
+      "sourceText": "夕がた パンを 三つ 食べました。",
+      "kana": "ユウガタ'、パ'ンオ、ミッツ'、タベマ'_シタ",
+      "sha256": "c70b7f968c7efcd1b8ee10506e0496bd72502bdad4934e8a43de0948b3970395"
+    },
+    {
+      "file": "5915-a3.mp3",
+      "written": "夕がたは ちょっと 忙しいです。",
+      "reading": "ゆうがたは ちょっと いそがしいです。",
+      "sourceText": "夕がたは ちょっと 忙しいです。",
+      "kana": "ユウガタワ'、チョ'ット、イソガシ'イデ_ス",
+      "sha256": "927d70f2a434d1e24b0760ac9941e284a8e28466f817451b6306e211999b671f"
+    },
+    {
+      "file": "5915-a4.mp3",
+      "written": "夕ぐれの 和室は とても 静かです。",
+      "reading": "ゆうぐれの わしつは とても しずかです。",
+      "sourceText": "夕ぐれの 和室は とても 静かです。",
+      "kana": "ユウグレノ'、ワ_シツワ'、トテモ'、シ'ズカデ_ス",
+      "sha256": "2c7c829ed01295f215e837563b2f8ec23b110d13f137d6b405c98f905220235e"
+    },
+    {
+      "file": "767d-s1.mp3",
+      "written": "白い シャツを 買いました。",
+      "reading": "しろい シャツを かいました。",
+      "sourceText": "白い シャツを 買いました。",
+      "kana": "シロ'イ、シャ'ツオ、カイマ'_シタ",
+      "sha256": "19a8d9f65605b621901f280db08e8c53ada11658ad286fac888871a111463b73"
+    },
+    {
+      "file": "767d-s2.mp3",
+      "written": "わたしは 白ぐみです。",
+      "reading": "わたしは しろぐみです。",
+      "sourceText": "わたしは 白ぐみです。",
+      "kana": "ワタシワ'、シロ'グミデ_ス",
+      "sha256": "6725c14c118806e34419e3974313dfd7d6b651ddd38b16994f49a7b7906e2de8"
+    },
+    {
+      "file": "767d-a1.mp3",
+      "written": "この え本は とても 面白いです。",
+      "reading": "この えほんは とても おもしろいです。",
+      "sourceText": "この え本は とても 面白いです。",
+      "kana": "コノ'、エ'ホンワ、トテモ'、オモシロ'イデ_ス",
+      "sha256": "6144b6ae466f29d4caff034d1ddbafff429d1292ab79f844faef5516ca645fd2"
+    },
+    {
+      "file": "767d-a2.mp3",
+      "written": "白い かみを 三枚 ください。",
+      "reading": "しろい かみを さんまい ください。",
+      "sourceText": "白い かみを 三枚 ください。",
+      "kana": "シロ'イ、カ'ミオ、サン'マイ、クダサ'イ",
+      "sha256": "4d0144086278d86db7bf94b61f95fbce1aea6d466b0109832a07aad14824992c"
+    },
+    {
+      "file": "767d-a3.mp3",
+      "written": "教室に 白板が 二つ あります。",
+      "reading": "きょうしつに はくばんが ふたつ あります。",
+      "sourceText": "教室に 白板が 二つ あります。",
+      "kana": "キョオ_シツニ'、ハクバンガ'、_フタツ'、アリマ'_ス",
+      "sha256": "7066c03c3cd1361047bf04bc33b188c8383723b5ae1c06a92cdcd92376c01c91"
+    },
+    {
+      "file": "767d-a4.mp3",
+      "written": "白ぐみは とても 元気でした。",
+      "reading": "しろぐみは とても げんきでした。",
+      "sourceText": "白ぐみは とても 元気でした。",
+      "kana": "シロ'グミワ、トテモ'、ゲ'ンキデ_シタ",
+      "sha256": "aafee9675985210df4b11df956d4a7199ebb213fc37e7e9e9bbbe4e53ccc737a"
+    },
+    {
+      "file": "9752-s1.mp3",
+      "written": "青い車を 買いました。",
+      "reading": "あおいくるまを かいました。",
+      "sourceText": "青い車を 買いました。",
+      "kana": "アオ'イ/クルマオ'、カイマ'_シタ",
+      "sha256": "4d79bf4fa049d821cf20e614535eaf797f074ef67c127b8d7a73416802c687cd"
+    },
+    {
+      "file": "9752-s2.mp3",
+      "written": "青空が 見えます。",
+      "reading": "あおぞらが みえます。",
+      "sourceText": "青空が 見えます。",
+      "kana": "アオゾ'ラガ、ミエマ'_ス",
+      "sha256": "210e92c925ccb984252066dbb03e84f627e82745c4ca323ac5bb1a1079388692"
+    },
+    {
+      "file": "9752-a1.mp3",
+      "written": "その 青年は サッカーが とても 上手です。",
+      "reading": "その せいねんは サッカーが とても じょうずです。",
+      "sourceText": "その 青年は サッカーが とても 上手です。",
+      "kana": "ソノ'、セエネンワ'、サ'ッカアガ、トテモ'、ジョオズ'デ_ス",
+      "sha256": "cb42d4716aa7a7a0ca0cabb45f74ca7899a128ac3edf88ac07777eefb2ccee2f"
+    },
+    {
+      "file": "9752-a2.mp3",
+      "written": "青い 鉛筆を 二本 買いました。",
+      "reading": "あおい えんぴつを にほん かいました。",
+      "sourceText": "青い 鉛筆を 二本 買いました。",
+      "kana": "アオ'イ、エン_ピツオ'、ニ'ホン、カイマ'_シタ",
+      "sha256": "b4b3dc4e3a9caab74e7e646ad3b015d2482fc7049b14c54c77299d1df2144593"
+    },
+    {
+      "file": "9752-a3.mp3",
+      "written": "青い車は ちょっと 遅いです。",
+      "reading": "あおいくるまは ちょっと おそいです。",
+      "sourceText": "青い車は ちょっと 遅いです。",
+      "kana": "アオ'イ/クルマワ'、チョ'ット、オソイ'デ_ス",
+      "sha256": "0390b77f3337197a0b64a290d49592396c7eccf0c28d896c35cd5a427a04f1ff"
+    },
+    {
+      "file": "9752-a4.mp3",
+      "written": "青い 蜜柑は あまり おいしくないです。",
+      "reading": "あおい みかんは あまり おいしくないです。",
+      "sourceText": "青い 蜜柑は あまり おいしくないです。",
+      "kana": "アオ'イ、ミ'カンワ、アマリ'、オイシ'クナイデ_ス",
+      "sha256": "fe95c78bab80d56b98f0dc1aeb97c8ce625733e5241b0d9f6a2855e2f5807fb0"
+    },
+    {
+      "file": "8d64-s1.mp3",
+      "written": "赤い かばんを 買いました。",
+      "reading": "あかい かばんを かいました。",
+      "sourceText": "赤い かばんを 買いました。",
+      "kana": "アカイ'、カバンオ'、カイマ'_シタ",
+      "sha256": "514524ba2a0ea840905c9320ac15ec42e1a86f58748b00ef7fc1cd19181a532a"
+    },
+    {
+      "file": "8d64-s2.mp3",
+      "written": "赤はんを 食べました。",
+      "reading": "せきはんを たべました。",
+      "sourceText": "赤はんを 食べました。",
+      "kana": "セ_キハ'ンオ、タベマ'_シタ",
+      "sha256": "8332ff66dc555478d16f29f6cf05c1295ed827fe87243c78bcde5506f4bc2cdc"
+    },
+    {
+      "file": "8d64-a1.mp3",
+      "written": "赤ちゃんは まい日 たくさん 寝ます。",
+      "reading": "あかちゃんは まいにち たくさん ねます。",
+      "sourceText": "赤ちゃんは まい日 たくさん 寝ます。",
+      "kana": "ア'カチャンワ、マ'イニチ、タ_クサン'、ネマ'_ス",
+      "sha256": "4fbc08064747c50240cdb6326ef114aad86be20ddf832169a94b23aa85fb6087"
+    },
+    {
+      "file": "8d64-a2.mp3",
+      "written": "ちちの 赤い車は すこし 小さいです。",
+      "reading": "ちちの あかいくるまは すこし ちいさいです。",
+      "sourceText": "ちちの 赤い車は すこし 小さいです。",
+      "kana": "チ'チノ、アカイ'/クルマワ'、_スコ'シ、チイサ'イデ_ス",
+      "sha256": "174606d7e9acff9d024752d7e9cf6847a1d600a141ef25e0e5ee17efffb98c1e"
+    },
+    {
+      "file": "8d64-a3.mp3",
+      "written": "赤はんは とても おいしかったです。",
+      "reading": "せきはんは とても おいしかったです。",
+      "sourceText": "赤はんは とても おいしかったです。",
+      "kana": "セ_キハ'ンワ、トテモ'、オイシ'カッタデ_ス",
+      "sha256": "14fbce9ded90b7dfd172ffa2b5e80e11607c07e6671b4c1b5839696812fcc2b5"
+    },
+    {
+      "file": "8d64-a4.mp3",
+      "written": "赤ちゃんは 一歳です。",
+      "reading": "あかちゃんは いっさいです。",
+      "sourceText": "赤ちゃんは 一歳です。",
+      "kana": "ア'カチャンワ、イッ'サイデ_ス",
+      "sha256": "02c6d1e65443cecb64e978ab2eff4bb5bc381639f353499cac86a61a80e98ed3"
+    },
+    {
+      "file": "5927-s1.mp3",
+      "written": "あさって 大学へ 行きます。",
+      "reading": "あさって だいがくへ いきます。",
+      "sourceText": "あさって 大学へ 行きます。",
+      "kana": "アサッテ'、ダイガクエ'、イキマ'_ス",
+      "sha256": "ab6c240633d7d770b4ab4cf71277f64f51c970f202b7d2cfd93da5c687e38a99"
+    },
+    {
+      "file": "5927-s2.mp3",
+      "written": "日本の たべものが 大すきです。",
+      "reading": "にほんの たべものが だいすきです。",
+      "sourceText": "日本の たべものが 大すきです。",
+      "kana": "ニホ'ンノ、タベ'モノガ、ダ'イ_スキデ_ス",
+      "sha256": "a05e86421eb788548c60424f46602df4a8f7a324ef6e123d8f5904a2d7337bff"
+    },
+    {
+      "file": "5927-a1.mp3",
+      "written": "大きい 箱を 二つ 買いました。",
+      "reading": "おおきい はこを ふたつ かいました。",
+      "sourceText": "大きい 箱を 二つ 買いました。",
+      "kana": "オオキ'イ、ハコオ'、_フタツ'、カイマ'_シタ",
+      "sha256": "0e2f2d2399346166a627e3a5c840018159b5542ac6a4e06a977a51f5e742f9a3"
+    },
+    {
+      "file": "5927-a2.mp3",
+      "written": "大学の 宿題は とても 大へんでした。",
+      "reading": "だいがくの しゅくだいは とても たいへんでした。",
+      "sourceText": "大学の 宿題は とても 大へんでした。",
+      "kana": "ダイガクノ'、_シュクダイワ'、トテモ'、タイヘンデ_シタ'",
+      "sha256": "5635f92f1128fb2f3976d975ae8f6262437b4bc4b787c6b9bcee3ac6278e93c0"
+    },
+    {
+      "file": "5927-a3.mp3",
+      "written": "大学には 教室が たくさん あります。",
+      "reading": "だいがくには きょうしつが たくさん あります。",
+      "sourceText": "大学には 教室が たくさん あります。",
+      "kana": "ダイガクニワ'、キョオ_シツガ'、タ_クサン'、アリマ'_ス",
+      "sha256": "791701997887c98961f1bae84c58356ec60ee695439cab47f64144fa6be0199e"
+    },
+    {
+      "file": "5927-a4.mp3",
+      "written": "大すきな え本を 三冊 読みました。",
+      "reading": "だいすきな えほんを さんさつ よみました。",
+      "sourceText": "大すきな え本を 三冊 読みました。",
+      "kana": "ダ'イ_スキナ、エ'ホンオ、サン'サツ、ヨミマ'_シタ",
+      "sha256": "ca63e7cee090eb88b287bc9bf66265dab03dc4adcee5099bf63d0d6dad34ea36"
+    },
+    {
+      "file": "4e2d-s1.mp3",
+      "written": "中学校に 行きます。",
+      "reading": "ちゅうがっこうに いきます。",
+      "sourceText": "中学校に 行きます。",
+      "kana": "チュウガ'ッコオニ、イキマ'_ス",
+      "sha256": "f2a0fb1c83f7404c433740df6d857ee56bef7260d13be56880b543cb558c69f7"
+    },
+    {
+      "file": "4e2d-s2.mp3",
+      "written": "中庭で 休みます。",
+      "reading": "なかにわで やすみます。",
+      "sourceText": "中庭で 休みます。",
+      "kana": "ナカニワデ'、ヤスミマ'_ス",
+      "sha256": "3b033db4bec8ee722c5b26a8a94067b893ce43563f1e1d2b22014964e60511e5"
+    },
+    {
+      "file": "4e2d-a1.mp3",
+      "written": "一日中 とても 忙しかったです。",
+      "reading": "いちにちじゅう とても いそがしかったです。",
+      "sourceText": "一日中 とても 忙しかったです。",
+      "kana": "イチニチジュウ'、トテモ'、イソガシ'カッタデ_ス",
+      "sha256": "43d4e7d0285257c3d547a22fe059167d7ddda1feca6cacc61b78c8a1b0da79e2"
+    },
+    {
+      "file": "4e2d-a2.mp3",
+      "written": "一日中 本を 三冊 読みました。",
+      "reading": "いちにちじゅう ほんを さんさつ よみました。",
+      "sourceText": "一日中 本を 三冊 読みました。",
+      "kana": "イチニチジュウ'、ホ'ンオ、サン'サツ、ヨミマ'_シタ",
+      "sha256": "d78f1a2cbf9b1cee48ef5f33fc66e1e607654d9b84c956407d855dd95cb0b4df"
+    },
+    {
+      "file": "4e2d-a3.mp3",
+      "written": "中庭に 学生が たくさん います。",
+      "reading": "なかにわに がくせいが たくさん います。",
+      "sourceText": "中庭に 学生が たくさん います。",
+      "kana": "ナカニワニ'、ガ_クセエガ'、タ_クサン'、イマ'_ス",
+      "sha256": "f4f867ac769743b20271e05555e145c40be90e9fba40ab1b14ce6ed12bcd39cb"
+    },
+    {
+      "file": "4e2d-a4.mp3",
+      "written": "中学校の 授業は すこし 長いです。",
+      "reading": "ちゅうがっこうの じゅぎょうは すこし ながいです。",
+      "sourceText": "中学校の 授業は すこし 長いです。",
+      "kana": "チュウガ'ッコオノ、ジュ'ギョオワ、_スコ'シ、ナガ'イデ_ス",
+      "sha256": "858fa91602c8cf9c456176f919096b74bb385685385c2b7ea1d5a23d0ee1183c"
+    },
+    {
+      "file": "5c0f-s1.mp3",
+      "written": "小学生が 来ます。",
+      "reading": "しょうがくせいが きます。",
+      "sourceText": "小学生が 来ます。",
+      "kana": "ショオガ'_クセエガ、キマ'_ス",
+      "sha256": "14981831e5ea1392bf6490d75241933231e25cc49724ea3fdaca93b39112949c"
+    },
+    {
+      "file": "5c0f-s2.mp3",
+      "written": "小学校で 働きます。",
+      "reading": "しょうがっこうで はたらきます。",
+      "sourceText": "小学校で 働きます。",
+      "kana": "ショオガ'ッコオデ、ハタラキマ'_ス",
+      "sha256": "872c1e6b65937aa84552bc47a96c5f5bca1a316d084a1e8030c81e798fd20e5d"
+    },
+    {
+      "file": "5c0f-a1.mp3",
+      "written": "小さい 子どもは 二歳です。",
+      "reading": "ちいさい こどもは にさいです。",
+      "sourceText": "小さい 子どもは 二歳です。",
+      "kana": "チイサ'イ、コドモワ'、ニ'サイデ_ス",
+      "sha256": "7b6c6d9841e2aa874c5155ee5db847138752d5b6a43b08a96ebc8e8b9481aa33"
+    },
+    {
+      "file": "5c0f-a2.mp3",
+      "written": "小学校の 授業は とても 楽しいです。",
+      "reading": "しょうがっこうの じゅぎょうは とても たのしいです。",
+      "sourceText": "小学校の 授業は とても 楽しいです。",
+      "kana": "ショオガ'ッコオノ、ジュ'ギョオワ、トテモ'、タノシ'イデ_ス",
+      "sha256": "9c0feb3e49abbb8c0ae41e47bd0ace1ef294e5a37305449f9ccdfe7c7790d8f4"
+    },
+    {
+      "file": "5c0f-a3.mp3",
+      "written": "この へやは すこし 小さいです。",
+      "reading": "この へやは すこし ちいさいです。",
+      "sourceText": "この へやは すこし 小さいです。",
+      "kana": "コノ'、ヘヤ'ワ、_スコ'シ、チイサ'イデ_ス",
+      "sha256": "5d16715e1280657c52b1edbf4a6b1ed28cdae211f8932abc531f825a4cc81442"
+    },
+    {
+      "file": "5c0f-a4.mp3",
+      "written": "教室に 小学生が たくさん います。",
+      "reading": "きょうしつに しょうがくせいが たくさん います。",
+      "sourceText": "教室に 小学生が たくさん います。",
+      "kana": "キョオ_シツニ'、ショオガ'_クセエガ、タ_クサン'、イマ'_ス",
+      "sha256": "b20c517a8f89678fba45146aa16ab2c619d0e89d9a5a5a362b68a42163bd36d7"
+    },
+    {
+      "file": "4e0a-s1.mp3",
+      "written": "かばんは いすの 上に あります。",
+      "reading": "かばんは いすの うえに あります。",
+      "sourceText": "かばんは いすの 上に あります。",
+      "kana": "カバンワ'、イスノ'、ウエニ'、アリマ'_ス",
+      "sha256": "207d3074028d447282ba8a434e994e1cba388ec5e73bb9acd0e32a72c7c23c95"
+    },
+    {
+      "file": "4e0a-s2.mp3",
+      "written": "上ぎを 買いました。",
+      "reading": "うわぎを かいました。",
+      "sourceText": "上ぎを 買いました。",
+      "kana": "ウワギオ'、カイマ'_シタ",
+      "sha256": "117851d0342223979999cc2cb08cdfb98be0325720dba050c83a5fcb38a4b461"
+    },
+    {
+      "file": "4e0a-a1.mp3",
+      "written": "ちちは テニスが とても 上手です。",
+      "reading": "ちちは テニスが とても じょうずです。",
+      "sourceText": "ちちは テニスが とても 上手です。",
+      "kana": "チ'チワ、テ'ニスガ、トテモ'、ジョオズ'デ_ス",
+      "sha256": "0a420a233ca8ba9aa49b1e34b8a87b77247dd0911273f8ba03def5cd34a96f2b"
+    },
+    {
+      "file": "4e0a-a2.mp3",
+      "written": "黒い 上ぎが 二枚 あります。",
+      "reading": "くろい うわぎが にまい あります。",
+      "sourceText": "黒い 上ぎが 二枚 あります。",
+      "kana": "クロ'イ、ウワギガ'、ニ'マイ、アリマ'_ス",
+      "sha256": "0c0030639ce0c9a6eece75f70f38f0a5a381425276b15f48864643aa1bb478c3"
+    },
+    {
+      "file": "4e0a-a3.mp3",
+      "written": "わたしは ダンスが 上手では ありません。",
+      "reading": "わたしは ダンスが じょうずでは ありません。",
+      "sourceText": "わたしは ダンスが 上手では ありません。",
+      "kana": "ワタシワ'、ダ'ンスガ、ジョオズ'デワ、アリマセ'ン",
+      "sha256": "66323c3fa97ca778f859fe55c5910291044aa064225985330cf580ef4292edbc"
+    },
+    {
+      "file": "4e0a-a4.mp3",
+      "written": "年上の ともだちは とても 静かな 人です。",
+      "reading": "としうえの ともだちは とても しずかな ひとです。",
+      "sourceText": "年上の ともだちは とても 静かな 人です。",
+      "kana": "トシウエノ'、トモダチワ'、トテモ'、シ'ズカナ、_ヒトデ'_ス",
+      "sha256": "5b74485b022696d9eaac7957e51f4ea382d8559b394fe626856d4f333118fe14"
+    },
+    {
+      "file": "4e0b-s1.mp3",
+      "written": "子どもが 下校します。",
+      "reading": "こどもが げこうします。",
+      "sourceText": "子どもが 下校します。",
+      "kana": "コドモガ'、ゲコオ'/シマ'_ス",
+      "sha256": "2b572157105a2a39c94824cd6d2a3e1e6462525298607e37f7377b19ea78a729"
+    },
+    {
+      "file": "4e0b-s2.mp3",
+      "written": "ち下てつで 行きます。",
+      "reading": "ちかてつで いきます。",
+      "sourceText": "ち下てつで 行きます。",
+      "kana": "_チカ'テツデ、イキマ'_ス",
+      "sha256": "ec379c7260908355716987010927d392ea4f1282ff09964a5e9c20fc6718502a"
+    },
+    {
+      "file": "4e0b-a1.mp3",
+      "written": "わたしは えが すこし 下手です。",
+      "reading": "わたしは えが すこし へたです。",
+      "sourceText": "わたしは えが すこし 下手です。",
+      "kana": "ワタシワ'、エ'ガ、_スコ'シ、ヘタ'デ_ス",
+      "sha256": "bfd64dd76c7cc74590244ea9843a67840e6489a9087fa953371d821190115d5d"
+    },
+    {
+      "file": "4e0b-a2.mp3",
+      "written": "ち下てつで 本を 一冊 読みました。",
+      "reading": "ちかてつで ほんを いっさつ よみました。",
+      "sourceText": "ち下てつで 本を 一冊 読みました。",
+      "kana": "_チカ'テツデ、ホ'ンオ、イッ'サツ、ヨミマ'_シタ",
+      "sha256": "39b9c0ad96718434121dbfb5d4ba2c3333d1b99b9329ae5a4ca5997a7d22057c"
+    },
+    {
+      "file": "4e0b-a3.mp3",
+      "written": "木の下は すこし 暗いです。",
+      "reading": "きのしたは すこし くらいです。",
+      "sourceText": "木の下は すこし 暗いです。",
+      "kana": "キ'ノ/_シタワ'、_スコ'シ、クライ'デ_ス",
+      "sha256": "3ad42b634a9ab4f9e1367b5a3c234eb149001ddb3e2a087d85e8487803047fab"
+    },
+    {
+      "file": "4e0b-a4.mp3",
+      "written": "下手な 写真を たくさん 撮りました。",
+      "reading": "へたな しゃしんを たくさん とりました。",
+      "sourceText": "下手な 写真を たくさん 撮りました。",
+      "kana": "ヘタ'ナ、シャシンオ'、タ_クサン'、トリマ'_シタ",
+      "sha256": "78bbaf48c7733625a3160522838efd6262ac75930af556935e819c53bf30d3e1"
+    },
+    {
+      "file": "5de6-s1.mp3",
+      "written": "えきは 左がわです。",
+      "reading": "えきは ひだりがわです。",
+      "sourceText": "えきは 左がわです。",
+      "kana": "エ'キワ、ヒダリガワデ'_ス",
+      "sha256": "d01ef4d6d4a2c77150554479c1d2d6aa01a479439a6fb7563b48e965f10cc2ce"
+    },
+    {
+      "file": "5de6-s2.mp3",
+      "written": "左右を 見ます。",
+      "reading": "さゆうを みます。",
+      "sourceText": "左右を 見ます。",
+      "kana": "サ'ユウオ、ミマ'_ス",
+      "sha256": "02bb5df689175c8648d5b34ced0d0991e61057c322e11359aad69e7d169bb8d0"
+    },
+    {
+      "file": "5de6-a1.mp3",
+      "written": "左足が すこし 悪いです。",
+      "reading": "ひだりあしが すこし わるいです。",
+      "sourceText": "左足が すこし 悪いです。",
+      "kana": "ヒダリアシガ'、_スコ'シ、ワル'イデ_ス",
+      "sha256": "fa9f3d2f4d6f36ab72cf2c93ec7a0bebcb2d7a7838a9f43969e42a101f18c4ce"
+    },
+    {
+      "file": "5de6-a2.mp3",
+      "written": "左がわに 机が 三つ あります。",
+      "reading": "ひだりがわに つくえが みっつ あります。",
+      "sourceText": "左がわに 机が 三つ あります。",
+      "kana": "ヒダリガ'/ワ'ニ、_ツクエガ'、ミッツ'、アリマ'_ス",
+      "sha256": "80e7552aaad994fba96b577a5c997f029531c4a4e6aa989ffe9304f17d69f8d5"
+    },
+    {
+      "file": "5de6-a3.mp3",
+      "written": "左がわの 教室は とても 静かです。",
+      "reading": "ひだりがわの きょうしつは とても しずかです。",
+      "sourceText": "左がわの 教室は とても 静かです。",
+      "kana": "ヒダリガワノ'、キョオ_シツワ'、トテモ'、シ'ズカデ_ス",
+      "sha256": "3aa54e90cdd1d33a8a5e07179305afb06dc9b4cc0666b580d8aa946b5689ed66"
+    },
+    {
+      "file": "5de6-a4.mp3",
+      "written": "左右の 靴が すこし 大きいです。",
+      "reading": "さゆうの くつが すこし おおきいです。",
+      "sourceText": "左右の 靴が すこし 大きいです。",
+      "kana": "サ'ユウノ、_クツ'ガ、_スコ'シ、オオキ'イデ_ス",
+      "sha256": "c3f6d774283750bdbe3ac13862935bccb13390e227bc2163df596abc2f93706e"
+    },
+    {
+      "file": "53f3-s1.mp3",
+      "written": "かいだんは 右がわに あります。",
+      "reading": "かいだんは みぎがわに あります。",
+      "sourceText": "かいだんは 右がわに あります。",
+      "kana": "カイダンワ'、ミギガ'/ワ'ニ、アリマ'_ス",
+      "sha256": "d6af7bea6c1324ee857875e651794c0545b372122f7351260908494ea9ff4df8"
+    },
+    {
+      "file": "53f3-s2.mp3",
+      "written": "右手で 食べます。",
+      "reading": "みぎてで たべます。",
+      "sourceText": "右手で 食べます。",
+      "kana": "ミギテデ'、タベマ'_ス",
+      "sha256": "139992fe2299e88f2f231c7e72d99099d0c9a3a8bb6b07ae14da5431a6daf4cd"
+    },
+    {
+      "file": "53f3-a1.mp3",
+      "written": "右がわの みせの パンは とても おいしいです。",
+      "reading": "みぎがわの みせの パンは とても おいしいです。",
+      "sourceText": "右がわの みせの パンは とても おいしいです。",
+      "kana": "ミギガワノ'、ミセ'ノ、パ'ンワ、トテモ'、オイシ'イデ_ス",
+      "sha256": "92df23246da9b02e454feee29914ce1612595db972d7085550a162a95af38fcd"
+    },
+    {
+      "file": "53f3-a2.mp3",
+      "written": "右がわに 雑誌が 二冊 あります。",
+      "reading": "みぎがわに ざっしが にさつ あります。",
+      "sourceText": "右がわに 雑誌が 二冊 あります。",
+      "kana": "ミギガ'/ワ'ニ、ザッシガ'、ニ'サツ、アリマ'_ス",
+      "sha256": "2e86d1a707761fac7bafdcf24fbdce7ae409716ae9a8fb223fd76d54940d55ba"
+    },
+    {
+      "file": "53f3-a3.mp3",
+      "written": "右がわの 教室は いつも にぎやかです。",
+      "reading": "みぎがわの きょうしつは いつも にぎやかです。",
+      "sourceText": "右がわの 教室は いつも にぎやかです。",
+      "kana": "ミギガワノ'、キョオ_シツワ'、イ'ツモ、ニギ'ヤカデ_ス",
+      "sha256": "136074478c68780abb2df503bf857d5c2619e33e76fb8972883f142258d4b539"
+    },
+    {
+      "file": "53f3-a4.mp3",
+      "written": "右手で てがみを たくさん 書きました。",
+      "reading": "みぎてで てがみを たくさん かきました。",
+      "sourceText": "右手で てがみを たくさん 書きました。",
+      "kana": "ミギテデ'、テガミオ'、タ_クサン'、カキマ'_シタ",
+      "sha256": "9dcf61f6324497342f885a59aa489826016a65205fb89dfabf322aeb4dbc6b3c"
+    },
+    {
+      "file": "5186-s1.mp3",
+      "written": "この 机は 円いです。",
+      "reading": "この つくえは まるいです。",
+      "sourceText": "この 机は 円いです。",
+      "kana": "コノ'、_ツクエワ'、マルイ'デ_ス",
+      "sha256": "c425f15f6f2f5495606cc33188d07587f90b90e8607125a2a2e59b1240ce1472"
+    },
+    {
+      "file": "5186-s2.mp3",
+      "written": "この かさは 三千円です。",
+      "reading": "この かさは さんぜんえんです。",
+      "sourceText": "この かさは 三千円です。",
+      "kana": "コノ'、カ'サワ、サンゼン'エンデ_ス",
+      "sha256": "1857d603ac5022935d6ee64c5ee6a2df783bde517d0ff4ca88f49d4cc8cca358"
+    },
+    {
+      "file": "5186-a1.mp3",
+      "written": "円い 箱を 一つ 買いました。",
+      "reading": "まるい はこを ひとつ かいました。",
+      "sourceText": "円い 箱を 一つ 買いました。",
+      "kana": "マルイ'、ハコオ'、_ヒト'ツ、カイマ'_シタ",
+      "sha256": "7740fbcefc51ca136ae601a500a1148efa2fb40c1cf65adfa777f9a620499d74"
+    },
+    {
+      "file": "5186-a2.mp3",
+      "written": "円けいの 机は とても 大きいです。",
+      "reading": "えんけいの つくえは とても おおきいです。",
+      "sourceText": "円けいの 机は とても 大きいです。",
+      "kana": "エン'ケイノ、_ツクエワ'、トテモ'、オオキ'イデ_ス",
+      "sha256": "1135b0ea05d606d32e482a56a08ce468a205d7d0a3d065c3a39f9c59db146ad6"
+    },
+    {
+      "file": "5186-a3.mp3",
+      "written": "千円の 辞書は とても 便利です。",
+      "reading": "せんえんの じしょは とても べんりです。",
+      "sourceText": "千円の 辞書は とても 便利です。",
+      "kana": "セン'エンノ、ジ'ショワ、トテモ'、ベ'ンリデ_ス",
+      "sha256": "d27d82486cfce788a92fda0433f623d85196b72fa9b2db3fd8972ba508074f0d"
+    },
+    {
+      "file": "5186-a4.mp3",
+      "written": "教室に 円い 机が たくさん あります。",
+      "reading": "きょうしつに まるい つくえが たくさん あります。",
+      "sourceText": "教室に 円い 机が たくさん あります。",
+      "kana": "キョオ_シツニ'、マルイ'、_ツクエガ'、タ_クサン'、アリマ'_ス",
+      "sha256": "09f867e3493c94ac19aca7bc48eb2343413a7a1137a3dd1b876d2235457ba0d7"
+    },
+    {
+      "file": "529b-s1.mp3",
+      "written": "力が あります。",
+      "reading": "ちからが あります。",
+      "sourceText": "力が あります。",
+      "kana": "_チカラ'ガ、アリマ'_ス",
+      "sha256": "5e7bed3f5ae963c18a867cf165ce5df160dcb553914258e20bc0f56c03cc52f6"
+    },
+    {
+      "file": "529b-s2.mp3",
+      "written": "その 人は 力もちです。",
+      "reading": "その ひとは ちからもちです。",
+      "sourceText": "その 人は 力もちです。",
+      "kana": "ソノ'、_ヒトワ'、_チカラ'モチデ_ス",
+      "sha256": "f9438f9d308b071f7279c148ce9434ea4cc3cf71ce87976e7691455e42233e88"
+    },
+    {
+      "file": "529b-a1.mp3",
+      "written": "学力の 試験は ちょっと 難しかったです。",
+      "reading": "がくりょくの しけんは ちょっと むずかしかったです。",
+      "sourceText": "学力の 試験は ちょっと 難しかったです。",
+      "kana": "ガク'リョクノ、_シケ'ンワ、チョ'ット、ムズカシ'カッタデ_ス",
+      "sha256": "ee2ef82d249073f55171f3192563216ee76bdd34a69e997dd1466bf7edc008df"
+    },
+    {
+      "file": "529b-a2.mp3",
+      "written": "力もちの 男の人が 三人 来ました。",
+      "reading": "ちからもちの おとこのひとが さんにん きました。",
+      "sourceText": "力もちの 男の人が 三人 来ました。",
+      "kana": "_チカラ'モチノ、オトコ'ノ/_ヒトガ'、サン'ニン、キマ'_シタ",
+      "sha256": "aee178db62755ce614c16d00ed959f1dfaec3861e16fcac96798b0c3d95ec8d4"
+    },
+    {
+      "file": "529b-a3.mp3",
+      "written": "その 子どもは 力が あまり ありません。",
+      "reading": "その こどもは ちからが あまり ありません。",
+      "sourceText": "その 子どもは 力が あまり ありません。",
+      "kana": "ソノ'、コドモワ'、_チカラ'ガ、アマリ'、アリマセ'ン",
+      "sha256": "71c67703315fd431478f6d32f9fd893fe8ca8cd16fae2f2b2a26d037045e6e72"
+    },
+    {
+      "file": "529b-a4.mp3",
+      "written": "子どもの 学力は ぜんぜん 悪くないです。",
+      "reading": "こどもの がくりょくは ぜんぜん わるくないです。",
+      "sourceText": "子どもの 学力は ぜんぜん 悪くないです。",
+      "kana": "コドモノ'、ガク'リョクワ、ゼンゼン'、ワル'クナイデ_ス",
+      "sha256": "f97c541ef2f1006ca40ef2df80057959c4afbc567cb9057d62be0c3c9a2ad957"
+    },
+    {
+      "file": "53e3-s1.mp3",
+      "written": "口べにを 買いました。",
+      "reading": "くちべにを かいました。",
+      "sourceText": "口べにを 買いました。",
+      "kana": "_クチベニオ'、カイマ'_シタ",
+      "sha256": "1ee2c48199d219f98ba69047ba58f5acb27dad49b48f7607003c00208145d8f7"
+    },
+    {
+      "file": "53e3-s2.mp3",
+      "written": "入り口は あそこです。",
+      "reading": "いりぐちは あそこです。",
+      "sourceText": "入り口は あそこです。",
+      "kana": "イリグチワ'、アソコデ'_ス",
+      "sha256": "d3c5a235f5c5dbb80567163564c303a45693b0f87c8a4724ae22f252d5fcd0d6"
+    },
+    {
+      "file": "53e3-a1.mp3",
+      "written": "ははは 口べにが 三本 あります。",
+      "reading": "ははは くちべにが さんぼん あります。",
+      "sourceText": "ははは 口べにが 三本 あります。",
+      "kana": "ハ'ハワ、_クチベニガ'、サン'ボン、アリマ'_ス",
+      "sha256": "255f4d8c80b7c3456de87e2143c4551635da47fc157b50be104dcd741e21f7d9"
+    },
+    {
+      "file": "53e3-a2.mp3",
+      "written": "口ぶえは とても 難しいです。",
+      "reading": "くちぶえは とても むずかしいです。",
+      "sourceText": "口ぶえは とても 難しいです。",
+      "kana": "_クチブエワ'、トテモ'、ムズカシ'イデ_ス",
+      "sha256": "b4c40a249b9e9c58fffb31cbb63928627d5f4b491744d07009f05aadd40f3baa"
+    },
+    {
+      "file": "53e3-a3.mp3",
+      "written": "えきの 入り口は いつも にぎやかです。",
+      "reading": "えきの いりぐちは いつも にぎやかです。",
+      "sourceText": "えきの 入り口は いつも にぎやかです。",
+      "kana": "エ'キノ、イリグチワ'、イ'ツモ、ニギ'ヤカデ_ス",
+      "sha256": "3e956db3b720d6abce1133da7a8a16a385140a6b30c736574f68e18ee9f7d71f"
+    },
+    {
+      "file": "53e3-a4.mp3",
+      "written": "大学の 入り口は 二つです。",
+      "reading": "だいがくの いりぐちは ふたつです。",
+      "sourceText": "大学の 入り口は 二つです。",
+      "kana": "ダイガクノ'、イリグチワ'、_フタツ'デ_ス",
+      "sha256": "11aa0146092cea2ad96ea0e98eaf7c861ec27374c81a6219107ccec2c877e138"
+    },
+    {
+      "file": "76ee-s1.mp3",
+      "written": "目と口を 描きます。",
+      "reading": "めとくちを かきます。",
+      "sourceText": "目と口を 書きます。",
+      "kana": "メ'ト_クチオ、カキマ'_ス",
+      "sha256": "ee7a59b3833d7d0f50f5adfd17b17717c7346b08e3056683ae57e05ef4260578"
+    },
+    {
+      "file": "76ee-s2.mp3",
+      "written": "旅行の 目てきは 日本の りょうりです。",
+      "reading": "りょこうの もくてきは にほんの りょうりです。",
+      "sourceText": "旅行の 目てきは 日本の りょうりです。",
+      "kana": "リョコオノ'、モ_クテキワ'、ニホ'ンノ、リョ'オリデ_ス",
+      "sha256": "66b54d3d9b39dd0a0916e83113878dd72c687a2cf3235bf4fe832055864c2ee0"
+    },
+    {
+      "file": "76ee-a1.mp3",
+      "written": "その 店員は 目つきが ちょっと 悪いです。",
+      "reading": "その てんいんは めつきが ちょっと わるいです。",
+      "sourceText": "その 店員は 目つきが ちょっと 悪いです。",
+      "kana": "ソノ'、テンインワ'、メ'_ツキガ、チョ'ット、ワル'イデ_ス",
+      "sha256": "483d7fef9341b4e64de444f5e7e745294cb8c661f737eb72f2489735f75b4fb7"
+    },
+    {
+      "file": "76ee-a2.mp3",
+      "written": "目てきを 三つ 書きました。",
+      "reading": "もくてきを みっつ かきました。",
+      "sourceText": "目てきを 三つ 書きました。",
+      "kana": "モ_クテキオ'、ミッツ'、カキマ'_シタ",
+      "sha256": "fe17901a5c19756c655e00bb8e93d1422a774f92a5d28bce3e2c996d37f4d2dc"
+    },
+    {
+      "file": "76ee-a3.mp3",
+      "written": "鯉の 目と口は かなり 大きいです。",
+      "reading": "こいの めとくちは かなり おおきいです。",
+      "sourceText": "鯉の 目と口は かなり 大きいです。",
+      "kana": "コ'イノ、メ'ト_クチワ、カ'ナリ、オオキ'イデ_ス",
+      "sha256": "8d00198f6fc47806f96e4d3aa012e0846e421ea8dd7aef0dacc99e94bc52a2a5"
+    },
+    {
+      "file": "76ee-a4.mp3",
+      "written": "この 授業の 目てきは あまり 分かりません。",
+      "reading": "この じゅぎょうの もくてきは あまり わかりません。",
+      "sourceText": "この 授業の 目てきは あまり 分かりません。",
+      "kana": "コノ'、ジュ'ギョオノ、モ_クテキワ'、アマリ'、ワカリマセ'ン",
+      "sha256": "3fdc28ba343b205ad717ab3583fd0825baf73265af5c4b05b297ee5818d048ec"
+    },
+    {
+      "file": "624b-s1.mp3",
+      "written": "はく手を します。",
+      "reading": "はくしゅを します。",
+      "sourceText": "はく手を します。",
+      "kana": "ハ'_クシュオ、シマ'_ス",
+      "sha256": "6cdb32b0e7a18f2b1248de4605433f887320cb8d94b2b52af5a1dea64aba94c7"
+    },
+    {
+      "file": "624b-s2.mp3",
+      "written": "右手で えを 描きます。",
+      "reading": "みぎてで えを かきます。",
+      "sourceText": "右手で えを 書きます。",
+      "kana": "ミギテデ'、エオ'、カキマ'_ス",
+      "sha256": "04970af576d86f64fbf33c2c86cd220e649d7d294a4cf8ed23490135b0bd8e2b"
+    },
+    {
+      "file": "624b-a1.mp3",
+      "written": "皆さんの はく手は とても 嬉しかったです。",
+      "reading": "みなさんの はくしゅは とても うれしかったです。",
+      "sourceText": "皆さんの はく手は とても 嬉しかったです。",
+      "kana": "ミナ'サンノ、ハ'_クシュワ、トテモ'、ウレシ'カッタデ_ス",
+      "sha256": "9ccd7903a2d3056cb9f6623b3c9d3144f69621ee40f9be29a935f51855d7421d"
+    },
+    {
+      "file": "624b-a2.mp3",
+      "written": "手帳に 質問を 三つ 書きました。",
+      "reading": "てちょうに しつもんを みっつ かきました。",
+      "sourceText": "手帳に 質問を 三つ 書きました。",
+      "kana": "テチョオニ'、_シツモンオ'、ミッツ'、カキマ'_シタ",
+      "sha256": "9a5bef33a0fe49fdf6695ef5ef394928af57d4f2541786998368ed39e5e0dc29"
+    },
+    {
+      "file": "624b-a3.mp3",
+      "written": "ははは うたが とても 上手です。",
+      "reading": "ははは うたが とても じょうずです。",
+      "sourceText": "ははは うたが とても 上手です。",
+      "kana": "ハ'ハワ、ウタ'ガ、トテモ'、ジョオズ'デ_ス",
+      "sha256": "9da9ec5570aa94880c1adbbf0aaed1053709bea8ab715f1aa74025b7b423952c"
+    },
+    {
+      "file": "624b-a4.mp3",
+      "written": "わたしは 手帳が 二冊 あります。",
+      "reading": "わたしは てちょうが にさつ あります。",
+      "sourceText": "わたしは 手帳が 二冊 あります。",
+      "kana": "ワタシワ'、テチョオガ'、ニ'サツ、アリマ'_ス",
+      "sha256": "c71da5440ae54d8959b5a3ed4dd6249f2b5a528a59586a2da2ffc5a30be66eee"
+    },
+    {
+      "file": "8db3-s1.mp3",
+      "written": "足が 長いです。",
+      "reading": "あしが ながいです。",
+      "sourceText": "足が 長いです。",
+      "kana": "アシ'ガ、ナガ'イデ_ス",
+      "sha256": "76594c59984fd933360450d8e01dafc1288800a203bc7b618d68863dd639acea"
+    },
+    {
+      "file": "8db3-s2.mp3",
+      "written": "早足で えきへ 行きます。",
+      "reading": "はやあしで えきへ いきます。",
+      "sourceText": "早足で えきへ 行きます。",
+      "kana": "ハヤ'アシデ、エ'キエ、イキマ'_ス",
+      "sha256": "e238b695a4ef718ad6fd5ee3f1e7842f5ececda8dd3cf08a96798a8bd88abac3"
+    },
+    {
+      "file": "8db3-a1.mp3",
+      "written": "山みちに 馬の 足あとが たくさん あります。",
+      "reading": "やまみちに うまの あしあとが たくさん あります。",
+      "sourceText": "山みちに 馬の 足あとが たくさん あります。",
+      "kana": "ヤマ'ミチニ、ウマ'ノ、アシア'トガ、タ_クサン'、アリマ'_ス",
+      "sha256": "ce412f456ee4e4612313a1b704b840b46505fda25157d2277c2e48de476d4e7e"
+    },
+    {
+      "file": "8db3-a2.mp3",
+      "written": "早足で 長い 山みちを 歩きました。",
+      "reading": "はやあしで ながい やまみちを あるきました。",
+      "sourceText": "早足で 長い 山みちを 歩きました。",
+      "kana": "ハヤ'アシデ、ナガ'イ、ヤマ'ミチオ、アルキマ'_シタ",
+      "sha256": "c30b4ed1399da913d6c529abdc4258283afd6c75f49db9de3ca585d75d6d4d3d"
+    },
+    {
+      "file": "8db3-a3.mp3",
+      "written": "きれいな 靴を 二足 買いました。",
+      "reading": "きれいな くつを にそく かいました。",
+      "sourceText": "きれいな 靴を 二足 買いました。",
+      "kana": "キ'レイナ、_クツ'オ、ニ'ソク、カイマ'_シタ",
+      "sha256": "d6944e478e08162d9e153959612d4f50b851d650a9b510d304b1ce30f401984a"
+    },
+    {
+      "file": "8db3-a4.mp3",
+      "written": "わたしは 足が ぜんぜん 速くないです。",
+      "reading": "わたしは あしが ぜんぜん はやくないです。",
+      "sourceText": "わたしは 足が ぜんぜん 速くないです。",
+      "kana": "ワタシワ'、アシ'ガ、ゼンゼン'、ハヤ'クナイデ_ス",
+      "sha256": "8cb7ba427b882c12b2127d37c9ad67e4fba1fd52d0408f0dad85cafbe5227c90"
+    },
+    {
+      "file": "8033-s1.mp3",
+      "written": "耳うちを します。",
+      "reading": "みみうちを します。",
+      "sourceText": "耳うちを します。",
+      "kana": "ミミウチオ'、シマ'_ス",
+      "sha256": "981038300ca1faf7e852f7e9967c0b3425d66ebd61cec7a57ad490a800850996"
+    },
+    {
+      "file": "8033-s2.mp3",
+      "written": "耳たぶが 大きいです。",
+      "reading": "みみたぶが おおきいです。",
+      "sourceText": "耳たぶが 大きいです。",
+      "kana": "ミミタ'ブガ、オオキ'イデ_ス",
+      "sha256": "dd34264ca78b2c01efefcdf9a13346288abf66198c6469e8fdd50826b267a463"
+    },
+    {
+      "file": "8033-a1.mp3",
+      "written": "この 子犬は 目と耳が とても いいです。",
+      "reading": "この こいぬは めとみみが とても いいです。",
+      "sourceText": "この 子犬は 目と耳が とても いいです。",
+      "kana": "コノ'、コイヌワ'、メ'ト/ミミ'ガ、トテモ'、イ'イデ_ス",
+      "sha256": "53e94d956e5adb3c75783fc4c931bf8701be063efcec1bc3f08d7eb955762a85"
+    },
+    {
+      "file": "8033-a2.mp3",
+      "written": "先生の 耳うちは ぜんぜん 分かりませんでした。",
+      "reading": "せんせいの みみうちは ぜんぜん わかりませんでした。",
+      "sourceText": "先生の 耳うちは ぜんぜん 分かりませんでした。",
+      "kana": "センセ'エノ、ミミウチワ'、ゼンゼン'、ワカリマセ'ンデ_シタ",
+      "sha256": "94e5809df4d098a85aa68b2ea08e5249c5a5edbd19623d3fbe6d55f36833d906"
+    },
+    {
+      "file": "8033-a3.mp3",
+      "written": "赤ちゃんの 耳たぶは とても 小さいです。",
+      "reading": "あかちゃんの みみたぶは とても ちいさいです。",
+      "sourceText": "赤ちゃんの 耳たぶは とても 小さいです。",
+      "kana": "ア'カチャンノ、ミミタ'ブワ、トテモ'、チイサ'イデ_ス",
+      "sha256": "ef8e3730d8c69a7f178417c607d3a5a4c150681ea61852a67245e07949112af4"
+    },
+    {
+      "file": "8033-a4.mp3",
+      "written": "耳うちで 質問を 一つ しました。",
+      "reading": "みみうちで しつもんを ひとつ しました。",
+      "sourceText": "耳うちで 質問を 一つ しました。",
+      "kana": "ミミウチデ'、_シツモンオ'、_ヒト'ツ、シマ'_シタ",
+      "sha256": "7f578168ab22969eafbbbf5983b38d4a2ea96c71cf4b2155a6cce67d25c8ed6e"
+    },
+    {
+      "file": "97f3-s1.mp3",
+      "written": "この 音色が すきです。",
+      "reading": "この ねいろが すきです。",
+      "sourceText": "この 音色が すきです。",
+      "kana": "コノ'、ネイロガ'、_スキデ'_ス",
+      "sha256": "beb0e257bc01085db36adf9f7547a531c8efffdcdcfdf62061c7f0c115e810c3"
+    },
+    {
+      "file": "97f3-s2.mp3",
+      "written": "音がくを 聞きます。",
+      "reading": "おんがくを ききます。",
+      "sourceText": "音がくを 聞きます。",
+      "kana": "オ'ンガクオ、_キキマ'_ス",
+      "sha256": "a52b20957d66937653f0e6ed7522e8493dab335f365f541e0f0ec7271d976a39"
+    },
+    {
+      "file": "97f3-a1.mp3",
+      "written": "この テレビは 音が とても 悪いです。",
+      "reading": "この テレビは おとが とても わるいです。",
+      "sourceText": "この テレビは 音が とても 悪いです。",
+      "kana": "コノ'、テ'レビワ、オト'ガ、トテモ'、ワル'イデ_ス",
+      "sha256": "3b987d752c823d5053ca79d3bae3bd0316dd69100c8de5bc5e3a93ef0a8796f7"
+    },
+    {
+      "file": "97f3-a2.mp3",
+      "written": "コンサートの 音は かなり 大きかったです。",
+      "reading": "コンサートの おとは かなり おおきかったです。",
+      "sourceText": "コンサートの 音は かなり 大きかったです。",
+      "kana": "コ'ンサアトノ、オト'ワ、カ'ナリ、オオキ'カッタデ_ス",
+      "sha256": "df3d8404f7bb13cc67c2e379430c42e9d0b8993be3344ac54061d046f33ef493"
+    },
+    {
+      "file": "97f3-a3.mp3",
+      "written": "音ぷを 三つ 書きました。",
+      "reading": "おんぷを みっつ かきました。",
+      "sourceText": "音ぷを 三つ 書きました。",
+      "kana": "オンプオ'、ミッツ'、カキマ'_シタ",
+      "sha256": "b0520bb669e0e7964a01820626ca90c85c4664ce632a9e26a9f89cb334379a3d"
+    },
+    {
+      "file": "97f3-a4.mp3",
+      "written": "音声は あまり よくなかったです。",
+      "reading": "おんせいは あまり よくなかったです。",
+      "sourceText": "音声は あまり よくなかったです。",
+      "kana": "オ'ンセエワ、アマリ'、ヨ'クナカッタデ_ス",
+      "sha256": "dc8601ce95abccd2515ffa5be6d80fa8f5408a3db74093417b8402f599282b9d"
+    },
+    {
+      "file": "898b-s1.mp3",
+      "written": "みんなで 写真を 見ます。",
+      "reading": "みんなで しゃしんを みます。",
+      "sourceText": "みんなで 写真を 見ます。",
+      "kana": "ミンナ'デ、シャシンオ'、ミマ'_ス",
+      "sha256": "a118a88b29ad9c1b3b5831bf563a2f857c1757f4953013313330e0db46feb6ed"
+    },
+    {
+      "file": "898b-s2.mp3",
+      "written": "大学を 見学します。",
+      "reading": "だいがくを けんがくします。",
+      "sourceText": "大学を 見学します。",
+      "kana": "ダイガクオ'、ケンガ_ク'/シマ'_ス",
+      "sha256": "d68d81c9693e55229f1a1ee48e9fa58e9c8b87f7888d252f91b2695d989929ad"
+    },
+    {
+      "file": "898b-a1.mp3",
+      "written": "日本の えいがを たくさん 見ました。",
+      "reading": "にほんの えいがを たくさん みました。",
+      "sourceText": "日本の えいがを たくさん 見ました。",
+      "kana": "ニホ'ンノ、エ'イガオ、タ_クサン'、ミマ'_シタ",
+      "sha256": "2f0d6b6bf13ec7601b6ccc8375a5446a411e45118640390a5bc0402444aa3401"
+    },
+    {
+      "file": "898b-a2.mp3",
+      "written": "銀行の 見学は とても 面白かったです。",
+      "reading": "ぎんこうの けんがくは とても おもしろかったです。",
+      "sourceText": "銀行の 見学は とても 面白かったです。",
+      "kana": "ギンコオノ'、ケンガクワ'、トテモ'、オモシロ'カッタデ_ス",
+      "sha256": "76a07d473c9685138f718e00f4637e5d8006a3b1bb9ac773e665f19f98a1877f"
+    },
+    {
+      "file": "898b-a3.mp3",
+      "written": "日本で 面白い かぶきを 見ました。",
+      "reading": "にほんで おもしろい かぶきを みました。",
+      "sourceText": "日本で 面白い かぶきを 見ました。",
+      "kana": "ニホ'ンデ、オモシロ'イ、カブキオ'、ミマ'_シタ",
+      "sha256": "6fc281a3c0a9a8f2b81a8bb90a11afbcb11fb242e5a4f5e9bd1683413cfa2313"
+    },
+    {
+      "file": "898b-a4.mp3",
+      "written": "火山が 二つ 見えます。",
+      "reading": "かざんが ふたつ みえます。",
+      "sourceText": "火山が 二つ 見えます。",
+      "kana": "カ'ザンガ、_フタツ'、ミエマ'_ス",
+      "sha256": "5771d0df8467b4b841ca014e84810582f1707f1a85d42ad41c9677d750ad14e3"
+    },
+    {
+      "file": "7acb-s1.mp3",
+      "written": "学生が 立ちます。",
+      "reading": "がくせいが たちます。",
+      "sourceText": "学生が 立ちます。",
+      "kana": "ガ_クセエガ'、タチマ'_ス",
+      "sha256": "a16628c8d888dfc4c95a8edf85a3cd4f85181f278415f958aec255f13f6a8e6e"
+    },
+    {
+      "file": "7acb-s2.mp3",
+      "written": "いすから 立ちました。",
+      "reading": "いすから たちました。",
+      "sourceText": "いすから 立ちました。",
+      "kana": "イ_スカラ'、タチマ'_シタ",
+      "sha256": "8a62ce0c09fac0766bc6af1f98082dc83e5fa65ace4859325e0d9dc28f6f1b90"
+    },
+    {
+      "file": "7acb-a1.mp3",
+      "written": "大きい 写真を 机の 上に 立てました。",
+      "reading": "おおきい しゃしんを つくえの うえに たてました。",
+      "sourceText": "大きい 写真を 机の 上に 立てました。",
+      "kana": "オオキ'イ、シャシンオ'、_ツクエノ'、ウエニ'、タテマ'_シタ",
+      "sha256": "d7c29a83feab49c59dbf15893a3dd6faab9dc2542adb934d3230ac5f1ea436fa"
+    },
+    {
+      "file": "7acb-a2.mp3",
+      "written": "その 子どもは いつも いすの 上に 立ちます。",
+      "reading": "その こどもは いつも いすの うえに たちます。",
+      "sourceText": "その 子どもは いつも いすの 上に 立ちます。",
+      "kana": "ソノ'、コドモワ'、イ'ツモ、イスノ'、ウエニ'、タチマ'_ス",
+      "sha256": "d1e79b20991960474dfe4147f41e795b62a7f5673e2dad8338f98786b5629dc3"
+    },
+    {
+      "file": "7acb-a3.mp3",
+      "written": "その 子どもは 一歳で 立ちました。",
+      "reading": "その こどもは いっさいで たちました。",
+      "sourceText": "その 子どもは 一歳で 立ちました。",
+      "kana": "ソノ'、コドモワ'、イッ'サイデ、タチマ'_シタ",
+      "sha256": "862c6b5e2e3ea926027008b87c920637c5ab476202a45f1912821498f494cf05"
+    },
+    {
+      "file": "7acb-a4.mp3",
+      "written": "わたしは いつも き立と 言います。",
+      "reading": "わたしは いつも きりつと いいます。",
+      "sourceText": "わたしは いつも き立と 言います。",
+      "kana": "ワタシワ'、イ'ツモ、キリ_ツト'、イイマ'_ス",
+      "sha256": "1597754e9f59d85cb0223b6bf4efd33d338e935f238fc9ddc1af371556ba513b"
+    },
+    {
+      "file": "4f11-s1.mp3",
+      "written": "休憩します。",
+      "reading": "きゅうけいします。",
+      "sourceText": "休憩します。",
+      "kana": "キュウケエ'/シマ'_ス",
+      "sha256": "4b14915b404f19b7d4cd06ce586faa7751d76e5fe8ad40e61757633d854798f0"
+    },
+    {
+      "file": "4f11-s2.mp3",
+      "written": "今日は 休みます。",
+      "reading": "きょうは やすみます。",
+      "sourceText": "今日は 休みます。",
+      "kana": "キョ'オワ、ヤスミマ'_ス",
+      "sha256": "d1170d5feb3b8d4a8a0f5e74c7b012f82c2094b263cb406269b9a47566cdf178"
+    },
+    {
+      "file": "4f11-a1.mp3",
+      "written": "ひる休みは いつも 教室で 食べます。",
+      "reading": "ひるやすみは いつも きょうしつで たべます。",
+      "sourceText": "ひる休みは いつも 教室で 食べます。",
+      "kana": "ヒルヤ'スミワ、イ'ツモ、キョオ_シツデ'、タベマ'_ス",
+      "sha256": "6a2d5b7939c6561928c25103265a68d16e13a94184769b2810ed278a10ac8530"
+    },
+    {
+      "file": "4f11-a2.mp3",
+      "written": "休憩は すこし 長かったです。",
+      "reading": "きゅうけいは すこし ながかったです。",
+      "sourceText": "休憩は すこし 長かったです。",
+      "kana": "キュウケエワ'、_スコ'シ、ナガ'カッタデ_ス",
+      "sha256": "b92c57874a035bc2cdcb8ea443f69f3af6f9362476365713295e81fa07d7bd57"
+    },
+    {
+      "file": "4f11-a3.mp3",
+      "written": "大学を 二週間 休みました。",
+      "reading": "だいがくを にしゅうかん やすみました。",
+      "sourceText": "大学を 二週間 休みました。",
+      "kana": "ダイガクオ'、ニシュ'ウカン、ヤスミマ'_シタ",
+      "sha256": "d6e1718ab260785c7deaf08831626b2767b41bb4b6d06cfa1ce3060d876b054e"
+    },
+    {
+      "file": "4f11-a4.mp3",
+      "written": "休日の 大学は とても 静かです。",
+      "reading": "きゅうじつの だいがくは とても しずかです。",
+      "sourceText": "休日の 大学は とても 静かです。",
+      "kana": "キュウジツノ'、ダイガクワ'、トテモ'、シ'ズカデ_ス",
+      "sha256": "cba94a8e776c1438800f2a830160c64155f76a4da8c2ee2fec18160fc7f4a4bb"
+    },
+    {
+      "file": "51fa-s1.mp3",
+      "written": "教室を 出ます。",
+      "reading": "きょうしつを でます。",
+      "sourceText": "教室を 出ます。",
+      "kana": "キョオ_シツオ'、デマ'_ス",
+      "sha256": "e91ddd4721afa3ce1631c2da59b298230d0461fc308de97975e0e0182bc1bf94"
+    },
+    {
+      "file": "51fa-s2.mp3",
+      "written": "らいしゅう 宿題を 出します。",
+      "reading": "らいしゅう しゅくだいを だします。",
+      "sourceText": "らいしゅう 宿題を 出します。",
+      "kana": "ライシュウ'、_シュクダイオ'、ダシマ'_ス",
+      "sha256": "4f08384751c864e924006d13a6188eb099577e88b320f5c0e51982d2822d9dd3"
+    },
+    {
+      "file": "51fa-a1.mp3",
+      "written": "出ぱつは とても 早かったです。",
+      "reading": "しゅっぱつは とても はやかったです。",
+      "sourceText": "出ぱつは とても 早かったです。",
+      "kana": "シュッパツワ'、トテモ'、ハヤ'カッタデ_ス",
+      "sha256": "29c15468ded4cb2007ddd9057f92d5c2001b9935aca95aa8c90599b486332c33"
+    },
+    {
+      "file": "51fa-a2.mp3",
+      "written": "わたしは 宿題を いつも 早く 出します。",
+      "reading": "わたしは しゅくだいを いつも はやく だします。",
+      "sourceText": "わたしは 宿題を いつも 早く 出します。",
+      "kana": "ワタシワ'、_シュクダイオ'、イ'ツモ、ハ'ヤク、ダシマ'_ス",
+      "sha256": "cde60378cc49d98ac3884ea818df5229ef400cc9959ee7c56e3ad092402523f7"
+    },
+    {
+      "file": "51fa-a3.mp3",
+      "written": "宿題の かみを 八枚 出しました。",
+      "reading": "しゅくだいの かみを はちまい だしました。",
+      "sourceText": "宿題の かみを 八枚 出しました。",
+      "kana": "_シュクダイノ'、カ'ミオ、ハチ'マイ、ダシマ'_シタ",
+      "sha256": "bb2c956cc9f8a51e045a570ac8502b3133cda96985c37a29abd564c03068477e"
+    },
+    {
+      "file": "51fa-a4.mp3",
+      "written": "ノートを 二冊 机の 上に 出しました。",
+      "reading": "ノートを にさつ つくえの うえに だしました。",
+      "sourceText": "ノートを 二冊 机の 上に 出しました。",
+      "kana": "ノ'オトオ、ニ'サツ、_ツクエノ'、ウエニ'、ダシマ'_シタ",
+      "sha256": "cb2a9c2a9c945801602e748a0f50e6132ce8eb64c45917a4db6dcf6c95b534b2"
+    },
+    {
+      "file": "5165-s1.mp3",
+      "written": "教室に 入ります。",
+      "reading": "きょうしつに はいります。",
+      "sourceText": "教室に 入ります。",
+      "kana": "キョオ_シツニ'、ハイリマ'_ス",
+      "sha256": "3709e763a314d2bffb47d0dc84fec2cf4ee7f2530799c5b48738340961699995"
+    },
+    {
+      "file": "5165-s2.mp3",
+      "written": "大学に 入学しました。",
+      "reading": "だいがくに にゅうがくしました。",
+      "sourceText": "大学に 入学しました。",
+      "kana": "ダイガクニ'、ニュウガ_ク'/シマ'_シタ",
+      "sha256": "bf111db18ccbc90cca1cf100c883ceed819d3035641efd38a4fd8de0678d09d0"
+    },
+    {
+      "file": "5165-a1.mp3",
+      "written": "いつも ともだちと いっしょに 教室に 入ります。",
+      "reading": "いつも ともだちと いっしょに きょうしつに はいります。",
+      "sourceText": "いつも ともだちと いっしょに 教室に 入ります。",
+      "kana": "イ'ツモ、トモダ_チト'、イッショニ'、キョオ_シツニ'、ハイリマ'_ス",
+      "sha256": "e4a22607e850f60f92a36ec11d7b54f13c0f449f2c7e79dbecc00207b7ed0aad"
+    },
+    {
+      "file": "5165-a2.mp3",
+      "written": "大学の 入学は とても 嬉しかったです。",
+      "reading": "だいがくの にゅうがくは とても うれしかったです。",
+      "sourceText": "大学の 入学は とても 嬉しかったです。",
+      "kana": "ダイガクノ'、ニュウガクワ'、トテモ'、ウレシ'カッタデ_ス",
+      "sha256": "f1dd5ba39c40676636178dec81b925437f422e5172eb86751f5ced6394f42cdf"
+    },
+    {
+      "file": "5165-a3.mp3",
+      "written": "子どもは 六歳で 入学しました。",
+      "reading": "こどもは ろくさいで にゅうがくしました。",
+      "sourceText": "子どもは 六歳で 入学しました。",
+      "kana": "コドモワ'、ロク'サイデ、ニュウガ_ク'/シマ'_シタ",
+      "sha256": "dfffcc0b9d73a6b0c5f175d187cdd3d6042af61a2ae0da5c7d42f9ec9eeff2eb"
+    },
+    {
+      "file": "5165-a4.mp3",
+      "written": "やすい レストランに 入りました。",
+      "reading": "やすい レストランに はいりました。",
+      "sourceText": "やすい レストランに 入りました。",
+      "kana": "ヤス'イ、レ'_ストランニ、ハイリマ'_シタ",
+      "sha256": "78eac1484c827bc8fff776dffab46c8abbbbbf946f1080fc0c3d9d99f422c538"
+    },
+    {
+      "file": "5973-s1.mp3",
+      "written": "女の人と 話しました。",
+      "reading": "おんなのひとと はなしました。",
+      "sourceText": "女の人と 話しました。",
+      "kana": "オンナ'ノ/_ヒトト'、ハナシマ'_シタ",
+      "sha256": "af142b566ec175d188ce2cfa2ee4ac024a8004562fe6f222d256abe83ac331f0"
+    },
+    {
+      "file": "5973-s2.mp3",
+      "written": "その 女の人は いしゃです。",
+      "reading": "その おんなのひとは いしゃです。",
+      "sourceText": "その 女の人は いしゃです。",
+      "kana": "ソノ'、オンナ'ノ/_ヒトワ'、イ'シャデ_ス",
+      "sha256": "be2e564c1a2b5b880479b0707a5528f7c9099610e6c8f83244f4a75ffd715743"
+    },
+    {
+      "file": "5973-a1.mp3",
+      "written": "その 女の人は かばんが 二つ あります。",
+      "reading": "その おんなのひとは かばんが ふたつ あります。",
+      "sourceText": "その 女の人は かばんが 二つ あります。",
+      "kana": "ソノ'、オンナ'ノ/_ヒトワ'、カバンガ'、_フタツ'、アリマ'_ス",
+      "sha256": "5b8479c5251dd0c80c378b2e8e60a8fc96516826f9332400db0833a6e02da7bd"
+    },
+    {
+      "file": "5973-a2.mp3",
+      "written": "その 女子は とても 元気です。",
+      "reading": "その じょしは とても げんきです。",
+      "sourceText": "その 女子は とても 元気です。",
+      "kana": "ソノ'、ジョ'シワ、トテモ'、ゲ'ンキデ_ス",
+      "sha256": "4e3ea47b9888739272c3576ee05fa7061fe52b05d342e3c76e53645f29e2e495"
+    },
+    {
+      "file": "5973-a3.mp3",
+      "written": "女子の テニスは とても 面白いです。",
+      "reading": "じょしの テニスは とても おもしろいです。",
+      "sourceText": "女子の テニスは とても 面白いです。",
+      "kana": "ジョ'シノ、テ'ニスワ、トテモ'、オモシロ'イデ_ス",
+      "sha256": "2c05d1f139b79f3273bc21d5af7f2166b4e162cffb4f3477f4297a083dea583b"
+    },
+    {
+      "file": "5973-a4.mp3",
+      "written": "女と男の 学生は いつも いっしょに 勉強します。",
+      "reading": "おんなとおとこの がくせいは いつも いっしょに べんきょうします。",
+      "sourceText": "女と男の 学生は いつも いっしょに 勉強します。",
+      "kana": "オンナ'ト/オトコ'ノ、ガ_クセエワ'、イ'ツモ、イッショニ'、ベンキョオ'/シマ'_ス",
+      "sha256": "703f249f54ab4a69bbef7c311c160702edd61b62dd667a4dcf5209db6ecc8248"
+    },
+    {
+      "file": "7537-s1.mp3",
+      "written": "その 男の人は かいしゃいんです。",
+      "reading": "その おとこのひとは かいしゃいんです。",
+      "sourceText": "その 男の人は かいしゃいんです。",
+      "kana": "ソノ'、オトコ'ノ/_ヒトワ'、カ'イシャ/イ'/ン'デ_ス",
+      "sha256": "7389f3b093e3da9d3e9f6510bb6ad546f3afdd47bf4a00f7e452f9c5fed45580"
+    },
+    {
+      "file": "7537-s2.mp3",
+      "written": "男の子が テニスを します。",
+      "reading": "おとこのこが テニスを します。",
+      "sourceText": "男の子が テニスを します。",
+      "kana": "オトコ'ノコガ、テ'ニスオ、シマ'_ス",
+      "sha256": "f946cc16fbf1ebaab1911ccb1aa088f627d7dd29147283ca04355bc5575eaa27"
+    },
+    {
+      "file": "7537-a1.mp3",
+      "written": "男の子の 字は すこし 小さいです。",
+      "reading": "おとこのこの じは すこし ちいさいです。",
+      "sourceText": "男の子の 字は すこし 小さいです。",
+      "kana": "オトコ'ノコノ、ジ'ワ、_スコ'シ、チイサ'イデ_ス",
+      "sha256": "58422fad1fe12caa4debf4f0d97b45aae50a7aa66a1e3a0f6bf624088b837895"
+    },
+    {
+      "file": "7537-a2.mp3",
+      "written": "男の子は 卵を 三個 食べました。",
+      "reading": "おとこのこは たまごを さんこ たべました。",
+      "sourceText": "男の子は 卵を 三個 食べました。",
+      "kana": "オトコ'ノコワ、タマ'ゴオ、サンコ'、タベマ'_シタ",
+      "sha256": "eb486c2d8eea1d4b80b5e7119fa231dcb5afdde444cd7b9d1f3b5fdc7281ff85"
+    },
+    {
+      "file": "7537-a3.mp3",
+      "written": "男子は いつも サッカーを します。",
+      "reading": "だんしは いつも サッカーを します。",
+      "sourceText": "男子は いつも サッカーを します。",
+      "kana": "ダ'ンシワ、イ'ツモ、サ'ッカアオ、シマ'_ス",
+      "sha256": "24fd2f72a6ee1ae027e7be128a32f990a49c2d26b9e6de0bcbee8a346563eed7"
+    },
+    {
+      "file": "7537-a4.mp3",
+      "written": "男の人の 靴は とても 大きいです。",
+      "reading": "おとこのひとの くつは とても おおきいです。",
+      "sourceText": "男の人の 靴は とても 大きいです。",
+      "kana": "オトコ'ノ/_ヒトノ'、_クツ'ワ、トテモ'、オオキ'イデ_ス",
+      "sha256": "b27c21691f0fe4fae4d7ee432603392cf44ae9efb0cd8c57b9982c409ad9a217"
+    },
+    {
+      "file": "5b50-s1.mp3",
+      "written": "子どもが います。",
+      "reading": "こどもが います。",
+      "sourceText": "子どもが います。",
+      "kana": "コドモガ'、イマ'_ス",
+      "sha256": "8777adf713c1049f4000e7fd292e33e2c76437f232ff3e0f2f3d32c67f236407"
+    },
+    {
+      "file": "5b50-s2.mp3",
+      "written": "子犬は 白いです。",
+      "reading": "こいぬは しろいです。",
+      "sourceText": "子犬は 白いです。",
+      "kana": "コイヌワ'、シロ'イデ_ス",
+      "sha256": "11cc9858c7a9adb9ca4cd1146165fe72609504cddd6e883a1997a2321b53a6cb"
+    },
+    {
+      "file": "5b50-a1.mp3",
+      "written": "子どもに え本を 二冊 買いました。",
+      "reading": "こどもに えほんを にさつ かいました。",
+      "sourceText": "子どもに え本を 二冊 買いました。",
+      "kana": "コドモニ'、エ'ホンオ、ニ'サツ、カイマ'_シタ",
+      "sha256": "5f69882c48856be799aecb272f241a76f9cd1d536133e53b9d24aa8c6a0a45e0"
+    },
+    {
+      "file": "5b50-a2.mp3",
+      "written": "その 子犬は すこし 黒いです。",
+      "reading": "その こいぬは すこし くろいです。",
+      "sourceText": "その 子犬は すこし 黒いです。",
+      "kana": "ソノ'、コイヌワ'、_スコ'シ、クロ'イデ_ス",
+      "sha256": "cae053568c581fef1d7c25a4914585d197c342886085e6c7f16af2f089fd8381"
+    },
+    {
+      "file": "5b50-a3.mp3",
+      "written": "子どもは くだものを たくさん 食べます。",
+      "reading": "こどもは くだものを たくさん たべます。",
+      "sourceText": "子どもは くだものを たくさん 食べます。",
+      "kana": "コドモワ'、クダ'モノオ、タ_クサン'、タベマ'_ス",
+      "sha256": "75612f5a671f3f8b89214f088e8748c4d3652c3685153fd5a63cd57f37952502"
+    },
+    {
+      "file": "5b50-a4.mp3",
+      "written": "その 子どもは とても 早く 起きます。",
+      "reading": "その こどもは とても はやく おきます。",
+      "sourceText": "その 子どもは とても 早く 起きます。",
+      "kana": "ソノ'、コドモワ'、トテモ'、ハ'ヤク、オキマ'_ス",
+      "sha256": "3195b26f663b705c269d60612e0ae59119257b69be85d2fdf558d0c473818071"
+    },
+    {
+      "file": "4eba-s1.mp3",
+      "written": "わたしは スペイン人です。",
+      "reading": "わたしは スペインじんです。",
+      "sourceText": "わたしは スペイン人です。",
+      "kana": "ワタシワ'、_スペイン'ジンデ_ス",
+      "sha256": "0083baa4084cd49d7fa4654a7bb943a79f42e6f97ecbfe0ee586a6a500c043e0"
+    },
+    {
+      "file": "4eba-s2.mp3",
+      "written": "何人 いますか。",
+      "reading": "なんにん いますか。",
+      "sourceText": "何人 いますか。",
+      "kana": "ナン'ニン、イマ'_スカ",
+      "sha256": "2df293a18a190872da960c6d8995204d48169e113566ee004827e0f867111d2b"
+    },
+    {
+      "file": "4eba-a1.mp3",
+      "written": "日よう日は 人ごみが とても 大へんです。",
+      "reading": "にちようびは ひとごみが とても たいへんです。",
+      "sourceText": "日よう日は 人ごみが とても 大へんです。",
+      "kana": "ニチヨオ'ビワ、_ヒトゴミガ'、トテモ'、タイヘンデ'_ス",
+      "sha256": "ef3a7cd24e1ab9983c4d35e17530ee2f4adde272c38f940a4981640273800fdc"
+    },
+    {
+      "file": "4eba-a2.mp3",
+      "written": "日本人の ともだちは とても 面白いです。",
+      "reading": "にほんじんの ともだちは とても おもしろいです。",
+      "sourceText": "にほんじんの ともだちは とても 面白いです。",
+      "kana": "ニホンジ'ンノ、トモダチワ'、トテモ'、オモシロ'イデ_ス",
+      "sha256": "6babb0aff1a6fff5875b9d2f189d4300bc1ad81913afe501b0912e514808410e"
+    },
+    {
+      "file": "4eba-a3.mp3",
+      "written": "えきに 人が 三人 います。",
+      "reading": "えきに ひとが さんにん います。",
+      "sourceText": "えきに 人が 三人 います。",
+      "kana": "エ'キニ、_ヒトガ'、サン'ニン、イマ'_ス",
+      "sha256": "6685e573b340d1ca710a5e5fada409504cab5d8acd007ed6e6d01300e0aa22ce"
+    },
+    {
+      "file": "4eba-a4.mp3",
+      "written": "大学に 日本人の 学生が たくさん います。",
+      "reading": "だいがくに にほんじんの がくせいが たくさん います。",
+      "sourceText": "大学に にほんじんの 学生が たくさん います。",
+      "kana": "ダイガクニ'、ニホンジ'ンノ、ガ_クセエガ'、タ_クサン'、イマ'_ス",
+      "sha256": "29e2fc68ceaf4310bff108161881f832f376a7c5456bff907af0dbdd343e4721"
+    },
+    {
+      "file": "540d-s1.mp3",
+      "written": "あなたの 名前を 書いて ください。",
+      "reading": "あなたの なまえを かいて ください。",
+      "sourceText": "あなたの 名前を 書いて ください。",
+      "kana": "アナ'タノ、ナマエオ'、カ'イテ、クダサ'イ",
+      "sha256": "3668eb875a4d0fb5a3434a5870ebabee6f5c808d2985b30c067a186951174bac"
+    },
+    {
+      "file": "540d-s2.mp3",
+      "written": "本名を 言います。",
+      "reading": "ほんみょうを いいます。",
+      "sourceText": "本名を 言います。",
+      "kana": "ホ'ンミョオオ、イイマ'_ス",
+      "sha256": "3859aa886d158d5bab781a7a210f07daf2a9e09ac4cd334dcb3dde8181cd73fb"
+    },
+    {
+      "file": "540d-a1.mp3",
+      "written": "名犬の 名前は ちょっと 長いです。",
+      "reading": "めいけんの なまえは ちょっと ながいです。",
+      "sourceText": "名犬の 名前は ちょっと 長いです。",
+      "kana": "メエケンノ'、ナマエワ'、チョ'ット、ナガ'イデ_ス",
+      "sha256": "ba4b8dc790cfc842c573cfdb9d2007a1b08f3cf57e878c83faa09d2423bd3a11"
+    },
+    {
+      "file": "540d-a2.mp3",
+      "written": "本名は あまり 有名では ありません。",
+      "reading": "ほんみょうは あまり ゆうめいでは ありません。",
+      "sourceText": "本名は あまり 有名では ありません。",
+      "kana": "ホ'ンミョオワ、アマリ'、ユウメエデ'ワ、アリマセ'ン",
+      "sha256": "e4f83f7aed936b409fba5762564b7cef736d73776f65ec116cb4d3c0ebd2c415"
+    },
+    {
+      "file": "540d-a3.mp3",
+      "written": "名前を 三つ 覚えました。",
+      "reading": "なまえを みっつ おぼえました。",
+      "sourceText": "名前を 三つ 覚えました。",
+      "kana": "ナマエオ'、ミッツ'、オボエマ'_シタ",
+      "sha256": "86bbc4bcc3da9a52a25625365cae95724f68e9bbbd0df3c86bf78b8ca5c61cd9"
+    },
+    {
+      "file": "540d-a4.mp3",
+      "written": "名人の えは とても すてきでした。",
+      "reading": "めいじんの えは とても すてきでした。",
+      "sourceText": "名人の えは とても すてきでした。",
+      "kana": "メエジ'ンノ、エ'ワ、トテモ'、_ステキデ_シタ'",
+      "sha256": "f2ef628f08ff92e1decf5c1247de1b2787be97825f2fcd96fc0c881433cb06aa"
+    },
+    {
+      "file": "5b57-s1.mp3",
+      "written": "かん字を 書きます。",
+      "reading": "かんじを かきます。",
+      "sourceText": "かん字を 書きます。",
+      "kana": "カンジオ'、カキマ'_ス",
+      "sha256": "3239c90f3d5ad3b68923b70beaadfcb573b97c8390ecdf535b28b9f8b9c89a07"
+    },
+    {
+      "file": "5b57-s2.mp3",
+      "written": "ローマ字で 名前を 書きます。",
+      "reading": "ローマじで なまえを かきます。",
+      "sourceText": "ローマ字で 名前を 書きます。",
+      "kana": "ロオマ'ジデ、ナマエオ'、カキマ'_ス",
+      "sha256": "37aba66cc5acb5e552444f98331be613580bc2285a8ef734bd4fa34eb057f691"
+    },
+    {
+      "file": "5b57-a1.mp3",
+      "written": "この かん字は ちょっと 難しいです。",
+      "reading": "この かんじは ちょっと むずかしいです。",
+      "sourceText": "この かん字は ちょっと 難しいです。",
+      "kana": "コノ'、カンジワ'、チョ'ット、ムズカシ'イデ_ス",
+      "sha256": "9e591ac733d777e3a7038cb5572d4dea7e13438606630c4328b36f5b60eddbf0"
+    },
+    {
+      "file": "5b57-a2.mp3",
+      "written": "てん字の え本を 一冊 買いました。",
+      "reading": "てんじの えほんを いっさつ かいました。",
+      "sourceText": "てん字の え本を 一冊 買いました。",
+      "kana": "テンジノ'、エ'ホンオ、イッ'サツ、カイマ'_シタ",
+      "sha256": "ac948650e0fa6b6b804619a2291df24e14e850dee136be830fabf12077145f0b"
+    },
+    {
+      "file": "5b57-a3.mp3",
+      "written": "すう字は かなり 簡単です。",
+      "reading": "すうじは かなり かんたんです。",
+      "sourceText": "すう字は かなり 簡単です。",
+      "kana": "スウ'/ジ'ワ、カ'ナリ、カンタンデ'_ス",
+      "sha256": "c38c667e929c5e1f74b24702d47cf997d41ee5c85640c55cfa39f6852689991d"
+    },
+    {
+      "file": "5b57-a4.mp3",
+      "written": "てん字は ぜんぜん 分かりません。",
+      "reading": "てんじは ぜんぜん わかりません。",
+      "sourceText": "てん字は ぜんぜん 分かりません。",
+      "kana": "テンジワ'、ゼンゼン'、ワカリマセ'ン",
+      "sha256": "90081e2a5262e7dc24b3c47137e9af005026ef70fdf6b48ccf6f17ebd3979c15"
+    },
+    {
+      "file": "6587-s1.mp3",
+      "written": "さく文を 書きます。",
+      "reading": "さくぶんを かきます。",
+      "sourceText": "さく文を 書きます。",
+      "kana": "サクブンオ'、カキマ'_ス",
+      "sha256": "e5c0a500faa86d2b88e4e036975e4db938161893605fe5e3757143562a1963a1"
+    },
+    {
+      "file": "6587-s2.mp3",
+      "written": "文学が 大すきです。",
+      "reading": "ぶんがくが だいすきです。",
+      "sourceText": "文学が 大すきです。",
+      "kana": "ブ'ンガクガ、ダ'イ_スキデ_ス",
+      "sha256": "7e763bb4f0bf765da2eefcb3ab8e0a6b276518d7bf1e8d73afdc940c22fac301"
+    },
+    {
+      "file": "6587-a1.mp3",
+      "written": "さく文は ちょっと 長かったです。",
+      "reading": "さくぶんは ちょっと ながかったです。",
+      "sourceText": "さく文は ちょっと 長かったです。",
+      "kana": "サクブンワ'、チョ'ット、ナガ'カッタデ_ス",
+      "sha256": "7f4c00b08293e616469dcdfe4ac0c7cefbd86668ee8cfc2ea38c5477efa0f2b8"
+    },
+    {
+      "file": "6587-a2.mp3",
+      "written": "文なしの 青年は かなり げん気です。",
+      "reading": "もんなしの せいねんは かなり げんきです。",
+      "sourceText": "文なしの 青年は かなり げん気です。",
+      "kana": "モンナシノ'、セエネンワ'、カ'ナリ、ゲ'ンキデ_ス",
+      "sha256": "e62e374aa81d5a26979368d45736171afd5d608aecfb1aa452c6eb3f092a4cf5"
+    },
+    {
+      "file": "6587-a3.mp3",
+      "written": "さく文を 三枚 書きました。",
+      "reading": "さくぶんを さんまい かきました。",
+      "sourceText": "さく文を 三枚 書きました。",
+      "kana": "サクブンオ'、サン'マイ、カキマ'_シタ",
+      "sha256": "34fabe5c2085f8f59f8d763bc640881ff94c2ae8453ddf2e5c72ca7d8a120013"
+    },
+    {
+      "file": "6587-a4.mp3",
+      "written": "文学の 授業は とても 面白いです。",
+      "reading": "ぶんがくの じゅぎょうは とても おもしろいです。",
+      "sourceText": "文学の 授業は とても 面白いです。",
+      "kana": "ブ'ンガクノ、ジュ'ギョオワ、トテモ'、オモシロ'イデ_ス",
+      "sha256": "1536730a637de8c20ec4f8347a4e7322441ea88d24822b386963f7991127059f"
+    },
+    {
+      "file": "672c-s1.mp3",
+      "written": "ちちは まいばん 本を 読みます。",
+      "reading": "ちちは まいばん ほんを よみます。",
+      "sourceText": "ちちは まいばん 本を 読みます。",
+      "kana": "チ'チワ、マイバン'、ホ'ンオ、ヨミマ'_ス",
+      "sha256": "38952607422367bc18701070eb8685c8ed2d502ec3e73b63cec4500aa11d351a"
+    },
+    {
+      "file": "672c-s2.mp3",
+      "written": "本だなが あります。",
+      "reading": "ほんだなが あります。",
+      "sourceText": "本だなが あります。",
+      "kana": "ホ'ンダナガ、アリマ'_ス",
+      "sha256": "579d888182bdb9e39c138fa07874551dbb95ded4a31e09c1f3fa836cb4f244f2"
+    },
+    {
+      "file": "672c-a1.mp3",
+      "written": "本だなに え本が 九冊 あります。",
+      "reading": "ほんだなに えほんが きゅうさつ あります。",
+      "sourceText": "本だなに え本が 九冊 あります。",
+      "kana": "ホ'ンダナニ、エ'ホンガ、キュウ'サツ、アリマ'_ス",
+      "sha256": "4fae44e0713acc8cd9eb220bdebd2fbbb362b49a70d592eee5e7c7235b148686"
+    },
+    {
+      "file": "672c-a2.mp3",
+      "written": "その 質問は 本とうに 難しかったです。",
+      "reading": "その しつもんは ほんとうに むずかしかったです。",
+      "sourceText": "その 質問は 本とうに 難しかったです。",
+      "kana": "ソノ'、_シツモンワ'、ホントオニ'、ムズカシ'カッタデ_ス",
+      "sha256": "b8d8d5b497e0bbee85b8752394d62479310cfbd35fc2018729bea5922f9ffe7e"
+    },
+    {
+      "file": "672c-a3.mp3",
+      "written": "おいしい ビールを 二本 飲みました。",
+      "reading": "おいしい ビールを にほん のみました。",
+      "sourceText": "おいしい ビールを 二本 飲みました。",
+      "kana": "オイシ'イ、ビ'イルオ、ニ'ホン、ノミマ'_シタ",
+      "sha256": "4a65c47b42869c1312d5952d03f29ceda524eb451453379c5b183107ae001868"
+    },
+    {
+      "file": "672c-a4.mp3",
+      "written": "この え本は すこし 長いです。",
+      "reading": "この えほんは すこし ながいです。",
+      "sourceText": "この え本は すこし 長いです。",
+      "kana": "コノ'、エ'ホンワ、_スコ'シ、ナガ'イデ_ス",
+      "sha256": "259428e0cb50f1538e4138a6b75bcae18faeac3151292432357097acec8be3b5"
+    },
+    {
+      "file": "5b66-s1.mp3",
+      "written": "わたしたちは 大学で 学びます。",
+      "reading": "わたしたちは だいがくで まなびます。",
+      "sourceText": "わたしたちは 大学で 学びます。",
+      "kana": "ワタシ'タチワ、ダイガクデ'、マナビマ'_ス",
+      "sha256": "3f93e6e2fd1c137f21bbcfe52f021280953c21113296252412d9faeb640db020"
+    },
+    {
+      "file": "5b66-s2.mp3",
+      "written": "わたしは 大学生です。",
+      "reading": "わたしは だいがくせいです。",
+      "sourceText": "わたしは 大学生です。",
+      "kana": "ワタシワ'、ダイガ'_クセエデ_ス",
+      "sha256": "850bb77033bde04a143f4b94e56f8efac4b0ac325ea931453e51402af374094a"
+    },
+    {
+      "file": "5b66-a1.mp3",
+      "written": "中学校の 学年は 三つ あります。",
+      "reading": "ちゅうがっこうの がくねんは みっつ あります。",
+      "sourceText": "中学校の 学年は 三つ あります。",
+      "kana": "チュウガ'ッコオノ、ガクネンワ'、ミッツ'、アリマ'_ス",
+      "sha256": "3f31c2de954c584260587a2d6ff98633e1d1817c15aadf518faf204e6fa7e9d8"
+    },
+    {
+      "file": "5b66-a2.mp3",
+      "written": "小学生は かん字を たくさん 学びます。",
+      "reading": "しょうがくせいは かんじを たくさん まなびます。",
+      "sourceText": "小学生は かん字を たくさん 学びます。",
+      "kana": "ショオガ'_クセエワ、カンジオ'、タ_クサン'、マナビマ'_ス",
+      "sha256": "1021473aaa063c7f008b27d2f330fc2919225028a85e33ccb35939d48c644ddc"
+    },
+    {
+      "file": "5b66-a3.mp3",
+      "written": "大学の 授業は かなり 難しいです。",
+      "reading": "だいがくの じゅぎょうは かなり むずかしいです。",
+      "sourceText": "大学の 授業は かなり 難しいです。",
+      "kana": "ダイガクノ'、ジュ'ギョオワ、カ'ナリ、ムズカシ'イデ_ス",
+      "sha256": "6badb0f1ffdcfb0ccbd24ec9ed3d0222fe923a730e3a858823547669e1b9f257"
+    },
+    {
+      "file": "5b66-a4.mp3",
+      "written": "大学の 食堂は あまり おいしくないです。",
+      "reading": "だいがくの しょくどうは あまり おいしくないです。",
+      "sourceText": "大学の 食堂は あまり おいしくないです。",
+      "kana": "ダイガクノ'、ショクドオワ'、アマリ'、オイシ'クナイデ_ス",
+      "sha256": "0fca012fc2c71eaa689a66ec400eb171fc277bcb1d20265a2026e2704d6a2145"
+    },
+    {
+      "file": "6821-s1.mp3",
+      "written": "校庭で 運動します。",
+      "reading": "こうていで うんどうします。",
+      "sourceText": "校庭で 運動します。",
+      "kana": "コオテエデ'、ウンドオ'/シマ'_ス",
+      "sha256": "784b132e1e535e05e6d061e467830b112b2db765b06a5696a89587b8decc02f7"
+    },
+    {
+      "file": "6821-s2.mp3",
+      "written": "高校に 行きます。",
+      "reading": "こうこうに いきます。",
+      "sourceText": "高校に 行きます。",
+      "kana": "コオコオニ'、イキマ'_ス",
+      "sha256": "ede2e7634b435144f6fe514de6910af932de47a234d15ed4dd64f15c11e89045"
+    },
+    {
+      "file": "6821-a1.mp3",
+      "written": "てん校は ちょっと 大変でした。",
+      "reading": "てんこうは ちょっと たいへんでした。",
+      "sourceText": "てん校は ちょっと 大変でした。",
+      "kana": "テン'コオワ、チョ'ット、タイヘンデ_シタ'",
+      "sha256": "990755f4ce1ca14b3c07690103aa1ef2b89b86dcfaf81344f4375a3595062a47"
+    },
+    {
+      "file": "6821-a2.mp3",
+      "written": "校庭に 子どもが たくさん います。",
+      "reading": "こうていに こどもが たくさん います。",
+      "sourceText": "校庭に 子どもが たくさん います。",
+      "kana": "コオテエニ'、コドモガ'、タ_クサン'、イマ'_ス",
+      "sha256": "a7263013f41a3ed8d99045048f3cef725b16b570f3067e2f50097c12cf523df6"
+    },
+    {
+      "file": "6821-a3.mp3",
+      "written": "高校の 先生は とても 若いです。",
+      "reading": "こうこうの せんせいは とても わかいです。",
+      "sourceText": "高校の 先生は とても 若いです。",
+      "kana": "コオコオノ'、センセ'エワ、トテモ'、ワカ'イデ_ス",
+      "sha256": "182ca10e2d233ea31cb54c90abc41d960f5b0032105de5cfe01e72a0a4ef4970"
+    },
+    {
+      "file": "6821-a4.mp3",
+      "written": "校庭に 車が 四台 あります。",
+      "reading": "こうていに くるまが よんだい あります。",
+      "sourceText": "校庭に 車が 四台 あります。",
+      "kana": "コオテエニ'、クルマガ'、ヨン'ダイ、アリマ'_ス",
+      "sha256": "276079ded265662c216bfc35d2ac76e286048ce24a40cbd5afe5cf7b12d66c4a"
+    },
+    {
+      "file": "5148-s1.mp3",
+      "written": "おととい 先生に 会いました。",
+      "reading": "おととい せんせいに あいました。",
+      "sourceText": "おととい 先生に 会いました。",
+      "kana": "オトト'イ、センセ'エニ、アイマ'_シタ",
+      "sha256": "0bedb97e973c6774e182a4c05c465c7c49b9e1364de61100051b2216ef412b6a"
+    },
+    {
+      "file": "5148-s2.mp3",
+      "written": "先とうを 歩きます。",
+      "reading": "せんとうを あるきます。",
+      "sourceText": "先とうを 歩きます。",
+      "kana": "セントウオ'、アルキマ'_ス",
+      "sha256": "947587df32a477d18e477ff073c08209a2313ea936093835f465ca77bb614685"
+    },
+    {
+      "file": "5148-a1.mp3",
+      "written": "先生の 質問は ちょっと 難しかったです。",
+      "reading": "せんせいの しつもんは ちょっと むずかしかったです。",
+      "sourceText": "先生の 質問は ちょっと 難しかったです。",
+      "kana": "センセ'エノ、_シツモンワ'、チョ'ット、ムズカシ'カッタデ_ス",
+      "sha256": "1d79251e2896862193714d60a881ed0077c4bc19079b230a691eb50b237d1cc3"
+    },
+    {
+      "file": "5148-a2.mp3",
+      "written": "足の先まで とても 暖かいです。",
+      "reading": "あしのさきまで とても あたたかいです。",
+      "sourceText": "足の先まで とても 暖かいです。",
+      "kana": "アシ'ノ/サキマ'デ、トテモ'、アタタカ'イデ_ス",
+      "sha256": "6cb2bfca4b6b073fc2c1f25d9741bdcacf50339364acdd3a3dd699071543fd52"
+    },
+    {
+      "file": "5148-a3.mp3",
+      "written": "先生が 三人 来ました。",
+      "reading": "せんせいが さんにん きました。",
+      "sourceText": "先生が 三人 来ました。",
+      "kana": "センセ'エガ、サン'ニン、キマ'_シタ",
+      "sha256": "7bbec53b8f427c6045c1e707d85058f7457f41c5a6ea7cccad687cd15072ebcb"
+    },
+    {
+      "file": "5148-a4.mp3",
+      "written": "先とうの 子どもは かなり 速いです。",
+      "reading": "せんとうの こどもは かなり はやいです。",
+      "sourceText": "先とうの 子どもは かなり 速いです。",
+      "kana": "セントウノ'、コドモワ'、カ'ナリ、ハヤ'イデ_ス",
+      "sha256": "4502e996961f37fbfb3b65d736de5a99fadf820692e2a38c3ebb61140f82e6c1"
+    },
+    {
+      "file": "751f-s1.mp3",
+      "written": "あしたは おかあさんの たん生日です。",
+      "reading": "あしたは おかあさんの たんじょうびです。",
+      "sourceText": "あしたは おかあさんの たん生日です。",
+      "kana": "ア_シタ'ワ、オカ'アサンノ、タンジョオ'ビデ_ス",
+      "sha256": "98361bf3bf43f8ce3ac4b760696daec0bdee0c73295fb12e75edc9ebbd9bb097"
+    },
+    {
+      "file": "751f-s2.mp3",
+      "written": "わたしは 学生です。",
+      "reading": "わたしは がくせいです。",
+      "sourceText": "わたしは 学生です。",
+      "kana": "ワタシワ'、ガ_クセエデ'_ス",
+      "sha256": "f1b851ea773cfb084cadef5087d158b11224edb0790c721366f0d90058012bce"
+    },
+    {
+      "file": "751f-a1.mp3",
+      "written": "生ものは あまり 食べません。",
+      "reading": "なまものは あまり たべません。",
+      "sourceText": "生ものは あまり 食べません。",
+      "kana": "ナマモノワ'、アマリ'、タベマセ'ン",
+      "sha256": "ef6da6318e4a4bae2eacf0b0cfc166c0daa5e5e6c514e9e128226ee817f488bd"
+    },
+    {
+      "file": "751f-a2.mp3",
+      "written": "鯉は かなり 長く 生きます。",
+      "reading": "こいは かなり ながく いきます。",
+      "sourceText": "鯉は かなり 長く 生きます。",
+      "kana": "コ'イワ、カ'ナリ、ナガ'ク、イキマ'_ス",
+      "sha256": "25885d00b44abc07bf18c2cf86f2cbb513acec3be8da33439657958324766dec"
+    },
+    {
+      "file": "751f-a3.mp3",
+      "written": "白い 子犬が 四匹 生まれました。",
+      "reading": "しろい こいぬが よんひき うまれました。",
+      "sourceText": "白い 子犬が 四匹 生まれました。",
+      "kana": "シロ'イ、コイヌガ'、ヨン'_ヒキ、ウマレマ'_シタ",
+      "sha256": "542953bf21fbb3e0b87dcb2eeb5b09dd08897d3efe2ac16f39eb55d76507fd69"
+    },
+    {
+      "file": "751f-a4.mp3",
+      "written": "さかなは 卵を たくさん 生みます。",
+      "reading": "さかなは たまごを たくさん うみます。",
+      "sourceText": "さかなは 卵を たくさん 生みます。",
+      "kana": "サカナワ'、タマ'ゴオ、タ_クサン'、ウミマ'_ス",
+      "sha256": "3105820b565c714dc433e1963dad054df1b4f2096c82565a49f821692dd3c77b"
+    },
+    {
+      "file": "65e9-s1.mp3",
+      "written": "早足で 帰ります。",
+      "reading": "はやあしで かえります。",
+      "sourceText": "早足で 帰ります。",
+      "kana": "ハヤ'アシデ、カエリマ'_ス",
+      "sha256": "07beab3263f4aba6e3febf3f28069fcf0d447622ce2efc35e5deb2502b33b69a"
+    },
+    {
+      "file": "65e9-s2.mp3",
+      "written": "あさごはんを 早く 食べます。",
+      "reading": "あさごはんを はやく たべます。",
+      "sourceText": "あさごはんを 早く 食べます。",
+      "kana": "アサゴ'ハンオ、ハ'ヤク、タベマ'_ス",
+      "sha256": "af6b4b23886e966e7282c7eaa4fb41a343cbb6b3d08b69dba7367507e5f33ff5"
+    },
+    {
+      "file": "65e9-a1.mp3",
+      "written": "ちちは いつも 早く 寝ます。",
+      "reading": "ちちは いつも はやく ねます。",
+      "sourceText": "ちちは いつも 早く 寝ます。",
+      "kana": "チ'チワ、イ'ツモ、ハ'ヤク、ネマ'_ス",
+      "sha256": "8b83dbf035d3989e5e71e0cc19a13f403a3d2fac576840a3277d87d94be9e5c2"
+    },
+    {
+      "file": "65e9-a2.mp3",
+      "written": "旅行の 日時を 二日 早めました。",
+      "reading": "りょこうの にちじを ふつか はやめました。",
+      "sourceText": "旅行の 日時を 二日 早めました。",
+      "kana": "リョコオノ'、ニ'チジオ、_フツカ'、ハヤメマ'_シタ",
+      "sha256": "cac4574245461299e927306049814d5fe231582c725935439192f5127afc8cdd"
+    },
+    {
+      "file": "65e9-a3.mp3",
+      "written": "今日は とても 早く 起きました。",
+      "reading": "きょうは とても はやく おきました。",
+      "sourceText": "今日は とても 早く 起きました。",
+      "kana": "キョ'オワ、トテモ'、ハ'ヤク、オキマ'_シタ",
+      "sha256": "dbb8346d1722a0b0f8ad7d316ae7c9b7401c2c90bed66aaf2f801abbaa4880a8"
+    },
+    {
+      "file": "65e9-a4.mp3",
+      "written": "早い バスで 大学へ 行きました。",
+      "reading": "はやい バスで だいがくへ いきました。",
+      "sourceText": "早い バスで 大学へ 行きました。",
+      "kana": "ハヤ'イ、バ'スデ、ダイガクエ'、イキマ'_シタ",
+      "sha256": "996cda685288583c1a5820e775942e9f93eb2732d5a6a6b422649dcd7e6f9b09"
+    },
+    {
+      "file": "6b63-s1.mp3",
+      "written": "正かいです。",
+      "reading": "せいかいです。",
+      "sourceText": "正かいです。",
+      "kana": "セイカイデ'_ス",
+      "sha256": "c464647ec7c5625d44759d16947087ca3200f5b808ecefa0893c7b26b87e62a5"
+    },
+    {
+      "file": "6b63-s2.mp3",
+      "written": "正じきに 言います。",
+      "reading": "しょうじきに いいます。",
+      "sourceText": "正じきに 言います。",
+      "kana": "ショウジ'キニ、イイマ'_ス",
+      "sha256": "793a0adab08fd6c5275e99423cb9d3169ffea69ccbbb16be61ee088e131ee3fb"
+    },
+    {
+      "file": "6b63-a1.mp3",
+      "written": "正しい かん字を 三つ 書きました。",
+      "reading": "ただしい かんじを みっつ かきました。",
+      "sourceText": "正しい かん字を 三つ 書きました。",
+      "kana": "タダシ'イ、カンジオ'、ミッツ'、カキマ'_シタ",
+      "sha256": "ebbc47b634065f4a6a74acfe2bebe0ce69bc025b873a8b46b47084307e6c0caa"
+    },
+    {
+      "file": "6b63-a2.mp3",
+      "written": "その 店員は とても 正じきです。",
+      "reading": "その てんいんは とても しょうじきです。",
+      "sourceText": "その 店員は とても 正じきです。",
+      "kana": "ソノ'、テンインワ'、トテモ'、ショウジ'キデ_ス",
+      "sha256": "a3de32c8478beec6bd0220ccaf5fd43933aa0fade503e6c5b897eab6370d8b3a"
+    },
+    {
+      "file": "6b63-a3.mp3",
+      "written": "正かいは ほとんど ありませんでした。",
+      "reading": "せいかいは ほとんど ありませんでした。",
+      "sourceText": "正かいは ほとんど ありませんでした。",
+      "kana": "セイカイワ'、ホト'ンド、アリマセ'ンデ_シタ",
+      "sha256": "c1aac23df94a751d2218edbd5c73af5b7075032a66a31f9fea73cb29dee624a9"
+    },
+    {
+      "file": "6b63-a4.mp3",
+      "written": "答え合わせで 正かいが 八つ ありました。",
+      "reading": "こたえあわせで せいかいが やっつ ありました。",
+      "sourceText": "答え合わせで 正かいが 八つ ありました。",
+      "kana": "コタエア'ワセデ、セイカイガ'、ヤッツ'、アリマ'_シタ",
+      "sha256": "bb83da590653d9f91610d75a495c59979f683644201ca2c83aedba05a1e92949"
+    },
+    {
+      "file": "738b-s1.mp3",
+      "written": "王さまに 会いました。",
+      "reading": "おうさまに あいました。",
+      "sourceText": "王さまに 会いました。",
+      "kana": "オオサマニ'、アイマ'_シタ",
+      "sha256": "f7ef3a02a5e228df1466f0f44b6fea030e8e0da36bf6478c0944da03718f1c54"
+    },
+    {
+      "file": "738b-s2.mp3",
+      "written": "王かんを 作ります。",
+      "reading": "おうかんを つくります。",
+      "sourceText": "王かんを 作ります。",
+      "kana": "オオカンオ'、_ツクリマ'_ス",
+      "sha256": "0f59b75371bf3826498b4ba8a6c5bf89b94db307c73a387f6bdbcf1670d09594"
+    },
+    {
+      "file": "738b-a1.mp3",
+      "written": "金色の 王かんは とても きれいです。",
+      "reading": "きんいろの おうかんは とても きれいです。",
+      "sourceText": "金色の 王かんは とても きれいです。",
+      "kana": "キンイロノ'、オオカンワ'、トテモ'、キ'レイデ_ス",
+      "sha256": "4ca5e2ca55f5862dd88f89fc26df042f0827d32c8dc1e3bfa8f3195844bd473d"
+    },
+    {
+      "file": "738b-a2.mp3",
+      "written": "こく王は かなり 若いです。",
+      "reading": "こくおうは かなり わかいです。",
+      "sourceText": "こく王は かなり 若いです。",
+      "kana": "コ'ク/オ'オワ、カ'ナリ、ワカ'イデ_ス",
+      "sha256": "74ed85dd6e69d4423f1e8e1416fc8635e35f12dc272c22b6206cdd8067503278"
+    },
+    {
+      "file": "738b-a3.mp3",
+      "written": "王さまには 子どもが 三人 います。",
+      "reading": "おうさまには こどもが さんにん います。",
+      "sourceText": "王さまには 子どもが 三人 います。",
+      "kana": "オオサマニワ'、コドモガ'、サン'ニン、イマ'_ス",
+      "sha256": "93a456387c801dcbe201632c75bb042a3302a391719f3ea6d5182ed507fd981b"
+    },
+    {
+      "file": "738b-a4.mp3",
+      "written": "王さまは あまり げん気では ありませんでした。",
+      "reading": "おうさまは あまり げんきでは ありませんでした。",
+      "sourceText": "王さまは あまり げん気では ありませんでした。",
+      "kana": "オオサマワ'、アマリ'、ゲ'ンキデワ、アリマセ'ンデ_シタ",
+      "sha256": "65da055a1f8adb2c93e2e331097c96bd28aa549c897771ea99957c6a5d263f39"
+    },
+    {
+      "file": "7389-s1.mp3",
+      "written": "玉虫を 見ました。",
+      "reading": "たまむしを みました。",
+      "sourceText": "玉虫を 見ました。",
+      "kana": "タマ'ムシオ、ミマ'_シタ",
+      "sha256": "ce776d2a8378772cb7377862dc1577c12ce0e8ed79e656e4fe0217e558b2d765"
+    },
+    {
+      "file": "7389-s2.mp3",
+      "written": "百円玉を 出します。",
+      "reading": "ひゃくえんだまを だします。",
+      "sourceText": "百円玉を 出します。",
+      "kana": "ヒャクエンダマオ'、ダシマ'_ス",
+      "sha256": "ab0741ef24e8c676f011ff771625e0523b581ba4493e611b3b1b2098173f3fab"
+    },
+    {
+      "file": "7389-a1.mp3",
+      "written": "その 玉手ばこは とても 大きかったです。",
+      "reading": "その たまてばこは とても おおきかったです。",
+      "sourceText": "その 玉手ばこは とても 大きかったです。",
+      "kana": "ソノ'、タ'マテ/バコワ'、トテモ'、オオキ'カッタデ_ス",
+      "sha256": "b038c3b8c8b9a47b38e95e8821ae8eaeadd95c1e3070acd3db843150aac4d97a"
+    },
+    {
+      "file": "7389-a2.mp3",
+      "written": "お年玉は ほとんど ちょ金しました。",
+      "reading": "おとしだまは ほとんど ちょきんしました。",
+      "sourceText": "お年玉は ほとんど ちょ金しました。",
+      "kana": "オトシダマワ'、ホト'ンド、チョキン'/シマ'_シタ",
+      "sha256": "9660f0b7ca8e2b962cc0b33c6b587a58608e58f4d2a5b76b22f5fd21bb711fa1"
+    },
+    {
+      "file": "7389-a3.mp3",
+      "written": "百円玉が 七枚 あります。",
+      "reading": "ひゃくえんだまが ななまい あります。",
+      "sourceText": "百円玉が 七枚 あります。",
+      "kana": "ヒャクエンダマガ'、ナナ'マイ、アリマ'_ス",
+      "sha256": "8e095d06b3f0aba2d61dd29548f42cef20c5934a123217dcf38fe3b2c10117b6"
+    },
+    {
+      "file": "7389-a4.mp3",
+      "written": "その 玉虫は とても きれいでした。",
+      "reading": "その たまむしは とても きれいでした。",
+      "sourceText": "その 玉虫は とても きれいでした。",
+      "kana": "ソノ'、タマ'ムシワ、トテモ'、キ'レイデ_シタ",
+      "sha256": "12a37d10267addc23adc4bac58b0e856c55bd3e20e2ec254ddcc0dbcc29606c4"
+    },
+    {
+      "file": "7cf8-s1.mp3",
+      "written": "赤い糸が あります。",
+      "reading": "あかいいとが あります。",
+      "sourceText": "赤い糸が あります。",
+      "kana": "アカイ'/イ'トガ、アリマ'_ス",
+      "sha256": "0703f96c6da4fb8fd4ecd3e7594ad504f7cf35c7726fa95521b5bfe7a978153d"
+    },
+    {
+      "file": "7cf8-s2.mp3",
+      "written": "きぬ糸を 買いました。",
+      "reading": "きぬいとを かいました。",
+      "sourceText": "きぬ糸を 買いました。",
+      "kana": "キヌイトオ'、カイマ'_シタ",
+      "sha256": "b4bc06772a4df737397a1e3ca1ac950688f73f6ac28f36f15482d66a14155e6e"
+    },
+    {
+      "file": "7cf8-a1.mp3",
+      "written": "白い糸が 三本 あります。",
+      "reading": "しろいいとが さんぼん あります。",
+      "sourceText": "白い糸が 三本 あります。",
+      "kana": "シロ'イ/イ'トガ、サン'ボン、アリマ'_ス",
+      "sha256": "eabc89c77fd5f9f5b3c0534783e29654daaf87503688286af4595cd1f71008a6"
+    },
+    {
+      "file": "7cf8-a2.mp3",
+      "written": "きぬ糸は とても きれいです。",
+      "reading": "きぬいとは とても きれいです。",
+      "sourceText": "きぬ糸は とても きれいです。",
+      "kana": "キヌイトワ'、トテモ'、キ'レイデ_ス",
+      "sha256": "f408692ef01b9bc1ae465e4671d98b0d60244a25c465a847a4f17794f3342a1f"
+    },
+    {
+      "file": "7cf8-a3.mp3",
+      "written": "赤い糸は かなり 有名です。",
+      "reading": "あかいいとは かなり ゆうめいです。",
+      "sourceText": "赤い糸は かなり 有名です。",
+      "kana": "アカイ'/イ'トワ、カ'ナリ、ユウメエデ'_ス",
+      "sha256": "1d3e1bb5bf3f01f0166be248ce5d0a797cb962ae8b1d6e6bba8ed7e9abd736cc"
+    },
+    {
+      "file": "7cf8-a4.mp3",
+      "written": "赤い糸を すこし きりました。",
+      "reading": "あかいいとを すこし きりました。",
+      "sourceText": "赤い糸を すこし きりました。",
+      "kana": "アカイ'/イ'トオ、_スコ'シ、キリマ'_シタ",
+      "sha256": "527aec07e65e1a907a87f256d2d5f888ab199a643f5a6befcfb63cf54786d1c0"
+    },
+    {
+      "file": "8eca-s1.mp3",
+      "written": "おとうさんは でん車で 行きますか。",
+      "reading": "おとうさんは でんしゃで いきますか。",
+      "sourceText": "おとうさんは でん車で 行きますか。",
+      "kana": "オト'オサンワ、デンシャデ'、イキマ'_スカ",
+      "sha256": "a457303fb0d423bba4eb45d27e1f55a050a6d7130bfee8bf26b56f72d80621d2"
+    },
+    {
+      "file": "8eca-s2.mp3",
+      "written": "じてん車の 車りんを 買いました。",
+      "reading": "じてんしゃの しゃりんを かいました。",
+      "sourceText": "じてん車の 車りんを 買いました。",
+      "kana": "ジテンシャノ'、シャリンオ'、カイマ'_シタ",
+      "sha256": "63ac7c27ddfd68d67d55cc7a5640f93e3d3fb50d1ad1a3e7d3bd9541baf71832"
+    },
+    {
+      "file": "8eca-a1.mp3",
+      "written": "でん車は とても 便利です。",
+      "reading": "でんしゃは とても べんりです。",
+      "sourceText": "でん車は とても 便利です。",
+      "kana": "デンシャワ'、トテモ'、ベ'ンリデ_ス",
+      "sha256": "154c6f474b42c35d957567d6ed6fc3684607fa660c4aae83c2c4a15fa144d126"
+    },
+    {
+      "file": "8eca-a2.mp3",
+      "written": "赤い車が 二台 あります。",
+      "reading": "あかいくるまが にだい あります。",
+      "sourceText": "赤い車が 二台 あります。",
+      "kana": "アカイ'/クルマガ'、ニ'ダイ、アリマ'_ス",
+      "sha256": "dd76ae762d647103d210cd51d8cff94eaf27360f02b68668359b44cd41b0db6c"
+    },
+    {
+      "file": "8eca-a3.mp3",
+      "written": "でん車は あまり 速くないです。",
+      "reading": "でんしゃは あまり はやくないです。",
+      "sourceText": "でん車は あまり 速くないです。",
+      "kana": "デンシャワ'、アマリ'、ハヤ'クナイデ_ス",
+      "sha256": "581a54d7c75db0726497c9afd61c7e82395846ccd86367eb00d585396e77329e"
+    },
+    {
+      "file": "8eca-a4.mp3",
+      "written": "車の かぎが 二つ あります。",
+      "reading": "くるまの かぎが ふたつ あります。",
+      "sourceText": "車の かぎが 二つ あります。",
+      "kana": "クルマノ'、カギ'ガ、_フタツ'、アリマ'_ス",
+      "sha256": "4132dd17ff4e94d9e1f28ce676b5c8dcf09856efd13e5a2d0e72d3c2b622d34a"
+    },
+    {
+      "file": "6751-s1.mp3",
+      "written": "村の人に 会います。",
+      "reading": "むらのひとに あいます。",
+      "sourceText": "村の人に 会います。",
+      "kana": "ムラ'ノ/_ヒトニ'、アイマ'_ス",
+      "sha256": "9254eb9bff42b68b328a4fbd435979c17430192e9f8211e3adb25437cb344cdf"
+    },
+    {
+      "file": "6751-s2.mp3",
+      "written": "山村は 静かな ところです。",
+      "reading": "さんそんは しずかな ところです。",
+      "sourceText": "山村は 静かな ところです。",
+      "kana": "サンソンワ'、シ'ズカナ、トコロデ'_ス",
+      "sha256": "548752dd93724dd67a7d919d1949d9eb6716e0405da1043ea209438f02b65ab8"
+    },
+    {
+      "file": "6751-a1.mp3",
+      "written": "村の人は ほとんど 年よりです。",
+      "reading": "むらのひとは ほとんど としよりです。",
+      "sourceText": "村の人は ほとんど 年よりです。",
+      "kana": "ムラ'ノ/_ヒトワ'、ホト'ンド、トシ'ヨリデ_ス",
+      "sha256": "103c034a9e988044380795b14cd809078b3c9d78efd7d8a54d031af0d2779d65"
+    },
+    {
+      "file": "6751-a2.mp3",
+      "written": "山村の 子どもは 八人です。",
+      "reading": "さんそんの こどもは はちにんです。",
+      "sourceText": "山村の 子どもは 八人です。",
+      "kana": "サンソンノ'、コドモワ'、ハチ'ニンデ_ス",
+      "sha256": "2a5e240e333c7277347efe8421c253c309f8ab8652b8f76887505a69f4abb44f"
+    },
+    {
+      "file": "6751-a3.mp3",
+      "written": "町村の 名前は ちょっと 難しいです。",
+      "reading": "ちょうそんの なまえは ちょっと むずかしいです。",
+      "sourceText": "町村の 名前は ちょっと 難しいです。",
+      "kana": "チョ'オソンノ、ナマエワ'、チョ'ット、ムズカシ'イデ_ス",
+      "sha256": "90cb7fd77e75ab37c51f6c70a383835d8e644007dadbbb78c7ac2435e7df7e33"
+    },
+    {
+      "file": "6751-a4.mp3",
+      "written": "村の人は 林檎を 五個 買いました。",
+      "reading": "むらのひとは りんごを ごこ かいました。",
+      "sourceText": "村の人は 林檎を 五個 買いました。",
+      "kana": "ムラ'ノ/_ヒトワ'、リンゴオ'、ゴ'コ、カイマ'_シタ",
+      "sha256": "138f571744664fdaa8b488cd5a78107091496b3dcfbf50a0a3ee5582a522f66c"
+    },
+    {
+      "file": "753a-s1.mp3",
+      "written": "町の中を 歩きます。",
+      "reading": "まちのなかを あるきます。",
+      "sourceText": "町の中を 歩きます。",
+      "kana": "マチ'ノ/ナ'カオ、アルキマ'_ス",
+      "sha256": "454bae516f23d5085bbf5bdc40a307659528a0e6a1e1ab2fddffd062b38e1db4"
+    },
+    {
+      "file": "753a-s2.mp3",
+      "written": "町なみが きれいです。",
+      "reading": "まちなみが きれいです。",
+      "sourceText": "町なみが きれいです。",
+      "kana": "マチナミガ'、キ'レイデ_ス",
+      "sha256": "b0aef8434ac26aa7a051cfc002f76c06b5a2536714ec405b9dbdc2a1a92bad15"
+    },
+    {
+      "file": "753a-a1.mp3",
+      "written": "町の中に 銀行が 二つ あります。",
+      "reading": "まちのなかに ぎんこうが ふたつ あります。",
+      "sourceText": "町の中に 銀行が 二つ あります。",
+      "kana": "マチ'ノ/ナ'カニ、ギンコオガ'、_フタツ'、アリマ'_ス",
+      "sha256": "66fad3293360b589e2cc4fb7578ceeb4fe056e47cc109204e9b00ad7cd84162e"
+    },
+    {
+      "file": "753a-a2.mp3",
+      "written": "よるの 町なみは とても きれいです。",
+      "reading": "よるの まちなみは とても きれいです。",
+      "sourceText": "よるの 町なみは とても きれいです。",
+      "kana": "ヨル'/ノ'、マチナミワ'、トテモ'、キ'レイデ_ス",
+      "sha256": "b2fc254ef337b820db696cc272f0d46c0aa4aaec203f8a75b1871031e656ed01"
+    },
+    {
+      "file": "753a-a3.mp3",
+      "written": "町と村の 天気は ほとんど 同じです。",
+      "reading": "まちとむらの てんきは ほとんど おなじです。",
+      "sourceText": "町と村の 天気は ほとんど 同じです。",
+      "kana": "マチ'ト/ムラ'ノ、テ'ンキワ、ホト'ンド、オナジデ'_ス",
+      "sha256": "6720b3ebb98385b805f20ee85aadb570a251c266c048b6667ec90b33f689ed78"
+    },
+    {
+      "file": "753a-a4.mp3",
+      "written": "町の中の レストランは ちょっと 暗いです。",
+      "reading": "まちのなかの レストランは ちょっと くらいです。",
+      "sourceText": "町の中の レストランは ちょっと 暗いです。",
+      "kana": "マチ'ノ/ナ'カノ、レ'_ストランワ、チョ'ット、クライ'デ_ス",
+      "sha256": "934e57b56b62dd312a75a0f74c824625c2123f7fe0e507e4039aeff59f2eab28"
+    }
+  ]
+}

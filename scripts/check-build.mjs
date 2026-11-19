@@ -15,7 +15,10 @@ assert.ok(script.includes('word-reading'), 'Vocabulary readings must remain visi
 assert.ok(!script.includes('una cosa'), 'Study content must load from JSON, not a bundled duplicate.');
 assert.equal(await readFile('dist/collection.json', 'utf8'), await readFile('public/collection.json', 'utf8'));
 assert.ok(!(await readdir('dist')).includes('difficulties.json'));
-for (const file of await readdir('public/audio')) {
+// Recursive: the sentence audio is in public/audio/sentences/.
+const audioFiles = (await readdir('public/audio', { recursive: true, withFileTypes: true }))
+  .filter((entry) => entry.isFile()).map((entry) => `${entry.parentPath}/${entry.name}`.slice('public/audio/'.length));
+for (const file of audioFiles) {
   assert.deepEqual(await readFile(`dist/audio/${file}`), await readFile(`public/audio/${file}`),
     `Missing or changed audio asset: ${file}`);
 }

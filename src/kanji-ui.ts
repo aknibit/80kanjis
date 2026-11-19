@@ -2,6 +2,7 @@ import { difficultyLabels } from './lib/difficulty.ts';
 import { createKanjiReferences, wordKanjiParts } from './lib/kanji-reference.ts';
 import { loadKanjiSentences } from './lib/content.ts';
 import { vocabularyItemId } from './lib/study-catalog.ts';
+import { sentenceAudioFile, type SentenceGroup } from './lib/sentence-audio.ts';
 import type { PronunciationControls } from './pronunciation-ui.ts';
 import type { ContentExample, KanjiSentences } from './content-types.ts';
 import type { CollectionDocument, KanjiReadings } from './types.ts';
@@ -64,8 +65,18 @@ function renderReadingHint(readings: KanjiReadings, character: string): HTMLElem
   return hint;
 }
 
+/** The page's status is behind the modal, so playback errors are announced inside it. */
+function audioStatus(): HTMLElement {
+  const status = node('p', 'audio-status kanji-dialog-audio-status');
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+  return status;
+}
+
+type SentenceAudio = (example: ContentExample, group: SentenceGroup, index: number) => HTMLElement | undefined;
+
 /** The kanji of the dialog stands out; the rest of the sentence keeps its own spelling. */
-function renderSentence(example: ContentExample, character: string): HTMLLIElement {
+function renderSentence(example: ContentExample, character: string, audio?: HTMLElement): HTMLLIElement {
   const item = node('li', 'kanji-sentence');
   const written = node('p', 'kanji-sentence-written');
   written.lang = 'ja';
@@ -76,15 +87,16 @@ function renderSentence(example: ContentExample, character: string): HTMLLIEleme
   const reading = node('p', 'kanji-sentence-reading', example.reading);
   reading.lang = 'ja';
   item.append(written, reading, node('p', 'kanji-sentence-meaning', example.meaning));
+  if (audio) item.append(audio);
   return item;
 }
 
-function renderSentences(sentences: KanjiSentences): DocumentFragment {
+function renderSentences(sentences: KanjiSentences, audio?: SentenceAudio): DocumentFragment {
   const fragment = document.createDocumentFragment();
-  for (const [label, list] of [['Sencillas', sentences.simple], ['Con adjetivos, adverbios y contadores', sentences.advanced]] as const) {
+  for (const [group, label] of [['simple', 'Sencillas'], ['advanced', 'Con adjetivos, adverbios y contadores']] as const) {
     const items = node('ul', 'kanji-sentence-list');
     items.setAttribute('aria-label', `Frases ${label.toLowerCase()}`);
-    for (const example of list) items.append(renderSentence(example, sentences.kanji));
+    sentences[group].forEach((example, index) => items.append(renderSentence(example, sentences.kanji, audio?.(example, group, index))));
     fragment.append(node('p', 'kanji-sentence-group', label), items);
   }
   return fragment;
@@ -170,10 +182,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
 
     const examplesTitle = node('h3', 'kanji-dialog-examples-title', 'Lecturas en el vocabulario de la colección');
     const examples = node('ul', 'kanji-dialog-examples');
-    // The page's status is behind the modal, so playback errors are announced here.
-    const audioStatus = node('p', 'audio-status kanji-dialog-audio-status');
-    audioStatus.setAttribute('role', 'status');
-    audioStatus.setAttribute('aria-live', 'polite');
+    const wordStatus = audioStatus();
     for (const word of reference.vocabulary) {
       const example = node('li', '');
       const japanese = node('div', 'kanji-dialog-word');
@@ -182,7 +191,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       written.append(renderWord(word.written, character));
       japanese.append(written, node('span', 'word-reading', word.reading));
       example.append(japanese, node('p', '', word.meaning));
-      const audio = pronunciation?.createButton({ id: vocabularyItemId(word.written), written: word.written, reading: word.reading }, audioStatus);
+      const audio = pronunciation?.createButton({ id: vocabularyItemId(word.written), written: word.written, reading: word.reading }, wordStatus);
       if (audio) example.append(audio);
       examples.append(example);
     }
@@ -195,9 +204,9 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     // The 80 kanji show their vocabulary or their sentences, one at a time; support kanji only have vocabulary.
     if (reference.kind === 'collection') {
       const vocabulary = node('div', 'kanji-dialog-panel');
-      vocabulary.append(audioStatus, examples);
+      vocabulary.append(wordStatus, examples);
       body.append(...renderTabs({ vocabulary, sentences: renderSentencePanel(character) }));
-    } else body.append(examplesTitle, audioStatus, examples);
+    } else body.append(examplesTitle, wordStatus, examples);
     body.append(attribution);
     if (!dialog.open) {
       opener = trigger;
@@ -216,7 +225,10 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     requestSentences().then((all) => {
       if (shown !== character) return;
       const entry = all.get(character);
-      if (entry) panel.replaceChildren(renderSentences(entry));
+      const status = audioStatus();
+      if (entry) panel.replaceChildren(status, renderSentences(entry, pronunciation && ((example, group, index) =>
+        pronunciation.createSentenceButton(`sentence:${character}:${group}:${index + 1}`, example.written,
+          sentenceAudioFile(character, group, index), status))));
       else status.textContent = 'Este kanji todavía no tiene frases.';
     }, () => {
       if (shown === character) status.textContent = 'No se pudieron cargar las frases. Vuelve a abrir el kanji para intentarlo de nuevo.';
@@ -245,6 +257,8 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       return button;
     });
     const select = (tab: KanjiTab, focus = false) => {
+      // The other panel is hidden, and with it the Parar button of what was playing.
+      if (tab !== selectedTab) pronunciation?.stop();
       selectedTab = tab;
       tabs.forEach((item, index) => {
         buttons[index].setAttribute('aria-selected', String(item === tab));

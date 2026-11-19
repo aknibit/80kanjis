@@ -1,6 +1,8 @@
+import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import { kanjiSentencesFile, parseKanjiSentences, parseNavigation, parseStudyDocument } from '../src/lib/content.ts';
 import { parseCollection } from '../src/lib/collection.ts';
+import { sentenceAudioDirectory, sentenceAudioProblems, type SentenceAudioEntry } from '../src/lib/sentence-audio.ts';
 import { createSiteVocabulary, exampleProblems, kanjiSentenceProblems, levelProblems } from '../src/lib/site-vocabulary.ts';
 import type { CounterDocument, LexiconDocument, StudyDocument } from '../src/content-types.ts';
 import type { CollectionDocument } from '../src/types.ts';
@@ -36,6 +38,14 @@ referenced.add(kanjiSentencesFile.slice('content/'.length));
 const problems = kanjiSentenceProblems(sentences, collection, vocabulary);
 if (problems.length > 0) throw new Error(`Frases de los kanji:\n${problems.join('\n')}`);
 console.log(`Frases de los kanji: ${sentences.entries.length} kanji, ${sentences.entries.length * 6} frases.`);
+// Each sentence has an audio generated from its current text: the dialog shows the button without asking first.
+const audioRoot = new URL(`audio/${sentenceAudioDirectory}/`, root);
+const audioGeneration = JSON.parse(await readFile(new URL('generation.json', audioRoot), 'utf8')) as { entries: SentenceAudioEntry[] };
+const audioHashes = new Map(await Promise.all((await readdir(audioRoot)).filter((file) => file !== 'generation.json')
+  .map(async (file) => [file, createHash('sha256').update(await readFile(new URL(file, audioRoot))).digest('hex')] as const)));
+const audioIssues = sentenceAudioProblems(sentences, audioGeneration.entries, audioHashes);
+if (audioIssues.length > 0) throw new Error(`Audio de las frases (${audioIssues.length}). Ejecuta npm run audio:sentences:\n${audioIssues.join('\n')}`);
+console.log(`Audio de las frases: ${audioHashes.size} archivos, uno por frase.`);
 const exampleIssues = exampleProblems(lexicons, counters, vocabulary);
 if (exampleIssues.length > 0) throw new Error(`Ejemplos de las secciones (${exampleIssues.length}):\n${exampleIssues.join('\n')}`);
 console.log('Ejemplos de las secciones: solo usan palabras de la web.');
@@ -63,4 +73,4 @@ const sourceFiles = (await readdir(new URL('../src/', import.meta.url), { recurs
   .filter((file) => file === 'style.css' || (file.endsWith('.ts') && !file.endsWith('.test.ts')));
 for (const file of ['../index.html', ...sourceFiles]) cover(await readFile(new URL(`../src/${file}`, import.meta.url), 'utf8'));
 if (missing.size > 0) throw new Error(`Las fuentes no incluyen: ${[...missing].join(' ')}. Ejecuta npm run fonts.`);
-console.log('Contenido válido: versiones, campos, IDs, fuentes, grupos, lecturas, referencias, frases de los kanji y cobertura tipográfica.');
+console.log('Contenido válido: versiones, campos, IDs, fuentes, grupos, lecturas, referencias, frases de los kanji, su audio y cobertura tipográfica.');

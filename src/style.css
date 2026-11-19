@@ -390,7 +390,8 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kanji-dialog .kanji-dialog-reading-hint { font-size: 12px; line-height: 1.7; margin: 10px 0 0; }
 .kanji-dialog .kanji-dialog-note, .kanji-dialog .kanji-dialog-difficulty { font-size: 14px; line-height: 1.7; margin: 16px 0 20px; }
 .kanji-dialog-examples-title { font-size: 13px; font-weight: 600; margin: 22px 0 8px; }
-.kanji-dialog-examples { --study-control-width: 68px; --study-control-height: 22px; list-style: none; padding: 0; margin: 0; }
+.kanji-dialog-examples, .kanji-sentence-list { --study-control-width: 68px; --study-control-height: 22px; }
+.kanji-dialog-examples { list-style: none; padding: 0; margin: 0; }
 /* Audio sits at the right of each word, centred on its first line, as in the cards on a phone. */
 .kanji-dialog-examples li { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
 .kanji-dialog-examples li > * { grid-column: 1; }
@@ -413,9 +414,12 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kanji-dialog-tab[aria-selected='true'] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .kanji-dialog-tab:focus-visible, .kanji-dialog-panel:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .kanji-dialog .kanji-sentence-group { margin: 14px 0 8px; font-size: 11px; line-height: 1.5; color: var(--muted); }
-.kanji-dialog .kanji-sentence-group:first-child { margin-top: 12px; }
+.kanji-dialog .kanji-sentence-group:first-child, .kanji-dialog .kanji-dialog-audio-status:empty + .kanji-sentence-group { margin-top: 12px; }
 .kanji-sentence-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
-.kanji-sentence { padding-left: 14px; border-left: 2px solid var(--action-border); }
+.kanji-sentence { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; padding-left: 14px; border-left: 2px solid var(--action-border); }
+/* Audio at the right of the sentence, centred on its first line (19 px × 1.6), however many lines it takes. */
+.kanji-sentence > * { grid-column: 1; }
+.kanji-sentence > .audio-button { grid-column: 2; grid-row: 1; align-self: start; margin-top: max(0px, calc((30.4px - var(--study-control-height)) / 2)); }
 .kanji-dialog .kanji-sentence p { margin: 0; }
 /* Sentences only break at the spaces between blocks, like the examples of the other sections. */
 .kanji-sentence-written, .kanji-sentence-reading { word-break: keep-all; overflow-wrap: break-word; }
@@ -694,7 +698,10 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-block--vocabulary .study-content { grid-column: 1; grid-row: 1 / span 2; min-height: 0; }
   .study-block--kanji .kanji-character { grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; margin: 0; }
   .study-block--kanji .kanji-meanings { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
-  .study-block, .kanji-dialog-examples { --study-control-width: 60px; }
+  .study-block, .kanji-dialog-examples, .kanji-sentence-list { --study-control-width: 60px; }
+  /* Phones: the sentence and its reading keep the full width, and Audio moves beside the translation. */
+  .kanji-sentence-written, .kanji-sentence-reading { grid-column: 1 / -1; }
+  .kanji-sentence > .audio-button { grid-row: 3; align-self: center; margin-top: 0; }
   .study-action { gap: 3px; padding-inline: 2px; font-size: 11px; }
   .study-action .study-action-icon { flex-basis: 11px; width: 11px; height: 11px; }
   .audio-origin { font-size: 8px; }
@@ -728,7 +735,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 }
 @media (pointer: coarse) {
   /* Compact controls whose invisible touch area is still 44 px tall. */
-  .study-block, .kanji-dialog-examples { --study-control-height: 30px; }
+  .study-block, .kanji-dialog-examples, .kanji-sentence-list { --study-control-height: 30px; }
   .study-action { position: relative; }
   .study-action::after { content: ''; position: absolute; inset: -7px -2px; }
   .study-guides > summary, .study-sources > summary { padding-block: 12px; }
