@@ -145,8 +145,9 @@ function start(source: CollectionDocument, difficulty: DifficultySelector) {
 
     const meta = element('div', 'study-meta');
     const identity = element('div', 'study-identity');
-    identity.append(element('span', 'study-type', item.type === 'kanji' ? 'Kanji' : 'Vocabulario'));
-    if (item.type === 'kanji') identity.append(element('span', 'study-number', String(positions.get(entry.id)).padStart(2, '0')));
+    // The kanji's Info button already reads «Info kanji 01», so only words carry a type label.
+    if (item.type === 'kanji') identity.append(kanjiDetails.createInfoButton(item.character, positions.get(entry.id)!));
+    else identity.append(element('span', 'study-type', 'Vocabulario'));
     meta.append(identity);
 
     const content = element('div', 'study-content');
@@ -179,9 +180,7 @@ function start(source: CollectionDocument, difficulty: DifficultySelector) {
     badge.setAttribute('role', 'img');
     badge.setAttribute('aria-label', `Dificultad de ${item.type === 'kanji' ? item.character : item.written}: ${label}`);
     controls.append(badge);
-    if (item.type === 'kanji') {
-      identity.prepend(kanjiDetails.createInfoButton(item.character));
-    } else {
+    if (item.type === 'vocabulary') {
       const audioButton = pronunciation.createButton(item);
       if (audioButton) identity.prepend(audioButton);
     }

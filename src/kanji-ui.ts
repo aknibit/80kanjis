@@ -282,11 +282,13 @@ export function setupKanjiDetails(source: CollectionDocument) {
     return fragment;
   }
 
-  function createInfoButton(character: string): HTMLButtonElement {
+  /** «Info kanji 01»: the visible label leads the accessible name, so voice control can say it. */
+  function createInfoButton(character: string, position: number): HTMLButtonElement {
     const button = createTrigger(character, 'study-action info-button');
-    button.innerHTML = '<svg class="study-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/><path d="M10.5 11H12v6m-1.5 0h3"/></svg><span class="study-action-label">Info</span>';
+    const label = `Info kanji ${String(position).padStart(2, '0')}`;
+    button.innerHTML = `<svg class="study-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/><path d="M10.5 11H12v6m-1.5 0h3"/></svg><span class="study-action-label">${label}</span>`;
     button.title = `Ver pronunciaciones e información de ${character}`;
-    button.setAttribute('aria-label', button.title);
+    button.setAttribute('aria-label', `${label}: pronunciaciones e información de ${character}`);
     return button;
   }
 
