@@ -90,6 +90,11 @@
   --no-difficulty: #777;
   --medium-fill: #796023;
   --hard-fill: #a23e30;
+  /* Difficulty filters at rest: a tint of each level, behind --text */
+  --difficulty-all-tint: #eeece3;
+  --easy-tint: #e1eee2;
+  --medium-tint: #f5ecd0;
+  --hard-tint: #f6e0dc;
   /* Shadows */
   --search-shadow: #2a342004;
   --dialog-shadow: #23281a30;
@@ -165,6 +170,10 @@
   --no-difficulty: #8b8b8b;
   --medium-fill: #7d6424;
   --hard-fill: #a8453a;
+  --difficulty-all-tint: #252b25;
+  --easy-tint: #1c3024;
+  --medium-tint: #2f2a17;
+  --hard-tint: #36211e;
   --search-shadow: #0000001a;
   --dialog-shadow: #00000099;
 }
@@ -242,7 +251,12 @@ kbd { font-family: inherit; font-size: 14px; min-width: 28px; height: 30px; disp
 /* Counters: groups above, difficulty below; both combine. */
 .filter-rows { display: grid; gap: 6px; min-width: 0; }
 .filter-rows + .study-result-count { align-self: start; margin-top: 4px; }
-.filter-label { flex-shrink: 0; align-self: center; margin-right: 4px; font-size: 12px; color: var(--muted); white-space: nowrap; }
+/* The difficulty row has no title: each button keeps a tint of its level, and fills with it when pressed. */
+.difficulty-filters .row-filter:not([aria-pressed='true']) { color: var(--text); background: var(--difficulty-all-tint); border-color: var(--difficulty-all-tint); }
+.difficulty-filters .row-filter[data-difficulty-filter='easy']:not([aria-pressed='true']) { background: var(--easy-tint); border-color: var(--easy-tint); }
+.difficulty-filters .row-filter[data-difficulty-filter='medium']:not([aria-pressed='true']) { background: var(--medium-tint); border-color: var(--medium-tint); }
+.difficulty-filters .row-filter[data-difficulty-filter='hard']:not([aria-pressed='true']) { background: var(--hard-tint); border-color: var(--hard-tint); }
+.difficulty-filters .row-filter:not([aria-pressed='true']):hover { border-color: var(--line-strong); }
 .row-filter:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }
 .filter-count { font-size: 12px; opacity: .85; font-variant-numeric: tabular-nums; }
 .filter-hint { margin: 0 0 10px; color: var(--muted); font-size: 12px; line-height: 1.5; }

@@ -154,6 +154,22 @@ test('each counter form and question has a Japanese example and an everyday sent
   }
 });
 
+test('the everyday sentence of each counter form uses the concept of its example', () => {
+  const solid = (text: string) => text.replace(/\s/gu, '');
+  for (const entry of counters.entries) {
+    for (const item of [...entry.forms, entry.question]) {
+      const example = solid(item.example.written).replace(/[。？！]$/u, '');
+      // 一本の 鉛筆 → 鉛筆; 鉛筆は 何本 ありますか。 → 鉛筆; 七月 七日 → 七月 and 七日; 十まで かぞえる → 十まで and かぞえ.
+      const concepts = item === entry.question ? [example.split(/[はをが]/u)[0]]
+        : example.includes('の') ? [example.slice(example.indexOf('の') + 1)]
+        : item.example.written.split(/\s+/u).map((block) => block.replace(/る$/u, ''));
+      for (const concept of concepts) {
+        assert.ok(solid(item.sentence.written).includes(concept), `${entry.id}: ${item.example.written} / ${item.sentence.written}`);
+      }
+    }
+  }
+});
+
 test('counter group and difficulty filters combine, and each counts what the other lets through', () => {
   const ids = (entries: readonly { id: string }[]) => entries.map((entry) => entry.id);
   const easyObjects = filterByGroupAndDifficulty(counters.entries, 'objects', 'easy');

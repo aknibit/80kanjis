@@ -119,9 +119,9 @@
             "meaning": "dos ideas"
           },
           "sentence": {
-            "written": "パンを 二つ ください。",
-            "reading": "パンを ふたつ ください。",
-            "meaning": "Dos panes, por favor."
+            "written": "いい アイデアが 二つ あります。",
+            "reading": "いい アイデアが ふたつ あります。",
+            "meaning": "Tengo dos buenas ideas."
           }
         },
         {
@@ -137,9 +137,9 @@
             "meaning": "tres recados"
           },
           "sentence": {
-            "written": "うちに へやが 三つ あります。",
-            "reading": "うちに へやが みっつ あります。",
-            "meaning": "En casa hay tres habitaciones."
+            "written": "今日は ようじが 三つ あります。",
+            "reading": "きょうは ようじが みっつ あります。",
+            "meaning": "Hoy tengo tres recados."
           }
         },
         {
@@ -173,9 +173,9 @@
             "meaning": "cinco puntos clave"
           },
           "sentence": {
-            "written": "宿題が 五つ あります。",
-            "reading": "しゅくだいが いつつ あります。",
-            "meaning": "Tengo cinco deberes."
+            "written": "試験の ポイントは 五つです。",
+            "reading": "しけんの ポイントは いつつです。",
+            "meaning": "El examen tiene cinco puntos clave."
           }
         },
         {
@@ -191,9 +191,9 @@
             "meaning": "seis compromisos"
           },
           "sentence": {
-            "written": "蜜柑を 六つ 買いました。",
-            "reading": "みかんを むっつ かいました。",
-            "meaning": "Compré seis mandarinas."
+            "written": "今しゅうは やくそくが 六つ あります。",
+            "reading": "こんしゅうは やくそくが むっつ あります。",
+            "meaning": "Esta semana tengo seis compromisos."
           }
         },
         {
@@ -209,9 +209,9 @@
             "meaning": "siete deseos"
           },
           "sentence": {
-            "written": "かばんが 七つ あります。",
-            "reading": "かばんが ななつ あります。",
-            "meaning": "Hay siete bolsos."
+            "written": "ねがいが 七つ あります。",
+            "reading": "ねがいが ななつ あります。",
+            "meaning": "Tengo siete deseos."
           }
         },
         {
@@ -227,9 +227,9 @@
             "meaning": "ocho reglas"
           },
           "sentence": {
-            "written": "チョコレートを 八つ 食べました。",
-            "reading": "チョコレートを やっつ たべました。",
-            "meaning": "Me comí ocho bombones."
+            "written": "この 教室には 規則が 八つ あります。",
+            "reading": "この きょうしつには きそくが やっつ あります。",
+            "meaning": "Esta aula tiene ocho normas."
           }
         },
         {
@@ -245,9 +245,9 @@
             "meaning": "nueve problemas"
           },
           "sentence": {
-            "written": "くだものを 九つ もらいました。",
-            "reading": "くだものを ここのつ もらいました。",
-            "meaning": "Me dieron nueve piezas de fruta."
+            "written": "試験に もんだいが 九つ ありました。",
+            "reading": "しけんに もんだいが ここのつ ありました。",
+            "meaning": "El examen tenía nueve problemas."
           }
         },
         {
@@ -280,9 +280,9 @@
           "meaning": "¿Cuántas preguntas hay?"
         },
         "sentence": {
-          "written": "おみやげを いくつ 買いますか。",
-          "reading": "おみやげを いくつ かいますか。",
-          "meaning": "¿Cuántos recuerdos compramos?"
+          "written": "先生に 質問を いくつ しましたか。",
+          "reading": "せんせいに しつもんを いくつ しましたか。",
+          "meaning": "¿Cuántas preguntas le hiciste a la profesora?"
         }
       },
       "notes": [
@@ -315,9 +315,9 @@
             "meaning": "una manzana"
           },
           "sentence": {
-            "written": "けしゴムを 一個 かして ください。",
-            "reading": "けしゴムを いっこ かして ください。",
-            "meaning": "¿Me prestas una goma de borrar?"
+            "written": "林檎を 一個 ください。",
+            "reading": "りんごを いっこ ください。",
+            "meaning": "Una manzana, por favor."
           }
         },
         {
@@ -351,9 +351,9 @@
             "meaning": "tres naranjas"
           },
           "sentence": {
-            "written": "林檎を 三個 買いました。",
-            "reading": "りんごを さんこ かいました。",
-            "meaning": "Compré tres manzanas."
+            "written": "オレンジを 三個 買いました。",
+            "reading": "オレンジを さんこ かいました。",
+            "meaning": "Compré tres naranjas."
           }
         },
         {
@@ -387,9 +387,9 @@
             "meaning": "cinco botones"
           },
           "sentence": {
-            "written": "おにぎりを 五個 作りました。",
-            "reading": "おにぎりを ごこ つくりました。",
-            "meaning": "Hice cinco bolas de arroz."
+            "written": "シャツに ボタンが 五個 あります。",
+            "reading": "シャツに ボタンが ごこ あります。",
+            "meaning": "La camisa tiene cinco botones."
           }
         },
         {
@@ -405,9 +405,9 @@
             "meaning": "seis gomas de borrar"
           },
           "sentence": {
-            "written": "トマトを 六個 ください。",
-            "reading": "トマトを ろっこ ください。",
-            "meaning": "Seis tomates, por favor."
+            "written": "けしゴムを 六個 買いました。",
+            "reading": "けしゴムを ろっこ かいました。",
+            "meaning": "Compré seis gomas de borrar."
           }
         },
         {
@@ -441,9 +441,9 @@
             "meaning": "ocho tomates"
           },
           "sentence": {
-            "written": "ギョーザを 八個 食べました。",
-            "reading": "ギョーザを はっこ たべました。",
-            "meaning": "Me comí ocho gyozas."
+            "written": "トマトを 八個 ください。",
+            "reading": "トマトを はっこ ください。",
+            "meaning": "Ocho tomates, por favor."
           }
         },
         {
@@ -459,9 +459,9 @@
             "meaning": "nueve bolas de arroz"
           },
           "sentence": {
-            "written": "パズルの ピースが 九個 ありません。",
-            "reading": "パズルの ピースが きゅうこ ありません。",
-            "meaning": "Faltan nueve piezas del puzle."
+            "written": "おにぎりを 九個 作りました。",
+            "reading": "おにぎりを きゅうこ つくりました。",
+            "meaning": "Hice nueve bolas de arroz."
           }
         },
         {
@@ -495,9 +495,9 @@
           "meaning": "¿Cuántos huevos hay?"
         },
         "sentence": {
-          "written": "林檎を 何個 買いますか。",
-          "reading": "りんごを なんこ かいますか。",
-          "meaning": "¿Cuántas manzanas compramos?"
+          "written": "卵を 何個 買いますか。",
+          "reading": "たまごを なんこ かいますか。",
+          "meaning": "¿Cuántos huevos compramos?"
         }
       },
       "notes": []
@@ -529,9 +529,9 @@
             "meaning": "un estudiante"
           },
           "sentence": {
-            "written": "一人で 日本へ 行きました。",
-            "reading": "ひとりで にほんへ いきました。",
-            "meaning": "Fui a Japón solo."
+            "written": "教室に 学生が 一人 います。",
+            "reading": "きょうしつに がくせいが ひとり います。",
+            "meaning": "Hay un estudiante en el aula."
           }
         },
         {
@@ -547,9 +547,9 @@
             "meaning": "dos amigas"
           },
           "sentence": {
-            "written": "二人で えいがを 見ました。",
-            "reading": "ふたりで えいがを みました。",
-            "meaning": "Vimos una película los dos."
+            "written": "日本に ともだちが 二人 います。",
+            "reading": "にほんに ともだちが ふたり います。",
+            "meaning": "Tengo dos amigas en Japón."
           }
         },
         {
@@ -565,9 +565,9 @@
             "meaning": "tres médicos"
           },
           "sentence": {
-            "written": "子どもは 三人です。",
-            "reading": "こどもは さんにんです。",
-            "meaning": "Tengo tres hijos."
+            "written": "この びょういんには いしゃが 三人 います。",
+            "reading": "この びょういんには いしゃが さんにん います。",
+            "meaning": "En este hospital hay tres médicos."
           }
         },
         {
@@ -583,9 +583,9 @@
             "meaning": "cuatro profesoras"
           },
           "sentence": {
-            "written": "四人 家族です。",
-            "reading": "よにん かぞくです。",
-            "meaning": "Somos una familia de cuatro."
+            "written": "日本ごの 先生は 四人です。",
+            "reading": "にほんごの せんせいは よにんです。",
+            "meaning": "Hay cuatro profesoras de japonés."
           }
         },
         {
@@ -601,9 +601,9 @@
             "meaning": "cinco niños"
           },
           "sentence": {
-            "written": "教室に 学生が 五人 います。",
-            "reading": "きょうしつに がくせいが ごにん います。",
-            "meaning": "Hay cinco estudiantes en el aula."
+            "written": "中庭に 子どもが 五人 います。",
+            "reading": "なかにわに こどもが ごにん います。",
+            "meaning": "Hay cinco niños en el patio."
           }
         },
         {
@@ -619,9 +619,9 @@
             "meaning": "seis clientes"
           },
           "sentence": {
-            "written": "パーティーに 六人 来ました。",
-            "reading": "パーティーに ろくにん きました。",
-            "meaning": "Vinieron seis personas a la fiesta."
+            "written": "レストランに お客さんが 六人 来ました。",
+            "reading": "レストランに おきゃくさんが ろくにん きました。",
+            "meaning": "Vinieron seis clientes al restaurante."
           }
         },
         {
@@ -637,9 +637,9 @@
             "meaning": "siete empleados"
           },
           "sentence": {
-            "written": "七人で 晩ご飯を 食べました。",
-            "reading": "ななにんで ばんごはんを たべました。",
-            "meaning": "Cenamos siete personas."
+            "written": "ちちの かいしゃには かいしゃいんが 七人 います。",
+            "reading": "ちちの かいしゃには かいしゃいんが ななにん います。",
+            "meaning": "La empresa de mi padre tiene siete empleados."
           }
         },
         {
@@ -655,9 +655,9 @@
             "meaning": "ocho compañeros de clase"
           },
           "sentence": {
-            "written": "かいしゃに エンジニアが 八人 います。",
-            "reading": "かいしゃに エンジニアが はちにん います。",
-            "meaning": "En la empresa hay ocho ingenieros."
+            "written": "クラスメートが 八人 来ました。",
+            "reading": "クラスメートが はちにん きました。",
+            "meaning": "Vinieron ocho compañeros de clase."
           }
         },
         {
@@ -673,9 +673,9 @@
             "meaning": "nueve estudiantes universitarios"
           },
           "sentence": {
-            "written": "九人で カラオケに 行きました。",
-            "reading": "きゅうにんで カラオケに いきました。",
-            "meaning": "Fuimos nueve personas al karaoke."
+            "written": "大学生が 九人で カラオケに 行きました。",
+            "reading": "だいがくせいが きゅうにんで カラオケに いきました。",
+            "meaning": "Nueve universitarios fueron juntos al karaoke."
           }
         },
         {
@@ -691,9 +691,9 @@
             "meaning": "diez dependientes"
           },
           "sentence": {
-            "written": "みせに お客さんが 十人 います。",
-            "reading": "みせに おきゃくさんが じゅうにん います。",
-            "meaning": "Hay diez clientes en la tienda."
+            "written": "この デパートには 店員が 十人 います。",
+            "reading": "この デパートには てんいんが じゅうにん います。",
+            "meaning": "Estos grandes almacenes tienen diez dependientes."
           }
         }
       ],
@@ -708,9 +708,9 @@
           "meaning": "¿Cuántos sois en tu familia?"
         },
         "sentence": {
-          "written": "パーティーには 何人 来ますか。",
-          "reading": "パーティーには なんにん きますか。",
-          "meaning": "¿Cuántas personas vienen a la fiesta?"
+          "written": "ご家族は 何人 いますか。",
+          "reading": "ごかぞくは なんにん いますか。",
+          "meaning": "¿Cuántos sois en tu familia?"
         }
       },
       "notes": [
@@ -743,9 +743,9 @@
             "meaning": "una hoja de papel"
           },
           "sentence": {
-            "written": "きっぷを 一枚 ください。",
-            "reading": "きっぷを いちまい ください。",
-            "meaning": "Un billete, por favor."
+            "written": "かみを 一枚 ください。",
+            "reading": "かみを いちまい ください。",
+            "meaning": "Una hoja de papel, por favor."
           }
         },
         {
@@ -779,9 +779,9 @@
             "meaning": "tres camisas"
           },
           "sentence": {
-            "written": "めいしを 三枚 もらいました。",
-            "reading": "めいしを さんまい もらいました。",
-            "meaning": "Me dieron tres tarjetas de visita."
+            "written": "デパートで シャツを 三枚 買いました。",
+            "reading": "デパートで シャツを さんまい かいました。",
+            "meaning": "Compré tres camisas en los grandes almacenes."
           }
         },
         {
@@ -792,14 +792,14 @@
           ],
           "special": false,
           "example": {
-            "written": "四枚の おさら",
-            "reading": "よんまいの おさら",
-            "meaning": "cuatro platos"
+            "written": "四枚の めいし",
+            "reading": "よんまいの めいし",
+            "meaning": "cuatro tarjetas de visita"
           },
           "sentence": {
-            "written": "えを 四枚 描きました。",
-            "reading": "えを よんまい かきました。",
-            "meaning": "Pinté cuatro cuadros."
+            "written": "かいしゃの 人に めいしを 四枚 もらいました。",
+            "reading": "かいしゃの ひとに めいしを よんまい もらいました。",
+            "meaning": "Me dieron cuatro tarjetas de visita en la empresa."
           }
         },
         {
@@ -882,9 +882,9 @@
           ],
           "special": false,
           "example": {
-            "written": "九枚の ふうとう",
-            "reading": "きゅうまいの ふうとう",
-            "meaning": "nueve sobres"
+            "written": "九枚の コピー",
+            "reading": "きゅうまいの コピー",
+            "meaning": "nueve copias"
           },
           "sentence": {
             "written": "コピーを 九枚 おねがいします。",
@@ -955,9 +955,9 @@
             "meaning": "una bicicleta"
           },
           "sentence": {
-            "written": "わたしの うちには 車が 一台 あります。",
-            "reading": "わたしの うちには くるまが いちだい あります。",
-            "meaning": "En mi casa tenemos un coche."
+            "written": "わたしは じてん車が 一台 あります。",
+            "reading": "わたしは じてんしゃが いちだい あります。",
+            "meaning": "Tengo una bicicleta."
           }
         },
         {
@@ -973,9 +973,9 @@
             "meaning": "dos coches"
           },
           "sentence": {
-            "written": "うちには テレビが 二台 あります。",
-            "reading": "うちには テレビが にだい あります。",
-            "meaning": "En casa tenemos dos televisores."
+            "written": "うちには 車が 二台 あります。",
+            "reading": "うちには くるまが にだい あります。",
+            "meaning": "En casa tenemos dos coches."
           }
         },
         {
@@ -1004,14 +1004,14 @@
           ],
           "special": false,
           "example": {
-            "written": "四台の 機械",
-            "reading": "よんだいの きかい",
-            "meaning": "cuatro máquinas"
+            "written": "四台の タクシー",
+            "reading": "よんだいの タクシー",
+            "meaning": "cuatro taxis"
           },
           "sentence": {
-            "written": "えきに じてん車が 四台 あります。",
-            "reading": "えきに じてんしゃが よんだい あります。",
-            "meaning": "Hay cuatro bicicletas en la estación."
+            "written": "えきに タクシーが 四台 あります。",
+            "reading": "えきに タクシーが よんだい あります。",
+            "meaning": "Hay cuatro taxis en la estación."
           }
         },
         {
@@ -1027,9 +1027,9 @@
             "meaning": "cinco televisores"
           },
           "sentence": {
-            "written": "タクシーが 五台 来ました。",
-            "reading": "タクシーが ごだい きました。",
-            "meaning": "Vinieron cinco taxis."
+            "written": "この みせには テレビが 五台 あります。",
+            "reading": "この みせには テレビが ごだい あります。",
+            "meaning": "Esta tienda tiene cinco televisores."
           }
         },
         {
@@ -1076,14 +1076,14 @@
           ],
           "special": false,
           "example": {
-            "written": "八台の カメラ",
-            "reading": "はちだいの カメラ",
-            "meaning": "ocho cámaras"
+            "written": "八台の エレベーター",
+            "reading": "はちだいの エレベーター",
+            "meaning": "ocho ascensores"
           },
           "sentence": {
-            "written": "エレベーターが 八台 あります。",
-            "reading": "エレベーターが はちだい あります。",
-            "meaning": "Hay ocho ascensores."
+            "written": "この デパートには エレベーターが 八台 あります。",
+            "reading": "この デパートには エレベーターが はちだい あります。",
+            "meaning": "Estos grandes almacenes tienen ocho ascensores."
           }
         },
         {
@@ -1099,9 +1099,9 @@
             "meaning": "nueve impresoras"
           },
           "sentence": {
-            "written": "この デパートには レジが 九台 あります。",
-            "reading": "この デパートには レジが きゅうだい あります。",
-            "meaning": "Estos grandes almacenes tienen nueve cajas registradoras."
+            "written": "事務所に プリンターが 九台 あります。",
+            "reading": "じむしょに プリンターが きゅうだい あります。",
+            "meaning": "En la oficina hay nueve impresoras."
           }
         },
         {
@@ -1134,9 +1134,9 @@
           "meaning": "¿Cuántos coches hay?"
         },
         "sentence": {
-          "written": "えきに じてん車は 何台 ありますか。",
-          "reading": "えきに じてんしゃは なんだい ありますか。",
-          "meaning": "¿Cuántas bicicletas hay en la estación?"
+          "written": "あの かいしゃには 車が 何台 ありますか。",
+          "reading": "あの かいしゃには くるまが なんだい ありますか。",
+          "meaning": "¿Cuántos coches tiene aquella empresa?"
         }
       },
       "notes": []
@@ -1257,9 +1257,9 @@
             "meaning": "seis diarios"
           },
           "sentence": {
-            "written": "先月 本を 六冊 読みました。",
-            "reading": "せんげつ ほんを ろくさつ よみました。",
-            "meaning": "El mes pasado leí seis libros."
+            "written": "日記が 六冊 あります。",
+            "reading": "にっきが ろくさつ あります。",
+            "meaning": "Tengo seis diarios."
           }
         },
         {
@@ -1275,9 +1275,9 @@
             "meaning": "siete agendas"
           },
           "sentence": {
-            "written": "日本ごの 本が 七冊 あります。",
-            "reading": "にほんごの ほんが ななさつ あります。",
-            "meaning": "Tengo siete libros de japonés."
+            "written": "手帳を 七冊 もらいました。",
+            "reading": "てちょうを ななさつ もらいました。",
+            "meaning": "Me dieron siete agendas."
           }
         },
         {
@@ -1400,9 +1400,9 @@
             "meaning": "dos botellas de vino"
           },
           "sentence": {
-            "written": "ビールを 二本 ください。",
-            "reading": "ビールを にほん ください。",
-            "meaning": "Dos botellas de cerveza, por favor."
+            "written": "ワインを 二本 買いました。",
+            "reading": "ワインを にほん かいました。",
+            "meaning": "Compré dos botellas de vino."
           }
         },
         {
@@ -1449,9 +1449,9 @@
           ],
           "special": false,
           "example": {
-            "written": "五本の 庭木",
-            "reading": "ごほんの にわき",
-            "meaning": "cinco árboles del jardín"
+            "written": "五本の さくら",
+            "reading": "ごほんの さくら",
+            "meaning": "cinco cerezos"
           },
           "sentence": {
             "written": "校庭に さくらが 五本 あります。",
@@ -1562,9 +1562,9 @@
           "meaning": "¿Cuántos lápices hay?"
         },
         "sentence": {
-          "written": "ビールは 何本 飲みましたか。",
-          "reading": "ビールは なんぼん のみましたか。",
-          "meaning": "¿Cuántas cervezas te bebiste?"
+          "written": "鉛筆を 何本 買いましたか。",
+          "reading": "えんぴつを なんぼん かいましたか。",
+          "meaning": "¿Cuántos lápices compraste?"
         }
       },
       "notes": []
@@ -1597,9 +1597,9 @@
             "meaning": "un cachorro"
           },
           "sentence": {
-            "written": "竹やぶに 蛇が 一匹 いました。",
-            "reading": "たけやぶに へびが いっぴき いました。",
-            "meaning": "Había una serpiente en el bambú."
+            "written": "うちに 子犬が 一匹 います。",
+            "reading": "うちに こいぬが いっぴき います。",
+            "meaning": "En casa tenemos un cachorro."
           }
         },
         {
@@ -1777,9 +1777,9 @@
           "meaning": "¿Cuántos peces hay?"
         },
         "sentence": {
-          "written": "虫かごに すず虫は 何匹 いますか。",
-          "reading": "むしかごに すずむしは なんびき いますか。",
-          "meaning": "¿Cuántos grillos hay en la jaula?"
+          "written": "さかなを 何匹 買いましたか。",
+          "reading": "さかなを なんびき かいましたか。",
+          "meaning": "¿Cuántos pescados compraste?"
         }
       },
       "notes": [
@@ -1809,9 +1809,9 @@
           ],
           "special": false,
           "example": {
-            "written": "一羽の 鸚鵡",
-            "reading": "いちわの おうむ",
-            "meaning": "un loro"
+            "written": "一羽の とり",
+            "reading": "いちわの とり",
+            "meaning": "un pájaro"
           },
           "sentence": {
             "written": "木の 上に とりが 一羽 います。",
@@ -1995,9 +1995,9 @@
           "meaning": "¿Cuántos pollitos hay?"
         },
         "sentence": {
-          "written": "雛鳥は 何羽 生まれましたか。",
-          "reading": "ひなどりは なんば うまれましたか。",
-          "meaning": "¿Cuántas crías nacieron?"
+          "written": "ひよこは 何羽 生まれましたか。",
+          "reading": "ひよこは なんば うまれましたか。",
+          "meaning": "¿Cuántos pollitos nacieron?"
         }
       },
       "notes": [
@@ -2300,9 +2300,9 @@
             "meaning": "cuatro tazas de té"
           },
           "sentence": {
-            "written": "こうちゃを 四杯 飲みました。",
-            "reading": "こうちゃを よんはい のみました。",
-            "meaning": "Me tomé cuatro tazas de té negro."
+            "written": "おちゃを 四杯 飲みました。",
+            "reading": "おちゃを よんはい のみました。",
+            "meaning": "Me tomé cuatro tazas de té."
           }
         },
         {
@@ -2349,9 +2349,9 @@
           ],
           "special": false,
           "example": {
-            "written": "スプーン 七杯の 塩",
-            "reading": "スプーン ななはいの しお",
-            "meaning": "siete cucharadas de sal"
+            "written": "スプーン 七杯の さとう",
+            "reading": "スプーン ななはいの さとう",
+            "meaning": "siete cucharadas de azúcar"
           },
           "sentence": {
             "written": "コーヒーに さとうを 七杯 いれました。",
@@ -2426,9 +2426,9 @@
           "meaning": "¿Cuántas tazas de café tomas?"
         },
         "sentence": {
-          "written": "ごはんは 何杯 食べますか。",
-          "reading": "ごはんは なんばい たべますか。",
-          "meaning": "¿Cuántos cuencos de arroz comes?"
+          "written": "きのう コーヒーを 何杯 飲みましたか。",
+          "reading": "きのう コーヒーを なんばい のみましたか。",
+          "meaning": "¿Cuántos cafés te tomaste ayer?"
         }
       },
       "notes": []
@@ -2639,9 +2639,9 @@
           "meaning": "¿Cuántos caballos hay?"
         },
         "sentence": {
-          "written": "あの 山村に 牛は 何頭 いますか。",
-          "reading": "あの さんそんに うしは なんとう いますか。",
-          "meaning": "¿Cuántas vacas hay en aquel pueblo de montaña?"
+          "written": "あの 山村に 馬は 何頭 いますか。",
+          "reading": "あの さんそんに うまは なんとう いますか。",
+          "meaning": "¿Cuántos caballos hay en aquel pueblo de montaña?"
         }
       },
       "notes": []
@@ -2709,9 +2709,9 @@
             "meaning": "tres días de lluvia"
           },
           "sentence": {
-            "written": "三日間 びょういんに いました。",
-            "reading": "みっかかん びょういんに いました。",
-            "meaning": "Estuve tres días en el hospital."
+            "written": "三日間 雨ふりでした。",
+            "reading": "みっかかん あめふりでした。",
+            "meaning": "Llovió durante tres días."
           }
         },
         {
@@ -2745,9 +2745,9 @@
             "meaning": "cinco días de clase"
           },
           "sentence": {
-            "written": "五日間 しごとを 休みました。",
-            "reading": "いつかかん しごとを やすみました。",
-            "meaning": "Falté cinco días al trabajo."
+            "written": "五日間 授業を 休みました。",
+            "reading": "いつかかん じゅぎょうを やすみました。",
+            "meaning": "Falté cinco días a clase."
           }
         },
         {
@@ -2763,9 +2763,9 @@
             "meaning": "un viaje de seis días"
           },
           "sentence": {
-            "written": "六日間 ともだちの うちに いました。",
-            "reading": "むいかかん ともだちの うちに いました。",
-            "meaning": "Estuve seis días en casa de un amigo."
+            "written": "六日間 一人で 旅を しました。",
+            "reading": "むいかかん ひとりで たびを しました。",
+            "meaning": "Viajé solo durante seis días."
           }
         },
         {
@@ -2799,9 +2799,9 @@
             "meaning": "ocho días de preparación"
           },
           "sentence": {
-            "written": "八日間 アメリカに いました。",
-            "reading": "ようかかん アメリカに いました。",
-            "meaning": "Estuve ocho días en Estados Unidos."
+            "written": "試験の 準備に 八日間 かかりました。",
+            "reading": "しけんの じゅんびに ようかかん かかりました。",
+            "meaning": "Preparar el examen me llevó ocho días."
           }
         },
         {
@@ -2812,9 +2812,9 @@
           ],
           "special": true,
           "example": {
-            "written": "九日間の しごと",
-            "reading": "ここのかかんの しごと",
-            "meaning": "nueve días de trabajo"
+            "written": "九日間の 休み",
+            "reading": "ここのかかんの やすみ",
+            "meaning": "nueve días de vacaciones"
           },
           "sentence": {
             "written": "ゴールデンウィークは 九日間 休みです。",
@@ -2830,9 +2830,9 @@
           ],
           "special": true,
           "example": {
-            "written": "十日間の 修理",
-            "reading": "とおかかんの しゅうり",
-            "meaning": "una reparación de diez días"
+            "written": "十日間の 旅行",
+            "reading": "とおかかんの りょこう",
+            "meaning": "un viaje de diez días"
           },
           "sentence": {
             "written": "十日間 スペインを 旅行しました。",
@@ -2852,9 +2852,9 @@
           "meaning": "¿Cuántos días dura el viaje?"
         },
         "sentence": {
-          "written": "日本に 何日間 いますか。",
-          "reading": "にほんに なんにちかん いますか。",
-          "meaning": "¿Cuántos días vas a estar en Japón?"
+          "written": "何日間 旅行しますか。",
+          "reading": "なんにちかん りょこうしますか。",
+          "meaning": "¿Cuántos días vas a estar de viaje?"
         }
       },
       "notes": [
@@ -2887,9 +2887,9 @@
             "meaning": "una semana de vacaciones"
           },
           "sentence": {
-            "written": "一週間 まい日 雨ふりでした。",
-            "reading": "いっしゅうかん まいにち あめふりでした。",
-            "meaning": "Llovió todos los días durante una semana."
+            "written": "らいしゅう 一週間 休みます。",
+            "reading": "らいしゅう いっしゅうかん やすみます。",
+            "meaning": "La semana que viene descanso una semana."
           }
         },
         {
@@ -2923,9 +2923,9 @@
             "meaning": "tres semanas de preparación"
           },
           "sentence": {
-            "written": "三週間 スペインに いました。",
-            "reading": "さんしゅうかん スペインに いました。",
-            "meaning": "Estuve tres semanas en España."
+            "written": "三週間 試験の 準備を しました。",
+            "reading": "さんしゅうかん しけんの じゅんびを しました。",
+            "meaning": "Preparé el examen durante tres semanas."
           }
         },
         {
@@ -2977,9 +2977,9 @@
             "meaning": "seis semanas de ejercicio"
           },
           "sentence": {
-            "written": "六週間 日本で 日本ごを 習いました。",
-            "reading": "ろくしゅうかん にほんで にほんごを ならいました。",
-            "meaning": "Estudié japonés seis semanas en Japón."
+            "written": "六週間 まい日 運動しました。",
+            "reading": "ろくしゅうかん まいにち うんどうしました。",
+            "meaning": "Hice ejercicio todos los días durante seis semanas."
           }
         },
         {
@@ -2990,9 +2990,9 @@
           ],
           "special": false,
           "example": {
-            "written": "七週間の 旅",
-            "reading": "ななしゅうかんの たび",
-            "meaning": "un viaje de siete semanas"
+            "written": "七週間の こうじ",
+            "reading": "ななしゅうかんの こうじ",
+            "meaning": "siete semanas de obras"
           },
           "sentence": {
             "written": "えきの こうじは 七週間でした。",
@@ -3013,9 +3013,9 @@
             "meaning": "ocho semanas de tenis"
           },
           "sentence": {
-            "written": "八週間 まい日 運動しました。",
-            "reading": "はっしゅうかん まいにち うんどうしました。",
-            "meaning": "Hice ejercicio todos los días durante ocho semanas."
+            "written": "八週間 テニスを 習いました。",
+            "reading": "はっしゅうかん テニスを ならいました。",
+            "meaning": "Di clases de tenis durante ocho semanas."
           }
         },
         {
@@ -3031,9 +3031,9 @@
             "meaning": "un bebé de nueve semanas"
           },
           "sentence": {
-            "written": "その 子犬は 九週間です。",
-            "reading": "その こいぬは きゅうしゅうかんです。",
-            "meaning": "Ese cachorro tiene nueve semanas."
+            "written": "その 赤ちゃんは 九週間です。",
+            "reading": "その あかちゃんは きゅうしゅうかんです。",
+            "meaning": "Ese bebé tiene nueve semanas."
           }
         },
         {
@@ -3050,9 +3050,9 @@
             "meaning": "diez semanas de baile"
           },
           "sentence": {
-            "written": "試験まで あと 十週間です。",
-            "reading": "しけんまで あと じゅっしゅうかんです。",
-            "meaning": "Quedan diez semanas para el examen."
+            "written": "十週間 ダンスの 授業を 受けました。",
+            "reading": "じゅっしゅうかん ダンスの じゅぎょうを うけました。",
+            "meaning": "Fui a clases de baile durante diez semanas."
           }
         }
       ],
@@ -3067,9 +3067,9 @@
           "meaning": "¿Cuántas semanas de vacaciones tienes?"
         },
         "sentence": {
-          "written": "日本ごの コースは 何週間ですか。",
-          "reading": "にほんごの コースは なんしゅうかんですか。",
-          "meaning": "¿Cuántas semanas dura el curso de japonés?"
+          "written": "大学の 休みは 何週間 ありますか。",
+          "reading": "だいがくの やすみは なんしゅうかん ありますか。",
+          "meaning": "¿Cuántas semanas de vacaciones tiene la universidad?"
         }
       },
       "notes": []
@@ -3100,9 +3100,9 @@
             "meaning": "un viaje de un mes"
           },
           "sentence": {
-            "written": "一か月 日本に いました。",
-            "reading": "いっかげつ にほんに いました。",
-            "meaning": "Estuve un mes en Japón."
+            "written": "一か月 日本を 旅行しました。",
+            "reading": "いっかげつ にほんを りょこうしました。",
+            "meaning": "Viajé un mes por Japón."
           }
         },
         {
@@ -3136,9 +3136,9 @@
             "meaning": "un bebé de tres meses"
           },
           "sentence": {
-            "written": "日本ごを 三か月 勉強しました。",
-            "reading": "にほんごを さんかげつ べんきょうしました。",
-            "meaning": "Estudié japonés durante tres meses."
+            "written": "ともだちの 赤ちゃんは 三か月です。",
+            "reading": "ともだちの あかちゃんは さんかげつです。",
+            "meaning": "El bebé de mi amiga tiene tres meses."
           }
         },
         {
@@ -3154,8 +3154,8 @@
             "meaning": "cuatro meses de trabajo"
           },
           "sentence": {
-            "written": "四か月 日本で 働きました。",
-            "reading": "よんかげつ にほんで はたらきました。",
+            "written": "四か月 日本で しごとを しました。",
+            "reading": "よんかげつ にほんで しごとを しました。",
             "meaning": "Trabajé cuatro meses en Japón."
           }
         },
@@ -3172,9 +3172,9 @@
             "meaning": "cinco meses de preparación"
           },
           "sentence": {
-            "written": "車の 修理に 五か月 かかりました。",
-            "reading": "くるまの しゅうりに ごかげつ かかりました。",
-            "meaning": "La reparación del coche tardó cinco meses."
+            "written": "旅行の 準備に 五か月 かかりました。",
+            "reading": "りょこうの じゅんびに ごかげつ かかりました。",
+            "meaning": "Preparar el viaje me llevó cinco meses."
           }
         },
         {
@@ -3190,9 +3190,9 @@
             "meaning": "un cachorro de seis meses"
           },
           "sentence": {
-            "written": "六か月 ピアノを 習いました。",
-            "reading": "ろっかげつ ピアノを ならいました。",
-            "meaning": "Di clases de piano durante seis meses."
+            "written": "うちの 子犬は 六か月です。",
+            "reading": "うちの こいぬは ろっかげつです。",
+            "meaning": "Nuestro cachorro tiene seis meses."
           }
         },
         {
@@ -3203,14 +3203,14 @@
           ],
           "special": false,
           "example": {
-            "written": "七か月の 旅",
-            "reading": "ななかげつの たび",
-            "meaning": "un viaje de siete meses"
+            "written": "七か月の 授業",
+            "reading": "ななかげつの じゅぎょう",
+            "meaning": "siete meses de clases"
           },
           "sentence": {
-            "written": "七か月 スペインごを おしえました。",
-            "reading": "ななかげつ スペインごを おしえました。",
-            "meaning": "Enseñé español durante siete meses."
+            "written": "七か月 日本ごの 授業を 受けました。",
+            "reading": "ななかげつ にほんごの じゅぎょうを うけました。",
+            "meaning": "Fui a clases de japonés durante siete meses."
           }
         },
         {
@@ -3226,9 +3226,9 @@
             "meaning": "ocho meses de ejercicio"
           },
           "sentence": {
-            "written": "八か月 えいごの 授業を 受けました。",
-            "reading": "はっかげつ えいごの じゅぎょうを うけました。",
-            "meaning": "Fui a clases de inglés durante ocho meses."
+            "written": "八か月 運動を しました。",
+            "reading": "はっかげつ うんどうを しました。",
+            "meaning": "Hice ejercicio durante ocho meses."
           }
         },
         {
@@ -3244,9 +3244,9 @@
             "meaning": "nueve meses de estudio"
           },
           "sentence": {
-            "written": "九か月 まい日 テニスを しました。",
-            "reading": "きゅうかげつ まいにち テニスを しました。",
-            "meaning": "Jugué al tenis todos los días durante nueve meses."
+            "written": "九か月 日本ごを 勉強しました。",
+            "reading": "きゅうかげつ にほんごを べんきょうしました。",
+            "meaning": "Estudié japonés durante nueve meses."
           }
         },
         {
@@ -3258,9 +3258,9 @@
           ],
           "special": true,
           "example": {
-            "written": "十か月の 子ども",
-            "reading": "じゅっかげつの こども",
-            "meaning": "un niño de diez meses"
+            "written": "十か月の アルバイト",
+            "reading": "じゅっかげつの アルバイト",
+            "meaning": "diez meses de trabajo a tiempo parcial"
           },
           "sentence": {
             "written": "十か月 アルバイトを しました。",
@@ -3280,9 +3280,9 @@
           "meaning": "¿Cuántos meses tiene el bebé?"
         },
         "sentence": {
-          "written": "日本に 何か月 いましたか。",
-          "reading": "にほんに なんかげつ いましたか。",
-          "meaning": "¿Cuántos meses estuviste en Japón?"
+          "written": "先生の 赤ちゃんは 何か月ですか。",
+          "reading": "せんせいの あかちゃんは なんかげつですか。",
+          "meaning": "¿Cuántos meses tiene el bebé de la profesora?"
         }
       },
       "notes": [
@@ -3315,9 +3315,9 @@
             "meaning": "un bebé de un año"
           },
           "sentence": {
-            "written": "わたしの 子犬は 一歳です。",
-            "reading": "わたしの こいぬは いっさいです。",
-            "meaning": "Mi cachorro tiene un año."
+            "written": "その 赤ちゃんは らい月 一歳です。",
+            "reading": "その あかちゃんは らいげつ いっさいです。",
+            "meaning": "Ese bebé cumple un año el mes que viene."
           }
         },
         {
@@ -3333,9 +3333,9 @@
             "meaning": "un niño de dos años"
           },
           "sentence": {
-            "written": "うちの 子どもは 二歳です。",
-            "reading": "うちの こどもは にさいです。",
-            "meaning": "Mi hijo tiene dos años."
+            "written": "その 男の子は 二歳です。",
+            "reading": "その おとこのこは にさいです。",
+            "meaning": "Ese niño tiene dos años."
           }
         },
         {
@@ -3351,9 +3351,9 @@
             "meaning": "un gato de tres años"
           },
           "sentence": {
-            "written": "かれは 三歳から えいごを 習いました。",
-            "reading": "かれは さんさいから えいごを ならいました。",
-            "meaning": "Él aprendió inglés desde los tres años."
+            "written": "うちの ねこは 三歳です。",
+            "reading": "うちの ねこは さんさいです。",
+            "meaning": "Nuestro gato tiene tres años."
           }
         },
         {
@@ -3369,9 +3369,9 @@
             "meaning": "un caballo de cuatro años"
           },
           "sentence": {
-            "written": "先生の 子どもは 四歳です。",
-            "reading": "せんせいの こどもは よんさいです。",
-            "meaning": "El hijo de la profesora tiene cuatro años."
+            "written": "あの 馬は 四歳です。",
+            "reading": "あの うまは よんさいです。",
+            "meaning": "Aquel caballo tiene cuatro años."
           }
         },
         {
@@ -3387,9 +3387,9 @@
             "meaning": "un niño de cinco años"
           },
           "sentence": {
-            "written": "かのじょの ねこは 五歳です。",
-            "reading": "かのじょの ねこは ごさいです。",
-            "meaning": "El gato de ella tiene cinco años."
+            "written": "先生の 子どもは 五歳です。",
+            "reading": "せんせいの こどもは ごさいです。",
+            "meaning": "El hijo de la profesora tiene cinco años."
           }
         },
         {
@@ -3405,9 +3405,9 @@
             "meaning": "un alumno de primaria de seis años"
           },
           "sentence": {
-            "written": "日本では 六歳で 小学校に 入ります。",
-            "reading": "にほんでは ろくさいで しょうがっこうに はいります。",
-            "meaning": "En Japón se empieza primaria a los seis años."
+            "written": "あの 小学生は 六歳です。",
+            "reading": "あの しょうがくせいは ろくさいです。",
+            "meaning": "Aquel alumno de primaria tiene seis años."
           }
         },
         {
@@ -3423,9 +3423,9 @@
             "meaning": "una hermana pequeña de siete años"
           },
           "sentence": {
-            "written": "ちちは 七歳から やきゅうを しました。",
-            "reading": "ちちは ななさいから やきゅうを しました。",
-            "meaning": "Mi padre jugó al béisbol desde los siete años."
+            "written": "いもうとは 七歳から ピアノを 習いました。",
+            "reading": "いもうとは ななさいから ピアノを ならいました。",
+            "meaning": "Mi hermana pequeña dio clases de piano desde los siete años."
           }
         },
         {
@@ -3441,9 +3441,9 @@
             "meaning": "una vaca de ocho años"
           },
           "sentence": {
-            "written": "あの 鸚鵡は 八歳です。",
-            "reading": "あの おうむは はっさいです。",
-            "meaning": "Aquel loro tiene ocho años."
+            "written": "この 牛は 八歳です。",
+            "reading": "この うしは はっさいです。",
+            "meaning": "Esta vaca tiene ocho años."
           }
         },
         {
@@ -3459,9 +3459,9 @@
             "meaning": "un hijo de nueve años"
           },
           "sentence": {
-            "written": "その 小学生は 九歳です。",
-            "reading": "その しょうがくせいは きゅうさいです。",
-            "meaning": "Ese alumno de primaria tiene nueve años."
+            "written": "かれの むすこは 九歳です。",
+            "reading": "かれの むすこは きゅうさいです。",
+            "meaning": "Su hijo tiene nueve años."
           }
         },
         {
@@ -3478,9 +3478,9 @@
             "meaning": "una hija de diez años"
           },
           "sentence": {
-            "written": "ごしゅじんは 十歳 年上です。",
-            "reading": "ごしゅじんは じゅっさい としうえです。",
-            "meaning": "Su marido es diez años mayor."
+            "written": "十歳の むすめに 本を あげました。",
+            "reading": "じゅっさいの むすめに ほんを あげました。",
+            "meaning": "Le regalé un libro a mi hija de diez años."
           }
         }
       ],
@@ -3495,9 +3495,9 @@
           "meaning": "¿Cuántos años tiene su hijo?"
         },
         "sentence": {
-          "written": "何歳から 日本ごを 習いましたか。",
-          "reading": "なんさいから にほんごを ならいましたか。",
-          "meaning": "¿Desde qué edad estudias japonés?"
+          "written": "おこさんは 何歳から 日本ごを 習いましたか。",
+          "reading": "おこさんは なんさいから にほんごを ならいましたか。",
+          "meaning": "¿Desde qué edad estudia japonés su hijo?"
         }
       },
       "notes": [
@@ -3531,9 +3531,9 @@
             "meaning": "1 de enero (Año Nuevo)"
           },
           "sentence": {
-            "written": "四月 一日から 大学が 始まります。",
-            "reading": "しがつ ついたちから だいがくが はじまります。",
-            "meaning": "La universidad empieza el 1 de abril."
+            "written": "一月 一日に 家族と 会います。",
+            "reading": "いちがつ ついたちに かぞくと あいます。",
+            "meaning": "El 1 de enero veo a mi familia."
           }
         },
         {
@@ -3549,9 +3549,9 @@
             "meaning": "2 de febrero"
           },
           "sentence": {
-            "written": "二日に 会いましょう。",
-            "reading": "ふつかに あいましょう。",
-            "meaning": "Quedemos el día 2."
+            "written": "二月 二日に 会いましょう。",
+            "reading": "にがつ ふつかに あいましょう。",
+            "meaning": "Quedemos el 2 de febrero."
           }
         },
         {
@@ -3585,9 +3585,9 @@
             "meaning": "4 de abril"
           },
           "sentence": {
-            "written": "四日は ひまです。",
-            "reading": "よっかは ひまです。",
-            "meaning": "El día 4 estoy libre."
+            "written": "四月 四日は ひまです。",
+            "reading": "しがつ よっかは ひまです。",
+            "meaning": "El 4 de abril estoy libre."
           }
         },
         {
@@ -3621,9 +3621,9 @@
             "meaning": "6 de junio"
           },
           "sentence": {
-            "written": "六日に 試験が あります。",
-            "reading": "むいかに しけんが あります。",
-            "meaning": "El día 6 tengo un examen."
+            "written": "六月 六日に 試験が あります。",
+            "reading": "ろくがつ むいかに しけんが あります。",
+            "meaning": "El 6 de junio tengo un examen."
           }
         },
         {
@@ -3657,9 +3657,9 @@
             "meaning": "8 de agosto"
           },
           "sentence": {
-            "written": "八日の よるに でんわを かけます。",
-            "reading": "ようかの よるに でんわを かけます。",
-            "meaning": "Te llamo la noche del día 8."
+            "written": "八月 八日の よるに でんわを かけます。",
+            "reading": "はちがつ ようかの よるに でんわを かけます。",
+            "meaning": "Te llamo la noche del 8 de agosto."
           }
         },
         {
@@ -3675,9 +3675,9 @@
             "meaning": "9 de septiembre"
           },
           "sentence": {
-            "written": "九日に ともだちと 会います。",
-            "reading": "ここのかに ともだちと あいます。",
-            "meaning": "El día 9 quedo con un amigo."
+            "written": "九月 九日に ともだちと 会います。",
+            "reading": "くがつ ここのかに ともだちと あいます。",
+            "meaning": "El 9 de septiembre quedo con un amigo."
           }
         },
         {
@@ -3693,9 +3693,9 @@
             "meaning": "10 de octubre"
           },
           "sentence": {
-            "written": "十日から 休みです。",
-            "reading": "とおかから やすみです。",
-            "meaning": "Las vacaciones empiezan el día 10."
+            "written": "十月 十日から 休みです。",
+            "reading": "じゅうがつ とおかから やすみです。",
+            "meaning": "Las vacaciones empiezan el 10 de octubre."
           }
         },
         {
@@ -3711,9 +3711,9 @@
             "meaning": "11 de noviembre"
           },
           "sentence": {
-            "written": "十一日に ともだちが 来ます。",
-            "reading": "じゅういちにちに ともだちが きます。",
-            "meaning": "El día 11 viene un amigo."
+            "written": "十一月 十一日に ともだちが 来ます。",
+            "reading": "じゅういちがつ じゅういちにちに ともだちが きます。",
+            "meaning": "El 11 de noviembre viene un amigo."
           }
         },
         {
@@ -3729,9 +3729,9 @@
             "meaning": "12 de diciembre"
           },
           "sentence": {
-            "written": "十二日は ははの たん生日です。",
-            "reading": "じゅうににちは ははの たんじょうびです。",
-            "meaning": "El día 12 es el cumpleaños de mi madre."
+            "written": "十二月 十二日は ははの たん生日です。",
+            "reading": "じゅうにがつ じゅうににちは ははの たんじょうびです。",
+            "meaning": "El 12 de diciembre es el cumpleaños de mi madre."
           }
         },
         {
@@ -3747,9 +3747,9 @@
             "meaning": "13 de enero"
           },
           "sentence": {
-            "written": "十三日は 金よう日です。",
-            "reading": "じゅうさんにちは きんようびです。",
-            "meaning": "El día 13 es viernes."
+            "written": "一月 十三日は 金よう日です。",
+            "reading": "いちがつ じゅうさんにちは きんようびです。",
+            "meaning": "El 13 de enero es viernes."
           }
         },
         {
@@ -3783,9 +3783,9 @@
             "meaning": "15 de marzo"
           },
           "sentence": {
-            "written": "十五日に 日本へ 行きます。",
-            "reading": "じゅうごにちに にほんへ いきます。",
-            "meaning": "El día 15 me voy a Japón."
+            "written": "三月 十五日に 日本へ 行きます。",
+            "reading": "さんがつ じゅうごにちに にほんへ いきます。",
+            "meaning": "El 15 de marzo me voy a Japón."
           }
         },
         {
@@ -3801,9 +3801,9 @@
             "meaning": "16 de abril"
           },
           "sentence": {
-            "written": "十六日に 試験が 終わります。",
-            "reading": "じゅうろくにちに しけんが おわります。",
-            "meaning": "Los exámenes terminan el día 16."
+            "written": "四月 十六日に 試験が 終わります。",
+            "reading": "しがつ じゅうろくにちに しけんが おわります。",
+            "meaning": "Los exámenes terminan el 16 de abril."
           }
         },
         {
@@ -3819,9 +3819,9 @@
             "meaning": "17 de mayo"
           },
           "sentence": {
-            "written": "十七日に パーティーを します。",
-            "reading": "じゅうしちにちに パーティーを します。",
-            "meaning": "El día 17 hacemos una fiesta."
+            "written": "五月 十七日に パーティーを します。",
+            "reading": "ごがつ じゅうしちにちに パーティーを します。",
+            "meaning": "El 17 de mayo hacemos una fiesta."
           }
         },
         {
@@ -3837,9 +3837,9 @@
             "meaning": "18 de junio"
           },
           "sentence": {
-            "written": "十八日は 休みです。",
-            "reading": "じゅうはちにちは やすみです。",
-            "meaning": "El día 18 es fiesta."
+            "written": "六月 十八日は 休みです。",
+            "reading": "ろくがつ じゅうはちにちは やすみです。",
+            "meaning": "El 18 de junio es fiesta."
           }
         },
         {
@@ -3855,9 +3855,9 @@
             "meaning": "19 de julio"
           },
           "sentence": {
-            "written": "十九日に 先生と 会います。",
-            "reading": "じゅうくにちに せんせいと あいます。",
-            "meaning": "El día 19 quedo con el profesor."
+            "written": "七月 十九日に 先生と 会います。",
+            "reading": "しちがつ じゅうくにちに せんせいと あいます。",
+            "meaning": "El 19 de julio quedo con la profesora."
           }
         },
         {
@@ -3873,9 +3873,9 @@
             "meaning": "20 de agosto"
           },
           "sentence": {
-            "written": "二十日は わたしの たん生日です。",
-            "reading": "はつかは わたしの たんじょうびです。",
-            "meaning": "El día 20 es mi cumpleaños."
+            "written": "八月 二十日は わたしの たん生日です。",
+            "reading": "はちがつ はつかは わたしの たんじょうびです。",
+            "meaning": "El 20 de agosto es mi cumpleaños."
           }
         },
         {
@@ -3891,9 +3891,9 @@
             "meaning": "21 de septiembre"
           },
           "sentence": {
-            "written": "二十一日に 旅行から 帰ります。",
-            "reading": "にじゅういちにちに りょこうから かえります。",
-            "meaning": "Vuelvo del viaje el día 21."
+            "written": "九月 二十一日に 旅行から 帰ります。",
+            "reading": "くがつ にじゅういちにちに りょこうから かえります。",
+            "meaning": "Vuelvo del viaje el 21 de septiembre."
           }
         },
         {
@@ -3909,9 +3909,9 @@
             "meaning": "22 de octubre"
           },
           "sentence": {
-            "written": "二十二日まで 日本に います。",
-            "reading": "にじゅうににちまで にほんに います。",
-            "meaning": "Estoy en Japón hasta el día 22."
+            "written": "十月 二十二日まで 日本に います。",
+            "reading": "じゅうがつ にじゅうににちまで にほんに います。",
+            "meaning": "Estoy en Japón hasta el 22 de octubre."
           }
         },
         {
@@ -3927,9 +3927,9 @@
             "meaning": "23 de noviembre"
           },
           "sentence": {
-            "written": "二十三日は 休日です。",
-            "reading": "にじゅうさんにちは きゅうじつです。",
-            "meaning": "El día 23 es festivo."
+            "written": "十一月 二十三日は 休日です。",
+            "reading": "じゅういちがつ にじゅうさんにちは きゅうじつです。",
+            "meaning": "El 23 de noviembre es festivo."
           }
         },
         {
@@ -3945,9 +3945,9 @@
             "meaning": "24 de diciembre (Nochebuena)"
           },
           "sentence": {
-            "written": "二十四日に ケーキを 買います。",
-            "reading": "にじゅうよっかに ケーキを かいます。",
-            "meaning": "El día 24 compro un pastel."
+            "written": "十二月 二十四日に ケーキを 買います。",
+            "reading": "じゅうにがつ にじゅうよっかに ケーキを かいます。",
+            "meaning": "El 24 de diciembre compro un pastel."
           }
         },
         {
@@ -3958,14 +3958,14 @@
           ],
           "special": false,
           "example": {
-            "written": "一月 二十五日",
-            "reading": "いちがつ にじゅうごにち",
-            "meaning": "25 de enero"
+            "written": "十二月 二十五日",
+            "reading": "じゅうにがつ にじゅうごにち",
+            "meaning": "25 de diciembre (Navidad)"
           },
           "sentence": {
-            "written": "二十五日は クリスマスです。",
-            "reading": "にじゅうごにちは クリスマスです。",
-            "meaning": "El día 25 es Navidad."
+            "written": "十二月 二十五日は クリスマスです。",
+            "reading": "じゅうにがつ にじゅうごにちは クリスマスです。",
+            "meaning": "El 25 de diciembre es Navidad."
           }
         },
         {
@@ -3981,9 +3981,9 @@
             "meaning": "26 de febrero"
           },
           "sentence": {
-            "written": "二十六日に くにへ 帰ります。",
-            "reading": "にじゅうろくにちに くにへ かえります。",
-            "meaning": "El día 26 vuelvo a mi país."
+            "written": "二月 二十六日に くにへ 帰ります。",
+            "reading": "にがつ にじゅうろくにちに くにへ かえります。",
+            "meaning": "El 26 de febrero vuelvo a mi país."
           }
         },
         {
@@ -3999,9 +3999,9 @@
             "meaning": "27 de marzo"
           },
           "sentence": {
-            "written": "二十七日に 図書館で 本を かります。",
-            "reading": "にじゅうしちにちに としょかんで ほんを かります。",
-            "meaning": "El día 27 saco un libro de la biblioteca."
+            "written": "三月 二十七日に 図書館で 本を かります。",
+            "reading": "さんがつ にじゅうしちにちに としょかんで ほんを かります。",
+            "meaning": "El 27 de marzo saco un libro de la biblioteca."
           }
         },
         {
@@ -4012,9 +4012,9 @@
           ],
           "special": false,
           "example": {
-            "written": "四月 二十八日",
-            "reading": "しがつ にじゅうはちにち",
-            "meaning": "28 de abril"
+            "written": "二月 二十八日",
+            "reading": "にがつ にじゅうはちにち",
+            "meaning": "28 de febrero"
           },
           "sentence": {
             "written": "二月は 二十八日まで あります。",
@@ -4035,9 +4035,9 @@
             "meaning": "29 de mayo"
           },
           "sentence": {
-            "written": "二十九日に コンサートが あります。",
-            "reading": "にじゅうくにちに コンサートが あります。",
-            "meaning": "El día 29 hay un concierto."
+            "written": "五月 二十九日に コンサートが あります。",
+            "reading": "ごがつ にじゅうくにちに コンサートが あります。",
+            "meaning": "El 29 de mayo hay un concierto."
           }
         },
         {
@@ -4053,9 +4053,9 @@
             "meaning": "30 de junio"
           },
           "sentence": {
-            "written": "三十日に 宿題を 出して ください。",
-            "reading": "さんじゅうにちに しゅくだいを だして ください。",
-            "meaning": "Entregad los deberes el día 30."
+            "written": "六月 三十日に 宿題を 出して ください。",
+            "reading": "ろくがつ さんじゅうにちに しゅくだいを だして ください。",
+            "meaning": "Entregad los deberes el 30 de junio."
           }
         },
         {
@@ -4066,9 +4066,9 @@
           ],
           "special": false,
           "example": {
-            "written": "七月 三十一日",
-            "reading": "しちがつ さんじゅういちにち",
-            "meaning": "31 de julio"
+            "written": "十二月 三十一日",
+            "reading": "じゅうにがつ さんじゅういちにち",
+            "meaning": "31 de diciembre (Nochevieja)"
           },
           "sentence": {
             "written": "十二月 三十一日は おおみそかです。",
@@ -4088,9 +4088,9 @@
           "meaning": "¿A qué día estamos hoy?"
         },
         "sentence": {
-          "written": "たん生日は 何月 何日ですか。",
-          "reading": "たんじょうびは なんがつ なんにちですか。",
-          "meaning": "¿Qué día es tu cumpleaños?"
+          "written": "今日は 何月 何日ですか。",
+          "reading": "きょうは なんがつ なんにちですか。",
+          "meaning": "¿Qué día es hoy?"
         }
       },
       "notes": [
@@ -4123,9 +4123,9 @@
             "meaning": "la una de la tarde"
           },
           "sentence": {
-            "written": "ひる休みは 一時までです。",
-            "reading": "ひるやすみは いちじまでです。",
-            "meaning": "La pausa del mediodía es hasta la una."
+            "written": "ごご 一時に 会いましょう。",
+            "reading": "ごご いちじに あいましょう。",
+            "meaning": "Quedemos a la una de la tarde."
           }
         },
         {
@@ -4141,9 +4141,9 @@
             "meaning": "el tren de las dos"
           },
           "sentence": {
-            "written": "えいがは 二時からです。",
-            "reading": "えいがは にじからです。",
-            "meaning": "La película empieza a las dos."
+            "written": "二時の でん車は 速いです。",
+            "reading": "にじの でんしゃは はやいです。",
+            "meaning": "El tren de las dos es rápido."
           }
         },
         {
@@ -4159,9 +4159,9 @@
             "meaning": "el autobús de las tres"
           },
           "sentence": {
-            "written": "ごご 三時に 先生に 会います。",
-            "reading": "ごご さんじに せんせいに あいます。",
-            "meaning": "A las tres de la tarde veo a la profesora."
+            "written": "三時の バスで 帰ります。",
+            "reading": "さんじの バスで かえります。",
+            "meaning": "Vuelvo en el autobús de las tres."
           }
         },
         {
@@ -4177,9 +4177,9 @@
             "meaning": "la clase de las cuatro"
           },
           "sentence": {
-            "written": "しごとは 四時に 終わります。",
-            "reading": "しごとは よじに おわります。",
-            "meaning": "El trabajo termina a las cuatro."
+            "written": "四時の 授業は 日本ごです。",
+            "reading": "よじの じゅぎょうは にほんごです。",
+            "meaning": "La clase de las cuatro es de japonés."
           }
         },
         {
@@ -4195,9 +4195,9 @@
             "meaning": "las cinco de la mañana"
           },
           "sentence": {
-            "written": "金よう日は 五時に 帰ります。",
-            "reading": "きんようびは ごじに かえります。",
-            "meaning": "Los viernes vuelvo a casa a las cinco."
+            "written": "あさ 五時に 起きました。",
+            "reading": "あさ ごじに おきました。",
+            "meaning": "Me levanté a las cinco de la mañana."
           }
         },
         {
@@ -4213,9 +4213,9 @@
             "meaning": "la cena de las seis"
           },
           "sentence": {
-            "written": "まいあさ 六時に 起きます。",
-            "reading": "まいあさ ろくじに おきます。",
-            "meaning": "Me levanto cada mañana a las seis."
+            "written": "うちは いつも 六時に 晩ご飯を 食べます。",
+            "reading": "うちは いつも ろくじに ばんごはんを たべます。",
+            "meaning": "En casa siempre cenamos a las seis."
           }
         },
         {
@@ -4231,9 +4231,9 @@
             "meaning": "el desayuno de las siete"
           },
           "sentence": {
-            "written": "七時に ともだちと えきで 会います。",
-            "reading": "しちじに ともだちと えきで あいます。",
-            "meaning": "A las siete quedo con un amigo en la estación."
+            "written": "あさごはんは 七時からです。",
+            "reading": "あさごはんは しちじからです。",
+            "meaning": "El desayuno es a partir de las siete."
           }
         },
         {
@@ -4249,9 +4249,9 @@
             "meaning": "las ocho de la noche"
           },
           "sentence": {
-            "written": "授業は 八時に 始まります。",
-            "reading": "じゅぎょうは はちじに はじまります。",
-            "meaning": "La clase empieza a las ocho."
+            "written": "よる 八時に うちへ 帰ります。",
+            "reading": "よる はちじに うちへ かえります。",
+            "meaning": "Vuelvo a casa a las ocho de la noche."
           }
         },
         {
@@ -4267,9 +4267,9 @@
             "meaning": "el avión de las nueve"
           },
           "sentence": {
-            "written": "銀行は 九時からです。",
-            "reading": "ぎんこうは くじからです。",
-            "meaning": "El banco abre a las nueve."
+            "written": "九時の ひこうきで 日本へ 行きます。",
+            "reading": "くじの ひこうきで にほんへ いきます。",
+            "meaning": "Voy a Japón en el avión de las nueve."
           }
         },
         {
@@ -4285,9 +4285,9 @@
             "meaning": "la pausa de las diez"
           },
           "sentence": {
-            "written": "まいばん 十時に 寝ます。",
-            "reading": "まいばん じゅうじに ねます。",
-            "meaning": "Cada noche me acuesto a las diez."
+            "written": "休憩は 十時からです。",
+            "reading": "きゅうけいは じゅうじからです。",
+            "meaning": "La pausa es a partir de las diez."
           }
         },
         {
@@ -4303,9 +4303,9 @@
             "meaning": "las once de la mañana"
           },
           "sentence": {
-            "written": "日よう日は 十一時まで 寝ました。",
-            "reading": "にちようびは じゅういちじまで ねました。",
-            "meaning": "El domingo dormí hasta las once."
+            "written": "ごぜん 十一時に 銀行へ 行きます。",
+            "reading": "ごぜん じゅういちじに ぎんこうへ いきます。",
+            "meaning": "Voy al banco a las once de la mañana."
           }
         },
         {
@@ -4321,9 +4321,9 @@
             "meaning": "las doce de la noche"
           },
           "sentence": {
-            "written": "十二時に ひるごはんを 食べます。",
-            "reading": "じゅうにじに ひるごはんを たべます。",
-            "meaning": "Como a las doce."
+            "written": "よる 十二時に 寝ました。",
+            "reading": "よる じゅうにじに ねました。",
+            "meaning": "Me acosté a las doce de la noche."
           }
         }
       ],
@@ -4338,9 +4338,9 @@
           "meaning": "¿Qué hora es?"
         },
         "sentence": {
-          "written": "あした 何時に 起きますか。",
-          "reading": "あした なんじに おきますか。",
-          "meaning": "¿A qué hora te levantas mañana?"
+          "written": "日本は 今 何時ですか。",
+          "reading": "にほんは いま なんじですか。",
+          "meaning": "¿Qué hora es ahora en Japón?"
         }
       },
       "notes": [
@@ -4374,9 +4374,9 @@
             "meaning": "una llamada de un minuto"
           },
           "sentence": {
-            "written": "授業まで あと 一分です。",
-            "reading": "じゅぎょうまで あと いっぷんです。",
-            "meaning": "Falta un minuto para la clase."
+            "written": "でんわは 一分で 終わりました。",
+            "reading": "でんわは いっぷんで おわりました。",
+            "meaning": "La llamada duró un minuto."
           }
         },
         {
@@ -4392,9 +4392,9 @@
             "meaning": "dos minutos de descanso"
           },
           "sentence": {
-            "written": "この うたは 二分です。",
-            "reading": "この うたは にふんです。",
-            "meaning": "Esta canción dura dos minutos."
+            "written": "二分 休みましょう。",
+            "reading": "にふん やすみましょう。",
+            "meaning": "Descansemos dos minutos."
           }
         },
         {
@@ -4410,9 +4410,9 @@
             "meaning": "un baile de tres minutos"
           },
           "sentence": {
-            "written": "ここから えきまで 三分です。",
-            "reading": "ここから えきまで さんぷんです。",
-            "meaning": "De aquí a la estación hay tres minutos."
+            "written": "その ダンスは 三分です。",
+            "reading": "その ダンスは さんぷんです。",
+            "meaning": "Ese baile dura tres minutos."
           }
         },
         {
@@ -4428,9 +4428,9 @@
             "meaning": "una canción de cuatro minutos"
           },
           "sentence": {
-            "written": "でん車は 七時 四分に 来ます。",
-            "reading": "でんしゃは しちじ よんぷんに きます。",
-            "meaning": "El tren llega a las siete y cuatro."
+            "written": "この うたは 四分です。",
+            "reading": "この うたは よんぷんです。",
+            "meaning": "Esta canción dura cuatro minutos."
           }
         },
         {
@@ -4446,9 +4446,9 @@
             "meaning": "un descanso de cinco minutos"
           },
           "sentence": {
-            "written": "五分 休みましょう。",
-            "reading": "ごふん やすみましょう。",
-            "meaning": "Descansemos cinco minutos."
+            "written": "授業の 休憩は 五分です。",
+            "reading": "じゅぎょうの きゅうけいは ごふんです。",
+            "meaning": "La pausa de la clase es de cinco minutos."
           }
         },
         {
@@ -4464,9 +4464,9 @@
             "meaning": "las diez y seis minutos"
           },
           "sentence": {
-            "written": "しんかんせんは 九時 六分に 出ます。",
-            "reading": "しんかんせんは くじ ろっぷんに でます。",
-            "meaning": "El tren bala sale a las nueve y seis."
+            "written": "でん車は 十時 六分に 来ます。",
+            "reading": "でんしゃは じゅうじ ろっぷんに きます。",
+            "meaning": "El tren llega a las diez y seis."
           }
         },
         {
@@ -4482,9 +4482,9 @@
             "meaning": "una audición de siete minutos"
           },
           "sentence": {
-            "written": "大学まで じてん車で 七分です。",
-            "reading": "だいがくまで じてんしゃで ななふんです。",
-            "meaning": "A la universidad hay siete minutos en bicicleta."
+            "written": "聞き取りの 試験は 七分です。",
+            "reading": "ききとりの しけんは ななふんです。",
+            "meaning": "El examen de comprensión oral dura siete minutos."
           }
         },
         {
@@ -4501,9 +4501,9 @@
             "meaning": "una película de ocho minutos"
           },
           "sentence": {
-            "written": "ひるごはんは 八分で 食べました。",
-            "reading": "ひるごはんは はっぷんで たべました。",
-            "meaning": "Me comí la comida en ocho minutos."
+            "written": "子どもと 八分の えいがを 見ました。",
+            "reading": "こどもと はっぷんの えいがを みました。",
+            "meaning": "Vi una película de ocho minutos con mi hijo."
           }
         },
         {
@@ -4519,9 +4519,9 @@
             "meaning": "la una y nueve de la tarde"
           },
           "sentence": {
-            "written": "今 二時 九分です。",
-            "reading": "いま にじ きゅうふんです。",
-            "meaning": "Son las dos y nueve."
+            "written": "今 ごご 一時 九分です。",
+            "reading": "いま ごご いちじ きゅうふんです。",
+            "meaning": "Ahora es la una y nueve de la tarde."
           }
         },
         {
@@ -4538,9 +4538,9 @@
             "meaning": "diez minutos de deberes"
           },
           "sentence": {
-            "written": "まいあさ 十分 日本ごを 勉強します。",
-            "reading": "まいあさ じゅっぷん にほんごを べんきょうします。",
-            "meaning": "Cada mañana estudio japonés diez minutos."
+            "written": "まい日 十分 宿題を します。",
+            "reading": "まいにち じゅっぷん しゅくだいを します。",
+            "meaning": "Cada día hago diez minutos de deberes."
           }
         },
         {
@@ -4556,9 +4556,9 @@
             "meaning": "las tres y cuarto"
           },
           "sentence": {
-            "written": "けさは 七時 十五分に 起きました。",
-            "reading": "けさは しちじ じゅうごふんに おきました。",
-            "meaning": "Esta mañana me levanté a las siete y cuarto."
+            "written": "三時 十五分に えきで 会いましょう。",
+            "reading": "さんじ じゅうごふんに えきで あいましょう。",
+            "meaning": "Quedemos en la estación a las tres y cuarto."
           }
         },
         {
@@ -4575,9 +4575,9 @@
             "meaning": "un examen de veinte minutos"
           },
           "sentence": {
-            "written": "うちから 大学まで 二十分です。",
-            "reading": "うちから だいがくまで にじゅっぷんです。",
-            "meaning": "De casa a la universidad hay veinte minutos."
+            "written": "試験は 二十分でした。",
+            "reading": "しけんは にじゅっぷんでした。",
+            "meaning": "El examen duró veinte minutos."
           }
         },
         {
@@ -4594,9 +4594,9 @@
             "meaning": "media hora de pausa al mediodía"
           },
           "sentence": {
-            "written": "まい日 三十分 歩きます。",
-            "reading": "まいにち さんじゅっぷん あるきます。",
-            "meaning": "Camino media hora cada día."
+            "written": "ひる休みは 三十分です。",
+            "reading": "ひるやすみは さんじゅっぷんです。",
+            "meaning": "La pausa del mediodía es de media hora."
           }
         }
       ],
@@ -4611,9 +4611,9 @@
           "meaning": "¿Cuántos minutos hay hasta la estación?"
         },
         "sentence": {
-          "written": "ひる休みは 何分ですか。",
-          "reading": "ひるやすみは なんぷんですか。",
-          "meaning": "¿Cuánto dura la pausa del mediodía?"
+          "written": "うちから えきまで 何分ですか。",
+          "reading": "うちから えきまで なんぷんですか。",
+          "meaning": "¿Cuántos minutos hay de casa a la estación?"
         }
       },
       "notes": [
@@ -4809,9 +4809,9 @@
           "meaning": "¿Cuántos cientos de yenes cuesta el bolígrafo?"
         },
         "sentence": {
-          "written": "タクシーで 何百円ぐらい かかりますか。",
-          "reading": "タクシーで なんびゃくえんぐらい かかりますか。",
-          "meaning": "¿Cuántos cientos de yenes cuesta, más o menos, en taxi?"
+          "written": "その ボールペンは 何百円でしたか。",
+          "reading": "その ボールペンは なんびゃくえんでしたか。",
+          "meaning": "¿Cuántos cientos de yenes costó ese bolígrafo?"
         }
       },
       "notes": [
@@ -5006,9 +5006,9 @@
           "meaning": "¿Cuántos miles de yenes cuesta el diccionario?"
         },
         "sentence": {
-          "written": "プレゼントは 何千円ぐらいですか。",
-          "reading": "プレゼントは なんぜんえんぐらいですか。",
-          "meaning": "¿Cuántos miles de yenes cuesta, más o menos, el regalo?"
+          "written": "あたらしい 辞書は 何千円ですか。",
+          "reading": "あたらしい じしょは なんぜんえんですか。",
+          "meaning": "¿Cuántos miles de yenes cuesta el diccionario nuevo?"
         }
       },
       "notes": [
@@ -5220,9 +5220,9 @@
           "meaning": "¿Cuántas decenas de miles de yenes cuesta la bicicleta?"
         },
         "sentence": {
-          "written": "あたらしい テレビは 何万円ですか。",
-          "reading": "あたらしい テレビは なんまんえんですか。",
-          "meaning": "¿Cuántas decenas de miles de yenes cuesta la televisión nueva?"
+          "written": "その じてん車は 何万円でしたか。",
+          "reading": "その じてんしゃは なんまんえんでしたか。",
+          "meaning": "¿Cuántas decenas de miles de yenes costó esa bicicleta?"
         }
       },
       "notes": [

@@ -275,15 +275,13 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   filters.setAttribute('role', 'group'); filters.setAttribute('aria-label', 'Filtrar por grupo');
   const count = node('span', 'study-result-count');
   count.setAttribute('role', 'status'); count.setAttribute('aria-live', 'polite'); count.setAttribute('aria-atomic', 'true');
-  // Counters also filter by difficulty, in a second row that combines with the groups: easy objects.
+  // Counters also filter by difficulty, in a second row that combines with the groups: easy objects. The row has
+  // no visible title: its buttons take the tint of their level, like the difficulty dots.
   const leveled = data.kind === 'counters';
   const difficultyFilters = node('div', 'row-filters difficulty-filters');
   if (leveled) {
     const rows = node('div', 'filter-rows');
-    const label = node('span', 'filter-label', 'Dificultad');
-    label.id = 'difficulty-filter-label';
-    difficultyFilters.setAttribute('role', 'group'); difficultyFilters.setAttribute('aria-labelledby', label.id);
-    difficultyFilters.append(label);
+    difficultyFilters.setAttribute('role', 'group'); difficultyFilters.setAttribute('aria-label', 'Filtrar por dificultad');
     rows.append(filters, difficultyFilters);
     toolbar.append(rows, count);
   } else toolbar.append(filters, count);

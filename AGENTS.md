@@ -15,6 +15,10 @@ npm run check:build
 
 Es la misma secuencia que ejecuta CI. Si una comprobación falla, corrige la causa en lugar de relajarla.
 
+## Git
+
+No crees ramas ni hagas `push` por tu cuenta: trabaja en la rama actual y deja que la persona decida cuándo publicar. Lo que llega a `main` en GitHub se despliega en GitHub Pages.
+
 ## Rendimiento: reglas que hay que mantener
 
 La carga inicial se optimizó en noviembre de 2026. Estas reglas evitan que vuelva a empeorar; `check:build` y los tests de los cargadores vigilan las principales.
@@ -35,7 +39,7 @@ Tamaños de referencia (noviembre de 2026). Si un cambio los aumenta de forma ap
 | `noto-sans-jp.woff2` | 84 KB (94 KB mientras las frases de los contadores usaban kanji ajenos a la web) |
 | `noto-serif-jp.woff2` | 195 KB (218 KB mientras las frases de los contadores usaban kanji ajenos a la web) |
 | JS (gzip) | 35 KB |
-| CSS (gzip) | 8,5 KB, incluidos los dos temas |
+| CSS (gzip) | 8,6 KB, incluidos los dos temas |
 
 ## Tema claro y oscuro
 
@@ -60,7 +64,7 @@ Tamaños de referencia (noviembre de 2026). Si un cambio los aumenta de forma ap
 Revisa cualquier cambio de interfaz entre 320 y 430 px de ancho, con emulación táctil, además del escritorio.
 
 - **Menú:** por debajo de 680 px se reparte en varias líneas para que se vean todas las secciones, y «Kana» queda al final. Con las seis secciones actuales ocupa dos líneas a 320 px con solo 5 px de margen: si añades una sección o alargas un nombre, comprueba que no pasa a tres líneas.
-- **Filtros:** en el teléfono ocupan todo el ancho y se desplazan hasta el borde de la pantalla; el contador de resultados va debajo. Contadores tiene una segunda fila, «Dificultad», que se combina con la de grupos (fáciles de objetos): cada botón cuenta lo que mostraría con el otro filtro aplicado (`filterByGroupAndDifficulty()`), y cada fila se desplaza por separado. En las secciones con fichas (`layout: "cards"`, ahora solo Vocabulario) se reparten en varias líneas, sin desplazamiento, y en el teléfono son más compactos (36 px de alto, 13 px de texto). Con los diez temas actuales ocupan nueve líneas a 320 px, ocho a 375 px, siete a 430 px y tres en escritorio.
+- **Filtros:** en el teléfono ocupan todo el ancho y se desplazan hasta el borde de la pantalla; el contador de resultados va debajo. Contadores tiene una segunda fila, la de dificultad, sin título: cada botón lleva el tono de su nivel (`--easy-tint`, `--medium-tint`, `--hard-tint` y `--difficulty-all-tint` para «Todas») y se rellena al pulsarlo. Se combina con la de grupos (fáciles de objetos): cada botón cuenta lo que mostraría con el otro filtro aplicado (`filterByGroupAndDifficulty()`), y cada fila se desplaza por separado. En las secciones con fichas (`layout: "cards"`, ahora solo Vocabulario) se reparten en varias líneas, sin desplazamiento, y en el teléfono son más compactos (36 px de alto, 13 px de texto). Con los diez temas actuales ocupan nueve líneas a 320 px, ocho a 375 px, siete a 430 px y tres en escritorio.
 - **Buscador:** el texto de ayuda se asigna con `fitPlaceholder()` (`src/search-placeholder.ts`), con una versión larga y una corta. Se muestra la larga solo si cabe, medida con la fuente real. La corta tiene que caber a 320 px; evita caracteres fuera de Latin‑1, como «ō», que DM Sans no incluye.
 - **Controles táctiles:** con puntero táctil, los botones Audio/Info miden 30 px de alto a la vista, pero un `::after` invisible amplía su zona táctil a 44 px. No los conviertas en cajas de 44 px.
 - **Fichas de los 80 kanji:** en el teléfono (≤600 px) cada tarjeta es una lista. El kanji, sus significados, Info y la dificultad forman la cabecera, separada por una línea fina; debajo van las tres palabras, sin columnas ni líneas entre ellas. Así la lectura queda en la misma línea que la palabra a partir de 360 px. Se eligió frente al 2×2 (lecturas que saltaban de línea y orden de lectura confuso) aunque alarga la página un 22 %. En tablets se mantiene el 2×2 y en escritorio las cuatro columnas. Se hace solo con CSS (`display: contents` y grid), sin tocar el HTML.

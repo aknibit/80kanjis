@@ -457,9 +457,9 @@
           "meaning": "El domingo juego al tenis."
         },
         {
-          "written": "先生は 日本人です。",
-          "reading": "せんせいは にほんじんです。",
-          "meaning": "La profesora es japonesa."
+          "written": "ごしゅじんは 日本人ですか。",
+          "reading": "ごしゅじんは にほんじんですか。",
+          "meaning": "¿Su marido es japonés?"
         }
       ],
       "advanced": [
@@ -1160,9 +1160,9 @@
           "meaning": "El año que viene voy a Japón."
         },
         {
-          "written": "先生は 年上です。",
-          "reading": "せんせいは としうえです。",
-          "meaning": "El profesor es mayor que yo."
+          "written": "しゅじんは 年上です。",
+          "reading": "しゅじんは としうえです。",
+          "meaning": "Mi marido es mayor que yo."
         }
       ],
       "advanced": [
