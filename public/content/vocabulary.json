@@ -2267,6 +2267,16 @@
       "note": "funciona delante de un nombre sin な"
     },
     {
+      "id": "vocab-en",
+      "written": "円",
+      "reading": "えん",
+      "romaji": "en",
+      "meaning": "yen",
+      "group": "topic-9",
+      "sourceId": "class-handouts",
+      "note": "detrás del precio: 三百円"
+    },
+    {
       "id": "vocab-shigoto",
       "written": "しごと",
       "reading": "しごと",

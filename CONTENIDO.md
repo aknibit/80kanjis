@@ -11,7 +11,7 @@ Los archivos de `public/` son la fuente de la verdad publicada. El navegador los
 | Contadores | `public/content/counters.json` | 19 contadores y 3 grupos de números; lecturas, variantes, preguntas, un ejemplo en japonés y una frase de uso diario por forma, y la dificultad de cada contador |
 | Kana | `public/content/kana.json` | 46 sonidos básicos, 25 con marcas y 33 combinaciones; hiragana y katakana |
 | Verbos | `public/content/verbs.json` | 59 entradas en forma ます, cada una con dos ejemplos: primero los 20 verbos esenciales, luego los del curso y las expresiones |
-| Vocabulario | `public/content/vocabulary.json` | 305 entradas agrupadas en diez temas |
+| Vocabulario | `public/content/vocabulary.json` | 306 entradas agrupadas en diez temas |
 | Adjetivos y adverbios | `public/content/modifiers.json` | 72 entradas: 37 adjetivos い y 18 な, cada uno con cuatro ejemplos (presente y pasado, afirmativo y negativo), y 17 adverbios con dos ejemplos |
 | Frases de los kanji | `public/content/kanji-sentences.json` | 480 frases para la ventana de cada uno de los 80 kanji: dos sencillas y cuatro con adjetivos, adverbios y contadores |
 | Esquema de edición | `public/content/study.schema.json` | Formato de los archivos nuevos para editores compatibles con JSON Schema |
@@ -38,10 +38,10 @@ Los verbos empiezan por el grupo `essentials`: los 20 verbos esenciales, en el o
 
 Los adjetivos y adverbios siguen el mismo criterio: sus ejemplos se escribieron para esta web el 16 de noviembre de 2026 y solo usan palabras de la propia web. Una palabra cuenta si es una entrada o una de las palabras de un kanji. No basta con que forme parte de otra (答え, en 答え合わせ) ni con que su kanji esté entre los 80 (川 o 水 solos): el 17 de noviembre se cambiaron tres frases por esos motivos. Cada lectura coincide con la que da la web para esa palabra. Cada adjetivo tiene cuatro, uno por forma cortés, en el orden en que se trabajan en clase: presente afirmativo, pasado afirmativo, presente negativo y pasado negativo. Las guías de conjugación siguen el mismo orden. Los negativos usan las formas del curso: 〜くないです y 〜くなかったです en los adjetivos い, y 〜では ありません y 〜では ありませんでした en los な, nunca じゃ. きれい y いい tienen ejemplos de sus formas negativas, que son las que más confunden (きれいでは ありません, よくないです). Los adverbios tienen dos ejemplos; las frases que tenían como nota (`とても おもしろいです。`) pasaron a ser ejemplos con traducción, y あまり y ぜんぜん conservan la nota de que se usan con una forma negativa. Ese día también se juntaron los adjetivos い: おいしい, まずい, あまい y いい estaban detrás de los な.
 
-Las frases de los kanji se escribieron para esta web el 18 de noviembre de 2026, con el mismo criterio que los ejemplos de verbos y adjetivos: solo usan palabras de la web, con su lectura y su grafía (子ども, 火じ, でん車). Cada kanji tiene dos frases sencillas y cuatro más elaboradas; cada una de esas cuatro usa un adjetivo, un adverbio o un contador, y entre las cuatro aparecen los tres. Una frase escribe su kanji como parte de una palabra: como 円 solo existe en 百円, 千円 y 百円玉, no hay precios como 三百円, y los meses eran los de la colección (二月, 四月, 七月…); desde el 19 de noviembre, Vocabulario tiene los doce. Las frases no se repiten entre kanji. Viven en un archivo aparte porque solo hacen falta al abrir una ventana: así la colección que se carga con la página sigue pesando lo mismo.
+Las frases de los kanji se escribieron para esta web el 18 de noviembre de 2026, con el mismo criterio que los ejemplos de verbos y adjetivos: solo usan palabras de la web, con su lectura y su grafía (子ども, 火じ, でん車). Cada kanji tiene dos frases sencillas y cuatro más elaboradas; cada una de esas cuatro usa un adjetivo, un adverbio o un contador, y entre las cuatro aparecen los tres. Una frase escribe su kanji como parte de una palabra. Por eso, hasta el 19 de noviembre, los únicos precios eran 百円 y 千円, y los meses, los de la colección (二月, 四月, 七月…). Ese día Vocabulario incorporó 円 y los doce meses. Las frases no se repiten entre kanji. Viven en un archivo aparte porque solo hacen falta al abrir una ventana: así la colección que se carga con la página sigue pesando lo mismo.
 
 El 19 de noviembre de 2026 se incorporó el vocabulario de las hojas de clase de los temas 1 a 9 (fuente `class-handouts`):
-- 209 entradas nuevas: 173 en Vocabulario, 6 en Verbos y 30 en Adjetivos y adverbios;
+- 210 entradas nuevas: 174 en Vocabulario, 6 en Verbos y 30 en Adjetivos y adverbios;
 - un tema nuevo, «Tiempo y calendario»;
 - los contadores 〜時 y 〜分.
 
@@ -74,6 +74,14 @@ No usan la forma て, salvo 〜て ください y la entrada 覚えて います
 Ese día se reescribieron los ejemplos y las frases de los contadores que usaban otras palabras (理由, 友達, 紙, 映画) o gramática posterior (持って います, 住んで います, 一歳に なります). Los animales y objetos que no son palabras de la web se escriben en kana (ねこ, ぞう, つる, きって): así se ven sus usos sin añadir kanji que no se estudian.
 
 También se reescribieron 99 ejemplos de verbos y de adjetivos y adverbios que usaban palabras del vault que no están en las hojas (弁護士, 怠け者, 王さま, 鸚鵡, 税金, 字幕, 満月, 年賀状). Ahora tratan situaciones de clase: horarios, transporte, compras, comida, aficiones y familia (まいあさ 七時に 起きます。, バスで 美術館へ 行きました。). Esas palabras siguen en Vocabulario. En los ejemplos de verbos y adjetivos ya no aparecen; en los contadores solo quedan donde muestran un uso que el vocabulario de clase no cubre (一羽の 鸚鵡, 七枚の 年賀状).
+
+Ese mismo día se reescribieron 116 de las 480 frases de los kanji:
+- las que usaban palabras del vault que no están en las hojas (弁護士, 喫茶店, 鸚鵡, 税金, 筆箱);
+- las que usaban gramática posterior al tema 9 (寝て います, 入って います, より);
+- las que repetían un ejemplo de otra sección (机の 上に 辞書が あります。);
+- otras, para que todas las palabras nuevas aparezcan al menos en un contexto.
+
+Las frases nuevas usan el vocabulario de clase alrededor de las palabras del kanji (日よう日に テニスを します。, 九時に えきで 会いましょう。). Las demás ya usaban palabras de los 80 kanji o de clase y se conservan. En las frases de los kanji quedan pocas palabras del vault, casi siempre porque llevan el kanji (お年玉, 花屋, 高校). Ningún contexto repite otro de la web.
 
 Las entradas escritas solo en hiragana no repiten la lectura en la página (あさ, でんわをかけます), igual que los ejemplos sin kanji. Las de katakana sí la muestran en hiragana (バス, ばす).
 
