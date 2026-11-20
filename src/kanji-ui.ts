@@ -90,24 +90,137 @@ function highlightKanji(character: string): SentenceText {
   };
 }
 
-function renderSentence(example: ContentExample, text: SentenceText, audio?: HTMLElement): HTMLLIElement {
+const eyeIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>';
+const eyeOffIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10.6 5.1A10.8 10.8 0 0 1 12 5c6.5 0 10 7 10 7a17.6 17.6 0 0 1-2.6 3.6M6.6 6.6C3.9 8.4 2 12 2 12s3.5 7 10 7a10.4 10.4 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2M3 3l18 18"/></svg>';
+let meaningCount = 0;
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+/**
+ * Turns a hidden meaning into sand: the words merge into soft mounds (blur and a low threshold), fine noise cuts them
+ * into grains with crisp edges, and a second channel of the same noise gives each grain its own shade. The colour is
+ * the text's own yellow, so it works in both themes. Added to the page with the full-screen view: without it, the copy
+ * that wears it (`.meaning-gravel`) would show the meaning in clear text.
+ */
+const gravelFilter = '<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">'
+  + '<filter id="meaning-gravel" x="-4%" y="-35%" width="108%" height="170%" color-interpolation-filters="sRGB">'
+  + '<feGaussianBlur in="SourceGraphic" stdDeviation="2" result="soft"/>'
+  + '<feComponentTransfer in="soft" result="shape"><feFuncA type="discrete" tableValues="0 1 1 1 1 1 1 1 1 1 1 1"/></feComponentTransfer>'
+  + '<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1" seed="7" result="noise"/>'
+  + '<feColorMatrix in="noise" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 0 0 0 -11.5" result="grains"/>'
+  + '<feComposite in="shape" in2="grains" operator="in" result="sand"/>'
+  + '<feColorMatrix in="noise" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0.15" result="shade"/>'
+  + '<feComposite in="sand" in2="shade" operator="in"/>'
+  + '</filter></svg>';
+/**
+ * How long the smoke takes: the last letter starts after `smokeStagger` and fades for `smokeLetter`. The gravel that
+ * it leaves behind is timed to match in style.css (`meaning-gravel-in`).
+ */
+const smokeStagger = 350;
+const smokeLetter = 900;
+
+/**
+ * The clear meaning drifts away like smoke, letter by letter, and leaves the gravel behind (style.css). The
+ * letters are a copy for the eye only, laid over the text: the text itself stays whole. Returns what stops it early.
+ */
+function smoke(meaning: HTMLElement, text: string): () => void {
+  const cloud = node('span', 'meaning-smoke');
+  cloud.setAttribute('aria-hidden', 'true');
+  const letters = text.replace(/\s/gu, '').length;
+  let index = 0;
+  text.split(' ').forEach((word, position) => {
+    if (position > 0) cloud.append(' ');
+    // Lines only break between words, as in the text below.
+    const block = node('span', 'meaning-smoke-word');
+    for (const letter of word) {
+      const span = node('span', 'meaning-smoke-letter', letter);
+      const delay = (index++ / Math.max(1, letters - 1)) * smokeStagger + Math.random() * 80;
+      span.style.setProperty('--smoke-delay', `${Math.round(delay)}ms`);
+      span.style.setProperty('--smoke-x', `${(Math.random() * 22 - 6).toFixed(1)}px`);
+      span.style.setProperty('--smoke-y', `${(-12 - Math.random() * 16).toFixed(1)}px`);
+      span.style.setProperty('--smoke-turn', `${(Math.random() * 60 - 30).toFixed(0)}deg`);
+      block.append(span);
+    }
+    cloud.append(block);
+  });
+  meaning.append(cloud);
+  meaning.classList.add('meaning-veil--smoke');
+  const timer = window.setTimeout(stop, smokeStagger + smokeLetter + 120);
+  function stop() {
+    window.clearTimeout(timer);
+    cloud.remove();
+    meaning.classList.remove('meaning-veil--smoke');
+  }
+  return stop;
+}
+
+/**
+ * The full-screen view shows each meaning as gravel, so you can guess it first; this button brings it into focus, and
+ * blows it away as smoke when it hides it again. The hidden text is hidden from screen readers too.
+ * The label stays «Significado»: the state is in `aria-pressed` and the eye.
+ */
+function meaningButton(meaning: HTMLElement): HTMLButtonElement {
+  meaning.id = `kanji-meaning-${++meaningCount}`;
+  const words = meaning.textContent ?? '';
+  const text = node('span', 'meaning-text', words);
+  // The gravel is a copy laid over the text: a filter cannot fade into no filter, but two layers can cross-fade.
+  const gravel = node('span', 'meaning-gravel', words);
+  gravel.setAttribute('aria-hidden', 'true');
+  meaning.replaceChildren(text, gravel);
+  meaning.classList.add('meaning-veil');
+  let stopSmoke: (() => void) | undefined;
+  const button = node('button', 'meaning-button');
+  button.type = 'button';
+  button.setAttribute('aria-controls', meaning.id);
+  button.innerHTML = `<span class="meaning-button-icon meaning-button-icon--show">${eyeIcon}</span>`
+    + `<span class="meaning-button-icon meaning-button-icon--hide">${eyeOffIcon}</span>Significado`;
+  const paint = (shown: boolean) => {
+    meaning.dataset.shown = String(shown);
+    text.setAttribute('aria-hidden', String(!shown));
+    button.setAttribute('aria-pressed', String(shown));
+    button.title = shown ? 'Ocultar significado' : 'Mostrar significado';
+  };
+  paint(false);
+  button.addEventListener('click', () => {
+    const show = meaning.dataset.shown !== 'true';
+    stopSmoke?.();
+    stopSmoke = undefined;
+    paint(show);
+    if (!show && !reducedMotion.matches) stopSmoke = smoke(meaning, words);
+  });
+  return button;
+}
+
+/**
+ * What goes at the right of a word or a sentence: its Audio button and, in the full-screen view, the button that shows
+ * its meaning, in a column between the Japanese and Audio.
+ */
+function itemControls(meaning: HTMLElement, audio: HTMLElement | undefined, hideMeaning: boolean): HTMLElement | undefined {
+  if (!hideMeaning) return audio;
+  const controls = node('div', 'kanji-item-controls');
+  controls.append(meaningButton(meaning));
+  if (audio) controls.append(audio);
+  return controls;
+}
+
+function renderSentence(example: ContentExample, text: SentenceText, audio: HTMLElement | undefined, hideMeaning: boolean): HTMLLIElement {
   const item = node('li', 'kanji-sentence');
   const written = node('p', 'kanji-sentence-written');
   written.lang = 'ja';
   written.append(text(example.written));
   const reading = node('p', 'kanji-sentence-reading', example.reading);
   reading.lang = 'ja';
-  item.append(written, reading, node('p', 'kanji-sentence-meaning', example.meaning));
-  if (audio) item.append(audio);
+  const meaning = node('p', 'kanji-sentence-meaning', example.meaning);
+  item.append(written, reading, meaning);
+  const controls = itemControls(meaning, audio, hideMeaning);
+  if (controls) item.append(controls);
   return item;
 }
 
-function renderSentences(sentences: KanjiSentences, text: SentenceText, audio?: SentenceAudio): DocumentFragment {
+function renderSentences(sentences: KanjiSentences, text: SentenceText, hideMeaning: boolean, audio?: SentenceAudio): DocumentFragment {
   const fragment = document.createDocumentFragment();
   for (const [group, label] of [['simple', 'Sencillas'], ['advanced', 'Con adjetivos, adverbios y contadores']] as const) {
     const items = node('ul', 'kanji-sentence-list');
     items.setAttribute('aria-label', `Frases ${label.toLowerCase()}`);
-    sentences[group].forEach((example, index) => items.append(renderSentence(example, text, audio?.(example, group, index))));
+    sentences[group].forEach((example, index) => items.append(renderSentence(example, text, audio?.(example, group, index), hideMeaning)));
     fragment.append(node('p', 'kanji-sentence-group', label), items);
   }
   return fragment;
@@ -210,6 +323,8 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     const prefix = `kanji-${view}`;
     // The full-screen view already shows its kanji: it stays green there, without being a button.
     const opening: KanjiOpening = view === 'focus' ? 'none' : 'dialog';
+    // The full-screen view is for practice: the meanings of its words and sentences start hidden.
+    const hideMeaning = view === 'focus';
     const advanced = reference.kind === 'advanced';
     const hero = node('div', 'kanji-dialog-hero');
     const glyph = node('span', 'kanji-dialog-character', character);
@@ -248,9 +363,11 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       const written = node('span', 'kanji-dialog-written');
       written.append(renderParts(word.written, character, opening));
       japanese.append(written, node('span', 'word-reading', word.reading));
-      example.append(japanese, node('p', '', word.meaning));
+      const meaning = node('p', '', word.meaning);
+      example.append(japanese, meaning);
       const audio = pronunciation?.createButton({ id: vocabularyItemId(word.written), written: word.written, reading: word.reading }, wordStatus);
-      if (audio) example.append(audio);
+      const controls = itemControls(meaning, audio, hideMeaning);
+      if (controls) example.append(controls);
       examples.append(example);
     }
     const attribution = node('p', 'kanji-dialog-source');
@@ -266,13 +383,13 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       vocabulary.append(wordStatus, examples);
       // In the full-screen view the other kanji of the sentences open the dialog, as in its vocabulary.
       const text = view === 'focus' ? linkKanji(character) : highlightKanji(character);
-      study = renderTabs(prefix, { vocabulary, sentences: renderSentencePanel(character, text) });
+      study = renderTabs(prefix, { vocabulary, sentences: renderSentencePanel(character, text, hideMeaning) });
     } else study = [examplesTitle, wordStatus, examples];
     return { summary: intro, study, source: attribution };
   }
 
   /** Filled once the sentences arrive, unless the panel has made way for another kanji by then. */
-  function renderSentencePanel(character: string, text: SentenceText): HTMLElement {
+  function renderSentencePanel(character: string, text: SentenceText, hideMeaning: boolean): HTMLElement {
     const panel = node('div', 'kanji-dialog-panel');
     const status = node('p', 'kanji-sentence-status', 'Cargando frases…');
     status.setAttribute('role', 'status');
@@ -281,7 +398,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       if (!panel.isConnected) return;
       const entry = all.get(character);
       const status = audioStatus();
-      if (entry) panel.replaceChildren(status, renderSentences(entry, text, pronunciation && ((example, group, index) =>
+      if (entry) panel.replaceChildren(status, renderSentences(entry, text, hideMeaning, pronunciation && ((example, group, index) =>
         pronunciation.createSentenceButton(`sentence:${character}:${group}:${index + 1}`, example.written,
           sentenceAudioFile(character, group, index), status))));
       else status.textContent = 'Este kanji todavía no tiene frases.';
@@ -370,6 +487,8 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     const content = node('div', 'kanji-focus-body shell');
     view.append(bar, announcement, content);
     document.body.append(view);
+    // Its hidden meanings wear this filter; it is in the page before any of them.
+    document.body.insertAdjacentHTML('beforeend', gravelFilter);
 
     let shown = '';
     let opener: HTMLElement | null = null;
