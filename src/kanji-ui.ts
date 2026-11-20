@@ -97,8 +97,8 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 /**
  * Turns a hidden meaning into sand: the words merge into soft mounds (blur and a low threshold), fine noise cuts them
  * into grains with crisp edges, and a second channel of the same noise gives each grain its own shade. The colour is
- * the text's own yellow, so it works in both themes. Added to the page with the full-screen view: without it, the copy
- * that wears it (`.meaning-gravel`) would show the meaning in clear text.
+ * the text's own yellow, so it works in both themes. Added to the page with the dialog: without it, the copy that
+ * wears it (`.meaning-gravel`) would show the meaning in clear text.
  */
 const gravelFilter = '<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">'
   + '<filter id="meaning-gravel" x="-4%" y="-35%" width="108%" height="170%" color-interpolation-filters="sRGB">'
@@ -153,8 +153,8 @@ function smoke(meaning: HTMLElement, text: string): () => void {
 }
 
 /**
- * The full-screen view shows each meaning as gravel, so you can guess it first; this button brings it into focus, and
- * blows it away as smoke when it hides it again. The hidden text is hidden from screen readers too.
+ * The dialog and the full-screen view show each meaning as sand, so you can guess it first; this button brings it into
+ * focus, and blows it away as smoke when it hides it again. The hidden text is hidden from screen readers too.
  * The label stays «Significado»: the state is in `aria-pressed` and the eye.
  */
 function meaningButton(meaning: HTMLElement): HTMLButtonElement {
@@ -190,18 +190,17 @@ function meaningButton(meaning: HTMLElement): HTMLButtonElement {
 }
 
 /**
- * What goes at the right of a word or a sentence: its Audio button and, in the full-screen view, the button that shows
- * its meaning, in a column between the Japanese and Audio.
+ * What goes at the right of a word or a sentence, in the dialog and in the full-screen view: the button that shows its
+ * meaning, in a column between the Japanese and Audio, and its Audio button.
  */
-function itemControls(meaning: HTMLElement, audio: HTMLElement | undefined, hideMeaning: boolean): HTMLElement | undefined {
-  if (!hideMeaning) return audio;
+function itemControls(meaning: HTMLElement, audio: HTMLElement | undefined): HTMLElement {
   const controls = node('div', 'kanji-item-controls');
   controls.append(meaningButton(meaning));
   if (audio) controls.append(audio);
   return controls;
 }
 
-function renderSentence(example: ContentExample, text: SentenceText, audio: HTMLElement | undefined, hideMeaning: boolean): HTMLLIElement {
+function renderSentence(example: ContentExample, text: SentenceText, audio: HTMLElement | undefined): HTMLLIElement {
   const item = node('li', 'kanji-sentence');
   const written = node('p', 'kanji-sentence-written');
   written.lang = 'ja';
@@ -209,18 +208,16 @@ function renderSentence(example: ContentExample, text: SentenceText, audio: HTML
   const reading = node('p', 'kanji-sentence-reading', example.reading);
   reading.lang = 'ja';
   const meaning = node('p', 'kanji-sentence-meaning', example.meaning);
-  item.append(written, reading, meaning);
-  const controls = itemControls(meaning, audio, hideMeaning);
-  if (controls) item.append(controls);
+  item.append(written, reading, meaning, itemControls(meaning, audio));
   return item;
 }
 
-function renderSentences(sentences: KanjiSentences, text: SentenceText, hideMeaning: boolean, audio?: SentenceAudio): DocumentFragment {
+function renderSentences(sentences: KanjiSentences, text: SentenceText, audio?: SentenceAudio): DocumentFragment {
   const fragment = document.createDocumentFragment();
   for (const [group, label] of [['simple', 'Sencillas'], ['advanced', 'Con adjetivos, adverbios y contadores']] as const) {
     const items = node('ul', 'kanji-sentence-list');
     items.setAttribute('aria-label', `Frases ${label.toLowerCase()}`);
-    sentences[group].forEach((example, index) => items.append(renderSentence(example, text, audio?.(example, group, index), hideMeaning)));
+    sentences[group].forEach((example, index) => items.append(renderSentence(example, text, audio?.(example, group, index))));
     fragment.append(node('p', 'kanji-sentence-group', label), items);
   }
   return fragment;
@@ -273,6 +270,8 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
   const body = node('div', 'kanji-dialog-body');
   dialog.append(header, body);
   document.body.append(dialog);
+  // The hidden meanings of the dialog and of the full-screen view wear this filter; it is in the page before any.
+  document.body.insertAdjacentHTML('beforeend', gravelFilter);
   let opener: HTMLElement | null = null;
   // The tab stays chosen while the page is open, also from one kanji to the next and between the dialog and the
   // full-screen view. It is not stored in the browser.
@@ -323,8 +322,6 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     const prefix = `kanji-${view}`;
     // The full-screen view already shows its kanji: it stays green there, without being a button.
     const opening: KanjiOpening = view === 'focus' ? 'none' : 'dialog';
-    // The full-screen view is for practice: the meanings of its words and sentences start hidden.
-    const hideMeaning = view === 'focus';
     const advanced = reference.kind === 'advanced';
     const hero = node('div', 'kanji-dialog-hero');
     const glyph = node('span', 'kanji-dialog-character', character);
@@ -366,8 +363,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       const meaning = node('p', '', word.meaning);
       example.append(japanese, meaning);
       const audio = pronunciation?.createButton({ id: vocabularyItemId(word.written), written: word.written, reading: word.reading }, wordStatus);
-      const controls = itemControls(meaning, audio, hideMeaning);
-      if (controls) example.append(controls);
+      example.append(itemControls(meaning, audio));
       examples.append(example);
     }
     const attribution = node('p', 'kanji-dialog-source');
@@ -383,13 +379,13 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       vocabulary.append(wordStatus, examples);
       // In the full-screen view the other kanji of the sentences open the dialog, as in its vocabulary.
       const text = view === 'focus' ? linkKanji(character) : highlightKanji(character);
-      study = renderTabs(prefix, { vocabulary, sentences: renderSentencePanel(character, text, hideMeaning) });
+      study = renderTabs(prefix, { vocabulary, sentences: renderSentencePanel(character, text) });
     } else study = [examplesTitle, wordStatus, examples];
     return { summary: intro, study, source: attribution };
   }
 
   /** Filled once the sentences arrive, unless the panel has made way for another kanji by then. */
-  function renderSentencePanel(character: string, text: SentenceText, hideMeaning: boolean): HTMLElement {
+  function renderSentencePanel(character: string, text: SentenceText): HTMLElement {
     const panel = node('div', 'kanji-dialog-panel');
     const status = node('p', 'kanji-sentence-status', 'Cargando frases…');
     status.setAttribute('role', 'status');
@@ -398,7 +394,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       if (!panel.isConnected) return;
       const entry = all.get(character);
       const status = audioStatus();
-      if (entry) panel.replaceChildren(status, renderSentences(entry, text, hideMeaning, pronunciation && ((example, group, index) =>
+      if (entry) panel.replaceChildren(status, renderSentences(entry, text, pronunciation &&((example, group, index) =>
         pronunciation.createSentenceButton(`sentence:${character}:${group}:${index + 1}`, example.written,
           sentenceAudioFile(character, group, index), status))));
       else status.textContent = 'Este kanji todavía no tiene frases.';
@@ -487,8 +483,6 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     const content = node('div', 'kanji-focus-body shell');
     view.append(bar, announcement, content);
     document.body.append(view);
-    // Its hidden meanings wear this filter; it is in the page before any of them.
-    document.body.insertAdjacentHTML('beforeend', gravelFilter);
 
     let shown = '';
     let opener: HTMLElement | null = null;

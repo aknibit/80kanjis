@@ -417,10 +417,9 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kanji-dialog-examples-title { font-size: 13px; font-weight: 600; margin: 22px 0 8px; }
 .kanji-dialog-examples, .kanji-sentence-list { --study-control-width: 68px; --study-control-height: 22px; }
 .kanji-dialog-examples { list-style: none; padding: 0; margin: 0; }
-/* Audio sits at the right of each word, centred on its first line, as in the cards on a phone. */
+/* The meaning button and Audio sit at the right of each word, centred on its first line (.kanji-item-controls). */
 .kanji-dialog-examples li { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
 .kanji-dialog-examples li > * { grid-column: 1; }
-.kanji-dialog-examples li > .audio-button { grid-column: 2; grid-row: 1; align-self: center; }
 .kanji-dialog-audio-status { margin: 12px 0 2px; }
 .kanji-dialog-word { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
 .kanji-dialog-written { font-family: var(--japanese); font-size: 23px; line-height: 1.5; }
@@ -442,9 +441,8 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kanji-dialog .kanji-sentence-group:first-child, .kanji-dialog .kanji-dialog-audio-status:empty + .kanji-sentence-group { margin-top: 12px; }
 .kanji-sentence-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
 .kanji-sentence { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; padding-left: 14px; border-left: 2px solid var(--action-border); }
-/* Audio at the right of the sentence, centred on its first line (19 px × 1.6), however many lines it takes. */
+/* The meaning button and Audio go at the right of the sentence or on a line of their own (.kanji-item-controls). */
 .kanji-sentence > * { grid-column: 1; }
-.kanji-sentence > .audio-button { grid-column: 2; grid-row: 1; align-self: start; margin-top: max(0px, calc((30.4px - var(--study-control-height)) / 2)); }
 .kanji-dialog .kanji-sentence p { margin: 0; }
 /* Sentences only break at the spaces between blocks, like the examples of the other sections. */
 .kanji-sentence-written, .kanji-sentence-reading { word-break: keep-all; overflow-wrap: break-word; }
@@ -493,7 +491,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 /* Hidden, the meaning is sand: a copy laid over the text, broken into crisp grains of its yellow by an SVG filter
    (#meaning-gravel, kanji-ui.ts), and somewhat translucent. Showing it fades the sand out while the text comes into
    focus; hiding it again blows the clear text away as smoke, which leaves the sand behind. */
-.kanji-dialog.kanji-focus .meaning-veil { position: relative; color: var(--translation-text); }
+.kanji-dialog .meaning-veil { position: relative; color: var(--translation-text); }
 .meaning-text, .meaning-gravel { transition: filter .35s ease, opacity .35s ease; }
 /* As wide as the text, so that the sand can follow the smoke across it; 4 px of padding hold the grains that the
    filter draws past the letters, which the mask below would otherwise cut. */
@@ -518,9 +516,9 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   100% { opacity: 0; filter: blur(8px); transform: translate(var(--smoke-x), var(--smoke-y)) rotate(var(--smoke-turn)) scale(1.7); }
 }
 /* The sentences are separated by a line, like the words of the vocabulary. */
-.kanji-focus .kanji-sentence-list { gap: 0; }
-.kanji-focus .kanji-sentence { padding: 12px 0; border-left: 0; border-top: 1px solid var(--line); }
-.kanji-focus .kanji-sentence:first-child { padding-top: 2px; border-top: 0; }
+.kanji-dialog .kanji-sentence-list { gap: 0; }
+.kanji-dialog .kanji-sentence { padding: 12px 0; border-left: 0; border-top: 1px solid var(--line); }
+.kanji-dialog .kanji-sentence:first-child { padding-top: 2px; border-top: 0; }
 @media (min-width: 901px) {
   /* Wide screens: the kanji and its readings on the left; its vocabulary and sentences, a little larger, on the right. */
   .kanji-focus-bar-content, .kanji-focus-body { max-width: 1092px; }
@@ -537,24 +535,33 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .kanji-focus .kanji-dialog-examples p, .kanji-dialog.kanji-focus .kanji-sentence-meaning { font-size: 15px; }
   .kanji-dialog.kanji-focus .kanji-sentence-written { font-size: 22px; }
   .kanji-dialog.kanji-focus .kanji-sentence-reading { font-size: 14px; }
-  /* Audio centred on the first line of the sentence (22 px × 1.6). */
-  .kanji-focus .kanji-sentence > .audio-button { margin-top: max(0px, calc((35.2px - var(--study-control-height)) / 2)); }
+  /* The meaning button and Audio, centred on the first line of the sentence (22 px × 1.6). */
   .kanji-focus .kanji-sentence > .kanji-item-controls { margin-top: calc((35.2px - var(--meaning-control-height)) / 2); }
 }
 /* The width of the study column, not the window's, decides where the meaning button and Audio go: in their column
    while the Japanese fits beside them, or else on a line of their own, at the right, with the meaning under them.
    Sentences need 640 px (beside the button, 7 of the 480 take two lines instead of one at 1280 px, and 1 at 768 px;
-   with less room, many more would: 230 at 1000 px); words, 420 px, for 玉手ばこ and its reading to stay on one line. */
-.kanji-focus-study { container: kanji-study / inline-size; }
+   with less room, many more would: 230 at 1000 px); words, 420 px, for 玉手ばこ and its reading to stay on one line.
+   The dialog follows the same rule with the width of its content: its words keep their column on wide screens, and
+   its sentences, at most 584 px wide, put the buttons under the reading. */
+.kanji-focus-study, .kanji-dialog-body { container: kanji-study / inline-size; }
+/* Below the reading, the meaning takes the room at the left of the buttons, next to the one that shows it: on their own
+   at the right, with the meaning a line lower at the left, they looked scattered. */
 @container kanji-study (width < 640px) {
-  .kanji-focus .kanji-sentence { grid-template-columns: minmax(0, 1fr); }
-  .kanji-focus .kanji-sentence > .kanji-item-controls { grid-column: 1; grid-row: 3; justify-self: end; align-self: auto; margin-top: 6px; }
-  .kanji-focus .kanji-sentence > .kanji-sentence-meaning { grid-row: 4; margin-top: 6px; }
+  .kanji-dialog .kanji-sentence > .kanji-sentence-written, .kanji-dialog .kanji-sentence > .kanji-sentence-reading { grid-column: 1 / -1; }
+  .kanji-dialog .kanji-sentence > .kanji-item-controls { grid-column: 2; grid-row: 3; align-self: center; margin-top: 8px; }
+  .kanji-dialog .kanji-sentence > .kanji-sentence-meaning { grid-column: 1; grid-row: 3; align-self: center; margin-top: 8px; }
+}
+/* Phones have no room for both: the buttons keep a line of their own, and the meaning goes under them. */
+@container kanji-study (width < 480px) {
+  .kanji-dialog .kanji-sentence { grid-template-columns: minmax(0, 1fr); }
+  .kanji-dialog .kanji-sentence > .kanji-item-controls { grid-column: 1; justify-self: end; margin-top: 6px; }
+  .kanji-dialog .kanji-sentence > .kanji-sentence-meaning { grid-row: 4; margin-top: 6px; }
 }
 @container kanji-study (width < 420px) {
-  .kanji-focus .kanji-dialog-examples li { grid-template-columns: minmax(0, 1fr); }
-  .kanji-focus .kanji-dialog-examples li > .kanji-item-controls { grid-column: 1; grid-row: 2; justify-self: end; align-self: auto; margin-top: 6px; }
-  .kanji-focus .kanji-dialog-examples li > p { grid-row: 3; margin-top: 6px; }
+  .kanji-dialog .kanji-dialog-examples li { grid-template-columns: minmax(0, 1fr); }
+  .kanji-dialog .kanji-dialog-examples li > .kanji-item-controls { grid-column: 1; grid-row: 2; justify-self: end; align-self: auto; margin-top: 6px; }
+  .kanji-dialog .kanji-dialog-examples li > p { grid-row: 3; margin-top: 6px; }
 }
 
 .study-search-icon { display: inline-flex; flex: 0 0 24px; color: var(--icon); }
@@ -837,9 +844,6 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-block--kanji .kanji-character { grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; margin: 0; }
   .study-block--kanji .kanji-meanings { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
   .study-block, .kanji-dialog-examples, .kanji-sentence-list { --study-control-width: 60px; }
-  /* Phones: the sentence and its reading keep the full width, and Audio moves beside the translation. */
-  .kanji-sentence-written, .kanji-sentence-reading { grid-column: 1 / -1; }
-  .kanji-sentence > .audio-button { grid-row: 3; align-self: center; margin-top: 0; }
   .study-action { gap: 3px; padding-inline: 2px; font-size: 11px; }
   .study-action .study-action-icon { flex-basis: 11px; width: 11px; height: 11px; }
   .audio-origin { font-size: 8px; }
