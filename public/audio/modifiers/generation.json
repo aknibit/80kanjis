@@ -1,0 +1,2510 @@
+{
+  "engine": "AivisSpeech Engine",
+  "engineVersion": "1.2.0",
+  "engineSha256": "581a7f34afb2c5343ff8b27d6d88859083375868607657de95fad506939185df",
+  "voice": "morioki",
+  "style": "ノーマル",
+  "speaker": 497929760,
+  "model": {
+    "uuid": "baaae3c0-7b22-4605-8ba5-80c959b41a48",
+    "version": "1.0.0",
+    "sha256": "352858a737b23fe0bd0b7bd73a4956be262aad9bb24a7bf0d1eae9a71a466469",
+    "license": "ACML 1.0",
+    "url": "https://hub.aivis-project.com/aivm-models/baaae3c0-7b22-4605-8ba5-80c959b41a48"
+  },
+  "speedScale": 0.89,
+  "sampleRate": 24000,
+  "encoder": "LAME (lameenc 1.9.0), MP3 32 kbps mono",
+  "deterministic": false,
+  "dictionary": [
+    {
+      "surface": "日本",
+      "pronunciation": "ニホン",
+      "accentType": 2,
+      "wordType": "PROPER_NOUN",
+      "reason": "Se enseña «nihon», con acento [2]; la palabra evita «nippon»."
+    },
+    {
+      "surface": "日本人",
+      "pronunciation": "ニホンジン",
+      "accentType": 4,
+      "wordType": "PROPER_NOUN",
+      "reason": "Acento de 日本人 [4] (ニホンジ'ン); el motor dice ニホ'ンジン."
+    },
+    {
+      "surface": "七色",
+      "pronunciation": "ナナイロ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee なないろ, con acento [2] (ナナ'イロ); el motor dice ななしょく."
+    },
+    {
+      "surface": "竹林",
+      "pronunciation": "タケバヤシ",
+      "accentType": 4,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee たけばやし; el motor dice ちくりん."
+    },
+    {
+      "surface": "まつ林",
+      "pronunciation": "マツバヤシ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [3] de 松林; el motor dice まつりん."
+    },
+    {
+      "surface": "空ばこ",
+      "pronunciation": "カラバコ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee からばこ, con acento [2] (カラ'バコ); el motor dice そらばこ."
+    },
+    {
+      "surface": "土き",
+      "pronunciation": "ドキ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [1] de 土器; el motor dice つちき."
+    },
+    {
+      "surface": "まき貝",
+      "pronunciation": "マキガイ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [2] de 巻貝; el motor dice まきかい."
+    },
+    {
+      "surface": "ほら貝",
+      "pronunciation": "ホラガイ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [2] de 法螺貝; el motor dice ほらかい."
+    },
+    {
+      "surface": "こん虫",
+      "pronunciation": "コンチュウ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 昆虫, sin caída; el motor dice こんむし."
+    },
+    {
+      "surface": "先とう",
+      "pronunciation": "セントウ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 先頭, sin caída; el motor dice さきだとう."
+    },
+    {
+      "surface": "文なし",
+      "pronunciation": "モンナシ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 文無し, sin caída; el motor dice ぶんなし."
+    },
+    {
+      "surface": "上ぎ",
+      "pronunciation": "ウワギ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 上着, sin caída; el motor dice うえぎ."
+    },
+    {
+      "surface": "赤はん",
+      "pronunciation": "セキハン",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [3] de 赤飯; el motor dice あかはん."
+    },
+    {
+      "surface": "雨ぐも",
+      "pronunciation": "アマグモ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 雨雲, sin caída; el motor dice あめぐも."
+    },
+    {
+      "surface": "ほう石",
+      "pronunciation": "ホウセキ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 宝石 en el diccionario del motor; el motor dice ほういし."
+    },
+    {
+      "surface": "でん車",
+      "pronunciation": "デンシャ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 電車 en el diccionario del motor; el motor dice でんくるま."
+    },
+    {
+      "surface": "車りん",
+      "pronunciation": "シャリン",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 車輪 en el diccionario del motor; el motor dice くるまりん."
+    },
+    {
+      "surface": "正かい",
+      "pronunciation": "セイカイ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 正解 en el diccionario del motor; el motor dice ただしかい."
+    },
+    {
+      "surface": "正じき",
+      "pronunciation": "ショウジキ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 正直 en el diccionario del motor; el motor dice せいじき."
+    },
+    {
+      "surface": "らい月",
+      "pronunciation": "ライゲツ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 来月 en el diccionario del motor; el motor dice らいつき."
+    },
+    {
+      "surface": "白板",
+      "pronunciation": "ハクバン",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee はくばん; el motor dice しらいた."
+    },
+    {
+      "surface": "目と口",
+      "pronunciation": "メトクチ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Ante は, el motor lee もくとこう."
+    },
+    {
+      "surface": "はは",
+      "pronunciation": "ハハ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "En hiragana, el motor lee las dos は como partículas: «wa wa»."
+    },
+    {
+      "surface": "草はら",
+      "pronunciation": "クサハラ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 草原 (くさはら), sin caída; el motor dice くさわら."
+    },
+    {
+      "surface": "年より",
+      "pronunciation": "トシヨリ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [3] de 年寄り; el motor dice ねんより."
+    },
+    {
+      "surface": "三歳",
+      "pronunciation": "サンサイ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [1] (サ'ンサイ), como en いっさい o にさい; el motor dice みとせ."
+    },
+    {
+      "surface": "十本",
+      "pronunciation": "ジュッポン",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 十本 en el diccionario del motor [1], con la lectura じゅっぽん de la colección; el motor dice じっぽん."
+    },
+    {
+      "surface": "靴",
+      "pronunciation": "クツ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 靴 en el diccionario del motor; tras きれいな, el motor dice ぐつ."
+    },
+    {
+      "surface": "千年",
+      "pronunciation": "センネン",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee せんねん; el motor dice ちとせ. Con el número, el motor pone el acento [1] (セ'ンネン) aunque se le pida otro."
+    },
+    {
+      "surface": "靴下",
+      "pronunciation": "クツシタ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "La palabra 靴 de este diccionario partía 靴下 (くつか). Acento [2], el del diccionario del motor."
+    },
+    {
+      "surface": "七人",
+      "pronunciation": "ナナニン",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen ななにん, con acento [2] (ナナ'ニン); el motor dice しちにん."
+    },
+    {
+      "surface": "三羽",
+      "pronunciation": "サンバ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen さんば; el motor dice さんわ. Acento [1], el que da a さんわ."
+    },
+    {
+      "surface": "十羽",
+      "pronunciation": "ジュッパ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen じゅっぱ; el motor dice じゅうわ. Acento [1], el que da a じゅうわ."
+    },
+    {
+      "surface": "何羽",
+      "pronunciation": "ナンバ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen なんば; el motor dice なんわ. Acento [1], el que da a なんわ."
+    },
+    {
+      "surface": "何足",
+      "pronunciation": "ナンゾク",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen なんぞく; el motor dice なんそく. Acento [1], el que da a なんそく."
+    },
+    {
+      "surface": "まあまあ",
+      "pronunciation": "マアマア",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "El motor dice まあ / まあ, en dos grupos; así es una palabra, con acento [1] (マ'アマア)."
+    }
+  ],
+  "wordSpellings": {
+    "一ぴき": "一匹",
+    "まん月": "満月",
+    "火じ": "火事",
+    "ちょ金": "貯金",
+    "天ごく": "天国",
+    "気もち": "気持ち",
+    "げん気": "元気",
+    "大すき": "大好き",
+    "大へん": "大変",
+    "左がわ": "左側",
+    "右がわ": "右側",
+    "円ばん": "円盤",
+    "目てき": "目的",
+    "子ども": "子供",
+    "人ごみ": "人込み",
+    "人げん": "人間",
+    "本だな": "本棚",
+    "本とう": "本当",
+    "水どう": "水道",
+    "花だん": "花壇",
+    "じ石": "磁石",
+    "口ぶえ": "口笛",
+    "口べに": "口紅",
+    "手くび": "手首",
+    "はく手": "拍手",
+    "足あと": "足跡",
+    "足くび": "足首",
+    "耳うち": "耳打ち",
+    "出ぱつ": "出発",
+    "かん字": "漢字",
+    "すう字": "数字",
+    "さく文": "作文",
+    "王さま": "王様",
+    "王かん": "王冠",
+    "こく王": "国王",
+    "五わ": "五羽",
+    "火のこ": "火の粉",
+    "木かげ": "木陰",
+    "山いも": "山芋",
+    "田うえ": "田植え",
+    "白ぐみ": "白組",
+    "円けい": "円形",
+    "き立": "起立",
+    "え本": "絵本",
+    "町なみ": "町並み",
+    "竹うま": "竹馬",
+    "竹やぶ": "竹藪",
+    "竹わ": "竹輪",
+    "花たば": "花束",
+    "草もち": "草餅",
+    "ざっ草": "雑草",
+    "貝がら": "貝殻",
+    "すず虫": "鈴虫",
+    "虫かご": "虫籠",
+    "雨ふり": "雨降り",
+    "夕がた": "夕方",
+    "夕ぐれ": "夕暮れ",
+    "力もち": "力持ち",
+    "かい力": "怪力",
+    "音ぷ": "音符",
+    "てん字": "点字",
+    "てん校": "転校",
+    "玉手ばこ": "玉手箱",
+    "きぬ糸": "絹糸"
+  },
+  "replacements": [
+    {
+      "from": "描き",
+      "to": "書き",
+      "reason": "La lectura es かきます; el motor lee えがきます. 書きます suena igual, con el mismo acento."
+    },
+    {
+      "from": "かれは",
+      "to": "彼は",
+      "reason": "En hiragana, el motor lee かれは como 枯れ葉 («kareha»). 彼は suena igual, con el acento [1] de かれの."
+    },
+    {
+      "from": "わたしは えが",
+      "to": "わたしは 絵が",
+      "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual."
+    },
+    {
+      "from": "ちちは うたが",
+      "to": "ちちは 歌が",
+      "reason": "En hiragana, el motor une は y うた: ちち / はうたが. 歌が suena igual; ははは うたが ya lo lee bien."
+    },
+    {
+      "from": "先月は えを",
+      "to": "先月は 絵を",
+      "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵を suena igual."
+    },
+    {
+      "from": "は えいご",
+      "to": "は 英語",
+      "reason": "Tras は, el motor une は y え (はえ, mosca): わたしはえ / いごの. 英語 suena igual."
+    },
+    {
+      "from": "かしま",
+      "to": "貸しま",
+      "reason": "El motor agrupa にさつか / しました. 貸しました suena igual; en las cuatro formas del verbo, para que suenen igual."
+    },
+    {
+      "from": "先しゅう",
+      "to": "先週",
+      "reason": "El motor lee 先 como さき (さきしゅう). 先週 suena igual: せんしゅう."
+    },
+    {
+      "from": " いしゃ",
+      "to": " 医者",
+      "reason": "Tras は, el motor oye はいしゃ (歯医者). 医者 suena igual; una palabra いしゃ en el diccionario partiría かいしゃ."
+    },
+    {
+      "from": "下で",
+      "to": "したで",
+      "reason": "El motor lee 下で como もとで. したで suena igual; una palabra 下 en el diccionario estropearía 川下, 下校 y 下手."
+    },
+    {
+      "from": "今しゅう",
+      "to": "今週",
+      "reason": "El motor lee 今 como いま (いま しゅう). 今週 suena igual: こんしゅう."
+    },
+    {
+      "from": "十まで",
+      "to": "とおまで",
+      "reason": "Contando con つ, diez es とお; el motor dice じゅうまで."
+    },
+    {
+      "from": "かいしゃいんが",
+      "to": "会社員が",
+      "reason": "El motor parte かいしゃいん en かい y しゃいん. 会社員 suena igual; en かいしゃいんです ya acierta."
+    },
+    {
+      "from": "かいしゃいんは",
+      "to": "会社員は",
+      "reason": "Como en かいしゃいんが: el motor agrupa その かい / しゃいんは."
+    },
+    {
+      "from": "きのう まんがを",
+      "to": "昨日 まんがを",
+      "reason": "El motor agrupa きの / うまんがを. 昨日 suena igual."
+    },
+    {
+      "from": "にわに カラス",
+      "to": "庭に カラス",
+      "reason": "Tras まいあさ, el motor oye に わに (cocodrilo). 庭に suena igual."
+    },
+    {
+      "from": "どうぶつえん",
+      "to": "動物園",
+      "reason": "El motor agrupa どう / ぶつえん. 動物園 suena igual, con su acento [4]."
+    },
+    {
+      "from": "あさ 五時",
+      "to": "朝 五時",
+      "reason": "El motor agrupa あ / さごじに. 朝 suena igual."
+    },
+    {
+      "from": "あさの ぎゅうにゅう",
+      "to": "朝の ぎゅうにゅう",
+      "reason": "El motor agrupa あ / さの. 朝 suena igual."
+    },
+    {
+      "from": "えきの 人",
+      "to": "駅の 人",
+      "reason": "El motor agrupa え / きのひとは. 駅 suena igual."
+    },
+    {
+      "from": "一時 九分",
+      "to": "一時 きゅうふん",
+      "reason": "El motor agrupa いち / じきゅうふん, también con cifras; así, いちじ / きゅうふん, aunque sin la caída de キュ'ウフン."
+    },
+    {
+      "from": "八本",
+      "to": "8本",
+      "reason": "El motor dice はちほん; con la cifra, はっぽん."
+    },
+    {
+      "from": "四足",
+      "to": "4足",
+      "reason": "El motor dice しそく; con la cifra, よんそく."
+    },
+    {
+      "from": "十月 十日",
+      "to": "10月 10日",
+      "reason": "El motor une los bloques en 十月十日 (とつきとおか); con cifras, じゅうがつ とおか."
+    },
+    {
+      "from": "二月 十四日",
+      "to": "二月 14日",
+      "reason": "El motor dice とよひ; con la cifra, じゅうよっか. Solo aquí: 二十四日 ya lo lee bien."
+    },
+    {
+      "from": "三十日",
+      "to": "30日",
+      "reason": "El motor dice みそか; con la cifra, さんじゅうにち."
+    },
+    {
+      "from": "十時 六分",
+      "to": "じゅうじ 6分",
+      "reason": "El motor dice ととき ろくぶ; con 10時 6分 agrupa じゅう / じろっぷん, y así, じゅうじ / ろっぷん."
+    },
+    {
+      "from": "十時",
+      "to": "10時",
+      "reason": "El motor dice ととき; con la cifra, じゅうじ."
+    },
+    {
+      "from": "二分 休み",
+      "to": "2分 休み",
+      "reason": "El motor dice にぶん (la mitad); con la cifra, にふん."
+    },
+    {
+      "from": "三分です",
+      "to": "3分です",
+      "reason": "El motor dice さんぶ; con la cifra, さんぷん."
+    },
+    {
+      "from": "五分です",
+      "to": "5分です",
+      "reason": "El motor dice ごぶ; con la cifra, ごふん."
+    },
+    {
+      "from": "八分の",
+      "to": "8分の",
+      "reason": "El motor dice はちぶ; con la cifra, はっぷん."
+    }
+  ],
+  "entries": [
+    {
+      "file": "modifier-tanoshii-present-affirmative.mp3",
+      "written": "旅行は 楽しいです。",
+      "reading": "りょこうは たのしいです。",
+      "sourceText": "旅行は 楽しいです。",
+      "kana": "リョコオワ'/タノシ'イデス",
+      "sha256": "7e8c3b7221e2b7cef83a23138d701b13b080bfe497405eaa7bd86e9e9cabc907"
+    },
+    {
+      "file": "modifier-tanoshii-past-affirmative.mp3",
+      "written": "日よう日の サッカーは 楽しかったです。",
+      "reading": "にちようびの サッカーは たのしかったです。",
+      "sourceText": "日よう日の サッカーは 楽しかったです。",
+      "kana": "ニチヨ'オビノ/サ'ッカアワ/タノシ'カッタデス",
+      "sha256": "140df0f9057eec14360e9bbb263fc1b31a62af0becc213c1f4bdaf8aaa74e072"
+    },
+    {
+      "file": "modifier-tanoshii-present-negative.mp3",
+      "written": "宿題は 楽しくないです。",
+      "reading": "しゅくだいは たのしくないです。",
+      "sourceText": "宿題は 楽しくないです。",
+      "kana": "シュクダイワ'/タノシク'ナイデス",
+      "sha256": "0e642355053cd76bebc2c635cfcb579052c4c843b5c5939ce23d90e74d7e0590"
+    },
+    {
+      "file": "modifier-tanoshii-past-negative.mp3",
+      "written": "きのうの カラオケは 楽しくなかったです。",
+      "reading": "きのうの カラオケは たのしくなかったです。",
+      "sourceText": "きのうの カラオケは 楽しくなかったです。",
+      "kana": "キノオノ'/カラオケワ'/タノシク'ナカッタデス",
+      "sha256": "276990d8645bfd348c63b598a27a69f6d1f3492c6ceda6fefbc392ba09348ab5"
+    },
+    {
+      "file": "modifier-ureshii-present-affirmative.mp3",
+      "written": "ともだちの てがみは 嬉しいです。",
+      "reading": "ともだちの てがみは うれしいです。",
+      "sourceText": "ともだちの てがみは 嬉しいです。",
+      "kana": "トモダチノ'/テガミワ'/ウレシ'イデス",
+      "sha256": "cd54a5dcfe9aa936f2b2cccf6b31655bbc23aa6e1e95ff79b56eacacd69232e6"
+    },
+    {
+      "file": "modifier-ureshii-past-affirmative.mp3",
+      "written": "ははの でんわが 嬉しかったです。",
+      "reading": "ははの でんわが うれしかったです。",
+      "sourceText": "ははの でんわが 嬉しかったです。",
+      "kana": "ハ'ハノ/デンワガ'/ウレシ'カッタデス",
+      "sha256": "1de4947e734b0f6ac5f80b647569f498b139397628a58753607629e62050514e"
+    },
+    {
+      "file": "modifier-ureshii-present-negative.mp3",
+      "written": "土よう日の しごとは 嬉しくないです。",
+      "reading": "どようびの しごとは うれしくないです。",
+      "sourceText": "土よう日の しごとは 嬉しくないです。",
+      "kana": "ドヨオビノ'/シゴトワ'/ウレシク'ナイデス",
+      "sha256": "fa49ebd792d9570f8e78deba2bc8f6095d323b8468ddf21bda84931f99091508"
+    },
+    {
+      "file": "modifier-ureshii-past-negative.mp3",
+      "written": "たくさんの 宿題は 嬉しくなかったです。",
+      "reading": "たくさんの しゅくだいは うれしくなかったです。",
+      "sourceText": "たくさんの 宿題は 嬉しくなかったです。",
+      "kana": "タクサンノ'/シュクダイワ'/ウレシク'ナカッタデス",
+      "sha256": "07d6fe1aba7dcfcefcca3c27f550a69de1e6300290ebfe789990e6a16e59ee6c"
+    },
+    {
+      "file": "modifier-urayamashii-present-affirmative.mp3",
+      "written": "ひまな 人が 羨ましいです。",
+      "reading": "ひまな ひとが うらやましいです。",
+      "sourceText": "ひまな 人が 羨ましいです。",
+      "kana": "ヒマナ'/ヒトガ'/ウラヤマシ'イデス",
+      "sha256": "3668f5d3fd62cda7610f8297adac6be813fa97dda2953e149742b57e8ded77e9"
+    },
+    {
+      "file": "modifier-urayamashii-past-affirmative.mp3",
+      "written": "ともだちの あたらしい 車が 羨ましかったです。",
+      "reading": "ともだちの あたらしい くるまが うらやましかったです。",
+      "sourceText": "ともだちの あたらしい 車が 羨ましかったです。",
+      "kana": "トモダチノ'/アタラシ'イ/クルマガ'/ウラヤマシ'カッタデス",
+      "sha256": "9f7f9378b71645ec01e07e1c978d43dd433dee010959bda635b9d89593f0c0f8"
+    },
+    {
+      "file": "modifier-urayamashii-present-negative.mp3",
+      "written": "わたしは 忙しい 人が 羨ましくないです。",
+      "reading": "わたしは いそがしい ひとが うらやましくないです。",
+      "sourceText": "わたしは 忙しい 人が 羨ましくないです。",
+      "kana": "ワタシワ'/イソガシ'イ/ヒトガ'/ウラヤマシク'ナイデス",
+      "sha256": "4a4cf580f0155d747d02472c802035135869901128a94b55a57cf4756efe72e1"
+    },
+    {
+      "file": "modifier-urayamashii-past-negative.mp3",
+      "written": "その かいしゃいんは 羨ましくなかったです。",
+      "reading": "その かいしゃいんは うらやましくなかったです。",
+      "sourceText": "その 会社員は 羨ましくなかったです。",
+      "kana": "ソノ'/カイシャ'インワ/ウラヤマシク'ナカッタデス",
+      "sha256": "201f2fcbf9cbe95747c955da449625747c651dc0908b8c654ba91329c0aa0108"
+    },
+    {
+      "file": "modifier-muzukashii-present-affirmative.mp3",
+      "written": "日本ごは 難しいです。",
+      "reading": "にほんごは むずかしいです。",
+      "sourceText": "日本ごは 難しいです。",
+      "kana": "ニホンゴワ'/ムズカシ'イデス",
+      "sha256": "40db50fbf7a15e5ed7452d4133e97e0e7e909bf4fd98b9272389736c0ce6f2a8"
+    },
+    {
+      "file": "modifier-muzukashii-past-affirmative.mp3",
+      "written": "先しゅうの 授業は 難しかったです。",
+      "reading": "せんしゅうの じゅぎょうは むずかしかったです。",
+      "sourceText": "先週の 授業は 難しかったです。",
+      "kana": "センシュウノジュ'ギョオワ/ムズカシ'カッタデス",
+      "sha256": "ec82bceed375f23f123798db8bfce7a4cfa895e307a303a43688d3079bb7764b"
+    },
+    {
+      "file": "modifier-muzukashii-present-negative.mp3",
+      "written": "この 質問は 難しくないです。",
+      "reading": "この しつもんは むずかしくないです。",
+      "sourceText": "この 質問は 難しくないです。",
+      "kana": "コノ'/シツモンワ'/ムズカシク'ナイデス",
+      "sha256": "7db529dc040a6af59d5e7b3c5b822b9f787ac1b47e7883bd226f283d29b0078f"
+    },
+    {
+      "file": "modifier-muzukashii-past-negative.mp3",
+      "written": "宿題は 難しくなかったです。",
+      "reading": "しゅくだいは むずかしくなかったです。",
+      "sourceText": "宿題は 難しくなかったです。",
+      "kana": "シュクダイワ'/ムズカシク'ナカッタデス",
+      "sha256": "e77e0a6f4084a834b302f51f6b8400bd032d27203b608a007417df3ce1e34a11"
+    },
+    {
+      "file": "modifier-yasashii-present-affirmative.mp3",
+      "written": "この え本は 易しいです。",
+      "reading": "この えほんは やさしいです。",
+      "sourceText": "この え本は 易しいです。",
+      "kana": "コノ'/エホ'ンワ/ヤサシイ'デス",
+      "sha256": "ee794e0631fb943deabc47e7d918e884b301e95dad6a485778f75d70ac82f8c4"
+    },
+    {
+      "file": "modifier-yasashii-past-affirmative.mp3",
+      "written": "書き取りは 易しかったです。",
+      "reading": "かきとりは やさしかったです。",
+      "sourceText": "書き取りは 易しかったです。",
+      "kana": "カキトリワ'/ヤサシ'カッタデス",
+      "sha256": "49540ee29da17066f066e25c1dcbd7a469ec9ab52ae20b459d81281ef82940d8"
+    },
+    {
+      "file": "modifier-yasashii-present-negative.mp3",
+      "written": "日本ごは 易しくないです。",
+      "reading": "にほんごは やさしくないです。",
+      "sourceText": "日本ごは 易しくないです。",
+      "kana": "ニホンゴワ'/ヤサシク'ナイデス",
+      "sha256": "957984ade9427452b1c281f1d925c36ced61f943da761b323416a34f69d9b759"
+    },
+    {
+      "file": "modifier-yasashii-past-negative.mp3",
+      "written": "試験の 質問は 易しくなかったです。",
+      "reading": "しけんの しつもんは やさしくなかったです。",
+      "sourceText": "試験の 質問は 易しくなかったです。",
+      "kana": "シケ'ンノ/シツモンワ'/ヤサシク'ナカッタデス",
+      "sha256": "1396afcacda617790cac295e364b0527f3dc88cf1acb34e73a8148fe73bfd12e"
+    },
+    {
+      "file": "modifier-hayai-present-affirmative.mp3",
+      "written": "しんかんせんは 速いです。",
+      "reading": "しんかんせんは はやいです。",
+      "sourceText": "しんかんせんは 速いです。",
+      "kana": "シンカンセンワ'/ハヤ'イデス",
+      "sha256": "be1ea41d0dc7a8f404fd12d3d0bb3af1991124b7a745fb609870d223a280cc1d"
+    },
+    {
+      "file": "modifier-hayai-past-affirmative.mp3",
+      "written": "晩ご飯は 早かったです。",
+      "reading": "ばんごはんは はやかったです。",
+      "sourceText": "晩ご飯は 早かったです。",
+      "kana": "バンゴ'ハンワ/ハヤ'カッタデス",
+      "sha256": "ee611a7f01785c7864f88c86f10f946a0446312565af216e9107f34beb11aa86"
+    },
+    {
+      "file": "modifier-hayai-present-negative.mp3",
+      "written": "バスは 速くないです。",
+      "reading": "バスは はやくないです。",
+      "sourceText": "バスは 速くないです。",
+      "kana": "バ'スワ/ハヤク'ナイデス",
+      "sha256": "c3d1e285d45f41f58d7ebdf195257d1683f06bfd173c5ac118a0efd8d2b1dc07"
+    },
+    {
+      "file": "modifier-hayai-past-negative.mp3",
+      "written": "男の子は 足が 速くなかったです。",
+      "reading": "おとこのこは あしが はやくなかったです。",
+      "sourceText": "男の子は 足が 速くなかったです。",
+      "kana": "オトコ'ノコワ/アシ'ガ/ハヤク'ナカッタデス",
+      "sha256": "8345012a512b6f063ab74b867bdc125f7ff878755a74ee84d382f79e12c20f9d"
+    },
+    {
+      "file": "modifier-osoi-present-affirmative.mp3",
+      "written": "わたしの パソコンは 遅いです。",
+      "reading": "わたしの パソコンは おそいです。",
+      "sourceText": "わたしの パソコンは 遅いです。",
+      "kana": "ワタシノ'/パソコンワ'/オソイ'デス",
+      "sha256": "bafab56f6484c42dc0a9a1d1ef457491223599b6a59cdba79a38ae10d72ce53b"
+    },
+    {
+      "file": "modifier-osoi-past-affirmative.mp3",
+      "written": "きのうの 晩ご飯は 遅かったです。",
+      "reading": "きのうの ばんごはんは おそかったです。",
+      "sourceText": "きのうの 晩ご飯は 遅かったです。",
+      "kana": "キノオノ'/バンゴ'ハンワ/オソ'カッタデス",
+      "sha256": "0850d0a57e971df40598a9b94491f6ca3b81fc8f8b09d8a58931bc9c05afbdb6"
+    },
+    {
+      "file": "modifier-osoi-present-negative.mp3",
+      "written": "でん車は 遅くないです。",
+      "reading": "でんしゃは おそくないです。",
+      "sourceText": "でん車は 遅くないです。",
+      "kana": "デンシャワ'/オソク'ナイデス",
+      "sha256": "1c492b5f007b205552f752fffe17b202142e70f35057b059723ee9ea1617dfd3"
+    },
+    {
+      "file": "modifier-osoi-past-negative.mp3",
+      "written": "ともだちは 遅くなかったです。",
+      "reading": "ともだちは おそくなかったです。",
+      "sourceText": "ともだちは 遅くなかったです。",
+      "kana": "トモダチワ'/オソク'ナカッタデス",
+      "sha256": "5f3c56cafdebf9486ca1ec902ecad412db554376ecd6b14ada5c02e3ed366222"
+    },
+    {
+      "file": "modifier-atsui-present-affirmative.mp3",
+      "written": "八月は 暑いです。",
+      "reading": "はちがつは あついです。",
+      "sourceText": "八月は 暑いです。",
+      "kana": "ハチガツ'ワ/アツ'イデス",
+      "sha256": "3b41f0c0bb733c9b751e01a0c7893eed5bd0afb62f8e260edb8190de4cac43b0"
+    },
+    {
+      "file": "modifier-atsui-past-affirmative.mp3",
+      "written": "けさの コーヒーは 熱かったです。",
+      "reading": "けさの コーヒーは あつかったです。",
+      "sourceText": "けさの コーヒーは 熱かったです。",
+      "kana": "ケサノコオヒ'イワ/アツ'カッタデス",
+      "sha256": "6f4661cf432087038847f745101dd5099d4443481b0b73bf990a482cadd0d2f2"
+    },
+    {
+      "file": "modifier-atsui-present-negative.mp3",
+      "written": "この へやは 暑くないです。",
+      "reading": "この へやは あつくないです。",
+      "sourceText": "この へやは 暑くないです。",
+      "kana": "コノ'/ヘヤ'ワ/アツク'ナイデス",
+      "sha256": "06fa22d199aa5c86acf3590fd5ed2239ac221930c9e8dee3301e5661380c90cd"
+    },
+    {
+      "file": "modifier-atsui-past-negative.mp3",
+      "written": "食堂の ごはんは 熱くなかったです。",
+      "reading": "しょくどうの ごはんは あつくなかったです。",
+      "sourceText": "食堂の ごはんは 熱くなかったです。",
+      "kana": "ショクドオノゴ'ハンワ/アツク'ナカッタデス",
+      "sha256": "822eaf2c2ff05231c88be0c5a44f80476bec7ff098ca2b6b405afaa84de15472"
+    },
+    {
+      "file": "modifier-atatakai-present-affirmative.mp3",
+      "written": "四月は 暖かいです。",
+      "reading": "しがつは あたたかいです。",
+      "sourceText": "四月は 暖かいです。",
+      "kana": "シガツ'ワ/アタタカ'イデス",
+      "sha256": "eef39821c4a6e43ac56ac2dfd09179b46db5ce29fa9d7757ffda898cdb20724a"
+    },
+    {
+      "file": "modifier-atatakai-past-affirmative.mp3",
+      "written": "教室は 暖かかったです。",
+      "reading": "きょうしつは あたたかかったです。",
+      "sourceText": "教室は 暖かかったです。",
+      "kana": "キョオシツワ'/アタタカ'カッタデス",
+      "sha256": "d303e00d26430909d2177f9f087fca5a373958275f7c8afc9f79c64e8e93ba01"
+    },
+    {
+      "file": "modifier-atatakai-present-negative.mp3",
+      "written": "この シャツは 暖かくないです。",
+      "reading": "この シャツは あたたかくないです。",
+      "sourceText": "この シャツは 暖かくないです。",
+      "kana": "コノシャ'ツワ/アタタカク'ナイデス",
+      "sha256": "9bb37bca7c1d349f3d70c4436d56589b29dba0079729b13586ba44bde505962e"
+    },
+    {
+      "file": "modifier-atatakai-past-negative.mp3",
+      "written": "二月は 暖かくなかったです。",
+      "reading": "にがつは あたたかくなかったです。",
+      "sourceText": "二月は 暖かくなかったです。",
+      "kana": "ニガツ'ワ/アタタカク'ナカッタデス",
+      "sha256": "99691c6ab1b93d0637617bc8f49aa3472c5628ec2dc6d8b235e6d9ebee69cee8"
+    },
+    {
+      "file": "modifier-tsumaranai-present-affirmative.mp3",
+      "written": "この 雑誌は つまらないです。",
+      "reading": "この ざっしは つまらないです。",
+      "sourceText": "この 雑誌は つまらないです。",
+      "kana": "コノ'/ザッシワ'/ツマラ'ナイデス",
+      "sha256": "d5de685f3a2e2fcf41817357132fa8a499a15e337c32928eb6b582ba99f828a5"
+    },
+    {
+      "file": "modifier-tsumaranai-past-affirmative.mp3",
+      "written": "美術館は つまらなかったです。",
+      "reading": "びじゅつかんは つまらなかったです。",
+      "sourceText": "美術館は つまらなかったです。",
+      "kana": "ビジュ'ツカンワ/ツマラナ'カッタデス",
+      "sha256": "d8f98644b8eaa7762fbe5232fdcac24faf6988c23ca035ccaf2c618f61f35bb9"
+    },
+    {
+      "file": "modifier-tsumaranai-present-negative.mp3",
+      "written": "テニスは つまらなくないです。",
+      "reading": "テニスは つまらなくないです。",
+      "sourceText": "テニスは つまらなくないです。",
+      "kana": "テ'ニスワ/ツマラナク'ナイデス",
+      "sha256": "c607358e768787578393f2e70d0bd28f21b849e6274e3a12b4076de568050110"
+    },
+    {
+      "file": "modifier-tsumaranai-past-negative.mp3",
+      "written": "きのうの えいがは つまらなくなかったです。",
+      "reading": "きのうの えいがは つまらなくなかったです。",
+      "sourceText": "きのうの えいがは つまらなくなかったです。",
+      "kana": "キノオノエ'イガワ/ツマラナク'ナカッタデス",
+      "sha256": "be694fa54733a40f2a989139805d1e4eb6d48acf97db06350b2411952428592d"
+    },
+    {
+      "file": "modifier-isogashii-present-affirmative.mp3",
+      "written": "いしゃは 忙しいです。",
+      "reading": "いしゃは いそがしいです。",
+      "sourceText": "いしゃは 忙しいです。",
+      "kana": "イ'シャワ/イソガシ'イデス",
+      "sha256": "a471cd1829b05720498d715d46c6fbd3d1363545e7ee580b833c7c73a4f6112f"
+    },
+    {
+      "file": "modifier-isogashii-past-affirmative.mp3",
+      "written": "きのうは しごとが 忙しかったです。",
+      "reading": "きのうは しごとが いそがしかったです。",
+      "sourceText": "きのうは しごとが 忙しかったです。",
+      "kana": "キノオワ'/シゴトガ'/イソガシ'カッタデス",
+      "sha256": "2ae98da1de36aab397418ee1344a4e9e284c5ee9ebe458e697bd2f5a9b8b824c"
+    },
+    {
+      "file": "modifier-isogashii-present-negative.mp3",
+      "written": "日よう日は 忙しくないです。",
+      "reading": "にちようびは いそがしくないです。",
+      "sourceText": "日よう日は 忙しくないです。",
+      "kana": "ニチヨ'オビワ/イソガシク'ナイデス",
+      "sha256": "585e257210cc486ff265d5932710ba32f85f8af1bea1947b5990701f1c4d1f29"
+    },
+    {
+      "file": "modifier-isogashii-past-negative.mp3",
+      "written": "銀行は 忙しくなかったです。",
+      "reading": "ぎんこうは いそがしくなかったです。",
+      "sourceText": "銀行は 忙しくなかったです。",
+      "kana": "ギンコオワ'/イソガシク'ナカッタデス",
+      "sha256": "3806be065cebd9ad064a15839fe4cf1c86784b7f406553bc0aaee7959029ff35"
+    },
+    {
+      "file": "modifier-wakai-present-affirmative.mp3",
+      "written": "先生は 若いです。",
+      "reading": "せんせいは わかいです。",
+      "sourceText": "先生は 若いです。",
+      "kana": "センセ'エワ/ワカ'イデス",
+      "sha256": "265c9a52f2977b994b45bebff44ed65d72c326fa7c6096cb17cf697b3b86a9db"
+    },
+    {
+      "file": "modifier-wakai-past-affirmative.mp3",
+      "written": "その いしゃは 若かったです。",
+      "reading": "その いしゃは わかかったです。",
+      "sourceText": "その 医者は 若かったです。",
+      "kana": "ソノ'/イシャワ'/ワカ'カッタデス",
+      "sha256": "584dfb529d440f4b2be06ce0259cd9f7bf55ea51b2b98b45b3667efd230ce9c7"
+    },
+    {
+      "file": "modifier-wakai-present-negative.mp3",
+      "written": "ちちは 若くないです。",
+      "reading": "ちちは わかくないです。",
+      "sourceText": "ちちは 若くないです。",
+      "kana": "チ'チワ/ワカク'ナイデス",
+      "sha256": "6018d6e9b078ad2a6ed00ba1182e59e172e2ed242d958f262d12b9755540adb2"
+    },
+    {
+      "file": "modifier-wakai-past-negative.mp3",
+      "written": "お客さんは 若くなかったです。",
+      "reading": "おきゃくさんは わかくなかったです。",
+      "sourceText": "お客さんは 若くなかったです。",
+      "kana": "オキャクサンワ'/ワカク'ナカッタデス",
+      "sha256": "c0afcb326e1c8511c7eaab817988703947f569f34551e1d7a6facba5a7c6941b"
+    },
+    {
+      "file": "modifier-warui-present-affirmative.mp3",
+      "written": "この とけいは 悪いです。",
+      "reading": "この とけいは わるいです。",
+      "sourceText": "この とけいは 悪いです。",
+      "kana": "コノ'/トケイワ'/ワル'イデス",
+      "sha256": "af7179fe0c2fce430499ca1934a05ec141c58d2b0aa60413e72a2c6a3492de05"
+    },
+    {
+      "file": "modifier-warui-past-affirmative.mp3",
+      "written": "きのうは わたしが 悪かったです。",
+      "reading": "きのうは わたしが わるかったです。",
+      "sourceText": "きのうは わたしが 悪かったです。",
+      "kana": "キノオワ'/ワタシガ'/ワル'カッタデス",
+      "sha256": "715c8b4c249ba28e3da60453659b6f97307abd63c14e1a0afe6ad20776d4144b"
+    },
+    {
+      "file": "modifier-warui-present-negative.mp3",
+      "written": "この カメラは 悪くないです。",
+      "reading": "この カメラは わるくないです。",
+      "sourceText": "この カメラは 悪くないです。",
+      "kana": "コノカ'メラワ/ワルク'ナイデス",
+      "sha256": "d7e59fb974d596f984358b7153d30a9c5b74dcbbb13346d21905eee5468cac33"
+    },
+    {
+      "file": "modifier-warui-past-negative.mp3",
+      "written": "先しゅうの コンサートは 悪くなかったです。",
+      "reading": "せんしゅうの コンサートは わるくなかったです。",
+      "sourceText": "先週の コンサートは 悪くなかったです。",
+      "kana": "センシュウノコ'ンサアトワ/ワルク'ナカッタデス",
+      "sha256": "39253a5736d7d69fca63ad328c1b9604fd4f4c3983a841b153d40d28dfcfe091"
+    },
+    {
+      "file": "modifier-nagai-present-affirmative.mp3",
+      "written": "この えいがは 長いです。",
+      "reading": "この えいがは ながいです。",
+      "sourceText": "この えいがは 長いです。",
+      "kana": "コノエ'イガワ/ナガ'イデス",
+      "sha256": "158a720c6d7db10ce5d942f99add6989e85405af66a49bc609a073781006946f"
+    },
+    {
+      "file": "modifier-nagai-past-affirmative.mp3",
+      "written": "スペインまでの ひこうきは 長かったです。",
+      "reading": "スペインまでの ひこうきは ながかったです。",
+      "sourceText": "スペインまでの ひこうきは 長かったです。",
+      "kana": "スペ'インマデノ/ヒコオキワ'/ナガ'カッタデス",
+      "sha256": "797478de256721970645992ed2c1a61b88ad6af1956a271c09d935c94bea2cb3"
+    },
+    {
+      "file": "modifier-nagai-present-negative.mp3",
+      "written": "この かいだんは 長くないです。",
+      "reading": "この かいだんは ながくないです。",
+      "sourceText": "この かいだんは 長くないです。",
+      "kana": "コノ'カイダンワ/ナガク'ナイデス",
+      "sha256": "37399fefd1740e689438f0eb879ddda05301e968220577916abb256e9ad81bc4"
+    },
+    {
+      "file": "modifier-nagai-past-negative.mp3",
+      "written": "きのうの 授業は 長くなかったです。",
+      "reading": "きのうの じゅぎょうは ながくなかったです。",
+      "sourceText": "きのうの 授業は 長くなかったです。",
+      "kana": "キノオノジュ'ギョオワ/ナガク'ナカッタデス",
+      "sha256": "d79e3ef5e2be3fca97c9b34a4d1ea68833721ee2434b3dfabe9fab0ed68d1e3f"
+    },
+    {
+      "file": "modifier-kurai-present-affirmative.mp3",
+      "written": "森の中は 暗いです。",
+      "reading": "もりのなかは くらいです。",
+      "sourceText": "森の中は 暗いです。",
+      "kana": "モリノナ'カワ/クライ'デス",
+      "sha256": "7fbab2bf91879ad7a74f5a05185c152379e2650e73432b499393317e1e357ff3"
+    },
+    {
+      "file": "modifier-kurai-past-affirmative.mp3",
+      "written": "よるの 山は 暗かったです。",
+      "reading": "よるの やまは くらかったです。",
+      "sourceText": "よるの 山は 暗かったです。",
+      "kana": "ヨ'ルノ/ヤマ'ワ/クラ'カッタデス",
+      "sha256": "dedabd4e158ba161a4842ad838609347b3e861c48d3975453e316cf8015f2d7c"
+    },
+    {
+      "file": "modifier-kurai-present-negative.mp3",
+      "written": "この 教室は 暗くないです。",
+      "reading": "この きょうしつは くらくないです。",
+      "sourceText": "この 教室は 暗くないです。",
+      "kana": "コノ'/キョオシツワ'/クラクナ'イデス",
+      "sha256": "15854b8b7889cb24f61235173d3a0d12b7d9b982a4ad766dc2760748b1e4a35f"
+    },
+    {
+      "file": "modifier-kurai-past-negative.mp3",
+      "written": "えきは 暗くなかったです。",
+      "reading": "えきは くらくなかったです。",
+      "sourceText": "えきは 暗くなかったです。",
+      "kana": "エキ'ワ/クラクナカ'ッタデス",
+      "sha256": "5adf7d85707f4b12a93c7ba35e1cd91d32ef5b02d129e59ecd9efc0cf7a6cbb2"
+    },
+    {
+      "file": "modifier-kuroi-present-affirmative.mp3",
+      "written": "ちちの 靴は 黒いです。",
+      "reading": "ちちの くつは くろいです。",
+      "sourceText": "ちちの 靴は 黒いです。",
+      "kana": "チ'チノ/クツ'ワ/クロ'イデス",
+      "sha256": "05dc9bfd167202e8d7bf262fd73524cffcd5d5b38265e348fea54577e9476d47"
+    },
+    {
+      "file": "modifier-kuroi-past-affirmative.mp3",
+      "written": "子犬は 黒かったです。",
+      "reading": "こいぬは くろかったです。",
+      "sourceText": "子犬は 黒かったです。",
+      "kana": "コイヌワ'/クロ'カッタデス",
+      "sha256": "27500cb85c875ac15fdad90eac6f9669056bb3368260e7022c1d058d987888de"
+    },
+    {
+      "file": "modifier-kuroi-present-negative.mp3",
+      "written": "この ノートは 黒くないです。",
+      "reading": "この ノートは くろくないです。",
+      "sourceText": "この ノートは 黒くないです。",
+      "kana": "コノノ'オトワ/クロク'ナイデス",
+      "sha256": "f4cb6c36816746de711d98b19ed66c4b945f8583143d3e088ab294ee301ccd3b"
+    },
+    {
+      "file": "modifier-kuroi-past-negative.mp3",
+      "written": "ははの かばんは 黒くなかったです。",
+      "reading": "ははの かばんは くろくなかったです。",
+      "sourceText": "ははの かばんは 黒くなかったです。",
+      "kana": "ハ'ハノ/カバンワ'/クロク'ナカッタデス",
+      "sha256": "2d96d5e6d1d6df592a1550df1586f7f2e7b5cac7853e2891d9b85abf3e1164d1"
+    },
+    {
+      "file": "modifier-omoshiroi-present-affirmative.mp3",
+      "written": "この 本は 面白いです。",
+      "reading": "この ほんは おもしろいです。",
+      "sourceText": "この 本は 面白いです。",
+      "kana": "コノホ'ンワ/オモシロ'イデス",
+      "sha256": "0e90d88612300eb1814b9ca4fb3537be2c2f632c5e29bf1638c77aae99b53e67"
+    },
+    {
+      "file": "modifier-omoshiroi-past-affirmative.mp3",
+      "written": "日本ごの 授業は 面白かったです。",
+      "reading": "にほんごの じゅぎょうは おもしろかったです。",
+      "sourceText": "日本ごの 授業は 面白かったです。",
+      "kana": "ニホンゴノジュ'ギョオワ/オモシロ'カッタデス",
+      "sha256": "22cf950ee21dc403e9ea6168fd502a617dbe7519792e21ec5cc6840041742ef0"
+    },
+    {
+      "file": "modifier-omoshiroi-present-negative.mp3",
+      "written": "この えいがは 面白くないです。",
+      "reading": "この えいがは おもしろくないです。",
+      "sourceText": "この えいがは 面白くないです。",
+      "kana": "コノエ'イガワ/オモシロク'ナイデス",
+      "sha256": "5388d5c6a71056cf16d5fa4425c1c8a70671a5c04c0bc520c81c0304eb74b912"
+    },
+    {
+      "file": "modifier-omoshiroi-past-negative.mp3",
+      "written": "その 雑誌は 面白くなかったです。",
+      "reading": "その ざっしは おもしろくなかったです。",
+      "sourceText": "その 雑誌は 面白くなかったです。",
+      "kana": "ソノ'/ザッシワ'/オモシロク'ナカッタデス",
+      "sha256": "baaf90c1fbbb4f9824391c0b5516d64c8f2eab300fdf62c689b596bcc701f184"
+    },
+    {
+      "file": "modifier-mendoukusai-present-affirmative.mp3",
+      "written": "宿題は 面倒くさいです。",
+      "reading": "しゅくだいは めんどうくさいです。",
+      "sourceText": "宿題は 面倒くさいです。",
+      "kana": "シュクダイワ'/メンドオクサ'イデス",
+      "sha256": "4a4c9968f34229c5ef47372547b2d29dd21ea7087ef253257842df91f3e92d1f"
+    },
+    {
+      "file": "modifier-mendoukusai-past-affirmative.mp3",
+      "written": "準備は 面倒くさかったです。",
+      "reading": "じゅんびは めんどうくさかったです。",
+      "sourceText": "準備は 面倒くさかったです。",
+      "kana": "ジュ'ンビワ/メンドオクサ'カッタデス",
+      "sha256": "e18e5e68f4f7ec2eea00e6ef26905855416e828248a9f6d53f3347ee4702bcda"
+    },
+    {
+      "file": "modifier-mendoukusai-present-negative.mp3",
+      "written": "答え合わせは 面倒くさくないです。",
+      "reading": "こたえあわせは めんどうくさくないです。",
+      "sourceText": "答え合わせは 面倒くさくないです。",
+      "kana": "コタエア'ワセワ/メンドオクサク'ナイデス",
+      "sha256": "7e7e98c277ce328eb024fc61b38a706de6902dd52c977cbccc276cfad6cef698"
+    },
+    {
+      "file": "modifier-mendoukusai-past-negative.mp3",
+      "written": "靴の 修理は 面倒くさくなかったです。",
+      "reading": "くつの しゅうりは めんどうくさくなかったです。",
+      "sourceText": "靴の 修理は 面倒くさくなかったです。",
+      "kana": "クツ'ノ/シュ'ウリワ/メンドオクサク'ナカッタデス",
+      "sha256": "695788196c27a7401230ab40ac3a88589a2bbcd9e7a961879880ec176c3c9177"
+    },
+    {
+      "file": "modifier-oshii-present-affirmative.mp3",
+      "written": "この さく文は 惜しいです。",
+      "reading": "この さくぶんは おしいです。",
+      "sourceText": "この さく文は 惜しいです。",
+      "kana": "コノ'/サクブンワ'/オシ'イデス",
+      "sha256": "47d0ab1f0bb11bf01adb40f775cae1b7408f533c3d385a4a42fbf6d8248d1024"
+    },
+    {
+      "file": "modifier-oshii-past-affirmative.mp3",
+      "written": "試験は 惜しかったです。",
+      "reading": "しけんは おしかったです。",
+      "sourceText": "試験は 惜しかったです。",
+      "kana": "シケ'ンワ/オシ'カッタデス",
+      "sha256": "b56001a5fc386eb2d2ce31254b1263bbd8a2423b47833f4d33316b4859c425ab"
+    },
+    {
+      "file": "modifier-oshii-present-negative.mp3",
+      "written": "お金は 惜しくないです。",
+      "reading": "おかねは おしくないです。",
+      "sourceText": "お金は 惜しくないです。",
+      "kana": "オカネワ'/オシク'ナイデス",
+      "sha256": "347bc44e2c4b89b15c5ec059e609f0342dc59df5f180df761f353bf4688bd4e2"
+    },
+    {
+      "file": "modifier-oshii-past-negative.mp3",
+      "written": "書き取りは ぜんぜん 惜しくなかったです。",
+      "reading": "かきとりは ぜんぜん おしくなかったです。",
+      "sourceText": "書き取りは ぜんぜん 惜しくなかったです。",
+      "kana": "カキトリワ'/ゼンゼン'/オシク'ナカッタデス",
+      "sha256": "db4d2aff90d4a44fc848456ec2b18d021ba1cd0c9d594b545b94a8b50e0042f5"
+    },
+    {
+      "file": "modifier-oishii-present-affirmative.mp3",
+      "written": "この 林檎は おいしいです。",
+      "reading": "この りんごは おいしいです。",
+      "sourceText": "この 林檎は おいしいです。",
+      "kana": "コノ'/リンゴワ'/オイシ'イデス",
+      "sha256": "0eb3af3db6810a15902d7cf6945ac37e1e4c6ebef40d0c6b9b0a288405db4ffa"
+    },
+    {
+      "file": "modifier-oishii-past-affirmative.mp3",
+      "written": "日本の さかなは おいしかったです。",
+      "reading": "にほんの さかなは おいしかったです。",
+      "sourceText": "日本の さかなは おいしかったです。",
+      "kana": "ニホ'ンノ/サカナワ'/オイシ'カッタデス",
+      "sha256": "89a9b60f566bf6beb39bf8ccc1a5d1400f5c808aca1e0fc57389e7caff039e1e"
+    },
+    {
+      "file": "modifier-oishii-present-negative.mp3",
+      "written": "この おちゃは おいしくないです。",
+      "reading": "この おちゃは おいしくないです。",
+      "sourceText": "この おちゃは おいしくないです。",
+      "kana": "コノ'/オチャワ'/オイシク'ナイデス",
+      "sha256": "4577eea9b4cd26987331fdc80c7134f0aba8066cf16913672b9457ff0b98cc04"
+    },
+    {
+      "file": "modifier-oishii-past-negative.mp3",
+      "written": "その レストランの パンは おいしくなかったです。",
+      "reading": "その レストランの パンは おいしくなかったです。",
+      "sourceText": "その レストランの パンは おいしくなかったです。",
+      "kana": "ソノレ'ストランノ/パ'ンワ/オイシク'ナカッタデス",
+      "sha256": "372e3ab42792d5673a2c5cf1895e626f60938ba179c041d0f71039a86ad3d059"
+    },
+    {
+      "file": "modifier-mazui-present-affirmative.mp3",
+      "written": "この コーヒーは まずいです。",
+      "reading": "この コーヒーは まずいです。",
+      "sourceText": "この コーヒーは まずいです。",
+      "kana": "コノ'/コオヒ'イワ/マズ'イデス",
+      "sha256": "b734e742725fccd79f035d99fd32338e555826e45b11767a41cc6c4d65f133a4"
+    },
+    {
+      "file": "modifier-mazui-past-affirmative.mp3",
+      "written": "卵は まずかったです。",
+      "reading": "たまごは まずかったです。",
+      "sourceText": "卵は まずかったです。",
+      "kana": "タマ'ゴワ/マズ'カッタデス",
+      "sha256": "fc8e2cfb59103c11e2e6e5a96109001c9869dc04a563d07a19081a1abb0a9845"
+    },
+    {
+      "file": "modifier-mazui-present-negative.mp3",
+      "written": "食堂の 肉は まずくないです。",
+      "reading": "しょくどうの にくは まずくないです。",
+      "sourceText": "食堂の 肉は まずくないです。",
+      "kana": "ショクドオノ'/ニク'ワ/マズク'ナイデス",
+      "sha256": "2e1f18dde5968f75fcf4d4a409b345a41ff8b33d14c7019197c5f2e0a16f215b"
+    },
+    {
+      "file": "modifier-mazui-past-negative.mp3",
+      "written": "ひこうきの ごはんは まずくなかったです。",
+      "reading": "ひこうきの ごはんは まずくなかったです。",
+      "sourceText": "ひこうきの ごはんは まずくなかったです。",
+      "kana": "ヒコオキノゴ'ハンワ/マズク'ナカッタデス",
+      "sha256": "dfa2faf4192ec0a26b5daddc84b75449b58e505aee352edc378e0e259b55c892"
+    },
+    {
+      "file": "modifier-amai-present-affirmative.mp3",
+      "written": "この 蜜柑は あまいです。",
+      "reading": "この みかんは あまいです。",
+      "sourceText": "この 蜜柑は あまいです。",
+      "kana": "コノミ'カンワ/アマイ'デス",
+      "sha256": "c73015ef1869841d3fae696b45b0c3b0c884a0c6440e203f0837e904fc0878b8"
+    },
+    {
+      "file": "modifier-amai-past-affirmative.mp3",
+      "written": "草もちは あまかったです。",
+      "reading": "くさもちは あまかったです。",
+      "sourceText": "草もちは あまかったです。",
+      "kana": "クサ'モチワ/アマ'カッタデス",
+      "sha256": "df241b9a0eb080b8b222508ce06b158df6f6ab3ea1c53c6263215a5c80080176"
+    },
+    {
+      "file": "modifier-amai-present-negative.mp3",
+      "written": "この ジュースは あまくないです。",
+      "reading": "この ジュースは あまくないです。",
+      "sourceText": "この ジュースは あまくないです。",
+      "kana": "コノジュ'ウスワ/アマクナ'イデス",
+      "sha256": "de00f30666b758b339df2f73858e7d7672b079c0d3760a8ba814201eaa3a3dad"
+    },
+    {
+      "file": "modifier-amai-past-negative.mp3",
+      "written": "先生は あまくなかったです。",
+      "reading": "せんせいは あまくなかったです。",
+      "sourceText": "先生は あまくなかったです。",
+      "kana": "センセ'エワ/アマクナカ'ッタデス",
+      "sha256": "a59cb54d91bcc8f6871c9c4e9f8b76a9fadb2f90bedf662daf5eb1f9a9779e5b"
+    },
+    {
+      "file": "modifier-ii-yoi-present-affirmative.mp3",
+      "written": "この カメラは いいです。",
+      "reading": "この カメラは いいです。",
+      "sourceText": "この カメラは いいです。",
+      "kana": "コノカ'メラワ/イイデス'",
+      "sha256": "115c01aff8c415b063054f70f44d2051c5407a915e397c1d6c44406cc9a94fc1"
+    },
+    {
+      "file": "modifier-ii-yoi-past-affirmative.mp3",
+      "written": "旅行は よかったです。",
+      "reading": "りょこうは よかったです。",
+      "sourceText": "旅行は よかったです。",
+      "kana": "リョコオワヨ'カッタデス",
+      "sha256": "091ef03636195d331225f01773c93102d23985eee910c75935a8c89714a5453b"
+    },
+    {
+      "file": "modifier-ii-yoi-present-negative.mp3",
+      "written": "この 辞書は よくないです。",
+      "reading": "この じしょは よくないです。",
+      "sourceText": "この 辞書は よくないです。",
+      "kana": "コノジ'ショワ/ヨク'ナイデス",
+      "sha256": "7351d519b1fed10ea607e62493c1b68c20c12543d2d50a8bee68054acf521038"
+    },
+    {
+      "file": "modifier-ii-yoi-past-negative.mp3",
+      "written": "天気は よくなかったです。",
+      "reading": "てんきは よくなかったです。",
+      "sourceText": "天気は よくなかったです。",
+      "kana": "テ'ンキワ/ヨク'ナカッタデス",
+      "sha256": "1b507beddaa9b7605397cdb1896ab19cd2c10e7732c693c0344057cb8badd178"
+    },
+    {
+      "file": "modifier-atarashii-present-affirmative.mp3",
+      "written": "この かばんは あたらしいです。",
+      "reading": "この かばんは あたらしいです。",
+      "sourceText": "この かばんは あたらしいです。",
+      "kana": "コノ'/カバンワ'/アタラシ'イデス",
+      "sha256": "d7d11f55c44338b70b1fb9ebc0338a7635dc1996b84a9133ad3563a571630ddf"
+    },
+    {
+      "file": "modifier-atarashii-past-affirmative.mp3",
+      "written": "あの 町の えきは あたらしかったです。",
+      "reading": "あの まちの えきは あたらしかったです。",
+      "sourceText": "あの 町の えきは あたらしかったです。",
+      "kana": "アノ'/マチ'ノ/エ'キワ/アタラシ'カッタデス",
+      "sha256": "59be6bded11f01050861db0a5b73667d320b6f9af2730edeb15f7e1b2e961281"
+    },
+    {
+      "file": "modifier-atarashii-present-negative.mp3",
+      "written": "わたしの 車は あたらしくないです。",
+      "reading": "わたしの くるまは あたらしくないです。",
+      "sourceText": "わたしの 車は あたらしくないです。",
+      "kana": "ワタシノ'/クルマワ'/アタラシク'ナイデス",
+      "sha256": "cf9c9b43b8c2c00d5ee0babb94e0a36fec415db1cb26db6987e8d381a9c68855"
+    },
+    {
+      "file": "modifier-atarashii-past-negative.mp3",
+      "written": "その とけいは あたらしくなかったです。",
+      "reading": "その とけいは あたらしくなかったです。",
+      "sourceText": "その とけいは あたらしくなかったです。",
+      "kana": "ソノ'/トケイワ'/アタラシク'ナカッタデス",
+      "sha256": "cd59d2261973756bc5fa078a1af4044bc34e20690d578515e07318689d51c459"
+    },
+    {
+      "file": "modifier-furui-present-affirmative.mp3",
+      "written": "この 本は ふるいです。",
+      "reading": "この ほんは ふるいです。",
+      "sourceText": "この 本は ふるいです。",
+      "kana": "コノホ'ンワ/フル'イデス",
+      "sha256": "ce03ff7741c63a90d56b554df16884e7b0a5435ccc117ed2f97708c0125f1814"
+    },
+    {
+      "file": "modifier-furui-past-affirmative.mp3",
+      "written": "大学の 教室は ふるかったです。",
+      "reading": "だいがくの きょうしつは ふるかったです。",
+      "sourceText": "大学の 教室は ふるかったです。",
+      "kana": "ダイガクノ'/キョオシツワ'/フル'カッタデス",
+      "sha256": "d996c2055c751be3f0f6063c1ad8ea0113875adbaaf89b8aeaeb6024f218575a"
+    },
+    {
+      "file": "modifier-furui-present-negative.mp3",
+      "written": "わたしの パソコンは ふるくないです。",
+      "reading": "わたしの パソコンは ふるくないです。",
+      "sourceText": "わたしの パソコンは ふるくないです。",
+      "kana": "ワタシノ'/パソコンワ'/フルク'ナイデス",
+      "sha256": "eb1d4239917997fe41bd9492cc389716a05d32e4d1be06cb2a7ecf3c33405d45"
+    },
+    {
+      "file": "modifier-furui-past-negative.mp3",
+      "written": "その デパートは ふるくなかったです。",
+      "reading": "その デパートは ふるくなかったです。",
+      "sourceText": "その デパートは ふるくなかったです。",
+      "kana": "ソノ'/デパ'アトワ/フルク'ナカッタデス",
+      "sha256": "332e8b60ba9c2d34652cd8c6132d56497ea967d6dfcf1f7bf1b0e7906baaa672"
+    },
+    {
+      "file": "modifier-takai-present-affirmative.mp3",
+      "written": "日本の くだものは たかいです。",
+      "reading": "にほんの くだものは たかいです。",
+      "sourceText": "日本の くだものは たかいです。",
+      "kana": "ニホ'ンノ/クダ'モノワ/タカ'イデス",
+      "sha256": "afb70fa1358f28f183582d24ae33bd63c2100290ef54df3970c62ea4b1379bcc"
+    },
+    {
+      "file": "modifier-takai-past-affirmative.mp3",
+      "written": "しんかんせんの きっぷは たかかったです。",
+      "reading": "しんかんせんの きっぷは たかかったです。",
+      "sourceText": "しんかんせんの きっぷは たかかったです。",
+      "kana": "シンカンセンノ'/キップワ'/タカ'カッタデス",
+      "sha256": "a1129afc526366a734b9efd9acd6bcfbfa321ca266fa4e39b028fa11515fc9bd"
+    },
+    {
+      "file": "modifier-takai-present-negative.mp3",
+      "written": "この ワインは たかくないです。",
+      "reading": "この ワインは たかくないです。",
+      "sourceText": "この ワインは たかくないです。",
+      "kana": "コノワ'インワ/タカクナ'イデス",
+      "sha256": "937848d95462df9b444be521c9610102d69471b5964cc2edac2e9146fd6e6112"
+    },
+    {
+      "file": "modifier-takai-past-negative.mp3",
+      "written": "あの 山は たかくなかったです。",
+      "reading": "あの やまは たかくなかったです。",
+      "sourceText": "あの 山は たかくなかったです。",
+      "kana": "アノ'/ヤマ'ワ/タカクナカ'ッタデス",
+      "sha256": "0e20579b32089cd6e3174df3e3835301e027abcacddab796d7d66732945db07b"
+    },
+    {
+      "file": "modifier-yasui-present-affirmative.mp3",
+      "written": "この みせの パンは やすいです。",
+      "reading": "この みせの パンは やすいです。",
+      "sourceText": "この みせの パンは やすいです。",
+      "kana": "コノミ'セノ/パ'ンワ/ヤス'イデス",
+      "sha256": "db7c993749a79bf91a7df20cbc367a3491edf32282172f163631dfeeafef15de"
+    },
+    {
+      "file": "modifier-yasui-past-affirmative.mp3",
+      "written": "スペインの ワインは やすかったです。",
+      "reading": "スペインの ワインは やすかったです。",
+      "sourceText": "スペインの ワインは やすかったです。",
+      "kana": "スペ'インノ/ワ'インワ/ヤス'カッタデス",
+      "sha256": "32eb2d2324f9a579b3bdeb678882ac3024f51750960c9f6bc42ddb2b5469b2ba"
+    },
+    {
+      "file": "modifier-yasui-present-negative.mp3",
+      "written": "タクシーは やすくないです。",
+      "reading": "タクシーは やすくないです。",
+      "sourceText": "タクシーは やすくないです。",
+      "kana": "タ'クシイワ/ヤスク'ナイデス",
+      "sha256": "d527facb35f0972dc13471d342f7db7314552ec3bcee7feddcc37c990f1a52b3"
+    },
+    {
+      "file": "modifier-yasui-past-negative.mp3",
+      "written": "その テレビは やすくなかったです。",
+      "reading": "その テレビは やすくなかったです。",
+      "sourceText": "その テレビは やすくなかったです。",
+      "kana": "ソノテ'レビワ/ヤスク'ナカッタデス",
+      "sha256": "f724ed336f49c2b2d3163aa237671b7225a06b46cc162bec88614aadc664cc54"
+    },
+    {
+      "file": "modifier-hikui-present-affirmative.mp3",
+      "written": "この いすは ひくいです。",
+      "reading": "この いすは ひくいです。",
+      "sourceText": "この いすは ひくいです。",
+      "kana": "コノ'/イスワ'/ヒク'イデス",
+      "sha256": "52edb54f6c31fc1824d76dabf666874c9914413892d8ebc793e7c407698b688b"
+    },
+    {
+      "file": "modifier-hikui-past-affirmative.mp3",
+      "written": "教室の 机は ひくかったです。",
+      "reading": "きょうしつの つくえは ひくかったです。",
+      "sourceText": "教室の 机は ひくかったです。",
+      "kana": "キョオシツノ'/ツクエワ'/ヒク'カッタデス",
+      "sha256": "5b167a713df6a73e205133ca52f4aa97170a9aa940e4f0f3cd1584c13da52f4f"
+    },
+    {
+      "file": "modifier-hikui-present-negative.mp3",
+      "written": "あの 山は ひくくないです。",
+      "reading": "あの やまは ひくくないです。",
+      "sourceText": "あの 山は ひくくないです。",
+      "kana": "アノ'/ヤマ'ワ/ヒクク'ナイデス",
+      "sha256": "2f0467ad87ab435b92612aeda053c732682ad5b395de582e0d40820f8482189f"
+    },
+    {
+      "file": "modifier-hikui-past-negative.mp3",
+      "written": "その 車は ひくくなかったです。",
+      "reading": "その くるまは ひくくなかったです。",
+      "sourceText": "その 車は ひくくなかったです。",
+      "kana": "ソノ'/クルマワ'/ヒクク'ナカッタデス",
+      "sha256": "7c1975e890c10283b5c09c34b7488efb52ae75c57062563907758fde681cb3e1"
+    },
+    {
+      "file": "modifier-samui-present-affirmative.mp3",
+      "written": "今日は さむいです。",
+      "reading": "きょうは さむいです。",
+      "sourceText": "今日は さむいです。",
+      "kana": "キョ'オワ/サム'イデス",
+      "sha256": "6de214e8b02ab286b435f2e0412a39c7ea814ec9629a2107ab38a8bee3f01f10"
+    },
+    {
+      "file": "modifier-samui-past-affirmative.mp3",
+      "written": "きのうの よるは さむかったです。",
+      "reading": "きのうの よるは さむかったです。",
+      "sourceText": "きのうの よるは さむかったです。",
+      "kana": "キノオノヨ'ルワ/サム'カッタデス",
+      "sha256": "b9b6b73307adec9c6647076c8007df35821600191208c74f26f69d742bf549d0"
+    },
+    {
+      "file": "modifier-samui-present-negative.mp3",
+      "written": "この へやは さむくないです。",
+      "reading": "この へやは さむくないです。",
+      "sourceText": "この へやは さむくないです。",
+      "kana": "コノ'/ヘヤ'ワ/サムク'ナイデス",
+      "sha256": "09bf9c55f3f674955e22cfb9aedd9bd7a528156b6b3b782ead5adf1e6f2597cb"
+    },
+    {
+      "file": "modifier-samui-past-negative.mp3",
+      "written": "先しゅうは さむくなかったです。",
+      "reading": "せんしゅうは さむくなかったです。",
+      "sourceText": "先週は さむくなかったです。",
+      "kana": "センシュウワ'/サムク'ナカッタデス",
+      "sha256": "d852b9420921dce0c2ea0f8424bf90713fbd040694de9a9910d5f8d006149d3b"
+    },
+    {
+      "file": "modifier-tsumetai-present-affirmative.mp3",
+      "written": "この 水は つめたいです。",
+      "reading": "この みずは つめたいです。",
+      "sourceText": "この 水は つめたいです。",
+      "kana": "コノ'/ミズワ'/ツメタイ'デス",
+      "sha256": "97830bc7a02eaef5166317eec923af2597a3da435e99b9a246ff9eaf1b940f3f"
+    },
+    {
+      "file": "modifier-tsumetai-past-affirmative.mp3",
+      "written": "あさの ぎゅうにゅうは つめたかったです。",
+      "reading": "あさの ぎゅうにゅうは つめたかったです。",
+      "sourceText": "朝の ぎゅうにゅうは つめたかったです。",
+      "kana": "ア'サノ/ギュウニュウワ'/ツメタ'カッタデス",
+      "sha256": "8773f3744ccf77f42bca7b1348b3fc36f786dbccba26c2c1e4036a42ea3f90c1"
+    },
+    {
+      "file": "modifier-tsumetai-present-negative.mp3",
+      "written": "この ビールは つめたくないです。",
+      "reading": "この ビールは つめたくないです。",
+      "sourceText": "この ビールは つめたくないです。",
+      "kana": "コノビ'イルワ/ツメタク'ナイデス",
+      "sha256": "728e3a2fc28e08dc73c90dea3f3cf4fd1fff30ed03c5567e4b6643bf69311812"
+    },
+    {
+      "file": "modifier-tsumetai-past-negative.mp3",
+      "written": "レストランの ジュースは つめたくなかったです。",
+      "reading": "レストランの ジュースは つめたくなかったです。",
+      "sourceText": "レストランの ジュースは つめたくなかったです。",
+      "kana": "レ'ストランノ/ジュ'ウスワ/ツメタク'ナカッタデス",
+      "sha256": "abf5a7e022bbde177d86d0e6b646a69f484aaa100686d62d124571112f0ad80d"
+    },
+    {
+      "file": "modifier-akai-present-affirmative.mp3",
+      "written": "あの 車は 赤いです。",
+      "reading": "あの くるまは あかいです。",
+      "sourceText": "あの 車は 赤いです。",
+      "kana": "アノ'/クルマワ'/アカイ'デス",
+      "sha256": "638e989e54929a16550222c6b515bf5c236d0e1546cdc8addf9724d0b1d2127b"
+    },
+    {
+      "file": "modifier-akai-past-affirmative.mp3",
+      "written": "ともだちの かさは 赤かったです。",
+      "reading": "ともだちの かさは あかかったです。",
+      "sourceText": "ともだちの かさは 赤かったです。",
+      "kana": "トモダチノカ'サワ/アカ'カッタデス",
+      "sha256": "e89b4369eac24106e1f8d7682d0cf01b8634fc44a8ef7113d9e95acab512f2b5"
+    },
+    {
+      "file": "modifier-akai-present-negative.mp3",
+      "written": "わたしの かばんは 赤くないです。",
+      "reading": "わたしの かばんは あかくないです。",
+      "sourceText": "わたしの かばんは 赤くないです。",
+      "kana": "ワタシノ'/カバンワ'/アカクナ'イデス",
+      "sha256": "7fef1f87a6989d6cfe7e08ecee58facec184fd7c3d18c8cd385bb8ff7c570769"
+    },
+    {
+      "file": "modifier-akai-past-negative.mp3",
+      "written": "その 花は 赤くなかったです。",
+      "reading": "その はなは あかくなかったです。",
+      "sourceText": "その 花は 赤くなかったです。",
+      "kana": "ソノ'/ハナ'ワ/アカクナカ'ッタデス",
+      "sha256": "b76c6aae497983a2be30a259e718315f0f4105ef771c7996d4bb36c124e2ee2f"
+    },
+    {
+      "file": "modifier-shiroi-present-affirmative.mp3",
+      "written": "この シャツは 白いです。",
+      "reading": "この シャツは しろいです。",
+      "sourceText": "この シャツは 白いです。",
+      "kana": "コノシャ'ツワ/シロ'イデス",
+      "sha256": "be0ca519d01e3291fb39390f04d76cd30bf4b4a519fe63ef8fd6a430687c32d5"
+    },
+    {
+      "file": "modifier-shiroi-past-affirmative.mp3",
+      "written": "ふじ山は 白かったです。",
+      "reading": "ふじさんは しろかったです。",
+      "sourceText": "ふじ山は 白かったです。",
+      "kana": "フジ'サンワ/シロ'カッタデス",
+      "sha256": "22f87f62813e897ec2dd17109a7abf96c4c73144d604717bffbe3963597d7f88"
+    },
+    {
+      "file": "modifier-shiroi-present-negative.mp3",
+      "written": "その かみは 白くないです。",
+      "reading": "その かみは しろくないです。",
+      "sourceText": "その かみは 白くないです。",
+      "kana": "ソノカ'ミワ/シロク'ナイデス",
+      "sha256": "8d544ccc04bc98534e59bfee6be67d2a3ced5868a7f60eeb2c199e5d3613f0a5"
+    },
+    {
+      "file": "modifier-shiroi-past-negative.mp3",
+      "written": "その 靴は 白くなかったです。",
+      "reading": "その くつは しろくなかったです。",
+      "sourceText": "その 靴は 白くなかったです。",
+      "kana": "ソノ'/クツ'ワ/シロク'ナカッタデス",
+      "sha256": "18a1ebd157039fde1acdc641d87ecc90077bc74cdab61e990ab964415db17585"
+    },
+    {
+      "file": "modifier-aoi-present-affirmative.mp3",
+      "written": "この ボールペンは 青いです。",
+      "reading": "この ボールペンは あおいです。",
+      "sourceText": "この ボールペンは 青いです。",
+      "kana": "コノ'/ボオルペンワ'/アオ'イデス",
+      "sha256": "10f6715411c3e3e347e4eebdc3385a85e1d7fc53971295360f4865be18a1a6b8"
+    },
+    {
+      "file": "modifier-aoi-past-affirmative.mp3",
+      "written": "その 車は 青かったです。",
+      "reading": "その くるまは あおかったです。",
+      "sourceText": "その 車は 青かったです。",
+      "kana": "ソノ'/クルマワ'/アオ'カッタデス",
+      "sha256": "486ab455bb53a417f158218783adc1ecac5ff0e8078f1c14dd26efa5ad391850"
+    },
+    {
+      "file": "modifier-aoi-present-negative.mp3",
+      "written": "わたしの かさは 青くないです。",
+      "reading": "わたしの かさは あおくないです。",
+      "sourceText": "わたしの かさは 青くないです。",
+      "kana": "ワタシノカ'サワ/アオク'ナイデス",
+      "sha256": "2204d69bffe56a620f029476535a4f613ad153f73c852b95da4a155fd721c15a"
+    },
+    {
+      "file": "modifier-aoi-past-negative.mp3",
+      "written": "あの ふねは 青くなかったです。",
+      "reading": "あの ふねは あおくなかったです。",
+      "sourceText": "あの ふねは 青くなかったです。",
+      "kana": "アノフ'ネワ/アオク'ナカッタデス",
+      "sha256": "f483574cdca9547b35dc64c5a30114e1bbb771f9f9656adf62eba7e36fe80cd2"
+    },
+    {
+      "file": "modifier-ookii-present-affirmative.mp3",
+      "written": "わたしの 町は 大きいです。",
+      "reading": "わたしの まちは おおきいです。",
+      "sourceText": "わたしの 町は 大きいです。",
+      "kana": "ワタシノ'/マチ'ワ/オオキ'イデス",
+      "sha256": "e395e2b0c8d07017d21ee1d41c03d48bb38c5115ff9bfd06230eac3fc369360f"
+    },
+    {
+      "file": "modifier-ookii-past-affirmative.mp3",
+      "written": "日本の えきは 大きかったです。",
+      "reading": "にほんの えきは おおきかったです。",
+      "sourceText": "日本の えきは 大きかったです。",
+      "kana": "ニホ'ンノ/エ'キワ/オオキ'カッタデス",
+      "sha256": "600308cfd94a2ed2019f2d33f2797c46b18866067792cf85bf7ba4d5ee1f8b56"
+    },
+    {
+      "file": "modifier-ookii-present-negative.mp3",
+      "written": "この へやは 大きくないです。",
+      "reading": "この へやは おおきくないです。",
+      "sourceText": "この へやは 大きくないです。",
+      "kana": "コノ'/ヘヤ'ワ/オオキク'ナイデス",
+      "sha256": "a17281a93e946d0a5e8020ebd7989cc9ecefd3d6c2cd4564a82165ba5e953b01"
+    },
+    {
+      "file": "modifier-ookii-past-negative.mp3",
+      "written": "その 箱は 大きくなかったです。",
+      "reading": "その はこは おおきくなかったです。",
+      "sourceText": "その 箱は 大きくなかったです。",
+      "kana": "ソノ'/ハコワ'/オオキク'ナカッタデス",
+      "sha256": "aaafce2b5d65011204d2410e4489b30b7ebf79c1abacc88820a3017a440f609c"
+    },
+    {
+      "file": "modifier-chiisai-present-affirmative.mp3",
+      "written": "この カメラは 小さいです。",
+      "reading": "この カメラは ちいさいです。",
+      "sourceText": "この カメラは 小さいです。",
+      "kana": "コノカ'メラワ/チイサ'イデス",
+      "sha256": "7ffb379a5721683d44b29644cc84938cc82a77084516005b488c5ad57b0ccd02"
+    },
+    {
+      "file": "modifier-chiisai-past-affirmative.mp3",
+      "written": "あの 花屋は 小さかったです。",
+      "reading": "あの はなやは ちいさかったです。",
+      "sourceText": "あの 花屋は 小さかったです。",
+      "kana": "アノ'/ハナ'ヤワ/チイサ'カッタデス",
+      "sha256": "93c6dd3383228bd2aff579485c8a1394af4d780050ba4363d2d47794e2bcf125"
+    },
+    {
+      "file": "modifier-chiisai-present-negative.mp3",
+      "written": "わたしの へやは 小さくないです。",
+      "reading": "わたしの へやは ちいさくないです。",
+      "sourceText": "わたしの へやは 小さくないです。",
+      "kana": "ワタシノ'/ヘヤ'ワ/チイサク'ナイデス",
+      "sha256": "4d9363b44d6dd295135dac99960be6ca4235c5d5920817680e81f509ba02ea4a"
+    },
+    {
+      "file": "modifier-chiisai-past-negative.mp3",
+      "written": "その えきは 小さくなかったです。",
+      "reading": "その えきは ちいさくなかったです。",
+      "sourceText": "その えきは 小さくなかったです。",
+      "kana": "ソノエ'キワ/チイサク'ナカッタデス",
+      "sha256": "03fb8bdded0783a504072e8ce667ad86dcc63e072345b9ea35f197f93d5fc289"
+    },
+    {
+      "file": "modifier-kakkoii-present-affirmative.mp3",
+      "written": "かれは かっこいいです。",
+      "reading": "かれは かっこいいです。",
+      "sourceText": "彼は かっこいいです。",
+      "kana": "カ'レワ/カッコイ'イデス",
+      "sha256": "15fcf29ddd6373973a7811c0444db8c24e61a742ab997482e87b7729c3730609"
+    },
+    {
+      "file": "modifier-kakkoii-past-affirmative.mp3",
+      "written": "きのうの ダンスは かっこよかったです。",
+      "reading": "きのうの ダンスは かっこよかったです。",
+      "sourceText": "きのうの ダンスは かっこよかったです。",
+      "kana": "キノオノダ'ンスワ/カッコヨ'カッタデス",
+      "sha256": "594cd068f2ee11d676c35e06cc2e800472c64750dbe73edaf1ec785e9f037d08"
+    },
+    {
+      "file": "modifier-kakkoii-present-negative.mp3",
+      "written": "この シャツは かっこよくないです。",
+      "reading": "この シャツは かっこよくないです。",
+      "sourceText": "この シャツは かっこよくないです。",
+      "kana": "コノシャ'ツワ/カッコヨク'ナイデス",
+      "sha256": "6baf78b880ab3a91ee76931d9ff3e3b634fdb3d8cf49f4bb5db91cb4569a222c"
+    },
+    {
+      "file": "modifier-kakkoii-past-negative.mp3",
+      "written": "わたしの ふるい 車は かっこよくなかったです。",
+      "reading": "わたしの ふるい くるまは かっこよくなかったです。",
+      "sourceText": "わたしの ふるい 車は かっこよくなかったです。",
+      "kana": "ワタシノ'/フル'イ/クルマワ'/カッコヨク'ナカッタデス",
+      "sha256": "e9517b3eaf4a0241ba67913699b9b42691c29ce2cba9826fa5845c75349ca53b"
+    },
+    {
+      "file": "modifier-benri-present-affirmative.mp3",
+      "written": "ち下てつは 便利です。",
+      "reading": "ちかてつは べんりです。",
+      "sourceText": "ち下てつは 便利です。",
+      "kana": "チカ'テツワ/ベ'ンリデス",
+      "sha256": "624f6343be1f813de6f450485cf2d0c036cfdea19fa9d1e3115bc3fde3899c1e"
+    },
+    {
+      "file": "modifier-benri-past-affirmative.mp3",
+      "written": "じてん車は 便利でした。",
+      "reading": "じてんしゃは べんりでした。",
+      "sourceText": "じてん車は 便利でした。",
+      "kana": "ジテンシャワベ'ンリデシタ",
+      "sha256": "49cbfd279494567bdc6664ef5e31a3ad023648d17ad68f983e837543e800b095"
+    },
+    {
+      "file": "modifier-benri-present-negative.mp3",
+      "written": "この 町の バスは 便利では ありません。",
+      "reading": "この まちの バスは べんりでは ありません。",
+      "sourceText": "この 町の バスは 便利では ありません。",
+      "kana": "コノ'/マチ'ノ/バ'スワ/ベ'ンリデワアリマセン",
+      "sha256": "5e49c36a983c6d95efea96a2a6380511de08f1654a3591c593d241d76ef976af"
+    },
+    {
+      "file": "modifier-benri-past-negative.mp3",
+      "written": "その 辞書は 便利では ありませんでした。",
+      "reading": "その じしょは べんりでは ありませんでした。",
+      "sourceText": "その 辞書は 便利では ありませんでした。",
+      "kana": "ソノジ'ショワ/ベ'ンリデワアリマセンデシタ",
+      "sha256": "107260261816ca6a4a66daeab23b1b3e6e87e4c48927d055ff6d7ef25d6a4262"
+    },
+    {
+      "file": "modifier-kantan-present-affirmative.mp3",
+      "written": "この 宿題は 簡単です。",
+      "reading": "この しゅくだいは かんたんです。",
+      "sourceText": "この 宿題は 簡単です。",
+      "kana": "コノ'/シュクダイワ'/カンタンデ'ス",
+      "sha256": "ad9c32caeaeef36e3b2172461f248dcb49ab7b3f12063b0464aba5c9342e0a0b"
+    },
+    {
+      "file": "modifier-kantan-past-affirmative.mp3",
+      "written": "日本ごの 試験は 簡単でした。",
+      "reading": "にほんごの しけんは かんたんでした。",
+      "sourceText": "日本ごの 試験は 簡単でした。",
+      "kana": "ニホンゴノ'/シケ'ンワ/カンタンデ'シタ",
+      "sha256": "69980a11b27458344e55cc08f8f486bb0ab6dcb483529368c0c27a164ccdeee6"
+    },
+    {
+      "file": "modifier-kantan-present-negative.mp3",
+      "written": "かん字は 簡単では ありません。",
+      "reading": "かんじは かんたんでは ありません。",
+      "sourceText": "かん字は 簡単では ありません。",
+      "kana": "カンジワ'/カンタンデ'ワアリマセン",
+      "sha256": "ed2f192ff10be7b6247d5c9133d795dd2fec239b99e12020151abb2951dfe961"
+    },
+    {
+      "file": "modifier-kantan-past-negative.mp3",
+      "written": "書き取りは 簡単では ありませんでした。",
+      "reading": "かきとりは かんたんでは ありませんでした。",
+      "sourceText": "書き取りは 簡単では ありませんでした。",
+      "kana": "カキトリワ'/カンタンデ'ワアリマセンデシタ",
+      "sha256": "008eb97cb8724f764fd32f76515986d164cb8101c2e08bffda5ef4f09a461989"
+    },
+    {
+      "file": "modifier-taihen-present-affirmative.mp3",
+      "written": "先生の しごとは 大変です。",
+      "reading": "せんせいの しごとは たいへんです。",
+      "sourceText": "先生の しごとは 大変です。",
+      "kana": "センセ'エノ/シゴトワ'/タイヘンデ'ス",
+      "sha256": "09dbb831ff2a7fe30de8336a6e4445784e779112c8b68a62a4dfe90bdc505539"
+    },
+    {
+      "file": "modifier-taihen-past-affirmative.mp3",
+      "written": "先しゅうの 試験は 大変でした。",
+      "reading": "せんしゅうの しけんは たいへんでした。",
+      "sourceText": "先週の 試験は 大変でした。",
+      "kana": "センシュウノ'/シケ'ンワ/タイヘンデ'シタ",
+      "sha256": "e563bf84c04d6d213bf51acfb9b9a1f59bddfd3dbb7a4f24aa86a40cd1fd8c8d"
+    },
+    {
+      "file": "modifier-taihen-present-negative.mp3",
+      "written": "運動は 大変では ありません。",
+      "reading": "うんどうは たいへんでは ありません。",
+      "sourceText": "運動は 大変では ありません。",
+      "kana": "ウンドオワ'/タイヘンデ'ワアリマセン",
+      "sha256": "ee04193a479eae3db9e9204a2a4fb7a8ed5339e1a74001424f53ac8f213a3200"
+    },
+    {
+      "file": "modifier-taihen-past-negative.mp3",
+      "written": "宿題は 大変では ありませんでした。",
+      "reading": "しゅくだいは たいへんでは ありませんでした。",
+      "sourceText": "宿題は 大変では ありませんでした。",
+      "kana": "シュクダイワ'/タイヘンデ'ワアリマセンデシタ",
+      "sha256": "c4737cd48a45810bcf853f9709cd1189404275b76aca3133a3738d95452f6343"
+    },
+    {
+      "file": "modifier-shizuka-present-affirmative.mp3",
+      "written": "よるの 町は 静かです。",
+      "reading": "よるの まちは しずかです。",
+      "sourceText": "よるの 町は 静かです。",
+      "kana": "ヨ'ルノ/マチ'ワ/シ'ズカデス",
+      "sha256": "3a03e851ab2185d1711a994855b2da0ed2ab388697c5dd361449bc3a2d09a2d4"
+    },
+    {
+      "file": "modifier-shizuka-past-affirmative.mp3",
+      "written": "日よう日の 大学は 静かでした。",
+      "reading": "にちようびの だいがくは しずかでした。",
+      "sourceText": "日よう日の 大学は 静かでした。",
+      "kana": "ニチヨ'オビノ/ダイガクワシ'ズカデシタ",
+      "sha256": "ebf443ee8cdc8ad15c686677af60c69ae641d5772662cddd8b839ca07c5fc032"
+    },
+    {
+      "file": "modifier-shizuka-present-negative.mp3",
+      "written": "あの レストランは 静かでは ありません。",
+      "reading": "あの レストランは しずかでは ありません。",
+      "sourceText": "あの レストランは 静かでは ありません。",
+      "kana": "アノレ'ストランワ/シ'ズカデワアリマセン",
+      "sha256": "e90b8551b9107b6b92b1ad016efa5611908ec3524312a261cae0977ab23663ad"
+    },
+    {
+      "file": "modifier-shizuka-past-negative.mp3",
+      "written": "教室は 静かでは ありませんでした。",
+      "reading": "きょうしつは しずかでは ありませんでした。",
+      "sourceText": "教室は 静かでは ありませんでした。",
+      "kana": "キョオシツワシ'ズカデワアリマセンデシタ",
+      "sha256": "30de63625f0fcebe0e0f14c5737f3f0652a271c46dcb06e06c1a3d1eb3bba4ea"
+    },
+    {
+      "file": "modifier-genki-present-affirmative.mp3",
+      "written": "家族は みんな 元気です。",
+      "reading": "かぞくは みんな げんきです。",
+      "sourceText": "家族は みんな 元気です。",
+      "kana": "カ'ゾクワ/ミンナゲ'ンキデス",
+      "sha256": "576644712a51c5a5094f67b00e7cc34dbbdfc270c1f3ddc80bac57af39091398"
+    },
+    {
+      "file": "modifier-genki-past-affirmative.mp3",
+      "written": "ちちは 元気でした。",
+      "reading": "ちちは げんきでした。",
+      "sourceText": "ちちは 元気でした。",
+      "kana": "チ'チワ/ゲ'ンキデシタ",
+      "sha256": "416d9a2230de084b9817c06b5ab00b760dad73b738f5ce177a152fae50e42b4e"
+    },
+    {
+      "file": "modifier-genki-present-negative.mp3",
+      "written": "子犬は 元気では ありません。",
+      "reading": "こいぬは げんきでは ありません。",
+      "sourceText": "子犬は 元気では ありません。",
+      "kana": "コイヌワゲ'ンキデワアリマセン",
+      "sha256": "3ddd445c397fadc9873bb0149ea1e6d650c44ed945141a8e618891e4b556413d"
+    },
+    {
+      "file": "modifier-genki-past-negative.mp3",
+      "written": "ともだちは 元気では ありませんでした。",
+      "reading": "ともだちは げんきでは ありませんでした。",
+      "sourceText": "ともだちは 元気では ありませんでした。",
+      "kana": "トモダチワゲ'ンキデワアリマセンデシタ",
+      "sha256": "b1e0a42357da4cb5f4b60aec89292c662d6f838ae470dd39d4479f132448bb45"
+    },
+    {
+      "file": "modifier-kirei-present-affirmative.mp3",
+      "written": "白い花は きれいです。",
+      "reading": "しろいはなは きれいです。",
+      "sourceText": "白い花は きれいです。",
+      "kana": "シロ'イ/ハナ'ワ/キ'レイデス",
+      "sha256": "6a01f3ae3f0ebd52d8a4ba2895e18629390f6fdad66d7cc5b94d887e50225bc0"
+    },
+    {
+      "file": "modifier-kirei-past-affirmative.mp3",
+      "written": "きのうの まん月は きれいでした。",
+      "reading": "きのうの まんげつは きれいでした。",
+      "sourceText": "きのうの まん月は きれいでした。",
+      "kana": "キノオノマ'ンゲツワ/キ'レイデシタ",
+      "sha256": "0ebc71574ac5db61859b23ed2f0384ba498f564cfe64f450ecaa54e11b3e0e1b"
+    },
+    {
+      "file": "modifier-kirei-present-negative.mp3",
+      "written": "教室は きれいでは ありません。",
+      "reading": "きょうしつは きれいでは ありません。",
+      "sourceText": "教室は きれいでは ありません。",
+      "kana": "キョオシツワキ'レイデワアリマセン",
+      "sha256": "bdea03eba58bfd5cb46c73284aba4b22ce4b5f9042c3eca6d3d23d52515150b0"
+    },
+    {
+      "file": "modifier-kirei-past-negative.mp3",
+      "written": "川べりは きれいでは ありませんでした。",
+      "reading": "かわべりは きれいでは ありませんでした。",
+      "sourceText": "川べりは きれいでは ありませんでした。",
+      "kana": "カワベリワキ'レイデワアリマセンデシタ",
+      "sha256": "dffe85e8285f8aadc7bc0da5574b52eb5aa59a4b5fd6fade614e645f00334f74"
+    },
+    {
+      "file": "modifier-yuumei-present-affirmative.mp3",
+      "written": "ふじ山は 有名です。",
+      "reading": "ふじさんは ゆうめいです。",
+      "sourceText": "ふじ山は 有名です。",
+      "kana": "フジ'サンワ/ユウメエデ'ス",
+      "sha256": "df1b7ab1038b6719c0e3014836c3f452d0256161c837c2d1d569546f41d5a30e"
+    },
+    {
+      "file": "modifier-yuumei-past-affirmative.mp3",
+      "written": "その レストランは 有名でした。",
+      "reading": "その レストランは ゆうめいでした。",
+      "sourceText": "その レストランは 有名でした。",
+      "kana": "ソノレ'ストランワ/ユウメエデ'シタ",
+      "sha256": "4f536be5d98c774f98a77fb7a9481d3eab8f4cb3cdf0419c93eed7e6d6505998"
+    },
+    {
+      "file": "modifier-yuumei-present-negative.mp3",
+      "written": "この デパートは 有名では ありません。",
+      "reading": "この デパートは ゆうめいでは ありません。",
+      "sourceText": "この デパートは 有名では ありません。",
+      "kana": "コノ'/デパ'アトワ/ユウメエデ'ワアリマセン",
+      "sha256": "4ba49653ff393494ae3dd336b483a792651bc0f17ea8a1c9a29cf3ab0df12fa1"
+    },
+    {
+      "file": "modifier-yuumei-past-negative.mp3",
+      "written": "その 美術館は 有名では ありませんでした。",
+      "reading": "その びじゅつかんは ゆうめいでは ありませんでした。",
+      "sourceText": "その 美術館は 有名では ありませんでした。",
+      "kana": "ソノ'/ビジュ'ツカンワ/ユウメエデ'ワアリマセンデシタ",
+      "sha256": "e587c582c4aab9d9345638ee1fc4f6ffafd45b60e7b408a5b41e92931c8de9fb"
+    },
+    {
+      "file": "modifier-jouzu-present-affirmative.mp3",
+      "written": "先生は テニスが 上手です。",
+      "reading": "せんせいは テニスが じょうずです。",
+      "sourceText": "先生は テニスが 上手です。",
+      "kana": "センセ'エワ/テ'ニスガ/ジョオズ'デス",
+      "sha256": "5a40395508421367fad4f1f76c2b81917d3f80fe4855fa3c23f6f9d25d7ddd70"
+    },
+    {
+      "file": "modifier-jouzu-past-affirmative.mp3",
+      "written": "子どもは 口ぶえが 上手でした。",
+      "reading": "こどもは くちぶえが じょうずでした。",
+      "sourceText": "子どもは 口ぶえが 上手でした。",
+      "kana": "コドモワ'/クチブエガ'/ジョオズ'デシタ",
+      "sha256": "59373b1e74ab68630e06262a1c3ac83dfa2a792262698522924f33ac58bba7e5"
+    },
+    {
+      "file": "modifier-jouzu-present-negative.mp3",
+      "written": "ちちは うたが 上手では ありません。",
+      "reading": "ちちは うたが じょうずでは ありません。",
+      "sourceText": "ちちは 歌が 上手では ありません。",
+      "kana": "チ'チワ/ウタ'ガ/ジョオズ'デワアリマセン",
+      "sha256": "6553b5a4afe8edc95cbaecacb4418867ee3c2caffa3bc3e763fab5262e4d373d"
+    },
+    {
+      "file": "modifier-jouzu-past-negative.mp3",
+      "written": "かれは ダンスが 上手では ありませんでした。",
+      "reading": "かれは ダンスが じょうずでは ありませんでした。",
+      "sourceText": "彼は ダンスが 上手では ありませんでした。",
+      "kana": "カ'レワ/ダ'ンスガ/ジョオズ'デワアリマセンデシタ",
+      "sha256": "608e81e3458a4c57b96a4500bfa6abf79dc48cc9a2f9816685d1bf944bdc13a5"
+    },
+    {
+      "file": "modifier-heta-present-affirmative.mp3",
+      "written": "わたしは りょうりが 下手です。",
+      "reading": "わたしは りょうりが へたです。",
+      "sourceText": "わたしは りょうりが 下手です。",
+      "kana": "ワタシワリョ'オリガ/ヘタ'デス",
+      "sha256": "3c15e30e99eb47bc4a0189e61ff05ac0d1cd9f5be32d6b8e999becff0be26d57"
+    },
+    {
+      "file": "modifier-heta-past-affirmative.mp3",
+      "written": "テニスは 下手でした。",
+      "reading": "テニスは へたでした。",
+      "sourceText": "テニスは 下手でした。",
+      "kana": "テ'ニスワ/ヘタ'デシタ",
+      "sha256": "25aa3f8d398e0a450218f86bdaedb47e82e36aa35b2102112446b1dcea73036c"
+    },
+    {
+      "file": "modifier-heta-present-negative.mp3",
+      "written": "その 男の子は 運動が 下手では ありません。",
+      "reading": "その おとこのこは うんどうが へたでは ありません。",
+      "sourceText": "その 男の子は 運動が 下手では ありません。",
+      "kana": "ソノ'/オトコ'ノコワ/ウンドオガ'/ヘタ'デワアリマセン",
+      "sha256": "375c32ad913485688d37c0d11c7b893ae85f7e39f779dee304376ce462b3624d"
+    },
+    {
+      "file": "modifier-heta-past-negative.mp3",
+      "written": "女の人は 写真が 下手では ありませんでした。",
+      "reading": "おんなのひとは しゃしんが へたでは ありませんでした。",
+      "sourceText": "女の人は 写真が 下手では ありませんでした。",
+      "kana": "オンナ'ノ/ヒトワ'/シャシンガ'/ヘタ'デワアリマセンデシタ",
+      "sha256": "3e241fdf62f620693483dbb884a5cfb7140ddfbe3969da31acc28ad5e0ff0ffa"
+    },
+    {
+      "file": "modifier-tokui-present-affirmative.mp3",
+      "written": "書き取りが 得意です。",
+      "reading": "かきとりが とくいです。",
+      "sourceText": "書き取りが 得意です。",
+      "kana": "カキトリガ'/トク'イデス",
+      "sha256": "94dad596b726e97d423de448a8702b22c3ac4112e57f1bd1fa16e32ff0aee0c4"
+    },
+    {
+      "file": "modifier-tokui-past-affirmative.mp3",
+      "written": "先生は さく文が 得意でした。",
+      "reading": "せんせいは さくぶんが とくいでした。",
+      "sourceText": "先生は さく文が 得意でした。",
+      "kana": "センセ'エワ/サクブンガ'/トク'イデシタ",
+      "sha256": "cb6532a0601164363c05e3eedccaea716e3c228fe4e297b535e6df7af212ef3b"
+    },
+    {
+      "file": "modifier-tokui-present-negative.mp3",
+      "written": "わたしは 聞き取りが 得意では ありません。",
+      "reading": "わたしは ききとりが とくいでは ありません。",
+      "sourceText": "わたしは 聞き取りが 得意では ありません。",
+      "kana": "ワタシワ'/キキトリガ'/トク'イデワアリマセン",
+      "sha256": "9aab544700b0a9b5711f9577d9e6b76e0321e28a1a4f2d6f5c17de30644f1cbc"
+    },
+    {
+      "file": "modifier-tokui-past-negative.mp3",
+      "written": "かのじょは 運動が 得意では ありませんでした。",
+      "reading": "かのじょは うんどうが とくいでは ありませんでした。",
+      "sourceText": "かのじょは 運動が 得意では ありませんでした。",
+      "kana": "カ'ノジョワ/ウンドオガ'/トク'イデワアリマセンデシタ",
+      "sha256": "0c48e8a46232a75edfc15ff195fe9f525c52b59c5bce73949f67015c4b195eab"
+    },
+    {
+      "file": "modifier-kanpeki-present-affirmative.mp3",
+      "written": "この 写真は 完璧です。",
+      "reading": "この しゃしんは かんぺきです。",
+      "sourceText": "この 写真は 完璧です。",
+      "kana": "コノ'/シャシンワ'/カンペキデ'ス",
+      "sha256": "514b399f909d64088b488e74fa511771ac52d58f85cd6b8d0b588811492f1b43"
+    },
+    {
+      "file": "modifier-kanpeki-past-affirmative.mp3",
+      "written": "晩ご飯は 完璧でした。",
+      "reading": "ばんごはんは かんぺきでした。",
+      "sourceText": "晩ご飯は 完璧でした。",
+      "kana": "バンゴ'ハンワ/カンペキデ'シタ",
+      "sha256": "c8443ad2e5198c53f820fcab2aaf7085c97f4a5d50f5e18c7a6def6d59e288df"
+    },
+    {
+      "file": "modifier-kanpeki-present-negative.mp3",
+      "written": "僕の かん字は 完璧では ありません。",
+      "reading": "ぼくの かんじは かんぺきでは ありません。",
+      "sourceText": "僕の かん字は 完璧では ありません。",
+      "kana": "ボ'クノ/カンジワ'/カンペキデ'ワアリマセン",
+      "sha256": "23886fc980364f5b31b7d59d2112082afd221ffe797460e91304216bdb473bec"
+    },
+    {
+      "file": "modifier-kanpeki-past-negative.mp3",
+      "written": "きのうの 試験は 完璧では ありませんでした。",
+      "reading": "きのうの しけんは かんぺきでは ありませんでした。",
+      "sourceText": "きのうの 試験は 完璧では ありませんでした。",
+      "kana": "キノオノ'/シケ'ンワ/カンペキデ'ワアリマセンデシタ",
+      "sha256": "31b4e0d4a2aecd0cd0ee091dc26b8223fa65a4a184b6091cee84c921f4d96e70"
+    },
+    {
+      "file": "modifier-nigiyaka-present-affirmative.mp3",
+      "written": "この 町は にぎやかです。",
+      "reading": "この まちは にぎやかです。",
+      "sourceText": "この 町は にぎやかです。",
+      "kana": "コノ'/マチ'ワ/ニギ'ヤカデス",
+      "sha256": "abe65f2e57fbac2360ef89378896a21cc3dd73c81370ad307039d6f0ab3db742"
+    },
+    {
+      "file": "modifier-nigiyaka-past-affirmative.mp3",
+      "written": "きのうの レストランは にぎやかでした。",
+      "reading": "きのうの レストランは にぎやかでした。",
+      "sourceText": "きのうの レストランは にぎやかでした。",
+      "kana": "キノオノレ'ストランワ/ニギ'ヤカデシタ",
+      "sha256": "e449bf2a54b8466f8753840490029a7d9c126f2d109fa2ca25be43ce093e9673"
+    },
+    {
+      "file": "modifier-nigiyaka-present-negative.mp3",
+      "written": "日よう日の 大学は にぎやかでは ありません。",
+      "reading": "にちようびの だいがくは にぎやかでは ありません。",
+      "sourceText": "日よう日の 大学は にぎやかでは ありません。",
+      "kana": "ニチヨ'オビノ/ダイガクワ'/ニギ'ヤカデワアリマセン",
+      "sha256": "e359720a071a8acc7d655f0a457fd1d227fcb61ae3e189a7a1a7482405ca07b3"
+    },
+    {
+      "file": "modifier-nigiyaka-past-negative.mp3",
+      "written": "先月の コンサートは にぎやかでは ありませんでした。",
+      "reading": "せんげつの コンサートは にぎやかでは ありませんでした。",
+      "sourceText": "先月の コンサートは にぎやかでは ありませんでした。",
+      "kana": "セ'ンゲツノ/コ'ンサアトワ/ニギ'ヤカデワアリマセンデシタ",
+      "sha256": "4c7fb134a231919b10d916c589b9254462ac05db027edf04de6c3b1849dd7eac"
+    },
+    {
+      "file": "modifier-shinsetsu-present-affirmative.mp3",
+      "written": "先生は しんせつです。",
+      "reading": "せんせいは しんせつです。",
+      "sourceText": "先生は しんせつです。",
+      "kana": "センセ'エワ/シンセツデ'ス",
+      "sha256": "b6db46899abc9b4246a34531efdb26c3aafef68d1b6e4f721a08bb73038a7a5b"
+    },
+    {
+      "file": "modifier-shinsetsu-past-affirmative.mp3",
+      "written": "えきの 人は しんせつでした。",
+      "reading": "えきの ひとは しんせつでした。",
+      "sourceText": "駅の 人は しんせつでした。",
+      "kana": "エ'キノ/ヒトワ'/シンセツデ'シタ",
+      "sha256": "f5c8c2336c07e8747faa72db454cded9c2402e8809514b432fd681c9c8a1106c"
+    },
+    {
+      "file": "modifier-shinsetsu-present-negative.mp3",
+      "written": "あの 店員は しんせつでは ありません。",
+      "reading": "あの てんいんは しんせつでは ありません。",
+      "sourceText": "あの 店員は しんせつでは ありません。",
+      "kana": "アノ'/テンインワ'/シンセツデ'ワアリマセン",
+      "sha256": "66f1ab92d721eed55fe1b730f73d2164ea708ee88d5084df0d036c097cd1e883"
+    },
+    {
+      "file": "modifier-shinsetsu-past-negative.mp3",
+      "written": "その レストランの 人は しんせつでは ありませんでした。",
+      "reading": "その レストランの ひとは しんせつでは ありませんでした。",
+      "sourceText": "その レストランの 人は しんせつでは ありませんでした。",
+      "kana": "ソノレ'ストランノ/ヒトワ'/シンセツデ'ワアリマセンデシタ",
+      "sha256": "d581877922b033fb6b47cb5994028004e5df71ff936c5685f59bcd2a8f934908"
+    },
+    {
+      "file": "modifier-hima-present-affirmative.mp3",
+      "written": "今日は ひまです。",
+      "reading": "きょうは ひまです。",
+      "sourceText": "今日は ひまです。",
+      "kana": "キョ'オワ/ヒマデ'ス",
+      "sha256": "1052a3b48fa95d9a362a2b4abae857188e0341c0a56a0afce88996f5401a5a01"
+    },
+    {
+      "file": "modifier-hima-past-affirmative.mp3",
+      "written": "きのうは ひまでした。",
+      "reading": "きのうは ひまでした。",
+      "sourceText": "きのうは ひまでした。",
+      "kana": "キノオワ'/ヒマデシ'タ",
+      "sha256": "aa169b4c1cd2ccdddc909e64f3c2424f3e9acda720cdca327e91fcf3bae92648"
+    },
+    {
+      "file": "modifier-hima-present-negative.mp3",
+      "written": "今しゅうは ひまでは ありません。",
+      "reading": "こんしゅうは ひまでは ありません。",
+      "sourceText": "今週は ひまでは ありません。",
+      "kana": "コンシュウワ'/ヒマデ'ワアリマセン",
+      "sha256": "892f7fa519fe12dffe87eacc05d73f4a2b39ebf78e849b38b44935e54dcb5743"
+    },
+    {
+      "file": "modifier-hima-past-negative.mp3",
+      "written": "先月は ひまでは ありませんでした。",
+      "reading": "せんげつは ひまでは ありませんでした。",
+      "sourceText": "先月は ひまでは ありませんでした。",
+      "kana": "セ'ンゲツワ/ヒマデ'ワアリマセンデシタ",
+      "sha256": "8999f41918cb0f7eaec710b83058a576f554d4a77d71769cfcccdd70645e5578"
+    },
+    {
+      "file": "modifier-suteki-present-affirmative.mp3",
+      "written": "その かばんは すてきです。",
+      "reading": "その かばんは すてきです。",
+      "sourceText": "その かばんは すてきです。",
+      "kana": "ソノ'/カバンワ'/ステキデ'ス",
+      "sha256": "0d94ce1c1d0dc7fd68f08fa108ccb3eb445abc22a08d173f07bb6fcb978f8a51"
+    },
+    {
+      "file": "modifier-suteki-past-affirmative.mp3",
+      "written": "きのうの コンサートは すてきでした。",
+      "reading": "きのうの コンサートは すてきでした。",
+      "sourceText": "きのうの コンサートは すてきでした。",
+      "kana": "キノオノコ'ンサアトワ/ステキデ'シタ",
+      "sha256": "8892a45a5bf978c4b123500e9ec55883ae3022eb0858b95b3e812326c94924f8"
+    },
+    {
+      "file": "modifier-suteki-present-negative.mp3",
+      "written": "この シャツは すてきでは ありません。",
+      "reading": "この シャツは すてきでは ありません。",
+      "sourceText": "この シャツは すてきでは ありません。",
+      "kana": "コノシャ'ツワ/ステキデ'ワアリマセン",
+      "sha256": "aff06cc281c1fccb14a8d2cb63228282ba096c82a37baae629d3d34b57860b7d"
+    },
+    {
+      "file": "modifier-suteki-past-negative.mp3",
+      "written": "あの レストランは すてきでは ありませんでした。",
+      "reading": "あの レストランは すてきでは ありませんでした。",
+      "sourceText": "あの レストランは すてきでは ありませんでした。",
+      "kana": "アノレ'ストランワ/ステキデ'ワアリマセンデシタ",
+      "sha256": "0165af746f5201db72f0d4ca154bbbed2bb5d2f6a4c361d2641064798b43fe97"
+    },
+    {
+      "file": "modifier-suki-present-affirmative.mp3",
+      "written": "わたしは 音がくが すきです。",
+      "reading": "わたしは おんがくが すきです。",
+      "sourceText": "わたしは 音がくが すきです。",
+      "kana": "ワタシワオ'ンガクガ/スキデ'ス",
+      "sha256": "9be0c36537670f23cfd414c9dc5450621101c5e6b6d97086a11059e398d73af8"
+    },
+    {
+      "file": "modifier-suki-past-affirmative.mp3",
+      "written": "ちちは やきゅうが すきでした。",
+      "reading": "ちちは やきゅうが すきでした。",
+      "sourceText": "ちちは やきゅうが すきでした。",
+      "kana": "チ'チワ/ヤキュウガ'/スキデ'シタ",
+      "sha256": "d6fc75f83814011631219b83d33df93f64262a6750ddf26f4a1e50c45965732e"
+    },
+    {
+      "file": "modifier-suki-present-negative.mp3",
+      "written": "かれは さかなが すきでは ありません。",
+      "reading": "かれは さかなが すきでは ありません。",
+      "sourceText": "彼は さかなが すきでは ありません。",
+      "kana": "カ'レワ/サカナガ'/スキデ'ワアリマセン",
+      "sha256": "b787b22136de373b26cd218baab1cfce4ed0d3cc4233a1826cc461453ba96446"
+    },
+    {
+      "file": "modifier-suki-past-negative.mp3",
+      "written": "かのじょは カラオケが すきでは ありませんでした。",
+      "reading": "かのじょは カラオケが すきでは ありませんでした。",
+      "sourceText": "かのじょは カラオケが すきでは ありませんでした。",
+      "kana": "カ'ノジョワ/カラオケガ'/スキデ'ワアリマセンデシタ",
+      "sha256": "2433b58b0b5a9eeee6ce379f44036ef5ba08a93e6857de644cb5da2aed5ce5c0"
+    },
+    {
+      "file": "modifier-kirai-present-affirmative.mp3",
+      "written": "わたしは 肉が きらいです。",
+      "reading": "わたしは にくが きらいです。",
+      "sourceText": "わたしは 肉が きらいです。",
+      "kana": "ワタシワ'/ニクガキ'ライデス",
+      "sha256": "b23c9be1d9f1c505b0d87021cd1c75106d4c8554f93744b6a3fb33c5cd1d7299"
+    },
+    {
+      "file": "modifier-kirai-past-affirmative.mp3",
+      "written": "子どもは やさいが きらいでした。",
+      "reading": "こどもは やさいが きらいでした。",
+      "sourceText": "子どもは やさいが きらいでした。",
+      "kana": "コドモワ'/ヤサイガキ'ライデシタ",
+      "sha256": "01054c6a615ae88a7e078c3ce959a6d11d25622930746428ddab8704fa88d3e5"
+    },
+    {
+      "file": "modifier-kirai-present-negative.mp3",
+      "written": "ともだちは スポーツが きらいでは ありません。",
+      "reading": "ともだちは スポーツが きらいでは ありません。",
+      "sourceText": "ともだちは スポーツが きらいでは ありません。",
+      "kana": "トモダチワ'/スポ'オツガ/キライデ'ワアリマセン",
+      "sha256": "3d0556b1ab3d1b831f219554eb71c8535a7417d140c6e5f66f1e98cfe3efa53d"
+    },
+    {
+      "file": "modifier-kirai-past-negative.mp3",
+      "written": "かれは 日本の りょうりが きらいでは ありませんでした。",
+      "reading": "かれは にほんの りょうりが きらいでは ありませんでした。",
+      "sourceText": "彼は 日本の りょうりが きらいでは ありませんでした。",
+      "kana": "カ'レワ/ニホ'ンノ/リョ'オリガ/キライデ'ワアリマセンデシタ",
+      "sha256": "3e4b416de53d9614014b0a20d74181208a74210d272d7b8b143fc13f9578da15"
+    },
+    {
+      "file": "modifier-nigate-present-affirmative.mp3",
+      "written": "わたしは かん字が にがてです。",
+      "reading": "わたしは かんじが にがてです。",
+      "sourceText": "わたしは かん字が にがてです。",
+      "kana": "ワタシワ'/カンジガ'/ニガテデ'ス",
+      "sha256": "fd7e7728dd7a180196549be5307e56e32bb9d59f10db8f4a7788a78802ab5d79"
+    },
+    {
+      "file": "modifier-nigate-past-affirmative.mp3",
+      "written": "かれは スポーツが にがてでした。",
+      "reading": "かれは スポーツが にがてでした。",
+      "sourceText": "彼は スポーツが にがてでした。",
+      "kana": "カ'レワ/スポ'オツガ/ニガテデ'シタ",
+      "sha256": "392b7c8c582c54d46f9d0900629865d30fcde423d7805599b0c5cac41869ce16"
+    },
+    {
+      "file": "modifier-nigate-present-negative.mp3",
+      "written": "わたしは カラオケが にがてでは ありません。",
+      "reading": "わたしは カラオケが にがてでは ありません。",
+      "sourceText": "わたしは カラオケが にがてでは ありません。",
+      "kana": "ワタシワ'/カラオケガ'/ニガテデ'ワアリマセン",
+      "sha256": "c4b70b82f67962040f9e2eab5454ecf28bc30499c3669edbe96ff8bbc56ba8dc"
+    },
+    {
+      "file": "modifier-nigate-past-negative.mp3",
+      "written": "ともだちは 書き取りが にがてでは ありませんでした。",
+      "reading": "ともだちは かきとりが にがてでは ありませんでした。",
+      "sourceText": "ともだちは 書き取りが にがてでは ありませんでした。",
+      "kana": "トモダチワ'/カキトリガ'/ニガテデ'ワアリマセンデシタ",
+      "sha256": "333c4e6f1826089c05578ee9bec89d4bdd6b1b0933aa56c5c723447871b23f7c"
+    },
+    {
+      "file": "adverb-totemo-1.mp3",
+      "written": "ふじ山は とても 大きいです。",
+      "reading": "ふじさんは とても おおきいです。",
+      "sourceText": "ふじ山は とても 大きいです。",
+      "kana": "フジ'サンワ/トテモ'/オオキ'イデス",
+      "sha256": "5e525ca2775b46a06bb01bc25f0ce6729bb77edae0f3c2dbd1832ea1aa036f12"
+    },
+    {
+      "file": "adverb-totemo-2.mp3",
+      "written": "きのうの パイは とても おいしかったです。",
+      "reading": "きのうの パイは とても おいしかったです。",
+      "sourceText": "きのうの パイは とても おいしかったです。",
+      "kana": "キノオノパ'イワ/トテモ'/オイシ'カッタデス",
+      "sha256": "e26c4df3195662e522f179aba7ada1d73a0ce0644b36c96f3a401abfc48a3d3c"
+    },
+    {
+      "file": "adverb-kanari-1.mp3",
+      "written": "八月は かなり 暑いです。",
+      "reading": "はちがつは かなり あついです。",
+      "sourceText": "八月は かなり 暑いです。",
+      "kana": "ハチガツ'ワ/カ'ナリ/アツ'イデス",
+      "sha256": "36f592c43ac788d24171d54071df11d93ba0454dc86e37631f7cf615857dfb4e"
+    },
+    {
+      "file": "adverb-kanari-2.mp3",
+      "written": "試験は かなり 難しかったです。",
+      "reading": "しけんは かなり むずかしかったです。",
+      "sourceText": "試験は かなり 難しかったです。",
+      "kana": "シケ'ンワ/カ'ナリ/ムズカシ'カッタデス",
+      "sha256": "f144a184299e581d3ad6be49ce21a9c02482e7fd628927437ff49376bfda3e49"
+    },
+    {
+      "file": "adverb-chotto-1.mp3",
+      "written": "ちょっと 忙しいです。",
+      "reading": "ちょっと いそがしいです。",
+      "sourceText": "ちょっと 忙しいです。",
+      "kana": "チョ'ット/イソガシ'イデス",
+      "sha256": "db2b5c31c54db9d544c6af7bf16174268551afd4f0d0e0db1885c2c103b83ef6"
+    },
+    {
+      "file": "adverb-chotto-2.mp3",
+      "written": "この 靴は ちょっと 大きいです。",
+      "reading": "この くつは ちょっと おおきいです。",
+      "sourceText": "この 靴は ちょっと 大きいです。",
+      "kana": "コノ'/クツ'ワ/チョ'ット/オオキ'イデス",
+      "sha256": "e5f24c31524198f8696dc435695541c3e1112b18f252125f3405ef577dceb46c"
+    },
+    {
+      "file": "adverb-sukoshi-1.mp3",
+      "written": "日本ごが すこし 分かります。",
+      "reading": "にほんごが すこし わかります。",
+      "sourceText": "日本ごが すこし 分かります。",
+      "kana": "ニホンゴガ'/スコ'シ/ワカリマ'ス",
+      "sha256": "b2cc97ee8fa1b6db06952bf43aebaa6d80e482eb7f6160a3b11a7106641dd636"
+    },
+    {
+      "file": "adverb-sukoshi-2.mp3",
+      "written": "コーヒーを すこし 飲みました。",
+      "reading": "コーヒーを すこし のみました。",
+      "sourceText": "コーヒーを すこし 飲みました。",
+      "kana": "コオヒ'イオ/スコ'シ/ノミマ'シタ",
+      "sha256": "03e2b07dea658f7c653803ad318f5aae7c3005424ef95c07c4f298f020b0ee78"
+    },
+    {
+      "file": "adverb-amari-1.mp3",
+      "written": "宿題は あまり 難しくないです。",
+      "reading": "しゅくだいは あまり むずかしくないです。",
+      "sourceText": "宿題は あまり 難しくないです。",
+      "kana": "シュクダイワ'/アマリ'/ムズカシク'ナイデス",
+      "sha256": "47c9aa2fc50170177c16b876e8a362d0358466f88300c508a84ccedc75013ae9"
+    },
+    {
+      "file": "adverb-amari-2.mp3",
+      "written": "ビールを あまり 飲みません。",
+      "reading": "ビールを あまり のみません。",
+      "sourceText": "ビールを あまり 飲みません。",
+      "kana": "ビ'イルオ/アマリ'/ノミマセ'ン",
+      "sha256": "3341d32917fe58d69862ecd6a56a6f2d6975a9b716bc3a0a0335181a40207893"
+    },
+    {
+      "file": "adverb-zenzen-1.mp3",
+      "written": "えいごが ぜんぜん 分かりません。",
+      "reading": "えいごが ぜんぜん わかりません。",
+      "sourceText": "えいごが ぜんぜん 分かりません。",
+      "kana": "エ'イゴガ/ゼンゼン'/ワカリマセ'ン",
+      "sha256": "7dc171cc79f5a577f4463196094d7ae77efaaf695d1e70b870faa1032366fd1e"
+    },
+    {
+      "file": "adverb-zenzen-2.mp3",
+      "written": "テニスが ぜんぜん できません。",
+      "reading": "テニスが ぜんぜん できません。",
+      "sourceText": "テニスが ぜんぜん できません。",
+      "kana": "テ'ニスガ/ゼンゼンデキマセ'ン",
+      "sha256": "970a85a875e043a65bf8953e5d677e8d745fc2c1dd9bd97277357eb0b1280b6d"
+    },
+    {
+      "file": "adverb-takusan-1.mp3",
+      "written": "晩ご飯を たくさん 食べました。",
+      "reading": "ばんごはんを たくさん たべました。",
+      "sourceText": "晩ご飯を たくさん 食べました。",
+      "kana": "バンゴ'ハンオ/タクサン'/タベマ'シタ",
+      "sha256": "178c14293a65ad4766a23a11eae0152a40d81c5876b611ac43ec59e2fbf47ba6"
+    },
+    {
+      "file": "adverb-takusan-2.mp3",
+      "written": "きのう 写真を たくさん 撮りました。",
+      "reading": "きのう しゃしんを たくさん とりました。",
+      "sourceText": "きのう 写真を たくさん 撮りました。",
+      "kana": "キノオ'/シャシンオ'/タクサン'/トリマ'シタ",
+      "sha256": "946212139e2e64bdf392fba7d22ac3b4a73a2ee97fb1df1981510f26e494fd28"
+    },
+    {
+      "file": "adverb-hotondo-1.mp3",
+      "written": "宿題は ほとんど 終わりました。",
+      "reading": "しゅくだいは ほとんど おわりました。",
+      "sourceText": "宿題は ほとんど 終わりました。",
+      "kana": "シュクダイワ'/ホト'ンド/オワリマ'シタ",
+      "sha256": "5eaf0ca90bbf97ab12e7abd0f7ca1d4ecb6d641381bbba204aa177250fecc2ac"
+    },
+    {
+      "file": "adverb-hotondo-2.mp3",
+      "written": "えいがの 日本ごが ほとんど 分かりませんでした。",
+      "reading": "えいがの にほんごが ほとんど わかりませんでした。",
+      "sourceText": "えいがの 日本ごが ほとんど 分かりませんでした。",
+      "kana": "エ'イガノ/ニホンゴガ'/ホト'ンド/ワカリマセ'ンデシタ",
+      "sha256": "2db39f93a67d1cb50bde8a11b4c1a51aac2561cf1a48fb265b1d0fa52b3a4e72"
+    },
+    {
+      "file": "adverb-yoku-1.mp3",
+      "written": "わたしは えいごが よく 分かります。",
+      "reading": "わたしは えいごが よく わかります。",
+      "sourceText": "わたしは 英語が よく 分かります。",
+      "kana": "ワタシワ'/エエゴガヨ'ク/ワカリマ'ス",
+      "sha256": "3962d553c57510e52f164e79adf2e4723e0595d3f0de7b3cb6d1481f923480f4"
+    },
+    {
+      "file": "adverb-yoku-2.mp3",
+      "written": "日よう日は よく 図書館へ 行きます。",
+      "reading": "にちようびは よく としょかんへ いきます。",
+      "sourceText": "日よう日は よく 図書館へ 行きます。",
+      "kana": "ニチヨ'オビワ/ヨ'ク/トショ'カンエ/イキマ'ス",
+      "sha256": "f8cd6a6656d21bc247fb7f720f4471c1a4879a770fb6907234eddeae2baa86f2"
+    },
+    {
+      "file": "adverb-daitai-1.mp3",
+      "written": "日本ごが だいたい 分かります。",
+      "reading": "にほんごが だいたい わかります。",
+      "sourceText": "日本ごが だいたい 分かります。",
+      "kana": "ニホンゴガ'/ダイタイ'/ワカリマ'ス",
+      "sha256": "04bbdf6a53c461ebab23bff0899c2a68fdee21ebc00021f0cd47757837ba518d"
+    },
+    {
+      "file": "adverb-daitai-2.mp3",
+      "written": "宿題は だいたい 終わりました。",
+      "reading": "しゅくだいは だいたい おわりました。",
+      "sourceText": "宿題は だいたい 終わりました。",
+      "kana": "シュクダイワ'/ダイタイ'/オワリマ'シタ",
+      "sha256": "315d5efee56015d8af22dd8d26e63ff2b97e3eccd23bd622aff4efc7d1b2d3c8"
+    },
+    {
+      "file": "adverb-maamaa-1.mp3",
+      "written": "この レストランは まあまあです。",
+      "reading": "この レストランは まあまあです。",
+      "sourceText": "この レストランは まあまあです。",
+      "kana": "コノレ'ストランワ/マ'アマアデス",
+      "sha256": "80658ee27481d4806254c1666468459eea35034379de47a761d749f9655da08a"
+    },
+    {
+      "file": "adverb-maamaa-2.mp3",
+      "written": "試験は まあまあでした。",
+      "reading": "しけんは まあまあでした。",
+      "sourceText": "試験は まあまあでした。",
+      "kana": "シケ'ンワ/マ'アマアデシタ",
+      "sha256": "3ebd76e980819ac95ca2ca35dca1e0066390c0b9759462b31ec20830f9e7f7e8"
+    },
+    {
+      "file": "adverb-itsumo-1.mp3",
+      "written": "あさごはんは いつも パンです。",
+      "reading": "あさごはんは いつも パンです。",
+      "sourceText": "あさごはんは いつも パンです。",
+      "kana": "アサゴ'ハンワ/イ'ツモ/パ'ンデス",
+      "sha256": "89321129a0d14a49d9889f6862cb975db1dcdad6171b6e17fa80fde0b5f12962"
+    },
+    {
+      "file": "adverb-itsumo-2.mp3",
+      "written": "いつも じてん車で 大学へ 行きます。",
+      "reading": "いつも じてんしゃで だいがくへ いきます。",
+      "sourceText": "いつも じてん車で 大学へ 行きます。",
+      "kana": "イ'ツモ/ジテンシャデ'/ダイガクエ'/イキマ'ス",
+      "sha256": "30c3b1f418c894eca3e7744fd9d480ea513529216ea31e09a0cd6733f26b8110"
+    },
+    {
+      "file": "adverb-tokidoki-1.mp3",
+      "written": "ときどき ワインを 飲みます。",
+      "reading": "ときどき ワインを のみます。",
+      "sourceText": "ときどき ワインを 飲みます。",
+      "kana": "トキドキワ'インオ/ノミマ'ス",
+      "sha256": "4626fb7e0118c9a429a0ab75539a354239802cdd82046069e2b9286e014b8f82"
+    },
+    {
+      "file": "adverb-tokidoki-2.mp3",
+      "written": "日よう日は ときどき ともだちと えいがを 見ます。",
+      "reading": "にちようびは ときどき ともだちと えいがを みます。",
+      "sourceText": "日よう日は ときどき ともだちと えいがを 見ます。",
+      "kana": "ニチヨ'オビワ/トキドキ'/トモダチトエ'イガオ/ミマ'ス",
+      "sha256": "16e1918051c1928f7bdf76761359ca62d7350268270e2be103c99b59cc41d072"
+    },
+    {
+      "file": "adverb-issho-ni-1.mp3",
+      "written": "いっしょに ひるごはんを 食べませんか。",
+      "reading": "いっしょに ひるごはんを たべませんか。",
+      "sourceText": "いっしょに ひるごはんを 食べませんか。",
+      "kana": "イッショニヒ'ル/ゴ'ハンオ/タベマセ'ンカ",
+      "sha256": "6c261e097693e11fc664b6d8ebb59c2fe22fb28fe5f11dc3b718cb7408e6d888"
+    },
+    {
+      "file": "adverb-issho-ni-2.mp3",
+      "written": "土よう日に いっしょに テニスを しましょう。",
+      "reading": "どようびに いっしょに テニスを しましょう。",
+      "sourceText": "土よう日に いっしょに テニスを しましょう。",
+      "kana": "ドヨオビニ'/イッショニテ'ニスオシマショオ",
+      "sha256": "d076270a5edc946c07c7fdbd6d5d620cf4c78b8dac8eb25dcf614f2d8aeeae48"
+    },
+    {
+      "file": "adverb-mou-1.mp3",
+      "written": "もう ひるごはんを 食べましたか。",
+      "reading": "もう ひるごはんを たべましたか。",
+      "sourceText": "もう ひるごはんを 食べましたか。",
+      "kana": "モ'オ/ヒ'ル/ゴ'ハンオ/タベマ'シタカ",
+      "sha256": "bcd488eaf0cb819efc50579052d9c0454697a639be520049eade1f23398102c3"
+    },
+    {
+      "file": "adverb-mou-2.mp3",
+      "written": "もう 十一時です。",
+      "reading": "もう じゅういちじです。",
+      "sourceText": "もう 十一時です。",
+      "kana": "モ'オ/ジュウ'/イチ'ジデス",
+      "sha256": "078775264b932cc205053d3310645ca196f3a84c93db3fbd139083399bbdfb5e"
+    },
+    {
+      "file": "adverb-mada-1.mp3",
+      "written": "宿題は まだです。",
+      "reading": "しゅくだいは まだです。",
+      "sourceText": "宿題は まだです。",
+      "kana": "シュクダイワマ'ダデス",
+      "sha256": "d1d5eca5a642cc584d98b2a9ba28821113404baead6693712bbb2742bfd8d8ac"
+    },
+    {
+      "file": "adverb-mada-2.mp3",
+      "written": "まだ 七時です。",
+      "reading": "まだ しちじです。",
+      "sourceText": "まだ 七時です。",
+      "kana": "マ'ダ/シチ'ジデス",
+      "sha256": "4daff18d718b6ebcad51dbb2965434eab5041d563f494d8996a232c14da95cd6"
+    },
+    {
+      "file": "adverb-sorosoro-1.mp3",
+      "written": "そろそろ 行きましょう。",
+      "reading": "そろそろ いきましょう。",
+      "sourceText": "そろそろ 行きましょう。",
+      "kana": "ソ'ロソロ/イキマショ'オ",
+      "sha256": "1415be0d12237da60097831f22b7fdc16946899a927bf81734d5a1a784f15a54"
+    },
+    {
+      "file": "adverb-sorosoro-2.mp3",
+      "written": "そろそろ 帰ります。",
+      "reading": "そろそろ かえります。",
+      "sourceText": "そろそろ 帰ります。",
+      "kana": "ソ'ロソロ/カエリマ'ス",
+      "sha256": "df25e1fbc8ec50351d9a23c0ed242daa552933abef71565b442acb5bbb0eafb6"
+    }
+  ]
+}

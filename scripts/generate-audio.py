@@ -8,13 +8,15 @@
 Escribe un MP3 por palabra del vocabulario (public/collection.json) en public/audio/words/,
 uno por frase de los kanji (public/content/kanji-sentences.json) en public/audio/sentences/
 uno por frase de los contadores (la columna «Frase» de public/content/counters.json) en
-public/audio/counters/ y uno por cada una de las cuatro formas de los verbos
-(public/content/verbs.json) en public/audio/verbs/, cada carpeta con su registro en
-generation.json. El nombre de una
+public/audio/counters/, uno por cada una de las cuatro formas de los verbos
+(public/content/verbs.json) en public/audio/verbs/ y uno por cada ejemplo de los adjetivos
+y los adverbios (public/content/modifiers.json) en public/audio/modifiers/, cada carpeta con
+su registro en generation.json. El nombre de una
 palabra sale de sus caracteres (4e00-3064.mp3 es 一つ); el de una frase de un kanji, del
 kanji y de su posición (4e00-s1.mp3 es la primera sencilla de 一), y el de una frase de un
 contador, del contador y del número (hon-3.mp3 es la de 三本; hon-q.mp3, la de la pregunta),
-y el de un verbo, de su id y de la forma (verb-okimasu-past-negative.mp3 es 起きませんでした),
+y el de un verbo o un adjetivo, de su id y de la forma (verb-okimasu-past-negative.mp3 es
+起きませんでした), o de su posición si no tiene forma (adverb-totemo-1.mp3),
 igual que en src/lib/audio.ts: si cambias uno, cambia el otro.
 
 El motor (AivisSpeech Engine) y la voz (el modelo morioki, de AivisHub) se descargan de
@@ -61,6 +63,7 @@ COLLECTION = ROOT / 'public/collection.json'
 SENTENCES = ROOT / 'public/content/kanji-sentences.json'
 COUNTERS = ROOT / 'public/content/counters.json'
 VERBS = ROOT / 'public/content/verbs.json'
+MODIFIERS = ROOT / 'public/content/modifiers.json'
 AUDIO = ROOT / 'public/audio'
 WORK = ROOT / 'tmp/aivisspeech'
 
@@ -94,6 +97,8 @@ REPLACEMENTS = [
      'reason': 'En hiragana, el motor lee かれは como 枯れ葉 («kareha»). 彼は suena igual, con el acento [1] de かれの.'},
     {'from': 'わたしは えが', 'to': 'わたしは 絵が',
      'reason': 'En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual.'},
+    {'from': 'ちちは うたが', 'to': 'ちちは 歌が',
+     'reason': 'En hiragana, el motor une は y うた: ちち / はうたが. 歌が suena igual; ははは うたが ya lo lee bien.'},
     {'from': '先月は えを', 'to': '先月は 絵を',
      'reason': 'En hiragana, el motor une は y え en はえ (蝿). 絵を suena igual.'},
     {'from': 'は えいご', 'to': 'は 英語',
@@ -112,11 +117,14 @@ REPLACEMENTS = [
      'reason': 'Contando con つ, diez es とお; el motor dice じゅうまで.'},
     {'from': 'かいしゃいんが', 'to': '会社員が',
      'reason': 'El motor parte かいしゃいん en かい y しゃいん. 会社員 suena igual; en かいしゃいんです ya acierta.'},
+    {'from': 'かいしゃいんは', 'to': '会社員は', 'reason': 'Como en かいしゃいんが: el motor agrupa その かい / しゃいんは.'},
     # Words in hiragana that the engine cuts in the wrong place, although the moras are right.
     {'from': 'きのう まんがを', 'to': '昨日 まんがを', 'reason': 'El motor agrupa きの / うまんがを. 昨日 suena igual.'},
     {'from': 'にわに カラス', 'to': '庭に カラス', 'reason': 'Tras まいあさ, el motor oye に わに (cocodrilo). 庭に suena igual.'},
     {'from': 'どうぶつえん', 'to': '動物園', 'reason': 'El motor agrupa どう / ぶつえん. 動物園 suena igual, con su acento [4].'},
     {'from': 'あさ 五時', 'to': '朝 五時', 'reason': 'El motor agrupa あ / さごじに. 朝 suena igual.'},
+    {'from': 'あさの ぎゅうにゅう', 'to': '朝の ぎゅうにゅう', 'reason': 'El motor agrupa あ / さの. 朝 suena igual.'},
+    {'from': 'えきの 人', 'to': '駅の 人', 'reason': 'El motor agrupa え / きのひとは. 駅 suena igual.'},
     {'from': '一時 九分', 'to': '一時 きゅうふん',
      'reason': 'El motor agrupa いち / じきゅうふん, también con cifras; así, いちじ / きゅうふん, aunque sin la caída de キュ\'ウフン.'},
     # A numeral in figures takes the engine's own rules for counters (sound changes and accent), which it skips
@@ -213,6 +221,8 @@ DICTIONARY = [
      'reason': 'Los contadores lo leen なんば; el motor dice なんわ. Acento [1], el que da a なんわ.'},
     {'surface': '何足', 'pronunciation': 'ナンゾク', 'accentType': 1, 'wordType': 'COMMON_NOUN',
      'reason': 'Los contadores lo leen なんぞく; el motor dice なんそく. Acento [1], el que da a なんそく.'},
+    {'surface': 'まあまあ', 'pronunciation': 'マアマア', 'accentType': 1, 'wordType': 'COMMON_NOUN',
+     'reason': 'El motor dice まあ / まあ, en dos grupos; así es una palabra, con acento [1] (マ\'アマア).'},
 ]
 
 # What the engine receives for a word of the vocabulary written partly in kana: the standard
@@ -361,18 +371,19 @@ def counter_sentences() -> list[dict]:
                                     ('question', entry['question']['sentence'])]]
 
 
-def verb_sentences() -> list[dict]:
-    """The four forms of each verb: present and past, affirmative and negative."""
-    document = json.loads(VERBS.read_text(encoding='utf-8'))
+def lexicon_sentences(path: Path) -> list[dict]:
+    """The examples of a lexicon section: the four forms of a verb or an adjective, or the examples of an adverb."""
+    document = json.loads(path.read_text(encoding='utf-8'))
     return [{'file': example_file(entry['id'], example, index), 'written': example['written'],
              'reading': example['reading'], 'text': source_text(example['written']),
              'expected': expected_sounds(example['reading'])}
             for entry in document['entries'] for index, example in enumerate(entry.get('examples', []))]
 
 
-KINDS = {'words': words, 'sentences': sentences, 'counters': counter_sentences, 'verbs': verb_sentences}
+KINDS = {'words': words, 'sentences': sentences, 'counters': counter_sentences,
+         'verbs': lambda: lexicon_sentences(VERBS), 'modifiers': lambda: lexicon_sentences(MODIFIERS)}
 LABELS = {'words': 'las palabras', 'sentences': 'las frases de los kanji', 'counters': 'las frases de los contadores',
-          'verbs': 'las frases de los verbos'}
+          'verbs': 'las frases de los verbos', 'modifiers': 'las frases de los adjetivos y los adverbios'}
 
 
 # --- Engine and voice ----------------------------------------------------------------

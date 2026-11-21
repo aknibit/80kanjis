@@ -268,6 +268,13 @@
       "accentType": 1,
       "wordType": "COMMON_NOUN",
       "reason": "Los contadores lo leen なんぞく; el motor dice なんそく. Acento [1], el que da a なんそく."
+    },
+    {
+      "surface": "まあまあ",
+      "pronunciation": "マアマア",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "El motor dice まあ / まあ, en dos grupos; así es una palabra, con acento [1] (マ'アマア)."
     }
   ],
   "wordSpellings": {
@@ -353,6 +360,11 @@
       "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual."
     },
     {
+      "from": "ちちは うたが",
+      "to": "ちちは 歌が",
+      "reason": "En hiragana, el motor une は y うた: ちち / はうたが. 歌が suena igual; ははは うたが ya lo lee bien."
+    },
+    {
       "from": "先月は えを",
       "to": "先月は 絵を",
       "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵を suena igual."
@@ -398,6 +410,11 @@
       "reason": "El motor parte かいしゃいん en かい y しゃいん. 会社員 suena igual; en かいしゃいんです ya acierta."
     },
     {
+      "from": "かいしゃいんは",
+      "to": "会社員は",
+      "reason": "Como en かいしゃいんが: el motor agrupa その かい / しゃいんは."
+    },
+    {
       "from": "きのう まんがを",
       "to": "昨日 まんがを",
       "reason": "El motor agrupa きの / うまんがを. 昨日 suena igual."
@@ -416,6 +433,16 @@
       "from": "あさ 五時",
       "to": "朝 五時",
       "reason": "El motor agrupa あ / さごじに. 朝 suena igual."
+    },
+    {
+      "from": "あさの ぎゅうにゅう",
+      "to": "朝の ぎゅうにゅう",
+      "reason": "El motor agrupa あ / さの. 朝 suena igual."
+    },
+    {
+      "from": "えきの 人",
+      "to": "駅の 人",
+      "reason": "El motor agrupa え / きのひとは. 駅 suena igual."
     },
     {
       "from": "一時 九分",

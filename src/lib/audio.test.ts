@@ -6,8 +6,8 @@ import { collectionDocument, studyCatalog } from '../../tests/collection-fixture
 import { kanjiSentencesFile, parseKanjiSentences, parseStudyDocument } from './content.ts';
 import {
   audioProblems, audioSource, counterAudioDirectory, counterSentenceAudio, counterSentenceAudioFile, exampleAudio,
-  exampleAudioFile, sentenceAudio, sentenceAudioDirectory, sentenceAudioFile, verbAudioDirectory, wordAudio,
-  wordAudioDirectory, wordAudioFile, type AudioEntry,
+  exampleAudioFile, modifierAudioDirectory, sentenceAudio, sentenceAudioDirectory, sentenceAudioFile, verbAudioDirectory,
+  wordAudio, wordAudioDirectory, wordAudioFile, type AudioEntry,
 } from './audio.ts';
 import type { CounterDocument, KanjiSentencesDocument, LexiconDocument } from '../content-types.ts';
 
@@ -39,6 +39,8 @@ const counters = parseStudyDocument(await readFile(new URL('content/counters.jso
 const counterAudios = await generated(counterAudioDirectory);
 const verbs = parseStudyDocument(await readFile(new URL('content/verbs.json', root), 'utf8'), 'lexicon') as LexiconDocument;
 const verbAudios = await generated(verbAudioDirectory);
+const modifiers = parseStudyDocument(await readFile(new URL('content/modifiers.json', root), 'utf8'), 'lexicon') as LexiconDocument;
+const modifierAudios = await generated(modifierAudioDirectory);
 
 function assertMp3s(data: ReadonlyMap<string, Buffer>, name: RegExp) {
   for (const [file, bytes] of data) {
@@ -58,7 +60,7 @@ test('an audio is named after its word, or after the kanji, group and place of i
   assert.equal(counterSentenceAudioFile('ten-thousands', 100000), 'ten-thousands-100000.mp3');
   assert.equal(counterSentenceAudioFile('hon', 'question'), 'hon-q.mp3');
   assert.equal(exampleAudioFile('verb-okimasu', { form: 'past-negative' }, 3), 'verb-okimasu-past-negative.mp3');
-  assert.equal(exampleAudioFile('modifier-hayai', {}, 0), 'modifier-hayai-1.mp3');
+  assert.equal(exampleAudioFile('adverb-totemo', {}, 0), 'adverb-totemo-1.mp3');
 });
 
 test('each word of the vocabulary has an MP3 generated from its current spelling and reading, with nothing left over', () => {
@@ -98,6 +100,18 @@ test('the engine reads the verbs as their sentences do', () => {
   assert.match(kana('ともだちに 本を 二冊 かしました。')!, /ニ'サツ\/カシマ'シタ/);
 });
 
+test('each example of the adjectives and the adverbs has an MP3 generated from its current text', () => {
+  assert.deepEqual(audioProblems(exampleAudio(modifiers), modifierAudios.generation.entries, modifierAudios.hashes), []);
+  const examples = modifiers.entries.reduce((total, entry) => total + (entry.examples?.length ?? 0), 0);
+  assert.equal(modifierAudios.data.size, examples);
+  // The four forms of an adjective by name; the examples of an adverb, which have no form, by place.
+  assertMp3s(modifierAudios.data, /^(?:modifier-[a-z0-9-]+-(?:present|past)-(?:affirmative|negative)|adverb-[a-z0-9-]+-\d)\.mp3$/);
+  const kana = modifierAudios.kana;
+  // まあまあ is one word, not まあ / まあ; ちちは うたが is not ちち / はうたが.
+  assert.match(kana('試験は まあまあでした。')!, /\/マ'アマアデシタ$/);
+  assert.match(kana('ちちは うたが 上手では ありません。')!, /^チ'チワ\/ウタ'ガ/);
+});
+
 test('the engine reads the counters as their tables do', () => {
   const kana = counterAudios.kana;
   // Readings that the engine would not choose: ななにん, さんば, なんぞく, and 靴下 whole despite the word 靴.
@@ -118,21 +132,21 @@ test('the engine reads the counters as their tables do', () => {
 });
 
 test('all the audio is credited to AivisSpeech, with the morioki voice and its license', async () => {
-  for (const { generation } of [words, sentenceAudios, counterAudios, verbAudios]) {
+  for (const { generation } of [words, sentenceAudios, counterAudios, verbAudios, modifierAudios]) {
     assert.equal(generation.engine, 'AivisSpeech Engine');
     assert.equal(generation.voice, audioSource.voice);
     assert.equal(generation.model.license, audioSource.license);
     assert.equal(generation.model.url, audioSource.voiceUrl);
   }
   const credits = await readFile(new URL('audio/CREDITS.txt', root), 'utf8');
-  assert.match(credits, new RegExp(`WORDS \\(${vocabulary.length}\\), SENTENCES \\(480\\), COUNTER SENTENCES \\(${counterAudios.data.size}\\) AND VERB SENTENCES \\(${verbAudios.data.size}\\) — AivisSpeech \\(morioki\\)`));
+  assert.match(credits, new RegExp(`WORDS \\(${vocabulary.length}\\), SENTENCES \\(480\\), COUNTER SENTENCES \\(${counterAudios.data.size}\\), VERB SENTENCES \\(${verbAudios.data.size}\\) AND ADJECTIVE AND ADVERB SENTENCES \\(${modifierAudios.data.size}\\) — AivisSpeech \\(morioki\\)`));
   assert.match(credits, /Aivis Common Model License \(ACML\) 1\.0/);
-  for (const directory of [wordAudioDirectory, sentenceAudioDirectory, counterAudioDirectory, verbAudioDirectory]) {
+  for (const directory of [wordAudioDirectory, sentenceAudioDirectory, counterAudioDirectory, verbAudioDirectory, modifierAudioDirectory]) {
     assert.ok(credits.includes(`${directory}/generation.json`), directory);
   }
   // Nothing is left of the previous recordings and voice (hidden files such as .DS_Store are ignored by Git).
   assert.deepEqual((await readdir(new URL('audio/', root))).filter((file) => !file.startsWith('.')).sort(),
-    ['CREDITS.txt', counterAudioDirectory, sentenceAudioDirectory, verbAudioDirectory, wordAudioDirectory].sort());
+    ['CREDITS.txt', counterAudioDirectory, modifierAudioDirectory, sentenceAudioDirectory, verbAudioDirectory, wordAudioDirectory].sort());
 });
 
 test('the engine reads the words that the vocabulary spells in mixed kana and kanji as the collection does', () => {

@@ -1,7 +1,8 @@
 import type { ContentExample, CounterDocument, KanjiSentencesDocument, LexiconDocument } from '../content-types.ts';
 
 /**
- * Every word of the vocabulary, every kanji sentence and every sentence of the counters and the verbs has an MP3
+ * Every word of the vocabulary, every kanji sentence and every sentence of the counters, the verbs, the adjectives and
+ * the adverbs has an MP3
  * generated with AivisSpeech by
  * scripts/generate-audio.py, which uses the same file names. npm run check:content makes sure each one matches the
  * current text and reading, so the page shows the button without asking first.
@@ -20,6 +21,7 @@ export const wordAudioDirectory = 'words';
 export const sentenceAudioDirectory = 'sentences';
 export const counterAudioDirectory = 'counters';
 export const verbAudioDirectory = 'verbs';
+export const modifierAudioDirectory = 'modifiers';
 
 export type SentenceGroup = 'simple' | 'advanced';
 
@@ -46,7 +48,7 @@ export function counterSentenceAudioFile(counter: string, value: number | 'quest
 
 /**
  * An example of a lexicon entry, named after the entry and its form: verb-okimasu-past-negative.mp3 is the sentence
- * of 起きませんでした. An example without a form would take its place instead: verb-okimasu-1.mp3.
+ * of 起きませんでした. An example without a form, like those of the adverbs, takes its place: adverb-totemo-1.mp3.
  */
 export function exampleAudioFile(entry: string, example: Pick<ContentExample, 'form'>, index: number): string {
   return `${entry}-${example.form ?? index + 1}.mp3`;
@@ -81,7 +83,7 @@ export function counterSentenceAudio(document: CounterDocument): SpokenText[] {
   ].map(({ value, sentence: { written, reading } }) => ({ file: counterSentenceAudioFile(counter.id, value), written, reading })));
 }
 
-/** The four forms of each verb, in the order of its table. */
+/** The examples of a lexicon section: the four forms of each verb or adjective, or the examples of an adverb. */
 export function exampleAudio(document: LexiconDocument): SpokenText[] {
   return document.entries.flatMap((entry) => (entry.examples ?? []).map((example, index) => ({
     file: exampleAudioFile(entry.id, example, index), written: example.written, reading: example.reading })));
