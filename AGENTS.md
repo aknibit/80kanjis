@@ -15,6 +15,10 @@ npm run check:build
 
 Es la misma secuencia que ejecuta CI. Si una comprobación falla, corrige la causa en lugar de relajarla.
 
+## Nivel de las frases
+
+Las frases y los ejemplos solo usan estructuras de las lecciones 1 a 10 de *Minna no Nihongo*, el nivel de la clase. Lo pidió la profesora en noviembre de 2026. Lo que viene del material importado (los 80 kanji, los contadores y las notas y hojas de clase) puede ignorar ese límite: los contadores valen en cualquier sección, y una palabra importada lleva su construcción propia (入る con に, 見える, くれます). También valen en toda la web, por indicación de la profesora, el pasado de adjetivos y nombres (lección 12), には, にも, に de finalidad y de lugar, まだ con negativa y の en usos sencillos. Lo que rodea a esas palabras sí se limita a las lecciones 1 a 10. No uses あなた en las frases: a la profesora no le gusta. La lista de lo que queda fuera está en el punto 11 de «Editar o añadir entradas», en [CONTENIDO.md](CONTENIDO.md). Ningún chequeo lo comprueba: revisa a mano cada frase nueva o cambiada.
+
 ## Git
 
 No crees ramas ni hagas commit ni `push` por tu cuenta: trabaja en la rama actual y deja los cambios sin confirmar para que la persona los revise y decida cuándo publicarlos. Lo que llega a `main` en GitHub se despliega en GitHub Pages.

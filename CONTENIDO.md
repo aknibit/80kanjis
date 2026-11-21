@@ -129,6 +129,13 @@ Las entradas escritas solo en hiragana no repiten la lectura en la página (あ�
 
 Por último, comprueba el nivel de cada contexto (punto 10 de «Editar o añadir entradas»). Para eso también reconoce las palabras de la web escritas en kana, por el principio de cada bloque y con su terminación: えきで, ありませんでした, かして. Una palabra en kana que no es de la web sigue pasando sin aviso.
 
+El 21 de noviembre de 2026 se revisaron las 1501 frases y ejemplos de la web con el nivel gramatical de la clase (punto 11 de «Editar o añadir entradas»), y se reescribieron 130:
+- 47 frases de los kanji;
+- 66 ejemplos de Verbos y de Adjetivos y adverbios;
+- 17 frases de Contadores.
+
+Los motivos más frecuentes eran el sujeto con が delante de un verbo, el complemento con は en las negativas (肉は 食べません) y la descripción con が (足が 長いです). Cuando el cambio quitaba un contador, se sustituyó por una edad, una hora, una fecha o un precio, para que las cuatro frases avanzadas de cada kanji sigan usando un adjetivo, un adverbio y un contador.
+
 El vault no contiene una tabla completa de kana: esa sección se completa con la referencia de la Embajada de Japón indicada en su archivo. Los kana no usan la fuente de kanji decorativa: se presentan en Noto Sans JP para facilitar su reconocimiento.
 
 ## Editar o añadir entradas
@@ -149,6 +156,29 @@ El vault no contiene una tabla completa de kana: esa sección se completa con la
 8. Si añades un kanji a la colección, añade también sus seis frases en `kanji-sentences.json`, en la misma posición. Cada frase tiene `written`, `reading` y `meaning`, con los bloques separados por espacios como en los ejemplos léxicos; `simple` lleva dos y `advanced`, cuatro. Cada frase tiene su audio en `public/audio/sentences/`: si cambias, añades o mueves una frase, ejecuta `npm run audio:sentences` (con `lameenc` instalado) e incluye los MP3 y `generation.json` en el commit. `npm run check:content` falla si el audio de alguna frase no corresponde a su texto y su lectura. Si el motor leyera mal una palabra, el script se detiene y lista las frases: corrígela en su diccionario (ver AGENTS.md).
 9. Si el texto usa un carácter que no aparecía antes (un kanji, un kana o un símbolo nuevo), ejecuta `npm run fonts` e incluye en el commit los archivos regenerados de `src/fonts/`. Las fuentes solo contienen los caracteres del contenido; consulta las limitaciones en [AGENTS.md](AGENTS.md).
 10. Cada contexto usa palabras del nivel de lo que muestra o más fáciles. Los ejemplos de una entrada fácil, las frases de un kanji fácil y el ejemplo y la frase de cada forma de un contador fácil solo usan palabras fáciles; los de uno medio, fáciles y medias; los de uno difícil, cualquiera. Cuentan todas las palabras de la web: sustantivos, verbos, adjetivos, adverbios y contadores (las horas, como 七時, son medias). No cuentan la propia entrada, las formas del propio contador ni, en las frases de un kanji, la palabra que lo escribe: 川, 虫, 田, 雨 y 口 son fáciles, pero ninguna palabra con ellos lo es. Una palabra que está en dos listas cuenta con su nivel más fácil: 早い es fácil en la colección, aunque 早い／速い sea medio. Las guías no ilustran ninguna entrada y quedan fuera. Si cambias la dificultad de una palabra, `npm run check:content` dice qué frases dejan de cumplir la regla.
+11. Las frases y los ejemplos solo usan estructuras de las lecciones 1 a 10 de *Minna no Nihongo*, el nivel de la clase. Lo propuso la profesora en noviembre de 2026. Lo que viene del material importado puede ignorar ese límite: los 80 kanji y sus palabras, los contadores y las entradas y guías de las notas y las hojas de clase. Así:
+    - los contadores y las duraciones (三冊, 二つ, 二週間) valen en cualquier sección;
+    - una palabra importada lleva su construcción propia: 入る, 座ります y 立てる con に, 歩きます y 出る con を, 見える, ノートに 書きます, スペインごに 訳します, y los verbos que son en sí una estructura posterior (くれます, 覚えています, できます, 心が折れます, 苦しみます, 召し上がります);
+    - las guías de las notas explican lo que se trabaja en clase, aunque sea posterior (しずかで べんりです).
+
+    Además, valen en toda la web, por indicación de la profesora:
+    - el pasado de adjetivos y nombres de la lección 12 (面白かったです, 雨ふりでした);
+    - には y にも (日本には 火山が たくさん あります, スペインにも 山が あります);
+    - に de finalidad (お花見に 行きませんか, 準備に 八日間 かかりました) y に de lugar (コーヒーに さとうを いれました);
+    - まだ con negativa (えいがは まだ 始まりません);
+    - の en usos sencillos (日本までの ひこうき), pero no en oraciones de relativo (気もちの いい 休日).
+
+    Lo que rodea a esas palabras sí se limita a las lecciones 1 a 10. Quedan fuera, entre otras estructuras:
+    - el complemento con は en lugar de を (肉は 食べません → わたしは 肉を 食べません) y は en lugar de が (てん字は 分かりません → てん字が 分かりません);
+    - では y とは (鉛筆では 書きません → 鉛筆で…);
+    - el sujeto con が delante de un verbo (ともだちが 来ます → ともだちは 来ます) o de un adjetivo (足が 長いです → かれの 足は 長いです), salvo con あります, います, 分かります, できます y los adjetivos como すき o 上手;
+    - la forma て (書いて ください), los adjetivos como adverbio (早く 起きます) y la forma de diccionario en una frase;
+    - で de causa, de ocasión o de edad (雨の音で 起きました, 旅行で 撮りました, 六歳で), に con 買います (ははに 買いました) y あります para un acontecimiento (コンサートが あります);
+    - と 言います y las oraciones de relativo.
+
+    Sí valen la palabra de tiempo con は (きのうは, 日よう日は) y 〜が あります para horarios y obligaciones (授業が あります, しごとが ありました), como 約束が あります en la lección 9.
+
+    Las frases no usan あなた: a la profesora no le gusta, y en japonés se evita si se sabe el nombre. La entrada de Vocabulario lo explica. `npm run check:content` no comprueba la gramática: revisa a mano cada frase nueva o cambiada.
 
 Ejemplo de una entrada léxica:
 

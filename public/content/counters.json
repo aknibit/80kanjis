@@ -619,9 +619,9 @@
             "meaning": "seis clientes"
           },
           "sentence": {
-            "written": "レストランに お客さんが 六人 来ました。",
-            "reading": "レストランに おきゃくさんが ろくにん きました。",
-            "meaning": "Vinieron seis clientes al restaurante."
+            "written": "レストランに お客さんが 六人 います。",
+            "reading": "レストランに おきゃくさんが ろくにん います。",
+            "meaning": "En el restaurante hay seis clientes."
           }
         },
         {
@@ -655,9 +655,9 @@
             "meaning": "ocho compañeros de clase"
           },
           "sentence": {
-            "written": "クラスメートが 八人 来ました。",
-            "reading": "クラスメートが はちにん きました。",
-            "meaning": "Vinieron ocho compañeros de clase."
+            "written": "クラスメートは 八人です。",
+            "reading": "クラスメートは はちにんです。",
+            "meaning": "Somos ocho compañeros de clase."
           }
         },
         {
@@ -673,9 +673,9 @@
             "meaning": "nueve estudiantes universitarios"
           },
           "sentence": {
-            "written": "大学生が 九人で カラオケに 行きました。",
-            "reading": "だいがくせいが きゅうにんで カラオケに いきました。",
-            "meaning": "Nueve universitarios fueron juntos al karaoke."
+            "written": "大学生 九人で カラオケに 行きました。",
+            "reading": "だいがくせい きゅうにんで カラオケに いきました。",
+            "meaning": "Fuimos nueve universitarios al karaoke."
           }
         },
         {
@@ -869,9 +869,9 @@
             "meaning": "ocho pañuelos"
           },
           "sentence": {
-            "written": "ははに ハンカチを 八枚 買いました。",
-            "reading": "ははに ハンカチを はちまい かいました。",
-            "meaning": "Le compré ocho pañuelos a mi madre."
+            "written": "ハンカチを 八枚 買いました。",
+            "reading": "ハンカチを はちまい かいました。",
+            "meaning": "Compré ocho pañuelos."
           }
         },
         {
@@ -1045,9 +1045,9 @@
             "meaning": "seis camiones"
           },
           "sentence": {
-            "written": "トラックが 六台 来ました。",
-            "reading": "トラックが ろくだい きました。",
-            "meaning": "Llegaron seis camiones."
+            "written": "ちちの かいしゃは トラックが 六台 あります。",
+            "reading": "ちちの かいしゃは トラックが ろくだい あります。",
+            "meaning": "La empresa de mi padre tiene seis camiones."
           }
         },
         {
@@ -1117,9 +1117,9 @@
             "meaning": "diez autobuses"
           },
           "sentence": {
-            "written": "まい日 バスが 十台 来ます。",
-            "reading": "まいにち バスが じゅうだい きます。",
-            "meaning": "Pasan diez autobuses al día."
+            "written": "えきに バスが 十台 あります。",
+            "reading": "えきに バスが じゅうだい あります。",
+            "meaning": "En la estación hay diez autobuses."
           }
         }
       ],
@@ -1257,9 +1257,9 @@
             "meaning": "seis libros ilustrados"
           },
           "sentence": {
-            "written": "子どもに え本を 六冊 買いました。",
-            "reading": "こどもに えほんを ろくさつ かいました。",
-            "meaning": "Le compré seis libros ilustrados a mi hijo."
+            "written": "え本を 六冊 買いました。",
+            "reading": "えほんを ろくさつ かいました。",
+            "meaning": "Compré seis libros ilustrados."
           }
         },
         {
@@ -1886,9 +1886,9 @@
             "meaning": "cinco cuervos"
           },
           "sentence": {
-            "written": "まいあさ カラスが 五羽 来ます。",
-            "reading": "まいあさ カラスが ごわ きます。",
-            "meaning": "Cada mañana vienen cinco cuervos."
+            "written": "まいあさ にわに カラスが 五羽 います。",
+            "reading": "まいあさ にわに カラスが ごわ います。",
+            "meaning": "Todas las mañanas hay cinco cuervos en el jardín."
           }
         },
         {
@@ -2049,9 +2049,9 @@
             "meaning": "dos pares de calcetines"
           },
           "sentence": {
-            "written": "ちちに 靴下を 二足 買いました。",
-            "reading": "ちちに くつしたを にそく かいました。",
-            "meaning": "Le compré dos pares de calcetines a mi padre."
+            "written": "靴下を 二足 買いました。",
+            "reading": "くつしたを にそく かいました。",
+            "meaning": "Compré dos pares de calcetines."
           }
         },
         {
@@ -2157,9 +2157,9 @@
             "meaning": "ocho pares de zapatillas de casa"
           },
           "sentence": {
-            "written": "スリッパを 八足 出して ください。",
-            "reading": "スリッパを はっそく だして ください。",
-            "meaning": "Saca ocho pares de zapatillas de casa, por favor."
+            "written": "スリッパを 八足 ください。",
+            "reading": "スリッパを はっそく ください。",
+            "meaning": "Ocho pares de zapatillas de casa, por favor."
           }
         },
         {
@@ -2211,8 +2211,8 @@
           "meaning": "¿Cuántos pares de zapatos hay?"
         },
         "sentence": {
-          "written": "靴は 何足 買いましたか。",
-          "reading": "くつは なんぞく かいましたか。",
+          "written": "靴を 何足 買いましたか。",
+          "reading": "くつを なんぞく かいましたか。",
           "meaning": "¿Cuántos pares de zapatos compraste?"
         }
       },
@@ -2372,8 +2372,8 @@
             "meaning": "ocho vasos de zumo"
           },
           "sentence": {
-            "written": "子どもたちが ジュースを 八杯 飲みました。",
-            "reading": "こどもたちが ジュースを はっぱい のみました。",
+            "written": "子どもたちは ジュースを 八杯 飲みました。",
+            "reading": "こどもたちは ジュースを はっぱい のみました。",
             "meaning": "Los niños se bebieron ocho vasos de zumo."
           }
         },
@@ -2639,8 +2639,8 @@
           "meaning": "¿Cuántos caballos hay?"
         },
         "sentence": {
-          "written": "あの 山村に 馬は 何頭 いますか。",
-          "reading": "あの さんそんに うまは なんとう いますか。",
+          "written": "あの 山村に 馬が 何頭 いますか。",
+          "reading": "あの さんそんに うまが なんとう いますか。",
           "meaning": "¿Cuántos caballos hay en aquel pueblo de montaña?"
         }
       },
@@ -3711,9 +3711,9 @@
             "meaning": "11 de noviembre"
           },
           "sentence": {
-            "written": "十一月 十一日に ともだちが 来ます。",
-            "reading": "じゅういちがつ じゅういちにちに ともだちが きます。",
-            "meaning": "El 11 de noviembre viene un amigo."
+            "written": "十一月 十一日に ともだちの うちへ 行きます。",
+            "reading": "じゅういちがつ じゅういちにちに ともだちの うちへ いきます。",
+            "meaning": "El 11 de noviembre voy a casa de un amigo."
           }
         },
         {
@@ -3801,8 +3801,8 @@
             "meaning": "16 de abril"
           },
           "sentence": {
-            "written": "四月 十六日に 試験が 終わります。",
-            "reading": "しがつ じゅうろくにちに しけんが おわります。",
+            "written": "試験は 四月 十六日に 終わります。",
+            "reading": "しけんは しがつ じゅうろくにちに おわります。",
             "meaning": "Los exámenes terminan el 16 de abril."
           }
         },
@@ -4035,9 +4035,9 @@
             "meaning": "29 de mayo"
           },
           "sentence": {
-            "written": "五月 二十九日に コンサートが あります。",
-            "reading": "ごがつ にじゅうくにちに コンサートが あります。",
-            "meaning": "El 29 de mayo hay un concierto."
+            "written": "五月 二十九日に コンサートへ 行きます。",
+            "reading": "ごがつ にじゅうくにちに コンサートへ いきます。",
+            "meaning": "El 29 de mayo voy a un concierto."
           }
         },
         {
@@ -4053,9 +4053,9 @@
             "meaning": "30 de junio"
           },
           "sentence": {
-            "written": "六月 三十日に 宿題を 出して ください。",
-            "reading": "ろくがつ さんじゅうにちに しゅくだいを だして ください。",
-            "meaning": "Entregad los deberes el 30 de junio."
+            "written": "六月 三十日に 宿題を 出します。",
+            "reading": "ろくがつ さんじゅうにちに しゅくだいを だします。",
+            "meaning": "El 30 de junio entrego los deberes."
           }
         },
         {

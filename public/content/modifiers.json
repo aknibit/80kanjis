@@ -188,8 +188,8 @@
           "form": "past-affirmative"
         },
         {
-          "written": "忙しい 人は 羨ましくないです。",
-          "reading": "いそがしい ひとは うらやましくないです。",
+          "written": "わたしは 忙しい 人が 羨ましくないです。",
+          "reading": "わたしは いそがしい ひとが うらやましくないです。",
           "meaning": "No envidio a la gente ocupada.",
           "form": "present-negative"
         },
@@ -537,9 +537,9 @@
       "sourceId": "vocabulary-note",
       "examples": [
         {
-          "written": "わたしが 悪いです。",
-          "reading": "わたしが わるいです。",
-          "meaning": "La culpa es mía.",
+          "written": "この とけいは 悪いです。",
+          "reading": "この とけいは わるいです。",
+          "meaning": "Este reloj es malo.",
           "form": "present-affirmative"
         },
         {
@@ -897,9 +897,9 @@
       "sourceId": "modifiers-note",
       "examples": [
         {
-          "written": "天気が いいです。",
-          "reading": "てんきが いいです。",
-          "meaning": "Hace buen tiempo.",
+          "written": "この カメラは いいです。",
+          "reading": "この カメラは いいです。",
+          "meaning": "Esta cámara es buena.",
           "form": "present-affirmative"
         },
         {
@@ -1741,9 +1741,9 @@
           "form": "past-affirmative"
         },
         {
-          "written": "聞き取りは 得意では ありません。",
-          "reading": "ききとりは とくいでは ありません。",
-          "meaning": "La comprensión auditiva no es mi fuerte.",
+          "written": "わたしは 聞き取りが 得意では ありません。",
+          "reading": "わたしは ききとりが とくいでは ありません。",
+          "meaning": "No se me da bien la comprensión auditiva.",
           "form": "present-negative"
         },
         {
@@ -2150,8 +2150,8 @@
           "meaning": "Los deberes no son muy difíciles."
         },
         {
-          "written": "ビールは あまり 飲みません。",
-          "reading": "ビールは あまり のみません。",
+          "written": "ビールを あまり 飲みません。",
+          "reading": "ビールを あまり のみません。",
           "meaning": "No bebo mucha cerveza."
         }
       ]
@@ -2173,8 +2173,8 @@
           "meaning": "No entiendo nada de inglés."
         },
         {
-          "written": "テニスは ぜんぜん できません。",
-          "reading": "テニスは ぜんぜん できません。",
+          "written": "テニスが ぜんぜん できません。",
+          "reading": "テニスが ぜんぜん できません。",
           "meaning": "No sé jugar nada al tenis."
         }
       ]
@@ -2195,9 +2195,9 @@
           "meaning": "Cené mucho."
         },
         {
-          "written": "旅行で 写真を たくさん 撮りました。",
-          "reading": "りょこうで しゃしんを たくさん とりました。",
-          "meaning": "En el viaje hice muchas fotos."
+          "written": "きのう 写真を たくさん 撮りました。",
+          "reading": "きのう しゃしんを たくさん とりました。",
+          "meaning": "Ayer saqué muchas fotos."
         }
       ]
     },
@@ -2217,9 +2217,9 @@
           "meaning": "Casi he terminado los deberes."
         },
         {
-          "written": "えいがの 日本ごは ほとんど 分かりませんでした。",
-          "reading": "えいがの にほんごは ほとんど わかりませんでした。",
-          "meaning": "Casi no entendí el japonés de la película."
+          "written": "えいがの 日本ごが ほとんど 分かりませんでした。",
+          "reading": "えいがの にほんごが ほとんど わかりませんでした。",
+          "meaning": "No entendí casi nada del japonés de la película."
         }
       ]
     },
