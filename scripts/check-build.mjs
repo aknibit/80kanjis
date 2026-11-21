@@ -31,12 +31,12 @@ for (const file of await readdir('public/content')) {
     `Missing or changed canonical section content: ${file}`);
 }
 const html = await readFile('dist/index.html', 'utf8');
-// The theme and the shared difficulty are the only browser storage allowed (AGENTS.md).
+// The theme, the shared difficulty and the flashcard mode are the only browser storage allowed (AGENTS.md).
 for (const [name, code] of [['Bundle', script], ['index.html', html]]) {
   assert.doesNotMatch(code, /sessionStorage|indexedDB|document\.cookie/, `${name} must not use browser storage.`);
   const uses = code.match(/localStorage/g)?.length ?? 0;
-  const allowedUses = code.match(/localStorage\.(?:getItem|setItem|removeItem)\(["']80kanjis-(?:theme|difficulty)["']/g)?.length ?? 0;
-  assert.equal(uses, allowedUses, `${name} may only use localStorage for the 80kanjis-theme and 80kanjis-difficulty preferences.`);
+  const allowedUses = code.match(/localStorage\.(?:getItem|setItem|removeItem)\(["']80kanjis-(?:theme|difficulty|flashcards)["']/g)?.length ?? 0;
+  assert.equal(uses, allowedUses, `${name} may only use localStorage for the 80kanjis-theme, 80kanjis-difficulty and 80kanjis-flashcards preferences.`);
 }
 assert.match(html, /<script>[\s\S]*localStorage\.getItem\('80kanjis-theme'\)[\s\S]*<\/script>[\s\S]*<script type="module"/,
   'index.html must apply the theme in an inline script before the app bundle.');
@@ -55,4 +55,4 @@ assert.equal(fonts.length, 3, 'Expected DM Sans, Noto Sans JP and Noto Serif JP.
 for (const font of fonts) assert.ok(assets.includes(font), `Missing font: ${font}`);
 const preloadedFont = html.match(/<link rel="preload" href="\.\/assets\/([^"]+\.woff2)" as="font" type="font\/woff2" crossorigin/)?.[1];
 assert.ok(preloadedFont && fonts.includes(preloadedFont), 'The preloaded font must be the file the stylesheet uses.');
-console.log('Static build verified: canonical collection and sections, audio, visible readings, read-only difficulties, theme and difficulty storage only, preloads, and self-hosted fonts.');
+console.log('Static build verified: canonical collection and sections, audio, visible readings, read-only difficulties, theme, difficulty and flashcard storage only, preloads, and self-hosted fonts.');

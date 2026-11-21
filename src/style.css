@@ -31,6 +31,7 @@
   --hover-warm: #f0eee7;
   --count-bg: #eeeee7;
   --row-highlight: #f5f7f3;
+  --flashcard-front: #f2f7f3;
   --kbd-bg: #f7f8f3;
   --kbd-border: #e6e8e0;
   --chip-bg: #fafaf8;
@@ -129,6 +130,7 @@
   --hover-warm: #29302a;
   --count-bg: #252b26;
   --row-highlight: #212823;
+  --flashcard-front: #213028;
   --kbd-bg: #232924;
   --kbd-border: #363e37;
   --chip-bg: #222823;
@@ -243,7 +245,7 @@ button svg { width: 20px; height: 20px; }
 :root[data-theme='dark'] .theme-icon--sun { display: block; }
 .section-nav { display: flex; align-items: center; gap: 12px; padding-block: 10px; border-bottom: 1px solid var(--line); }
 .section-nav-main { display: flex; flex: 1; gap: 4px; min-width: 0; overflow-x: auto; scrollbar-width: thin; }
-.section-nav-support { display: flex; flex-shrink: 0; margin-inline-start: auto; padding-inline-start: 12px; border-inline-start: 1px solid var(--line); }
+.section-nav-support { display: flex; flex-shrink: 0; gap: 4px; margin-inline-start: auto; padding-inline-start: 12px; border-inline-start: 1px solid var(--line); }
 .section-link { display: inline-flex; flex-shrink: 0; align-items: center; min-height: 36px; padding: 6px 12px; border-radius: 5px; color: var(--text-soft); font-size: 14px; text-decoration: none; white-space: nowrap; }
 .section-link:hover { background: var(--hover); }
 .section-link[aria-current='page'] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
@@ -626,7 +628,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .study-collection--cards .row-filter { flex-shrink: 1; max-width: 100%; white-space: normal; text-align: start; }
 .study-collection--cards .study-result-count { margin-top: 5px; }
 .study-results--cards { --card-min: 180px; --card-gap: 8px; position: relative; background: transparent; border-radius: 0; }
-.lexicon-card { --card-pad: 14px; position: absolute; top: 0; left: 0; overflow: hidden; padding: 15px var(--card-pad) var(--card-pad); border-radius: 10px; background: var(--surface); }
+.lexicon-card { --card-pad: 14px; --card-pad-top: 15px; position: absolute; top: 0; left: 0; overflow: hidden; padding: var(--card-pad-top) var(--card-pad) var(--card-pad); border-radius: 10px; background: var(--surface); }
 /* The difficulty sits in the upper-right corner, in a band above the word rather than beside it: beside it,
    クラスルーム would no longer fit in one line at 320 px. The band is the few pixels added to the top padding. */
 .lexicon-card .lexicon-difficulty { position: absolute; top: 5px; right: calc(var(--card-pad) - 2px); }
@@ -648,6 +650,35 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 /* Usage, register or context: smaller and grey under the translation, like the romaji under the reading.
    --text-soft (5.6:1 in the light theme) rather than the --body-soft of rows (4.5:1), since the text is small. */
 .lexicon-card .entry-note { margin-top: 2px; color: var(--text-soft); font-size: 12px; line-height: 1.45; word-break: keep-all; overflow-wrap: break-word; }
+/* Flashcards (the switch beside the difficulty drop-down): the word with its reading and romaji on the front, and the
+   same writing with the meaning and its note on the back, in the yellow of the meanings to guess. The card itself is
+   no surface: each face is, and both share one grid cell, so the card is as tall as the taller face and the masonry
+   does not move when it turns. A transparent button over the whole card turns it. */
+.lexicon-card.lexicon-card--flash { overflow: visible; padding: 0; background: none; box-shadow: none; perspective: 1200px; }
+.flashcard { display: grid; transform-style: preserve-3d; transition: transform .5s cubic-bezier(.4, .2, .2, 1); }
+.lexicon-card--flash.is-turned .flashcard { transform: rotateY(180deg); }
+.flashcard-face { position: relative; grid-area: 1 / 1; display: flex; flex-direction: column; overflow: hidden; padding: var(--card-pad-top) var(--card-pad) var(--card-pad); border-radius: 10px; background: var(--surface); -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.flashcard-back { transform: rotateY(180deg); }
+/* The front is softly tinted, so a card turned to its meaning shows at a glance; the topic footer keeps the white of
+   the surface. The romaji takes --text-soft there: --faint would fall to 3.7:1 on the tint in the light theme. */
+.flashcard-front { background: var(--flashcard-front); }
+.flashcard-front .entry-group { background: var(--surface); }
+.flashcard-front .entry-romaji { color: var(--text-soft); }
+.flashcard-content { flex-grow: 1; }
+.flashcard-back .lexicon-meaning { color: var(--translation-text); }
+.flashcard-turn { position: absolute; inset: 0; z-index: 1; padding: 0; border: 0; border-radius: 10px; background: transparent; cursor: pointer; }
+/* The switch: aligned with the drop-down's button, under its label. */
+.flashcard-toggle { float: right; display: inline-flex; align-items: center; gap: 10px; min-height: 40px; margin: 20px 0 12px 12px; padding: 6px 12px 6px 10px; border: 1px solid var(--line); border-radius: 5px; color: var(--text-soft); font-size: 14px; white-space: nowrap; cursor: pointer; user-select: none; }
+.flashcard-toggle:hover { background: var(--hover); }
+.flashcard-toggle:has(input:checked) { color: var(--text); }
+.flashcard-toggle:has(input:focus-visible) { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+.flashcard-toggle input { appearance: none; position: relative; flex: none; width: 34px; height: 20px; margin: 0; border: 1.5px solid var(--muted); border-radius: 10px; background: transparent; cursor: inherit; transition: background-color .15s, border-color .15s; }
+.flashcard-toggle input::before { content: ''; position: absolute; top: 2.5px; left: 2.5px; width: 12px; height: 12px; border-radius: 50%; background: var(--muted); transition: transform .15s, background-color .15s; }
+.flashcard-toggle input:checked { border-color: var(--accent-fill); background: var(--accent-fill); }
+.flashcard-toggle input:checked::before { background: var(--on-accent); transform: translateX(14px); }
+.flashcard-toggle input:focus-visible { outline: none; }
+/* How to turn a card, under the filters while the cards are flashcards. */
+.flashcard-hint { grid-column: 1 / -1; margin: 0; }
 .study-results--kana { --kana-column-width: 112px; background: transparent; }
 .kana-chart-group { width: max-content; margin-left: auto; }
 .kana-chart-group + .kana-chart-group { margin-top: 18px; }
@@ -729,7 +760,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .counter-table tbody tr:last-child > * { border-bottom: 0; }
 /* White on the off-white page alone was too faint: every study surface carries --card-shadow. The card and kana
    lists are not surfaces themselves; their cards and charts are. */
-.study-row, .study-results, .lexicon-card, .kana-chart-surface { box-shadow: var(--card-shadow); }
+.study-row, .study-results, .lexicon-card, .flashcard-face, .kana-chart-surface { box-shadow: var(--card-shadow); }
 .study-results--cards, .study-results--kana { box-shadow: none; }
 
 @media (max-width: 1100px) {
@@ -774,10 +805,10 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .eyebrow { font-size: 11px; letter-spacing: 1.4px; }
 }
 @media (max-width: 680px) {
-  /* Wrap the menu so every section stays visible; Kana keeps the end of the last line. */
+  /* Wrap the menu so every section stays visible; Vocabulario and Kana keep the end of the last line. */
   .section-nav { flex-wrap: wrap; gap: 4px; }
   .section-nav-main, .section-nav-support { display: contents; }
-  .section-nav-support .section-link { margin-inline-start: auto; }
+  .section-nav-support .section-link:first-child { margin-inline-start: auto; }
 }
 @media (max-width: 600px) {
   .section-nav { padding-block: 8px; }
@@ -839,9 +870,11 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .difficulty-selector { gap: 4px; margin: 20px 0 10px 12px; }
   .difficulty-selector-label { font-size: 10px; letter-spacing: 1.4px; }
   .difficulty-options { min-width: 200px; }
+  /* The flashcard switch does not fit beside the title and the drop-down: its own line under the description. */
+  .flashcard-toggle { float: none; display: flex; width: fit-content; margin: 14px 0 0; }
   /* Two columns down to 320 px: 2 × 132 px + the gap fit in its 284 px. */
   .study-results--cards { --card-min: 132px; }
-  .lexicon-card { --card-pad: 12px; padding-top: 14px; }
+  .lexicon-card { --card-pad: 12px; --card-pad-top: 14px; }
   .lexicon-card .lexicon-written { font-size: 21px; }
   .lexicon-card .word-reading { font-size: 14px; }
   h2 { font-size: 20px; }
@@ -920,7 +953,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .example-controls .meaning-button::after { inset: -7px 0; }
   .study-guides > summary, .study-sources > summary { padding-block: 12px; }
   /* The difficulty drop-down and its options are full 44 px targets. */
-  .difficulty-trigger, .difficulty-option { min-height: 44px; }
+  .difficulty-trigger, .difficulty-option, .flashcard-toggle { min-height: 44px; }
   .kanji-focus-back { min-height: 44px; }
   .kanji-focus-step { min-width: 44px; height: 44px; }
 }

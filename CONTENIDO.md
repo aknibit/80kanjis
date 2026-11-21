@@ -18,7 +18,7 @@ Los archivos de `public/` son la fuente de la verdad publicada. El navegador los
 
 Cada archivo nuevo declara `version`, `kind`, `title`, `description`, `sources`, `groups`, `guides` y `entries`. Los textos de estudio y sus clasificaciones viven en esos archivos, no en los componentes TypeScript.
 
-El menú conserva primero las secciones principales. `placement: "support"` coloca Kana separado al final, a la derecha; en móvil sigue visible mientras el menú principal permite desplazamiento horizontal.
+El menú conserva primero las secciones principales. `placement: "support"` coloca Vocabulario y Kana separados al final, a la derecha, en el orden del archivo; en móvil sigue visible mientras el menú principal permite desplazamiento horizontal.
 
 Una sección léxica puede declarar `layout: "cards"` en el menú, como Vocabulario. Sus entradas se muestran como fichas compactas en tantas columnas como quepan y sin igualar alturas. Los filtros ocupan varias líneas en lugar de desplazarse. Con «Todo», las fichas aparecen en orden aleatorio en cada visita y cada una indica su grupo en el pie; con un grupo seleccionado, siguen el orden del archivo, que conviene que siga teniendo sentido, y no repiten el grupo. Las fichas no se despliegan, así que una sección en fichas no puede tener entradas con `examples`; los tests lo comprueban. Sin `layout`, la sección usa filas, como Verbos y Adjetivos y adverbios.
 

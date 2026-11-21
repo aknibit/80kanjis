@@ -189,6 +189,96 @@ function renderCounter(entry: CounterEntry, tools: SentenceTools): HTMLElement {
 }
 
 /**
+ * Whether the vocabulary cards were left as flashcards. The browser keeps it (`80kanjis-flashcards`), as it keeps the
+ * theme and the difficulty; keep the key in sync with scripts/check-build.mjs and AGENTS.md.
+ */
+function savedFlashcards(): boolean {
+  try {
+    return localStorage.getItem('80kanjis-flashcards') === 'on';
+  } catch {
+    return false;
+  }
+}
+
+function saveFlashcards(on: boolean) {
+  try {
+    if (on) localStorage.setItem('80kanjis-flashcards', 'on');
+    else localStorage.removeItem('80kanjis-flashcards');
+  } catch {
+    // Blocked storage (private mode): the mode still travels in the address while the page stays open.
+  }
+}
+
+/** The writing of a lexicon entry, which may wrap after each slash. */
+function lexiconWritten(entry: LexiconEntry, tag: 'h3' | 'span'): HTMLElement {
+  const written = slashed(tag, 'lexicon-written', entry.written);
+  written.lang = 'ja';
+  return written;
+}
+
+/**
+ * The writing of an entry with its reading and romaji under it. A word in hiragana (あさ, でんわをかけます) is its own
+ * reading, as in the examples; katakana keeps it (バス, ばす).
+ */
+function lexiconTerm(entry: LexiconEntry, block: 'div' | 'span', line: 'p' | 'span', heading: 'h3' | 'span'): HTMLElement {
+  const term = node(block, 'lexicon-term');
+  term.append(lexiconWritten(entry, heading));
+  if (entry.written.replace(/\s/gu, '') !== entry.reading.replace(/\s/gu, '')) {
+    const reading = slashed(line, 'word-reading', entry.reading);
+    reading.lang = 'ja';
+    term.append(reading);
+  }
+  term.append(node(line, 'entry-romaji', entry.romaji));
+  return term;
+}
+
+/** The meaning of an entry and its note, if it has one. */
+function lexiconExplanation(entry: LexiconEntry, block: 'div' | 'span', line: 'p' | 'span'): HTMLElement {
+  const explanation = node(block, 'lexicon-explanation');
+  explanation.append(slashed(line, 'lexicon-meaning', entry.meaning));
+  if (entry.note) explanation.append(slashed(line, 'entry-note', entry.note));
+  return explanation;
+}
+
+/**
+ * A card as a flashcard: the front shows the word with its reading and romaji, and pressing the card turns it over
+ * to the meaning and its note, under the same writing. Both faces share the card's place, so it is as tall as the
+ * taller one and the masonry does not move when it turns. Only the face in view is exposed to screen readers; the
+ * button that turns it covers the whole card and comes last, after the word it belongs to.
+ */
+function renderFlashcard(entry: LexiconEntry, group: string | undefined): HTMLElement {
+  const card = node('li', 'lexicon-card lexicon-card--flash');
+  card.dataset.entryId = entry.id;
+  const face = (side: 'front' | 'back', ...content: HTMLElement[]) => {
+    const result = node('div', `flashcard-face flashcard-${side}`);
+    const body = node('div', 'flashcard-content');
+    body.append(...content);
+    result.append(body, difficultyBadge(entry.difficulty, 'lexicon-difficulty'));
+    if (group !== undefined) result.append(node('span', 'entry-group', group));
+    return result;
+  };
+  const writing = node('div', 'lexicon-term');
+  writing.append(lexiconWritten(entry, 'h3'));
+  const front = face('front', lexiconTerm(entry, 'div', 'p', 'h3'));
+  const back = face('back', writing, lexiconExplanation(entry, 'div', 'p'));
+  back.setAttribute('aria-hidden', 'true');
+  const faces = node('div', 'flashcard');
+  faces.append(front, back);
+  const turn = node('button', 'flashcard-turn');
+  turn.type = 'button';
+  turn.setAttribute('aria-pressed', 'false');
+  turn.append(node('span', 'visually-hidden', 'Ver significado'));
+  turn.addEventListener('click', () => {
+    const turned = card.classList.toggle('is-turned');
+    turn.setAttribute('aria-pressed', String(turned));
+    if (turned) { front.setAttribute('aria-hidden', 'true'); back.removeAttribute('aria-hidden'); }
+    else { back.setAttribute('aria-hidden', 'true'); front.removeAttribute('aria-hidden'); }
+  });
+  card.append(faces, turn);
+  return card;
+}
+
+/**
  * A lexicon entry as a row, or as a card for sections with "layout": "cards". Its group shows as a tag, unless `group`
  * is undefined: cards leave it out while a group is selected, since the filter already names it.
  */
@@ -200,20 +290,8 @@ function renderWord(entry: LexiconEntry, group: string | undefined, card: boolea
   const opens = Boolean(entry.examples?.length);
   const block = opens ? 'span' : 'div';
   const line = opens ? 'span' : 'p';
-  const term = node(block, 'lexicon-term');
-  const written = slashed(opens ? 'span' : 'h3', 'lexicon-written', entry.written);
-  written.lang = 'ja';
-  term.append(written);
-  // A word in hiragana (あさ, でんわをかけます) is its own reading, as in the examples; katakana keeps it (バス, ばす).
-  if (entry.written.replace(/\s/gu, '') !== entry.reading.replace(/\s/gu, '')) {
-    const reading = slashed(line, 'word-reading', entry.reading);
-    reading.lang = 'ja';
-    term.append(reading);
-  }
-  term.append(node(line, 'entry-romaji', entry.romaji));
-  const explanation = node(block, 'lexicon-explanation');
-  explanation.append(slashed(line, 'lexicon-meaning', entry.meaning));
-  if (entry.note) explanation.append(slashed(line, 'entry-note', entry.note));
+  const term = lexiconTerm(entry, block, line, opens ? 'span' : 'h3');
+  const explanation = lexiconExplanation(entry, block, line);
   const tags = group === undefined ? [] : [node('span', 'entry-group', group)];
   // Its difficulty: in the upper-right corner of a card, read after the meaning; in a row, above the group tag, like
   // the dots of a counter above its number of forms.
@@ -384,6 +462,39 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   // (difficulty-selector.ts). It combines with the groups: easy objects.
   const leveled = data.kind === 'counters' || data.kind === 'lexicon';
   toolbar.append(filters, count);
+  // Cards can also be flashcards, with the meaning on the back: a switch beside the difficulty drop-down, aligned with
+  // its button. Like the difficulty, the browser keeps the choice and the address shows it (?mode=flashcards): an
+  // address that asks for flashcards wins and is kept; without it, the kept choice applies.
+  let flashcards = false;
+  const readFlashcards = (params: URLSearchParams) => {
+    if (!cards) return false;
+    if (params.get('mode') !== 'flashcards') return savedFlashcards();
+    saveFlashcards(true);
+    return true;
+  };
+  const flashSwitch = node('input');
+  const flashHint = node('p', 'filter-hint flashcard-hint', 'Pulsa una ficha para darle la vuelta.');
+  if (cards) {
+    const toggle = node('label', 'flashcard-toggle');
+    flashSwitch.type = 'checkbox';
+    flashSwitch.setAttribute('role', 'switch');
+    flashSwitch.setAttribute('aria-controls', 'study-results');
+    flashHint.id = 'flashcard-hint';
+    flashSwitch.setAttribute('aria-describedby', flashHint.id);
+    toggle.append(flashSwitch, node('span', '', 'Flashcards'));
+    flashSwitch.addEventListener('change', () => {
+      flashcards = flashSwitch.checked;
+      saveFlashcards(flashcards);
+      render(); updateUrl();
+    });
+    toolbar.append(flashHint);
+    // A float before the title sits to the left of the drop-down. On phones they do not fit beside the title, so it
+    // goes on its own line under the description.
+    const phone = window.matchMedia('(max-width: 600px)');
+    const place = () => { if (phone.matches) intro.append(toggle); else intro.prepend(toggle); };
+    place();
+    phone.addEventListener('change', place);
+  }
   const results = node(data.kind === 'lexicon' ? 'ul' : 'div', `study-results study-results--${data.kind}`);
   if (cards) results.classList.add('study-results--cards');
   // Every row keeps a column for + / − when some entry opens, so meanings and tags stay aligned.
@@ -439,6 +550,7 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     const url = new URL(window.location.href);
     if (input.value.trim()) url.searchParams.set('q', input.value.trim()); else url.searchParams.delete('q');
     if (selectedGroup !== 'all') url.searchParams.set('group', selectedGroup); else url.searchParams.delete('group');
+    if (flashcards) url.searchParams.set('mode', 'flashcards'); else url.searchParams.delete('mode');
     window.history.replaceState(null, '', url);
   }
 
@@ -465,9 +577,14 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     } else {
       // Rows always show their group; cards only under «Todo».
       const tagged = !cards || selectedGroup === 'all';
-      for (const entry of entries) fragment.append('forms' in entry ? renderCounter(entry, sentenceTools)
-        : renderWord(entry as LexiconEntry, tagged ? groups.get(entry.group)! : undefined, cards, sentenceTools));
+      for (const entry of entries) {
+        const group = tagged ? groups.get(entry.group)! : undefined;
+        fragment.append('forms' in entry ? renderCounter(entry, sentenceTools)
+          : flashcards ? renderFlashcard(entry as LexiconEntry, group)
+            : renderWord(entry as LexiconEntry, group, cards, sentenceTools));
+      }
     }
+    flashHint.hidden = !flashcards;
     results.replaceChildren(fragment);
     clear.hidden = !input.value;
     empty.hidden = entries.length > 0; results.hidden = entries.length === 0;
@@ -480,6 +597,8 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     const params = new URL(window.location.href).searchParams;
     input.value = params.get('q') ?? '';
     selectedGroup = groups.has(params.get('group') ?? '') ? params.get('group')! : 'all';
+    flashcards = readFlashcards(params);
+    flashSwitch.checked = flashcards;
     render();
   }
   function clearSearch() { input.value = ''; render(); updateUrl(); input.focus(); }
@@ -507,9 +626,12 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     // Opening or closing the full-screen kanji only changes ?kanji=: the entries stay, with the counters left open
     // and the focus.
     const group = groups.has(params.get('group') ?? '') ? params.get('group')! : 'all';
-    if ((params.get('q') ?? '') !== input.value.trim() || group !== selectedGroup || difficulty.value !== level) restoreUrl();
+    if ((params.get('q') ?? '') !== input.value.trim() || group !== selectedGroup || readFlashcards(params) !== flashcards
+      || difficulty.value !== level) restoreUrl();
     kanji?.followUrl();
   });
   if (leveled) difficulty.connect(render);
   restoreUrl();
+  // Flashcards kept in the browser show in the address too, as the difficulty does.
+  if (flashcards) updateUrl();
 }

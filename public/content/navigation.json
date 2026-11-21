@@ -21,17 +21,18 @@
       "kind": "lexicon"
     },
     {
-      "id": "vocabulary",
-      "label": "Vocabulario",
-      "file": "content/vocabulary.json",
-      "kind": "lexicon",
-      "layout": "cards"
-    },
-    {
       "id": "modifiers",
       "label": "Adjetivos y adverbios",
       "file": "content/modifiers.json",
       "kind": "lexicon"
+    },
+    {
+      "id": "vocabulary",
+      "label": "Vocabulario",
+      "file": "content/vocabulary.json",
+      "kind": "lexicon",
+      "layout": "cards",
+      "placement": "support"
     },
     {
       "id": "kana",
