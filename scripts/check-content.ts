@@ -2,7 +2,9 @@ import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import { kanjiSentencesFile, parseKanjiSentences, parseNavigation, parseStudyDocument } from '../src/lib/content.ts';
 import { parseCollection } from '../src/lib/collection.ts';
-import { sentenceAudioDirectory, sentenceAudioProblems, type SentenceAudioEntry } from '../src/lib/sentence-audio.ts';
+import {
+  audioProblems, sentenceAudio, sentenceAudioDirectory, wordAudio, wordAudioDirectory, type AudioEntry, type SpokenText,
+} from '../src/lib/audio.ts';
 import { createSiteVocabulary, exampleProblems, kanjiSentenceProblems, levelProblems } from '../src/lib/site-vocabulary.ts';
 import type { CounterDocument, LexiconDocument, StudyDocument } from '../src/content-types.ts';
 import type { CollectionDocument } from '../src/types.ts';
@@ -38,14 +40,19 @@ referenced.add(kanjiSentencesFile.slice('content/'.length));
 const problems = kanjiSentenceProblems(sentences, collection, vocabulary);
 if (problems.length > 0) throw new Error(`Frases de los kanji:\n${problems.join('\n')}`);
 console.log(`Frases de los kanji: ${sentences.entries.length} kanji, ${sentences.entries.length * 6} frases.`);
-// Each sentence has an audio generated from its current text: the dialog shows the button without asking first.
-const audioRoot = new URL(`audio/${sentenceAudioDirectory}/`, root);
-const audioGeneration = JSON.parse(await readFile(new URL('generation.json', audioRoot), 'utf8')) as { entries: SentenceAudioEntry[] };
-const audioHashes = new Map(await Promise.all((await readdir(audioRoot)).filter((file) => file !== 'generation.json')
-  .map(async (file) => [file, createHash('sha256').update(await readFile(new URL(file, audioRoot))).digest('hex')] as const)));
-const audioIssues = sentenceAudioProblems(sentences, audioGeneration.entries, audioHashes);
-if (audioIssues.length > 0) throw new Error(`Audio de las frases (${audioIssues.length}). Ejecuta npm run audio:sentences:\n${audioIssues.join('\n')}`);
-console.log(`Audio de las frases: ${audioHashes.size} archivos, uno por frase.`);
+// Each word and each sentence has an audio generated from its current text and reading: the page shows the button
+// without asking first.
+async function checkAudio(label: string, directory: string, expected: readonly SpokenText[]) {
+  const audioRoot = new URL(`audio/${directory}/`, root);
+  const generation = JSON.parse(await readFile(new URL('generation.json', audioRoot), 'utf8')) as { entries: AudioEntry[] };
+  const hashes = new Map(await Promise.all((await readdir(audioRoot)).filter((file) => file !== 'generation.json')
+    .map(async (file) => [file, createHash('sha256').update(await readFile(new URL(file, audioRoot))).digest('hex')] as const)));
+  const issues = audioProblems(expected, generation.entries, hashes);
+  if (issues.length > 0) throw new Error(`Audio de ${label} (${issues.length}). Ejecuta npm run audio:\n${issues.join('\n')}`);
+  console.log(`Audio de ${label}: ${hashes.size} archivos, uno por cada una.`);
+}
+await checkAudio('las palabras', wordAudioDirectory, wordAudio(collection.vocabulary));
+await checkAudio('las frases', sentenceAudioDirectory, sentenceAudio(sentences));
 const exampleIssues = exampleProblems(lexicons, counters, vocabulary);
 if (exampleIssues.length > 0) throw new Error(`Ejemplos de las secciones (${exampleIssues.length}):\n${exampleIssues.join('\n')}`);
 console.log('Ejemplos de las secciones: solo usan palabras de la web.');

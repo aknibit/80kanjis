@@ -1,16 +1,13 @@
-import { getPronunciation, type Pronunciation } from './data/pronunciations.ts';
-import { sentenceAudioDirectory } from './lib/sentence-audio.ts';
+import { sentenceAudioDirectory, wordAudioDirectory, wordAudioFile } from './lib/audio.ts';
 import type { VocabularyStudyItem } from './types.ts';
 
 const speakerIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><path d="m11 5-6 4H2v6h3l6 4V5Z"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg>';
 const stopIcon = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>';
 
 /** What a button needs to find and name a recording: a collection row's word or one from the kanji dialog. */
-export type SpokenWord = Pick<VocabularyStudyItem, 'id' | 'written' | 'reading'>;
+export type SpokenWord = Pick<VocabularyStudyItem, 'id' | 'written'>;
 
 export type PronunciationControls = ReturnType<typeof setupPronunciation>;
-
-type Clip = Pick<Pronunciation, 'file' | 'kind'>;
 
 /** One active recording across the page and the kanji dialog; no download until a user presses play. */
 export function setupPronunciation(status: HTMLElement) {
@@ -26,45 +23,37 @@ export function setupPronunciation(status: HTMLElement) {
     previous.reset();
   }
 
-  /** `report` shows playback errors; the dialog has its own, because the page behind it is inert. */
-  function createButton(item: SpokenWord, report: HTMLElement = status): HTMLButtonElement | undefined {
-    const clip = getPronunciation(item);
-    return clip && createPlayer(item.id, item.written, clip, report);
+  /**
+   * Every word of the vocabulary and every kanji sentence has a generated recording; npm run check:content makes sure
+   * it matches the text and reading. `report` shows playback errors; the dialog has its own, because the page behind
+   * it is inert.
+   */
+  function createButton(item: SpokenWord, report: HTMLElement = status): HTMLButtonElement {
+    return createPlayer(item.id, item.written, `${wordAudioDirectory}/${wordAudioFile(item.written)}`, report);
   }
 
-  /** Every kanji sentence has a generated recording; npm run check:content makes sure it matches the text. */
   function createSentenceButton(id: string, written: string, file: string, report: HTMLElement): HTMLButtonElement {
-    return createPlayer(id, written, { file: `${sentenceAudioDirectory}/${file}`, kind: 'synthesized' }, report,
-      'Voz generada con AivisSpeech (morioki)');
+    return createPlayer(id, written, `${sentenceAudioDirectory}/${file}`, report);
   }
 
-  function createPlayer(id: string, written: string, clip: Clip, report: HTMLElement,
-    origin = clip.kind === 'synthesized' ? 'Voz generada con VOICEVOX Nemo' : 'Grabación humana'): HTMLButtonElement {
+  function createPlayer(id: string, written: string, file: string, report: HTMLElement): HTMLButtonElement {
     const button = document.createElement('button');
-    button.className = `study-action audio-button${clip.kind === 'synthesized' ? ' audio-button--synthesized' : ''}`;
+    button.className = 'study-action audio-button';
     button.type = 'button';
     button.dataset.audioItemId = id;
-    button.dataset.audioKind = clip.kind;
     const icon = document.createElement('span');
     icon.className = 'study-action-icon';
     icon.setAttribute('aria-hidden', 'true');
     const label = document.createElement('span');
     label.className = 'study-action-label';
     button.append(icon, label);
-    if (clip.kind === 'synthesized') {
-      const marker = document.createElement('span');
-      marker.className = 'audio-origin';
-      marker.textContent = 'IA';
-      marker.setAttribute('aria-hidden', 'true');
-      button.append(marker);
-    }
 
     function reset() {
       icon.innerHTML = speakerIcon;
       label.textContent = 'Audio';
-      button.setAttribute('aria-label', `Escuchar ${written} · ${origin}`);
+      button.setAttribute('aria-label', `Escuchar ${written}`);
       button.setAttribute('aria-pressed', 'false');
-      button.title = `Escuchar ${written} · ${origin}`;
+      button.title = `Escuchar ${written}`;
     }
     reset();
 
@@ -73,7 +62,7 @@ export function setupPronunciation(status: HTMLElement) {
       stop();
       report.textContent = '';
       if (wasPlaying) return;
-      const audio = new Audio(new URL(`audio/${clip.file}`, document.baseURI).href);
+      const audio = new Audio(new URL(`audio/${file}`, document.baseURI).href);
       audio.preload = 'none';
       active = { audio, reset };
       icon.innerHTML = stopIcon;

@@ -1,0 +1,2182 @@
+{
+  "engine": "AivisSpeech Engine",
+  "engineVersion": "1.2.0",
+  "engineSha256": "581a7f34afb2c5343ff8b27d6d88859083375868607657de95fad506939185df",
+  "voice": "morioki",
+  "style": "ノーマル",
+  "speaker": 497929760,
+  "model": {
+    "uuid": "baaae3c0-7b22-4605-8ba5-80c959b41a48",
+    "version": "1.0.0",
+    "sha256": "352858a737b23fe0bd0b7bd73a4956be262aad9bb24a7bf0d1eae9a71a466469",
+    "license": "ACML 1.0",
+    "url": "https://hub.aivis-project.com/aivm-models/baaae3c0-7b22-4605-8ba5-80c959b41a48"
+  },
+  "speedScale": 0.89,
+  "sampleRate": 24000,
+  "encoder": "LAME (lameenc 1.9.0), MP3 32 kbps mono",
+  "deterministic": false,
+  "dictionary": [
+    {
+      "surface": "日本",
+      "pronunciation": "ニホン",
+      "accentType": 2,
+      "wordType": "PROPER_NOUN",
+      "reason": "Se enseña «nihon», con acento [2]; la palabra evita «nippon»."
+    },
+    {
+      "surface": "日本人",
+      "pronunciation": "ニホンジン",
+      "accentType": 4,
+      "wordType": "PROPER_NOUN",
+      "reason": "Acento de 日本人 [4] (ニホンジ'ン); el motor dice ニホ'ンジン."
+    },
+    {
+      "surface": "七色",
+      "pronunciation": "ナナイロ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee なないろ, con acento [2] (ナナ'イロ); el motor dice ななしょく."
+    },
+    {
+      "surface": "竹林",
+      "pronunciation": "タケバヤシ",
+      "accentType": 4,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee たけばやし; el motor dice ちくりん."
+    },
+    {
+      "surface": "まつ林",
+      "pronunciation": "マツバヤシ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [3] de 松林; el motor dice まつりん."
+    },
+    {
+      "surface": "空ばこ",
+      "pronunciation": "カラバコ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee からばこ, con acento [2] (カラ'バコ); el motor dice そらばこ."
+    },
+    {
+      "surface": "土き",
+      "pronunciation": "ドキ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [1] de 土器; el motor dice つちき."
+    },
+    {
+      "surface": "まき貝",
+      "pronunciation": "マキガイ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [2] de 巻貝; el motor dice まきかい."
+    },
+    {
+      "surface": "ほら貝",
+      "pronunciation": "ホラガイ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [2] de 法螺貝; el motor dice ほらかい."
+    },
+    {
+      "surface": "こん虫",
+      "pronunciation": "コンチュウ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 昆虫, sin caída; el motor dice こんむし."
+    },
+    {
+      "surface": "先とう",
+      "pronunciation": "セントウ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 先頭, sin caída; el motor dice さきだとう."
+    },
+    {
+      "surface": "文なし",
+      "pronunciation": "モンナシ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 文無し, sin caída; el motor dice ぶんなし."
+    },
+    {
+      "surface": "上ぎ",
+      "pronunciation": "ウワギ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 上着, sin caída; el motor dice うえぎ."
+    },
+    {
+      "surface": "赤はん",
+      "pronunciation": "セキハン",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [3] de 赤飯; el motor dice あかはん."
+    },
+    {
+      "surface": "雨ぐも",
+      "pronunciation": "アマグモ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 雨雲, sin caída; el motor dice あめぐも."
+    },
+    {
+      "surface": "ほう石",
+      "pronunciation": "ホウセキ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 宝石 en el diccionario del motor; el motor dice ほういし."
+    },
+    {
+      "surface": "でん車",
+      "pronunciation": "デンシャ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 電車 en el diccionario del motor; el motor dice でんくるま."
+    },
+    {
+      "surface": "車りん",
+      "pronunciation": "シャリン",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 車輪 en el diccionario del motor; el motor dice くるまりん."
+    },
+    {
+      "surface": "正かい",
+      "pronunciation": "セイカイ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 正解 en el diccionario del motor; el motor dice ただしかい."
+    },
+    {
+      "surface": "正じき",
+      "pronunciation": "ショウジキ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 正直 en el diccionario del motor; el motor dice せいじき."
+    },
+    {
+      "surface": "らい月",
+      "pronunciation": "ライゲツ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 来月 en el diccionario del motor; el motor dice らいつき."
+    },
+    {
+      "surface": "白板",
+      "pronunciation": "ハクバン",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee はくばん; el motor dice しらいた."
+    },
+    {
+      "surface": "目と口",
+      "pronunciation": "メトクチ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Ante は, el motor lee もくとこう."
+    },
+    {
+      "surface": "はは",
+      "pronunciation": "ハハ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "En hiragana, el motor lee las dos は como partículas: «wa wa»."
+    },
+    {
+      "surface": "草はら",
+      "pronunciation": "クサハラ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 草原 (くさはら), sin caída; el motor dice くさわら."
+    },
+    {
+      "surface": "年より",
+      "pronunciation": "トシヨリ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [3] de 年寄り; el motor dice ねんより."
+    },
+    {
+      "surface": "三歳",
+      "pronunciation": "サンサイ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [1] (サ'ンサイ), como en いっさい o にさい; el motor dice みとせ."
+    },
+    {
+      "surface": "十本",
+      "pronunciation": "ジュッポン",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 十本 en el diccionario del motor [1], con la lectura じゅっぽん de la colección; el motor dice じっぽん."
+    },
+    {
+      "surface": "靴",
+      "pronunciation": "クツ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 靴 en el diccionario del motor; tras きれいな, el motor dice ぐつ."
+    },
+    {
+      "surface": "千年",
+      "pronunciation": "センネン",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee せんねん; el motor dice ちとせ. Con el número, el motor pone el acento [1] (セ'ンネン) aunque se le pida otro."
+    }
+  ],
+  "wordSpellings": {
+    "一ぴき": "一匹",
+    "まん月": "満月",
+    "火じ": "火事",
+    "ちょ金": "貯金",
+    "天ごく": "天国",
+    "気もち": "気持ち",
+    "げん気": "元気",
+    "大すき": "大好き",
+    "大へん": "大変",
+    "左がわ": "左側",
+    "右がわ": "右側",
+    "円ばん": "円盤",
+    "目てき": "目的",
+    "子ども": "子供",
+    "人ごみ": "人込み",
+    "人げん": "人間",
+    "本だな": "本棚",
+    "本とう": "本当",
+    "水どう": "水道",
+    "花だん": "花壇",
+    "じ石": "磁石",
+    "口ぶえ": "口笛",
+    "口べに": "口紅",
+    "手くび": "手首",
+    "はく手": "拍手",
+    "足あと": "足跡",
+    "足くび": "足首",
+    "耳うち": "耳打ち",
+    "出ぱつ": "出発",
+    "かん字": "漢字",
+    "すう字": "数字",
+    "さく文": "作文",
+    "王さま": "王様",
+    "王かん": "王冠",
+    "こく王": "国王",
+    "五わ": "五羽",
+    "火のこ": "火の粉",
+    "木かげ": "木陰",
+    "山いも": "山芋",
+    "田うえ": "田植え",
+    "白ぐみ": "白組",
+    "円けい": "円形",
+    "き立": "起立",
+    "え本": "絵本",
+    "町なみ": "町並み",
+    "竹うま": "竹馬",
+    "竹やぶ": "竹藪",
+    "竹わ": "竹輪",
+    "花たば": "花束",
+    "草もち": "草餅",
+    "ざっ草": "雑草",
+    "貝がら": "貝殻",
+    "すず虫": "鈴虫",
+    "虫かご": "虫籠",
+    "雨ふり": "雨降り",
+    "夕がた": "夕方",
+    "夕ぐれ": "夕暮れ",
+    "力もち": "力持ち",
+    "かい力": "怪力",
+    "音ぷ": "音符",
+    "てん字": "点字",
+    "てん校": "転校",
+    "玉手ばこ": "玉手箱",
+    "きぬ糸": "絹糸"
+  },
+  "replacements": [
+    {
+      "from": "描きます",
+      "to": "書きます",
+      "reason": "La lectura es かきます; el motor lee えがきます. 書きます suena igual, con el mismo acento."
+    },
+    {
+      "from": "かれは",
+      "to": "彼は",
+      "reason": "En hiragana, el motor lee かれは como 枯れ葉 («kareha»). 彼は suena igual, con el acento [1] de かれの."
+    },
+    {
+      "from": "わたしは えが",
+      "to": "わたしは 絵が",
+      "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual."
+    },
+    {
+      "from": " いしゃです",
+      "to": " 医者です",
+      "reason": "Tras は, el motor oye はいしゃ (歯医者). 医者 suena igual; una palabra いしゃ en el diccionario partiría かいしゃ."
+    },
+    {
+      "from": "下で",
+      "to": "したで",
+      "reason": "El motor lee 下で como もとで. したで suena igual; una palabra 下 en el diccionario estropearía 川下, 下校 y 下手."
+    }
+  ],
+  "entries": [
+    {
+      "file": "4e00-3064.mp3",
+      "written": "一つ",
+      "reading": "ひとつ",
+      "sourceText": "一つ",
+      "kana": "ヒト'ツ",
+      "sha256": "5c59c6d82c7df90bab68e944e648daa39fcd5b9f55748c5b51bd8c34f9554962"
+    },
+    {
+      "file": "4e00-3074-304d.mp3",
+      "written": "一ぴき",
+      "reading": "いっぴき",
+      "sourceText": "一匹",
+      "kana": "イ'ッピキ",
+      "sha256": "20044d691bd3f18178759f4ea7aeda74a9ed9cc5720b081b166f7409c17700f9"
+    },
+    {
+      "file": "4e00-5e74-751f.mp3",
+      "written": "一年生",
+      "reading": "いちねんせい",
+      "sourceText": "一年生",
+      "kana": "イチネ'ンセエ",
+      "sha256": "6e3298d956f85355bb17445b7e0e365a1ff641fb3342b65936aa55fc5df684c5"
+    },
+    {
+      "file": "4e8c-3064.mp3",
+      "written": "二つ",
+      "reading": "ふたつ",
+      "sourceText": "二つ",
+      "kana": "フタツ'",
+      "sha256": "4bc958015610262066a99a0e5f8ad198326b7edbe1bfaeff05293402f2d4737d"
+    },
+    {
+      "file": "4e8c-500b.mp3",
+      "written": "二個",
+      "reading": "にこ",
+      "sourceText": "二個",
+      "kana": "ニ'コ",
+      "sha256": "9132ded5eac0b460725e2b0493b250b97a7063dc320ad29117fcca4b0d3cc682"
+    },
+    {
+      "file": "4e8c-65e5.mp3",
+      "written": "二日",
+      "reading": "ふつか",
+      "sourceText": "二日",
+      "kana": "フツカ'",
+      "sha256": "3425d47763ab299bc672418e40539c1df454a4d4686535e200363ac74cec7846"
+    },
+    {
+      "file": "4e09-3064.mp3",
+      "written": "三つ",
+      "reading": "みっつ",
+      "sourceText": "三つ",
+      "kana": "ミッツ'",
+      "sha256": "34bdc273b8c097377c11b1130d92acda4737f440147951d8a2532141687470fc"
+    },
+    {
+      "file": "4e09-500b.mp3",
+      "written": "三個",
+      "reading": "さんこ",
+      "sourceText": "三個",
+      "kana": "サンコ'",
+      "sha256": "db3e5fac0b293e9f4703602f8aa28a317e9a591c7d5c905bcd0eab9f779ad7fb"
+    },
+    {
+      "file": "4e09-672c.mp3",
+      "written": "三本",
+      "reading": "さんぼん",
+      "sourceText": "三本",
+      "kana": "サ'ンボン",
+      "sha256": "6fecbefadda1d3c4b5997dfdd05cb8b30beb975e62b2ab025e25b69357dd2c8a"
+    },
+    {
+      "file": "56db-3064.mp3",
+      "written": "四つ",
+      "reading": "よっつ",
+      "sourceText": "四つ",
+      "kana": "ヨッツ'",
+      "sha256": "642cf08112f8800807b662f7a40044d5b57d698652940d025f1075c4a7c5ed36"
+    },
+    {
+      "file": "56db-500b.mp3",
+      "written": "四個",
+      "reading": "よんこ",
+      "sourceText": "四個",
+      "kana": "ヨ'ンコ",
+      "sha256": "c90b18bfd73ae13396db6230d922ec1941cf290a619f8c725e104e41fe80adc0"
+    },
+    {
+      "file": "56db-6708.mp3",
+      "written": "四月",
+      "reading": "しがつ",
+      "sourceText": "四月",
+      "kana": "シガツ'",
+      "sha256": "6fec00b4c01b29fd9e91b5fce79148b2d5a2c86c673f5204337b4e63e740961d"
+    },
+    {
+      "file": "4e94-3064.mp3",
+      "written": "五つ",
+      "reading": "いつつ",
+      "sourceText": "五つ",
+      "kana": "イツ'ツ",
+      "sha256": "0bbb7f451e6a6b8af1261b89ba1b3f0b48b234173f808384d451a8eec135a9a2"
+    },
+    {
+      "file": "4e94-500b.mp3",
+      "written": "五個",
+      "reading": "ごこ",
+      "sourceText": "五個",
+      "kana": "ゴ'コ",
+      "sha256": "65bc2629a957a3acb258055991063abcb5bac58b93ad52e697536cc905d45fb9"
+    },
+    {
+      "file": "4e94-308f.mp3",
+      "written": "五わ",
+      "reading": "ごわ",
+      "sourceText": "五羽",
+      "kana": "ゴ'ワ",
+      "sha256": "b9f0bd5de03263cc0ea95d75c1824c0b8a8fb3f16ee66e2a9c9a300c1bc8a74e"
+    },
+    {
+      "file": "516d-3064.mp3",
+      "written": "六つ",
+      "reading": "むっつ",
+      "sourceText": "六つ",
+      "kana": "ムッツ'",
+      "sha256": "52718d4102477a0187d872caeb60cddaa9022f28c275785d6bb02909e8b5f3e3"
+    },
+    {
+      "file": "516d-500b.mp3",
+      "written": "六個",
+      "reading": "ろっこ",
+      "sourceText": "六個",
+      "kana": "ロ'ッコ",
+      "sha256": "1a5e88e0be0783e633b432fb943d9efc7b84f3a39109c228a0ddf8cebf6b9356"
+    },
+    {
+      "file": "516d-672c.mp3",
+      "written": "六本",
+      "reading": "ろっぽん",
+      "sourceText": "六本",
+      "kana": "ロ'ッポン",
+      "sha256": "29227dc1bee5cd05abce7d3f7aa2b9acfa3ef648834568962a65a2335d5c404c"
+    },
+    {
+      "file": "4e03-3064.mp3",
+      "written": "七つ",
+      "reading": "ななつ",
+      "sourceText": "七つ",
+      "kana": "ナナ'ツ",
+      "sha256": "850e9689085b4c18eb1f30e301d1fb573690f0acba6c81db77a6d4727164cd09"
+    },
+    {
+      "file": "4e03-6708.mp3",
+      "written": "七月",
+      "reading": "しちがつ",
+      "sourceText": "七月",
+      "kana": "シチガツ'",
+      "sha256": "9df5bcc91b631ee396ddcb9347e9e7deca7bb8a8599dca5f6444c671d0cb1a32"
+    },
+    {
+      "file": "4e03-8272.mp3",
+      "written": "七色",
+      "reading": "なないろ",
+      "sourceText": "七色",
+      "kana": "ナナ'イロ",
+      "sha256": "f8d773e3e719a33624e66bf19c2ef84394c1056d87622af6aaa8b0da8241b009"
+    },
+    {
+      "file": "516b-3064.mp3",
+      "written": "八つ",
+      "reading": "やっつ",
+      "sourceText": "八つ",
+      "kana": "ヤッツ'",
+      "sha256": "a464c5f07cfe257b7bde57c12df8e2e28e851ea2a0ac689cb152eb5cdd3967ff"
+    },
+    {
+      "file": "516b-6708.mp3",
+      "written": "八月",
+      "reading": "はちがつ",
+      "sourceText": "八月",
+      "kana": "ハチガツ'",
+      "sha256": "6040489a183d2b760dceeef3f2fe6d4c5cc7a4859bb77ae5786cc69cb22ea5a0"
+    },
+    {
+      "file": "516b-65e5.mp3",
+      "written": "八日",
+      "reading": "ようか",
+      "sourceText": "八日",
+      "kana": "ヨオカ'",
+      "sha256": "2a687db287680344735768bd10eba3b9b7d1c83bc834a74c5d31b8c4a35bbb53"
+    },
+    {
+      "file": "4e5d-3064.mp3",
+      "written": "九つ",
+      "reading": "ここのつ",
+      "sourceText": "九つ",
+      "kana": "ココ'ノツ",
+      "sha256": "880cd93d22a4be8258b1b85d3a843854eb04f6c044e39ad44c341de7618ef005"
+    },
+    {
+      "file": "4e5d-500b.mp3",
+      "written": "九個",
+      "reading": "きゅうこ",
+      "sourceText": "九個",
+      "kana": "キュ'ウコ",
+      "sha256": "72550b9baed1cc674886205fb8260aa0412b61932362b65ce0c67a0123733313"
+    },
+    {
+      "file": "4e5d-6708.mp3",
+      "written": "九月",
+      "reading": "くがつ",
+      "sourceText": "九月",
+      "kana": "ク'ガツ",
+      "sha256": "f56360ce279f9cf9afc145512130736d58200781570c47ec43af4501f73c1308"
+    },
+    {
+      "file": "5341-5e74.mp3",
+      "written": "十年",
+      "reading": "じゅうねん",
+      "sourceText": "十年",
+      "kana": "ジュ'ウネン",
+      "sha256": "03f96d671eefc60f69a5664432be2b814acb64c07b507465fa6eb86a09cddfc5"
+    },
+    {
+      "file": "5341-6708.mp3",
+      "written": "十月",
+      "reading": "じゅうがつ",
+      "sourceText": "十月",
+      "kana": "ジュウガツ'",
+      "sha256": "c569bc80c8e75c02d58dfa9635552e8e6b480915c3fa219034f7b8176a51be36"
+    },
+    {
+      "file": "5341-65e5.mp3",
+      "written": "十日",
+      "reading": "とおか",
+      "sourceText": "十日",
+      "kana": "トオカ'",
+      "sha256": "96d1a3482a4989cdce10a67307cf10a0272c4d5631fbf27c5fe05497f40b468f"
+    },
+    {
+      "file": "767e-5e74.mp3",
+      "written": "百年",
+      "reading": "ひゃくねん",
+      "sourceText": "百年",
+      "kana": "ヒャク'ネン",
+      "sha256": "7bd92177881161029f8cd1718b47f1adfd20c36a8c3bff52c0f5c750e6d09e91"
+    },
+    {
+      "file": "767e-5186.mp3",
+      "written": "百円",
+      "reading": "ひゃくえん",
+      "sourceText": "百円",
+      "kana": "ヒャク'エン",
+      "sha256": "c8272d940e86e4bb561d46b56f238f7749460f6f5b6ed696280bf353cb087d8d"
+    },
+    {
+      "file": "767e-65e5.mp3",
+      "written": "百日",
+      "reading": "ひゃくにち",
+      "sourceText": "百日",
+      "kana": "ヒャク'ニチ",
+      "sha256": "8ad1c7c63e268b35eb9df6a91c1c19261106f14007aee760397ee88b78ede196"
+    },
+    {
+      "file": "5343-5e74.mp3",
+      "written": "千年",
+      "reading": "せんねん",
+      "sourceText": "千年",
+      "kana": "セ'ンネン",
+      "sha256": "1052389c4bc217b7892380d48ca324cac345fda422d823c94a97146a4830ac47"
+    },
+    {
+      "file": "5343-5186.mp3",
+      "written": "千円",
+      "reading": "せんえん",
+      "sourceText": "千円",
+      "kana": "セ'ンエン",
+      "sha256": "a8171e80468f8b9ff2e1a8f4565c897b156fde481b1791df622947704be3f835"
+    },
+    {
+      "file": "5343-4eba.mp3",
+      "written": "千人",
+      "reading": "せんにん",
+      "sourceText": "千人",
+      "kana": "セ'ンニン",
+      "sha256": "1705ab5b74961ca9d13b945e6ad536a8aa6dab0392fc5c81dca63489b6f0a312"
+    },
+    {
+      "file": "4e09-65e5.mp3",
+      "written": "三日",
+      "reading": "みっか",
+      "sourceText": "三日",
+      "kana": "ミッカ'",
+      "sha256": "b1a8b5c1926bd73e0f2222aed8d34ee11b0a54e8162e1adf5730235cb0117657"
+    },
+    {
+      "file": "4e00-65e5.mp3",
+      "written": "一日",
+      "reading": "いちにち",
+      "sourceText": "一日",
+      "kana": "イチニチ'",
+      "sha256": "52c3ec6816a31bb41351cd37df4b43d40133ce83a61268a52c6f2f9572bfa386"
+    },
+    {
+      "file": "65e5-6642.mp3",
+      "written": "日時",
+      "reading": "にちじ",
+      "sourceText": "日時",
+      "kana": "ニ'チジ",
+      "sha256": "e9543ede3dfb8b4182feb28a3eb3ed03c9af379b9b424974f22869047929485d"
+    },
+    {
+      "file": "6708-898b.mp3",
+      "written": "月見",
+      "reading": "つきみ",
+      "sourceText": "月見",
+      "kana": "ツキミ'",
+      "sha256": "322a7f4de4042aa1408cffa13d82227b1ec0cd41ea232747eeed629c562cac97"
+    },
+    {
+      "file": "4e8c-6708.mp3",
+      "written": "二月",
+      "reading": "にがつ",
+      "sourceText": "二月",
+      "kana": "ニガツ'",
+      "sha256": "1f949a9f53235dcfed1c7dd94a2d470900235f0629f2a0bebb89d655277d74fa"
+    },
+    {
+      "file": "307e-3093-6708.mp3",
+      "written": "まん月",
+      "reading": "まんげつ",
+      "sourceText": "満月",
+      "kana": "マ'ンゲツ",
+      "sha256": "ffdae10a8997c15c1fa6621a959e0f45257831e15d64e089ab7b36090fa2a006"
+    },
+    {
+      "file": "706b-3058.mp3",
+      "written": "火じ",
+      "reading": "かじ",
+      "sourceText": "火事",
+      "kana": "カ'ジ",
+      "sha256": "c37d5cb29dd687feee9e2fdc99a20847a08b2f5ad6bc0c7d5396c7e0c31b7f18"
+    },
+    {
+      "file": "706b-5c71.mp3",
+      "written": "火山",
+      "reading": "かざん",
+      "sourceText": "火山",
+      "kana": "カ'ザン",
+      "sha256": "203b22da71550b164c02f44bbc340d420edcf1004390ed28850a209704d59d1a"
+    },
+    {
+      "file": "706b-306e-3053.mp3",
+      "written": "火のこ",
+      "reading": "ひのこ",
+      "sourceText": "火の粉",
+      "kana": "ヒ'ノコ",
+      "sha256": "29a02d28ef60c4f46462b7081659bfbff50d63715c499cec4100845c585ef8eb"
+    },
+    {
+      "file": "6c34-7389.mp3",
+      "written": "水玉",
+      "reading": "みずたま",
+      "sourceText": "水玉",
+      "kana": "ミズタマ'",
+      "sha256": "4d4684c1c7338bffe051b0c2008305ab185204c749e9d36c0040c66cb2622b65"
+    },
+    {
+      "file": "6c34-8349.mp3",
+      "written": "水草",
+      "reading": "みずくさ",
+      "sourceText": "水草",
+      "kana": "ミズクサ'",
+      "sha256": "9edb4b329d435b2066c4a1f069db782cf64e6457ee29cc7cf481bfad9ef4b4d7"
+    },
+    {
+      "file": "6c34-3069-3046.mp3",
+      "written": "水どう",
+      "reading": "すいどう",
+      "sourceText": "水道",
+      "kana": "スイドオ'",
+      "sha256": "daf58fd6df542f676f9c7de370db3fe22156c73959ec6882b344e1ae9ef6502e"
+    },
+    {
+      "file": "6728-76ee.mp3",
+      "written": "木目",
+      "reading": "もくめ",
+      "sourceText": "木目",
+      "kana": "モク'メ",
+      "sha256": "c89531076f481ee21b19d004566bf789f3fe20819f9405a19b3945a436baf240"
+    },
+    {
+      "file": "5ead-6728.mp3",
+      "written": "庭木",
+      "reading": "にわき",
+      "sourceText": "庭木",
+      "kana": "ニワキ'",
+      "sha256": "c89af9bb64ba0c34c0bfffe6867d7332e8affe8c4b5c36592de2155bc329283a"
+    },
+    {
+      "file": "6728-304b-3052.mp3",
+      "written": "木かげ",
+      "reading": "こかげ",
+      "sourceText": "木陰",
+      "kana": "コカゲ'",
+      "sha256": "3c3ee1e25a5fbd821e543a7f807b40a91cda9e9d332a1a14d3dcf8e3a5fb2660"
+    },
+    {
+      "file": "304a-91d1.mp3",
+      "written": "お金",
+      "reading": "おかね",
+      "sourceText": "お金",
+      "kana": "オカネ'",
+      "sha256": "01c7d534e7569807d665b506280545f82feaacf941a708da42b10016e2f6de5b"
+    },
+    {
+      "file": "91d1-8272.mp3",
+      "written": "金色",
+      "reading": "きんいろ",
+      "sourceText": "金色",
+      "kana": "キンイロ'",
+      "sha256": "86aba242ca85c9f9d1a0329677bc6eb35f5212e32435a2d638796aaa8a7b3b04"
+    },
+    {
+      "file": "3061-3087-91d1.mp3",
+      "written": "ちょ金",
+      "reading": "ちょきん",
+      "sourceText": "貯金",
+      "kana": "チョキン'",
+      "sha256": "2b6061ce0a97a596aff81bbfe2b401fd175c0274dbc73ec5d623406faba93ba9"
+    },
+    {
+      "file": "571f-304d.mp3",
+      "written": "土き",
+      "reading": "どき",
+      "sourceText": "土き",
+      "kana": "ド'キ",
+      "sha256": "54fd51d39e9ed2e36855694f8b4fccf40192190c0d8db4c05a9d418a5d403b9b"
+    },
+    {
+      "file": "571f-8db3.mp3",
+      "written": "土足",
+      "reading": "どそく",
+      "sourceText": "土足",
+      "kana": "ドソク'",
+      "sha256": "a654bb64f0b2f987a179a7437a413010801cf510805c10578158656701e7a3c7"
+    },
+    {
+      "file": "8d64-571f.mp3",
+      "written": "赤土",
+      "reading": "あかつち",
+      "sourceText": "赤土",
+      "kana": "アカツチ'",
+      "sha256": "dd4052db0bdd9f6935a426405c44db82ba0d7c3dcdb700e22bd6cc3800a625b7"
+    },
+    {
+      "file": "5c71-307f-3061.mp3",
+      "written": "山みち",
+      "reading": "やまみち",
+      "sourceText": "山みち",
+      "kana": "ヤマ'ミチ",
+      "sha256": "f4ef05e77a877d660a134a1339237575e8b4b64c4614d2f5641ec3fbf2cc4124"
+    },
+    {
+      "file": "5c71-3044-3082.mp3",
+      "written": "山いも",
+      "reading": "やまいも",
+      "sourceText": "山芋",
+      "kana": "ヤマイモ'",
+      "sha256": "f4d8f90f53e2682461b738c5cdd2e4928ab5e5fa96bb32da5879269f7bd5b5f4"
+    },
+    {
+      "file": "3075-3058-5c71.mp3",
+      "written": "ふじ山",
+      "reading": "ふじさん",
+      "sourceText": "ふじ山",
+      "kana": "フジ'サン",
+      "sha256": "e0b2664d1748b0b00c5c18183d6de705e6db88df28c399ca28e4bfee8f7a6747"
+    },
+    {
+      "file": "5ddd-4e0a.mp3",
+      "written": "川上",
+      "reading": "かわかみ",
+      "sourceText": "川上",
+      "kana": "カワカミ'",
+      "sha256": "e23631a2fcc32a873008f0e9d4f794188eb2c71f0829fb35f7af59d9bb56c18a"
+    },
+    {
+      "file": "5ddd-4e0b.mp3",
+      "written": "川下",
+      "reading": "かわしも",
+      "sourceText": "川下",
+      "kana": "カワシモ'",
+      "sha256": "0b2623bfcca78f8bb7ec24336f7915aace22e276cdbf948375107c135817c527"
+    },
+    {
+      "file": "5ddd-3079-308a.mp3",
+      "written": "川べり",
+      "reading": "かわべり",
+      "sourceText": "川べり",
+      "kana": "カワベリ'",
+      "sha256": "6a9b3c6c072f25c49db35054860790ef15d131c32dbba205b6b49218a58c01f9"
+    },
+    {
+      "file": "7af9-6797.mp3",
+      "written": "竹林",
+      "reading": "たけばやし",
+      "sourceText": "竹林",
+      "kana": "タケバヤ'シ",
+      "sha256": "c79401e78e2cfe0eec086b00816fc2c1792374bb828ddb0e8f86317a6150f220"
+    },
+    {
+      "file": "307e-3064-6797.mp3",
+      "written": "まつ林",
+      "reading": "まつばやし",
+      "sourceText": "まつ林",
+      "kana": "マツバ'ヤシ",
+      "sha256": "6f1d4036bad18c459af66c7c7f0c33e2fa772c7a64add4290bd0ef1d50798aa1"
+    },
+    {
+      "file": "5c71-6797.mp3",
+      "written": "山林",
+      "reading": "さんりん",
+      "sourceText": "山林",
+      "kana": "サンリン'",
+      "sha256": "56c0f7987768cd021afdfa7526f5f3adb7d7b52139e0fd150b0c28b608f364db"
+    },
+    {
+      "file": "68ee-306e-4e2d.mp3",
+      "written": "森の中",
+      "reading": "もりのなか",
+      "sourceText": "森の中",
+      "kana": "モリノナ'カ",
+      "sha256": "5b7092106f979e6584621d83354361fda9f8fdc19eee3d10ca32971179403211"
+    },
+    {
+      "file": "68ee-6797.mp3",
+      "written": "森林",
+      "reading": "しんりん",
+      "sourceText": "森林",
+      "kana": "シンリン'",
+      "sha256": "829d75d794bc893b69f3428ab362292f237ba18a7543b7c881b35a50f8a11b00"
+    },
+    {
+      "file": "9752-68ee.mp3",
+      "written": "青森",
+      "reading": "あおもり",
+      "sourceText": "青森",
+      "kana": "アオ'モリ",
+      "sha256": "be7451596f0dd55501e06d499dd03c01d422fccd52bd096228866137dd210eab"
+    },
+    {
+      "file": "7af9-3046-307e.mp3",
+      "written": "竹うま",
+      "reading": "たけうま",
+      "sourceText": "竹馬",
+      "kana": "タケウマ'",
+      "sha256": "f19d85f460452b7375a8d0bbaaf9e48de0a7dfa0b8d303cfe500acbc8eac3a34"
+    },
+    {
+      "file": "7af9-3084-3076.mp3",
+      "written": "竹やぶ",
+      "reading": "たけやぶ",
+      "sourceText": "竹藪",
+      "kana": "タケヤブ'",
+      "sha256": "943995df44e57efbb24af7620f00693e1fdd0cd73b9f5bedaf02f2e093fca568"
+    },
+    {
+      "file": "7af9-308f.mp3",
+      "written": "竹わ",
+      "reading": "ちくわ",
+      "sourceText": "竹輪",
+      "kana": "チクワ'",
+      "sha256": "ccf286ff7018ae56e1031f6b44c9b9e99dceb508d1bcf07dfb1b9876f7c59823"
+    },
+    {
+      "file": "82b1-3073-3089.mp3",
+      "written": "花びら",
+      "reading": "はなびら",
+      "sourceText": "花びら",
+      "kana": "ハナビ'ラ",
+      "sha256": "43072091cadfeca9cce37316a8835fe7533dd16fde55170c6f576c59907d9889"
+    },
+    {
+      "file": "82b1-305f-3070.mp3",
+      "written": "花たば",
+      "reading": "はなたば",
+      "sourceText": "花束",
+      "kana": "ハナ'タバ",
+      "sha256": "c0b583da8e79923622fe92092e0c907a9447a104b1d4b115d6c4dc3f27b7c090"
+    },
+    {
+      "file": "82b1-3060-3093.mp3",
+      "written": "花だん",
+      "reading": "かだん",
+      "sourceText": "花壇",
+      "kana": "カ'ダン",
+      "sha256": "2b13eeadedac1e7704219eee9bb14837ce17b2704633bf7a623769f3726be320"
+    },
+    {
+      "file": "8349-306f-3089.mp3",
+      "written": "草はら",
+      "reading": "くさはら",
+      "sourceText": "草はら",
+      "kana": "クサハラ'",
+      "sha256": "7ba1eaefdeb83b9c23d5885b0f06370a6fc83c4bcb1caf04095e152ad22e751f"
+    },
+    {
+      "file": "8349-3082-3061.mp3",
+      "written": "草もち",
+      "reading": "くさもち",
+      "sourceText": "草餅",
+      "kana": "クサ'モチ",
+      "sha256": "74b75eb0373263bb2aa91212592b1e3311dfc5a572c3e7f6f834987d4b1c029b"
+    },
+    {
+      "file": "3056-3063-8349.mp3",
+      "written": "ざっ草",
+      "reading": "ざっそう",
+      "sourceText": "雑草",
+      "kana": "ザッソオ'",
+      "sha256": "4d088fd67a91a9164e5f5a9806a7151bc0dfc9874521f6ede97747d26dee26c5"
+    },
+    {
+      "file": "5c0f-77f3.mp3",
+      "written": "小石",
+      "reading": "こいし",
+      "sourceText": "小石",
+      "kana": "コイシ'",
+      "sha256": "10a8d665840525a2db022f967c8dfcbacb453d2cc007eb395b5954cb06b23670"
+    },
+    {
+      "file": "3058-77f3.mp3",
+      "written": "じ石",
+      "reading": "じしゃく",
+      "sourceText": "磁石",
+      "kana": "ジ'シャク",
+      "sha256": "53741895899a66275f2ee7b1eda9864073a80bc966659218060e344c846ff1d4"
+    },
+    {
+      "file": "307b-3046-77f3.mp3",
+      "written": "ほう石",
+      "reading": "ほうせき",
+      "sourceText": "ほう石",
+      "kana": "ホウセキ'",
+      "sha256": "44464aae85df5437b5d9e50a7b80d5145db437dca5a6a546185c1591300c7b87"
+    },
+    {
+      "file": "8c9d-304c-3089.mp3",
+      "written": "貝がら",
+      "reading": "かいがら",
+      "sourceText": "貝殻",
+      "kana": "カイガラ'",
+      "sha256": "2053ea848e9a2c978f6cebd1bd10f9456a238633c37d2194887eb42e12a6a168"
+    },
+    {
+      "file": "307e-304d-8c9d.mp3",
+      "written": "まき貝",
+      "reading": "まきがい",
+      "sourceText": "まき貝",
+      "kana": "マキ'ガイ",
+      "sha256": "00a1203f89d3774765f57ee2597f25f68fdd2bdb66af47b7ea6078d7310d932e"
+    },
+    {
+      "file": "307b-3089-8c9d.mp3",
+      "written": "ほら貝",
+      "reading": "ほらがい",
+      "sourceText": "ほら貝",
+      "kana": "ホラ'ガイ",
+      "sha256": "da1f977e11f54ccf383465ba1725b37688743a718f775612ad7019d44b4668b0"
+    },
+    {
+      "file": "3059-305a-866b.mp3",
+      "written": "すず虫",
+      "reading": "すずむし",
+      "sourceText": "鈴虫",
+      "kana": "スズ'ムシ",
+      "sha256": "e6d6b01a05feaf0cacafb593fcad3cef69f22b6f1c9f98cb6dc43daeb9b84b30"
+    },
+    {
+      "file": "3053-3093-866b.mp3",
+      "written": "こん虫",
+      "reading": "こんちゅう",
+      "sourceText": "こん虫",
+      "kana": "コンチュウ'",
+      "sha256": "be918344a77bcebed7fa6c303b1200b98729f352abed0928cb5b4ff15557ba0c"
+    },
+    {
+      "file": "866b-304b-3054.mp3",
+      "written": "虫かご",
+      "reading": "むしかご",
+      "sourceText": "虫籠",
+      "kana": "ムシ'カゴ",
+      "sha256": "1a849f5e78343f6aced81c57d2a1955f20504883abe4d9ef1e051a1b0363aa77"
+    },
+    {
+      "file": "540d-72ac.mp3",
+      "written": "名犬",
+      "reading": "めいけん",
+      "sourceText": "名犬",
+      "kana": "メエケン'",
+      "sha256": "0c8b2b330eede8e9a49c587e1d99699a9de8ad942ce9ac144d785e73a5dc6ebf"
+    },
+    {
+      "file": "767d-3044-72ac.mp3",
+      "written": "白い犬",
+      "reading": "しろいいぬ",
+      "sourceText": "白い犬",
+      "kana": "シロ'イ/イヌ'",
+      "sha256": "80f2ddec810ef4afc600cfd664eabdf64dd858d9b9b57b287fc10762b951f41d"
+    },
+    {
+      "file": "72ac-305e-308a.mp3",
+      "written": "犬ぞり",
+      "reading": "いぬぞり",
+      "sourceText": "犬ぞり",
+      "kana": "イヌゾリ'",
+      "sha256": "ffe3cb11bad35ff3080bc4c557d234409f8ebfbeaa080b18cb170e4b08028aac"
+    },
+    {
+      "file": "7530-3093-307c.mp3",
+      "written": "田んぼ",
+      "reading": "たんぼ",
+      "sourceText": "田んぼ",
+      "kana": "タンボ'",
+      "sha256": "7f3f75fbe7257f187d043b752f04191b10ef94c6b5eb433d5731ad67b77f94b3"
+    },
+    {
+      "file": "6c34-7530.mp3",
+      "written": "水田",
+      "reading": "すいでん",
+      "sourceText": "水田",
+      "kana": "スイデン'",
+      "sha256": "be890e642c15156aebb5dc40e857253f4ee1299e14f9d9d2acdd1ee8b8b5457b"
+    },
+    {
+      "file": "7530-3046-3048.mp3",
+      "written": "田うえ",
+      "reading": "たうえ",
+      "sourceText": "田植え",
+      "kana": "タウエ'",
+      "sha256": "2b36c9253d12cedc8441867c60085a3bfe4b8fd13b50ed776e2c34ffaa7f3f0f"
+    },
+    {
+      "file": "5e74-4e0a.mp3",
+      "written": "年上",
+      "reading": "としうえ",
+      "sourceText": "年上",
+      "kana": "トシウエ'",
+      "sha256": "65685bcf4af38740488c8cf470c88da536809a87112d8a5ab1e1ee8782fce09f"
+    },
+    {
+      "file": "5e74-3088-308a.mp3",
+      "written": "年より",
+      "reading": "としより",
+      "sourceText": "年より",
+      "kana": "トシヨ'リ",
+      "sha256": "3129bb3b2fa3c9da29b72251831c0f2397558a1e774bc3be95fb99001eff8d5d"
+    },
+    {
+      "file": "7a7a-6c17.mp3",
+      "written": "空気",
+      "reading": "くうき",
+      "sourceText": "空気",
+      "kana": "ク'ウキ",
+      "sha256": "19fe4878798a707ba951a8026794704365ccbd13e616a0f18630bff648b1ec0c"
+    },
+    {
+      "file": "7a7a-8272.mp3",
+      "written": "空色",
+      "reading": "そらいろ",
+      "sourceText": "空色",
+      "kana": "ソライロ'",
+      "sha256": "39a03db94a3e027f383cb5293b62c6519550c6c1bb1b2fc24c7805ffcb02bcdb"
+    },
+    {
+      "file": "7a7a-3070-3053.mp3",
+      "written": "空ばこ",
+      "reading": "からばこ",
+      "sourceText": "空ばこ",
+      "kana": "カラ'バコ",
+      "sha256": "0bcdd1a80d59ee871fe9e4aee5306013b029ada734b0f219a28fa46805c3befc"
+    },
+    {
+      "file": "5929-6c17.mp3",
+      "written": "天気",
+      "reading": "てんき",
+      "sourceText": "天気",
+      "kana": "テ'ンキ",
+      "sha256": "3599590b123ce1791416be8829cb74d20135c55c200ecb1a37e7fec2399ddb00"
+    },
+    {
+      "file": "5929-306e-5ddd.mp3",
+      "written": "天の川",
+      "reading": "あまのがわ",
+      "sourceText": "天の川",
+      "kana": "アマノ'ガワ",
+      "sha256": "532235e16e2f0e57d7a88e3897761e67617d1e025cb9e814088a045ca93fa983"
+    },
+    {
+      "file": "5929-3054-304f.mp3",
+      "written": "天ごく",
+      "reading": "てんごく",
+      "sourceText": "天国",
+      "kana": "テ'ンゴク",
+      "sha256": "38caf45aef81e618851de6a9a1f49f6205544394b99ad7354a0a5694a711b93e"
+    },
+    {
+      "file": "6c17-3082-3061.mp3",
+      "written": "気もち",
+      "reading": "きもち",
+      "sourceText": "気持ち",
+      "kana": "キモチ'",
+      "sha256": "a364d477d02f24a5b09bc91599699d8802f73f0a9036a39bd3db0359e25ea3e5"
+    },
+    {
+      "file": "3052-3093-6c17.mp3",
+      "written": "げん気",
+      "reading": "げんき",
+      "sourceText": "元気",
+      "kana": "ゲ'ンキ",
+      "sha256": "b35a60275c6b4570cb04e379a41718f73ade4e773fd49d0f077e73627bfd0db3"
+    },
+    {
+      "file": "96e8-5929.mp3",
+      "written": "雨天",
+      "reading": "うてん",
+      "sourceText": "雨天",
+      "kana": "ウ'テン",
+      "sha256": "880ad34d0781bd5b6e7f5413eed3d1c21bd2136fe371e50240864515ed3d7af3"
+    },
+    {
+      "file": "96e8-3075-308a.mp3",
+      "written": "雨ふり",
+      "reading": "あめふり",
+      "sourceText": "雨降り",
+      "kana": "アメ'フリ",
+      "sha256": "56b7b0446256a7663e56c150a8a2c6b31abf01f28b32ff17ee754b55ab52f3d2"
+    },
+    {
+      "file": "96e8-3050-3082.mp3",
+      "written": "雨ぐも",
+      "reading": "あまぐも",
+      "sourceText": "雨ぐも",
+      "kana": "アマグモ'",
+      "sha256": "83e7376a81b318b64fb95d1b5761e7dc5bf281c4209378f9a70a156461c7981b"
+    },
+    {
+      "file": "5915-65e5.mp3",
+      "written": "夕日",
+      "reading": "ゆうひ",
+      "sourceText": "夕日",
+      "kana": "ユウヒ'",
+      "sha256": "97adcab8652ea7df5df57253d3383e7ae85bb537f4cb8f612bbfa610adf2158b"
+    },
+    {
+      "file": "5915-304c-305f.mp3",
+      "written": "夕がた",
+      "reading": "ゆうがた",
+      "sourceText": "夕方",
+      "kana": "ユウガタ'",
+      "sha256": "cd6d713fc0e01f2bb8b360c42e407138c58619eb38f7e0590e699f2daa5a31b4"
+    },
+    {
+      "file": "5915-3050-308c.mp3",
+      "written": "夕ぐれ",
+      "reading": "ゆうぐれ",
+      "sourceText": "夕暮れ",
+      "kana": "ユウグレ'",
+      "sha256": "ed7058e1068b1a121482062cf806a6a9218aaae488d3511c54cfef94c07f93c0"
+    },
+    {
+      "file": "767d-3050-307f.mp3",
+      "written": "白ぐみ",
+      "reading": "しろぐみ",
+      "sourceText": "白組",
+      "kana": "シログミ'",
+      "sha256": "1b93b70ac7294b7f23d0a31ed8796d01f89dca4606bee65bacfbd637259320c0"
+    },
+    {
+      "file": "767d-3044-82b1.mp3",
+      "written": "白い花",
+      "reading": "しろいはな",
+      "sourceText": "白い花",
+      "kana": "シロ'イ/ハナ'",
+      "sha256": "f4c595c4976ef4147b5e197e379ec70017713fea6100d14f180155c7cd5b4397"
+    },
+    {
+      "file": "7a7a-767d.mp3",
+      "written": "空白",
+      "reading": "くうはく",
+      "sourceText": "空白",
+      "kana": "クウハク'",
+      "sha256": "1ccc4fb9befba629e9915a19b3900e10a7d32e9d29a466ece83ab707ffb1a2fe"
+    },
+    {
+      "file": "9752-3044.mp3",
+      "written": "青い",
+      "reading": "あおい",
+      "sourceText": "青い",
+      "kana": "アオ'イ",
+      "sha256": "494bbf7e35bed4d9ec1082575d9db1ce9fab5c5533a05ac830bfc7d08278c055"
+    },
+    {
+      "file": "9752-5e74.mp3",
+      "written": "青年",
+      "reading": "せいねん",
+      "sourceText": "青年",
+      "kana": "セエネン'",
+      "sha256": "234bf5c3f8c6a70bbb1739e677348ead100cdb22e04ade297fbd9976f5c8f895"
+    },
+    {
+      "file": "9752-7a7a.mp3",
+      "written": "青空",
+      "reading": "あおぞら",
+      "sourceText": "青空",
+      "kana": "アオゾ'ラ",
+      "sha256": "6993633f30191e28fc4f4d695f30c3f0b92ed03491025c76ca9af9908776aaa9"
+    },
+    {
+      "file": "8d64-3044-8eca.mp3",
+      "written": "赤い車",
+      "reading": "あかいくるま",
+      "sourceText": "赤い車",
+      "kana": "アカイ'/クルマ'",
+      "sha256": "27e4f80ffed00f7a025cdb9613bc88d66cdcd15b6d7ddaedc7b165d8320ac3d6"
+    },
+    {
+      "file": "8d64-3061-3083-3093.mp3",
+      "written": "赤ちゃん",
+      "reading": "あかちゃん",
+      "sourceText": "赤ちゃん",
+      "kana": "ア'カチャン",
+      "sha256": "298e6032071a90a258898642cbfbd221d59916bd322040c425c650e124d764b0"
+    },
+    {
+      "file": "8d64-306f-3093.mp3",
+      "written": "赤はん",
+      "reading": "せきはん",
+      "sourceText": "赤はん",
+      "kana": "セキハ'ン",
+      "sha256": "7628c6863de8b4f7e00b09fb7891f6c7447ddee3b94658be55ae7265b0df35be"
+    },
+    {
+      "file": "5927-3059-304d.mp3",
+      "written": "大すき",
+      "reading": "だいすき",
+      "sourceText": "大好き",
+      "kana": "ダ'イスキ",
+      "sha256": "b74243ceb76b1b3011362fdc675fcd77caf0e5588c5e341e6b6074f3aa0230ac"
+    },
+    {
+      "file": "5927-3078-3093.mp3",
+      "written": "大へん",
+      "reading": "たいへん",
+      "sourceText": "大変",
+      "kana": "タイヘン'",
+      "sha256": "ee1ef297d52a8a6116ca3a8987f24d71e2e1e1ed848652cb34c9ae9c73e6e939"
+    },
+    {
+      "file": "5927-304d-3044.mp3",
+      "written": "大きい",
+      "reading": "おおきい",
+      "sourceText": "大きい",
+      "kana": "オオキ'イ",
+      "sha256": "239c75eb5b89c5e0c5eb67e7205ab62f9c94142db70de2e0c1353bcd856b2e30"
+    },
+    {
+      "file": "4e00-65e5-4e2d.mp3",
+      "written": "一日中",
+      "reading": "いちにちじゅう",
+      "sourceText": "一日中",
+      "kana": "イチニチジュウ'",
+      "sha256": "9557b78c40aff7586d467db24e99067b149a5aff820079aedf81d34a459d8370"
+    },
+    {
+      "file": "4e2d-5b66-6821.mp3",
+      "written": "中学校",
+      "reading": "ちゅうがっこう",
+      "sourceText": "中学校",
+      "kana": "チュウガ'ッコオ",
+      "sha256": "86ecb30327eee40d3cde337876dba8d34f8dda8f8813602bafa6c7de2e5ad576"
+    },
+    {
+      "file": "4e2d-5ead.mp3",
+      "written": "中庭",
+      "reading": "なかにわ",
+      "sourceText": "中庭",
+      "kana": "ナカニワ'",
+      "sha256": "5b08933a68daa2250d6d2f47efba1e4c76b8955c8d586444f98b04b2e597af7e"
+    },
+    {
+      "file": "5c0f-5b66-6821.mp3",
+      "written": "小学校",
+      "reading": "しょうがっこう",
+      "sourceText": "小学校",
+      "kana": "ショオガ'ッコオ",
+      "sha256": "e6bb5839c510be6e82aa1ad2443acc5b59a74d9222285d927963e43b4bc3db3b"
+    },
+    {
+      "file": "5c0f-3055-3044.mp3",
+      "written": "小さい",
+      "reading": "ちいさい",
+      "sourceText": "小さい",
+      "kana": "チイサ'イ",
+      "sha256": "1d01603b1176abec03b08cf97e1fe1a8e6d39fe56362d604b51cf0dea58c4c5a"
+    },
+    {
+      "file": "6728-306e-4e0a.mp3",
+      "written": "木の上",
+      "reading": "きのうえ",
+      "sourceText": "木の上",
+      "kana": "キ'ノウエ",
+      "sha256": "3f103376376d95e23c3bd11456aeca6b9a35799fbf3414f326590b78e9cbf2c9"
+    },
+    {
+      "file": "4e0a-3052-308b.mp3",
+      "written": "上げる",
+      "reading": "あげる",
+      "sourceText": "上げる",
+      "kana": "アゲル'",
+      "sha256": "cd31ff1db417c93ca7b108e7da3b2601fccb83f3873e67e749af833edb9cd9d6"
+    },
+    {
+      "file": "4e0a-304e.mp3",
+      "written": "上ぎ",
+      "reading": "うわぎ",
+      "sourceText": "上ぎ",
+      "kana": "ウワギ'",
+      "sha256": "42d08cd047eec0726f4b08d5f83e65982b5703db7cac64bc49b25937365fa8da"
+    },
+    {
+      "file": "6728-306e-4e0b.mp3",
+      "written": "木の下",
+      "reading": "きのした",
+      "sourceText": "木の下",
+      "kana": "キ'ノ/シタ'",
+      "sha256": "5b401a872a03a87678a9bd103e89e35347016f8776d6b074391b7f041b1e3164"
+    },
+    {
+      "file": "4e0b-3052-308b.mp3",
+      "written": "下げる",
+      "reading": "さげる",
+      "sourceText": "下げる",
+      "kana": "サゲ'ル",
+      "sha256": "8c3ce7267721492e3d567cf2ada8b4291aebd58e4a6f7534c097cf2e76695f54"
+    },
+    {
+      "file": "4e0b-6821.mp3",
+      "written": "下校",
+      "reading": "げこう",
+      "sourceText": "下校",
+      "kana": "ゲコオ'",
+      "sha256": "ab5553f159fb7a21ba9950aba0f03d54616f45ce625466e7aff36bde8db00d46"
+    },
+    {
+      "file": "5de6-53f3.mp3",
+      "written": "左右",
+      "reading": "さゆう",
+      "sourceText": "左右",
+      "kana": "サ'ユウ",
+      "sha256": "410a4fad822525dc5013516fa5630f8dc6bd11c6c7d1d5f29f0e0d4734badd80"
+    },
+    {
+      "file": "5de6-304c-308f.mp3",
+      "written": "左がわ",
+      "reading": "ひだりがわ",
+      "sourceText": "左側",
+      "kana": "ヒダリガワ'",
+      "sha256": "f4d581eb0d69075b7ec973ca8f0b503fd4f0563cea03a3b5bef8edc074c6f07e"
+    },
+    {
+      "file": "5de6-8db3.mp3",
+      "written": "左足",
+      "reading": "ひだりあし",
+      "sourceText": "左足",
+      "kana": "ヒダリアシ'",
+      "sha256": "29da82f747642ebc9b84b220732a82326bd9baec07fd0da32986a0a0a66989d0"
+    },
+    {
+      "file": "53f3-304c-308f.mp3",
+      "written": "右がわ",
+      "reading": "みぎがわ",
+      "sourceText": "右側",
+      "kana": "ミギガワ'",
+      "sha256": "25e1bd1a1054eff4ac5dec1cf43d4da0224b071cd5498c2a44ac35d77013189f"
+    },
+    {
+      "file": "53f3-624b.mp3",
+      "written": "右手",
+      "reading": "みぎて",
+      "sourceText": "右手",
+      "kana": "ミギテ'",
+      "sha256": "3123973f6586256503a140b22be98468f18a96847707f818d80facdc54a30919"
+    },
+    {
+      "file": "5186-3044.mp3",
+      "written": "円い",
+      "reading": "まるい",
+      "sourceText": "円い",
+      "kana": "マルイ'",
+      "sha256": "4db813abd18a726554aa6d17e9213a67c87dc9fcad7fa2befd0c343f3a5614a1"
+    },
+    {
+      "file": "5186-3070-3093.mp3",
+      "written": "円ばん",
+      "reading": "えんばん",
+      "sourceText": "円盤",
+      "kana": "エンバン'",
+      "sha256": "291aa6aea4fb58d059bbd7f47670fb7b9872aca9c25de88ee32b5e386d02e3ff"
+    },
+    {
+      "file": "5186-3051-3044.mp3",
+      "written": "円けい",
+      "reading": "えんけい",
+      "sourceText": "円形",
+      "kana": "エンケエ'",
+      "sha256": "67ebcd017f46b365c36c8f802ba3a3b33f11da9db766d6baaeaa1e157ea23a4b"
+    },
+    {
+      "file": "529b-3082-3061.mp3",
+      "written": "力もち",
+      "reading": "ちからもち",
+      "sourceText": "力持ち",
+      "kana": "チカラ'モチ",
+      "sha256": "fd938baebd776e96d1a9a079e6ed14de8a6300e5d67e4582c271e8b0ca72201b"
+    },
+    {
+      "file": "5b66-529b.mp3",
+      "written": "学力",
+      "reading": "がくりょく",
+      "sourceText": "学力",
+      "kana": "ガク'リョク",
+      "sha256": "8722dcfda76468ea0e3dc662aee251b269c039a6e1af083e82c0d8ce12e4e325"
+    },
+    {
+      "file": "304b-3044-529b.mp3",
+      "written": "かい力",
+      "reading": "かいりき",
+      "sourceText": "怪力",
+      "kana": "カイリキ'",
+      "sha256": "9b91171029d85281467ba28477d6d21e282bf3e6a6921432a998c121bd04d159"
+    },
+    {
+      "file": "53e3-3076-3048.mp3",
+      "written": "口ぶえ",
+      "reading": "くちぶえ",
+      "sourceText": "口笛",
+      "kana": "クチブエ'",
+      "sha256": "a145a7e0738f583e57701e51ec27c8106509ab8741017ed45caf6e6c14eb6988"
+    },
+    {
+      "file": "53e3-3079-306b.mp3",
+      "written": "口べに",
+      "reading": "くちべに",
+      "sourceText": "口紅",
+      "kana": "クチベニ'",
+      "sha256": "b5485375f2da4d4c1c5b03fb4678a529c7394cb6772b9363e300cdcd8bbdd07e"
+    },
+    {
+      "file": "4eba-53e3.mp3",
+      "written": "人口",
+      "reading": "じんこう",
+      "sourceText": "人口",
+      "kana": "ジンコオ'",
+      "sha256": "45be80621a35ba3910184af04903a4715b433227fd1f126dfdbeda3981c9c558"
+    },
+    {
+      "file": "76ee-3068-53e3.mp3",
+      "written": "目と口",
+      "reading": "めとくち",
+      "sourceText": "目と口",
+      "kana": "メ'トクチ",
+      "sha256": "bc5ce20699ad67e0018bdb301b8cad9c361dc94f2ced2a69c87e54378b781549"
+    },
+    {
+      "file": "76ee-3064-304d.mp3",
+      "written": "目つき",
+      "reading": "めつき",
+      "sourceText": "目つき",
+      "kana": "メ'ツキ",
+      "sha256": "545f5b9f9c24180b8a783b0b817f134d8648f25c65438613c86a83594f081b18"
+    },
+    {
+      "file": "76ee-3066-304d.mp3",
+      "written": "目てき",
+      "reading": "もくてき",
+      "sourceText": "目的",
+      "kana": "モクテキ'",
+      "sha256": "3da5a68ad35981490591f73c002eef440e653da5e8b3aef14a0429b6723fcf73"
+    },
+    {
+      "file": "624b-304f-3073.mp3",
+      "written": "手くび",
+      "reading": "てくび",
+      "sourceText": "手首",
+      "kana": "テ'クビ",
+      "sha256": "1518d03f9f33199a72638c17d7b5afd4067e76ca5c8f0a218fbe8479e7d405c2"
+    },
+    {
+      "file": "306f-304f-624b.mp3",
+      "written": "はく手",
+      "reading": "はくしゅ",
+      "sourceText": "拍手",
+      "kana": "ハ'クシュ",
+      "sha256": "06fda0b2fbd117867cdaee83b38d04899fd9017f44ead0b51999f9506628d02c"
+    },
+    {
+      "file": "8db3-3042-3068.mp3",
+      "written": "足あと",
+      "reading": "あしあと",
+      "sourceText": "足跡",
+      "kana": "アシア'ト",
+      "sha256": "5b09653d5eb5f7c51bf8d53ad2540a955728c2aac12a0571454b6e4da08375bd"
+    },
+    {
+      "file": "8db3-304f-3073.mp3",
+      "written": "足くび",
+      "reading": "あしくび",
+      "sourceText": "足首",
+      "kana": "アシ'クビ",
+      "sha256": "b08927b07d1c4304d981e87e3799919d163ddbb1e6add53246f1a652270b860a"
+    },
+    {
+      "file": "4e00-8db3.mp3",
+      "written": "一足",
+      "reading": "いっそく",
+      "sourceText": "一足",
+      "kana": "イッソク'",
+      "sha256": "b504d1ea9a3a29be4ea8af6aa68d8d631a1b78218d1def121c64561d70edf16f"
+    },
+    {
+      "file": "8033-305f-3076.mp3",
+      "written": "耳たぶ",
+      "reading": "みみたぶ",
+      "sourceText": "耳たぶ",
+      "kana": "ミミタ'ブ",
+      "sha256": "44aaeef981376c609f06f43fe4ab1591a25117b3ce4e601100e07777d0dea310"
+    },
+    {
+      "file": "8033-3046-3061.mp3",
+      "written": "耳うち",
+      "reading": "みみうち",
+      "sourceText": "耳打ち",
+      "kana": "ミミウチ'",
+      "sha256": "0391b8264e069419fc097858c229d7f9733e82721b67aaf9e66971c56be29944"
+    },
+    {
+      "file": "76ee-3068-8033.mp3",
+      "written": "目と耳",
+      "reading": "めとみみ",
+      "sourceText": "目と耳",
+      "kana": "メ'ト/ミミ'",
+      "sha256": "86ce62f567071282b1f17b36dfdf21f90ae2a673e745fb053ae49ab0096d56bc"
+    },
+    {
+      "file": "97f3-3077.mp3",
+      "written": "音ぷ",
+      "reading": "おんぷ",
+      "sourceText": "音符",
+      "kana": "オンプ'",
+      "sha256": "48f9acd3cf3c8717284ec30996d783de67e26d8251f86151901c6ea973d75cf5"
+    },
+    {
+      "file": "96e8-306e-97f3.mp3",
+      "written": "雨の音",
+      "reading": "あめのおと",
+      "sourceText": "雨の音",
+      "kana": "ア'メノ/オト'",
+      "sha256": "c672abd6c56258270b5e35ffc25526d9baf3ba825fe85cf58d8a5cd7236060ed"
+    },
+    {
+      "file": "97f3-8272.mp3",
+      "written": "音色",
+      "reading": "ねいろ",
+      "sourceText": "音色",
+      "kana": "ネイロ'",
+      "sha256": "25d1f047e3ed2cc6e3f4fa14b22514ebdf896893963aac12ea4a8d05fc5b4124"
+    },
+    {
+      "file": "898b-308b.mp3",
+      "written": "見る",
+      "reading": "みる",
+      "sourceText": "見る",
+      "kana": "ミ'ル",
+      "sha256": "156900e6cfd99f81fff0bb1cdea1831ecc3ce3982f9a78c1c62ff0f2af870b97"
+    },
+    {
+      "file": "898b-3048-308b.mp3",
+      "written": "見える",
+      "reading": "みえる",
+      "sourceText": "見える",
+      "kana": "ミエ'ル",
+      "sha256": "303ed87aaa78951ebf2912d60eb9822c2944b49b70a80b85f31cb8ee0cf0ac92"
+    },
+    {
+      "file": "898b-5b66.mp3",
+      "written": "見学",
+      "reading": "けんがく",
+      "sourceText": "見学",
+      "kana": "ケンガク'",
+      "sha256": "73c5f7a20cb5e8fa625490b26b98b989029addcecb1c7bb8670a242310d244f0"
+    },
+    {
+      "file": "7acb-3064.mp3",
+      "written": "立つ",
+      "reading": "たつ",
+      "sourceText": "立つ",
+      "kana": "タ'ツ",
+      "sha256": "7bb57aadf799c84ee26829887382617f66898c9fdb78a950ad7fd0f5b96bfcd6"
+    },
+    {
+      "file": "7acb-3066-308b.mp3",
+      "written": "立てる",
+      "reading": "たてる",
+      "sourceText": "立てる",
+      "kana": "タテ'ル",
+      "sha256": "db32b0f5516b516cd590be8eaf961ce291b2cebb3c310b50220a9b1fe52977fe"
+    },
+    {
+      "file": "304d-7acb.mp3",
+      "written": "き立",
+      "reading": "きりつ",
+      "sourceText": "起立",
+      "kana": "キリ'ツ",
+      "sha256": "7f914a17b353bcb2ec3fd8e4bd5ab0600216ebc484d6be974e9248eace84058b"
+    },
+    {
+      "file": "4f11-3080.mp3",
+      "written": "休む",
+      "reading": "やすむ",
+      "sourceText": "休む",
+      "kana": "ヤス'ム",
+      "sha256": "33dab4bf01021b79e767e035b0dfe1a4d76ab2c4050fa83086abc8edb8f858fe"
+    },
+    {
+      "file": "4f11-3081-308b.mp3",
+      "written": "休める",
+      "reading": "やすめる",
+      "sourceText": "休める",
+      "kana": "ヤスメ'ル",
+      "sha256": "d0472a423775be7c1e65ba1c49340c1381158cc7e712864b11286d1ec9526a6f"
+    },
+    {
+      "file": "4f11-65e5.mp3",
+      "written": "休日",
+      "reading": "きゅうじつ",
+      "sourceText": "休日",
+      "kana": "キュウジツ'",
+      "sha256": "6329185ee5d9374d401869d68fcf86bf233f510cad4bfff53a58377bf8a9a0af"
+    },
+    {
+      "file": "51fa-308b.mp3",
+      "written": "出る",
+      "reading": "でる",
+      "sourceText": "出る",
+      "kana": "デ'ル",
+      "sha256": "e27c2587be9994d27852c3c51b7b0238da1e73aa869a693875bb99689735d9cb"
+    },
+    {
+      "file": "51fa-3059.mp3",
+      "written": "出す",
+      "reading": "だす",
+      "sourceText": "出す",
+      "kana": "ダ'ス",
+      "sha256": "d01461a6e57e3507c7bc3ef4cf746351c03062663d80e0dc16f9b76daa560a75"
+    },
+    {
+      "file": "51fa-3071-3064.mp3",
+      "written": "出ぱつ",
+      "reading": "しゅっぱつ",
+      "sourceText": "出発",
+      "kana": "シュッパツ'",
+      "sha256": "bf9897e71e4a84130a9d74feacbb9069cdbdc7c718bdb267e6c2fab21d3a25da"
+    },
+    {
+      "file": "5165-308b.mp3",
+      "written": "入る",
+      "reading": "はいる",
+      "sourceText": "入る",
+      "kana": "ハ'イル",
+      "sha256": "2edfde4fcc0849f5280ce8910f97b84dbedc9a9cda107cffcc9413a4dca618c9"
+    },
+    {
+      "file": "5165-5b66.mp3",
+      "written": "入学",
+      "reading": "にゅうがく",
+      "sourceText": "入学",
+      "kana": "ニュウガク'",
+      "sha256": "dc4357df2e1403e70693fd8a199be92c485954035a52dc4d5a823acc86ac90a8"
+    },
+    {
+      "file": "5165-308a-53e3.mp3",
+      "written": "入り口",
+      "reading": "いりぐち",
+      "sourceText": "入り口",
+      "kana": "イリグチ'",
+      "sha256": "5942d171c953d252e559a675a1c85c2c9511dc1045a0464edf540fd3645405f9"
+    },
+    {
+      "file": "5973-5b50.mp3",
+      "written": "女子",
+      "reading": "じょし",
+      "sourceText": "女子",
+      "kana": "ジョ'シ",
+      "sha256": "d48b96db8c8922c723f5cf0a10b68aa870fc74c36dcf0a15d2b1900efd9ce4bd"
+    },
+    {
+      "file": "5973-306e-4eba.mp3",
+      "written": "女の人",
+      "reading": "おんなのひと",
+      "sourceText": "女の人",
+      "kana": "オンナ'ノ/ヒト'",
+      "sha256": "4af5977d2340ca29a1e32f97ed472791bebe6d5d260a6326fb2abaa9fcd4c187"
+    },
+    {
+      "file": "5973-3068-7537.mp3",
+      "written": "女と男",
+      "reading": "おんなとおとこ",
+      "sourceText": "女と男",
+      "kana": "オンナ'ト/オトコ'",
+      "sha256": "0df64ba79e0f440f6440434580c7f9bc0137ff2a2db33a4377aa1336d91413e8"
+    },
+    {
+      "file": "7537-5b50.mp3",
+      "written": "男子",
+      "reading": "だんし",
+      "sourceText": "男子",
+      "kana": "ダ'ンシ",
+      "sha256": "f75c2a2e35ffa143c71a2c73f8089f1a9d24db2dd513f95d660a4434b2f86680"
+    },
+    {
+      "file": "7537-306e-4eba.mp3",
+      "written": "男の人",
+      "reading": "おとこのひと",
+      "sourceText": "男の人",
+      "kana": "オトコ'ノ/ヒト'",
+      "sha256": "4997d4cdf83e5dc0b3a92a5d4fca177c9fb336bdbd2db16157d634d267a0c75c"
+    },
+    {
+      "file": "7537-306e-5b50.mp3",
+      "written": "男の子",
+      "reading": "おとこのこ",
+      "sourceText": "男の子",
+      "kana": "オトコ'ノコ",
+      "sha256": "609817314e4fda44e81b3a8ac80d53a0288d88b198ddca7643c453da62e00b68"
+    },
+    {
+      "file": "5b50-3069-3082.mp3",
+      "written": "子ども",
+      "reading": "こども",
+      "sourceText": "子供",
+      "kana": "コドモ'",
+      "sha256": "7d23adc4aae6339d3906ca1a94f449fffaf5149e743d33cefc79de9e0494636c"
+    },
+    {
+      "file": "5b50-72ac.mp3",
+      "written": "子犬",
+      "reading": "こいぬ",
+      "sourceText": "子犬",
+      "kana": "コイヌ'",
+      "sha256": "70a69611865ca614361a65a5137ccfadf3f0552e0985c3f93bef167642fab84d"
+    },
+    {
+      "file": "4eba-3054-307f.mp3",
+      "written": "人ごみ",
+      "reading": "ひとごみ",
+      "sourceText": "人込み",
+      "kana": "ヒトゴミ'",
+      "sha256": "2734fa58f76b79a7cca0e1769a46d20b4daff6cf6eef237d3d99c7cb63782fbf"
+    },
+    {
+      "file": "540d-4eba.mp3",
+      "written": "名人",
+      "reading": "めいじん",
+      "sourceText": "名人",
+      "kana": "メエジ'ン",
+      "sha256": "db99a6c714c51ccb85a319ef6f0f97df229e4c6a73a9e145793d289050245915"
+    },
+    {
+      "file": "4eba-3052-3093.mp3",
+      "written": "人げん",
+      "reading": "にんげん",
+      "sourceText": "人間",
+      "kana": "ニンゲン'",
+      "sha256": "209c74b6ff1b5a586d79425cf7bff433dff120b4cbb2de0e38a260c6ee486de8"
+    },
+    {
+      "file": "540d-524d.mp3",
+      "written": "名前",
+      "reading": "なまえ",
+      "sourceText": "名前",
+      "kana": "ナマエ'",
+      "sha256": "819150f562b80480b52e02ed7517da5b5cb2a6cf810ae7f80f3fdcd21bd6b18a"
+    },
+    {
+      "file": "672c-540d.mp3",
+      "written": "本名",
+      "reading": "ほんみょう",
+      "sourceText": "本名",
+      "kana": "ホ'ンミョオ",
+      "sha256": "e19d28c903f2fa3732996f3bb00b77c1566949273ca8fc9cf407f4e2772b459d"
+    },
+    {
+      "file": "304b-3093-5b57.mp3",
+      "written": "かん字",
+      "reading": "かんじ",
+      "sourceText": "漢字",
+      "kana": "カンジ'",
+      "sha256": "465c61b9422877fd8594b49dcea394b2a981270a7210c4370b84ed2803668e75"
+    },
+    {
+      "file": "3059-3046-5b57.mp3",
+      "written": "すう字",
+      "reading": "すうじ",
+      "sourceText": "数字",
+      "kana": "スウジ'",
+      "sha256": "e777fcb52eb5a7390ca5d92b34849493e9545979b9e8bdb5c65a6078ade46156"
+    },
+    {
+      "file": "3066-3093-5b57.mp3",
+      "written": "てん字",
+      "reading": "てんじ",
+      "sourceText": "点字",
+      "kana": "テンジ'",
+      "sha256": "72e90ec67266cbdb73b8d6f2f94c2cd8be3ee6e71925cce698acd956e12b0383"
+    },
+    {
+      "file": "3055-304f-6587.mp3",
+      "written": "さく文",
+      "reading": "さくぶん",
+      "sourceText": "作文",
+      "kana": "サクブン'",
+      "sha256": "34d4803cd95d8c8a6b22a631b5a4d1daba1afa1ddd7b5f8cf44f2e0d9015a8af"
+    },
+    {
+      "file": "6587-5b66.mp3",
+      "written": "文学",
+      "reading": "ぶんがく",
+      "sourceText": "文学",
+      "kana": "ブ'ンガク",
+      "sha256": "bee2bc2bada970486639e5af594e44d37d4315bd5b52523eab5016016113f95d"
+    },
+    {
+      "file": "6587-306a-3057.mp3",
+      "written": "文なし",
+      "reading": "もんなし",
+      "sourceText": "文なし",
+      "kana": "モンナシ'",
+      "sha256": "59ee486a02d946e4c3514fd391ccdbc4da91738b1b18d1ac1cfd1610c8c95b15"
+    },
+    {
+      "file": "3048-672c.mp3",
+      "written": "え本",
+      "reading": "えほん",
+      "sourceText": "絵本",
+      "kana": "エホ'ン",
+      "sha256": "c6cf4802411234445c096722f2618a41b321ea058c318015a24d67e65a6e8420"
+    },
+    {
+      "file": "672c-3060-306a.mp3",
+      "written": "本だな",
+      "reading": "ほんだな",
+      "sourceText": "本棚",
+      "kana": "ホ'ンダナ",
+      "sha256": "f17611857b7f003a66c5fa16d5f91b81418181793dde0ff826e03ec111946e0d"
+    },
+    {
+      "file": "672c-3068-3046.mp3",
+      "written": "本とう",
+      "reading": "ほんとう",
+      "sourceText": "本当",
+      "kana": "ホントオ'",
+      "sha256": "cfb2cdea8a943ebd0add1482db182bdefdcc26008ebe035e3ea7e92514ceb0bc"
+    },
+    {
+      "file": "5b66-5e74.mp3",
+      "written": "学年",
+      "reading": "がくねん",
+      "sourceText": "学年",
+      "kana": "ガクネン'",
+      "sha256": "889403a629f769352455d2ad2e660a39389cf0373c0a9297dbe7ca8a87027541"
+    },
+    {
+      "file": "5c0f-5b66-751f.mp3",
+      "written": "小学生",
+      "reading": "しょうがくせい",
+      "sourceText": "小学生",
+      "kana": "ショオガ'クセエ",
+      "sha256": "f32d605a1a72c0b571b632de50660ca86356c99af30258e444ca6c39765f7551"
+    },
+    {
+      "file": "5b66-3076.mp3",
+      "written": "学ぶ",
+      "reading": "まなぶ",
+      "sourceText": "学ぶ",
+      "kana": "マナブ'",
+      "sha256": "9fb888f0e9498d0279a7b7a6b84315a93d42108512b7e4ff6e0e9fb9dbc7ac20"
+    },
+    {
+      "file": "6821-5ead.mp3",
+      "written": "校庭",
+      "reading": "こうてい",
+      "sourceText": "校庭",
+      "kana": "コオテエ'",
+      "sha256": "115f81ff8215d5e7e9ccd73560b6d85935d794e1613d6d780fac4997769bbc18"
+    },
+    {
+      "file": "3066-3093-6821.mp3",
+      "written": "てん校",
+      "reading": "てんこう",
+      "sourceText": "転校",
+      "kana": "テンコオ'",
+      "sha256": "25eeafa81585b1edcdbef5a4daea09a325df8718b9036a76ac390d5a55e01279"
+    },
+    {
+      "file": "5148-751f.mp3",
+      "written": "先生",
+      "reading": "せんせい",
+      "sourceText": "先生",
+      "kana": "センセ'エ",
+      "sha256": "10e44d9fecac1503dcfc64a1f192d931537863cb4e32a9a3989e132d32cbd97b"
+    },
+    {
+      "file": "5148-3068-3046.mp3",
+      "written": "先とう",
+      "reading": "せんとう",
+      "sourceText": "先とう",
+      "kana": "セントウ'",
+      "sha256": "d0be59ae0079a4d426e6644818418acc7da3698d190148cdfb291f5fc5389417"
+    },
+    {
+      "file": "8db3-306e-5148.mp3",
+      "written": "足の先",
+      "reading": "あしのさき",
+      "sourceText": "足の先",
+      "kana": "アシ'ノ/サキ'",
+      "sha256": "8f0027f446b8f930bc9f5b77645834ad289f59c76973976bf882d42dd7ebc818"
+    },
+    {
+      "file": "751f-3080.mp3",
+      "written": "生む",
+      "reading": "うむ",
+      "sourceText": "生む",
+      "kana": "ウム'",
+      "sha256": "f212def1375e38f3978d63987fafbe23f683481971dc56ee6eba8e4990926fdd"
+    },
+    {
+      "file": "751f-304d-308b.mp3",
+      "written": "生きる",
+      "reading": "いきる",
+      "sourceText": "生きる",
+      "kana": "イキ'ル",
+      "sha256": "59b9b64007cb9c9defc971477ad5fc1fcd50d84915e90e05bb85d474cb29c7c1"
+    },
+    {
+      "file": "751f-3082-306e.mp3",
+      "written": "生もの",
+      "reading": "なまもの",
+      "sourceText": "生もの",
+      "kana": "ナマ'モノ",
+      "sha256": "4d59e08cb344dfdb4da666cab4e3e50dbde781f3fe8a098ce838baf03c2fc285"
+    },
+    {
+      "file": "65e9-3044.mp3",
+      "written": "早い",
+      "reading": "はやい",
+      "sourceText": "早い",
+      "kana": "ハヤ'イ",
+      "sha256": "fece1a1536d6cc7d10ec1535e276cd9ba2a587a415b06380fcd055f37a1a0249"
+    },
+    {
+      "file": "65e9-8db3.mp3",
+      "written": "早足",
+      "reading": "はやあし",
+      "sourceText": "早足",
+      "kana": "ハヤ'アシ",
+      "sha256": "083f74997f1fc7f308bf32969e88936660e6ce3dc691dc7dd741be2e71dec341"
+    },
+    {
+      "file": "65e9-3081-308b.mp3",
+      "written": "早める",
+      "reading": "はやめる",
+      "sourceText": "早める",
+      "kana": "ハヤメ'ル",
+      "sha256": "0f1a524b812d485f755690de902c31d98daa0ceece1f5cec3d17d5f684e418a2"
+    },
+    {
+      "file": "6b63-3057-3044.mp3",
+      "written": "正しい",
+      "reading": "ただしい",
+      "sourceText": "正しい",
+      "kana": "タダシ'イ",
+      "sha256": "d17cb0259cb7be4bd4e6963db3c4c681747b9d0430e5d1039093dfe2ecedd02a"
+    },
+    {
+      "file": "6b63-3058-304d.mp3",
+      "written": "正じき",
+      "reading": "しょうじき",
+      "sourceText": "正じき",
+      "kana": "ショウジ'キ",
+      "sha256": "ca88a0570f00708ce282f3d7eb06363de5b9fb92ffd086ff2f3e049cefaffc44"
+    },
+    {
+      "file": "6b63-304b-3044.mp3",
+      "written": "正かい",
+      "reading": "せいかい",
+      "sourceText": "正かい",
+      "kana": "セイカイ'",
+      "sha256": "e44b47caa92b1931293121364e9e37e5467f56503271645931ee0d054c360274"
+    },
+    {
+      "file": "738b-3055-307e.mp3",
+      "written": "王さま",
+      "reading": "おうさま",
+      "sourceText": "王様",
+      "kana": "オオサマ'",
+      "sha256": "2cccc29310adc39eecf2f6d83c5fe6ca5342c6438f069ee442cf67d8c98cdddb"
+    },
+    {
+      "file": "738b-304b-3093.mp3",
+      "written": "王かん",
+      "reading": "おうかん",
+      "sourceText": "王冠",
+      "kana": "オオカン'",
+      "sha256": "d66d421f69463e91725ba904729eb4046bc80238edacd34ab49f60ec5594dabb"
+    },
+    {
+      "file": "3053-304f-738b.mp3",
+      "written": "こく王",
+      "reading": "こくおう",
+      "sourceText": "国王",
+      "kana": "コクオ'オ",
+      "sha256": "c2aebb5c46f49dddab8d3cf47aad13003f3ff315a8e052c4cd84e9c471f64a20"
+    },
+    {
+      "file": "7389-866b.mp3",
+      "written": "玉虫",
+      "reading": "たまむし",
+      "sourceText": "玉虫",
+      "kana": "タマ'ムシ",
+      "sha256": "8499a217c1b8460af45a1a886585eccc87873f7e98721ab98ef39aeb7186c381"
+    },
+    {
+      "file": "767e-5186-7389.mp3",
+      "written": "百円玉",
+      "reading": "ひゃくえんだま",
+      "sourceText": "百円玉",
+      "kana": "ヒャクエンダマ'",
+      "sha256": "6d26964427fe672e4c124e12504c981b3e035c1dddc1a71d9eafc0c90cc24dd2"
+    },
+    {
+      "file": "7389-624b-3070-3053.mp3",
+      "written": "玉手ばこ",
+      "reading": "たまてばこ",
+      "sourceText": "玉手箱",
+      "kana": "タマテ'バコ",
+      "sha256": "9aeb2583c26315fcfd723ac5a5201c89601ff37c9fdddbfdd9215a090f6ae768"
+    },
+    {
+      "file": "767d-3044-7cf8.mp3",
+      "written": "白い糸",
+      "reading": "しろいいと",
+      "sourceText": "白い糸",
+      "kana": "シロ'イ/イ'ト",
+      "sha256": "cda0b13366c50946ed4bc7b2526a6e7b1f0cb47379336525c735a2287d450be6"
+    },
+    {
+      "file": "8d64-3044-7cf8.mp3",
+      "written": "赤い糸",
+      "reading": "あかいいと",
+      "sourceText": "赤い糸",
+      "kana": "アカイイ'ト",
+      "sha256": "eae22a7bd2b1e7c7e6f44c5367c84fbea7f62cb5f6f88c213d7a2ca0640cae7c"
+    },
+    {
+      "file": "304d-306c-7cf8.mp3",
+      "written": "きぬ糸",
+      "reading": "きぬいと",
+      "sourceText": "絹糸",
+      "kana": "キヌイト'",
+      "sha256": "9c69160f1ffc3751c2d37df3767ce5eeb935054b4e0d15234a4132aa8777ef4d"
+    },
+    {
+      "file": "9752-3044-8eca.mp3",
+      "written": "青い車",
+      "reading": "あおいくるま",
+      "sourceText": "青い車",
+      "kana": "アオ'イ/クルマ'",
+      "sha256": "e02a2c6aa6c6c664fe78e8955b5962302bcfdd9bedc7b63a276bf4e1537346aa"
+    },
+    {
+      "file": "3067-3093-8eca.mp3",
+      "written": "でん車",
+      "reading": "でんしゃ",
+      "sourceText": "でん車",
+      "kana": "デンシャ'",
+      "sha256": "8c957aefda2020204319cf28690d9a97fd3ece3c8ae402fb5006cd9268b19214"
+    },
+    {
+      "file": "8eca-308a-3093.mp3",
+      "written": "車りん",
+      "reading": "しゃりん",
+      "sourceText": "車りん",
+      "kana": "シャリン'",
+      "sha256": "9741c89e2d02d5e4a2c5613d5619986264d78eb352ef506babce90f06269b571"
+    },
+    {
+      "file": "6751-306e-4eba.mp3",
+      "written": "村の人",
+      "reading": "むらのひと",
+      "sourceText": "村の人",
+      "kana": "ムラ'ノ/ヒト'",
+      "sha256": "c818b99af538d4dbe9352eb4e0fefaaa8278154a62e3bd7f280c2a625a66375f"
+    },
+    {
+      "file": "753a-3068-6751.mp3",
+      "written": "町と村",
+      "reading": "まちとむら",
+      "sourceText": "町と村",
+      "kana": "マチ'ト/ムラ'",
+      "sha256": "c0faa6fe2afc5e1a87a745c6d46498436b23bf53e1e67dd59afe0e37b7d4e2e8"
+    },
+    {
+      "file": "5c71-6751.mp3",
+      "written": "山村",
+      "reading": "さんそん",
+      "sourceText": "山村",
+      "kana": "サンソン'",
+      "sha256": "516a2b4976a04fb0350856a4fbcddd1ff5f059be2fcd6c9f7ed1d485e6e4fa31"
+    },
+    {
+      "file": "753a-306a-307f.mp3",
+      "written": "町なみ",
+      "reading": "まちなみ",
+      "sourceText": "町並み",
+      "kana": "マチナミ'",
+      "sha256": "d75c0d6756d4186c51833f9f279798e7491188cd3d5afb702c60cada1e230a7c"
+    },
+    {
+      "file": "753a-306e-4e2d.mp3",
+      "written": "町の中",
+      "reading": "まちのなか",
+      "sourceText": "町の中",
+      "kana": "マチ'ノナカ",
+      "sha256": "772964f27aa3c20e866747d15b9ca905b3f9014780476744c6847d7d4e20fcd7"
+    },
+    {
+      "file": "753a-6751.mp3",
+      "written": "町村",
+      "reading": "ちょうそん",
+      "sourceText": "町村",
+      "kana": "チョ'オソン",
+      "sha256": "f20bfc9f6d6093f2ea5d8307b78cd20a176dd4f35dd1f93ae050a2e5a1c7e6e8"
+    }
+  ]
+}

@@ -78,7 +78,6 @@
   --action-border: #d3dfd7;
   --action-hover-bg: #deebe3;
   --action-hover-border: #9eb8a8;
-  --action-divider: #a9bfb1;
   /* The kanji's Info button is blue, like the collection kanji that also open its window. */
   --info-text: #1c6394;
   --info-strong: #134a70;
@@ -175,7 +174,6 @@
   --action-border: #2e4a3c;
   --action-hover-bg: #22392d;
   --action-hover-border: #4d7a64;
-  --action-divider: #4d7a64;
   --info-text: #86b9e3;
   --info-strong: #b5d6f1;
   --info-bg: #1a2733;
@@ -348,7 +346,6 @@ h2 { margin: 0; font-size: 21px; font-weight: 550; letter-spacing: -.4px; }
 .study-action.info-button { flex-basis: auto; width: auto; gap: 4px; padding-inline: 6px; border-color: var(--info-border); background: var(--info-bg); color: var(--info-text); }
 .study-action.info-button:hover { background: var(--info-hover-bg); border-color: var(--info-hover-border); color: var(--info-strong); }
 .study-action.info-button:focus-visible { outline-color: var(--info-text); }
-.audio-origin { flex-shrink: 0; padding-left: 3px; border-left: 1px solid var(--action-divider); color: var(--accent); font-size: 7px; font-weight: 650; line-height: 1.2; }
 .audio-status { margin: 0 0 14px; color: var(--accent); font-size: 14px; }
 .audio-status:empty { display: none; }
 .difficulty-badge { display: inline-flex; align-items: center; justify-content: center; padding: 0 2px; color: var(--no-difficulty); }
@@ -846,7 +843,6 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-block, .kanji-dialog-examples, .kanji-sentence-list { --study-control-width: 60px; }
   .study-action { gap: 3px; padding-inline: 2px; font-size: 11px; }
   .study-action .study-action-icon { flex-basis: 11px; width: 11px; height: 11px; }
-  .audio-origin { font-size: 8px; }
   /* Narrower kana columns show four syllables at once instead of three. */
   .study-results--kana { --kana-column-width: 84px; }
   .kana-chart--combined { --kana-column-width: 104px; }

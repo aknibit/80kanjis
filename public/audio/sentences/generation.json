@@ -16,33 +16,6 @@
   "sampleRate": 24000,
   "encoder": "LAME (lameenc 1.9.0), MP3 32 kbps mono",
   "deterministic": false,
-  "replacements": [
-    {
-      "from": "描きます",
-      "to": "書きます",
-      "reason": "La lectura es かきます; el motor lee えがきます. 書きます suena igual, con el mismo acento."
-    },
-    {
-      "from": "かれは",
-      "to": "彼は",
-      "reason": "En hiragana, el motor lee かれは como 枯れ葉 («kareha»). 彼は suena igual, con el acento [1] de かれの."
-    },
-    {
-      "from": "わたしは えが",
-      "to": "わたしは 絵が",
-      "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual."
-    },
-    {
-      "from": " いしゃです",
-      "to": " 医者です",
-      "reason": "Tras は, el motor oye はいしゃ (歯医者). 医者 suena igual; una palabra いしゃ en el diccionario partiría かいしゃ."
-    },
-    {
-      "from": "下で",
-      "to": "したで",
-      "reason": "El motor lee 下で como もとで. したで suena igual; una palabra 下 en el diccionario estropearía 川下, 下校 y 下手."
-    }
-  ],
   "dictionary": [
     {
       "surface": "日本",
@@ -63,91 +36,91 @@
       "pronunciation": "ナナイロ",
       "accentType": 2,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (ナナ'イロ); el motor dice ななしょく."
+      "reason": "La colección lo lee なないろ, con acento [2] (ナナ'イロ); el motor dice ななしょく."
     },
     {
       "surface": "竹林",
       "pronunciation": "タケバヤシ",
       "accentType": 4,
       "wordType": "COMMON_NOUN",
-      "reason": "La colección lo lee たけばやし, como el audio de la palabra; el motor dice ちくりん."
+      "reason": "La colección lo lee たけばやし; el motor dice ちくりん."
     },
     {
       "surface": "まつ林",
       "pronunciation": "マツバヤシ",
       "accentType": 3,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (松林); el motor dice まつりん."
+      "reason": "Acento [3] de 松林; el motor dice まつりん."
     },
     {
       "surface": "空ばこ",
       "pronunciation": "カラバコ",
       "accentType": 2,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (カラ'バコ); el motor dice そらばこ."
+      "reason": "La colección lo lee からばこ, con acento [2] (カラ'バコ); el motor dice そらばこ."
     },
     {
       "surface": "土き",
       "pronunciation": "ドキ",
       "accentType": 1,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (土器); el motor dice つちき."
+      "reason": "Acento [1] de 土器; el motor dice つちき."
     },
     {
       "surface": "まき貝",
       "pronunciation": "マキガイ",
       "accentType": 2,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (巻貝); el motor dice まきかい."
+      "reason": "Acento [2] de 巻貝; el motor dice まきかい."
     },
     {
       "surface": "ほら貝",
       "pronunciation": "ホラガイ",
       "accentType": 2,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (法螺貝); el motor dice ほらかい."
+      "reason": "Acento [2] de 法螺貝; el motor dice ほらかい."
     },
     {
       "surface": "こん虫",
       "pronunciation": "コンチュウ",
       "accentType": 0,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (昆虫); el motor dice こんむし."
+      "reason": "Acento de 昆虫, sin caída; el motor dice こんむし."
     },
     {
       "surface": "先とう",
       "pronunciation": "セントウ",
       "accentType": 0,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (先頭); el motor dice さきだとう."
+      "reason": "Acento de 先頭, sin caída; el motor dice さきだとう."
     },
     {
       "surface": "文なし",
       "pronunciation": "モンナシ",
       "accentType": 0,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (文無し); el motor dice ぶんなし."
+      "reason": "Acento de 文無し, sin caída; el motor dice ぶんなし."
     },
     {
       "surface": "上ぎ",
       "pronunciation": "ウワギ",
       "accentType": 0,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (上着); el motor dice うえぎ."
+      "reason": "Acento de 上着, sin caída; el motor dice うえぎ."
     },
     {
       "surface": "赤はん",
       "pronunciation": "セキハン",
       "accentType": 3,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (赤飯); el motor dice あかはん."
+      "reason": "Acento [3] de 赤飯; el motor dice あかはん."
     },
     {
       "surface": "雨ぐも",
       "pronunciation": "アマグモ",
       "accentType": 0,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (雨雲); el motor dice あめぐも."
+      "reason": "Acento de 雨雲, sin caída; el motor dice あめぐも."
     },
     {
       "surface": "ほう石",
@@ -217,14 +190,14 @@
       "pronunciation": "クサハラ",
       "accentType": 0,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (sin caída); el motor dice くさわら."
+      "reason": "Acento de 草原 (くさはら), sin caída; el motor dice くさわら."
     },
     {
       "surface": "年より",
       "pronunciation": "トシヨリ",
       "accentType": 3,
       "wordType": "COMMON_NOUN",
-      "reason": "Como el audio de la palabra (年寄り); el motor dice ねんより."
+      "reason": "Acento [3] de 年寄り; el motor dice ねんより."
     },
     {
       "surface": "三歳",
@@ -246,6 +219,106 @@
       "accentType": 2,
       "wordType": "COMMON_NOUN",
       "reason": "Acento de 靴 en el diccionario del motor; tras きれいな, el motor dice ぐつ."
+    },
+    {
+      "surface": "千年",
+      "pronunciation": "センネン",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee せんねん; el motor dice ちとせ. Con el número, el motor pone el acento [1] (セ'ンネン) aunque se le pida otro."
+    }
+  ],
+  "wordSpellings": {
+    "一ぴき": "一匹",
+    "まん月": "満月",
+    "火じ": "火事",
+    "ちょ金": "貯金",
+    "天ごく": "天国",
+    "気もち": "気持ち",
+    "げん気": "元気",
+    "大すき": "大好き",
+    "大へん": "大変",
+    "左がわ": "左側",
+    "右がわ": "右側",
+    "円ばん": "円盤",
+    "目てき": "目的",
+    "子ども": "子供",
+    "人ごみ": "人込み",
+    "人げん": "人間",
+    "本だな": "本棚",
+    "本とう": "本当",
+    "水どう": "水道",
+    "花だん": "花壇",
+    "じ石": "磁石",
+    "口ぶえ": "口笛",
+    "口べに": "口紅",
+    "手くび": "手首",
+    "はく手": "拍手",
+    "足あと": "足跡",
+    "足くび": "足首",
+    "耳うち": "耳打ち",
+    "出ぱつ": "出発",
+    "かん字": "漢字",
+    "すう字": "数字",
+    "さく文": "作文",
+    "王さま": "王様",
+    "王かん": "王冠",
+    "こく王": "国王",
+    "五わ": "五羽",
+    "火のこ": "火の粉",
+    "木かげ": "木陰",
+    "山いも": "山芋",
+    "田うえ": "田植え",
+    "白ぐみ": "白組",
+    "円けい": "円形",
+    "き立": "起立",
+    "え本": "絵本",
+    "町なみ": "町並み",
+    "竹うま": "竹馬",
+    "竹やぶ": "竹藪",
+    "竹わ": "竹輪",
+    "花たば": "花束",
+    "草もち": "草餅",
+    "ざっ草": "雑草",
+    "貝がら": "貝殻",
+    "すず虫": "鈴虫",
+    "虫かご": "虫籠",
+    "雨ふり": "雨降り",
+    "夕がた": "夕方",
+    "夕ぐれ": "夕暮れ",
+    "力もち": "力持ち",
+    "かい力": "怪力",
+    "音ぷ": "音符",
+    "てん字": "点字",
+    "てん校": "転校",
+    "玉手ばこ": "玉手箱",
+    "きぬ糸": "絹糸"
+  },
+  "replacements": [
+    {
+      "from": "描きます",
+      "to": "書きます",
+      "reason": "La lectura es かきます; el motor lee えがきます. 書きます suena igual, con el mismo acento."
+    },
+    {
+      "from": "かれは",
+      "to": "彼は",
+      "reason": "En hiragana, el motor lee かれは como 枯れ葉 («kareha»). 彼は suena igual, con el acento [1] de かれの."
+    },
+    {
+      "from": "わたしは えが",
+      "to": "わたしは 絵が",
+      "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual."
+    },
+    {
+      "from": " いしゃです",
+      "to": " 医者です",
+      "reason": "Tras は, el motor oye はいしゃ (歯医者). 医者 suena igual; una palabra いしゃ en el diccionario partiría かいしゃ."
+    },
+    {
+      "from": "下で",
+      "to": "したで",
+      "reason": "El motor lee 下で como もとで. したで suena igual; una palabra 下 en el diccionario estropearía 川下, 下校 y 下手."
     }
   ],
   "entries": [

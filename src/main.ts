@@ -2,7 +2,7 @@ import { collectionRows, loadCollection } from './lib/collection.ts';
 import { collectionDifficulties, difficultyIcon, difficultyLabels } from './lib/difficulty.ts';
 import { createKanjiSearch } from './lib/search.ts';
 import { createStudyCatalog } from './lib/study-catalog.ts';
-import { pronunciationSource, synthesizedSource } from './data/pronunciations.ts';
+import { audioSource } from './lib/audio.ts';
 import { setupPronunciation } from './pronunciation-ui.ts';
 import { setupKanjiDetails } from './kanji-ui.ts';
 import { getRowDifficulty, getRowFilterState, matchesRowDifficulty } from './lib/row-difficulty.ts';
@@ -87,7 +87,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>En el vocabulario, el kanji de la fila aparece en verde, los otros de los 80 en azul y los avanzados en rojo. Pulsa el kanji verde, el kanji grande de la fila o su botón Info para verlo a pantalla completa y pasar al anterior o al siguiente de la lista, con las flechas del teclado o de la barra superior; los azules y los rojos abren una ventana con su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales.</p>
     <p class="dialog-note">Se conserva la escritura del documento, con las conversiones revisadas a kanji de la colección y los de apoyo 個, 色 y 庭. 時 y 前 ya aparecían en el vocabulario original y también se pueden consultar como kanji de apoyo. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
     <p class="dialog-note">Los significados de los 80 kanji se han revisado y ampliado. Sus lecturas principales se han contrastado con <a href="https://www.edrdg.org/wiki/KANJIDIC_Project.html" target="_blank" rel="noopener">KANJIDIC2, de EDRDG y Jim Breen</a> y <a href="https://www.kanjipedia.jp/" target="_blank" rel="noopener">KanjiPedia</a>. Las aportaciones derivadas de KANJIDIC2 se ofrecen bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. <a href="data/CREDITS.txt" target="_blank" rel="noopener">Fuentes y criterios de revisión</a>.</p>
-    <p class="dialog-note">Pronunciación: grabaciones de <a href="${pronunciationSource.url}" target="_blank" rel="noopener">${pronunciationSource.name}</a>, bajo <a href="${pronunciationSource.licenseUrl}" target="_blank" rel="noopener">${pronunciationSource.license}</a>, sin modificar, con voces de Tokio y Kansai. Los botones con «IA» usan voz generada por <a href="${synthesizedSource.url}" target="_blank" rel="noopener">${synthesizedSource.name}</a> (${synthesizedSource.voice}), bajo sus <a href="${synthesizedSource.termsUrl}" target="_blank" rel="noopener">condiciones de uso</a>. Los audios están pendientes de revisión por un hablante nativo. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Fuentes y créditos de cada audio</a>.</p>
+    <p class="dialog-note">Pronunciación: todos los audios, de las palabras y de las frases, se han generado con <a href="${audioSource.url}" target="_blank" rel="noopener">${audioSource.name}</a> y la voz <a href="${audioSource.voiceUrl}" target="_blank" rel="noopener">${audioSource.voice}</a>, bajo la licencia <a href="${audioSource.licenseUrl}" target="_blank" rel="noopener">${audioSource.license}</a>. Están pendientes de revisión por un hablante nativo. <a href="audio/CREDITS.txt" target="_blank" rel="noopener">Créditos de los audios</a>.</p>
     <div class="dialog-shortcut"><kbd>/</kbd> Buscar <kbd>Esc</kbd> Borrar la búsqueda o cerrar esta ventana</div>
   </dialog>
 
@@ -189,10 +189,7 @@ function start(source: CollectionDocument, difficulty: DifficultySelector) {
     badge.setAttribute('role', 'img');
     badge.setAttribute('aria-label', `Dificultad de ${item.type === 'kanji' ? item.character : item.written}: ${label}`);
     controls.append(badge);
-    if (item.type === 'vocabulary') {
-      const audioButton = pronunciation.createButton(item);
-      if (audioButton) identity.prepend(audioButton);
-    }
+    if (item.type === 'vocabulary') identity.prepend(pronunciation.createButton(item));
     meta.append(controls);
     block.append(meta, content);
     return block;

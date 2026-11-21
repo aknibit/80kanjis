@@ -3,7 +3,7 @@ import { createKanjiReferences, wordKanjiParts, type KanjiReference } from './li
 import { loadKanjiSentences } from './lib/content.ts';
 import { kanjiNeighbours, kanjiParameter } from './lib/kanji-sequence.ts';
 import { vocabularyItemId } from './lib/study-catalog.ts';
-import { sentenceAudioFile, type SentenceGroup } from './lib/sentence-audio.ts';
+import { sentenceAudioFile, type SentenceGroup } from './lib/audio.ts';
 import type { PronunciationControls } from './pronunciation-ui.ts';
 import type { ContentExample, KanjiSentences } from './content-types.ts';
 import type { CollectionDocument, KanjiReadings } from './types.ts';
@@ -362,7 +362,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       japanese.append(written, node('span', 'word-reading', word.reading));
       const meaning = node('p', '', word.meaning);
       example.append(japanese, meaning);
-      const audio = pronunciation?.createButton({ id: vocabularyItemId(word.written), written: word.written, reading: word.reading }, wordStatus);
+      const audio = pronunciation?.createButton({ id: vocabularyItemId(word.written), written: word.written }, wordStatus);
       example.append(itemControls(meaning, audio));
       examples.append(example);
     }
