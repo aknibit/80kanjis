@@ -3,12 +3,12 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import { collectionDocument, studyCatalog } from '../../tests/collection-fixture.ts';
-import { kanjiSentencesFile, parseKanjiSentences } from './content.ts';
+import { kanjiSentencesFile, parseKanjiSentences, parseStudyDocument } from './content.ts';
 import {
-  audioProblems, audioSource, sentenceAudio, sentenceAudioDirectory, sentenceAudioFile, wordAudio, wordAudioDirectory,
-  wordAudioFile, type AudioEntry,
+  audioProblems, audioSource, counterAudioDirectory, counterSentenceAudio, counterSentenceAudioFile, sentenceAudio,
+  sentenceAudioDirectory, sentenceAudioFile, wordAudio, wordAudioDirectory, wordAudioFile, type AudioEntry,
 } from './audio.ts';
-import type { KanjiSentencesDocument } from '../content-types.ts';
+import type { CounterDocument, KanjiSentencesDocument } from '../content-types.ts';
 
 const root = new URL('../../public/', import.meta.url);
 
@@ -34,6 +34,8 @@ const sentences = parseKanjiSentences(await readFile(new URL(kanjiSentencesFile,
 const vocabulary = studyCatalog.items.filter((item) => item.type === 'vocabulary');
 const words = await generated(wordAudioDirectory);
 const sentenceAudios = await generated(sentenceAudioDirectory);
+const counters = parseStudyDocument(await readFile(new URL('content/counters.json', root), 'utf8'), 'counters') as CounterDocument;
+const counterAudios = await generated(counterAudioDirectory);
 
 function assertMp3s(data: ReadonlyMap<string, Buffer>, name: RegExp) {
   for (const [file, bytes] of data) {
@@ -49,6 +51,9 @@ test('an audio is named after its word, or after the kanji, group and place of i
   assert.equal(sentenceAudioFile('一', 'simple', 0), '4e00-s1.mp3');
   assert.equal(sentenceAudioFile('一', 'advanced', 3), '4e00-a4.mp3');
   assert.equal(sentenceAudioFile('林', 'simple', 1), '6797-s2.mp3');
+  assert.equal(counterSentenceAudioFile('hon', 3), 'hon-3.mp3');
+  assert.equal(counterSentenceAudioFile('ten-thousands', 100000), 'ten-thousands-100000.mp3');
+  assert.equal(counterSentenceAudioFile('hon', 'question'), 'hon-q.mp3');
 });
 
 test('each word of the vocabulary has an MP3 generated from its current spelling and reading, with nothing left over', () => {
@@ -63,20 +68,48 @@ test('each of the 480 sentences has an MP3 generated from its current text, with
   assertMp3s(sentenceAudios.data, /^[0-9a-f]+-[sa][1-4]\.mp3$/);
 });
 
+test('each sentence of the counters, and only the sentences, has an MP3 generated from its current text', () => {
+  assert.deepEqual(audioProblems(counterSentenceAudio(counters), counterAudios.generation.entries, counterAudios.hashes), []);
+  const sentenceCount = counters.entries.reduce((total, counter) => total + counter.forms.length + 1, 0);
+  assert.equal(counterAudios.data.size, sentenceCount);
+  assertMp3s(counterAudios.data, /^[a-z]+(?:-[a-z]+)*-(?:\d+|q)\.mp3$/);
+});
+
+test('the engine reads the counters as their tables do', () => {
+  const kana = counterAudios.kana;
+  // Readings that the engine would not choose: ななにん, さんば, なんぞく, and 靴下 whole despite the word 靴.
+  assert.match(kana('ちちの かいしゃには かいしゃいんが 七人 います。')!, /ナナ'ニン/);
+  assert.match(kana('えきに ハトが 三羽 います。')!, /サ'ンバ/);
+  assert.match(kana('靴を 何足 買いましたか。')!, /ナ'ンゾク/);
+  assert.match(kana('靴下を 二足 買いました。')!, /^クツ'シタオ/);
+  // Numerals in figures for the engine: はっぽん, not はちほん; じゅうがつ とおか, not とつきとおか; ふん, not ぶ.
+  assert.match(kana('花屋で 花を 八本 買いました。')!, /ハ'ッポン/);
+  assert.match(kana('十月 十日から 休みです。')!, /^ジュウガツ'\/トオカカラ/);
+  assert.match(kana('その ダンスは 三分です。')!, /サ'ンプン/);
+  // Hiragana words cut in the right place: not あ / さごじに.
+  assert.match(kana('あさ 五時に 起きました。')!, /^ア'サ\/ゴ'ジニ/);
+  const sourceText = (written: string) => counterAudios.generation.entries.find((entry) => entry.written === written)?.sourceText;
+  assert.equal(sourceText('二月 十四日に チョコレートを あげます。'), '二月 14日に チョコレートを あげます。');
+  // 二十四日 needs no correction: only 十四日 after 二月 is replaced.
+  assert.equal(sourceText('十二月 二十四日に ケーキを 買います。'), '十二月 二十四日に ケーキを 買います。');
+});
+
 test('all the audio is credited to AivisSpeech, with the morioki voice and its license', async () => {
-  for (const { generation } of [words, sentenceAudios]) {
+  for (const { generation } of [words, sentenceAudios, counterAudios]) {
     assert.equal(generation.engine, 'AivisSpeech Engine');
     assert.equal(generation.voice, audioSource.voice);
     assert.equal(generation.model.license, audioSource.license);
     assert.equal(generation.model.url, audioSource.voiceUrl);
   }
   const credits = await readFile(new URL('audio/CREDITS.txt', root), 'utf8');
-  assert.match(credits, new RegExp(`WORDS \\(${vocabulary.length}\\) AND SENTENCES \\(480\\) — AivisSpeech \\(morioki\\)`));
+  assert.match(credits, new RegExp(`WORDS \\(${vocabulary.length}\\), SENTENCES \\(480\\) AND COUNTER SENTENCES \\(${counterAudios.data.size}\\) — AivisSpeech \\(morioki\\)`));
   assert.match(credits, /Aivis Common Model License \(ACML\) 1\.0/);
-  assert.ok(credits.includes(`${wordAudioDirectory}/generation.json`) && credits.includes(`${sentenceAudioDirectory}/generation.json`));
+  for (const directory of [wordAudioDirectory, sentenceAudioDirectory, counterAudioDirectory]) {
+    assert.ok(credits.includes(`${directory}/generation.json`), directory);
+  }
   // Nothing is left of the previous recordings and voice (hidden files such as .DS_Store are ignored by Git).
   assert.deepEqual((await readdir(new URL('audio/', root))).filter((file) => !file.startsWith('.')).sort(),
-    ['CREDITS.txt', sentenceAudioDirectory, wordAudioDirectory].sort());
+    ['CREDITS.txt', counterAudioDirectory, sentenceAudioDirectory, wordAudioDirectory].sort());
 });
 
 test('the engine reads the words that the vocabulary spells in mixed kana and kanji as the collection does', () => {

@@ -1,7 +1,7 @@
-import type { KanjiSentencesDocument } from '../content-types.ts';
+import type { CounterDocument, KanjiSentencesDocument } from '../content-types.ts';
 
 /**
- * Every word of the vocabulary and every kanji sentence has an MP3 generated with AivisSpeech by
+ * Every word of the vocabulary, every kanji sentence and every counter sentence has an MP3 generated with AivisSpeech by
  * scripts/generate-audio.py, which uses the same file names. npm run check:content makes sure each one matches the
  * current text and reading, so the page shows the button without asking first.
  */
@@ -17,6 +17,7 @@ export const audioSource = {
 /** Where the audio lives, inside public/audio/. */
 export const wordAudioDirectory = 'words';
 export const sentenceAudioDirectory = 'sentences';
+export const counterAudioDirectory = 'counters';
 
 export type SentenceGroup = 'simple' | 'advanced';
 
@@ -31,6 +32,14 @@ export function wordAudioFile(written: string): string {
  */
 export function sentenceAudioFile(kanji: string, group: SentenceGroup, index: number): string {
   return `${kanji.codePointAt(0)!.toString(16)}-${group === 'simple' ? 's' : 'a'}${index + 1}.mp3`;
+}
+
+/**
+ * The sentence of a counter's form, named after the counter and the number: hon-3.mp3 is the sentence of 三本, and
+ * hon-q.mp3 the question of the counter (何本).
+ */
+export function counterSentenceAudioFile(counter: string, value: number | 'question'): string {
+  return `${counter}-${value === 'question' ? 'q' : value}.mp3`;
 }
 
 /** What an audio says: its file, and the text and reading it was generated from. */
@@ -52,6 +61,14 @@ export function wordAudio(words: readonly { readonly written: string; readonly r
 export function sentenceAudio(document: KanjiSentencesDocument): SpokenText[] {
   return document.entries.flatMap((sentences) => (['simple', 'advanced'] as const).flatMap((group) =>
     sentences[group].map(({ written, reading }, index) => ({ file: sentenceAudioFile(sentences.kanji, group, index), written, reading }))));
+}
+
+/** Only the sentences of the counters have audio, not their examples. */
+export function counterSentenceAudio(document: CounterDocument): SpokenText[] {
+  return document.entries.flatMap((counter) => [
+    ...counter.forms.map((form) => ({ value: form.value as number | 'question', sentence: form.sentence })),
+    { value: 'question' as const, sentence: counter.question.sentence },
+  ].map(({ value, sentence: { written, reading } }) => ({ file: counterSentenceAudioFile(counter.id, value), written, reading })));
 }
 
 /**

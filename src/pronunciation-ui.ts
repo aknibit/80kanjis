@@ -32,8 +32,10 @@ export function setupPronunciation(status: HTMLElement) {
     return createPlayer(item.id, item.written, `${wordAudioDirectory}/${wordAudioFile(item.written)}`, report);
   }
 
-  function createSentenceButton(id: string, written: string, file: string, report: HTMLElement): HTMLButtonElement {
-    return createPlayer(id, written, `${sentenceAudioDirectory}/${file}`, report);
+  /** A sentence of a kanji dialog, or of another `directory` of public/audio/: counters/ for the counter tables. */
+  function createSentenceButton(id: string, written: string, file: string, report: HTMLElement,
+    directory = sentenceAudioDirectory): HTMLButtonElement {
+    return createPlayer(id, written, `${directory}/${file}`, report);
   }
 
   function createPlayer(id: string, written: string, file: string, report: HTMLElement): HTMLButtonElement {

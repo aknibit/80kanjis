@@ -3,7 +3,10 @@ import type { Difficulty } from './types.ts';
 import { difficulties, filterByGroupAndDifficulty, searchContent, shuffled, type DifficultyFilter } from './lib/content.ts';
 import type { DifficultySelector } from './difficulty-selector.ts';
 import { difficultyIcon, difficultyLabels } from './lib/difficulty.ts';
+import { counterAudioDirectory, counterSentenceAudioFile } from './lib/audio.ts';
 import { setupMasonry } from './masonry.ts';
+import { meaningButton, setupMeaningFilter } from './meaning-ui.ts';
+import type { PronunciationControls } from './pronunciation-ui.ts';
 import { fitPlaceholder } from './search-placeholder.ts';
 
 function node<K extends keyof HTMLElementTagNameMap>(tag: K, className = '', text?: string) {
@@ -48,16 +51,56 @@ function difficultyBadge(difficulty: Difficulty, className: string): HTMLElement
   return badge;
 }
 
-/** The example or sentence of a form: written, its reading in kana and the translation, one under the other. */
-function renderCounterExample(example: CounterExample, kind: 'example' | 'sentence'): HTMLElement {
+/** The kanji dialog, on the pages whose kanji open it: the counters. */
+export interface StudyKanji {
+  /** Japanese with the 80 kanji in blue and the support kanji in red, as buttons that open their dialog. */
+  renderText(written: string): Node;
+  /** After going back or forward in the history: open, change or close the full-screen kanji. */
+  followUrl(): void;
+}
+
+/** What a study page can use besides its content: the kanji dialog and the audio player, shared with that dialog. */
+export interface StudyTools {
+  readonly kanji?: StudyKanji;
+  readonly pronunciation?: PronunciationControls;
+}
+
+/** How a page writes Japanese: with its kanji as buttons, or as plain text. */
+type WriteJapanese = (written: string) => Node | string;
+const plainText: WriteJapanese = (written) => written;
+
+/** What a counter table needs from its page: how to write its Japanese, and the Audio button of each sentence. */
+interface CounterTools {
+  readonly write: WriteJapanese;
+  readonly audio?: (counter: CounterEntry, value: number | 'question', sentence: CounterExample) => HTMLElement;
+}
+
+/**
+ * The example or sentence of a form: written, its reading in kana and the translation, one under the other. The
+ * translation is sand until its «Significado» button shows it, as in the kanji dialog; the sentence also has Audio.
+ */
+function renderCounterExample(example: CounterExample, kind: 'example' | 'sentence', write: WriteJapanese,
+  audio?: HTMLElement): HTMLElement {
   const cell = node('td', `counter-${kind}`);
   cell.setAttribute('role', 'cell');
-  cell.append(japanese('span', 'counter-example-written', example.written),
-    japanese('span', 'counter-example-reading', example.reading), node('span', 'counter-example-meaning', example.meaning));
+  const written = japanese('span', 'counter-example-written', '');
+  written.append(write(example.written));
+  const meaning = node('span', 'counter-example-meaning', example.meaning);
+  const controls = node('span', 'counter-item-controls');
+  controls.append(meaningButton(meaning));
+  if (audio) controls.append(audio);
+  // The buttons go at the right of the meaning, or under it when there is no room.
+  const line = node('span', 'counter-meaning-line');
+  line.append(meaning, controls);
+  cell.append(written, japanese('span', 'counter-example-reading', example.reading), line);
   return cell;
 }
 
-function renderCounter(entry: CounterEntry): HTMLElement {
+/**
+ * A counter opens to its table. Its kanji are buttons in the body, not in the summary: a button inside it would be
+ * a control within a control, and the symbol's kanji is in every row anyway.
+ */
+function renderCounter(entry: CounterEntry, { write, audio }: CounterTools): HTMLElement {
   const details = node('details', 'counter-entry');
   details.dataset.entryId = entry.id;
   const summary = node('summary', 'counter-summary');
@@ -75,7 +118,11 @@ function renderCounter(entry: CounterEntry): HTMLElement {
   meta.append(difficultyBadge(entry.difficulty, 'counter-difficulty'), node('span', 'counter-form-count', `${entry.forms.length} formas`));
   summary.append(name, endings, meta);
   const body = node('div', 'counter-body');
-  for (const note of entry.notes) body.append(node('p', 'counter-note', note));
+  for (const note of entry.notes) {
+    const paragraph = node('p', 'counter-note');
+    paragraph.append(write(note));
+    body.append(paragraph);
+  }
   // Phones lay the table out as a grid, which can drop its semantics in some screen readers; explicit roles keep them.
   const table = node('table', 'counter-table');
   table.setAttribute('role', 'table');
@@ -93,22 +140,26 @@ function renderCounter(entry: CounterEntry): HTMLElement {
   const rows = node('tbody');
   rows.setAttribute('role', 'rowgroup');
   // Each row is headed by its writing, which pairs with the reading next to it.
-  const row = (className: string, item: { written: string; readings: readonly string[]; example: CounterExample; sentence: CounterExample },
-    special = false) => {
+  const row = (className: string, value: number | 'question',
+    item: { written: string; readings: readonly string[]; example: CounterExample; sentence: CounterExample }, special = false) => {
     const line = node('tr', className);
     line.setAttribute('role', 'row');
-    const written = japanese('th', 'counter-written', item.written);
+    const written = japanese('th', 'counter-written', '');
+    written.append(write(item.written));
     written.scope = 'row';
     written.setAttribute('role', 'rowheader');
+    // Each cell of the row is announced with its header: 一本, not the names of the buttons of its kanji.
+    if (write !== plainText) written.setAttribute('aria-label', item.written);
     const reading = node('td', 'counter-reading-cell');
     reading.setAttribute('role', 'cell');
     reading.append(japanese('span', 'word-reading', item.readings.join(' · ')));
     if (special) reading.append(node('span', 'special-reading', 'Lectura especial'));
-    line.append(written, reading, renderCounterExample(item.example, 'example'), renderCounterExample(item.sentence, 'sentence'));
+    line.append(written, reading, renderCounterExample(item.example, 'example', write),
+      renderCounterExample(item.sentence, 'sentence', write, audio?.(entry, value, item.sentence)));
     return line;
   };
-  for (const form of entry.forms) rows.append(row(form.special ? 'counter-special' : '', form, form.special));
-  rows.append(row('counter-question', entry.question));
+  for (const form of entry.forms) rows.append(row(form.special ? 'counter-special' : '', form.value, form, form.special));
+  rows.append(row('counter-question', 'question', entry.question));
   table.append(head, rows);
   body.append(table);
   details.append(summary, body);
@@ -259,7 +310,20 @@ function renderSources(data: StudyDocument): HTMLElement {
   return details;
 }
 
-export function renderStudyPage(host: HTMLElement, data: StudyDocument, section: NavigationSection, difficulty: DifficultySelector): void {
+export function renderStudyPage(host: HTMLElement, data: StudyDocument, section: NavigationSection,
+  difficulty: DifficultySelector, { kanji, pronunciation }: StudyTools = {}): void {
+  // The hidden meanings of the counter tables wear this filter; it is in the page before any.
+  if (data.kind === 'counters') setupMeaningFilter();
+  // Playback errors of the counter sentences, announced on the page.
+  const audioStatus = node('p', 'audio-status');
+  audioStatus.setAttribute('role', 'status');
+  audioStatus.setAttribute('aria-live', 'polite');
+  const counterTools: CounterTools = {
+    write: kanji ? (written) => kanji.renderText(written) : plainText,
+    audio: pronunciation && ((counter, value, sentence) => pronunciation.createSentenceButton(
+      `counter:${counter.id}:${value}`, sentence.written, counterSentenceAudioFile(counter.id, value), audioStatus,
+      counterAudioDirectory)),
+  };
   const intro = node('section', 'intro');
   const title = node('h1', '', data.title);
   title.id = 'study-page-title';
@@ -311,6 +375,14 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   const reset = node('button', 'reset-button', 'Ver todo'); reset.type = 'button'; empty.append(reset);
   collection.append(form, toolbar);
   if (data.guides.length) collection.append(renderGuides(data));
+  if (data.kind === 'counters' && pronunciation) {
+    collection.append(audioStatus);
+    // Folding a counter hides the Parar button of its sentence, so it stops too. Toggle does not bubble: capture it.
+    results.addEventListener('toggle', (event) => {
+      const details = event.target as HTMLDetailsElement;
+      if (!details.open && details.querySelector('.audio-button[aria-pressed="true"]')) pronunciation.stop();
+    }, true);
+  }
   collection.append(results, empty, renderSources(data));
   host.replaceChildren(intro, collection);
 
@@ -345,6 +417,9 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
   }
 
   function render() {
+    // The Parar button of what was playing is about to go.
+    pronunciation?.stop();
+    audioStatus.textContent = '';
     const matching = searchContent<ContentEntry>(selectedGroup === 'all' ? randomOrder : data.entries, input.value);
     // Each button counts what it would show with the other filter: Objetos counts easy objects while Fácil is on.
     // Sin completar only exists on the kanji page: here it shows everything, and the shared drop-down falls back to Todas.
@@ -364,7 +439,7 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
     } else {
       // Rows always show their group; cards only under «Todo».
       const tagged = !cards || selectedGroup === 'all';
-      for (const entry of entries) fragment.append('forms' in entry ? renderCounter(entry)
+      for (const entry of entries) fragment.append('forms' in entry ? renderCounter(entry, counterTools)
         : renderWord(entry as LexiconEntry, tagged ? groups.get(entry.group)! : undefined, cards));
     }
     results.replaceChildren(fragment);
@@ -398,7 +473,17 @@ export function renderStudyPage(host: HTMLElement, data: StudyDocument, section:
       event.preventDefault(); input.focus();
     }
   });
-  window.addEventListener('popstate', () => { clearTimeout(urlTimer); if (leveled) difficulty.followUrl(); restoreUrl(); });
+  window.addEventListener('popstate', () => {
+    clearTimeout(urlTimer);
+    const params = new URL(window.location.href).searchParams;
+    const level = difficulty.value;
+    if (leveled) difficulty.followUrl();
+    // Opening or closing the full-screen kanji only changes ?kanji=: the entries stay, with the counters left open
+    // and the focus.
+    const group = groups.has(params.get('group') ?? '') ? params.get('group')! : 'all';
+    if ((params.get('q') ?? '') !== input.value.trim() || group !== selectedGroup || difficulty.value !== level) restoreUrl();
+    kanji?.followUrl();
+  });
   if (leveled) difficulty.connect(render);
   restoreUrl();
 }

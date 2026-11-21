@@ -3,7 +3,8 @@ import { readFile, readdir } from 'node:fs/promises';
 import { kanjiSentencesFile, parseKanjiSentences, parseNavigation, parseStudyDocument } from '../src/lib/content.ts';
 import { parseCollection } from '../src/lib/collection.ts';
 import {
-  audioProblems, sentenceAudio, sentenceAudioDirectory, wordAudio, wordAudioDirectory, type AudioEntry, type SpokenText,
+  audioProblems, counterAudioDirectory, counterSentenceAudio, sentenceAudio, sentenceAudioDirectory, wordAudio,
+  wordAudioDirectory, type AudioEntry, type SpokenText,
 } from '../src/lib/audio.ts';
 import { createSiteVocabulary, exampleProblems, kanjiSentenceProblems, levelProblems } from '../src/lib/site-vocabulary.ts';
 import type { CounterDocument, LexiconDocument, StudyDocument } from '../src/content-types.ts';
@@ -40,8 +41,8 @@ referenced.add(kanjiSentencesFile.slice('content/'.length));
 const problems = kanjiSentenceProblems(sentences, collection, vocabulary);
 if (problems.length > 0) throw new Error(`Frases de los kanji:\n${problems.join('\n')}`);
 console.log(`Frases de los kanji: ${sentences.entries.length} kanji, ${sentences.entries.length * 6} frases.`);
-// Each word and each sentence has an audio generated from its current text and reading: the page shows the button
-// without asking first.
+// Each word, each kanji sentence and each counter sentence has an audio generated from its current text and reading:
+// the page shows the button without asking first.
 async function checkAudio(label: string, directory: string, expected: readonly SpokenText[]) {
   const audioRoot = new URL(`audio/${directory}/`, root);
   const generation = JSON.parse(await readFile(new URL('generation.json', audioRoot), 'utf8')) as { entries: AudioEntry[] };
@@ -53,6 +54,7 @@ async function checkAudio(label: string, directory: string, expected: readonly S
 }
 await checkAudio('las palabras', wordAudioDirectory, wordAudio(collection.vocabulary));
 await checkAudio('las frases', sentenceAudioDirectory, sentenceAudio(sentences));
+await checkAudio('las frases de los contadores', counterAudioDirectory, counterSentenceAudio(counters));
 const exampleIssues = exampleProblems(lexicons, counters, vocabulary);
 if (exampleIssues.length > 0) throw new Error(`Ejemplos de las secciones (${exampleIssues.length}):\n${exampleIssues.join('\n')}`);
 console.log('Ejemplos de las secciones: solo usan palabras de la web.');

@@ -4,6 +4,7 @@ import { loadKanjiSentences } from './lib/content.ts';
 import { kanjiNeighbours, kanjiParameter } from './lib/kanji-sequence.ts';
 import { vocabularyItemId } from './lib/study-catalog.ts';
 import { sentenceAudioFile, type SentenceGroup } from './lib/audio.ts';
+import { meaningButton, setupMeaningFilter } from './meaning-ui.ts';
 import type { PronunciationControls } from './pronunciation-ui.ts';
 import type { ContentExample, KanjiSentences } from './content-types.ts';
 import type { CollectionDocument, KanjiReadings } from './types.ts';
@@ -90,105 +91,6 @@ function highlightKanji(character: string): SentenceText {
   };
 }
 
-const eyeIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>';
-const eyeOffIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10.6 5.1A10.8 10.8 0 0 1 12 5c6.5 0 10 7 10 7a17.6 17.6 0 0 1-2.6 3.6M6.6 6.6C3.9 8.4 2 12 2 12s3.5 7 10 7a10.4 10.4 0 0 0 5.4-1.6M9.9 9.9a3 3 0 0 0 4.2 4.2M3 3l18 18"/></svg>';
-let meaningCount = 0;
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-/**
- * Turns a hidden meaning into sand: the words merge into soft mounds (blur and a low threshold), fine noise cuts them
- * into grains with crisp edges, and a second channel of the same noise gives each grain its own shade. The colour is
- * the text's own yellow, so it works in both themes. Added to the page with the dialog: without it, the copy that
- * wears it (`.meaning-gravel`) would show the meaning in clear text.
- */
-const gravelFilter = '<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">'
-  + '<filter id="meaning-gravel" x="-4%" y="-35%" width="108%" height="170%" color-interpolation-filters="sRGB">'
-  + '<feGaussianBlur in="SourceGraphic" stdDeviation="2" result="soft"/>'
-  + '<feComponentTransfer in="soft" result="shape"><feFuncA type="discrete" tableValues="0 1 1 1 1 1 1 1 1 1 1 1"/></feComponentTransfer>'
-  + '<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1" seed="7" result="noise"/>'
-  + '<feColorMatrix in="noise" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30 0 0 0 -11.5" result="grains"/>'
-  + '<feComposite in="shape" in2="grains" operator="in" result="sand"/>'
-  + '<feColorMatrix in="noise" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.2 0 0 0.15" result="shade"/>'
-  + '<feComposite in="sand" in2="shade" operator="in"/>'
-  + '</filter></svg>';
-/**
- * How long the smoke takes: the last letter starts after `smokeStagger` and fades for `smokeLetter`. The gravel that
- * it leaves behind is timed to match in style.css (`meaning-gravel-in`).
- */
-const smokeStagger = 350;
-const smokeLetter = 900;
-
-/**
- * The clear meaning drifts away like smoke, letter by letter, and leaves the gravel behind (style.css). The
- * letters are a copy for the eye only, laid over the text: the text itself stays whole. Returns what stops it early.
- */
-function smoke(meaning: HTMLElement, text: string): () => void {
-  const cloud = node('span', 'meaning-smoke');
-  cloud.setAttribute('aria-hidden', 'true');
-  const letters = text.replace(/\s/gu, '').length;
-  let index = 0;
-  text.split(' ').forEach((word, position) => {
-    if (position > 0) cloud.append(' ');
-    // Lines only break between words, as in the text below.
-    const block = node('span', 'meaning-smoke-word');
-    for (const letter of word) {
-      const span = node('span', 'meaning-smoke-letter', letter);
-      const delay = (index++ / Math.max(1, letters - 1)) * smokeStagger + Math.random() * 80;
-      span.style.setProperty('--smoke-delay', `${Math.round(delay)}ms`);
-      span.style.setProperty('--smoke-x', `${(Math.random() * 22 - 6).toFixed(1)}px`);
-      span.style.setProperty('--smoke-y', `${(-12 - Math.random() * 16).toFixed(1)}px`);
-      span.style.setProperty('--smoke-turn', `${(Math.random() * 60 - 30).toFixed(0)}deg`);
-      block.append(span);
-    }
-    cloud.append(block);
-  });
-  meaning.append(cloud);
-  meaning.classList.add('meaning-veil--smoke');
-  const timer = window.setTimeout(stop, smokeStagger + smokeLetter + 120);
-  function stop() {
-    window.clearTimeout(timer);
-    cloud.remove();
-    meaning.classList.remove('meaning-veil--smoke');
-  }
-  return stop;
-}
-
-/**
- * The dialog and the full-screen view show each meaning as sand, so you can guess it first; this button brings it into
- * focus, and blows it away as smoke when it hides it again. The hidden text is hidden from screen readers too.
- * The label stays «Significado»: the state is in `aria-pressed` and the eye.
- */
-function meaningButton(meaning: HTMLElement): HTMLButtonElement {
-  meaning.id = `kanji-meaning-${++meaningCount}`;
-  const words = meaning.textContent ?? '';
-  const text = node('span', 'meaning-text', words);
-  // The gravel is a copy laid over the text: a filter cannot fade into no filter, but two layers can cross-fade.
-  const gravel = node('span', 'meaning-gravel', words);
-  gravel.setAttribute('aria-hidden', 'true');
-  meaning.replaceChildren(text, gravel);
-  meaning.classList.add('meaning-veil');
-  let stopSmoke: (() => void) | undefined;
-  const button = node('button', 'meaning-button');
-  button.type = 'button';
-  button.setAttribute('aria-controls', meaning.id);
-  button.innerHTML = `<span class="meaning-button-icon meaning-button-icon--show">${eyeIcon}</span>`
-    + `<span class="meaning-button-icon meaning-button-icon--hide">${eyeOffIcon}</span>Significado`;
-  const paint = (shown: boolean) => {
-    meaning.dataset.shown = String(shown);
-    text.setAttribute('aria-hidden', String(!shown));
-    button.setAttribute('aria-pressed', String(shown));
-    button.title = shown ? 'Ocultar significado' : 'Mostrar significado';
-  };
-  paint(false);
-  button.addEventListener('click', () => {
-    const show = meaning.dataset.shown !== 'true';
-    stopSmoke?.();
-    stopSmoke = undefined;
-    paint(show);
-    if (!show && !reducedMotion.matches) stopSmoke = smoke(meaning, words);
-  });
-  return button;
-}
-
 /**
  * What goes at the right of a word or a sentence, in the dialog and in the full-screen view: the button that shows its
  * meaning, in a column between the Japanese and Audio, and its Audio button.
@@ -239,9 +141,20 @@ export interface KanjiPage {
   row(character: string): HTMLElement | null;
 }
 
+export interface KanjiDetailsOptions {
+  /**
+   * The kanji page: the green kanji of its rows, the large kanji and «Info kanji 01» open the full-screen view, whose
+   * arrows step through the kanji on screen. Without it, they open the dialog.
+   */
+  readonly page?: KanjiPage;
+  /** What the full-screen view's back button says on a page without rows of kanji: where it goes back to. */
+  readonly backLabel?: string;
+}
+
 const icon = (path: string) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${path}"/></svg>`;
 const backIcon = icon('M19 12H5m6-6-6 6 6 6');
 const stepIcons = { previous: icon('m15 5-7 7 7 7'), next: icon('m9 5 7 7-7 7') } as const;
+const expandIcon = icon('M9 4H4v5m11-5h5v5M9 20H4v-5m11 5h5v-5');
 
 const addressKanji = () => new URL(window.location.href).searchParams.get(kanjiParameter);
 function address(character: string | null): URL {
@@ -253,9 +166,12 @@ function address(character: string | null): URL {
 
 /**
  * One native dialog for every kanji; the source owns all reference content. Its words share the page's audio player.
- * With a `page`, the green kanji of a row opens a full-screen view instead, which steps through the kanji on screen.
+ * Its header opens the same kanji in a full-screen view. With a `page`, the green kanji of a row opens that view
+ * directly, and its arrows step through the kanji on screen.
  */
-export function setupKanjiDetails(source: CollectionDocument, pronunciation?: PronunciationControls, page?: KanjiPage) {
+export function setupKanjiDetails(source: CollectionDocument, pronunciation?: PronunciationControls,
+  options: KanjiDetailsOptions = {}) {
+  const { page } = options;
   const references = createKanjiReferences(source);
   const dialog = node('dialog', 'kanji-dialog');
   dialog.id = 'kanji-dialog';
@@ -263,15 +179,25 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
   dialog.setAttribute('aria-describedby', 'kanji-dialog-description');
   const header = node('div', 'dialog-header');
   const category = node('span', 'eyebrow');
+  // The label shows when it fits; on phones only the icon does, and the name stays the same.
+  const expand = node('button', 'kanji-dialog-expand');
+  expand.type = 'button';
+  expand.innerHTML = `${expandIcon}<span class="kanji-dialog-expand-label">Pantalla completa</span>`;
+  expand.title = 'Ver a pantalla completa';
+  expand.setAttribute('aria-label', 'Ver a pantalla completa');
+  expand.setAttribute('aria-haspopup', 'dialog');
+  expand.setAttribute('aria-controls', 'kanji-focus');
   const close = node('button', 'clear-button kanji-dialog-close', '×');
   close.type = 'button';
   close.setAttribute('aria-label', 'Cerrar información del kanji');
-  header.append(category, close);
+  const actions = node('div', 'kanji-dialog-actions');
+  actions.append(expand, close);
+  header.append(category, actions);
   const body = node('div', 'kanji-dialog-body');
   dialog.append(header, body);
   document.body.append(dialog);
   // The hidden meanings of the dialog and of the full-screen view wear this filter; it is in the page before any.
-  document.body.insertAdjacentHTML('beforeend', gravelFilter);
+  setupMeaningFilter();
   let opener: HTMLElement | null = null;
   // The tab stays chosen while the page is open, also from one kanji to the next and between the dialog and the
   // full-screen view. It is not stored in the browser.
@@ -285,6 +211,14 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     : `KANJI ${String(reference.position).padStart(2, '0')} DE ${source.kanji.length}`);
 
   close.addEventListener('click', () => dialog.close());
+  // The view takes over from the dialog: closing it later gives the focus back to what opened the dialog.
+  expand.addEventListener('click', () => {
+    const character = dialog.dataset.kanji;
+    const trigger = opener;
+    opener = null;
+    dialog.close();
+    if (character) focusView.open(character, trigger);
+  });
   dialog.addEventListener('close', () => {
     pronunciation?.stop();
     if (opener?.isConnected) opener.focus({ preventScroll: true });
@@ -303,6 +237,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     // A word playing in the previous kanji, or on the page, would lose its Parar button.
     pronunciation?.stop();
     dialog.dataset.kind = reference.kind;
+    dialog.dataset.kanji = character;
     category.textContent = eyebrow(reference);
     const details = renderDetails(character, reference, 'dialog');
     body.replaceChildren(...details.summary, ...details.study, details.source);
@@ -449,15 +384,14 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     return [list, ...tabs.map((tab) => panels[tab])];
   }
 
-  /** The full-screen view, when the page provides one. */
-  const focusView = page && setupFocusView(page);
+  const focusView = setupFocusView();
 
   /**
-   * The full-screen view of one of the 80 kanji. It is a modal dialog the size of the window, so the dialog of another
-   * kanji opens on top of it. Its kanji travels in the address (`?kanji=水`): the browser's Back closes it, and a link
-   * or a reload opens it again.
+   * The full-screen view of a kanji, opened from the dialog's header or, on the kanji page, from its row. It is a modal
+   * dialog the size of the window, so the dialog of another kanji opens on top of it. Its kanji travels in the address
+   * (`?kanji=水`): the browser's Back closes it, and a link or a reload opens it again.
    */
-  function setupFocusView(page: KanjiPage) {
+  function setupFocusView() {
     const view = node('dialog', 'kanji-dialog kanji-focus');
     view.id = 'kanji-focus';
     view.setAttribute('aria-labelledby', 'kanji-focus-title');
@@ -467,8 +401,11 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     const back = node('button', 'kanji-focus-back');
     back.type = 'button';
     back.setAttribute('aria-keyshortcuts', 'Escape');
-    // On narrow phones only «Todos» shows; a screen reader still reads «Todos los kanji».
-    back.innerHTML = `${backIcon}<span>Todos<span class="kanji-focus-back-more"> los kanji</span></span>`;
+    // On narrow phones only «Todos» shows; a screen reader still reads «Todos los kanji». Other pages name themselves.
+    const backLabel = node('span', '', page ? 'Todos' : options.backLabel ?? 'Volver');
+    if (page) backLabel.append(node('span', 'kanji-focus-back-more', ' los kanji'));
+    back.innerHTML = backIcon;
+    back.append(backLabel);
     const steps = node('nav', 'kanji-focus-nav');
     steps.setAttribute('aria-label', 'Kanji de la lista');
     const previous = createStep('previous');
@@ -522,18 +459,23 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
 
     function show(character: string): boolean {
       const reference = references.get(character);
-      if (reference?.kind !== 'collection') return false;
+      if (!reference) return false;
       pronunciation?.stop();
       shown = character;
+      // Support kanji are red here too, as in their dialog.
+      view.dataset.kind = reference.kind;
       const details = renderDetails(character, reference, 'focus');
       const intro = node('div', 'kanji-focus-intro');
       intro.append(node('p', 'eyebrow', eyebrow(reference)), ...details.summary);
       const study = node('div', 'kanji-focus-study');
       study.append(...details.study);
       content.replaceChildren(intro, study, details.source);
-      const onScreen = page.onScreen();
+      // The arrows step through the rows of the kanji page; support kanji and other pages have no list to step through.
+      const listed = page !== undefined && reference.kind === 'collection';
+      steps.hidden = !listed;
+      const onScreen = listed ? page.onScreen() : [];
       const neighbours = kanjiNeighbours(onScreen, positionOf, character);
-      position.textContent = neighbours.index === -1 ? 'Fuera de la lista' : `${neighbours.index + 1} de ${onScreen.length}`;
+      position.textContent = !listed ? '' : neighbours.index === -1 ? 'Fuera de la lista' : `${neighbours.index + 1} de ${onScreen.length}`;
       paintStep(previous, 'previous', neighbours.previous);
       paintStep(next, 'next', neighbours.next);
       document.title = `${character} · 80kanjis`;
@@ -560,14 +502,16 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
       announcement.textContent = `${character}, ${meanings(character)}. ${position.textContent}.`;
     }
 
-    /** Back on the list: at the row of the last kanji seen, on its Info button, or at the button that opened the view. */
+    /**
+     * Back on the page: at the button that opened the view while it shows the same kanji; otherwise, on the kanji page,
+     * at the row of the last kanji seen, on its Info button. A support kanji has no row: the opener again, if it is there.
+     */
     function returnFocus() {
-      if (shown === openedWith && opener?.isConnected) {
-        opener.focus({ preventScroll: true });
+      const row = shown === openedWith && opener?.isConnected ? null : page?.row(shown);
+      if (!row) {
+        if (opener?.isConnected) opener.focus({ preventScroll: true });
         return;
       }
-      const row = page.row(shown);
-      if (!row) return;
       const bounds = row.getBoundingClientRect();
       if (bounds.top < 0 || bounds.bottom > window.innerHeight) row.scrollIntoView({ block: 'start', behavior: 'instant' });
       row.querySelector<HTMLElement>('.kanji-focus-trigger')?.focus({ preventScroll: true });
@@ -589,7 +533,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     });
     view.addEventListener('keydown', (event) => {
       const button = event.key === 'ArrowLeft' ? previous : event.key === 'ArrowRight' ? next : null;
-      if (!button || event.defaultPrevented || event.isComposing
+      if (!button || steps.hidden || event.defaultPrevented || event.isComposing
         || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
       // The arrows already move between the tabs, which prevent the default, and scroll the readings.
       if ((event.target as Element).closest('.kanji-dialog-readings')) return;
@@ -600,8 +544,8 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     /** Follow the address: open, change or close the view. `pushedEntry` says whether the view's entry is this page's. */
     function follow(pushedEntry: boolean) {
       const character = addressKanji();
-      if (character === null || references.get(character)?.kind !== 'collection') {
-        // Only the 80 kanji have a full-screen view.
+      if (character === null || !references.has(character)) {
+        // A character without a dialog has no full-screen view either.
         if (character !== null) history.replaceState(history.state, '', address(null));
         if (view.open) view.close();
         return;
@@ -612,8 +556,18 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     }
 
     return {
-      open(character: string, trigger: HTMLElement) {
+      /**
+       * Open the view on a kanji, or change it if the view is already open (from the dialog on top of it): then it
+       * replaces the address, as the arrows do, and keeps what opened it.
+       */
+      open(character: string, trigger: HTMLElement | null) {
+        const wasOpen = view.open;
         if (!present(character)) return;
+        if (wasOpen) {
+          history.replaceState(history.state, '', address(character));
+          announcement.textContent = `${character}, ${meanings(character)}.`;
+          return;
+        }
         opener = trigger;
         history.pushState(history.state, '', address(character));
         pushed = true;
@@ -624,7 +578,8 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
 
   function createTrigger(character: string, className: string, opening: 'dialog' | 'focus' = 'dialog'): HTMLButtonElement {
     const reference = references.get(character)!;
-    const focus = opening === 'focus' && focusView;
+    // Without the kanji page, its rows open the dialog, as before the full-screen view existed.
+    const focus = opening === 'focus' && page ? focusView : undefined;
     const button = node('button', `kanji-detail-trigger ${className}${focus ? ' kanji-focus-trigger' : ''}`);
     button.type = 'button';
     button.lang = 'es';
@@ -648,10 +603,12 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     for (const part of wordKanjiParts(written, references, target)) {
       const className = `kanji-link kanji-link--${part.kind}`;
       if (part.kind === 'text') fragment.append(part.text);
-      else if (part.kind !== 'target') fragment.append(createTrigger(part.text, className));
-      // The kanji the full-screen view already shows stays green, without being a button.
-      else if (opening === 'none') fragment.append(node('span', `${className} kanji-link--current`, part.text));
-      else fragment.append(createTrigger(part.text, className, opening));
+      // The kanji the full-screen view already shows keeps its colour (green, or red for a support kanji), without
+      // being a button.
+      else if (opening === 'none') {
+        fragment.append(part.text === target ? node('span', `${className} kanji-link--current`, part.text)
+          : createTrigger(part.text, className));
+      } else fragment.append(createTrigger(part.text, className, part.kind === 'target' ? opening : 'dialog'));
     }
     return fragment;
   }
@@ -660,7 +617,7 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
    * A sentence of the full-screen view, whose other kanji are buttons. A button lets the line break around it, so each
    * block between spaces stays on one line (`.kanji-sentence-block`): sentences only break at those spaces.
    */
-  function linkKanji(character: string): SentenceText {
+  function linkKanji(character: string | undefined): SentenceText {
     return (written) => {
       const fragment = document.createDocumentFragment();
       written.split(' ').forEach((part, index) => {
@@ -685,20 +642,30 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
   function createInfoButton(character: string, position: number): HTMLButtonElement {
     const button = createTrigger(character, 'study-action info-button', 'focus');
     const label = `Info kanji ${String(position).padStart(2, '0')}`;
-    const detail = `pronunciaciones e información de ${character}${focusView ? ' a pantalla completa' : ''}`;
+    const detail = `pronunciaciones e información de ${character}${page ? ' a pantalla completa' : ''}`;
     button.innerHTML = `<svg class="study-action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/><path d="M10.5 11H12v6m-1.5 0h3"/></svg><span class="study-action-label">${label}</span>`;
     button.title = `Ver ${detail}`;
     button.setAttribute('aria-label', `${label}: ${detail}`);
     return button;
   }
 
+  /**
+   * Japanese of another section (the counters), with the 80 kanji in blue and the support kanji in red as buttons that
+   * open their dialog. Like the sentences of the full-screen view, it only breaks at the spaces between blocks.
+   */
+  function renderText(written: string): Node {
+    const linked = wordKanjiParts(written, references).some((part) => part.kind !== 'text');
+    return linked ? linkKanji(undefined)(written) : document.createTextNode(written);
+  }
+
   return {
     renderWord,
+    renderText,
     createInfoButton,
     createKanjiButton: (character: string) => createTrigger(character, 'kanji-character-button', 'focus'),
     /** After going back or forward in the history: open, change or close the full-screen view as the address says. */
-    followUrl: () => focusView?.follow(true),
+    followUrl: () => focusView.follow(true),
     /** On load: open the full-screen view of the kanji in the address, if any. */
-    openFromUrl: () => focusView?.follow(false),
+    openFromUrl: () => focusView.follow(false),
   };
 }

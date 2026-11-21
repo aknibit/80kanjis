@@ -5,12 +5,14 @@
     npm run audio                    # solo lo nuevo o cambiado
     npm run audio -- --all           # todo
 
-Escribe un MP3 por palabra del vocabulario (public/collection.json) en public/audio/words/
-y uno por frase de los kanji (public/content/kanji-sentences.json) en public/audio/sentences/,
-cada carpeta con su registro en generation.json. El nombre de una palabra sale de sus
-caracteres (4e00-3064.mp3 es 一つ) y el de una frase, del kanji y de su posición
-(4e00-s1.mp3 es la primera sencilla de 一), igual que en src/lib/audio.ts: si cambias
-uno, cambia el otro.
+Escribe un MP3 por palabra del vocabulario (public/collection.json) en public/audio/words/,
+uno por frase de los kanji (public/content/kanji-sentences.json) en public/audio/sentences/
+y uno por frase de los contadores (la columna «Frase» de public/content/counters.json) en
+public/audio/counters/, cada carpeta con su registro en generation.json. El nombre de una
+palabra sale de sus caracteres (4e00-3064.mp3 es 一つ); el de una frase de un kanji, del
+kanji y de su posición (4e00-s1.mp3 es la primera sencilla de 一), y el de una frase de un
+contador, del contador y del número (hon-3.mp3 es la de 三本; hon-q.mp3, la de la pregunta),
+igual que en src/lib/audio.ts: si cambias uno, cambia el otro.
 
 El motor (AivisSpeech Engine) y la voz (el modelo morioki, de AivisHub) se descargan de
 versiones fijas, se comprueba su SHA-256 y se guardan en tmp/aivisspeech/, que Git ignora.
@@ -54,6 +56,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 COLLECTION = ROOT / 'public/collection.json'
 SENTENCES = ROOT / 'public/content/kanji-sentences.json'
+COUNTERS = ROOT / 'public/content/counters.json'
 AUDIO = ROOT / 'public/audio'
 WORK = ROOT / 'tmp/aivisspeech'
 
@@ -81,16 +84,45 @@ BITRATE = 32
 # Text the engine receives instead of the written sentence, where its dictionary
 # cannot be steered. Each one keeps the reading of the sentence.
 REPLACEMENTS = [
-    {'from': '描きます', 'to': '書きます',
+    {'from': '描き', 'to': '書き',
      'reason': 'La lectura es かきます; el motor lee えがきます. 書きます suena igual, con el mismo acento.'},
     {'from': 'かれは', 'to': '彼は',
      'reason': 'En hiragana, el motor lee かれは como 枯れ葉 («kareha»). 彼は suena igual, con el acento [1] de かれの.'},
     {'from': 'わたしは えが', 'to': 'わたしは 絵が',
      'reason': 'En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual.'},
-    {'from': ' いしゃです', 'to': ' 医者です',
+    {'from': ' いしゃ', 'to': ' 医者',
      'reason': 'Tras は, el motor oye はいしゃ (歯医者). 医者 suena igual; una palabra いしゃ en el diccionario partiría かいしゃ.'},
     {'from': '下で', 'to': 'したで',
      'reason': 'El motor lee 下で como もとで. したで suena igual; una palabra 下 en el diccionario estropearía 川下, 下校 y 下手.'},
+    {'from': '今しゅう', 'to': '今週',
+     'reason': 'El motor lee 今 como いま (いま しゅう). 今週 suena igual: こんしゅう.'},
+    {'from': '十まで', 'to': 'とおまで',
+     'reason': 'Contando con つ, diez es とお; el motor dice じゅうまで.'},
+    {'from': 'かいしゃいんが', 'to': '会社員が',
+     'reason': 'El motor parte かいしゃいん en かい y しゃいん. 会社員 suena igual; en かいしゃいんです ya acierta.'},
+    # Words in hiragana that the engine cuts in the wrong place, although the moras are right.
+    {'from': 'きのう まんがを', 'to': '昨日 まんがを', 'reason': 'El motor agrupa きの / うまんがを. 昨日 suena igual.'},
+    {'from': 'にわに カラス', 'to': '庭に カラス', 'reason': 'Tras まいあさ, el motor oye に わに (cocodrilo). 庭に suena igual.'},
+    {'from': 'どうぶつえん', 'to': '動物園', 'reason': 'El motor agrupa どう / ぶつえん. 動物園 suena igual, con su acento [4].'},
+    {'from': 'あさ 五時', 'to': '朝 五時', 'reason': 'El motor agrupa あ / さごじに. 朝 suena igual.'},
+    {'from': '一時 九分', 'to': '一時 きゅうふん',
+     'reason': 'El motor agrupa いち / じきゅうふん, también con cifras; así, いちじ / きゅうふん, aunque sin la caída de キュ\'ウフン.'},
+    # A numeral in figures takes the engine's own rules for counters (sound changes and accent), which it skips
+    # with some kanji numerals. Only in these sentences: 三分の一, for example, is さんぶんのいち.
+    {'from': '八本', 'to': '8本', 'reason': 'El motor dice はちほん; con la cifra, はっぽん.'},
+    {'from': '四足', 'to': '4足', 'reason': 'El motor dice しそく; con la cifra, よんそく.'},
+    {'from': '十月 十日', 'to': '10月 10日',
+     'reason': 'El motor une los bloques en 十月十日 (とつきとおか); con cifras, じゅうがつ とおか.'},
+    {'from': '二月 十四日', 'to': '二月 14日',
+     'reason': 'El motor dice とよひ; con la cifra, じゅうよっか. Solo aquí: 二十四日 ya lo lee bien.'},
+    {'from': '三十日', 'to': '30日', 'reason': 'El motor dice みそか; con la cifra, さんじゅうにち.'},
+    {'from': '十時 六分', 'to': 'じゅうじ 6分',
+     'reason': 'El motor dice ととき ろくぶ; con 10時 6分 agrupa じゅう / じろっぷん, y así, じゅうじ / ろっぷん.'},
+    {'from': '十時', 'to': '10時', 'reason': 'El motor dice ととき; con la cifra, じゅうじ.'},
+    {'from': '二分 休み', 'to': '2分 休み', 'reason': 'El motor dice にぶん (la mitad); con la cifra, にふん.'},
+    {'from': '三分です', 'to': '3分です', 'reason': 'El motor dice さんぶ; con la cifra, さんぷん.'},
+    {'from': '五分です', 'to': '5分です', 'reason': 'El motor dice ごぶ; con la cifra, ごふん.'},
+    {'from': '八分の', 'to': '8分の', 'reason': 'El motor dice はちぶ; con la cifra, はっぷん.'},
 ]
 
 # User-dictionary words: how the engine reads a spelling of the words and the sentences. The
@@ -157,6 +189,18 @@ DICTIONARY = [
      'reason': 'Acento de 靴 en el diccionario del motor; tras きれいな, el motor dice ぐつ.'},
     {'surface': '千年', 'pronunciation': 'センネン', 'accentType': 1, 'wordType': 'COMMON_NOUN',
      'reason': 'La colección lo lee せんねん; el motor dice ちとせ. Con el número, el motor pone el acento [1] (セ\'ンネン) aunque se le pida otro.'},
+    {'surface': '靴下', 'pronunciation': 'クツシタ', 'accentType': 2, 'wordType': 'COMMON_NOUN',
+     'reason': 'La palabra 靴 de este diccionario partía 靴下 (くつか). Acento [2], el del diccionario del motor.'},
+    {'surface': '七人', 'pronunciation': 'ナナニン', 'accentType': 2, 'wordType': 'COMMON_NOUN',
+     'reason': 'Los contadores lo leen ななにん, con acento [2] (ナナ\'ニン); el motor dice しちにん.'},
+    {'surface': '三羽', 'pronunciation': 'サンバ', 'accentType': 1, 'wordType': 'COMMON_NOUN',
+     'reason': 'Los contadores lo leen さんば; el motor dice さんわ. Acento [1], el que da a さんわ.'},
+    {'surface': '十羽', 'pronunciation': 'ジュッパ', 'accentType': 1, 'wordType': 'COMMON_NOUN',
+     'reason': 'Los contadores lo leen じゅっぱ; el motor dice じゅうわ. Acento [1], el que da a じゅうわ.'},
+    {'surface': '何羽', 'pronunciation': 'ナンバ', 'accentType': 1, 'wordType': 'COMMON_NOUN',
+     'reason': 'Los contadores lo leen なんば; el motor dice なんわ. Acento [1], el que da a なんわ.'},
+    {'surface': '何足', 'pronunciation': 'ナンゾク', 'accentType': 1, 'wordType': 'COMMON_NOUN',
+     'reason': 'Los contadores lo leen なんぞく; el motor dice なんそく. Acento [1], el que da a なんそく.'},
 ]
 
 # What the engine receives for a word of the vocabulary written partly in kana: the standard
@@ -185,6 +229,11 @@ def word_file(written: str) -> str:
 def sentence_file(kanji: str, group: str, index: int) -> str:
     """Same rule as sentenceAudioFile() in src/lib/audio.ts."""
     return f"{ord(kanji):x}-{'s' if group == 'simple' else 'a'}{index + 1}.mp3"
+
+
+def counter_file(counter: str, value: int | str) -> str:
+    """Same rule as counterSentenceAudioFile() in src/lib/audio.ts."""
+    return f"{counter}-{'q' if value == 'question' else value}.mp3"
 
 
 def sha256(data: bytes) -> str:
@@ -281,7 +330,19 @@ def sentences() -> list[dict]:
             for index, sentence in enumerate(entry[group])]
 
 
-KINDS = {'words': words, 'sentences': sentences}
+def counter_sentences() -> list[dict]:
+    """Only the sentences of the counters, the last column of their tables: their examples have no audio."""
+    document = json.loads(COUNTERS.read_text(encoding='utf-8'))
+    return [{'file': counter_file(entry['id'], value), 'written': sentence['written'],
+             'reading': sentence['reading'], 'text': source_text(sentence['written']),
+             'expected': expected_sounds(sentence['reading'])}
+            for entry in document['entries']
+            for value, sentence in [*((form['value'], form['sentence']) for form in entry['forms']),
+                                    ('question', entry['question']['sentence'])]]
+
+
+KINDS = {'words': words, 'sentences': sentences, 'counters': counter_sentences}
+LABELS = {'words': 'las palabras', 'sentences': 'las frases de los kanji', 'counters': 'las frases de los contadores'}
 
 
 # --- Engine and voice ----------------------------------------------------------------
@@ -472,8 +533,7 @@ def main() -> None:
         })
     if not arguments.all and all(plan['same_settings'] and not plan['orphans'] and all(map(plan['up_to_date'], plan['items']))
                                  for plan in plans):
-        print(' '.join(f"Los {len(plan['items'])} audios de {'las palabras' if plan['kind'] == 'words' else 'las frases'}"
-                       for plan in plans).replace(' Los', ' y los') + ' están al día.')
+        print('Están al día: ' + ', '.join(f"los {len(plan['items'])} audios de {LABELS[plan['kind']]}" for plan in plans) + '.')
         return
 
     with Engine() as engine:
@@ -507,7 +567,7 @@ def main() -> None:
                    for item in plan['items']]
         plan['generation'].write_text(json.dumps({**current, 'entries': entries}, ensure_ascii=False, indent=2) + '\n',
                                       encoding='utf-8')
-        print(f"{'Palabras' if plan['kind'] == 'words' else 'Frases'}: {plan['generated']} audios generados, "
+        print(f"{LABELS[plan['kind']].capitalize()}: {plan['generated']} audios generados, "
               f"{len(plan['orphans'])} borrados; {len(entries)} con audio.")
 
 
