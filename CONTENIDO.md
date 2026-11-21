@@ -6,7 +6,7 @@ Los archivos de `public/` son la fuente de la verdad publicada. El navegador los
 
 | Sección | Fuente canónica | Contenido inicial |
 | --- | --- | --- |
-| 80 kanjis | `public/collection.json` | 80 kanji, 232 palabras, lecturas, significados y dificultades |
+| Kanjis | `public/collection.json` | 80 kanji, 232 palabras, lecturas, significados y dificultades |
 | Menú | `public/content/navigation.json` | Orden, etiquetas, tipos y archivos de las secciones |
 | Contadores | `public/content/counters.json` | 19 contadores y 3 grupos de números; lecturas, variantes, preguntas, un ejemplo en japonés y una frase de uso diario por forma, y la dificultad de cada contador |
 | Kana | `public/content/kana.json` | 46 sonidos básicos, 25 con marcas y 33 combinaciones; hiragana y katakana |

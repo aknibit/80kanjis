@@ -9,6 +9,12 @@ export type SpokenWord = Pick<VocabularyStudyItem, 'id' | 'written'>;
 
 export type PronunciationControls = ReturnType<typeof setupPronunciation>;
 
+// What plays also shows in the system's player (the lock screen and Control Center on iOS, the media controls of
+// desktop browsers) as a podcast's: the text spoken, «80kanjis audios» and a cover, instead of the page title and its
+// favicon.
+const mediaSession = 'mediaSession' in navigator && typeof MediaMetadata === 'function' ? navigator.mediaSession : undefined;
+const artwork = new URL('./icons/now-playing.png', import.meta.url).href;
+
 /** One active recording across the page and the kanji dialog; no download until a user presses play. */
 export function setupPronunciation(status: HTMLElement) {
   let active: { audio: HTMLAudioElement; reset: () => void } | undefined;
@@ -21,6 +27,12 @@ export function setupPronunciation(status: HTMLElement) {
     previous.audio.removeAttribute('src');
     previous.audio.load();
     previous.reset();
+    if (mediaSession) mediaSession.metadata = null;
+  }
+
+  // Pausing or stopping from the system's player stops it as Parar does, so the button does not stay on Parar.
+  for (const action of ['pause', 'stop'] as const) {
+    try { mediaSession?.setActionHandler(action, stop); } catch { /* An action this browser does not offer. */ }
   }
 
   /**
@@ -67,6 +79,10 @@ export function setupPronunciation(status: HTMLElement) {
       const audio = new Audio(new URL(`audio/${file}`, document.baseURI).href);
       audio.preload = 'none';
       active = { audio, reset };
+      if (mediaSession) {
+        mediaSession.metadata = new MediaMetadata({ title: written, artist: '80kanjis audios',
+          artwork: [{ src: artwork, sizes: '1024x1024', type: 'image/png' }] });
+      }
       icon.innerHTML = stopIcon;
       label.textContent = 'Parar';
       button.setAttribute('aria-pressed', 'true');

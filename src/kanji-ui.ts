@@ -636,8 +636,8 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
   }
 
   /**
-   * «Info kanji 01», which opens the full-screen view like the large kanji of the row: the visible label leads the
-   * accessible name, so voice control can say it.
+   * «Info kanji 01», which opens the full-screen view; on the kanji page it covers the whole kanji column of its row
+   * (style.css). The visible label leads the accessible name, so voice control can say it.
    */
   function createInfoButton(character: string, position: number): HTMLButtonElement {
     const button = createTrigger(character, 'study-action info-button', 'focus');
@@ -662,7 +662,6 @@ export function setupKanjiDetails(source: CollectionDocument, pronunciation?: Pr
     renderWord,
     renderText,
     createInfoButton,
-    createKanjiButton: (character: string) => createTrigger(character, 'kanji-character-button', 'focus'),
     /** After going back or forward in the history: open, change or close the full-screen view as the address says. */
     followUrl: () => focusView.follow(true),
     /** On load: open the full-screen view of the kanji in the address, if any. */

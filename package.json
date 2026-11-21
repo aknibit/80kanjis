@@ -1,7 +1,7 @@
 {
   "name": "80kanjis",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
@@ -11,6 +11,7 @@
     "check:content": "node --experimental-strip-types scripts/check-content.ts",
     "fonts": "python3 scripts/subset-fonts.py",
     "audio": "python3 scripts/generate-audio.py",
+    "icons": "python3 scripts/render-icons.py",
     "test": "node --experimental-strip-types --test src/lib/collection.test.ts src/lib/search.test.ts src/lib/difficulty.test.ts src/lib/study-catalog.test.ts src/lib/row-difficulty.test.ts src/lib/kanji-reference.test.ts src/lib/content.test.ts src/lib/kanji-sentences.test.ts src/lib/audio.test.ts src/lib/kanji-sequence.test.ts src/data/kanji.test.ts"
   },
   "devDependencies": {

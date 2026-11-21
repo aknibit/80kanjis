@@ -12,7 +12,11 @@ import { loadNavigation, loadStudyDocument, resolveSection, sectionHref } from '
 import { renderStudyPage } from './content-ui.ts';
 import { setupThemeToggle } from './theme.ts';
 import { fitPlaceholder } from './search-placeholder.ts';
+import { trackInputModality } from './input-modality.ts';
+import { version } from '../package.json';
 import './style.css';
+
+trackInputModality();
 
 const searchIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>';
 const arrowIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>';
@@ -73,7 +77,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     <div id="study-page" hidden><p class="collection-status" role="status">Cargando la sección…</p></div>
   </main>
-  <footer class="site-footer shell"><span><strong>80kanjis.</strong> Una pequeña colección, un gran comienzo.</span><a href="#top">Volver arriba <span aria-hidden="true">↑</span></a></footer>
+  <footer class="site-footer shell"><span><strong>80kanjis.</strong> Una pequeña colección, un gran comienzo. <span class="site-version">v${version}</span></span><a href="#top">Volver arriba <span aria-hidden="true">↑</span></a></footer>
 
   <dialog id="about-dialog" aria-labelledby="about-title">
     <div class="dialog-header"><span class="eyebrow">SOBRE LA COLECCIÓN</span><button id="close-about" class="clear-button" type="button" aria-label="Cerrar información">${closeIcon}</button></div>
@@ -84,7 +88,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>La dificultad que elijas arriba a la derecha vale para todas las secciones, y este navegador la recuerda para la próxima visita.</p>
     <p>Los filtros conservan la fila entera: Difícil si cualquier entrada es difícil; Medio si hay alguna media y ninguna difícil; Fácil solo si las cuatro son fáciles. Sin completar agrupa las filas que solo tienen entradas fáciles o sin marcar y todavía no están completas.</p>
     <p>En las fichas, uno, dos o tres puntos destacados indican fácil, medio y difícil. Tres puntos atenuados indican que la dificultad está sin marcar.</p>
-    <p>En el vocabulario, el kanji de la fila aparece en verde, los otros de los 80 en azul y los avanzados en rojo. Pulsa el kanji verde, el kanji grande de la fila o su botón Info para verlo a pantalla completa y pasar al anterior o al siguiente de la lista, con las flechas del teclado o de la barra superior; los azules y los rojos abren una ventana con su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales. En los contadores, los verbos y los adjetivos y adverbios, los kanji también aparecen en azul o en rojo y abren su ventana, y las traducciones de las frases se ocultan como en las ventanas, para que intentes adivinarlas. Cada ventana tiene un botón para ver el kanji a pantalla completa.</p>
+    <p>En el vocabulario, el kanji de la fila aparece en verde, los otros de los 80 en azul y los avanzados en rojo. Pulsa el kanji verde o cualquier punto de la primera columna de la fila, la sombreada, para verlo a pantalla completa y pasar al anterior o al siguiente de la lista, con las flechas del teclado o de la barra superior; los azules y los rojos abren una ventana con su significado y ejemplos. «Avanzado» indica que está fuera de los 80 principales. En los contadores, los verbos y los adjetivos y adverbios, los kanji también aparecen en azul o en rojo y abren su ventana, y las traducciones de las frases se ocultan como en las ventanas, para que intentes adivinarlas. Cada ventana tiene un botón para ver el kanji a pantalla completa.</p>
     <p>En el vocabulario, el interruptor Flashcards oculta el significado en el reverso de cada ficha: pulsa una para darle la vuelta. Este navegador recuerda si lo dejas activado.</p>
     <p class="dialog-note">Se conserva la escritura del documento, con las conversiones revisadas a kanji de la colección y los de apoyo 個, 色 y 庭. 時 y 前 ya aparecían en el vocabulario original y también se pueden consultar como kanji de apoyo. Los ejemplos marcados como duplicados se han completado con su lectura y significado de la misma colección.</p>
     <p class="dialog-note">Los significados de los 80 kanji se han revisado y ampliado. Sus lecturas principales se han contrastado con <a href="https://www.edrdg.org/wiki/KANJIDIC_Project.html" target="_blank" rel="noopener">KANJIDIC2, de EDRDG y Jim Breen</a> y <a href="https://www.kanjipedia.jp/" target="_blank" rel="noopener">KanjiPedia</a>. Las aportaciones derivadas de KANJIDIC2 se ofrecen bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. <a href="data/CREDITS.txt" target="_blank" rel="noopener">Fuentes y criterios de revisión</a>.</p>
@@ -170,8 +174,8 @@ function start(source: CollectionDocument, difficulty: DifficultySelector) {
 
     const content = element('div', 'study-content');
     if (item.type === 'kanji') {
-      const character = element('h3', 'kanji-character');
-      character.append(kanjiDetails.createKanjiButton(item.character));
+      // Not a button of its own: the Info button covers the whole column, the large kanji included.
+      const character = element('h3', 'kanji-character', item.character);
       character.id = headingId;
       character.lang = 'ja';
       const meanings = element('ul', 'kanji-meanings');
@@ -332,8 +336,8 @@ void boot().catch((error: unknown) => {
   if (!isKanjiPage) {
     const host = document.querySelector('#study-page')!;
     const message = element('p', 'collection-status load-error', error instanceof Error ? error.message : 'No se pudo cargar esta sección.');
-    const back = element('a', 'section-link', 'Volver a 80 kanjis');
-    back.href = sectionHref({ id: 'kanji', label: '80 kanjis', kind: 'kanji', file: 'collection.json' }, document.baseURI);
+    const back = element('a', 'section-link', 'Volver a Kanjis');
+    back.href = sectionHref({ id: 'kanji', label: 'Kanjis', kind: 'kanji', file: 'collection.json' }, document.baseURI);
     host.replaceChildren(message, back);
     return;
   }

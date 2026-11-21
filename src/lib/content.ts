@@ -143,7 +143,7 @@ export function parseNavigation(input: string): NavigationDocument {
     }
   }
   unique(data.sections);
-  check((data.sections[0] as RecordValue).id === 'kanji', '80 kanjis debe ser la primera sección.');
+  check((data.sections[0] as RecordValue).id === 'kanji', 'Kanjis debe ser la primera sección.');
   return data as unknown as NavigationDocument;
 }
 

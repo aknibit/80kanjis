@@ -32,6 +32,10 @@
   --count-bg: #eeeee7;
   --row-highlight: #f5f7f3;
   --flashcard-front: #f2f7f3;
+  /* The kanji column of each row: shaded, darker under the pointer, which opens the kanji anywhere on it. */
+  --kanji-column: #f5f6f1;
+  --kanji-column-hover: #eef0e9;
+  --kanji-column-edge: none;
   --kbd-bg: #f7f8f3;
   --kbd-border: #e6e8e0;
   --chip-bg: #fafaf8;
@@ -131,6 +135,10 @@
   --count-bg: #252b26;
   --row-highlight: #212823;
   --flashcard-front: #213028;
+  --kanji-column: #151a16;
+  --kanji-column-hover: #101311;
+  /* The lit top edge of --card-shadow, which the shade would cover. */
+  --kanji-column-edge: inset 0 1px 0 #ffffff0f;
   --kbd-bg: #232924;
   --kbd-border: #363e37;
   --chip-bg: #222823;
@@ -297,7 +305,7 @@ kbd { font-family: inherit; font-size: 14px; min-width: 28px; height: 30px; disp
 .difficulty-option[aria-selected='true'] .difficulty-choice-icon { color: currentColor; }
 .difficulty-option .filter-count { justify-self: end; }
 /* The option the arrow keys reach, only while the keyboard drives the list. */
-.difficulty-trigger:focus-visible + .difficulty-options .is-active { outline: 2px solid currentColor; outline-offset: -4px; }
+:where(:root:not([data-input='pointer'])) .difficulty-trigger:focus-visible + .difficulty-options .is-active { outline: 2px solid currentColor; outline-offset: -4px; }
 /* The page content goes back to the full width below the drop-down. */
 .collection, .study-collection { clear: both; }
 /* The kanji page: its count, and how a row gets its difficulty. */
@@ -316,6 +324,13 @@ h2 { margin: 0; font-size: 21px; font-weight: 550; letter-spacing: -.4px; }
 .study-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding-block: 12px; border-radius: 12px; background: var(--surface); }
 .study-block { --study-control-width: 68px; --study-control-height: 22px; position: relative; display: flex; flex-direction: column; min-width: 0; padding-inline: 12px; }
 .study-block + .study-block { border-inline-start: 1px solid var(--line); }
+/* The kanji column is shaded up to the edges of the card, without the rule beside it, and opens the full-screen view
+   anywhere: the ::after of its Info button covers it. */
+.study-block--kanji { isolation: isolate; margin-block: -12px; padding-block: 12px; border-radius: 12px 0 0 12px; background: var(--kanji-column); box-shadow: var(--kanji-column-edge); transition: background-color .15s; }
+.study-block--kanji + .study-block { border-inline-start: 0; }
+.study-block--kanji .info-button { position: static; }
+.study-block--kanji .info-button::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+@media (hover: hover) { .study-block--kanji:hover { background: var(--kanji-column-hover); } }
 .study-meta { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-height: var(--study-control-height); margin-bottom: 4px; }
 .study-identity { display: flex; align-items: center; gap: 8px; min-width: 0; line-height: 18px; }
 .study-controls { display: flex; align-items: center; justify-content: flex-end; gap: 4px; flex-shrink: 0; margin-left: auto; }
@@ -329,15 +344,14 @@ h2 { margin: 0; font-size: 21px; font-weight: 550; letter-spacing: -.4px; }
 .word-japanese { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; min-width: 0; }
 .word-written { margin: 0; font-family: var(--japanese); font-size: 25px; font-weight: 400; line-height: 1.4; overflow-wrap: anywhere; }
 .kanji-detail-trigger { border: 0; padding: 0; border-radius: 3px; background: transparent; font: inherit; line-height: inherit; }
-.kanji-character-button { display: block; color: inherit; }
 .kanji-link { --kanji-tone: var(--kanji-collection); --kanji-shadow: color-mix(in srgb, var(--kanji-tone) 22%, transparent); --kanji-glow: color-mix(in srgb, var(--kanji-tone) 12%, transparent); display: inline; font-size: 1.08em; font-weight: 500; color: var(--kanji-tone); text-shadow: 0 1px 3px var(--kanji-shadow), 0 2px 8px var(--kanji-glow); }
 .kanji-link--target { --kanji-tone: var(--accent); }
 .kanji-link--advanced { --kanji-tone: var(--kanji-advanced); }
 .kanji-link:hover { text-shadow: 0 1px 4px var(--kanji-shadow), 0 2px 10px var(--kanji-shadow); }
 /* The kanji the full-screen view already shows is not a button. */
 .kanji-link--current:hover { text-shadow: 0 1px 3px var(--kanji-shadow), 0 2px 8px var(--kanji-glow); }
-.kanji-detail-trigger:focus-visible { outline: none; background: var(--accent-tint); }
-.kanji-link:focus-visible { background: transparent; text-shadow: 0 0 3px currentColor, 0 2px 8px var(--kanji-shadow); }
+:where(:root:not([data-input='pointer'])) .kanji-detail-trigger:focus-visible { outline: none; background: var(--accent-tint); }
+:where(:root:not([data-input='pointer'])) .kanji-link:focus-visible { background: transparent; text-shadow: 0 0 3px currentColor, 0 2px 8px var(--kanji-shadow); }
 .word-reading { font-family: var(--japanese-reading); font-size: 16px; font-weight: 400; color: var(--reading); letter-spacing: .04em; line-height: 1.6; overflow-wrap: anywhere; }
 .study-action, .difficulty-badge { flex: 0 0 var(--study-control-width); width: var(--study-control-width); height: var(--study-control-height); }
 .study-action { display: inline-flex; align-items: center; justify-content: center; gap: 3px; padding: 0 3px; border: 1px solid var(--action-border); border-radius: 4px; background: var(--action-bg); color: var(--accent); font-size: 11px; font-weight: 550; line-height: 18px; white-space: nowrap; }
@@ -377,6 +391,8 @@ h2 { margin: 0; font-size: 21px; font-weight: 550; letter-spacing: -.4px; }
 .site-footer a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; white-space: nowrap; }
 .site-footer a:hover { color: var(--accent); }
 .site-footer a span { margin-left: 10px; }
+/* The version in package.json, shown so a visit can tell which one it got. */
+.site-version { display: inline-block; margin-left: 4px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 dialog { background: var(--surface-raised); border: 1px solid var(--rule); border-radius: 14px; color: var(--text); padding: 28px; max-width: min(560px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); box-shadow: 0 20px 90px var(--dialog-shadow); }
 dialog::backdrop { background: #252b2460; backdrop-filter: blur(3px); }
@@ -671,7 +687,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .flashcard-toggle { float: right; display: inline-flex; align-items: center; gap: 10px; min-height: 40px; margin: 20px 0 12px 12px; padding: 6px 12px 6px 10px; border: 1px solid var(--line); border-radius: 5px; color: var(--text-soft); font-size: 14px; white-space: nowrap; cursor: pointer; user-select: none; }
 .flashcard-toggle:hover { background: var(--hover); }
 .flashcard-toggle:has(input:checked) { color: var(--text); }
-.flashcard-toggle:has(input:focus-visible) { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+:where(:root:not([data-input='pointer'])) .flashcard-toggle:has(input:focus-visible) { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
 .flashcard-toggle input { appearance: none; position: relative; flex: none; width: 34px; height: 20px; margin: 0; border: 1.5px solid var(--muted); border-radius: 10px; background: transparent; cursor: inherit; transition: background-color .15s, border-color .15s; }
 .flashcard-toggle input::before { content: ''; position: absolute; top: 2.5px; left: 2.5px; width: 12px; height: 12px; border-radius: 50%; background: var(--muted); transition: transform .15s, background-color .15s; }
 .flashcard-toggle input:checked { border-color: var(--accent-fill); background: var(--accent-fill); }
@@ -800,6 +816,8 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-row { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 12px; }
   .study-block:nth-child(3) { border-inline-start: 0; }
   .study-block:nth-child(n + 3) { border-top: 1px solid var(--line); padding-top: 12px; }
+  /* The shade fills the row gap, down to the rule over the second line. */
+  .study-block--kanji { border-radius: 12px 0 0 0; }
 }
 @media (max-width: 820px) {
   .eyebrow { font-size: 11px; letter-spacing: 1.4px; }
@@ -882,7 +900,8 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   /* Phones: the kanji heads its card and the three words follow as a list, without columns or rules between them. */
   .study-row { grid-template-columns: minmax(0, 1fr); row-gap: 0; padding-block: 4px; }
   .study-block, .study-block + .study-block, .study-block:nth-child(n + 3) { padding: 12px 14px; border: 0; }
-  .study-block--kanji { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 14px; row-gap: 6px; align-items: center; padding-block: 10px 14px; border-bottom: 1px solid var(--line); }
+  /* The shaded header reaches the top of the card. */
+  .study-block--kanji { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 14px; row-gap: 6px; align-items: center; margin-block: -4px 0; padding-block: 14px; border-radius: 12px 12px 0 0; }
   .study-block--vocabulary { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; row-gap: 6px; align-items: start; }
   .study-block--vocabulary + .study-block--vocabulary { padding-top: 4px; }
   .study-meta, .study-block--kanji .study-content { display: contents; }
@@ -957,3 +976,6 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .kanji-focus-back { min-height: 44px; }
   .kanji-focus-step { min-width: 44px; height: 44px; }
 }
+/* No focus ring after a click or a tap, also when a script moves the focus (src/input-modality.ts). The rings that are
+   not an outline of the focused control check the same attribute in their own rule. */
+:root[data-input='pointer'] :focus-visible { outline: none; }
