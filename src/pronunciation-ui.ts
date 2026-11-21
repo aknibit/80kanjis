@@ -27,7 +27,9 @@ export function setupPronunciation(status: HTMLElement) {
     previous.audio.removeAttribute('src');
     previous.audio.load();
     previous.reset();
-    if (mediaSession) mediaSession.metadata = null;
+    // The system's player stays with what played last, cover included, as a paused podcast: without its metadata, the
+    // iPhone would go back to the page title and the apple-touch-icon.
+    if (mediaSession) mediaSession.playbackState = 'paused';
   }
 
   // Pausing or stopping from the system's player stops it as Parar does, so the button does not stay on Parar.
@@ -82,6 +84,7 @@ export function setupPronunciation(status: HTMLElement) {
       if (mediaSession) {
         mediaSession.metadata = new MediaMetadata({ title: written, artist: '80kanjis audios',
           artwork: [{ src: artwork, sizes: '1024x1024', type: 'image/png' }] });
+        mediaSession.playbackState = 'playing';
       }
       icon.innerHTML = stopIcon;
       label.textContent = 'Parar';

@@ -830,7 +830,8 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 }
 @media (max-width: 600px) {
   .section-nav { padding-block: 8px; }
-  .section-link { font-size: 13px; padding-inline: 10px; }
+  /* 7 px a side: from 390 px (iPhone 12 to 17) the first four sections share the first line, whichever is bold. */
+  .section-link { font-size: 13px; padding-inline: 7px; }
   .study-results--lexicon { --lexicon-columns: minmax(0, 1fr); }
   .lexicon-row, .lexicon-summary { gap: 8px; padding: 14px 16px; }
   /* + / − stays at the top right, next to the word, with the difficulty just before it; the group tag goes below. */
@@ -942,7 +943,6 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .kanji-focus-position { white-space: normal; max-width: 72px; }
 }
 @media (max-width: 380px) {
-  .section-link { padding-inline: 7px; }
   /* 8 kana of reading (はんとけいまわり) and 6 of writing (クラスルーム) still fit in one line at 320 px. */
   .lexicon-card { --card-pad: 10px; }
   .lexicon-card .lexicon-written { font-size: 19px; }
@@ -951,6 +951,8 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .example-controls .meaning-button { gap: 4px; padding: 0 7px 0 5px; }
 }
 @media (max-width: 370px) {
+  /* Two lines down to 320 px, also with Adjetivos y adverbios in bold. */
+  .section-link { padding-inline: 6px; }
   /* The full-screen bar fits «Todos los kanji» from 375 px; below, «Todos» alone, and the rest is still read out. */
   .kanji-focus-back { padding-inline: 8px 12px; }
   .kanji-focus-back-more { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
