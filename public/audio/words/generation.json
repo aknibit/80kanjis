@@ -353,6 +353,26 @@
       "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual."
     },
     {
+      "from": "先月は えを",
+      "to": "先月は 絵を",
+      "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵を suena igual."
+    },
+    {
+      "from": "は えいご",
+      "to": "は 英語",
+      "reason": "Tras は, el motor une は y え (はえ, mosca): わたしはえ / いごの. 英語 suena igual."
+    },
+    {
+      "from": "かしま",
+      "to": "貸しま",
+      "reason": "El motor agrupa にさつか / しました. 貸しました suena igual; en las cuatro formas del verbo, para que suenen igual."
+    },
+    {
+      "from": "先しゅう",
+      "to": "先週",
+      "reason": "El motor lee 先 como さき (さきしゅう). 先週 suena igual: せんしゅう."
+    },
+    {
       "from": " いしゃ",
       "to": " 医者",
       "reason": "Tras は, el motor oye はいしゃ (歯医者). 医者 suena igual; una palabra いしゃ en el diccionario partiría かいしゃ."

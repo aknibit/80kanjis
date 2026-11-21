@@ -418,7 +418,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .kanji-dialog .kanji-dialog-reading-hint { font-size: 12px; line-height: 1.7; margin: 10px 0 0; }
 .kanji-dialog .kanji-dialog-note, .kanji-dialog .kanji-dialog-difficulty { font-size: 14px; line-height: 1.7; margin: 16px 0 20px; }
 .kanji-dialog-examples-title { font-size: 13px; font-weight: 600; margin: 22px 0 8px; }
-.kanji-dialog-examples, .kanji-sentence-list, .counter-table { --study-control-width: 68px; --study-control-height: 22px; }
+.kanji-dialog-examples, .kanji-sentence-list, .counter-table, .lexicon-examples { --study-control-width: 68px; --study-control-height: 22px; }
 .kanji-dialog-examples { list-style: none; padding: 0; margin: 0; }
 /* The meaning button and Audio sit at the right of each word, centred on its first line (.kanji-item-controls). */
 .kanji-dialog-examples li { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
@@ -494,7 +494,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 /* Hidden, the meaning is sand: a copy laid over the text, broken into crisp grains of its yellow by an SVG filter
    (#meaning-gravel, kanji-ui.ts), and somewhat translucent. Showing it fades the sand out while the text comes into
    focus; hiding it again blows the clear text away as smoke, which leaves the sand behind. */
-.kanji-dialog .meaning-veil, .counter-table .meaning-veil { position: relative; color: var(--translation-text); }
+.kanji-dialog .meaning-veil, .example-meaning-line .meaning-veil { position: relative; color: var(--translation-text); }
 .meaning-text, .meaning-gravel { transition: filter .35s ease, opacity .35s ease; }
 /* As wide as the text, so that the sand can follow the smoke across it; 4 px of padding hold the grains that the
    filter draws past the letters, which the mask below would otherwise cut. */
@@ -713,15 +713,18 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 .counter-example-reading { font-family: var(--japanese-reading); font-size: 13px; line-height: 1.6; letter-spacing: .04em; color: var(--reading); }
 .counter-example-meaning { margin-top: 1px; font-size: 13px; line-height: 1.5; color: var(--meaning); }
 .counter-sentence .counter-example-written { font-size: 16px; }
-/* Their kanji are blue or red buttons that open the dialog, at the size of the text so that no line changes. */
-.counter-table .kanji-link, .counter-note .kanji-link { font-size: inherit; }
-/* The meaning is sand in the yellow of the kanji dialog. Its button, a little smaller than there and, in the sentence,
-   followed by Audio, goes at its right, or under it, at the right, when the meaning would get less than 9em. */
-.counter-table .counter-meaning-line { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 3px; }
-.counter-meaning-line > .counter-example-meaning { flex: 1 1 9em; min-width: 0; margin-top: 0; }
-.counter-item-controls { --meaning-control-height: 26px; display: flex; align-items: center; gap: 6px; margin-left: auto; }
-.counter-item-controls .meaning-button { gap: 5px; padding: 0 9px 0 7px; font-size: 12px; }
-.counter-item-controls .meaning-button svg { width: 14px; height: 14px; }
+/* Their kanji, and those of the verbs' sentences, are blue or red buttons that open the dialog, at the size of the
+   text so that no line changes. */
+.counter-table .kanji-link, .counter-note .kanji-link, .lexicon-example-written .kanji-link { font-size: inherit; }
+/* In the counters and the verbs, the meaning of a sentence is sand in the yellow of the kanji dialog. Its button, a
+   little smaller than there and followed by Audio where there is one, goes at its right, or under it, at the right,
+   when the meaning would get less than 9em. */
+.example-meaning-line { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 3px; }
+.counter-table .example-meaning-line { display: flex; }
+.example-meaning-line > .meaning-veil { flex: 1 1 9em; min-width: 0; margin-top: 0; }
+.example-controls { --meaning-control-height: 26px; display: flex; align-items: center; gap: 6px; margin-left: auto; }
+.example-controls .meaning-button { gap: 5px; padding: 0 9px 0 7px; font-size: 12px; }
+.example-controls .meaning-button svg { width: 14px; height: 14px; }
 .counter-question { background: var(--row-highlight); }
 .counter-table tbody tr:last-child > * { border-bottom: 0; }
 /* White on the off-white page alone was too faint: every study surface carries --card-shadow. The card and kana
@@ -855,7 +858,7 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .study-block--vocabulary .study-content { grid-column: 1; grid-row: 1 / span 2; min-height: 0; }
   .study-block--kanji .kanji-character { grid-column: 1; grid-row: 1 / span 2; justify-self: start; align-self: center; margin: 0; }
   .study-block--kanji .kanji-meanings { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
-  .study-block, .kanji-dialog-examples, .kanji-sentence-list, .counter-table { --study-control-width: 60px; }
+  .study-block, .kanji-dialog-examples, .kanji-sentence-list, .counter-table, .lexicon-examples { --study-control-width: 60px; }
   .study-action { gap: 3px; padding-inline: 2px; font-size: 11px; }
   .study-action .study-action-icon { flex-basis: 11px; width: 11px; height: 11px; }
   /* Narrower kana columns show four syllables at once instead of three. */
@@ -892,8 +895,8 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
   .lexicon-card { --card-pad: 10px; }
   .lexicon-card .lexicon-written { font-size: 19px; }
   /* «Significado» and Audio still fit in the 161 px of a date sentence (beside 三十一日) at 320 px. */
-  .counter-item-controls { gap: 4px; }
-  .counter-item-controls .meaning-button { gap: 4px; padding: 0 7px 0 5px; }
+  .example-controls { gap: 4px; }
+  .example-controls .meaning-button { gap: 4px; padding: 0 7px 0 5px; }
 }
 @media (max-width: 370px) {
   /* The full-screen bar fits «Todos los kanji» from 375 px; below, «Todos» alone, and the rest is still read out. */
@@ -906,15 +909,15 @@ dialog p { color: var(--body-soft); font-size: 16px; line-height: 1.8; }
 }
 @media (pointer: coarse) {
   /* Compact controls whose invisible touch area is still 44 px tall. */
-  .study-block, .kanji-dialog-examples, .kanji-sentence-list, .counter-table { --study-control-height: 30px; }
+  .study-block, .kanji-dialog-examples, .kanji-sentence-list, .counter-table, .lexicon-examples { --study-control-height: 30px; }
   .study-action { position: relative; }
   .study-action::after { content: ''; position: absolute; inset: -7px -2px; }
   /* Taller than Audio here too; the invisible area makes it a 44 px target. */
   .kanji-item-controls { --meaning-control-height: 36px; }
   .meaning-button { position: relative; }
   .meaning-button::after { content: ''; position: absolute; inset: -4px 0; }
-  .counter-item-controls { --meaning-control-height: 30px; }
-  .counter-item-controls .meaning-button::after { inset: -7px 0; }
+  .example-controls { --meaning-control-height: 30px; }
+  .example-controls .meaning-button::after { inset: -7px 0; }
   .study-guides > summary, .study-sources > summary { padding-block: 12px; }
   /* The difficulty drop-down and its options are full 44 px targets. */
   .difficulty-trigger, .difficulty-option { min-height: 44px; }

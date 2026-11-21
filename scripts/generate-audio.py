@@ -7,11 +7,14 @@
 
 Escribe un MP3 por palabra del vocabulario (public/collection.json) en public/audio/words/,
 uno por frase de los kanji (public/content/kanji-sentences.json) en public/audio/sentences/
-y uno por frase de los contadores (la columna «Frase» de public/content/counters.json) en
-public/audio/counters/, cada carpeta con su registro en generation.json. El nombre de una
+uno por frase de los contadores (la columna «Frase» de public/content/counters.json) en
+public/audio/counters/ y uno por cada una de las cuatro formas de los verbos
+(public/content/verbs.json) en public/audio/verbs/, cada carpeta con su registro en
+generation.json. El nombre de una
 palabra sale de sus caracteres (4e00-3064.mp3 es 一つ); el de una frase de un kanji, del
 kanji y de su posición (4e00-s1.mp3 es la primera sencilla de 一), y el de una frase de un
 contador, del contador y del número (hon-3.mp3 es la de 三本; hon-q.mp3, la de la pregunta),
+y el de un verbo, de su id y de la forma (verb-okimasu-past-negative.mp3 es 起きませんでした),
 igual que en src/lib/audio.ts: si cambias uno, cambia el otro.
 
 El motor (AivisSpeech Engine) y la voz (el modelo morioki, de AivisHub) se descargan de
@@ -57,6 +60,7 @@ ROOT = Path(__file__).resolve().parent.parent
 COLLECTION = ROOT / 'public/collection.json'
 SENTENCES = ROOT / 'public/content/kanji-sentences.json'
 COUNTERS = ROOT / 'public/content/counters.json'
+VERBS = ROOT / 'public/content/verbs.json'
 AUDIO = ROOT / 'public/audio'
 WORK = ROOT / 'tmp/aivisspeech'
 
@@ -90,6 +94,14 @@ REPLACEMENTS = [
      'reason': 'En hiragana, el motor lee かれは como 枯れ葉 («kareha»). 彼は suena igual, con el acento [1] de かれの.'},
     {'from': 'わたしは えが', 'to': 'わたしは 絵が',
      'reason': 'En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual.'},
+    {'from': '先月は えを', 'to': '先月は 絵を',
+     'reason': 'En hiragana, el motor une は y え en はえ (蝿). 絵を suena igual.'},
+    {'from': 'は えいご', 'to': 'は 英語',
+     'reason': 'Tras は, el motor une は y え (はえ, mosca): わたしはえ / いごの. 英語 suena igual.'},
+    {'from': 'かしま', 'to': '貸しま',
+     'reason': 'El motor agrupa にさつか / しました. 貸しました suena igual; en las cuatro formas del verbo, para que suenen igual.'},
+    {'from': '先しゅう', 'to': '先週',
+     'reason': 'El motor lee 先 como さき (さきしゅう). 先週 suena igual: せんしゅう.'},
     {'from': ' いしゃ', 'to': ' 医者',
      'reason': 'Tras は, el motor oye はいしゃ (歯医者). 医者 suena igual; una palabra いしゃ en el diccionario partiría かいしゃ.'},
     {'from': '下で', 'to': 'したで',
@@ -236,6 +248,11 @@ def counter_file(counter: str, value: int | str) -> str:
     return f"{counter}-{'q' if value == 'question' else value}.mp3"
 
 
+def example_file(entry: str, example: dict, index: int) -> str:
+    """Same rule as exampleAudioFile() in src/lib/audio.ts."""
+    return f"{entry}-{example.get('form') or index + 1}.mp3"
+
+
 def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
@@ -272,10 +289,13 @@ def sounds(text: str) -> str:
 
 
 def expected_sounds(reading: str) -> str:
-    """The reading of a sentence as spoken: blocks end in their particle, so a final は or へ is wa or e."""
+    """The reading of a sentence as spoken: blocks end in their particle, so a final は or へ is wa or e, and so is
+    the へ of へも and へは (どこへも)."""
     blocks = []
     for block in reading.split():
         core = ''.join(c for c in block if c not in PUNCTUATION)
+        if core.endswith(('へも', 'へは')):
+            core = core[:-2] + 'え' + core[-1]
         if core.endswith('は'):
             core = core[:-1] + 'わ'
         elif core.endswith('へ'):
@@ -341,8 +361,18 @@ def counter_sentences() -> list[dict]:
                                     ('question', entry['question']['sentence'])]]
 
 
-KINDS = {'words': words, 'sentences': sentences, 'counters': counter_sentences}
-LABELS = {'words': 'las palabras', 'sentences': 'las frases de los kanji', 'counters': 'las frases de los contadores'}
+def verb_sentences() -> list[dict]:
+    """The four forms of each verb: present and past, affirmative and negative."""
+    document = json.loads(VERBS.read_text(encoding='utf-8'))
+    return [{'file': example_file(entry['id'], example, index), 'written': example['written'],
+             'reading': example['reading'], 'text': source_text(example['written']),
+             'expected': expected_sounds(example['reading'])}
+            for entry in document['entries'] for index, example in enumerate(entry.get('examples', []))]
+
+
+KINDS = {'words': words, 'sentences': sentences, 'counters': counter_sentences, 'verbs': verb_sentences}
+LABELS = {'words': 'las palabras', 'sentences': 'las frases de los kanji', 'counters': 'las frases de los contadores',
+          'verbs': 'las frases de los verbos'}
 
 
 # --- Engine and voice ----------------------------------------------------------------

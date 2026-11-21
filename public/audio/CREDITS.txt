@@ -1,11 +1,12 @@
 # Pronunciation audio
 
-WORDS (232), SENTENCES (480) AND COUNTER SENTENCES (266) — AivisSpeech (morioki)
+WORDS (232), SENTENCES (480), COUNTER SENTENCES (266) AND VERB SENTENCES (236) — AivisSpeech (morioki)
 All the audio of the site is generated speech; there are no human recordings.
 Files: words/*.mp3, one per word of the vocabulary (collection.json);
 sentences/*.mp3, one per sentence of the kanji dialogs (content/kanji-sentences.json);
-and counters/*.mp3, one per sentence of the counter tables, their last column
-(content/counters.json).
+counters/*.mp3, one per sentence of the counter tables, their last column
+(content/counters.json); and verbs/*.mp3, one per sentence of the four forms of
+each verb (content/verbs.json).
 Credit: AivisSpeech: morioki.
 Voice: morioki 1.0.0, style ノーマル (voice by もりおき, X @morioki_5; model by yuki,
 X @ai_shirohana), from AivisHub:
@@ -19,6 +20,6 @@ pass the audio off as the speaker's own or official, harm the speaker's image,
 attack or deceive people, or campaign for political or religious causes.
 The text, the spelling given to the engine, the spoken kana with accents, the
 reading corrections and the SHA-256 of each file are in words/generation.json,
-sentences/generation.json and counters/generation.json; scripts/generate-audio.py
-regenerates them.
+sentences/generation.json, counters/generation.json and verbs/generation.json;
+scripts/generate-audio.py regenerates them.
 These files have not received a native-speaker listening or pronunciation review.

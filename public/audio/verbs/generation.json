@@ -1,0 +1,2371 @@
+{
+  "engine": "AivisSpeech Engine",
+  "engineVersion": "1.2.0",
+  "engineSha256": "581a7f34afb2c5343ff8b27d6d88859083375868607657de95fad506939185df",
+  "voice": "morioki",
+  "style": "ノーマル",
+  "speaker": 497929760,
+  "model": {
+    "uuid": "baaae3c0-7b22-4605-8ba5-80c959b41a48",
+    "version": "1.0.0",
+    "sha256": "352858a737b23fe0bd0b7bd73a4956be262aad9bb24a7bf0d1eae9a71a466469",
+    "license": "ACML 1.0",
+    "url": "https://hub.aivis-project.com/aivm-models/baaae3c0-7b22-4605-8ba5-80c959b41a48"
+  },
+  "speedScale": 0.89,
+  "sampleRate": 24000,
+  "encoder": "LAME (lameenc 1.9.0), MP3 32 kbps mono",
+  "deterministic": false,
+  "dictionary": [
+    {
+      "surface": "日本",
+      "pronunciation": "ニホン",
+      "accentType": 2,
+      "wordType": "PROPER_NOUN",
+      "reason": "Se enseña «nihon», con acento [2]; la palabra evita «nippon»."
+    },
+    {
+      "surface": "日本人",
+      "pronunciation": "ニホンジン",
+      "accentType": 4,
+      "wordType": "PROPER_NOUN",
+      "reason": "Acento de 日本人 [4] (ニホンジ'ン); el motor dice ニホ'ンジン."
+    },
+    {
+      "surface": "七色",
+      "pronunciation": "ナナイロ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee なないろ, con acento [2] (ナナ'イロ); el motor dice ななしょく."
+    },
+    {
+      "surface": "竹林",
+      "pronunciation": "タケバヤシ",
+      "accentType": 4,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee たけばやし; el motor dice ちくりん."
+    },
+    {
+      "surface": "まつ林",
+      "pronunciation": "マツバヤシ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [3] de 松林; el motor dice まつりん."
+    },
+    {
+      "surface": "空ばこ",
+      "pronunciation": "カラバコ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee からばこ, con acento [2] (カラ'バコ); el motor dice そらばこ."
+    },
+    {
+      "surface": "土き",
+      "pronunciation": "ドキ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [1] de 土器; el motor dice つちき."
+    },
+    {
+      "surface": "まき貝",
+      "pronunciation": "マキガイ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [2] de 巻貝; el motor dice まきかい."
+    },
+    {
+      "surface": "ほら貝",
+      "pronunciation": "ホラガイ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [2] de 法螺貝; el motor dice ほらかい."
+    },
+    {
+      "surface": "こん虫",
+      "pronunciation": "コンチュウ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 昆虫, sin caída; el motor dice こんむし."
+    },
+    {
+      "surface": "先とう",
+      "pronunciation": "セントウ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 先頭, sin caída; el motor dice さきだとう."
+    },
+    {
+      "surface": "文なし",
+      "pronunciation": "モンナシ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 文無し, sin caída; el motor dice ぶんなし."
+    },
+    {
+      "surface": "上ぎ",
+      "pronunciation": "ウワギ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 上着, sin caída; el motor dice うえぎ."
+    },
+    {
+      "surface": "赤はん",
+      "pronunciation": "セキハン",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [3] de 赤飯; el motor dice あかはん."
+    },
+    {
+      "surface": "雨ぐも",
+      "pronunciation": "アマグモ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 雨雲, sin caída; el motor dice あめぐも."
+    },
+    {
+      "surface": "ほう石",
+      "pronunciation": "ホウセキ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 宝石 en el diccionario del motor; el motor dice ほういし."
+    },
+    {
+      "surface": "でん車",
+      "pronunciation": "デンシャ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 電車 en el diccionario del motor; el motor dice でんくるま."
+    },
+    {
+      "surface": "車りん",
+      "pronunciation": "シャリン",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 車輪 en el diccionario del motor; el motor dice くるまりん."
+    },
+    {
+      "surface": "正かい",
+      "pronunciation": "セイカイ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 正解 en el diccionario del motor; el motor dice ただしかい."
+    },
+    {
+      "surface": "正じき",
+      "pronunciation": "ショウジキ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 正直 en el diccionario del motor; el motor dice せいじき."
+    },
+    {
+      "surface": "らい月",
+      "pronunciation": "ライゲツ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 来月 en el diccionario del motor; el motor dice らいつき."
+    },
+    {
+      "surface": "白板",
+      "pronunciation": "ハクバン",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee はくばん; el motor dice しらいた."
+    },
+    {
+      "surface": "目と口",
+      "pronunciation": "メトクチ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Ante は, el motor lee もくとこう."
+    },
+    {
+      "surface": "はは",
+      "pronunciation": "ハハ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "En hiragana, el motor lee las dos は como partículas: «wa wa»."
+    },
+    {
+      "surface": "草はら",
+      "pronunciation": "クサハラ",
+      "accentType": 0,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 草原 (くさはら), sin caída; el motor dice くさわら."
+    },
+    {
+      "surface": "年より",
+      "pronunciation": "トシヨリ",
+      "accentType": 3,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [3] de 年寄り; el motor dice ねんより."
+    },
+    {
+      "surface": "三歳",
+      "pronunciation": "サンサイ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento [1] (サ'ンサイ), como en いっさい o にさい; el motor dice みとせ."
+    },
+    {
+      "surface": "十本",
+      "pronunciation": "ジュッポン",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 十本 en el diccionario del motor [1], con la lectura じゅっぽん de la colección; el motor dice じっぽん."
+    },
+    {
+      "surface": "靴",
+      "pronunciation": "クツ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Acento de 靴 en el diccionario del motor; tras きれいな, el motor dice ぐつ."
+    },
+    {
+      "surface": "千年",
+      "pronunciation": "センネン",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "La colección lo lee せんねん; el motor dice ちとせ. Con el número, el motor pone el acento [1] (セ'ンネン) aunque se le pida otro."
+    },
+    {
+      "surface": "靴下",
+      "pronunciation": "クツシタ",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "La palabra 靴 de este diccionario partía 靴下 (くつか). Acento [2], el del diccionario del motor."
+    },
+    {
+      "surface": "七人",
+      "pronunciation": "ナナニン",
+      "accentType": 2,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen ななにん, con acento [2] (ナナ'ニン); el motor dice しちにん."
+    },
+    {
+      "surface": "三羽",
+      "pronunciation": "サンバ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen さんば; el motor dice さんわ. Acento [1], el que da a さんわ."
+    },
+    {
+      "surface": "十羽",
+      "pronunciation": "ジュッパ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen じゅっぱ; el motor dice じゅうわ. Acento [1], el que da a じゅうわ."
+    },
+    {
+      "surface": "何羽",
+      "pronunciation": "ナンバ",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen なんば; el motor dice なんわ. Acento [1], el que da a なんわ."
+    },
+    {
+      "surface": "何足",
+      "pronunciation": "ナンゾク",
+      "accentType": 1,
+      "wordType": "COMMON_NOUN",
+      "reason": "Los contadores lo leen なんぞく; el motor dice なんそく. Acento [1], el que da a なんそく."
+    }
+  ],
+  "wordSpellings": {
+    "一ぴき": "一匹",
+    "まん月": "満月",
+    "火じ": "火事",
+    "ちょ金": "貯金",
+    "天ごく": "天国",
+    "気もち": "気持ち",
+    "げん気": "元気",
+    "大すき": "大好き",
+    "大へん": "大変",
+    "左がわ": "左側",
+    "右がわ": "右側",
+    "円ばん": "円盤",
+    "目てき": "目的",
+    "子ども": "子供",
+    "人ごみ": "人込み",
+    "人げん": "人間",
+    "本だな": "本棚",
+    "本とう": "本当",
+    "水どう": "水道",
+    "花だん": "花壇",
+    "じ石": "磁石",
+    "口ぶえ": "口笛",
+    "口べに": "口紅",
+    "手くび": "手首",
+    "はく手": "拍手",
+    "足あと": "足跡",
+    "足くび": "足首",
+    "耳うち": "耳打ち",
+    "出ぱつ": "出発",
+    "かん字": "漢字",
+    "すう字": "数字",
+    "さく文": "作文",
+    "王さま": "王様",
+    "王かん": "王冠",
+    "こく王": "国王",
+    "五わ": "五羽",
+    "火のこ": "火の粉",
+    "木かげ": "木陰",
+    "山いも": "山芋",
+    "田うえ": "田植え",
+    "白ぐみ": "白組",
+    "円けい": "円形",
+    "き立": "起立",
+    "え本": "絵本",
+    "町なみ": "町並み",
+    "竹うま": "竹馬",
+    "竹やぶ": "竹藪",
+    "竹わ": "竹輪",
+    "花たば": "花束",
+    "草もち": "草餅",
+    "ざっ草": "雑草",
+    "貝がら": "貝殻",
+    "すず虫": "鈴虫",
+    "虫かご": "虫籠",
+    "雨ふり": "雨降り",
+    "夕がた": "夕方",
+    "夕ぐれ": "夕暮れ",
+    "力もち": "力持ち",
+    "かい力": "怪力",
+    "音ぷ": "音符",
+    "てん字": "点字",
+    "てん校": "転校",
+    "玉手ばこ": "玉手箱",
+    "きぬ糸": "絹糸"
+  },
+  "replacements": [
+    {
+      "from": "描き",
+      "to": "書き",
+      "reason": "La lectura es かきます; el motor lee えがきます. 書きます suena igual, con el mismo acento."
+    },
+    {
+      "from": "かれは",
+      "to": "彼は",
+      "reason": "En hiragana, el motor lee かれは como 枯れ葉 («kareha»). 彼は suena igual, con el acento [1] de かれの."
+    },
+    {
+      "from": "わたしは えが",
+      "to": "わたしは 絵が",
+      "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual."
+    },
+    {
+      "from": "先月は えを",
+      "to": "先月は 絵を",
+      "reason": "En hiragana, el motor une は y え en はえ (蝿). 絵を suena igual."
+    },
+    {
+      "from": "は えいご",
+      "to": "は 英語",
+      "reason": "Tras は, el motor une は y え (はえ, mosca): わたしはえ / いごの. 英語 suena igual."
+    },
+    {
+      "from": "かしま",
+      "to": "貸しま",
+      "reason": "El motor agrupa にさつか / しました. 貸しました suena igual; en las cuatro formas del verbo, para que suenen igual."
+    },
+    {
+      "from": "先しゅう",
+      "to": "先週",
+      "reason": "El motor lee 先 como さき (さきしゅう). 先週 suena igual: せんしゅう."
+    },
+    {
+      "from": " いしゃ",
+      "to": " 医者",
+      "reason": "Tras は, el motor oye はいしゃ (歯医者). 医者 suena igual; una palabra いしゃ en el diccionario partiría かいしゃ."
+    },
+    {
+      "from": "下で",
+      "to": "したで",
+      "reason": "El motor lee 下で como もとで. したで suena igual; una palabra 下 en el diccionario estropearía 川下, 下校 y 下手."
+    },
+    {
+      "from": "今しゅう",
+      "to": "今週",
+      "reason": "El motor lee 今 como いま (いま しゅう). 今週 suena igual: こんしゅう."
+    },
+    {
+      "from": "十まで",
+      "to": "とおまで",
+      "reason": "Contando con つ, diez es とお; el motor dice じゅうまで."
+    },
+    {
+      "from": "かいしゃいんが",
+      "to": "会社員が",
+      "reason": "El motor parte かいしゃいん en かい y しゃいん. 会社員 suena igual; en かいしゃいんです ya acierta."
+    },
+    {
+      "from": "きのう まんがを",
+      "to": "昨日 まんがを",
+      "reason": "El motor agrupa きの / うまんがを. 昨日 suena igual."
+    },
+    {
+      "from": "にわに カラス",
+      "to": "庭に カラス",
+      "reason": "Tras まいあさ, el motor oye に わに (cocodrilo). 庭に suena igual."
+    },
+    {
+      "from": "どうぶつえん",
+      "to": "動物園",
+      "reason": "El motor agrupa どう / ぶつえん. 動物園 suena igual, con su acento [4]."
+    },
+    {
+      "from": "あさ 五時",
+      "to": "朝 五時",
+      "reason": "El motor agrupa あ / さごじに. 朝 suena igual."
+    },
+    {
+      "from": "一時 九分",
+      "to": "一時 きゅうふん",
+      "reason": "El motor agrupa いち / じきゅうふん, también con cifras; así, いちじ / きゅうふん, aunque sin la caída de キュ'ウフン."
+    },
+    {
+      "from": "八本",
+      "to": "8本",
+      "reason": "El motor dice はちほん; con la cifra, はっぽん."
+    },
+    {
+      "from": "四足",
+      "to": "4足",
+      "reason": "El motor dice しそく; con la cifra, よんそく."
+    },
+    {
+      "from": "十月 十日",
+      "to": "10月 10日",
+      "reason": "El motor une los bloques en 十月十日 (とつきとおか); con cifras, じゅうがつ とおか."
+    },
+    {
+      "from": "二月 十四日",
+      "to": "二月 14日",
+      "reason": "El motor dice とよひ; con la cifra, じゅうよっか. Solo aquí: 二十四日 ya lo lee bien."
+    },
+    {
+      "from": "三十日",
+      "to": "30日",
+      "reason": "El motor dice みそか; con la cifra, さんじゅうにち."
+    },
+    {
+      "from": "十時 六分",
+      "to": "じゅうじ 6分",
+      "reason": "El motor dice ととき ろくぶ; con 10時 6分 agrupa じゅう / じろっぷん, y así, じゅうじ / ろっぷん."
+    },
+    {
+      "from": "十時",
+      "to": "10時",
+      "reason": "El motor dice ととき; con la cifra, じゅうじ."
+    },
+    {
+      "from": "二分 休み",
+      "to": "2分 休み",
+      "reason": "El motor dice にぶん (la mitad); con la cifra, にふん."
+    },
+    {
+      "from": "三分です",
+      "to": "3分です",
+      "reason": "El motor dice さんぶ; con la cifra, さんぷん."
+    },
+    {
+      "from": "五分です",
+      "to": "5分です",
+      "reason": "El motor dice ごぶ; con la cifra, ごふん."
+    },
+    {
+      "from": "八分の",
+      "to": "8分の",
+      "reason": "El motor dice はちぶ; con la cifra, はっぷん."
+    }
+  ],
+  "entries": [
+    {
+      "file": "verb-okimasu-present-affirmative.mp3",
+      "written": "まい日 ははと いっしょに 起きます。",
+      "reading": "まいにち ははと いっしょに おきます。",
+      "sourceText": "まい日 ははと いっしょに 起きます。",
+      "kana": "マ'イニチ/ハ'ハト/イッショニ'/オキマ'ス",
+      "sha256": "e7010350b7c1877e002c3445deb7747f63c7e762a51543224a7ce79b6a78c875"
+    },
+    {
+      "file": "verb-okimasu-past-affirmative.mp3",
+      "written": "日よう日は ひるに 起きました。",
+      "reading": "にちようびは ひるに おきました。",
+      "sourceText": "日よう日は ひるに 起きました。",
+      "kana": "ニチヨ'オビワ/ヒ'ルニ/オキマ'シタ",
+      "sha256": "dc3f2cc79020a714f06e05a4ce8e320c075f1936d2d6dedd901d0c70b7ece623"
+    },
+    {
+      "file": "verb-okimasu-present-negative.mp3",
+      "written": "土よう日は あさ 起きません。",
+      "reading": "どようびは あさ おきません。",
+      "sourceText": "土よう日は あさ 起きません。",
+      "kana": "ドヨオビワ'アサ/オキマセ'ン",
+      "sha256": "dea6d3901240adb5a242d5a99aceb645b9a9e3fdf203fd644c9743ceae152f0a"
+    },
+    {
+      "file": "verb-okimasu-past-negative.mp3",
+      "written": "おとといは ひるまで 起きませんでした。",
+      "reading": "おとといは ひるまで おきませんでした。",
+      "sourceText": "おとといは ひるまで 起きませんでした。",
+      "kana": "オトト'イワ/ヒ'ルマデ/オキマセ'ンデシタ",
+      "sha256": "b4866b9564f9f6817593715076a5e8d4494fe738f9299371d638df9b008d09cd"
+    },
+    {
+      "file": "verb-tabemasu-present-affirmative.mp3",
+      "written": "家族と 晩ご飯を 食べます。",
+      "reading": "かぞくと ばんごはんを たべます。",
+      "sourceText": "家族と 晩ご飯を 食べます。",
+      "kana": "カ'ゾクト/バンゴ'ハンオ/タベマ'ス",
+      "sha256": "e3f1820f2583255a4fc60fcb16259845ac0c85b2c8e6b043fdcad578ecff89aa"
+    },
+    {
+      "file": "verb-tabemasu-past-affirmative.mp3",
+      "written": "レストランで さかなを 食べました。",
+      "reading": "レストランで さかなを たべました。",
+      "sourceText": "レストランで さかなを 食べました。",
+      "kana": "レ'ストランデ/サカナオ'/タベマ'シタ",
+      "sha256": "6716381ada9a2e3c79ca6a68bc5c800910c8341d73a45e32a595d8b8beabbf37"
+    },
+    {
+      "file": "verb-tabemasu-present-negative.mp3",
+      "written": "わたしは 肉を 食べません。",
+      "reading": "わたしは にくを たべません。",
+      "sourceText": "わたしは 肉を 食べません。",
+      "kana": "ワタシワ'/ニク'オ/タベマセ'ン",
+      "sha256": "71f147d84b796324ddba5261eab58dce3bdc3e0a4b2dcba9a40351397f270400"
+    },
+    {
+      "file": "verb-tabemasu-past-negative.mp3",
+      "written": "きのうは あさごはんを 食べませんでした。",
+      "reading": "きのうは あさごはんを たべませんでした。",
+      "sourceText": "きのうは あさごはんを 食べませんでした。",
+      "kana": "キノオワ'/アサゴ'ハンオ/タベマセ'ンデシタ",
+      "sha256": "1bce4bd416824d6827c220bf40a579bb138564aafd361a511c5613014918d3da"
+    },
+    {
+      "file": "verb-hatarakimasu-present-affirmative.mp3",
+      "written": "ちちは かいしゃで 働きます。",
+      "reading": "ちちは かいしゃで はたらきます。",
+      "sourceText": "ちちは かいしゃで 働きます。",
+      "kana": "チ'チワ/カ'イシャデ/ハタラキマ'ス",
+      "sha256": "f10e06df3b5020a0a71eee710b97aec30306ce9854f6626efbdebe7bceeeecfc"
+    },
+    {
+      "file": "verb-hatarakimasu-past-affirmative.mp3",
+      "written": "きょ年は 銀行で 働きました。",
+      "reading": "きょねんは ぎんこうで はたらきました。",
+      "sourceText": "きょ年は 銀行で 働きました。",
+      "kana": "キョネンワ'/ギンコオデ'/ハタラキマ'シタ",
+      "sha256": "30bdec3f9984bc80e64877046d2a8b27a866b89dbfb9c1931e530939ad22aa48"
+    },
+    {
+      "file": "verb-hatarakimasu-present-negative.mp3",
+      "written": "日よう日は 働きません。",
+      "reading": "にちようびは はたらきません。",
+      "sourceText": "日よう日は 働きません。",
+      "kana": "ニチヨ'オビワ/ハタラキマセ'ン",
+      "sha256": "4a3d64b426bac24bb8591a89caf8b151b9864e2ded60392702789592642d8cc9"
+    },
+    {
+      "file": "verb-hatarakimasu-past-negative.mp3",
+      "written": "先しゅうは 働きませんでした。",
+      "reading": "せんしゅうは はたらきませんでした。",
+      "sourceText": "先週は 働きませんでした。",
+      "kana": "センシュウワ'/ハタラキマセ'ンデシタ",
+      "sha256": "71f2dc2f760048ffdbbc04afdd07ad94206e270aa488076b0804da41c265f35d"
+    },
+    {
+      "file": "verb-benkyou-shimasu-present-affirmative.mp3",
+      "written": "まい日 日本ごを 勉強します。",
+      "reading": "まいにち にほんごを べんきょうします。",
+      "sourceText": "まい日 日本ごを 勉強します。",
+      "kana": "マ'イニチ/ニホンゴオ'/ベンキョオシマ'ス",
+      "sha256": "e1e4a40e655c7567bc738e7df0a3dc25fd8c062dad009c71ebb862e86f7816ca"
+    },
+    {
+      "file": "verb-benkyou-shimasu-past-affirmative.mp3",
+      "written": "大学で えいごを 勉強しました。",
+      "reading": "だいがくで えいごを べんきょうしました。",
+      "sourceText": "大学で えいごを 勉強しました。",
+      "kana": "ダイガクデエ'イゴオ/ベンキョオシマ'シタ",
+      "sha256": "2c38f9f6493c914d2515e7fa88db077067857a646947240408ef20182cb88473"
+    },
+    {
+      "file": "verb-benkyou-shimasu-present-negative.mp3",
+      "written": "よるは 勉強しません。",
+      "reading": "よるは べんきょうしません。",
+      "sourceText": "よるは 勉強しません。",
+      "kana": "ヨ'ルワ/ベンキョオシマセ'ン",
+      "sha256": "b2bde9218a4a80af55755c49f6349e002e7e1a3e645894bf0a038158a7a70c80"
+    },
+    {
+      "file": "verb-benkyou-shimasu-past-negative.mp3",
+      "written": "きのうは 勉強しませんでした。",
+      "reading": "きのうは べんきょうしませんでした。",
+      "sourceText": "きのうは 勉強しませんでした。",
+      "kana": "キノオワ'/ベンキョオシマセ'ンデシタ",
+      "sha256": "02c24931688ce642dda42d42f744848b1365808b9c1081ed2f6f585e898b9df5"
+    },
+    {
+      "file": "verb-yasumimasu-present-affirmative.mp3",
+      "written": "あしたは しごとを 休みます。",
+      "reading": "あしたは しごとを やすみます。",
+      "sourceText": "あしたは しごとを 休みます。",
+      "kana": "アシタ'ワ/シゴトオ'/ヤスミマ'ス",
+      "sha256": "1b197332e3b0e98176c7ce6441b15c933e624fa7ef1ef5fe6ff2bd73155954ff"
+    },
+    {
+      "file": "verb-yasumimasu-past-affirmative.mp3",
+      "written": "授業を 休みました。",
+      "reading": "じゅぎょうを やすみました。",
+      "sourceText": "授業を 休みました。",
+      "kana": "ジュ'ギョオオ/ヤスミマ'シタ",
+      "sha256": "a69e22225b5348d647c29eec46d823c36634e900f279721c762f2007c0cd38be"
+    },
+    {
+      "file": "verb-yasumimasu-present-negative.mp3",
+      "written": "月よう日は 授業を 休みません。",
+      "reading": "げつようびは じゅぎょうを やすみません。",
+      "sourceText": "月よう日は 授業を 休みません。",
+      "kana": "ゲツヨ'オビワ/ジュ'ギョオオ/ヤスミマセ'ン",
+      "sha256": "a61d270a5d40fe176e11965044ac355a988f62d81d71c51c68f9fbf49380f7c8"
+    },
+    {
+      "file": "verb-yasumimasu-past-negative.mp3",
+      "written": "きのうは 大学を 休みませんでした。",
+      "reading": "きのうは だいがくを やすみませんでした。",
+      "sourceText": "きのうは 大学を 休みませんでした。",
+      "kana": "キノオワ'/ダイガクオ'/ヤスミマセ'ンデシタ",
+      "sha256": "80ffe73b6590b3c2cf6fe11c46fafc1c308dbe6bb834ca4c1a97bf356f0aa073"
+    },
+    {
+      "file": "verb-nomimasu-present-affirmative.mp3",
+      "written": "まいあさ おちゃを 飲みます。",
+      "reading": "まいあさ おちゃを のみます。",
+      "sourceText": "まいあさ おちゃを 飲みます。",
+      "kana": "マイアサ'/オチャオ'/ノミマ'ス",
+      "sha256": "c6940eb2b2a2f9a51a8ff47394579d76d5e0f0ef380a8d51bb7c6e22fc334066"
+    },
+    {
+      "file": "verb-nomimasu-past-affirmative.mp3",
+      "written": "きのうは ともだちと ワインを 飲みました。",
+      "reading": "きのうは ともだちと ワインを のみました。",
+      "sourceText": "きのうは ともだちと ワインを 飲みました。",
+      "kana": "キノオワ'/トモダチトワ'インオ/ノミマ'シタ",
+      "sha256": "52d8bd63890ffe816f49d2915812fa387e86a02fe1cd22b8a76144886c409bda"
+    },
+    {
+      "file": "verb-nomimasu-present-negative.mp3",
+      "written": "わたしは ビールを 飲みません。",
+      "reading": "わたしは ビールを のみません。",
+      "sourceText": "わたしは ビールを 飲みません。",
+      "kana": "ワタシワビ'イルオ/ノミマセ'ン",
+      "sha256": "d391dc4d097e60d62f3cbff795726f9047a39316c471c38e6f659073b7f6d189"
+    },
+    {
+      "file": "verb-nomimasu-past-negative.mp3",
+      "written": "今日は コーヒーを 飲みませんでした。",
+      "reading": "きょうは コーヒーを のみませんでした。",
+      "sourceText": "今日は コーヒーを 飲みませんでした。",
+      "kana": "キョ'オワ/コオヒ'イオ/ノミマセ'ンデシタ",
+      "sha256": "3446b19179ee3a3c6a2f5abf91fb73be5b6f7f353fceb4796fdebf80c88255b5"
+    },
+    {
+      "file": "verb-owarimasu-present-affirmative.mp3",
+      "written": "今日の 授業は ひるに 終わります。",
+      "reading": "きょうの じゅぎょうは ひるに おわります。",
+      "sourceText": "今日の 授業は ひるに 終わります。",
+      "kana": "キョ'オノ/ジュ'ギョオワ/ヒ'ルニ/オワリマ'ス",
+      "sha256": "2d34eebc9aa4fd789e48c104f0fe4a51577441703d8684d05b8c95e81e815d6a"
+    },
+    {
+      "file": "verb-owarimasu-past-affirmative.mp3",
+      "written": "日本ごの 授業は 終わりました。",
+      "reading": "にほんごの じゅぎょうは おわりました。",
+      "sourceText": "日本ごの 授業は 終わりました。",
+      "kana": "ニホンゴノジュ'ギョオワ/オワリマ'シタ",
+      "sha256": "0b97feb0b926b74570136f10553a1b32507274860eb7911605e9ab37d05f2d88"
+    },
+    {
+      "file": "verb-owarimasu-present-negative.mp3",
+      "written": "宿題は 終わりません。",
+      "reading": "しゅくだいは おわりません。",
+      "sourceText": "宿題は 終わりません。",
+      "kana": "シュクダイワ'/オワリマセ'ン",
+      "sha256": "62ed02a2dab1d96bc7da6594d163a0a7dc4290d1d98b8d92cbf6331e230345bc"
+    },
+    {
+      "file": "verb-owarimasu-past-negative.mp3",
+      "written": "きのうの しごとは 終わりませんでした。",
+      "reading": "きのうの しごとは おわりませんでした。",
+      "sourceText": "きのうの しごとは 終わりませんでした。",
+      "kana": "キノオノ'/シゴトワ'/オワリマセ'ンデシタ",
+      "sha256": "e0b2a9713f6fcbb79c4240c35f322df764ddfc59616eb2e32bf89b1c8be2be04"
+    },
+    {
+      "file": "verb-ikimasu-present-affirmative.mp3",
+      "written": "まい日 バスで 大学へ 行きます。",
+      "reading": "まいにち バスで だいがくへ いきます。",
+      "sourceText": "まい日 バスで 大学へ 行きます。",
+      "kana": "マ'イニチ/バ'スデ/ダイガクエ'/イキマ'ス",
+      "sha256": "3d5e25ed4053003eef729e172769bdf1a0b978801028e467e4f34ea91e5d04e6"
+    },
+    {
+      "file": "verb-ikimasu-past-affirmative.mp3",
+      "written": "先月 日本へ 行きました。",
+      "reading": "せんげつ にほんへ いきました。",
+      "sourceText": "先月 日本へ 行きました。",
+      "kana": "セ'ンゲツ/ニホ'ンエ/イキマ'シタ",
+      "sha256": "9f54db6d1693b1902aa013e02cfbc9ae64d05fe779895e93fb940804683ae25e"
+    },
+    {
+      "file": "verb-ikimasu-present-negative.mp3",
+      "written": "あしたは かいしゃへ 行きません。",
+      "reading": "あしたは かいしゃへ いきません。",
+      "sourceText": "あしたは かいしゃへ 行きません。",
+      "kana": "アシタ'ワ/カ'イシャエ/イキマセ'ン",
+      "sha256": "c67725a8770a849a069a311de41df9a2e53ee757b962e15400a6b6f356f56a3d"
+    },
+    {
+      "file": "verb-ikimasu-past-negative.mp3",
+      "written": "きのうは どこへも 行きませんでした。",
+      "reading": "きのうは どこへも いきませんでした。",
+      "sourceText": "きのうは どこへも 行きませんでした。",
+      "kana": "キノオワド'コエモ/イキマセ'ンデシタ",
+      "sha256": "3b17774938004b3067fba9ad1595cbef098e688bb5985b8ed0ed63c75133f0ef"
+    },
+    {
+      "file": "verb-kimasu-present-affirmative.mp3",
+      "written": "ちちは あした 日本から 来ます。",
+      "reading": "ちちは あした にほんから きます。",
+      "sourceText": "ちちは あした 日本から 来ます。",
+      "kana": "チ'チワ/アシタ'/ニホ'ンカラ/キマ'ス",
+      "sha256": "74cac3c0ccb811ed6ecfa221bf3b8a1f2863910d39d7b74b7d9f92a394310cae"
+    },
+    {
+      "file": "verb-kimasu-past-affirmative.mp3",
+      "written": "ともだちは きのう わたしの へやへ 来ました。",
+      "reading": "ともだちは きのう わたしの へやへ きました。",
+      "sourceText": "ともだちは きのう わたしの へやへ 来ました。",
+      "kana": "トモダチワ'/キノオ'/ワタシノ'/ヘヤ'エ/キマ'シタ",
+      "sha256": "7e89cb163f6a90b557b60fe22abcef4d404678358412df402fdaba4de54a8d83"
+    },
+    {
+      "file": "verb-kimasu-present-negative.mp3",
+      "written": "バスは 来ません。",
+      "reading": "バスは きません。",
+      "sourceText": "バスは 来ません。",
+      "kana": "バ'スワ/キマセ'ン",
+      "sha256": "4c35693fc846529ae927646de88cb323dd67c56ccd4486403b4830b4f4cb2812"
+    },
+    {
+      "file": "verb-kimasu-past-negative.mp3",
+      "written": "ともだちは コンサートに 来ませんでした。",
+      "reading": "ともだちは コンサートに きませんでした。",
+      "sourceText": "ともだちは コンサートに 来ませんでした。",
+      "kana": "トモダチワコ'ンサアトニ/キマセ'ンデシタ",
+      "sha256": "5897dab876d5b4ed4346f2d1f8cc6fe87daf72c0b74777bb9f7ce28ead7fa5e5"
+    },
+    {
+      "file": "verb-suimasu-present-affirmative.mp3",
+      "written": "森の中で きれいな 空気を 吸います。",
+      "reading": "もりのなかで きれいな くうきを すいます。",
+      "sourceText": "森の中で きれいな 空気を 吸います。",
+      "kana": "モリノナ'カデ/キレエナク'ウキオ/スイマ'ス",
+      "sha256": "3b7a4b15618f7bec9a076174be164aba506149a6e42ac5a9add6a5cff0e132a3"
+    },
+    {
+      "file": "verb-suimasu-past-affirmative.mp3",
+      "written": "山で つめたい 空気を 吸いました。",
+      "reading": "やまで つめたい くうきを すいました。",
+      "sourceText": "山で つめたい 空気を 吸いました。",
+      "kana": "ヤマ'デ/ツメタイク'ウキオ/スイマ'シタ",
+      "sha256": "21752ca0d5b5938fdffdbbf72948c1ad492691b6bb7741ead023b63f851eba28"
+    },
+    {
+      "file": "verb-suimasu-present-negative.mp3",
+      "written": "わたしは たばこを 吸いません。",
+      "reading": "わたしは たばこを すいません。",
+      "sourceText": "わたしは たばこを 吸いません。",
+      "kana": "ワタシワ'/タバコオ'/スイマセ'ン",
+      "sha256": "3d8fc3eb7fd3ea6d7c32d438ada9f7913cf76267c384f9b351b7b250e6760706"
+    },
+    {
+      "file": "verb-suimasu-past-negative.mp3",
+      "written": "ちちは 一日中 たばこを 吸いませんでした。",
+      "reading": "ちちは いちにちじゅう たばこを すいませんでした。",
+      "sourceText": "ちちは 一日中 たばこを 吸いませんでした。",
+      "kana": "チ'チワ/イチニチジュウ'/タバコオ'/スイマセ'ンデシタ",
+      "sha256": "1c9be554ef2f9310d45b560c093253d25931e7420785f69069bab8b39d19f19c"
+    },
+    {
+      "file": "verb-kikimasu-present-affirmative.mp3",
+      "written": "まいばん 音がくを 聞きます。",
+      "reading": "まいばん おんがくを ききます。",
+      "sourceText": "まいばん 音がくを 聞きます。",
+      "kana": "マイバンオ'ンガクオ/キキマ'ス",
+      "sha256": "1eed448f11cc72400abba5ebb71bdd073cac1f3a834696e63b6db7eea1a751d1"
+    },
+    {
+      "file": "verb-kikimasu-past-affirmative.mp3",
+      "written": "ともだちに 宿題を 聞きました。",
+      "reading": "ともだちに しゅくだいを ききました。",
+      "sourceText": "ともだちに 宿題を 聞きました。",
+      "kana": "トモダチニ'/シュクダイオ'/キキマ'シタ",
+      "sha256": "c0b4f532fbf6b5ab95acef8eb96db0e52020b7018d26753660ff7e17453d1cb9"
+    },
+    {
+      "file": "verb-kikimasu-present-negative.mp3",
+      "written": "わたしは えいごの うたを 聞きません。",
+      "reading": "わたしは えいごの うたを ききません。",
+      "sourceText": "わたしは 英語の うたを 聞きません。",
+      "kana": "ワタシワ'/エエゴノ'/ウタ'オ/キキマセ'ン",
+      "sha256": "517e40a9da915848739762b8c3affe048859706c8f568840d5a6f7fd99f5c382"
+    },
+    {
+      "file": "verb-kikimasu-past-negative.mp3",
+      "written": "ちちには 聞きませんでした。",
+      "reading": "ちちには ききませんでした。",
+      "sourceText": "ちちには 聞きませんでした。",
+      "kana": "チ'チニワ/キキマセ'ンデシタ",
+      "sha256": "530919da4b8207aa7db0ff673a727499b8de29f8c23933bfb644396ac6b110fb"
+    },
+    {
+      "file": "verb-mimasu-present-affirmative.mp3",
+      "written": "家族の 写真を 見ます。",
+      "reading": "かぞくの しゃしんを みます。",
+      "sourceText": "家族の 写真を 見ます。",
+      "kana": "カ'ゾクノ/シャシンオ'/ミマ'ス",
+      "sha256": "612ff40b87b4a5b512d2c2c4f7c3c34a9d39bd6fff2aafb0c9303d69b015d435"
+    },
+    {
+      "file": "verb-mimasu-past-affirmative.mp3",
+      "written": "テレビで サッカーを 見ました。",
+      "reading": "テレビで サッカーを みました。",
+      "sourceText": "テレビで サッカーを 見ました。",
+      "kana": "テ'レビデ/サ'ッカアオ/ミマ'シタ",
+      "sha256": "35c2a7acbfdb23614c32c90b96130e2c73b4e1f886fdd1e09dd28917b14d5450"
+    },
+    {
+      "file": "verb-mimasu-present-negative.mp3",
+      "written": "よるは テレビを 見ません。",
+      "reading": "よるは テレビを みません。",
+      "sourceText": "よるは テレビを 見ません。",
+      "kana": "ヨ'ルワ/テ'レビオ/ミマセ'ン",
+      "sha256": "5107e0cddc6c989088fbe49a37baf386d38880efc08cd1e3ed5d7c26960cf696"
+    },
+    {
+      "file": "verb-mimasu-past-negative.mp3",
+      "written": "先月は えいがを 見ませんでした。",
+      "reading": "せんげつは えいがを みませんでした。",
+      "sourceText": "先月は えいがを 見ませんでした。",
+      "kana": "セ'ンゲツワ/エ'イガオ/ミマセ'ンデシタ",
+      "sha256": "17f9fad6353ce033b6fb4b8dce11448dc014fb1cdaa428a4f84d240efd74459f"
+    },
+    {
+      "file": "verb-kakimasu-present-affirmative.mp3",
+      "written": "ボールペンで てがみを 書きます。",
+      "reading": "ボールペンで てがみを かきます。",
+      "sourceText": "ボールペンで てがみを 書きます。",
+      "kana": "ボオルペンデ'/テガミオ'/カキマ'ス",
+      "sha256": "92b512f1654f669eef0720b64ea519b6cbcdbb1b5492c34c720b78371fe20306"
+    },
+    {
+      "file": "verb-kakimasu-past-affirmative.mp3",
+      "written": "ノートに 質問を 書きました。",
+      "reading": "ノートに しつもんを かきました。",
+      "sourceText": "ノートに 質問を 書きました。",
+      "kana": "ノ'オトニ/シツモンオ'/カキマ'シタ",
+      "sha256": "b5a6225fe5deddabbf8e75199b7f541465d415a3e7d98bb8e64d20b23361d5ca"
+    },
+    {
+      "file": "verb-kakimasu-present-negative.mp3",
+      "written": "よるは てがみを 書きません。",
+      "reading": "よるは てがみを かきません。",
+      "sourceText": "よるは てがみを 書きません。",
+      "kana": "ヨ'ルワ/テガミオ'/カキマセ'ン",
+      "sha256": "1d1c1b196356c67f80409bf8dc17f06f6c51adef77dc5e093fd4d72024c918ef"
+    },
+    {
+      "file": "verb-kakimasu-past-negative.mp3",
+      "written": "きのうは 日本ごで 書きませんでした。",
+      "reading": "きのうは にほんごで かきませんでした。",
+      "sourceText": "きのうは 日本ごで 書きませんでした。",
+      "kana": "キノオワ'/ニホンゴデ'/カキマセ'ンデシタ",
+      "sha256": "172ffc3eb9f836bc24d289fecbfd72a36aa93d4f06c5da87c148a127a8eb8f8d"
+    },
+    {
+      "file": "verb-kaimasu-present-affirmative.mp3",
+      "written": "みせで やさいを 買います。",
+      "reading": "みせで やさいを かいます。",
+      "sourceText": "みせで やさいを 買います。",
+      "kana": "ミ'セデ/ヤサイオ'/カイマ'ス",
+      "sha256": "5d31f0f5b396461629bdf3c5f68a445b66ecd7dee00b67c4ca9e82229345e133"
+    },
+    {
+      "file": "verb-kaimasu-past-affirmative.mp3",
+      "written": "雑誌を 二冊 買いました。",
+      "reading": "ざっしを にさつ かいました。",
+      "sourceText": "雑誌を 二冊 買いました。",
+      "kana": "ザッシオニ'サツ/カイマ'シタ",
+      "sha256": "2232d93ecc9bad8a5cbb7b35c1c1aa15097a0fa5196b8f2a0a044ede9c64483b"
+    },
+    {
+      "file": "verb-kaimasu-present-negative.mp3",
+      "written": "わたしは ワインを 買いません。",
+      "reading": "わたしは ワインを かいません。",
+      "sourceText": "わたしは ワインを 買いません。",
+      "kana": "ワタシワワ'インオ/カイマセ'ン",
+      "sha256": "e39b293fbb67f574574c272cb826605631e6e11759bece8ece514af179753228"
+    },
+    {
+      "file": "verb-kaimasu-past-negative.mp3",
+      "written": "きのうは かばんを 買いませんでした。",
+      "reading": "きのうは かばんを かいませんでした。",
+      "sourceText": "きのうは かばんを 買いませんでした。",
+      "kana": "キノオワ'/カバンオ'/カイマセ'ンデシタ",
+      "sha256": "0f9a1b75d4d8d33da13f1c77a75814f674df2a2a91364d5c6ada1c689d8d9516"
+    },
+    {
+      "file": "verb-aimasu-present-affirmative.mp3",
+      "written": "えきで ともだちに 会います。",
+      "reading": "えきで ともだちに あいます。",
+      "sourceText": "えきで ともだちに 会います。",
+      "kana": "エキ'デ/トモダチニ'/アイマ'ス",
+      "sha256": "84d981e79cb21a703a82ed3be8ddfb397f3f3e44b1b83504907b93aa07d6cbd8"
+    },
+    {
+      "file": "verb-aimasu-past-affirmative.mp3",
+      "written": "土よう日に 家族に 会いました。",
+      "reading": "どようびに かぞくに あいました。",
+      "sourceText": "土よう日に 家族に 会いました。",
+      "kana": "ドヨオビニカ'ゾクニ/アイマ'シタ",
+      "sha256": "a63c7f996af8ef0f3a5dc45747af57663b6d5fb027deb4afa1d791da61c7eb49"
+    },
+    {
+      "file": "verb-aimasu-present-negative.mp3",
+      "written": "かれには あまり 会いません。",
+      "reading": "かれには あまり あいません。",
+      "sourceText": "かれには あまり 会いません。",
+      "kana": "カ'レニワ/アマリ'/アイマセ'ン",
+      "sha256": "6b9d61c7da1dabfbacefcac2932fd4b7fe4440b3c5ebbc13d7263b4fb2d2a5b3"
+    },
+    {
+      "file": "verb-aimasu-past-negative.mp3",
+      "written": "きのうは 先生に 会いませんでした。",
+      "reading": "きのうは せんせいに あいませんでした。",
+      "sourceText": "きのうは 先生に 会いませんでした。",
+      "kana": "キノオワ'/センセ'エニ/アイマセ'ンデシタ",
+      "sha256": "588580942a887296a50e550acf8a8e70f11b7b0e773b02efa47533c85cc41da2"
+    },
+    {
+      "file": "verb-yomimasu-present-affirmative.mp3",
+      "written": "まいあさ しんぶんを 読みます。",
+      "reading": "まいあさ しんぶんを よみます。",
+      "sourceText": "まいあさ しんぶんを 読みます。",
+      "kana": "マイアサ'/シンブンオ'/ヨミマ'ス",
+      "sha256": "236a32151190886994e59ebc549f83c0732f300ca4103331dcb956845e106b34"
+    },
+    {
+      "file": "verb-yomimasu-past-affirmative.mp3",
+      "written": "きのう 日本ごの 本を 読みました。",
+      "reading": "きのう にほんごの ほんを よみました。",
+      "sourceText": "きのう 日本ごの 本を 読みました。",
+      "kana": "キノオ'/ニホンゴノホ'ンオ/ヨミマ'シタ",
+      "sha256": "32160549eeca1e7e6d3ae1aec6a338ce5543983f0affb14f3a27e55580a1c4d7"
+    },
+    {
+      "file": "verb-yomimasu-present-negative.mp3",
+      "written": "わたしは 雑誌を 読みません。",
+      "reading": "わたしは ざっしを よみません。",
+      "sourceText": "わたしは 雑誌を 読みません。",
+      "kana": "ワタシワ'/ザッシオ'/ヨミマセ'ン",
+      "sha256": "b1b5f3253085ef30229d17ad9588c3e9d66438d8ec41bae9957a8d796347ab8a"
+    },
+    {
+      "file": "verb-yomimasu-past-negative.mp3",
+      "written": "きのうは しんぶんを 読みませんでした。",
+      "reading": "きのうは しんぶんを よみませんでした。",
+      "sourceText": "きのうは しんぶんを 読みませんでした。",
+      "kana": "キノオワ'/シンブンオ'/ヨミマセ'ンデシタ",
+      "sha256": "0eb9c6545f2bbf09c86f0fce13302e86e4f96a1507fef1360058a8d50eb8e927"
+    },
+    {
+      "file": "verb-shashin-o-torimasu-present-affirmative.mp3",
+      "written": "家族の 写真を 撮ります。",
+      "reading": "かぞくの しゃしんを とります。",
+      "sourceText": "家族の 写真を 撮ります。",
+      "kana": "カ'ゾクノ/シャシンオ'/トリマ'ス",
+      "sha256": "39987bba1492e6a4aefb2453c173d893d2667d29d7fc3ead0aa3e8d4eeb62d28"
+    },
+    {
+      "file": "verb-shashin-o-torimasu-past-affirmative.mp3",
+      "written": "日本で たくさん 写真を 撮りました。",
+      "reading": "にほんで たくさん しゃしんを とりました。",
+      "sourceText": "日本で たくさん 写真を 撮りました。",
+      "kana": "ニホ'ンデ/タクサン'/シャシンオ'/トリマ'シタ",
+      "sha256": "e7f02e2945cc5babc85f967a78d9ba86ade20e902db481cde9c02f79b0131181"
+    },
+    {
+      "file": "verb-shashin-o-torimasu-present-negative.mp3",
+      "written": "教室で 写真を 撮りません。",
+      "reading": "きょうしつで しゃしんを とりません。",
+      "sourceText": "教室で 写真を 撮りません。",
+      "kana": "キョオシツデ'/シャシンオ'/トリマセ'ン",
+      "sha256": "3d9a3a3095d7ea46d88432ca96598fb0bc9159ebb10299d3148b146ebc95ff57"
+    },
+    {
+      "file": "verb-shashin-o-torimasu-past-negative.mp3",
+      "written": "コンサートで 写真を 撮りませんでした。",
+      "reading": "コンサートで しゃしんを とりませんでした。",
+      "sourceText": "コンサートで 写真を 撮りませんでした。",
+      "kana": "コ'ンサアトデ/シャシンオ'/トリマセ'ンデシタ",
+      "sha256": "1b71b0e01b5ec8b5220c7fbb2df1894c88d2c006cfe43c76dc938272b4cf2c7e"
+    },
+    {
+      "file": "verb-tenisu-o-shimasu-present-affirmative.mp3",
+      "written": "土よう日は テニスを します。",
+      "reading": "どようびは てにすを します。",
+      "sourceText": "土よう日は テニスを します。",
+      "kana": "ドヨオビワテ'ニスオシマス",
+      "sha256": "adc211f48b804653103e2cc88ba006990e62d6771746e601d67348bb55530c7f"
+    },
+    {
+      "file": "verb-tenisu-o-shimasu-past-affirmative.mp3",
+      "written": "ともだちと テニスを しました。",
+      "reading": "ともだちと てにすを しました。",
+      "sourceText": "ともだちと テニスを しました。",
+      "kana": "トモダチトテ'ニスオシマシタ",
+      "sha256": "ce04fc42daebe282e7cbe999f2149312fd446796ef8074eac26649ccebd45b5d"
+    },
+    {
+      "file": "verb-tenisu-o-shimasu-present-negative.mp3",
+      "written": "よるは テニスを しません。",
+      "reading": "よるは てにすを しません。",
+      "sourceText": "よるは テニスを しません。",
+      "kana": "ヨ'ルワ/テ'ニスオシマセン",
+      "sha256": "38f8c6305e0120193b898272a580762d6a928c2e851c26d000abbaec26100c46"
+    },
+    {
+      "file": "verb-tenisu-o-shimasu-past-negative.mp3",
+      "written": "先月は テニスを しませんでした。",
+      "reading": "せんげつは てにすを しませんでした。",
+      "sourceText": "先月は テニスを しませんでした。",
+      "kana": "セ'ンゲツワ/テ'ニスオシマセンデシタ",
+      "sha256": "ccf69f0100263e54be177efb90a72ad927fd0161be127f18f20a7a1a1e217acc"
+    },
+    {
+      "file": "verb-kaerimasu-present-affirmative.mp3",
+      "written": "らい月 スペインへ 帰ります。",
+      "reading": "らいげつ スペインへ かえります。",
+      "sourceText": "らい月 スペインへ 帰ります。",
+      "kana": "ラ'イゲツ/スペ'インエ/カエリマ'ス",
+      "sha256": "7a7fb501ab69134342b3408455cc80200b4ce1190ee0abef8d89f36b5a3d8c8f"
+    },
+    {
+      "file": "verb-kaerimasu-past-affirmative.mp3",
+      "written": "タクシーで 帰りました。",
+      "reading": "タクシーで かえりました。",
+      "sourceText": "タクシーで 帰りました。",
+      "kana": "タ'クシイデ/カエリマ'シタ",
+      "sha256": "cd66c33cb75ba797590010312ccfcd28b7d7671d2a6d2b9e6b3eeea6cdd10398"
+    },
+    {
+      "file": "verb-kaerimasu-present-negative.mp3",
+      "written": "今年は 日本へ 帰りません。",
+      "reading": "ことしは にほんへ かえりません。",
+      "sourceText": "今年は 日本へ 帰りません。",
+      "kana": "コトシワ'/ニホ'ンエ/カエリマセ'ン",
+      "sha256": "ed176fcc6910bf2bfc5cf4855eaaeb0f9b61c183d00793f21b9cbe3db6ba7dd4"
+    },
+    {
+      "file": "verb-kaerimasu-past-negative.mp3",
+      "written": "ちちは きのう 帰りませんでした。",
+      "reading": "ちちは きのう かえりませんでした。",
+      "sourceText": "ちちは きのう 帰りませんでした。",
+      "kana": "チ'チワ/キノオ'/カエリマセ'ンデシタ",
+      "sha256": "994ce43083d008af31dab8456cbe2bb73941666d73675628153edcebe81cddc7"
+    },
+    {
+      "file": "verb-nemasu-present-affirmative.mp3",
+      "written": "まいばん へやで 寝ます。",
+      "reading": "まいばん へやで ねます。",
+      "sourceText": "まいばん へやで 寝ます。",
+      "kana": "マイバン'/ヘヤ'デ/ネマ'ス",
+      "sha256": "253425931eb8448fcec8f58f260d7d1e9b1abcca50bfdd2130e1f49cea05a5f1"
+    },
+    {
+      "file": "verb-nemasu-past-affirmative.mp3",
+      "written": "日よう日は 一日中 寝ました。",
+      "reading": "にちようびは いちにちじゅう ねました。",
+      "sourceText": "日よう日は 一日中 寝ました。",
+      "kana": "ニチヨ'オビワ/イチニチジュウ'/ネマ'シタ",
+      "sha256": "e5f97757b66bbed5c0693258b43ac884dff337ec8bcf84bf44260e679ebb2832"
+    },
+    {
+      "file": "verb-nemasu-present-negative.mp3",
+      "written": "土よう日は ひるに 寝ません。",
+      "reading": "どようびは ひるに ねません。",
+      "sourceText": "土よう日は ひるに 寝ません。",
+      "kana": "ドヨオビワヒ'ルニ/ネマセ'ン",
+      "sha256": "6af6c86f32486739d08fe9b21f11bf8c20de8afb5d0ad5189f95f960983ce064"
+    },
+    {
+      "file": "verb-nemasu-past-negative.mp3",
+      "written": "きのう 子どもは 寝ませんでした。",
+      "reading": "きのう こどもは ねませんでした。",
+      "sourceText": "きのう 子どもは 寝ませんでした。",
+      "kana": "キノオ'/コドモワ'/ネマセ'ンデシタ",
+      "sha256": "a58349dbc40cdcd057937c8a2b3abce8947df931bbee03940a1044b5ecbe06b1"
+    },
+    {
+      "file": "verb-aisatsu-shimasu-present-affirmative.mp3",
+      "written": "先生に あいさつします。",
+      "reading": "せんせいに あいさつします。",
+      "sourceText": "先生に あいさつします。",
+      "kana": "センセ'エニ/ア'イサツシマス",
+      "sha256": "586ccd90471a02520a321e7fc542d23218ba20bad1891634bcfd254319437051"
+    },
+    {
+      "file": "verb-aisatsu-shimasu-past-affirmative.mp3",
+      "written": "あさ ともだちに あいさつしました。",
+      "reading": "あさ ともだちに あいさつしました。",
+      "sourceText": "あさ ともだちに あいさつしました。",
+      "kana": "アサ'/トモダチニア'イサツシマシタ",
+      "sha256": "b9f256d4cf1a671dd227663b3ce4b1b1917d95f97b0f3e3d26d3c057713f6d0f"
+    },
+    {
+      "file": "verb-aisatsu-shimasu-present-negative.mp3",
+      "written": "かれは あいさつしません。",
+      "reading": "かれは あいさつしません。",
+      "sourceText": "彼は あいさつしません。",
+      "kana": "カ'レワ/ア'イサツシマセン",
+      "sha256": "f2ea11e9ff673ee15e5b96b2728be3d7d154e89c1d4dbec219ead59a2085fe38"
+    },
+    {
+      "file": "verb-aisatsu-shimasu-past-negative.mp3",
+      "written": "けさは みんなに あいさつしませんでした。",
+      "reading": "けさは みんなに あいさつしませんでした。",
+      "sourceText": "けさは みんなに あいさつしませんでした。",
+      "kana": "ケ'サワ/ミンナ'ニ/ア'イサツシマセンデシタ",
+      "sha256": "259212326b67f782176da99ceed87a3e33e75b56cd94568d584341ef5b4f634b"
+    },
+    {
+      "file": "verb-agemasu-present-affirmative.mp3",
+      "written": "ははに 花を あげます。",
+      "reading": "ははに はなを あげます。",
+      "sourceText": "ははに 花を あげます。",
+      "kana": "ハ'ハニ/ハナ'オ/アゲマ'ス",
+      "sha256": "477cb98f6daccf6cd6bef4b3ef5f07f0c5f8905519248d26f2a624dc37825453"
+    },
+    {
+      "file": "verb-agemasu-past-affirmative.mp3",
+      "written": "ともだちに おみやげを あげました。",
+      "reading": "ともだちに おみやげを あげました。",
+      "sourceText": "ともだちに おみやげを あげました。",
+      "kana": "トモダチニ'/オミヤゲオ'/アゲマ'シタ",
+      "sha256": "8de634ce35313ba4bee6703a22264e06a43ed3ff791c4284d8a8890f724f6f7c"
+    },
+    {
+      "file": "verb-agemasu-present-negative.mp3",
+      "written": "子どもに お金を あげません。",
+      "reading": "こどもに おかねを あげません。",
+      "sourceText": "子どもに お金を あげません。",
+      "kana": "コドモニ'/オカネオ'/アゲマセ'ン",
+      "sha256": "863848ee207012fe8bc7fc7a6fb5e8b6fa8198119448eb6f613d380b8155e3eb"
+    },
+    {
+      "file": "verb-agemasu-past-negative.mp3",
+      "written": "今年は ちちに プレゼントを あげませんでした。",
+      "reading": "ことしは ちちに プレゼントを あげませんでした。",
+      "sourceText": "今年は ちちに プレゼントを あげませんでした。",
+      "kana": "コトシワチ'チニ/プレ'ゼントオ/アゲマセ'ンデシタ",
+      "sha256": "87f79a583aa5551c2128bee245e7fb6147e34c3e621c92b87b7d1f38bfb6e7d0"
+    },
+    {
+      "file": "verb-arukimasu-present-affirmative.mp3",
+      "written": "川べりを 歩きます。",
+      "reading": "かわべりを あるきます。",
+      "sourceText": "川べりを 歩きます。",
+      "kana": "カワベリオ'/アルキマ'ス",
+      "sha256": "dee698b390a6ca061649f06decc10d1b689612a27553afa3b2845d957c6cb450"
+    },
+    {
+      "file": "verb-arukimasu-past-affirmative.mp3",
+      "written": "大学まで 歩きました。",
+      "reading": "だいがくまで あるきました。",
+      "sourceText": "大学まで 歩きました。",
+      "kana": "ダイガクマ'デ/アルキマ'シタ",
+      "sha256": "5a7ced7e03cd6b12e9de2564858bdac0583bb2cdf45c6c2d03ec073f2b02d673"
+    },
+    {
+      "file": "verb-arukimasu-present-negative.mp3",
+      "written": "ちちは あまり 歩きません。",
+      "reading": "ちちは あまり あるきません。",
+      "sourceText": "ちちは あまり 歩きません。",
+      "kana": "チ'チワ/アマリ'/アルキマセ'ン",
+      "sha256": "078fbbb0eab293a0ac638ba5ce6b403b8a2ead777d358097578d05d4d0c2909e"
+    },
+    {
+      "file": "verb-arukimasu-past-negative.mp3",
+      "written": "きのうは ぜんぜん 歩きませんでした。",
+      "reading": "きのうは ぜんぜん あるきませんでした。",
+      "sourceText": "きのうは ぜんぜん 歩きませんでした。",
+      "kana": "キノオワ'/ゼンゼン'/アルキマセ'ンデシタ",
+      "sha256": "c9d74a03743ea8db8bda625eb4e0a55bb2119927dc6e23051a5a274b47e299bf"
+    },
+    {
+      "file": "verb-arimasu-present-affirmative.mp3",
+      "written": "机の 上に 辞書が あります。",
+      "reading": "つくえの うえに じしょが あります。",
+      "sourceText": "机の 上に 辞書が あります。",
+      "kana": "ツクエノウエ'ニ/ジ'ショガ/アリマ'ス",
+      "sha256": "422d90e1ffa61ff4bd9e72a684bffdbee3ccae7cbc150159d54a1f5257c5ede2"
+    },
+    {
+      "file": "verb-arimasu-past-affirmative.mp3",
+      "written": "きのうは しごとが ありました。",
+      "reading": "きのうは しごとが ありました。",
+      "sourceText": "きのうは しごとが ありました。",
+      "kana": "キノオワ'/シゴトガ'/アリマ'シタ",
+      "sha256": "bc9898fd05fbad62b7cc5e39615f5c7232ac9c1417c19ecd5a7e7a9d164999a2"
+    },
+    {
+      "file": "verb-arimasu-present-negative.mp3",
+      "written": "この へやには テレビが ありません。",
+      "reading": "この へやには テレビが ありません。",
+      "sourceText": "この へやには テレビが ありません。",
+      "kana": "コノ'/ヘヤ'ニワ/テ'レビガ/アリマセ'ン",
+      "sha256": "4012a85299a937f27a32bb85124d62918cb1d6341d625b3f1cc51cf8a24e2dfb"
+    },
+    {
+      "file": "verb-arimasu-past-negative.mp3",
+      "written": "先しゅうは 授業が ありませんでした。",
+      "reading": "せんしゅうは じゅぎょうが ありませんでした。",
+      "sourceText": "先週は 授業が ありませんでした。",
+      "kana": "センシュウワジュ'ギョオガ/アリマセ'ンデシタ",
+      "sha256": "9ec24c88c444f95845d51067df23cf118675d1fbaa81cebf7d2294b7c7fa98aa"
+    },
+    {
+      "file": "verb-iimasu-present-affirmative.mp3",
+      "written": "あした 家族に 言います。",
+      "reading": "あした かぞくに いいます。",
+      "sourceText": "あした 家族に 言います。",
+      "kana": "アシタカ'ゾクニイイマス",
+      "sha256": "f98606ef411bc517b08c00508cac1e4ae2dc8f671691de3542e475b3bd502ca0"
+    },
+    {
+      "file": "verb-iimasu-past-affirmative.mp3",
+      "written": "ともだちに 日本ごで 言いました。",
+      "reading": "ともだちに にほんごで いいました。",
+      "sourceText": "ともだちに 日本ごで 言いました。",
+      "kana": "トモダチニ'/ニホンゴデイイマ'シタ",
+      "sha256": "0a2d88d8def59383e6934539e731ac91e090b2b87b1f8977d0d1aca4a22aeaa0"
+    },
+    {
+      "file": "verb-iimasu-present-negative.mp3",
+      "written": "ははには 言いません。",
+      "reading": "ははには いいません。",
+      "sourceText": "ははには 言いません。",
+      "kana": "ハ'ハニワ/イイマセ'ン",
+      "sha256": "08438e72644f4fa2985d7add15f9e50971d056a010cecbce861c5c2a569a2cab"
+    },
+    {
+      "file": "verb-iimasu-past-negative.mp3",
+      "written": "かいしゃの 人には 言いませんでした。",
+      "reading": "かいしゃの ひとには いいませんでした。",
+      "sourceText": "かいしゃの 人には 言いませんでした。",
+      "kana": "カ'イシャノ/ヒトニ'ワ/イイマセ'ンデシタ",
+      "sha256": "700d162843a2c755245fa1d6be7566c2a1e8bf315f9b7b6c03bda0fed3d87154"
+    },
+    {
+      "file": "verb-imasu-present-affirmative.mp3",
+      "written": "へやに 子犬が います。",
+      "reading": "へやに こいぬが います。",
+      "sourceText": "へやに 子犬が います。",
+      "kana": "ヘヤ'ニ/コイヌガ'/イマ'ス",
+      "sha256": "4566b2ab4e5701e6f84b3d391bf78e4ed30f4387c7412456ceab7f1ccfff58a7"
+    },
+    {
+      "file": "verb-imasu-past-affirmative.mp3",
+      "written": "森の中に 白い犬が いました。",
+      "reading": "もりのなかに しろいいぬが いました。",
+      "sourceText": "森の中に 白い犬が いました。",
+      "kana": "モリノナ'カニ/シロ'イ/イヌ'ガ/イマ'シタ",
+      "sha256": "b2a827a5b9b366c445e97a7ee94fe12ebb383a09b5a24b164f8bfef0352a1e78"
+    },
+    {
+      "file": "verb-imasu-present-negative.mp3",
+      "written": "日よう日は 教室に 学生が いません。",
+      "reading": "にちようびは きょうしつに がくせいが いません。",
+      "sourceText": "日よう日は 教室に 学生が いません。",
+      "kana": "ニチヨ'オビワ/キョオシツニ'/ガクセエガ'/イマセ'ン",
+      "sha256": "a5c44e9570e42203e0666a7d6b938f67723b8e6aa40876c3d76134cb3ab4c76f"
+    },
+    {
+      "file": "verb-imasu-past-negative.mp3",
+      "written": "きのうは びょういんに いしゃが いませんでした。",
+      "reading": "きのうは びょういんに いしゃが いませんでした。",
+      "sourceText": "きのうは びょういんに 医者が いませんでした。",
+      "kana": "キノオワ'/ビョオインニ'/イシャガ'/イマセ'ンデシタ",
+      "sha256": "afbacfa14f5cbaf9f958175103b3b7e537724262a0e0f5e23c53a4f198a9e599"
+    },
+    {
+      "file": "verb-ukemasu-present-affirmative.mp3",
+      "written": "試験を 受けます。",
+      "reading": "しけんを うけます。",
+      "sourceText": "試験を 受けます。",
+      "kana": "シケ'ンオ/ウケマ'ス",
+      "sha256": "a26d8bb2a2c3e3b60c2900f44c8c962b13d00bec301c5e0b005b96c0519a1727"
+    },
+    {
+      "file": "verb-ukemasu-past-affirmative.mp3",
+      "written": "和室で 授業を 受けました。",
+      "reading": "わしつで じゅぎょうを うけました。",
+      "sourceText": "和室で 授業を 受けました。",
+      "kana": "ワシツデジュ'ギョオオ/ウケマ'シタ",
+      "sha256": "fe9ce01a5a998e4f2de45333908b25554fa9d36c0ca68a9d37dc2ff441f20a8d"
+    },
+    {
+      "file": "verb-ukemasu-present-negative.mp3",
+      "written": "らい年は 試験を 受けません。",
+      "reading": "らいねんは しけんを うけません。",
+      "sourceText": "らい年は 試験を 受けません。",
+      "kana": "ライ'ネンワ/シケ'ンオ/ウケマセ'ン",
+      "sha256": "a821ef1a895187f866b0d332beffdc403095a51b81cdcc206b28d8cfa8105f72"
+    },
+    {
+      "file": "verb-ukemasu-past-negative.mp3",
+      "written": "先月は 日本ごの 授業を 受けませんでした。",
+      "reading": "せんげつは にほんごの じゅぎょうを うけませんでした。",
+      "sourceText": "先月は 日本ごの 授業を 受けませんでした。",
+      "kana": "セ'ンゲツワ/ニホンゴノジュ'ギョオオ/ウケマセ'ンデシタ",
+      "sha256": "12de9accc4b61d115b3b55cd3b15bdb66919b787815f16f06054d1af7e7dcdd1"
+    },
+    {
+      "file": "verb-umaremasu-present-affirmative.mp3",
+      "written": "赤ちゃんは らい月 生まれます。",
+      "reading": "あかちゃんは らいげつ うまれます。",
+      "sourceText": "赤ちゃんは らい月 生まれます。",
+      "kana": "ア'カチャンワ/ラ'イゲツ/ウマレマ'ス",
+      "sha256": "d983ed0b02518e4930a4db33ba2d850b5d9ade0f266e212163b14246f8c036b2"
+    },
+    {
+      "file": "verb-umaremasu-past-affirmative.mp3",
+      "written": "子犬は きのう 生まれました。",
+      "reading": "こいぬは きのう うまれました。",
+      "sourceText": "子犬は きのう 生まれました。",
+      "kana": "コイヌワ'/キノオ'/ウマレマ'シタ",
+      "sha256": "c5f2267f3543ae564a1715f9972ddf8f9c7aaa968fada35c10cae2834c436d80"
+    },
+    {
+      "file": "verb-umaremasu-present-negative.mp3",
+      "written": "赤ちゃんは まだ 生まれません。",
+      "reading": "あかちゃんは まだ うまれません。",
+      "sourceText": "赤ちゃんは まだ 生まれません。",
+      "kana": "ア'カチャンワ/マ'ダ/ウマレマセ'ン",
+      "sha256": "93b88e5b90aeb5b9bc5b556a1e2f42f554d1526ad22be699881396334b1b2d28"
+    },
+    {
+      "file": "verb-umaremasu-past-negative.mp3",
+      "written": "ちちは スペインで 生まれませんでした。",
+      "reading": "ちちは スペインで うまれませんでした。",
+      "sourceText": "ちちは スペインで 生まれませんでした。",
+      "kana": "チ'チワ/スペ'インデ/ウマレマセ'ンデシタ",
+      "sha256": "7442d5f63fc13e8aeb1ab3d99981694864b437bfef17a285a8fbfd83b8a39024"
+    },
+    {
+      "file": "verb-okurimasu-present-affirmative.mp3",
+      "written": "日本の 家族に にもつを おくります。",
+      "reading": "にほんの かぞくに にもつを おくります。",
+      "sourceText": "日本の 家族に にもつを おくります。",
+      "kana": "ニホ'ンノ/カ'ゾクニ/ニ'モツオ/オクリマ'ス",
+      "sha256": "7d817ce75cebae3d287ad443a6998e8a4ff741931cc24aa44ee1a4b83a61ff64"
+    },
+    {
+      "file": "verb-okurimasu-past-affirmative.mp3",
+      "written": "ともだちに てがみを おくりました。",
+      "reading": "ともだちに てがみを おくりました。",
+      "sourceText": "ともだちに てがみを おくりました。",
+      "kana": "トモダチニ'/テガミオ'/オクリマ'シタ",
+      "sha256": "ce9fc64048c509e151a21e4b01f3fa588399d36b44c94875bb419b12bcf70ce4"
+    },
+    {
+      "file": "verb-okurimasu-present-negative.mp3",
+      "written": "今年は 年賀状を おくりません。",
+      "reading": "ことしは ねんがじょうを おくりません。",
+      "sourceText": "今年は 年賀状を おくりません。",
+      "kana": "コトシワ'/ネンガ'ジョオオ/オクリマセ'ン",
+      "sha256": "0c53d998c546ba5b697184d876e80c9d64837bd4382aef51fde92fe75454fb3f"
+    },
+    {
+      "file": "verb-okurimasu-past-negative.mp3",
+      "written": "ともだちに 写真を おくりませんでした。",
+      "reading": "ともだちに しゃしんを おくりませんでした。",
+      "sourceText": "ともだちに 写真を おくりませんでした。",
+      "kana": "トモダチニ'/シャシンオ'/オクリマセ'ンデシタ",
+      "sha256": "1b5e2153f560786ecd3fc0e5f9f529b767a0ba6105c6e77a32ad6e9f8f017e62"
+    },
+    {
+      "file": "verb-oshiemasu-present-affirmative.mp3",
+      "written": "先生は 日本ごを おしえます。",
+      "reading": "せんせいは にほんごを おしえます。",
+      "sourceText": "先生は 日本ごを おしえます。",
+      "kana": "センセ'エワ/ニホンゴオ'/オシエマ'ス",
+      "sha256": "5b2b6e21c730b02bd0f71560c3253ab5dce6e3290ce53ee29b6dafb99e569e96"
+    },
+    {
+      "file": "verb-oshiemasu-past-affirmative.mp3",
+      "written": "ともだちに スペインごを おしえました。",
+      "reading": "ともだちに スペインごを おしえました。",
+      "sourceText": "ともだちに スペインごを おしえました。",
+      "kana": "トモダチニ'/スペインゴオ'/オシエマ'シタ",
+      "sha256": "846a125b04bb2fe69d0f89308afc359c3d54ef1d5420553ebf1aada53516a941"
+    },
+    {
+      "file": "verb-oshiemasu-present-negative.mp3",
+      "written": "わたしは えいごを おしえません。",
+      "reading": "わたしは えいごを おしえません。",
+      "sourceText": "わたしは 英語を おしえません。",
+      "kana": "ワタシワ'/エエゴオ'/オシエマセ'ン",
+      "sha256": "eb5ab9ad896252e0603837d38b96aca188a4ed75242cf6f3f9ee7b71383078ce"
+    },
+    {
+      "file": "verb-oshiemasu-past-negative.mp3",
+      "written": "かれは 名前を おしえませんでした。",
+      "reading": "かれは なまえを おしえませんでした。",
+      "sourceText": "彼は 名前を おしえませんでした。",
+      "kana": "カ'レワ/ナマエオ'/オシエマセ'ンデシタ",
+      "sha256": "b5441e73793d1c981c469d19c1dfe3ffcd266f41de5b69355cb56977eac46cb8"
+    },
+    {
+      "file": "verb-kakimasu-63cf-present-affirmative.mp3",
+      "written": "鉛筆で 花を 描きます。",
+      "reading": "えんぴつで はなを かきます。",
+      "sourceText": "鉛筆で 花を 書きます。",
+      "kana": "エンピツデ'/ハナ'オ/カキマ'ス",
+      "sha256": "4fbc4b424bf0e371f2464f9dc01d8af710ed88bc5bed6d3d7a6b480c4dc0e7e6"
+    },
+    {
+      "file": "verb-kakimasu-63cf-past-affirmative.mp3",
+      "written": "日よう日に 山の えを 描きました。",
+      "reading": "にちようびに やまの えを かきました。",
+      "sourceText": "日よう日に 山の えを 書きました。",
+      "kana": "ニチヨ'オビニ/ヤマ'ノ/エ'オ/カキマ'シタ",
+      "sha256": "fdf3f35a74124a2484f2bda546cd6b9c38f21734423d9b212aadc56f9b623b32"
+    },
+    {
+      "file": "verb-kakimasu-63cf-present-negative.mp3",
+      "written": "わたしは 人の えを 描きません。",
+      "reading": "わたしは ひとの えを かきません。",
+      "sourceText": "わたしは 人の えを 書きません。",
+      "kana": "ワタシワ'/ヒトノエ'オ/カキマセ'ン",
+      "sha256": "15cc7ef39a7b4efef25eb70364c9a7c057f4ae978f4fb71359f10d8215153270"
+    },
+    {
+      "file": "verb-kakimasu-63cf-past-negative.mp3",
+      "written": "先月は えを 描きませんでした。",
+      "reading": "せんげつは えを かきませんでした。",
+      "sourceText": "先月は 絵を 書きませんでした。",
+      "kana": "セ'ンゲツワ/エ'オ/カキマセ'ンデシタ",
+      "sha256": "f39a146b00e98bf202d08eb6fb25fde20a4fb5e6641cd1f88cce1ac170586d25"
+    },
+    {
+      "file": "verb-kashimasu-present-affirmative.mp3",
+      "written": "ともだちに じてん車を かします。",
+      "reading": "ともだちに じてんしゃを かします。",
+      "sourceText": "ともだちに じてん車を 貸します。",
+      "kana": "トモダチニ'/ジテンシャオ'/カシマ'ス",
+      "sha256": "604ca468e0c278836e96b0b0105aee1e7ddb44ad73bcab168db77064b70481a0"
+    },
+    {
+      "file": "verb-kashimasu-past-affirmative.mp3",
+      "written": "ともだちに 本を 二冊 かしました。",
+      "reading": "ともだちに ほんを にさつ かしました。",
+      "sourceText": "ともだちに 本を 二冊 貸しました。",
+      "kana": "トモダチニホ'ンオ/ニ'サツ/カシマ'シタ",
+      "sha256": "68ab13f408653faa9b5071861c70f48d55c04e090045cb7007a731d28548a5b7"
+    },
+    {
+      "file": "verb-kashimasu-present-negative.mp3",
+      "written": "ともだちに お金を かしません。",
+      "reading": "ともだちに おかねを かしません。",
+      "sourceText": "ともだちに お金を 貸しません。",
+      "kana": "トモダチニ'/オカネオ'/カシマセ'ン",
+      "sha256": "4f65a067087ae83e6e2d6a60e623d406298bf424ebd8f93e19e3dddf10f43b45"
+    },
+    {
+      "file": "verb-kashimasu-past-negative.mp3",
+      "written": "その 人に かさを かしませんでした。",
+      "reading": "その ひとに かさを かしませんでした。",
+      "sourceText": "その 人に かさを 貸しませんでした。",
+      "kana": "ソノ'/ヒトニカ'サオ/カシマセ'ンデシタ",
+      "sha256": "efc2aba29b3a3c61473cc64285c051fcbc155e4d386dff115c18cd413d88e671"
+    },
+    {
+      "file": "verb-karimasu-present-affirmative.mp3",
+      "written": "ともだちに ノートを かります。",
+      "reading": "ともだちに ノートを かります。",
+      "sourceText": "ともだちに ノートを かります。",
+      "kana": "トモダチニノ'オトオ/カリマ'ス",
+      "sha256": "724fad52ab8cdefe53c0921ce653a097c96fa00987412c6c0c5de4c09171ab78"
+    },
+    {
+      "file": "verb-karimasu-past-affirmative.mp3",
+      "written": "図書館で 本を かりました。",
+      "reading": "としょかんで ほんを かりました。",
+      "sourceText": "図書館で 本を かりました。",
+      "kana": "トショ'カンデ/ホ'ンオ/カリマ'シタ",
+      "sha256": "e85f4c552dc47d92e0e9f80af9791fcbfddc4c4b5aaac6f7ff8e5b6236cfce9e"
+    },
+    {
+      "file": "verb-karimasu-present-negative.mp3",
+      "written": "ともだちに お金を かりません。",
+      "reading": "ともだちに おかねを かりません。",
+      "sourceText": "ともだちに お金を かりません。",
+      "kana": "トモダチニ'/オカネオ'/カリマセ'ン",
+      "sha256": "a807abd99f8954a52e8ba5e368cc1798f3daec32ad3f2ac6207fd33a782c6dce"
+    },
+    {
+      "file": "verb-karimasu-past-negative.mp3",
+      "written": "きのうは 辞書を かりませんでした。",
+      "reading": "きのうは じしょを かりませんでした。",
+      "sourceText": "きのうは 辞書を かりませんでした。",
+      "kana": "キノオワジ'ショオ/カリマセ'ンデシタ",
+      "sha256": "e122caee716292ff1e9e41857f62905459670599d7a3532bb4392404cf433c42"
+    },
+    {
+      "file": "verb-kirimasu-present-affirmative.mp3",
+      "written": "はさみで かみを きります。",
+      "reading": "はさみで かみを きります。",
+      "sourceText": "はさみで かみを きります。",
+      "kana": "ハサミ'デ/カミオ'/キリマ'ス",
+      "sha256": "671147fd12f89639b822310a8262a076c970edc4f4834bc8fdf213164f632432"
+    },
+    {
+      "file": "verb-kirimasu-past-affirmative.mp3",
+      "written": "ナイフで パンを きりました。",
+      "reading": "ナイフで パンを きりました。",
+      "sourceText": "ナイフで パンを きりました。",
+      "kana": "ナ'イフデ/パ'ンオ/キリマ'シタ",
+      "sha256": "e4751f796a1ccf0e6700f4300471ff636d61571fb3c4be66160254a26baa1fac"
+    },
+    {
+      "file": "verb-kirimasu-present-negative.mp3",
+      "written": "はさみで パンを きりません。",
+      "reading": "はさみで パンを きりません。",
+      "sourceText": "はさみで パンを きりません。",
+      "kana": "ハサミ'デ/パ'ンオ/キリマセ'ン",
+      "sha256": "874cce692ad1b39784ff38721ac28f22a272ca7e8f9e2866c422ede4f9c6de0e"
+    },
+    {
+      "file": "verb-kirimasu-past-negative.mp3",
+      "written": "ちちは 林檎を きりませんでした。",
+      "reading": "ちちは りんごを きりませんでした。",
+      "sourceText": "ちちは 林檎を きりませんでした。",
+      "kana": "チ'チワ/リンゴオ'/キリマセ'ンデシタ",
+      "sha256": "1c67d2620e729c0a94d70d3b1093a73a95e776659a516e2e1ab03131c78fe681"
+    },
+    {
+      "file": "verb-kurabemasu-present-affirmative.mp3",
+      "written": "二つの 写真を 比べます。",
+      "reading": "ふたつの しゃしんを くらべます。",
+      "sourceText": "二つの 写真を 比べます。",
+      "kana": "フタツ'ノ/シャシンオ'/クラベマ'ス",
+      "sha256": "6c373a5930aa0a68259128b2a41942670160c64963f310a2cf4768b5089360ad"
+    },
+    {
+      "file": "verb-kurabemasu-past-affirmative.mp3",
+      "written": "日本と スペインの りょうりを 比べました。",
+      "reading": "にほんと スペインの りょうりを くらべました。",
+      "sourceText": "日本と スペインの りょうりを 比べました。",
+      "kana": "ニホ'ント/スペ'インノ/リョ'オリオ/クラベマ'シタ",
+      "sha256": "9c78b8f01ac874651ef66a11e42f175fb8bdc60e95a44843d989e9ff2807f64a"
+    },
+    {
+      "file": "verb-kurabemasu-present-negative.mp3",
+      "written": "ほかの 人と 自分を 比べません。",
+      "reading": "ほかの ひとと じぶんを くらべません。",
+      "sourceText": "ほかの 人と 自分を 比べません。",
+      "kana": "ホカノ'/ヒトト'/ジブンオ'/クラベマセ'ン",
+      "sha256": "912b8c875535f174c56cd3126bb7f8df46e8c2e3ea6d40885307b39378f98de5"
+    },
+    {
+      "file": "verb-kurabemasu-past-negative.mp3",
+      "written": "先生は 学生を 比べませんでした。",
+      "reading": "せんせいは がくせいを くらべませんでした。",
+      "sourceText": "先生は 学生を 比べませんでした。",
+      "kana": "センセ'エワ/ガクセエオ'/クラベマセ'ンデシタ",
+      "sha256": "b9f8b349ef490f5273adc886f354daef9e8313ae85640a254736d51f38e18e0d"
+    },
+    {
+      "file": "verb-kuremasu-present-affirmative.mp3",
+      "written": "ともだちは いつも おみやげを くれます。",
+      "reading": "ともだちは いつも おみやげを くれます。",
+      "sourceText": "ともだちは いつも おみやげを くれます。",
+      "kana": "トモダチワイ'ツモ/オミヤゲオ'/クレマ'ス",
+      "sha256": "f5680874b5cedf454e402226fc14d0d5b25f4088c9b8b8c086dd397e452b9fb3"
+    },
+    {
+      "file": "verb-kuremasu-past-affirmative.mp3",
+      "written": "先生は 辞書を くれました。",
+      "reading": "せんせいは じしょを くれました。",
+      "sourceText": "先生は 辞書を くれました。",
+      "kana": "センセ'エワ/ジ'ショオ/クレマ'シタ",
+      "sha256": "cf79569cb5c53462ada44d0b4f80841f8c4b3ba0550962d91b25117df58e3b26"
+    },
+    {
+      "file": "verb-kuremasu-present-negative.mp3",
+      "written": "ちちは お金を くれません。",
+      "reading": "ちちは おかねを くれません。",
+      "sourceText": "ちちは お金を くれません。",
+      "kana": "チ'チワ/オカネオ'/クレマセ'ン",
+      "sha256": "17c0e9ae4195f0ec9503d210542e6f5741b650a00ba18666566f2d730e4b8e6e"
+    },
+    {
+      "file": "verb-kuremasu-past-negative.mp3",
+      "written": "かれは プレゼントを くれませんでした。",
+      "reading": "かれは プレゼントを くれませんでした。",
+      "sourceText": "彼は プレゼントを くれませんでした。",
+      "kana": "カ'レワ/プレ'ゼントオ/クレマセ'ンデシタ",
+      "sha256": "5b03aeb1a0d28752c37c9a8277222916560dec7aba6367666385d84c4a0502c4"
+    },
+    {
+      "file": "verb-kurushimimasu-present-affirmative.mp3",
+      "written": "日本ごの かん字に 苦しみます。",
+      "reading": "にほんごの かんじに くるしみます。",
+      "sourceText": "日本ごの かん字に 苦しみます。",
+      "kana": "ニホンゴノ'/カンジニ'/クルシミマ'ス",
+      "sha256": "0ef263bd15c68e086d14576efa900d2086afaf40b74afb915efdcee881901a3e"
+    },
+    {
+      "file": "verb-kurushimimasu-past-affirmative.mp3",
+      "written": "きょ年は 試験に 苦しみました。",
+      "reading": "きょねんは しけんに くるしみました。",
+      "sourceText": "きょ年は 試験に 苦しみました。",
+      "kana": "キョネンワ'/シケ'ンニ/クルシミマ'シタ",
+      "sha256": "1e59a0271ae6a92be5ef7bfe848297eba31f9d3471651acd495bb384cec9f415"
+    },
+    {
+      "file": "verb-kurushimimasu-present-negative.mp3",
+      "written": "かん字には もう 苦しみません。",
+      "reading": "かんじには もう くるしみません。",
+      "sourceText": "かん字には もう 苦しみません。",
+      "kana": "カンジニ'ワ/モ'オ/クルシミマセ'ン",
+      "sha256": "93c57e46a0a9d26c0509ef3ca4535fa8c5ec252c88c03533d369ff89f49bcf02"
+    },
+    {
+      "file": "verb-kurushimimasu-past-negative.mp3",
+      "written": "この 宿題には 苦しみませんでした。",
+      "reading": "この しゅくだいには くるしみませんでした。",
+      "sourceText": "この 宿題には 苦しみませんでした。",
+      "kana": "コノ'/シュクダイニ'ワ/クルシミマセ'ンデシタ",
+      "sha256": "fe760f77f11f820f035090603684ea4da2baaff425b772198dfed8a1e4f3ab78"
+    },
+    {
+      "file": "verb-kotaeawase-o-shimasu-present-affirmative.mp3",
+      "written": "授業で 答え合わせを します。",
+      "reading": "じゅぎょうで こたえあわせを します。",
+      "sourceText": "授業で 答え合わせを します。",
+      "kana": "ジュ'ギョオデ/コタエア'ワセオシマス",
+      "sha256": "eadda9619536d720f2bde88494d5a2fa4d3e336bef7b8becc4ba133c178d8c28"
+    },
+    {
+      "file": "verb-kotaeawase-o-shimasu-past-affirmative.mp3",
+      "written": "宿題の 答え合わせを しました。",
+      "reading": "しゅくだいの こたえあわせを しました。",
+      "sourceText": "宿題の 答え合わせを しました。",
+      "kana": "シュクダイノ'/コタエア'ワセオシマシタ",
+      "sha256": "39021ce318eb4f56e59543a4bc342a71fb1a49167c53a9f6e125766a42a838ab"
+    },
+    {
+      "file": "verb-kotaeawase-o-shimasu-present-negative.mp3",
+      "written": "今日は 答え合わせを しません。",
+      "reading": "きょうは こたえあわせを しません。",
+      "sourceText": "今日は 答え合わせを しません。",
+      "kana": "キョ'オワ/コタエア'ワセオシマセン",
+      "sha256": "0413c236e71e3d5dd75a0c4f4869e748db2ae244afe60e4a9b4f797b828a5aba"
+    },
+    {
+      "file": "verb-kotaeawase-o-shimasu-past-negative.mp3",
+      "written": "きのうは 試験の 答え合わせを しませんでした。",
+      "reading": "きのうは しけんの こたえあわせを しませんでした。",
+      "sourceText": "きのうは 試験の 答え合わせを しませんでした。",
+      "kana": "キノオワ'/シケ'ンノ/コタエア'ワセオシマセンデシタ",
+      "sha256": "a4adaa76f5a8985df60f45c9f7b81d8db255bc8cd3dfbcc99a4154d006002953"
+    },
+    {
+      "file": "verb-shimasu-present-affirmative.mp3",
+      "written": "宿題を します。",
+      "reading": "しゅくだいを します。",
+      "sourceText": "宿題を します。",
+      "kana": "シュクダイオシマ'ス",
+      "sha256": "2996952350afbad87c2d54a6c483bf334b74e1c0b917ee7be7a195168b315bad"
+    },
+    {
+      "file": "verb-shimasu-past-affirmative.mp3",
+      "written": "日よう日に ともだちと サッカーを しました。",
+      "reading": "にちようびに ともだちと サッカーを しました。",
+      "sourceText": "日よう日に ともだちと サッカーを しました。",
+      "kana": "ニチヨ'オビニ/トモダチトサ'ッカアオシマシタ",
+      "sha256": "34d7a940fab0405e4d3c2f84888bc5dc1f84b92e2951d2b81ef78a384c5e4532"
+    },
+    {
+      "file": "verb-shimasu-present-negative.mp3",
+      "written": "わたしは スポーツを しません。",
+      "reading": "わたしは スポーツを しません。",
+      "sourceText": "わたしは スポーツを しません。",
+      "kana": "ワタシワ'/スポ'オツオシマセン",
+      "sha256": "7a97b08c229b94d8cfc1c8db0dabe410c25406fb72ee700f7fce8f619fdaf142"
+    },
+    {
+      "file": "verb-shimasu-past-negative.mp3",
+      "written": "きのうは しごとを しませんでした。",
+      "reading": "きのうは しごとを しませんでした。",
+      "sourceText": "きのうは しごとを しませんでした。",
+      "kana": "キノオワ'/シゴトオシマセ'ンデシタ",
+      "sha256": "f97672c2169cdcc0512ddecddb5a09960131e7bc21d7cd6badcaeec3b6a4e793"
+    },
+    {
+      "file": "verb-suwarimasu-present-affirmative.mp3",
+      "written": "いすに 座ります。",
+      "reading": "いすに すわります。",
+      "sourceText": "いすに 座ります。",
+      "kana": "イスニ'/スワリマ'ス",
+      "sha256": "6b13c4de9d350310663aee0c2df554f1f3101a51a0de672956a8435c5db1c9ef"
+    },
+    {
+      "file": "verb-suwarimasu-past-affirmative.mp3",
+      "written": "子どもは 木の下に 座りました。",
+      "reading": "こどもは きのしたに すわりました。",
+      "sourceText": "子どもは 木の下に 座りました。",
+      "kana": "コドモワキ'ノ/シタニ'/スワリマ'シタ",
+      "sha256": "cdfe8cc69dedbcbc838bd08370afa19b814fec447b02e9ff362fbc7fba6b02d8"
+    },
+    {
+      "file": "verb-suwarimasu-present-negative.mp3",
+      "written": "でん車で 座りません。",
+      "reading": "でんしゃで すわりません。",
+      "sourceText": "でん車で 座りません。",
+      "kana": "デンシャデ'/スワリマセ'ン",
+      "sha256": "50f92d178430662f656e4134f1814a13934604bc89e904e9f52fcfc9c66cc436"
+    },
+    {
+      "file": "verb-suwarimasu-past-negative.mp3",
+      "written": "きのうは 一日中 座りませんでした。",
+      "reading": "きのうは いちにちじゅう すわりませんでした。",
+      "sourceText": "きのうは 一日中 座りませんでした。",
+      "kana": "キノオワ'/イチニチジュウ'/スワリマセ'ンデシタ",
+      "sha256": "b6c00a3b50591d17b70e8ed8c034f3fee62b58d1e10f122bb75db2440ce5017b"
+    },
+    {
+      "file": "verb-tsukurimasu-present-affirmative.mp3",
+      "written": "晩ご飯を 作ります。",
+      "reading": "ばんごはんを つくります。",
+      "sourceText": "晩ご飯を 作ります。",
+      "kana": "バンゴ'ハンオ/ツクリマ'ス",
+      "sha256": "3c2aaa03e3df5b5c4e39d8418ba0625dce0fc6b8017defb06ab334e55414c826"
+    },
+    {
+      "file": "verb-tsukurimasu-past-affirmative.mp3",
+      "written": "日本の りょうりを 作りました。",
+      "reading": "にほんの りょうりを つくりました。",
+      "sourceText": "日本の りょうりを 作りました。",
+      "kana": "ニホ'ンノ/リョ'オリオ/ツクリマ'シタ",
+      "sha256": "8689495f5b3733c0ed87a42997616617b0f768c4191efca5cba3935bd513c78a"
+    },
+    {
+      "file": "verb-tsukurimasu-present-negative.mp3",
+      "written": "わたしは あさごはんを 作りません。",
+      "reading": "わたしは あさごはんを つくりません。",
+      "sourceText": "わたしは あさごはんを 作りません。",
+      "kana": "ワタシワ'/アサゴ'ハンオ/ツクリマセ'ン",
+      "sha256": "677f3e835910df38be6614db5bd8921cde8eff465da297059d4500ac0ed28b54"
+    },
+    {
+      "file": "verb-tsukurimasu-past-negative.mp3",
+      "written": "きのうは ひるごはんを 作りませんでした。",
+      "reading": "きのうは ひるごはんを つくりませんでした。",
+      "sourceText": "きのうは ひるごはんを 作りませんでした。",
+      "kana": "キノオワヒ'ル/ゴ'ハンオ/ツクリマセ'ンデシタ",
+      "sha256": "2f42f1f910850cfb3289319aff7beeac693f2c817856079166858bf5ac8bf23b"
+    },
+    {
+      "file": "verb-nakimasu-present-affirmative.mp3",
+      "written": "牛は よく 鳴きます。",
+      "reading": "うしは よく なきます。",
+      "sourceText": "牛は よく 鳴きます。",
+      "kana": "ウシワヨ'ク/ナキマ'ス",
+      "sha256": "6ba374138d880022eac6226f8d16b44e395ed4f421ad0f2f2588b2ba8cb0f6d1"
+    },
+    {
+      "file": "verb-nakimasu-past-affirmative.mp3",
+      "written": "きのう 子どもは たくさん 泣きました。",
+      "reading": "きのう こどもは たくさん なきました。",
+      "sourceText": "きのう 子どもは たくさん 泣きました。",
+      "kana": "キノオ'/コドモワ'/タクサン'/ナキマ'シタ",
+      "sha256": "307eafee8e25c75c2b2eae2e89954cea27074708ce502a71dff274ab183059e7"
+    },
+    {
+      "file": "verb-nakimasu-present-negative.mp3",
+      "written": "この 赤ちゃんは 泣きません。",
+      "reading": "この あかちゃんは なきません。",
+      "sourceText": "この 赤ちゃんは 泣きません。",
+      "kana": "コノア'カチャンワ/ナキマセ'ン",
+      "sha256": "4337f4d50e30ffa67c7d7f69de14bfb6d7df7b6c4171be91084e352b0420259f"
+    },
+    {
+      "file": "verb-nakimasu-past-negative.mp3",
+      "written": "きのう 子犬は 鳴きませんでした。",
+      "reading": "きのう こいぬは なきませんでした。",
+      "sourceText": "きのう 子犬は 鳴きませんでした。",
+      "kana": "キノオ'/コイヌワ'/ナキマセ'ンデシタ",
+      "sha256": "d943c1a7c955f4380ad7b9b99ebbe1a8148d6d2c1b5f9be7d9f390d397f88086"
+    },
+    {
+      "file": "verb-naraimasu-present-affirmative.mp3",
+      "written": "先生に 日本ごを 習います。",
+      "reading": "せんせいに にほんごを ならいます。",
+      "sourceText": "先生に 日本ごを 習います。",
+      "kana": "センセ'エニ/ニホンゴオ'/ナライマ'ス",
+      "sha256": "e3b7e1d1d467e2a438007b783b11b6faa4e445d571c5d29547703a18830a235f"
+    },
+    {
+      "file": "verb-naraimasu-past-affirmative.mp3",
+      "written": "ともだちに ダンスを 習いました。",
+      "reading": "ともだちに ダンスを ならいました。",
+      "sourceText": "ともだちに ダンスを 習いました。",
+      "kana": "トモダチニダ'ンスオ/ナライマ'シタ",
+      "sha256": "958bdf1da7628e4c296f87034859046fc6d9a55cabde13cd87ef045e7f4e2fa2"
+    },
+    {
+      "file": "verb-naraimasu-present-negative.mp3",
+      "written": "わたしは えいごを 習いません。",
+      "reading": "わたしは えいごを ならいません。",
+      "sourceText": "わたしは 英語を 習いません。",
+      "kana": "ワタシワ'/エエゴオ'/ナライマセ'ン",
+      "sha256": "c8c9d7e2d027da23aea21f3a27ddc82c3adeeedec72ead4b2fc06f27ef637c95"
+    },
+    {
+      "file": "verb-naraimasu-past-negative.mp3",
+      "written": "きょ年は テニスを 習いませんでした。",
+      "reading": "きょねんは テニスを ならいませんでした。",
+      "sourceText": "きょ年は テニスを 習いませんでした。",
+      "kana": "キョネンワテ'ニスオ/ナライマセ'ンデシタ",
+      "sha256": "f897d037367ff990c80540c694eb10bec7f19961a185bf163039a6f9919e6297"
+    },
+    {
+      "file": "verb-nemurimasu-present-affirmative.mp3",
+      "written": "赤ちゃんは 一日中 眠ります。",
+      "reading": "あかちゃんは いちにちじゅう ねむります。",
+      "sourceText": "赤ちゃんは 一日中 眠ります。",
+      "kana": "ア'カチャンワ/イチニチジュウ'/ネムリマ'ス",
+      "sha256": "b45eadf6659a8cbd2c236d1fa86015d96c332979dfce06e198254e59f6fcc97e"
+    },
+    {
+      "file": "verb-nemurimasu-past-affirmative.mp3",
+      "written": "授業で 眠りました。",
+      "reading": "じゅぎょうで ねむりました。",
+      "sourceText": "授業で 眠りました。",
+      "kana": "ジュ'ギョオデ/ネムリマ'シタ",
+      "sha256": "b1ad541a6a7cc07be7a1f9f1a31008807add74c302d2c86bc9682308231eb866"
+    },
+    {
+      "file": "verb-nemurimasu-present-negative.mp3",
+      "written": "子犬は よる 眠りません。",
+      "reading": "こいぬは よる ねむりません。",
+      "sourceText": "子犬は よる 眠りません。",
+      "kana": "コイヌワヨルネムリマセ'ン",
+      "sha256": "193f48648127b8f103e543e3a9bf9b7ea261861913809268b2a30d89e4d3ef1c"
+    },
+    {
+      "file": "verb-nemurimasu-past-negative.mp3",
+      "written": "きのうは あまり 眠りませんでした。",
+      "reading": "きのうは あまり ねむりませんでした。",
+      "sourceText": "きのうは あまり 眠りませんでした。",
+      "kana": "キノオワ'/アマリ'/ネムリマセ'ンデシタ",
+      "sha256": "fac371abd16e9ae04e0b1d9927d4d46ae9beb01bf764040dcb5830eb43d020a7"
+    },
+    {
+      "file": "verb-hajimarimasu-present-affirmative.mp3",
+      "written": "授業は 八時に 始まります。",
+      "reading": "じゅぎょうは はちじに はじまります。",
+      "sourceText": "授業は 八時に 始まります。",
+      "kana": "ジュ'ギョオワ/ハチ'ジニ/ハジマリマ'ス",
+      "sha256": "b786b5285f8d3905638a591fd7c87fa13614596fc4d407850f5525f54819689b"
+    },
+    {
+      "file": "verb-hajimarimasu-past-affirmative.mp3",
+      "written": "コンサートは 七時に 始まりました。",
+      "reading": "コンサートは しちじに はじまりました。",
+      "sourceText": "コンサートは 七時に 始まりました。",
+      "kana": "コ'ンサアトワ/シチ'ジニ/ハジマリマ'シタ",
+      "sha256": "a8a21b1691d63ce2412a4434df3f28fb95d8ed7f1a4c0b0f954d73c360ba6d03"
+    },
+    {
+      "file": "verb-hajimarimasu-present-negative.mp3",
+      "written": "えいがは まだ 始まりません。",
+      "reading": "えいがは まだ はじまりません。",
+      "sourceText": "えいがは まだ 始まりません。",
+      "kana": "エ'イガワ/マ'ダ/ハジマリマセ'ン",
+      "sha256": "66b532367e4f94d0a4e4ecbaba1fe384262353d0d71cf2b87907233ed6144768"
+    },
+    {
+      "file": "verb-hajimarimasu-past-negative.mp3",
+      "written": "授業は 九時に 始まりませんでした。",
+      "reading": "じゅぎょうは くじに はじまりませんでした。",
+      "sourceText": "授業は 九時に 始まりませんでした。",
+      "kana": "ジュ'ギョオワ/ク'ジニ/ハジマリマセ'ンデシタ",
+      "sha256": "969ef9e38638aa9f3940f88dad64a5adf91cd6e2bb4d097f0439a388d34a5400"
+    },
+    {
+      "file": "verb-hajimemasu-present-affirmative.mp3",
+      "written": "宿題を 始めます。",
+      "reading": "しゅくだいを はじめます。",
+      "sourceText": "宿題を 始めます。",
+      "kana": "シュクダイオ'/ハジメマ'ス",
+      "sha256": "2412a87e97d4469137fc913c8d31b76b67579336831280ed2411a6d2627f0a94"
+    },
+    {
+      "file": "verb-hajimemasu-past-affirmative.mp3",
+      "written": "先生は 授業を 始めました。",
+      "reading": "せんせいは じゅぎょうを はじめました。",
+      "sourceText": "先生は 授業を 始めました。",
+      "kana": "センセ'エワ/ジュ'ギョオオ/ハジメマ'シタ",
+      "sha256": "734a2c7fe441a81cf25b6cd63d0d54d872bf62f9ff56217be23b4848a8023ffc"
+    },
+    {
+      "file": "verb-hajimemasu-present-negative.mp3",
+      "written": "らい月まで 準備を 始めません。",
+      "reading": "らいげつまで じゅんびを はじめません。",
+      "sourceText": "らい月まで 準備を 始めません。",
+      "kana": "ラ'イゲツマデ/ジュ'ンビオ/ハジメマセ'ン",
+      "sha256": "896fe53254ee34900ba70720da71f7c178066b2d7ce6ddd5521bc9eaad0480da"
+    },
+    {
+      "file": "verb-hajimemasu-past-negative.mp3",
+      "written": "きのうは しごとを 始めませんでした。",
+      "reading": "きのうは しごとを はじめませんでした。",
+      "sourceText": "きのうは しごとを 始めませんでした。",
+      "kana": "キノオワ'/シゴトオ'/ハジメマセ'ンデシタ",
+      "sha256": "3bba7c0df3444f8867b5d15f946a7f9391e206834aaa2bd5ea5e6212e289bad9"
+    },
+    {
+      "file": "verb-hanashimasu-present-affirmative.mp3",
+      "written": "でんわで 家族と 話します。",
+      "reading": "でんわで かぞくと はなします。",
+      "sourceText": "でんわで 家族と 話します。",
+      "kana": "デンワデカ'ゾクト/ハナシマ'ス",
+      "sha256": "c35dff545e08bbbfab58ce02f7ed33ed87d37a6c2761c3a2684db36d3a2d5e43"
+    },
+    {
+      "file": "verb-hanashimasu-past-affirmative.mp3",
+      "written": "ともだちと 日本ごで 話しました。",
+      "reading": "ともだちと にほんごで はなしました。",
+      "sourceText": "ともだちと 日本ごで 話しました。",
+      "kana": "トモダチト'/ニホンゴデ'/ハナシマ'シタ",
+      "sha256": "78227568b774e67358f4f677177ffbc11e8253f0f833e5e44adb8e7f0cdc3adc"
+    },
+    {
+      "file": "verb-hanashimasu-present-negative.mp3",
+      "written": "家族と えいごで 話しません。",
+      "reading": "かぞくと えいごで はなしません。",
+      "sourceText": "家族と えいごで 話しません。",
+      "kana": "カ'ゾクト/エ'イゴデ/ハナシマセ'ン",
+      "sha256": "352238bdabef89ae1041f751166b803dc4fd85875de8b8d3943a56a3aca2a511"
+    },
+    {
+      "file": "verb-hanashimasu-past-negative.mp3",
+      "written": "きのうは ちちと 話しませんでした。",
+      "reading": "きのうは ちちと はなしませんでした。",
+      "sourceText": "きのうは ちちと 話しませんでした。",
+      "kana": "キノオワチ'チト/ハナシマセ'ンデシタ",
+      "sha256": "983d85bbf2bcc27f3fa152b15d5e0614a2e51a68964681b5196e380d510595f7"
+    },
+    {
+      "file": "verb-moraimasu-present-affirmative.mp3",
+      "written": "子どもは お年玉を もらいます。",
+      "reading": "こどもは おとしだまを もらいます。",
+      "sourceText": "子どもは お年玉を もらいます。",
+      "kana": "コドモワ'/オトシダマオ'/モライマ'ス",
+      "sha256": "c1cbc251e83400995c26083232ed5fe6219145013ecb1a7e6149bffead454aca"
+    },
+    {
+      "file": "verb-moraimasu-past-affirmative.mp3",
+      "written": "先生に 辞書を もらいました。",
+      "reading": "せんせいに じしょを もらいました。",
+      "sourceText": "先生に 辞書を もらいました。",
+      "kana": "センセ'エニ/ジ'ショオ/モライマ'シタ",
+      "sha256": "bbb19c2ae546803848890ff4b70e5feaf8ca93fedad04f8666f2e1e153650e82"
+    },
+    {
+      "file": "verb-moraimasu-present-negative.mp3",
+      "written": "お客さんから お金を もらいません。",
+      "reading": "おきゃくさんから おかねを もらいません。",
+      "sourceText": "お客さんから お金を もらいません。",
+      "kana": "オキャクサンカラ'/オカネオ'/モライマセ'ン",
+      "sha256": "fa3a9570996d7b47614376dbdd1927d85463dee11e8b16bde00fc6a973a71116"
+    },
+    {
+      "file": "verb-moraimasu-past-negative.mp3",
+      "written": "たん生日に プレゼントを もらいませんでした。",
+      "reading": "たんじょうびに プレゼントを もらいませんでした。",
+      "sourceText": "たん生日に プレゼントを もらいませんでした。",
+      "kana": "タンジョ'オビニ/プレ'ゼントオ/モライマセ'ンデシタ",
+      "sha256": "f634c51587ddaae742854739fe6efb60ba216c43d17e395abe491335a22e7322"
+    },
+    {
+      "file": "verb-yaku-shimasu-present-affirmative.mp3",
+      "written": "えいごの てがみを 訳します。",
+      "reading": "えいごの てがみを やくします。",
+      "sourceText": "えいごの てがみを 訳します。",
+      "kana": "エ'イゴノ/テガミオ'/ヤクシマ'ス",
+      "sha256": "96be42629500e152c4f834cad99285fbfa5342c5a203752d8b99ac49c310284e"
+    },
+    {
+      "file": "verb-yaku-shimasu-past-affirmative.mp3",
+      "written": "日本ごの うたを スペインごに 訳しました。",
+      "reading": "にほんごの うたを スペインごに やくしました。",
+      "sourceText": "日本ごの うたを スペインごに 訳しました。",
+      "kana": "ニホンゴノ'/ウタ'オ/スペインゴニ'/ヤクシマ'シタ",
+      "sha256": "517809f0256371472b9941b3ab7ee772fb52d6b34f69b15fb4f2eff09eb3103b"
+    },
+    {
+      "file": "verb-yaku-shimasu-present-negative.mp3",
+      "written": "わたしは 名前を 訳しません。",
+      "reading": "わたしは なまえを やくしません。",
+      "sourceText": "わたしは 名前を 訳しません。",
+      "kana": "ワタシワ'/ナマエオ'/ヤクシマセ'ン",
+      "sha256": "e29372c649414f8cab1c1b02df51db3f83727e4e291484e0b4d71e76febd6147"
+    },
+    {
+      "file": "verb-yaku-shimasu-past-negative.mp3",
+      "written": "その しんぶんを 訳しませんでした。",
+      "reading": "その しんぶんを やくしませんでした。",
+      "sourceText": "その しんぶんを 訳しませんでした。",
+      "kana": "ソノ'/シンブンオ'/ヤクシマセ'ンデシタ",
+      "sha256": "253d6058913bb46024e6509c457d2f4842f603f5ffc7273144a2caa78ca6ba45"
+    },
+    {
+      "file": "verb-rokuon-shimasu-present-affirmative.mp3",
+      "written": "授業を 録音します。",
+      "reading": "じゅぎょうを ろくおんします。",
+      "sourceText": "授業を 録音します。",
+      "kana": "ジュ'ギョオオ/ロクオンシマ'ス",
+      "sha256": "a1b73d4c763e7019c4cd14a3efa3a0b43f574e226d6147f42733981b5f2beb31"
+    },
+    {
+      "file": "verb-rokuon-shimasu-past-affirmative.mp3",
+      "written": "雨の音を 録音しました。",
+      "reading": "あめのおとを ろくおんしました。",
+      "sourceText": "雨の音を 録音しました。",
+      "kana": "ア'メノ/オト'オ/ロクオンシマ'シタ",
+      "sha256": "98182f56607ed6f2df1b53dd4d4db9aefbacd62e9103b9ca0f0d9a8e37966653"
+    },
+    {
+      "file": "verb-rokuon-shimasu-present-negative.mp3",
+      "written": "わたしは コンサートを 録音しません。",
+      "reading": "わたしは コンサートを ろくおんしません。",
+      "sourceText": "わたしは コンサートを 録音しません。",
+      "kana": "ワタシワコ'ンサアトオ/ロクオンシマセ'ン",
+      "sha256": "0ff5f17dc86e9ec80e9d9a4b2513f13e7635aa67f993cc45887207f6b1214719"
+    },
+    {
+      "file": "verb-rokuon-shimasu-past-negative.mp3",
+      "written": "きのうの 授業を 録音しませんでした。",
+      "reading": "きのうの じゅぎょうを ろくおんしませんでした。",
+      "sourceText": "きのうの 授業を 録音しませんでした。",
+      "kana": "キノオノジュ'ギョオオ/ロクオンシマセ'ンデシタ",
+      "sha256": "d96bbf4c1b95dca7a23cc9ae2b29925dc50d2d6f8377ab937abf37dcf5ac41cd"
+    },
+    {
+      "file": "verb-wakarimasu-present-affirmative.mp3",
+      "written": "ちちは えいごが すこし 分かります。",
+      "reading": "ちちは えいごが すこし わかります。",
+      "sourceText": "ちちは 英語が すこし 分かります。",
+      "kana": "チ'チワ/エエゴガ'/スコ'シ/ワカリマ'ス",
+      "sha256": "14f7b5ff182abd5e66c632fa79b2d53fc740678b18b239ba653115bd1f09cd13"
+    },
+    {
+      "file": "verb-wakarimasu-past-affirmative.mp3",
+      "written": "質問が 分かりました。",
+      "reading": "しつもんが わかりました。",
+      "sourceText": "質問が 分かりました。",
+      "kana": "シツモンガ'/ワカリマ'シタ",
+      "sha256": "c81bc44e03c9b6f26a78b8f4c6d3e7c109589f0b0b6ecce9a1619a06d0a0cecc"
+    },
+    {
+      "file": "verb-wakarimasu-present-negative.mp3",
+      "written": "この 宿題が 分かりません。",
+      "reading": "この しゅくだいが わかりません。",
+      "sourceText": "この 宿題が 分かりません。",
+      "kana": "コノ'/シュクダイガ'/ワカリマセ'ン",
+      "sha256": "8f6b58987e92a4c5c49451705d2725348407ca2bca13a808e591b7f94c92acde"
+    },
+    {
+      "file": "verb-wakarimasu-past-negative.mp3",
+      "written": "きのうの 授業が 分かりませんでした。",
+      "reading": "きのうの じゅぎょうが わかりませんでした。",
+      "sourceText": "きのうの 授業が 分かりませんでした。",
+      "kana": "キノオノジュ'ギョオガ/ワカリマセ'ンデシタ",
+      "sha256": "2052ac06c660247b114275d3c2fdccb9e2fc7f4871039d6ecb1328af794bc04d"
+    },
+    {
+      "file": "verb-oboete-imasu-present-affirmative.mp3",
+      "written": "かん字を たくさん 覚えて います。",
+      "reading": "かんじを たくさん おぼえて います。",
+      "sourceText": "かん字を たくさん 覚えて います。",
+      "kana": "カンジオ'/タクサン'/オボ'エテイマス",
+      "sha256": "5e4ba3ea9469de1b21953a578ab8ca55aecba9e445fa98558691d96854d2a237"
+    },
+    {
+      "file": "verb-oboete-imasu-past-affirmative.mp3",
+      "written": "かれは わたしの たん生日を 覚えて いました。",
+      "reading": "かれは わたしの たんじょうびを おぼえて いました。",
+      "sourceText": "彼は わたしの たん生日を 覚えて いました。",
+      "kana": "カ'レワ/ワタシノ'/タンジョ'オビオ/オボ'エテイマシタ",
+      "sha256": "c1b6d174b12ecaa03d4cf506d7fce127375749d4f7ea34510b164dbd1b4f5e93"
+    },
+    {
+      "file": "verb-oboete-imasu-present-negative.mp3",
+      "written": "その 人の 名前は 覚えて いません。",
+      "reading": "その ひとの なまえは おぼえて いません。",
+      "sourceText": "その 人の 名前は 覚えて いません。",
+      "kana": "ソノ'/ヒトノ'/ナマエワ'/オボ'エテイマセン",
+      "sha256": "17dc7077c0d06bd87210e9d14effea117ab007af4ee3593564efcc2e3997fdac"
+    },
+    {
+      "file": "verb-oboete-imasu-past-negative.mp3",
+      "written": "子どもは えいごの うたを 覚えて いませんでした。",
+      "reading": "こどもは えいごの うたを おぼえて いませんでした。",
+      "sourceText": "子どもは 英語の うたを 覚えて いませんでした。",
+      "kana": "コドモワ'/エエゴノ'/ウタ'オ/オボ'エテイマセンデシタ",
+      "sha256": "0aa7452928921fa8bc5974b4e343d549697a691d909ec9f542e7cb3d394eb7ad"
+    },
+    {
+      "file": "verb-dekimasu-present-affirmative.mp3",
+      "written": "テニスが できます。",
+      "reading": "テニスが できます。",
+      "sourceText": "テニスが できます。",
+      "kana": "テ'ニスガデキマス",
+      "sha256": "3fb049bc97d9b5178c8d680dce2d80cea52653d54b3ee281a37a8bee81c5c6ee"
+    },
+    {
+      "file": "verb-dekimasu-past-affirmative.mp3",
+      "written": "晩ご飯が できました。",
+      "reading": "ばんごはんが できました。",
+      "sourceText": "晩ご飯が できました。",
+      "kana": "バンゴ'ハンガデキマシタ",
+      "sha256": "a5ec59fa52e8295c9da1ac892584167df88aa090b7942526682ef1755e16a16d"
+    },
+    {
+      "file": "verb-dekimasu-present-negative.mp3",
+      "written": "わたしは ダンスが できません。",
+      "reading": "わたしは ダンスが できません。",
+      "sourceText": "わたしは ダンスが できません。",
+      "kana": "ワタシワダ'ンスガデキマセン",
+      "sha256": "27cbd50e62e3742cd57419768dab68bf0f63075f749d77ac3f955e680009507f"
+    },
+    {
+      "file": "verb-dekimasu-past-negative.mp3",
+      "written": "きのうは 宿題が できませんでした。",
+      "reading": "きのうは しゅくだいが できませんでした。",
+      "sourceText": "きのうは 宿題が できませんでした。",
+      "kana": "キノオワ'/シュクダイガデキマセ'ンデシタ",
+      "sha256": "d5f098d875b428c3b8a58ea5f2f0aeb7d1158a87faf6bdb6a8ff47c62370d565"
+    },
+    {
+      "file": "verb-kokoro-ga-oremasu-present-affirmative.mp3",
+      "written": "長い 宿題で 心が 折れます。",
+      "reading": "ながい しゅくだいで こころが おれます。",
+      "sourceText": "長い 宿題で 心が 折れます。",
+      "kana": "ナガ'イ/シュクダイデ'/ココロ'ガ/オレマ'ス",
+      "sha256": "d26097f0dffc8f2670cfbf7cd9d3b09fb0f611e447bb40f06197968a3903709d"
+    },
+    {
+      "file": "verb-kokoro-ga-oremasu-past-affirmative.mp3",
+      "written": "難しい 試験で 心が 折れました。",
+      "reading": "むずかしい しけんで こころが おれました。",
+      "sourceText": "難しい 試験で 心が 折れました。",
+      "kana": "ムズカシ'イ/シケ'ンデ/ココロ'ガ/オレマ'シタ",
+      "sha256": "85704b68da0bccbe54105bb0211eee1f6d643f7900bf4a2f40f16876517d2395"
+    },
+    {
+      "file": "verb-kokoro-ga-oremasu-present-negative.mp3",
+      "written": "ははは しごとで 心が 折れません。",
+      "reading": "ははは しごとで こころが おれません。",
+      "sourceText": "ははは しごとで 心が 折れません。",
+      "kana": "ハ'ハワ/シゴトデ'/ココロ'ガ/オレマセ'ン",
+      "sha256": "5b7af48b6b6e656b30251163b4c3ccb40c9661822e295dec135269cefb8bbf9d"
+    },
+    {
+      "file": "verb-kokoro-ga-oremasu-past-negative.mp3",
+      "written": "きのうの 試験で 心が 折れませんでした。",
+      "reading": "きのうの しけんで こころが おれませんでした。",
+      "sourceText": "きのうの 試験で 心が 折れませんでした。",
+      "kana": "キノオノ'/シケ'ンデ/ココロ'ガ/オレマセ'ンデシタ",
+      "sha256": "7856ffd397766bf035da82a973bf680d7da974a57054cc8059fddb1c7488d12e"
+    },
+    {
+      "file": "verb-meshiagarimasu-present-affirmative.mp3",
+      "written": "先生は 日本の りょうりを 召し上がります。",
+      "reading": "せんせいは にほんの りょうりを めしあがります。",
+      "sourceText": "先生は 日本の りょうりを 召し上がります。",
+      "kana": "センセ'エワ/ニホ'ンノ/リョ'オリオ/メシアガリマ'ス",
+      "sha256": "95b7c45c8108d0b777e830d46921ef9dffb68ce2f61c6179a143635c457d540d"
+    },
+    {
+      "file": "verb-meshiagarimasu-past-affirmative.mp3",
+      "written": "お客さんは コーヒーを 召し上がりました。",
+      "reading": "おきゃくさんは コーヒーを めしあがりました。",
+      "sourceText": "お客さんは コーヒーを 召し上がりました。",
+      "kana": "オキャクサンワ'/コオヒ'イオ/メシアガリマ'シタ",
+      "sha256": "3935400c4e0530e333200d01c9ed2c0c6cfb4c855f3f0cce7c516c5155f7901c"
+    },
+    {
+      "file": "verb-meshiagarimasu-present-negative.mp3",
+      "written": "先生は おさけを 召し上がりません。",
+      "reading": "せんせいは おさけを めしあがりません。",
+      "sourceText": "先生は おさけを 召し上がりません。",
+      "kana": "センセ'エワ/オサ'ケオ/メシアガリマセ'ン",
+      "sha256": "5efe6aa7e6d4ceb57f723f8046afe9cbcdf151cfb31df16ff97ed5ae55fb9713"
+    },
+    {
+      "file": "verb-meshiagarimasu-past-negative.mp3",
+      "written": "お客さんは 肉を 召し上がりませんでした。",
+      "reading": "おきゃくさんは にくを めしあがりませんでした。",
+      "sourceText": "お客さんは 肉を 召し上がりませんでした。",
+      "kana": "オキャクサンワ'/ニク'オ/メシアガリマセ'ンデシタ",
+      "sha256": "72606e04cf27bd5fcc661bd586b99ef9d93cc973cdd99f69da7805922caf1c2a"
+    },
+    {
+      "file": "verb-shuuri-shimasu-present-affirmative.mp3",
+      "written": "ちちは じてん車を 修理します。",
+      "reading": "ちちは じてんしゃを しゅうりします。",
+      "sourceText": "ちちは じてん車を 修理します。",
+      "kana": "チ'チワ/ジテンシャオシュ'ウリシマス",
+      "sha256": "f0e4f609fc19a5e6b181016b1782698f791cda6b2fba13e3d19db0ff24389900"
+    },
+    {
+      "file": "verb-shuuri-shimasu-past-affirmative.mp3",
+      "written": "靴を 修理しました。",
+      "reading": "くつを しゅうりしました。",
+      "sourceText": "靴を 修理しました。",
+      "kana": "クツ'オ/シュ'ウリシマシタ",
+      "sha256": "cfafd7c0d84cfcef8cb1e947b7e7ee15bc6a5cc8bba4e54f57db23167f6352cf"
+    },
+    {
+      "file": "verb-shuuri-shimasu-present-negative.mp3",
+      "written": "この みせで パソコンを 修理しません。",
+      "reading": "この みせで パソコンを しゅうりしません。",
+      "sourceText": "この みせで パソコンを 修理しません。",
+      "kana": "コノ'/ミセ'デ/パソコンオシュ'ウリシマセン",
+      "sha256": "bcf722f83f97b852d2fb6a0e9a9dbb9666d116efc4e34f3a1a69b0d664114da6"
+    },
+    {
+      "file": "verb-shuuri-shimasu-past-negative.mp3",
+      "written": "その とけいを 修理しませんでした。",
+      "reading": "その とけいを しゅうりしませんでした。",
+      "sourceText": "その とけいを 修理しませんでした。",
+      "kana": "ソノ'/トケイオシュ'ウリシマセンデシタ",
+      "sha256": "2b30c0fcacc0697c5f278d54b0b069683cda1e7874150d00406bdac0f4a91c82"
+    },
+    {
+      "file": "verb-junbi-shimasu-present-affirmative.mp3",
+      "written": "先生は 授業を 準備します。",
+      "reading": "せんせいは じゅぎょうを じゅんびします。",
+      "sourceText": "先生は 授業を 準備します。",
+      "kana": "センセ'エワ/ジュ'ギョオオ/ジュ'ンビシマス",
+      "sha256": "ebead560ad901fd54481538644e4ee8ef589a0f1597315644b60205e7bd2956b"
+    },
+    {
+      "file": "verb-junbi-shimasu-past-affirmative.mp3",
+      "written": "晩ご飯を 準備しました。",
+      "reading": "ばんごはんを じゅんびしました。",
+      "sourceText": "晩ご飯を 準備しました。",
+      "kana": "バンゴ'ハンオ/ジュ'ンビシマシタ",
+      "sha256": "01eba146fb661e48e30bc9939a29a113e8542097a655573c477e44ade7bb41da"
+    },
+    {
+      "file": "verb-junbi-shimasu-present-negative.mp3",
+      "written": "ちちは あさごはんを 準備しません。",
+      "reading": "ちちは あさごはんを じゅんびしません。",
+      "sourceText": "ちちは あさごはんを 準備しません。",
+      "kana": "チ'チワ/アサゴ'ハンオ/ジュ'ンビシマセン",
+      "sha256": "9cafa7c3a1d99616bb55c7129a261f21bf1e3f8a8cc84d3df6e3d23ddc238dbc"
+    },
+    {
+      "file": "verb-junbi-shimasu-past-negative.mp3",
+      "written": "旅行の にもつを 準備しませんでした。",
+      "reading": "りょこうの にもつを じゅんびしませんでした。",
+      "sourceText": "旅行の にもつを 準備しませんでした。",
+      "kana": "リョコオノニ'モツオ/ジュ'ンビシマセンデシタ",
+      "sha256": "15dd9fe04bce9cab7c3dba82a4b78c67e2b6a47855d918b30a9d6de1720fb4a6"
+    },
+    {
+      "file": "verb-undou-shimasu-present-affirmative.mp3",
+      "written": "まい日 すこし 運動します。",
+      "reading": "まいにち すこし うんどうします。",
+      "sourceText": "まい日 すこし 運動します。",
+      "kana": "マ'イニチ/スコ'シ/ウンドオシマ'ス",
+      "sha256": "ecabd12347d15a399acaa0c6a22c6f233f8c02129abf9c9545058b3f559ad107"
+    },
+    {
+      "file": "verb-undou-shimasu-past-affirmative.mp3",
+      "written": "日よう日に 川べりで 運動しました。",
+      "reading": "にちようびに かわべりで うんどうしました。",
+      "sourceText": "日よう日に 川べりで 運動しました。",
+      "kana": "ニチヨ'オビニ/カワベリデ'/ウンドオシマ'シタ",
+      "sha256": "5f78d6a9d47c71392d33128cffe9c3921dd70967361a5768ea9afc7568768898"
+    },
+    {
+      "file": "verb-undou-shimasu-present-negative.mp3",
+      "written": "さむい あさは 運動しません。",
+      "reading": "さむい あさは うんどうしません。",
+      "sourceText": "さむい あさは 運動しません。",
+      "kana": "サム'イ/ア'サワ/ウンドオシマセ'ン",
+      "sha256": "cbb54ac353531bc945f27f673b5b44eec1ada17807d4c7fc74430a65999362af"
+    },
+    {
+      "file": "verb-undou-shimasu-past-negative.mp3",
+      "written": "先しゅうは ぜんぜん 運動しませんでした。",
+      "reading": "せんしゅうは ぜんぜん うんどうしませんでした。",
+      "sourceText": "先週は ぜんぜん 運動しませんでした。",
+      "kana": "センシュウワ'/ゼンゼン'/ウンドオシマセ'ンデシタ",
+      "sha256": "036874bb728ed30b8c4d30aa2710814782caa45be321a8b101e1d8f175a4c0ac"
+    },
+    {
+      "file": "verb-denwa-o-kakemasu-present-affirmative.mp3",
+      "written": "まいばん 家族に でんわを かけます。",
+      "reading": "まいばん かぞくに でんわを かけます。",
+      "sourceText": "まいばん 家族に でんわを かけます。",
+      "kana": "マイバンカ'ゾクニ/デンワオ'/カケマ'ス",
+      "sha256": "a9f87de655d1765f02ac7ab93147d5a3b78bbfaf4cf38ee124aa8b03c4cbb295"
+    },
+    {
+      "file": "verb-denwa-o-kakemasu-past-affirmative.mp3",
+      "written": "きのう 先生に でんわを かけました。",
+      "reading": "きのう せんせいに でんわを かけました。",
+      "sourceText": "きのう 先生に でんわを かけました。",
+      "kana": "キノオ'/センセ'エニ/デンワオ'/カケマ'シタ",
+      "sha256": "8437f10264faee9f1b682b65b42fe55e57d453c7fd3c3e0030b7f233992b6f59"
+    },
+    {
+      "file": "verb-denwa-o-kakemasu-present-negative.mp3",
+      "written": "かれには でんわを かけません。",
+      "reading": "かれには でんわを かけません。",
+      "sourceText": "かれには でんわを かけません。",
+      "kana": "カ'レニワ/デンワオ'/カケマセ'ン",
+      "sha256": "8998971df2ba95379e92b6180ca66cb7a5b432ff33cc383b3784915f40537488"
+    },
+    {
+      "file": "verb-denwa-o-kakemasu-past-negative.mp3",
+      "written": "きのうは ははに でんわを かけませんでした。",
+      "reading": "きのうは ははに でんわを かけませんでした。",
+      "sourceText": "きのうは ははに でんわを かけませんでした。",
+      "kana": "キノオワハ'ハニ/デンワオ'/カケマセ'ンデシタ",
+      "sha256": "fef45c30c53628e2c6afc6148a82c7d9212a129cdc7605ba5957160f8cb4063f"
+    }
+  ]
+}
