@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera el audio de las frases de los kanji con VOICEVOX Nemo (voz 女声1).
+"""Genera el audio de las frases de los kanji con AivisSpeech (voz morioki).
 
     python3 -m pip install lameenc   # una vez
     npm run audio:sentences          # solo las frases nuevas o cambiadas
@@ -10,14 +10,20 @@ public/audio/sentences/, con su registro en generation.json. El nombre sale del
 kanji y de la posición de la frase (4e00-s1.mp3 es la primera sencilla de 一), igual
 que en src/lib/sentence-audio.ts: si cambias uno, cambia el otro.
 
-El motor se descarga de un release fijo, se comprueba su SHA-256 y se guarda en
-tmp/voicevox-nemo/, que Git ignora. Se arranca con una carpeta de usuario propia,
-así que su diccionario de usuario no toca ninguna instalación de VOICEVOX.
+El motor (AivisSpeech Engine) y la voz (el modelo morioki, de AivisHub) se descargan de
+versiones fijas, se comprueba su SHA-256 y se guardan en tmp/aivisspeech/, que Git ignora.
+El motor se arranca con una carpeta de usuario propia (HOME), donde guarda sus modelos y
+el diccionario de usuario, así que no toca ninguna instalación de AivisSpeech. La primera
+vez descarga además su modelo BERT y sus voces por defecto (algo más de 1 GB).
+
+La síntesis no es determinista: la misma frase da cada vez un audio algo distinto. Por
+eso solo se regeneran las frases nuevas, las cambiadas y las que el motor leería de otra
+forma (por ejemplo, tras cambiar el diccionario); --all las rehace todas y cambia todos los MP3.
 
 Antes de sintetizar, el script comprueba que lo que leería el motor coincide con
 la lectura en kana de cada frase. Si no coincide, no escribe nada y lista las frases:
 corrígelas con una sustitución (REPLACEMENTS) o una palabra del diccionario (DICTIONARY).
-Eso no comprueba el acento: revísalo al añadir palabras al diccionario.
+El motor respeta el acento del diccionario, pero la comprobación no lo ve: revísalo al añadir palabras.
 """
 
 from __future__ import annotations
@@ -29,40 +35,57 @@ import json
 import os
 import platform
 import shutil
+import signal
 import socket
-import stat
 import subprocess
 import sys
 import time
 import urllib.parse
 import urllib.request
+import uuid
 import wave
-import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SENTENCES = ROOT / 'public/content/kanji-sentences.json'
 OUTPUT = ROOT / 'public/audio/sentences'
 GENERATION = OUTPUT / 'generation.json'
-WORK = ROOT / 'tmp/voicevox-nemo'
+WORK = ROOT / 'tmp/aivisspeech'
 
-ENGINE_VERSION = '0.26.0'
-ENGINE_URL = f'https://github.com/VOICEVOX/voicevox_nemo_engine/releases/download/{ENGINE_VERSION}/voicevox_engine-macos-arm64-{ENGINE_VERSION}.vvpp'
-ENGINE_SHA256 = '70c8e26be64684008264b23705f1439f8f19259a9571cbbeac930452e89b4ce2'
-TERMS_URL = 'https://voicevox.hiroshiba.jp/nemo/term/'
-# The same voice as the synthesized vocabulary (public/audio/generation.json).
-SPEAKER = 10005
-VOICE = '女声1'
+ENGINE_VERSION = '1.2.0'
+ENGINE_URL = f'https://github.com/Aivis-Project/AivisSpeech-Engine/releases/download/{ENGINE_VERSION}/AivisSpeech-Engine-macOS-arm64-{ENGINE_VERSION}.7z.001'
+ENGINE_SHA256 = '581a7f34afb2c5343ff8b27d6d88859083375868607657de95fad506939185df'
+# The voice: the morioki model of AivisHub, under the Aivis Common Model License (ACML) 1.0.
+MODEL_UUID = 'baaae3c0-7b22-4605-8ba5-80c959b41a48'
+MODEL_VERSION = '1.0.0'
+MODEL_URL = f'https://api.aivis-project.com/v1/aivm-models/{MODEL_UUID}/download?model_type=AIVMX'
+MODEL_SHA256 = '352858a737b23fe0bd0b7bd73a4956be262aad9bb24a7bf0d1eae9a71a466469'
+MODEL_PAGE = f'https://hub.aivis-project.com/aivm-models/{MODEL_UUID}'
+LICENSE = 'ACML 1.0'
+VOICE = 'morioki'
+STYLE = 'ノーマル'
+SPEAKER = 497929760
+# At 1.0 morioki speaks about 12 % faster than the previous voice (VOICEVOX Nemo 女声1);
+# this keeps its pace, which suits the level of the class.
+SPEED = 0.89
+# 24 kHz like the previous voice; at 32 kbps LAME takes it to 22.05 kHz.
+SAMPLE_RATE = 24000
 # MPEG-2 Layer III, like the human recordings: about 11 KB per sentence.
 BITRATE = 32
 
 # Text the engine receives instead of the written sentence, where its dictionary
 # cannot be steered. Each one keeps the reading of the sentence.
 REPLACEMENTS = [
-    {'from': '日本人', 'to': 'にほんじん',
-     'reason': 'El motor dice «nippon» aunque el diccionario diga 日本; にほんじん lleva el acento [4] del diccionario.'},
     {'from': '描きます', 'to': '書きます',
      'reason': 'La lectura es かきます; el motor lee えがきます. 書きます suena igual, con el mismo acento.'},
+    {'from': 'かれは', 'to': '彼は',
+     'reason': 'En hiragana, el motor lee かれは como 枯れ葉 («kareha»). 彼は suena igual, con el acento [1] de かれの.'},
+    {'from': 'わたしは えが', 'to': 'わたしは 絵が',
+     'reason': 'En hiragana, el motor une は y え en はえ (蝿). 絵が suena igual.'},
+    {'from': ' いしゃです', 'to': ' 医者です',
+     'reason': 'Tras は, el motor oye はいしゃ (歯医者). 医者 suena igual; una palabra いしゃ en el diccionario partiría かいしゃ.'},
+    {'from': '下で', 'to': 'したで',
+     'reason': 'El motor lee 下で como もとで. したで suena igual; una palabra 下 en el diccionario estropearía 川下, 下校 y 下手.'},
 ]
 
 # User-dictionary words: how the engine reads a spelling of the sentences. The accent is
@@ -70,11 +93,11 @@ REPLACEMENTS = [
 # audio of their own keep its accent, so they sound the same alone and in a sentence.
 DICTIONARY = [
     {'surface': '日本', 'pronunciation': 'ニホン', 'accentType': 2, 'wordType': 'PROPER_NOUN',
-     'reason': 'Se enseña «nihon»; el motor dice «nippon».'},
-    {'surface': 'にほんじん', 'pronunciation': 'ニホンジン', 'accentType': 4, 'wordType': 'PROPER_NOUN',
-     'reason': 'Acento de 日本人 [4]; sin esta palabra, el kana sale sin caída.'},
+     'reason': 'Se enseña «nihon», con acento [2]; la palabra evita «nippon».'},
+    {'surface': '日本人', 'pronunciation': 'ニホンジン', 'accentType': 4, 'wordType': 'PROPER_NOUN',
+     'reason': 'Acento de 日本人 [4] (ニホンジ\'ン); el motor dice ニホ\'ンジン.'},
     {'surface': '七色', 'pronunciation': 'ナナイロ', 'accentType': 2, 'wordType': 'COMMON_NOUN',
-     'reason': 'Como el audio de la palabra (ナナ\'イロ); el motor dice なないろ con otro acento o ななしょく.'},
+     'reason': 'Como el audio de la palabra (ナナ\'イロ); el motor dice ななしょく.'},
     {'surface': '竹林', 'pronunciation': 'タケバヤシ', 'accentType': 4, 'wordType': 'COMMON_NOUN',
      'reason': 'La colección lo lee たけばやし, como el audio de la palabra; el motor dice ちくりん.'},
     {'surface': 'まつ林', 'pronunciation': 'マツバヤシ', 'accentType': 3, 'wordType': 'COMMON_NOUN',
@@ -117,6 +140,16 @@ DICTIONARY = [
      'reason': 'Ante は, el motor lee もくとこう.'},
     {'surface': 'はは', 'pronunciation': 'ハハ', 'accentType': 1, 'wordType': 'COMMON_NOUN',
      'reason': 'En hiragana, el motor lee las dos は como partículas: «wa wa».'},
+    {'surface': '草はら', 'pronunciation': 'クサハラ', 'accentType': 0, 'wordType': 'COMMON_NOUN',
+     'reason': 'Como el audio de la palabra (sin caída); el motor dice くさわら.'},
+    {'surface': '年より', 'pronunciation': 'トシヨリ', 'accentType': 3, 'wordType': 'COMMON_NOUN',
+     'reason': 'Como el audio de la palabra (年寄り); el motor dice ねんより.'},
+    {'surface': '三歳', 'pronunciation': 'サンサイ', 'accentType': 1, 'wordType': 'COMMON_NOUN',
+     'reason': 'Acento [1] (サ\'ンサイ), como en いっさい o にさい; el motor dice みとせ.'},
+    {'surface': '十本', 'pronunciation': 'ジュッポン', 'accentType': 1, 'wordType': 'COMMON_NOUN',
+     'reason': 'Acento de 十本 en el diccionario del motor [1], con la lectura じゅっぽん de la colección; el motor dice じっぽん.'},
+    {'surface': '靴', 'pronunciation': 'クツ', 'accentType': 2, 'wordType': 'COMMON_NOUN',
+     'reason': 'Acento de 靴 en el diccionario del motor; tras きれいな, el motor dice ぐつ.'},
 ]
 
 
@@ -173,8 +206,20 @@ def expected_sounds(reading: str) -> str:
     return sounds(''.join(blocks))
 
 
+def spoken_moras(phrase: dict) -> list[str]:
+    """The moras of an accent phrase, without the pause moras AivisSpeech gives to punctuation."""
+    return [mora['text'] for mora in phrase['moras'] if mora['vowel'] != 'pau']
+
+
 def spoken_sounds(query: dict) -> str:
-    return sounds(''.join(mora['text'] for phrase in query['accent_phrases'] for mora in phrase['moras']))
+    return sounds(''.join(''.join(spoken_moras(phrase)) for phrase in query['accent_phrases']))
+
+
+def spoken_kana(query: dict) -> str:
+    """What the engine will say, with its accent: ' after the mora where the pitch falls, / between accent phrases."""
+    return '/'.join(
+        ''.join(mora + ("'" if place == phrase['accent'] else '') for place, mora in enumerate(spoken_moras(phrase), 1))
+        for phrase in query['accent_phrases'])
 
 
 def source_text(written: str) -> str:
@@ -183,66 +228,72 @@ def source_text(written: str) -> str:
     return written
 
 
-# --- Engine ------------------------------------------------------------------------
+# --- Engine and voice ----------------------------------------------------------------
 
-def engine_dir() -> Path:
+def download(url: str, target: Path, digest: str, what: str) -> None:
+    """Downloads once into tmp/ and checks the SHA-256 every time."""
+    if not target.exists():
+        print(f'Descargando {what}…')
+        target.parent.mkdir(parents=True, exist_ok=True)
+        partial = target.with_name(target.name + '.part')
+        with urllib.request.urlopen(url) as response, partial.open('wb') as output:
+            shutil.copyfileobj(response, output)
+        partial.rename(target)
+    actual = hashlib.sha256()
+    with target.open('rb') as data:
+        for chunk in iter(lambda: data.read(1 << 20), b''):
+            actual.update(chunk)
+    if actual.hexdigest() != digest:
+        target.unlink()
+        sys.exit(f'El SHA-256 de {target.name} no coincide; se ha borrado. Vuelve a ejecutar el script.')
+
+
+def engine_executable() -> Path:
     if platform.system() != 'Darwin' or platform.machine() != 'arm64':
         sys.exit('El motor fijado es el de macOS con Apple Silicon. En otro sistema, cambia ENGINE_URL y ENGINE_SHA256.')
-    archive = WORK / Path(urllib.parse.urlparse(ENGINE_URL).path).name
     target = WORK / f'engine-{ENGINE_VERSION}'
-    if (target / 'run').exists():
-        return target
-    WORK.mkdir(parents=True, exist_ok=True)
-    if not archive.exists():
-        print(f'Descargando VOICEVOX Nemo {ENGINE_VERSION} (unos 150 MB)…')
-        partial = archive.with_suffix('.part')
-        with urllib.request.urlopen(ENGINE_URL) as response, partial.open('wb') as output:
-            shutil.copyfileobj(response, output)
-        partial.rename(archive)
-    digest = hashlib.sha256()
-    with archive.open('rb') as data:
-        for chunk in iter(lambda: data.read(1 << 20), b''):
-            digest.update(chunk)
-    if digest.hexdigest() != ENGINE_SHA256:
-        archive.unlink()
-        sys.exit(f'El SHA-256 de {archive.name} no coincide; se ha borrado. Vuelve a ejecutar el script.')
-    partial_dir = target.with_name(target.name + '.part')
-    shutil.rmtree(partial_dir, ignore_errors=True)
-    # extractall() would turn the bundle's symbolic links (some dylibs) into text files.
-    with zipfile.ZipFile(archive) as bundle:
-        for info in bundle.infolist():
-            mode = info.external_attr >> 16
-            destination = partial_dir / info.filename
-            if stat.S_ISLNK(mode):
-                destination.parent.mkdir(parents=True, exist_ok=True)
-                os.symlink(bundle.read(info).decode(), destination)
-            else:
-                bundle.extract(info, partial_dir)
-                if mode & 0o777 and not info.is_dir():
-                    destination.chmod(mode & 0o777)
-    (partial_dir / 'run').chmod(0o755)
-    partial_dir.rename(target)
-    return target
+    run = target / 'macOS-arm64' / 'run'
+    if run.exists():
+        return run
+    archive = WORK / Path(urllib.parse.urlparse(ENGINE_URL).path).name
+    download(ENGINE_URL, archive, ENGINE_SHA256, f'AivisSpeech Engine {ENGINE_VERSION} (unos 200 MB)')
+    partial = target.with_name(target.name + '.part')
+    shutil.rmtree(partial, ignore_errors=True)
+    partial.mkdir(parents=True)
+    # A 7-Zip archive: the bsdtar that comes with macOS reads it and keeps permissions and links.
+    subprocess.run(['bsdtar', '-xf', str(archive), '-C', str(partial)], check=True)
+    partial.rename(target)
+    return run
+
+
+def voice_model() -> Path:
+    path = WORK / 'models' / f'{VOICE}-{MODEL_VERSION}.aivmx'
+    download(MODEL_URL, path, MODEL_SHA256, f'la voz {VOICE} {MODEL_VERSION} (unos 240 MB)')
+    return path
 
 
 class Engine:
-    """A private engine: its own port and HOME, so the user dictionary starts empty and stays here."""
+    """A private engine: its own port and HOME, where it keeps its models and a user dictionary that starts empty."""
 
     def __enter__(self) -> 'Engine':
-        directory = engine_dir()
+        run = engine_executable()
+        model = voice_model()
         home = WORK / 'home'
-        shutil.rmtree(home, ignore_errors=True)
-        home.mkdir(parents=True)
+        # Deleting words through the API leaves the last one loaded: the dictionary starts from no file instead.
+        (home / 'Library/Application Support/AivisSpeech-Engine/user_dict.json').unlink(missing_ok=True)
+        home.mkdir(parents=True, exist_ok=True)
         with socket.socket() as probe:
             probe.bind(('127.0.0.1', 0))
             port = probe.getsockname()[1]
         self.base = f'http://127.0.0.1:{port}'
         self.log = (WORK / 'engine.log').open('wb')
-        self.process = subprocess.Popen([str(directory / 'run'), '--host', '127.0.0.1', '--port', str(port)],
-                                        cwd=directory, env={**os.environ, 'HOME': str(home)},
-                                        stdout=self.log, stderr=subprocess.STDOUT)
-        print('Arrancando el motor…')
-        for _ in range(240):
+        # Its own process group, so that stopping it also stops the processes it starts.
+        self.process = subprocess.Popen(
+            [str(run), '--host', '127.0.0.1', '--port', str(port), '--disable_sentry', '--output_log_utf8'],
+            cwd=run.parent, env={**os.environ, 'HOME': str(home)}, stdout=self.log, stderr=subprocess.STDOUT,
+            start_new_session=True)
+        print('Arrancando el motor… La primera vez descarga su modelo BERT y sus voces por defecto (algo más de 1 GB).')
+        for _ in range(1800):
             if self.process.poll() is not None:
                 raise SystemExit(f'El motor se ha cerrado; mira {WORK / "engine.log"}.')
             try:
@@ -251,37 +302,50 @@ class Engine:
             except OSError:
                 time.sleep(0.5)
         else:
-            raise SystemExit('El motor no ha respondido en dos minutos.')
+            raise SystemExit('El motor no ha respondido en 15 minutos.')
         if version != ENGINE_VERSION:
             raise SystemExit(f'Versión inesperada del motor: {version}.')
-        voices = {style['id']: speaker['name'] for speaker in json.loads(self.request('GET', '/speakers')) for style in speaker['styles']}
-        if voices.get(SPEAKER) != VOICE:
-            raise SystemExit(f'La voz {SPEAKER} no es {VOICE}.')
+        installed = json.loads(self.request('GET', '/aivm_models')).get(MODEL_UUID)
+        if not installed or installed['manifest']['version'] != MODEL_VERSION:
+            self.install(model)
+        voices = {style['id']: (speaker['name'], style['name'])
+                  for speaker in json.loads(self.request('GET', '/speakers')) for style in speaker['styles']}
+        if voices.get(SPEAKER) != (VOICE, STYLE):
+            raise SystemExit(f'El estilo {SPEAKER} no es {VOICE} ({STYLE}).')
         for word in DICTIONARY:
             self.request('POST', '/user_dict_word', surface=word['surface'], pronunciation=word['pronunciation'],
                          accent_type=word['accentType'], word_type=word['wordType'], priority=10)
         return self
 
     def __exit__(self, *_: object) -> None:
-        self.process.terminate()
+        os.killpg(self.process.pid, signal.SIGTERM)
         try:
             self.process.wait(timeout=20)
         except subprocess.TimeoutExpired:
-            self.process.kill()
+            os.killpg(self.process.pid, signal.SIGKILL)
         self.log.close()
 
-    def request(self, method: str, path: str, body: bytes | None = None, **params: object) -> bytes:
+    def request(self, method: str, path: str, body: bytes | None = None, headers: dict | None = None,
+                **params: object) -> bytes:
         query = f'?{urllib.parse.urlencode(params)}' if params else ''
-        headers = {'Content-Type': 'application/json'} if body else {}
+        headers = headers or ({'Content-Type': 'application/json'} if body else {})
         request = urllib.request.Request(self.base + path + query, data=body, method=method, headers=headers)
-        with urllib.request.urlopen(request, timeout=120) as response:
+        with urllib.request.urlopen(request, timeout=600) as response:
             return response.read()
+
+    def install(self, model: Path) -> None:
+        print(f'Instalando la voz {VOICE} {MODEL_VERSION} en el motor…')
+        boundary = uuid.uuid4().hex
+        body = (f'--{boundary}\r\nContent-Disposition: form-data; name="file"; filename="{model.name}"\r\n'
+                'Content-Type: application/octet-stream\r\n\r\n').encode() + model.read_bytes() + f'\r\n--{boundary}--\r\n'.encode()
+        self.request('POST', '/aivm_models/install', body, {'Content-Type': f'multipart/form-data; boundary={boundary}'})
 
     def query(self, text: str) -> dict:
         return json.loads(self.request('POST', '/audio_query', speaker=SPEAKER, text=text))
 
     def synthesize(self, query: dict) -> bytes:
-        return self.request('POST', '/synthesis', json.dumps(query).encode(), speaker=SPEAKER)
+        body = {**query, 'speedScale': SPEED, 'outputSamplingRate': SAMPLE_RATE, 'outputStereo': False}
+        return self.request('POST', '/synthesis', json.dumps(body).encode(), speaker=SPEAKER)
 
 
 def encode_mp3(wav: bytes) -> bytes:
@@ -298,12 +362,22 @@ def encode_mp3(wav: bytes) -> bytes:
 
 # --- Main --------------------------------------------------------------------------
 
+# What makes every sentence sound different. The replacements and the dictionary only
+# change the sentences that use them, which the reading and the spoken kana detect.
+VOICE_SETTINGS = ('engine', 'engineVersion', 'engineSha256', 'voice', 'style', 'speaker', 'model',
+                  'speedScale', 'sampleRate', 'encoder')
+
+
 def settings() -> dict:
     import importlib.metadata
     return {
-        'engine': 'VOICEVOX Nemo', 'engineVersion': ENGINE_VERSION, 'engineSha256': ENGINE_SHA256,
-        'voice': VOICE, 'speaker': SPEAKER, 'termsUrl': TERMS_URL,
+        'engine': 'AivisSpeech Engine', 'engineVersion': ENGINE_VERSION, 'engineSha256': ENGINE_SHA256,
+        'voice': VOICE, 'style': STYLE, 'speaker': SPEAKER,
+        'model': {'uuid': MODEL_UUID, 'version': MODEL_VERSION, 'sha256': MODEL_SHA256, 'license': LICENSE,
+                  'url': MODEL_PAGE},
+        'speedScale': SPEED, 'sampleRate': SAMPLE_RATE,
         'encoder': f'LAME (lameenc {importlib.metadata.version("lameenc")}), MP3 {BITRATE} kbps mono',
+        'deterministic': False,
         'replacements': REPLACEMENTS, 'dictionary': DICTIONARY,
     }
 
@@ -327,6 +401,7 @@ def main() -> None:
     old = {entry['file']: entry for entry in previous.get('entries', [])}
     current = settings()
     same_settings = all(previous.get(key) == value for key, value in current.items())
+    same_voice = all(previous.get(key) == current[key] for key in VOICE_SETTINGS)
 
     def up_to_date(sentence: dict) -> bool:
         entry = old.get(sentence['file'])
@@ -347,27 +422,29 @@ def main() -> None:
             source = source_text(sentence['written'])
             query = engine.query(source)
             if spoken_sounds(query) != expected_sounds(sentence['reading']):
-                wrong.append(f"  {sentence['written']}\n    lectura: {sentence['reading']}\n    motor:   {query['kana']}")
+                wrong.append(f"  {sentence['written']}\n    lectura: {sentence['reading']}\n    motor:   {spoken_kana(query)}")
             queries[sentence['file']] = (source, query)
         if wrong:
             sys.exit('El motor no leería estas frases como su lectura. Corrígelas en REPLACEMENTS o DICTIONARY:\n' + '\n'.join(wrong))
 
+        pending = [sentence for sentence in sentences
+                   if arguments.all or not same_voice or not up_to_date(sentence)
+                   or old[sentence['file']]['kana'] != spoken_kana(queries[sentence['file']][1])]
         OUTPUT.mkdir(parents=True, exist_ok=True)
-        entries, generated = [], 0
+        for done, sentence in enumerate(pending, 1):
+            (OUTPUT / sentence['file']).write_bytes(encode_mp3(engine.synthesize(queries[sentence['file']][1])))
+            if done % 50 == 0:
+                print(f'  {done} de {len(pending)}…')
+        entries = []
         for sentence in sentences:
             source, query = queries[sentence['file']]
-            entry = {**sentence, 'sourceText': source, 'kana': query['kana']}
-            before = old.get(sentence['file'])
             path = OUTPUT / sentence['file']
-            if arguments.all or not same_settings or not up_to_date(sentence) or before['kana'] != query['kana']:
-                path.write_bytes(encode_mp3(engine.synthesize(query)))
-                generated += 1
-            entries.append({**entry, 'sha256': sha256(path.read_bytes())})
+            entries.append({**sentence, 'sourceText': source, 'kana': spoken_kana(query), 'sha256': sha256(path.read_bytes())})
 
     for path in orphans:
         path.unlink()
     GENERATION.write_text(json.dumps({**current, 'entries': entries}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f'{generated} audios generados, {len(orphans)} borrados; {len(entries)} frases con audio.')
+    print(f'{len(pending)} audios generados, {len(orphans)} borrados; {len(entries)} frases con audio.')
 
 
 if __name__ == '__main__':

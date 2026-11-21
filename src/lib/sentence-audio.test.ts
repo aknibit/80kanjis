@@ -12,7 +12,8 @@ const audioRoot = new URL(`audio/${sentenceAudioDirectory}/`, root);
 const sentences = parseKanjiSentences(await readFile(new URL(kanjiSentencesFile, root), 'utf8'),
   collectionDocument.kanji.map((entry) => entry.character));
 const generation = JSON.parse(await readFile(new URL('generation.json', audioRoot), 'utf8')) as {
-  engine: string; speaker: number; dictionary: unknown[]; entries: (SentenceAudioEntry & { kana: string; sourceText: string })[];
+  engine: string; voice: string; model: { license: string }; dictionary: unknown[];
+  entries: (SentenceAudioEntry & { kana: string; sourceText: string })[];
 };
 const files = (await readdir(audioRoot)).filter((file) => file !== 'generation.json');
 const data = new Map(await Promise.all(files.map(async (file) => [file, await readFile(new URL(file, audioRoot))] as const)));
@@ -34,12 +35,13 @@ test('each of the 480 sentences has an MP3 generated from its current text, with
   }
 });
 
-test('the sentence audio is credited to VOICEVOX Nemo, with the same voice as the vocabulary', async () => {
-  const words = JSON.parse(await readFile(new URL('audio/generation.json', root), 'utf8'));
-  assert.equal(generation.engine, 'VOICEVOX Nemo');
-  assert.equal(generation.speaker, words.speaker);
+test('the sentence audio is credited to AivisSpeech, with the morioki voice and its license', async () => {
+  assert.equal(generation.engine, 'AivisSpeech Engine');
+  assert.equal(generation.voice, 'morioki');
+  assert.equal(generation.model.license, 'ACML 1.0');
   const credits = await readFile(new URL('audio/CREDITS.txt', root), 'utf8');
-  assert.match(credits, /SYNTHESIZED SENTENCES \(480\) — VOICEVOX Nemo/);
+  assert.match(credits, /SYNTHESIZED SENTENCES \(480\) — AivisSpeech \(morioki\)/);
+  assert.match(credits, /Aivis Common Model License \(ACML\) 1\.0/);
   assert.ok(credits.includes(`${sentenceAudioDirectory}/generation.json`));
 });
 
@@ -52,6 +54,14 @@ test('the engine reads the words that the sentences spell in mixed kana and kanj
   assert.match(kana('ははは うたが とても 上手です。')!, /^ハ'ハワ/);
   // Like the word audio, 七色 keeps the accent on its second mora.
   assert.match(kana('七色の かさは とても 面白いです。')!, /^ナナ'イロノ/);
+  // 下 is した, not もと; 草はら is not くさわら, 年より not ねんより, 三歳 not みとせ.
+  assert.match(kana('青空の 下で いっしょに ひるごはんを 食べました。')!, /シタデ/);
+  assert.match(kana('草はらで 休みます。')!, /^クサハラデ/);
+  assert.match(kana('村の人は ほとんど 年よりです。')!, /トシヨ'リ/);
+  assert.match(kana('この 白い犬は 三歳です。')!, /サ'ンサイ/);
+  // は and the hiragana after it are not one word: はえ (fly), はいしゃ (dentist).
+  assert.match(kana('わたしは えが すこし 下手です。')!, /^ワタシワエ'ガ/);
+  assert.match(kana('その 女の人は いしゃです。')!, /ヒトワ'\/イシャ/);
 });
 
 test('a changed, missing, altered or orphaned audio is reported', () => {

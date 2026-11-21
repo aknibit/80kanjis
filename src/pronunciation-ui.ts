@@ -34,16 +34,17 @@ export function setupPronunciation(status: HTMLElement) {
 
   /** Every kanji sentence has a generated recording; npm run check:content makes sure it matches the text. */
   function createSentenceButton(id: string, written: string, file: string, report: HTMLElement): HTMLButtonElement {
-    return createPlayer(id, written, { file: `${sentenceAudioDirectory}/${file}`, kind: 'synthesized' }, report);
+    return createPlayer(id, written, { file: `${sentenceAudioDirectory}/${file}`, kind: 'synthesized' }, report,
+      'Voz generada con AivisSpeech (morioki)');
   }
 
-  function createPlayer(id: string, written: string, clip: Clip, report: HTMLElement): HTMLButtonElement {
+  function createPlayer(id: string, written: string, clip: Clip, report: HTMLElement,
+    origin = clip.kind === 'synthesized' ? 'Voz generada con VOICEVOX Nemo' : 'Grabación humana'): HTMLButtonElement {
     const button = document.createElement('button');
     button.className = `study-action audio-button${clip.kind === 'synthesized' ? ' audio-button--synthesized' : ''}`;
     button.type = 'button';
     button.dataset.audioItemId = id;
     button.dataset.audioKind = clip.kind;
-    const origin = clip.kind === 'synthesized' ? 'Voz generada con VOICEVOX Nemo' : 'Grabación humana';
     const icon = document.createElement('span');
     icon.className = 'study-action-icon';
     icon.setAttribute('aria-hidden', 'true');
