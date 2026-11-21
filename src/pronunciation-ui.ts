@@ -9,6 +9,15 @@ export type SpokenWord = Pick<VocabularyStudyItem, 'id' | 'written'>;
 
 export type PronunciationControls = ReturnType<typeof setupPronunciation>;
 
+/** A recording behind an Audio button: its file in public/audio/, its text, where its errors go and its button's states. */
+interface Recording {
+  readonly file: string;
+  readonly written: string;
+  readonly report: HTMLElement;
+  readonly reset: () => void;
+  readonly showPlaying: () => void;
+}
+
 // What plays also shows in the system's player (the lock screen and Control Center on iOS, the media controls of
 // desktop browsers) as a podcast's: the text spoken, «80kanjis audios» and a cover, instead of the page title and its
 // favicon.
@@ -17,24 +26,61 @@ const artwork = new URL('./icons/now-playing.png', import.meta.url).href;
 
 /** One active recording across the page and the kanji dialog; no download until a user presses play. */
 export function setupPronunciation(status: HTMLElement) {
-  let active: { audio: HTMLAudioElement; reset: () => void } | undefined;
+  // One element plays every recording and keeps the last one after it ends or stops, because the system's player stays
+  // attached to it: its play button, also on the lock screen of a locked iPhone, plays that recording again. An element
+  // emptied at the end, as it was before, left that button with nothing to play.
+  const player = new Audio();
+  player.preload = 'none';
+  // What plays now, if anything, and what played last, which the system's player can play again.
+  let active: Recording | undefined;
+  let last: Recording | undefined;
+  // Each start's own number: a play promise rejected because another recording started is not an error.
+  let attempt = 0;
 
   function stop() {
     if (!active) return;
     const previous = active;
     active = undefined;
-    previous.audio.pause();
-    previous.audio.removeAttribute('src');
-    previous.audio.load();
+    player.pause();
     previous.reset();
     // The system's player stays with what played last, cover included, as a paused podcast: without its metadata, the
     // iPhone would go back to the page title and the apple-touch-icon.
     if (mediaSession) mediaSession.playbackState = 'paused';
   }
 
-  // Pausing or stopping from the system's player stops it as Parar does, so the button does not stay on Parar.
-  for (const action of ['pause', 'stop'] as const) {
-    try { mediaSession?.setActionHandler(action, stop); } catch { /* An action this browser does not offer. */ }
+  function start(recording: Recording) {
+    stop();
+    recording.report.textContent = '';
+    active = last = recording;
+    recording.showPlaying();
+    const url = new URL(`audio/${recording.file}`, document.baseURI).href;
+    // The same recording again starts over without downloading it again, unless it failed.
+    if (player.src === url && !player.error) player.currentTime = 0;
+    else player.src = url;
+    if (mediaSession) {
+      mediaSession.metadata = new MediaMetadata({ title: recording.written, artist: '80kanjis audios',
+        artwork: [{ src: artwork, sizes: '1024x1024', type: 'image/png' }] });
+      mediaSession.playbackState = 'playing';
+    }
+    const current = ++attempt;
+    void player.play().catch(() => { if (current === attempt) fail(); });
+  }
+
+  function fail() {
+    if (!active) return;
+    const failed = active;
+    stop();
+    // Quoted: a sentence already ends in 。.
+    failed.report.textContent = `No se pudo reproducir «${failed.written}». Pulsa el botón para volver a intentarlo.`;
+  }
+
+  player.addEventListener('ended', stop);
+  player.addEventListener('error', fail);
+  // Pausing or stopping from the system's player stops it as Parar does, so the button does not stay on Parar; its play
+  // button plays the last recording again, also when its own button has left the page.
+  const actions: [MediaSessionAction, () => void][] = [['pause', stop], ['stop', stop], ['play', () => { if (last) start(last); }]];
+  for (const [action, handler] of actions) {
+    try { mediaSession?.setActionHandler(action, handler); } catch { /* An action this browser does not offer. */ }
   }
 
   /**
@@ -71,37 +117,22 @@ export function setupPronunciation(status: HTMLElement) {
       button.setAttribute('aria-pressed', 'false');
       button.title = `Escuchar ${written}`;
     }
-    reset();
-
-    button.addEventListener('click', () => {
-      const wasPlaying = button.getAttribute('aria-pressed') === 'true';
-      stop();
-      report.textContent = '';
-      if (wasPlaying) return;
-      const audio = new Audio(new URL(`audio/${file}`, document.baseURI).href);
-      audio.preload = 'none';
-      active = { audio, reset };
-      if (mediaSession) {
-        mediaSession.metadata = new MediaMetadata({ title: written, artist: '80kanjis audios',
-          artwork: [{ src: artwork, sizes: '1024x1024', type: 'image/png' }] });
-        mediaSession.playbackState = 'playing';
-      }
+    function showPlaying() {
       icon.innerHTML = stopIcon;
       label.textContent = 'Parar';
       button.setAttribute('aria-pressed', 'true');
       button.setAttribute('aria-label', `Detener audio de ${written}`);
       button.title = `Detener audio de ${written}`;
+    }
+    reset();
 
-      const failed = () => {
-        // Ignore an old play promise rejected when a different word starts playing.
-        if (active?.audio !== audio) return;
+    const recording: Recording = { file, written, report, reset, showPlaying };
+    button.addEventListener('click', () => {
+      if (active !== recording) start(recording);
+      else {
         stop();
-        // Quoted: a sentence already ends in 。.
-        report.textContent = `No se pudo reproducir «${written}». Pulsa el botón para volver a intentarlo.`;
-      };
-      audio.addEventListener('ended', () => { if (active?.audio === audio) stop(); });
-      audio.addEventListener('error', failed);
-      void audio.play().catch(failed);
+        report.textContent = '';
+      }
     });
     return button;
   }
